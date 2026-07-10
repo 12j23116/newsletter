@@ -1,0 +1,476 @@
+---
+/**
+ * Isotope Decay Calculator — Interactive tool
+ * Calculate radioactive decay, half-life, and activity for any isotope
+ */
+import './interactive-tools.css';
+
+const isotopes = [
+  { id: 'cs137', name: 'Cs-137', halfLife: 30.17, unit: 'years', decay: 'Beta', energy: 0.662 },
+  { id: 'co60', name: 'Co-60', halfLife: 5.27, unit: 'years', decay: 'Beta+Gamma', energy: 2.505 },
+  { id: 'sr90', name: 'Sr-90', halfLife: 28.8, unit: 'years', decay: 'Beta', energy: 0.546 },
+  { id: 'i131', name: 'I-131', halfLife: 8.02, unit: 'days', decay: 'Beta+Gamma', energy: 0.606 },
+  { id: 'u238', name: 'U-238', halfLife: 4.468e9, unit: 'years', decay: 'Alpha', energy: 4.267 },
+  { id: 'pu239', name: 'Pu-239', halfLife: 24110, unit: 'years', decay: 'Alpha', energy: 5.245 },
+  { id: 'ra226', name: 'Ra-226', halfLife: 1600, unit: 'years', decay: 'Alpha', energy: 4.871 },
+  { id: 'tc99m', name: 'Tc-99m', halfLife: 6.01, unit: 'hours', decay: 'Gamma', energy: 0.140 },
+  { id: 'f18', name: 'F-18', halfLife: 110, unit: 'minutes', decay: 'Positron', energy: 0.634 },
+  { id: 'am241', name: 'Am-241', halfLife: 432.2, unit: 'years', decay: 'Alpha', energy: 5.486 },
+  { id: 'k40', name: 'K-40', halfLife: 1.248e9, unit: 'years', decay: 'Beta', energy: 1.311 },
+  { id: 'c14', name: 'C-14', halfLife: 5730, unit: 'years', decay: 'Beta', energy: 0.156 },
+];
+---
+
+<div class="it-container" id="isotope-decay">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">📉</div>
+      <div>
+        <h2>Isotope Decay Calculator</h2>
+        <p>Calculate radioactive decay, remaining activity, and dose rate over time</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Isotope</label>
+          <select class="it-select" id="idc-isotope">
+            {isotopes.map(i => <option value={i.id}>{i.name} (T½ = {i.halfLife.toLocaleString()} {i.unit})</option>)}
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Initial Activity <span class="it-label-hint">(MBq)</span></label>
+          <input type="number" class="it-input" id="idc-activity" value="1000" min="0" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Elapsed Time</label>
+          <input type="number" class="it-input" id="idc-time" value="10" min="0" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Time Unit</label>
+          <select class="it-select" id="idc-time-unit">
+            <option value="seconds">Seconds</option>
+            <option value="minutes">Minutes</option>
+            <option value="hours">Hours</option>
+            <option value="days">Days</option>
+            <option value="years">Years</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="idc-calculate">Calculate Decay</button>
+        <button class="it-btn it-btn-secondary" id="idc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="idc-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="idc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Decay Calculation Results</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Remaining Activity</div>
+            <div class="it-stat-value" id="idc-remaining">0<span class="it-stat-unit"> MBq</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Decay Percentage</div>
+            <div class="it-stat-value" id="idc-decayed">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Half-Lives Elapsed</div>
+            <div class="it-stat-value" id="idc-halflives">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Dose Rate at 1m</div>
+            <div class="it-stat-value" id="idc-dose">0<span class="it-stat-unit"> µSv/h</span></div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Decay Curve (10 Half-Lives)</div>
+        <canvas id="idc-canvas" width="800" height="200" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="idc-details"></div>
+        <div class="it-alert it-alert-info" id="idc-insight"></div>
+      </div>
+
+      <!-- Feature 1: Decay Chain -->
+      <div class="it-results-card" id="idc-chain-section" style="display:none;">
+        <div class="it-results-title">🔗 Decay Chain Visualizer</div>
+        <div id="idc-chain-list"></div>
+      </div>
+
+      <!-- Feature 2: Multi-Isotope Mixture -->
+      <div class="it-results-card" id="idc-mixture-section" style="display:none;">
+        <div class="it-results-title">🧪 Multi-Isotope Mixture Calculator</div>
+        <div id="idc-mixture-list"></div>
+      </div>
+
+      <!-- Feature 3: Radiocarbon Dating -->
+      <div class="it-results-card" id="idc-dating-section" style="display:none;">
+        <div class="it-results-title">🏺 Radiocarbon Dating Calculator</div>
+        <div id="idc-dating-list"></div>
+      </div>
+
+      <!-- Feature 4: Shielding Calculator -->
+      <div class="it-results-card" id="idc-shielding-section" style="display:none;">
+        <div class="it-results-title">🛡️ Shielding Requirement Calculator</div>
+        <div id="idc-shielding-list"></div>
+      </div>
+
+      <!-- Feature 5: Specific Activity & Mass -->
+      <div class="it-results-card" id="idc-mass-section" style="display:none;">
+        <div class="it-results-title">⚖️ Specific Activity & Mass Calculator</div>
+        <div id="idc-mass-list"></div>
+      </div>
+
+      <!-- Feature 6: Time-to-Target -->
+      <div class="it-results-card" id="idc-target-section" style="display:none;">
+        <div class="it-results-title">🎯 Time-to-Target Activity Solver</div>
+        <div id="idc-target-list"></div>
+      </div>
+
+      <!-- Feature 7: Dose Accumulation -->
+      <div class="it-results-card" id="idc-accum-section" style="display:none;">
+        <div class="it-results-title">⏱️ Integrated Dose Accumulation</div>
+        <div id="idc-accum-list"></div>
+      </div>
+
+      <!-- Feature 8: Isotope Comparison -->
+      <div class="it-results-card" id="idc-comparison-section" style="display:none;">
+        <div class="it-results-title">📋 Isotope Comparison Table</div>
+        <div id="idc-comparison-list"></div>
+      </div>
+
+      <!-- Feature 9: Decay Power -->
+      <div class="it-results-card" id="idc-power-section" style="display:none;">
+        <div class="it-results-title">⚡ Decay Energy & Power Output</div>
+        <div id="idc-power-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const isotopes = {
+    'cs137': { name: 'Cs-137', halfLife: 30.17, unit: 'years', decay: 'Beta', energy: 0.662, gammaConstant: 0.08 },
+    'co60': { name: 'Co-60', halfLife: 5.27, unit: 'years', decay: 'Beta+Gamma', energy: 2.505, gammaConstant: 0.35 },
+    'sr90': { name: 'Sr-90', halfLife: 28.8, unit: 'years', decay: 'Beta', energy: 0.546, gammaConstant: 0 },
+    'i131': { name: 'I-131', halfLife: 8.02, unit: 'days', decay: 'Beta+Gamma', energy: 0.606, gammaConstant: 0.22 },
+    'u238': { name: 'U-238', halfLife: 4.468e9, unit: 'years', decay: 'Alpha', energy: 4.267, gammaConstant: 0 },
+    'pu239': { name: 'Pu-239', halfLife: 24110, unit: 'years', decay: 'Alpha', energy: 5.245, gammaConstant: 0 },
+    'ra226': { name: 'Ra-226', halfLife: 1600, unit: 'years', decay: 'Alpha', energy: 4.871, gammaConstant: 0.19 },
+    'tc99m': { name: 'Tc-99m', halfLife: 6.01, unit: 'hours', decay: 'Gamma', energy: 0.140, gammaConstant: 0.08 },
+    'f18': { name: 'F-18', halfLife: 110, unit: 'minutes', decay: 'Positron', energy: 0.634, gammaConstant: 0.15 },
+    'am241': { name: 'Am-241', halfLife: 432.2, unit: 'years', decay: 'Alpha', energy: 5.486, gammaConstant: 0.016 },
+    'k40': { name: 'K-40', halfLife: 1.248e9, unit: 'years', decay: 'Beta', energy: 1.311, gammaConstant: 0.014 },
+    'c14': { name: 'C-14', halfLife: 5730, unit: 'years', decay: 'Beta', energy: 0.156, gammaConstant: 0 },
+  };
+
+  const unitToSeconds = { seconds: 1, minutes: 60, hours: 3600, days: 86400, years: 3.156e7 };
+  const isotopeUnitToSeconds = { seconds: 1, minutes: 60, hours: 3600, days: 86400, years: 3.156e7 };
+
+  function calculate() {
+    const isoId = document.getElementById('idc-isotope').value;
+    const iso = isotopes[isoId];
+    const initialActivity = parseFloat(document.getElementById('idc-activity').value) || 0;
+    const elapsedTime = parseFloat(document.getElementById('idc-time').value) || 0;
+    const timeUnit = document.getElementById('idc-time-unit').value;
+
+    // Convert half-life to seconds
+    const halfLifeSeconds = iso.halfLife * isotopeUnitToSeconds[iso.unit];
+    const elapsedSeconds = elapsedTime * unitToSeconds[timeUnit];
+
+    // Decay factor: A = A0 * (1/2)^(t / T½)
+    const halfLivesElapsed = elapsedSeconds / halfLifeSeconds;
+    const decayFactor = Math.pow(0.5, halfLivesElapsed);
+    const remainingActivity = initialActivity * decayFactor;
+    const decayedPercentage = (1 - decayFactor) * 100;
+
+    // Dose rate at 1m (using gamma constant Γ: µSv/h per MBq at 1m)
+    const doseRate = remainingActivity * iso.gammaConstant;
+
+    // Update UI
+    document.getElementById('idc-remaining').innerHTML = remainingActivity.toFixed(2) + '<span class="it-stat-unit"> MBq</span>';
+    document.getElementById('idc-decayed').innerHTML = decayedPercentage.toFixed(2) + '<span class="it-stat-unit">%</span>';
+    document.getElementById('idc-halflives').textContent = halfLivesElapsed.toFixed(3);
+    document.getElementById('idc-dose').innerHTML = doseRate.toFixed(3) + '<span class="it-stat-unit"> µSv/h</span>';
+
+    // Draw decay curve
+    const canvas = document.getElementById('idc-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+
+    // Grid
+    ctx.strokeStyle = 'rgba(15,23,42,0.08)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 10; i++) {
+      ctx.beginPath();
+      ctx.moveTo(i / 10 * w, 0);
+      ctx.lineTo(i / 10 * w, h);
+      ctx.stroke();
+    }
+    for (let i = 0; i <= 4; i++) {
+      ctx.beginPath();
+      ctx.moveTo(0, i / 4 * h);
+      ctx.lineTo(w, i / 4 * h);
+      ctx.stroke();
+    }
+
+    // Decay curve
+    ctx.strokeStyle = '#f59e0b';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (let i = 0; i <= 200; i++) {
+      const hl = (i / 200) * 10; // 0 to 10 half-lives
+      const activity = initialActivity * Math.pow(0.5, hl);
+      const x = (i / 200) * w;
+      const y = h - (activity / initialActivity) * (h - 20) - 10;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // Mark elapsed time point
+    const elapsedX = Math.min(halfLivesElapsed / 10, 1) * w;
+    const elapsedY = h - decayFactor * (h - 20) - 10;
+    ctx.fillStyle = '#dc2626';
+    ctx.beginPath();
+    ctx.arc(elapsedX, elapsedY, 5, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = '11px sans-serif';
+    ctx.fillText(`Now: ${remainingActivity.toFixed(1)} MBq`, elapsedX + 8, elapsedY - 8);
+
+    // Labels
+    ctx.fillStyle = '#5c5c72';
+    ctx.font = '10px sans-serif';
+    ctx.fillText('0', 4, h - 4);
+    ctx.fillText('5 HL', w / 2 - 15, h - 4);
+    ctx.fillText('10 HL', w - 35, h - 4);
+
+    // Details
+    const details = document.getElementById('idc-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Isotope</td><td>${iso.name}</td></tr>
+          <tr><td>Decay Mode</td><td>${iso.decay}</td></tr>
+          <tr><td>Half-Life</td><td>${iso.halfLife.toLocaleString()} ${iso.unit}</td></tr>
+          <tr><td>Decay Energy</td><td>${iso.energy} MeV</td></tr>
+          <tr><td>Initial Activity</td><td>${initialActivity} MBq (${(initialActivity / 37000).toFixed(4)} Ci)</td></tr>
+          <tr><td>Elapsed Time</td><td>${elapsedTime} ${timeUnit}</td></tr>
+          <tr><td>Half-Lives Elapsed</td><td>${halfLivesElapsed.toFixed(4)}</td></tr>
+          <tr><td class="it-highlight">Remaining Activity</td><td class="it-highlight">${remainingActivity.toFixed(4)} MBq</td></tr>
+          <tr><td>Decayed Amount</td><td>${(initialActivity - remainingActivity).toFixed(4)} MBq (${decayedPercentage.toFixed(2)}%)</td></tr>
+          <tr><td>Gamma Constant (Γ)</td><td>${iso.gammaConstant} µSv·m²/(MBq·h)</td></tr>
+          <tr><td>Dose Rate at 1m</td><td>${doseRate.toFixed(4)} µSv/h</td></tr>
+          <tr><td>Time to 1% remaining</td><td>${(Math.log(0.01) / Math.log(0.5) * iso.halfLife).toFixed(2)} ${iso.unit}</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const insight = document.getElementById('idc-insight');
+    insight.innerHTML = `<strong>💡 Insight:</strong> After ${elapsedTime} ${timeUnit} (${halfLivesElapsed.toFixed(2)} half-lives), ${iso.name} has decayed by ${decayedPercentage.toFixed(1)}%, leaving ${remainingActivity.toFixed(2)} MBq. ${halfLivesElapsed >= 7 ? 'The isotope is effectively gone (>99% decayed).' : halfLivesElapsed >= 1 ? 'More than one half-life has passed — activity is below 50%.' : 'Less than one half-life — most activity remains.'} ${iso.gammaConstant > 0 ? `Dose rate at 1 meter: ${doseRate.toFixed(3)} µSv/h.` : 'This isotope is primarily alpha/beta — minimal external dose risk.'}`;
+
+    document.getElementById('idc-results').classList.add('show');
+
+    // === Feature 1: Decay Chain Visualizer ===
+    const decayChains = {
+      'cs137': [{ daughter: 'Ba-137m', hl: 2.55, unit: 'minutes', decay: 'Gamma', energy: 0.662, stable: false }, { daughter: 'Ba-137', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'co60': [{ daughter: 'Ni-60', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'sr90': [{ daughter: 'Y-90', hl: 2.67, unit: 'days', decay: 'Beta', energy: 2.28, stable: false }, { daughter: 'Zr-90', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'i131': [{ daughter: 'Xe-131', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'u238': [{ daughter: 'Th-234', hl: 24.1, unit: 'days', decay: 'Beta', energy: 0.273, stable: false }, { daughter: 'Pa-234', hl: 1.17, unit: 'minutes', decay: 'Beta', energy: 2.27, stable: false }, { daughter: '... (14 more daughters)', hl: null, unit: '', decay: 'Alpha/Beta', energy: 0, stable: false }, { daughter: 'Pb-206', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'pu239': [{ daughter: 'U-235', hl: 7.04e8, unit: 'years', decay: 'Alpha', energy: 4.679, stable: false }, { daughter: '... (11 more daughters)', hl: null, unit: '', decay: 'Alpha/Beta', energy: 0, stable: false }, { daughter: 'Pb-207', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'ra226': [{ daughter: 'Rn-222', hl: 3.82, unit: 'days', decay: 'Alpha', energy: 5.49, stable: false }, { daughter: 'Po-218', hl: 3.1, unit: 'minutes', decay: 'Alpha', energy: 6.0, stable: false }, { daughter: '... (3 more daughters)', hl: null, unit: '', decay: 'Alpha/Beta', energy: 0, stable: false }, { daughter: 'Pb-206', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'tc99m': [{ daughter: 'Tc-99', hl: 2.1e5, unit: 'years', decay: 'Beta', energy: 0.294, stable: false }, { daughter: 'Ru-99', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'f18': [{ daughter: 'O-18', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'am241': [{ daughter: 'Np-237', hl: 2.14e6, unit: 'years', decay: 'Alpha', energy: 4.96, stable: false }, { daughter: '... (11 more daughters)', hl: null, unit: '', decay: 'Alpha/Beta', energy: 0, stable: false }, { daughter: 'Bi-209', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+      'k40': [{ daughter: 'Ar-40 (89%)', hl: null, unit: '', decay: 'Stable (Beta)', energy: 1.311, stable: true }, { daughter: 'Ca-40 (11%)', hl: null, unit: '', decay: 'Stable (EC)', energy: 1.505, stable: true }],
+      'c14': [{ daughter: 'N-14', hl: null, unit: '', decay: 'Stable', energy: 0, stable: true }],
+    };
+    const chain = decayChains[isoId] || [];
+    document.getElementById('idc-chain-list').innerHTML = chain.length === 0 ? '<div class="it-alert it-alert-info">No decay chain data available.</div>' : `
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.5rem;padding:0.5rem 0;">
+        <div style="border:2px solid #059669;border-radius:var(--tl-radius-sm);padding:0.5rem 1rem;background:color-mix(in srgb,#059669 10%,transparent);font-weight:700;">${iso.name}</div>
+        ${chain.map(c => `<div style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--tl-text-muted);">→</span><div style="border:2px solid ${c.stable ? '#84cc16' : '#d97706'};border-radius:var(--tl-radius-sm);padding:0.5rem 1rem;background:color-mix(in srgb,${c.stable ? '#84cc16' : '#d97706'} 10%,transparent);font-size:0.8125rem;"><strong>${c.daughter}</strong><br><span style="font-size:0.6875rem;">${c.stable ? 'Stable' : c.decay + ' · T½=' + c.hl + ' ' + c.unit}</span></div></div>`).join('')}
+      </div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${chain.some(c => !c.stable && c.daughter.includes('Rn')) ? '⚠️ This decay chain includes radon gas — ensure proper ventilation in storage areas.' : chain.filter(c => !c.stable).length > 2 ? 'Multi-step decay chain — daughter products contribute to total radiotoxicity.' : 'Direct decay to stable product — no significant daughter product buildup.'}</div>
+    `;
+    document.getElementById('idc-chain-section').style.display = 'block';
+
+    // === Feature 2: Multi-Isotope Mixture ===
+    const mixtureIsotopes = ['cs137', 'co60', 'sr90', 'i131'];
+    const mixtureData = mixtureIsotopes.map(id => ({ id, iso: isotopes[id], activity: id === isoId ? initialActivity : Math.round(initialActivity * 0.3) }));
+    const totalActivity = mixtureData.reduce((s, m) => s + m.activity * Math.pow(0.5, halfLivesElapsed * isotopeUnitToSeconds[m.iso.unit] / halfLifeSeconds), 0);
+    document.getElementById('idc-mixture-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Isotope</th><th>Initial (MBq)</th><th>Remaining (MBq)</th><th>Share</th></tr></thead><tbody>
+        ${mixtureData.map(m => {
+          const mHl = m.iso.halfLife * isotopeUnitToSeconds[m.iso.unit];
+          const rem = m.activity * Math.pow(0.5, elapsedSeconds / mHl);
+          return `<tr><td><strong>${m.iso.name}</strong></td><td>${m.activity}</td><td>${rem.toFixed(2)}</td><td>${(rem / totalActivity * 100).toFixed(1)}%</td></tr>`;
+        }).join('')}
+        <tr class="it-highlight"><td>Total Mixture</td><td>${mixtureData.reduce((s, m) => s + m.activity, 0)}</td><td>${totalActivity.toFixed(2)}</td><td>100%</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">After ${elapsedTime} ${timeUnit}, short-lived isotopes dominate decay while long-lived ones persist. Spent fuel typically contains a mixture of fission products with varying half-lives.</div>
+    `;
+    document.getElementById('idc-mixture-section').style.display = 'block';
+
+    // === Feature 3: Radiocarbon Dating ===
+    const modernActivity = 0.227; // Bq/g carbon (modern reference)
+    const c14HalfLife = 5730;
+    const sampleActivity = isoId === 'c14' ? (remainingActivity / initialActivity) * modernActivity : modernActivity * 0.5; // Use 50% as example
+    const c14Age = -Math.log(sampleActivity / modernActivity) / Math.log(2) * c14HalfLife;
+    document.getElementById('idc-dating-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Modern Reference Activity</span><strong>${modernActivity} Bq/g C</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Sample Activity (estimated)</span><strong>${sampleActivity.toFixed(4)} Bq/g C</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Activity Ratio</span><strong>${(sampleActivity / modernActivity * 100).toFixed(1)}%</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span class="it-highlight">Estimated Age</span><strong class="it-highlight">${c14Age.toFixed(0)} years BP</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Dating Range</span><strong>~500 – 50,000 years</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Calibration</span><strong>IntCal20 curve needed</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Radiocarbon dating uses C-14 half-life (5,730 yr). Age = -ln(A/A₀) × T½ / ln(2). For ${isoId === 'c14' ? 'your C-14 sample' : 'a sample with 50% modern activity'}, estimated age is ${c14Age.toFixed(0)} years before present (BP). Real dating requires calibration with dendrochronology.</div>
+    `;
+    document.getElementById('idc-dating-section').style.display = 'block';
+
+    // === Feature 4: Shielding Calculator ===
+    const shieldingMaterials = [
+      { name: 'Lead', density: 11.34, hvl: 0, tvl: 0 },
+      { name: 'Concrete', density: 2.35, hvl: 0, tvl: 0 },
+      { name: 'Water', density: 1.0, hvl: 0, tvl: 0 },
+      { name: 'Steel', density: 7.87, hvl: 0, tvl: 0 },
+    ];
+    // Approximate HVLs based on energy (simplified for common gamma energies)
+    const energyMeV = iso.energy;
+    shieldingMaterials.forEach(m => {
+      if (m.name === 'Lead') { m.hvl = 0.5 + energyMeV * 0.8; m.tvl = m.hvl * 3.32; }
+      else if (m.name === 'Concrete') { m.hvl = 2.0 + energyMeV * 3.0; m.tvl = m.hvl * 3.32; }
+      else if (m.name === 'Water') { m.hvl = 5.0 + energyMeV * 8.0; m.tvl = m.hvl * 3.32; }
+      else if (m.name === 'Steel') { m.hvl = 0.8 + energyMeV * 1.2; m.tvl = m.hvl * 3.32; }
+    });
+    const targetReduction = 100; // Reduce by factor of 100 (2 TVLs)
+    document.getElementById('idc-shielding-list').innerHTML = iso.gammaConstant === 0 ? `
+      <div class="it-alert it-alert-info">ℹ️ ${iso.name} is primarily ${iso.decay} emitter with minimal gamma radiation. Shielding requirements are minimal — alpha stopped by paper, beta by thin plastic/aluminum.</div>
+    ` : `
+      <table class="it-table"><thead><tr><th>Material</th><th>Density (g/cm³)</th><th>HVL (cm)</th><th>TVL (cm)</th><th>For 100× Reduction</th><th>For 1000× Reduction</th></tr></thead><tbody>
+        ${shieldingMaterials.map(m => `<tr><td><strong>${m.name}</strong></td><td>${m.density}</td><td>${m.hvl.toFixed(2)}</td><td>${m.tvl.toFixed(2)}</td><td>${(m.tvl * 2).toFixed(1)} cm</td><td>${(m.tvl * 3).toFixed(1)} cm</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">HVL = Half-Value Layer (reduces intensity by 50%). TVL = Tenth-Value Layer (90% reduction). For ${iso.name} (${energyMeV} MeV gamma), lead is most effective per cm. Current dose rate: ${doseRate.toFixed(3)} µSv/h → after 100× shielding: ${(doseRate / 100).toFixed(5)} µSv/h.</div>
+    `;
+    document.getElementById('idc-shielding-section').style.display = 'block';
+
+    // === Feature 5: Specific Activity & Mass ===
+    const massNumbers = { cs137: 137, co60: 60, sr90: 90, i131: 131, u238: 238, pu239: 239, ra226: 226, tc99m: 99, f18: 18, am241: 241, k40: 40, c14: 14 };
+    const A = massNumbers[isoId] || 100;
+    const avogadro = 6.022e23;
+    const specificActivity = (avogadro * Math.log(2)) / (iso.halfLife * isotopeUnitToSeconds[iso.unit] * A * 1.66e-24); // Bq/g
+    const massGrams = (initialActivity * 1e6) / specificActivity; // Convert MBq to Bq, then divide by Bq/g
+    const atomsRemaining = remainingActivity * 1e6 / (Math.log(2) / (halfLifeSeconds));
+    document.getElementById('idc-mass-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Mass Number (A)</span><strong>${A}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Specific Activity</span><strong>${specificActivity.toExponential(2)} Bq/g</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Specific Activity</span><strong>${(specificActivity / 1e6).toExponential(2)} MBq/g</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Mass for ${initialActivity} MBq</span><strong>${massGrams.toExponential(2)} g</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Atoms (initial)</span><strong>${(initialActivity * 1e6 / (Math.log(2) / halfLifeSeconds)).toExponential(2)}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Atoms (remaining)</span><strong>${atomsRemaining.toExponential(2)}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Moles (remaining)</span><strong>${(atomsRemaining / avogadro).toExponential(2)} mol</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Specific activity = (Nₐ × ln2) / (T½ × A × 1.66e-24). High specific activity isotopes (e.g., F-18) require only micrograms for diagnostic doses. Low specific activity isotopes (e.g., U-238) require kilograms for significant activity.</div>
+    `;
+    document.getElementById('idc-mass-section').style.display = 'block';
+
+    // === Feature 6: Time-to-Target ===
+    const targets = [1, 10, 100, 0.1]; // MBq targets
+    document.getElementById('idc-target-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Target Activity</th><th>Time to Reach</th><th>Half-Lives</th><th>Human Readable</th></tr></thead><tbody>
+        ${targets.map(t => {
+          if (t >= initialActivity) return `<tr><td>${t} MBq</td><td colspan="3">Already below target</td></tr>`;
+          const hlToTarget = Math.log(t / initialActivity) / Math.log(0.5);
+          const secondsToTarget = hlToTarget * halfLifeSeconds;
+          const yearsToTarget = secondsToTarget / 3.156e7;
+          let readable;
+          if (yearsToTarget > 1) readable = yearsToTarget.toFixed(1) + ' years';
+          else if (yearsToTarget * 365 > 1) readable = (yearsToTarget * 365).toFixed(1) + ' days';
+          else if (yearsToTarget * 365 * 24 > 1) readable = (yearsToTarget * 365 * 24).toFixed(1) + ' hours';
+          else readable = (secondsToTarget / 60).toFixed(1) + ' minutes';
+          return `<tr><td>${t} MBq</td><td>${secondsToTarget.toExponential(2)} s</td><td>${hlToTarget.toFixed(3)}</td><td class="it-highlight">${readable}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Time to reach target = T½ × ln(A₀/A_target) / ln(2). For disposal, activity typically must fall below exemption levels (e.g., 0.1 MBq for many isotopes).</div>
+    `;
+    document.getElementById('idc-target-section').style.display = 'block';
+
+    // === Feature 7: Dose Accumulation ===
+    const exposureHours = [1, 8, 24, 168, 720]; // 1h, 8h shift, 24h, 1 week, 1 month
+    document.getElementById('idc-accum-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Exposure Duration</th><th>Integrated Dose</th><th>Annual Limit %</th><th>Dose Equivalent</th></tr></thead><tbody>
+        ${exposureHours.map(h => {
+          // Integrate A(t)*Γ dt from 0 to h, accounting for decay
+          // For short exposures vs half-life, dose ≈ doseRate * h
+          // For long exposures, integrate: D = (A0*Γ/λ) * (1 - e^(-λt))
+          const lambda = Math.log(2) / halfLifeSeconds;
+          const exposureSeconds = h * 3600;
+          const integratedDose = iso.gammaConstant > 0 ? (remainingActivity * iso.gammaConstant / lambda) * (1 - Math.exp(-lambda * exposureSeconds)) : 0;
+          const annualLimitPct = (integratedDose / 20000 * 100); // 20 mSv/yr = 20000 µSv
+          const doseEq = integratedDose < 1000 ? integratedDose.toFixed(1) + ' µSv' : (integratedDose / 1000).toFixed(2) + ' mSv';
+          const labels = { 1: '1 hour', 8: '8 hours (shift)', 24: '24 hours', 168: '1 week', 720: '1 month' };
+          return `<tr><td>${labels[h]}</td><td>${integratedDose.toFixed(2)} µSv</td><td style="color:${annualLimitPct > 100 ? '#dc2626' : annualLimitPct > 20 ? '#d97706' : '#059669'};">${annualLimitPct.toFixed(2)}%</td><td>${doseEq}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Integrated dose accounts for decay during exposure. Annual occupational limit: 20 mSv (20,000 µSv). Public dose limit: 1 mSv/yr. ${iso.gammaConstant === 0 ? 'Alpha/beta emitters have minimal external dose — internal exposure is the primary concern.' : ''}</div>
+    `;
+    document.getElementById('idc-accum-section').style.display = 'block';
+
+    // === Feature 8: Isotope Comparison ===
+    const compareIsotopes = ['cs137', 'co60', 'sr90', 'i131', 'tc99m', 'f18', 'c14', 'u238'];
+    document.getElementById('idc-comparison-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Isotope</th><th>Half-Life</th><th>Decay Mode</th><th>Energy (MeV)</th><th>Γ Constant</th><th>Specific Activity (MBq/g)</th><th>HVL Pb (cm)</th></tr></thead><tbody>
+        ${compareIsotopes.map(id => {
+          const i = isotopes[id];
+          const sa = (avogadro * Math.log(2)) / (i.halfLife * isotopeUnitToSeconds[i.unit] * (massNumbers[id] || 100) * 1.66e-24) / 1e6;
+          const hvlPb = i.gammaConstant > 0 ? (0.5 + i.energy * 0.8).toFixed(2) : 'N/A';
+          return `<tr${id === isoId ? ' style="background:color-mix(in srgb,#059669 5%,transparent);"' : ''}><td><strong>${i.name}</strong>${id === isoId ? ' ★' : ''}</td><td>${i.halfLife.toLocaleString()} ${i.unit}</td><td>${i.decay}</td><td>${i.energy}</td><td>${i.gammaConstant}</td><td>${sa.toExponential(1)}</td><td>${hvlPb}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Highlighted row is your selected isotope. Short-lived isotopes (F-18, Tc-99m) have very high specific activities — useful for medical imaging. Long-lived isotopes (U-238, C-14) persist for millennia.</div>
+    `;
+    document.getElementById('idc-comparison-section').style.display = 'block';
+
+    // === Feature 9: Decay Power ===
+    const energyPerDecayJ = iso.energy * 1.602e-13; // MeV to Joules
+    const decaysPerSecond = remainingActivity * 1e6; // MBq to Bq (decays/s)
+    const thermalPowerW = decaysPerSecond * energyPerDecayJ;
+    const totalEnergyJ = initialActivity * 1e6 * energyPerDecayJ * halfLifeSeconds / Math.log(2); // Total over all decay
+    document.getElementById('idc-power-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Energy per Decay</span><strong>${iso.energy} MeV (${energyPerDecayJ.toExponential(2)} J)</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Current Decay Rate</span><strong>${decaysPerSecond.toExponential(2)} Bq</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span class="it-highlight">Thermal Power (current)</span><strong class="it-highlight">${thermalPowerW.toExponential(2)} W</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Initial Thermal Power</span><strong>${(initialActivity * 1e6 * energyPerDecayJ).toExponential(2)} W</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Total Decay Energy</span><strong>${totalEnergyJ.toExponential(2)} J</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Total Decay Energy</span><strong>${(totalEnergyJ / 3.6e6).toExponential(2)} kWh</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Decay heat is critical for spent fuel management. A typical spent fuel assembly produces ~1 kW of decay heat after 10 years. Pu-238 decay heat (0.57 W/g) powers RTGs for space missions.</div>
+    `;
+    document.getElementById('idc-power-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('idc-export').style.display = 'inline-flex';
+    document.getElementById('idc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), isotope: iso.name, initialActivity, remainingActivity, decayedPercentage, halfLivesElapsed, doseRate, elapsedTime, timeUnit, decayChain: chain, shielding: shieldingMaterials, specificActivity, massGrams, thermalPower: thermalPowerW, totalEnergy: totalEnergyJ };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'isotope-decay-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('idc-calculate').addEventListener('click', calculate);
+  document.getElementById('idc-reset').addEventListener('click', () => {
+    document.getElementById('idc-results').classList.remove('show');
+  });
+})();
+</script>

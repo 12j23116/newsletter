@@ -1,0 +1,21 @@
+---
+import { materialsContent as c } from '../../../data/topics/Materials/materials-content';
+---
+<section class="mat-section mat-section-alt">
+  <div class="container">
+    <div class="mat-section-head mat-section-head-center">
+      <span class="mat-eyebrow">Emerging Trends</span>
+      <h2 class="mat-section-title">Materials Science Trends to Watch</h2>
+      <p class="mat-section-subtitle">From AI-designed materials to sustainable polymers and 2D materials beyond graphene, these trends are defining the next decade of materials innovation.</p>
+    </div>
+    <div class="mat-trends-grid">
+      {c.trends.map((t) => (
+        <div class="mat-trend-card" style={`--trend-color: ${t.color}`}>
+          <span class="mat-trend-tag">{t.tag}</span>
+          <h3 class="mat-trend-title">{t.title}</h3>
+          <p class="mat-trend-desc">{t.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

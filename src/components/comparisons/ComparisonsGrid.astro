@@ -1,0 +1,96 @@
+---
+import { comparisons } from '../../data/comparisons/comparisons-content';
+---
+
+<section class="cmp-section" id="cmp-grid-section">
+  <div class="cmp-section-head cmp-reveal">
+    <div class="cmp-eyebrow-sm">All Comparisons</div>
+    <h2>Every <span class="cmp-grad">Head-to-Head</span> Analysis</h2>
+    <p>Detailed spec comparisons with expert verdicts. Filter by topic or search to find the right comparison for your needs.</p>
+  </div>
+  <div class="cmp-grid" id="cmp-grid">
+    {comparisons.map((item) => (
+      <div
+        class="cmp-card cmp-reveal"
+        data-cat={item.topic}
+        data-title={item.title.toLowerCase()}
+        data-subtitle={item.subtitle.toLowerCase()}
+        data-id={item.id}
+      >
+        <div class="cmp-card-top">
+          <div class="cmp-card-icon-wrap">
+            <span class="cmp-card-icon">{item.icon}</span>
+            <span class="cmp-card-cat">{item.topic}</span>
+          </div>
+          {item.trending && <span class="cmp-card-trending">🔥 Trending</span>}
+        </div>
+        <div class="cmp-card-body">
+          <h3>{item.title}</h3>
+          <div class="cmp-card-sub">{item.subtitle}</div>
+          <p>{item.description}</p>
+          <div class="cmp-subjects">
+            {item.subjects.map((subject) => (
+              <span class="cmp-subject-pill">{subject}</span>
+            ))}
+          </div>
+          <table class="cmp-mini-table">
+            <thead>
+              <tr>
+                <th>Spec</th>
+                {item.subjects.map((subject) => (
+                  <th>{subject}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {item.rows.slice(0, 4).map((row) => (
+                <tr>
+                  <td>{row.label}</td>
+                  {row.values.map((value, i) => (
+                    <td class={row.highlight === i ? 'cmp-highlight' : ''}>{value}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div class="cmp-verdict">
+            <strong>Verdict:</strong> {item.verdict}
+          </div>
+          <div class="cmp-popularity">
+            <span class="cmp-popularity-label">Search Interest</span>
+            <div class="cmp-popularity-bar">
+              <div class="cmp-popularity-fill" style={`width: ${item.popularity}%`}></div>
+            </div>
+            <span class="cmp-popularity-value">{item.popularity}%</span>
+          </div>
+          <div class="cmp-card-actions">
+            <button class="cmp-btn cmp-btn-popup" data-popup={item.id}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              Quick View
+            </button>
+            <a href={`/comparisons/${item.id}`} class="cmp-btn cmp-btn-fullpage">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              Full Page
+            </a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="cmp-no-results" id="cmp-no-results">
+    <div class="cmp-no-results-icon">🔍</div>
+    <h3>No comparisons found</h3>
+    <p>Try a different search term or topic filter.</p>
+    <button class="cmp-btn cmp-btn-primary" id="cmp-clear-filters">Clear Filters</button>
+  </div>
+</section>
+
+<!-- Quick View Popup Modal -->
+<div class="cmp-modal-overlay" id="cmp-modal-overlay">
+  <div class="cmp-modal" id="cmp-modal">
+    <button class="cmp-modal-close" id="cmp-modal-close" aria-label="Close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="cmp-modal-content" id="cmp-modal-content"></div>
+  </div>
+</div>

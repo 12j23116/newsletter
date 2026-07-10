@@ -1,0 +1,285 @@
+---
+/**
+ * Nuclear topic Page — Premium Redesign
+ * Unique layout: atomic-themed hero, reactor patterns,
+ * nuclear-styled cards, radiation visualization.
+ * 8 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { nuclearContent } from '../../../data/topics/Nuclear/nuclear-content';
+import './nuclear-styles.css';
+const c = nuclearContent;
+
+const marqueeItems = ['440+ Reactors', '60+ SMR Designs', '$53.8B SMR Market', 'AI-Nuclear Nexus', 'Gen IV Reactors', 'Fusion Energy', 'HALEU Supply', 'Reactor Restarts', 'Microsoft PPA', 'Amazon SMR', 'Google Fusion', 'Meta Nuclear'];
+
+const smrImages = ['/images/nuclear-01-smr-vessel.webp', '/images/nuclear-02-control-room.webp'];
+const nexusImages = ['/images/nuclear-03-spent-fuel-casks.webp', '/images/nuclear-04-reactor-internals.webp', '/images/nuclear-05-nuclear-medicine.webp', '/images/nuclear-06-decommissioning-robot.webp'];
+const genImages = ['/images/nuclear-07-molten-salt-reactor.webp', '/images/nuclear-08-cooling-towers.webp', '/images/nuclear-09-rtg-space-power.webp', '/images/nuclear-10-hybrid-reactor.webp'];
+const fusionImages = ['/images/nuclear-01-smr-vessel.webp', '/images/nuclear-02-control-room.webp'];
+---
+
+<BaseLayout title={`${c.name} — SMRs, Advanced Fission & Fusion 2026-2050`} description={c.description} keywords="nuclear energy, small modular reactors, SMR, advanced fission, nuclear power, molten salt reactors, microreactors, nuclear fusion, NuScale, TerraPower, Oklo, reactor design, nuclear waste, nuclear safety, clean energy, baseload power">
+  <div class="nu-page">
+
+    {/* ══ 1. HERO — Atomic themed ══ */}
+    <section class="nu-hero">
+      <div class="nu-hero-bg">
+        <img src="/images/010-nuclear-smr-reactor.webp" alt="Nuclear reactor" loading="eager" />
+      </div>
+      <div class="nu-grid-overlay"></div>
+      <div class="nu-atomic-pattern"></div>
+      <div class="nu-orb nu-hero-orb-1"></div>
+      <div class="nu-orb nu-hero-orb-2"></div>
+      <div class="nu-orb nu-hero-orb-3"></div>
+      <div class="nu-hero-inner">
+        <div class="nu-hero-left">
+          <span class="nu-hero-pill"><span class="nu-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="nu-grad-text">Nuclear Energy</span></h1>
+          <p class="nu-hero-tagline">{c.tagline}</p>
+          <p class="nu-hero-desc">{c.description}</p>
+          <div class="nu-hero-ctas">
+            <a href="#sections" class="nu-btn nu-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="nu-btn nu-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="nu-hero-stats">
+            {c.heroStats.map((s) => (
+              <div class="nu-hero-stat">
+                <span class="nu-hero-stat-value">{s.value}</span>
+                <span class="nu-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="nu-hero-right">
+          <div class="nu-hero-img-wrap">
+            <img class="nu-hero-img" src="/images/nuclear-01-smr-vessel.webp" alt="Small modular reactor" loading="eager" />
+            <div class="nu-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="nu-marquee">
+      <div class="nu-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'nu-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="nu-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. SMR ══ */}
+    <section class="nu-section" id="sections">
+      <div class="nu-container">
+        <span class="nu-eyebrow nu-reveal">Trending #1</span>
+        <h2 class="nu-section-title nu-reveal">Small Modular <span class="nu-grad-text">Reactors</span></h2>
+        <p class="nu-section-sub nu-reveal">Compact, factory-built nuclear reactors promising lower costs, enhanced safety, and scalable deployment.</p>
+        <div class="nu-section-grid nu-reveal">
+          <div class="nu-section-card">
+            <div class="nu-section-img-wrap">
+              <img class="nu-section-img" src={smrImages[0]} alt={c.smrSection.title} loading="lazy" />
+              <div class="nu-section-img-overlay"></div>
+            </div>
+            <div class="nu-section-header">
+              <div class="nu-section-eyebrow">SMR Overview</div>
+              <h3 class="nu-section-title">{c.smrSection.title}</h3>
+            </div>
+            <div class="nu-section-body">
+              <p class="nu-section-desc">{c.smrSection.description}</p>
+              <div class="nu-section-points">
+                {c.smrSection.keyPoints.map((p) => (
+                  <div class="nu-section-point"><strong>{p.title}</strong>: {p.desc}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="nu-section-card">
+            <div class="nu-section-img-wrap">
+              <img class="nu-section-img" src={smrImages[1]} alt="Leading SMR Developers" loading="lazy" />
+              <div class="nu-section-img-overlay"></div>
+            </div>
+            <div class="nu-section-header">
+              <div class="nu-section-eyebrow">Key Companies</div>
+              <h3 class="nu-section-title">Leading SMR Developers</h3>
+            </div>
+            <div class="nu-section-body">
+              <p class="nu-section-desc">Eight companies driving the SMR revolution.</p>
+              <div class="nu-section-points">
+                {c.smrSection.companies.slice(0, 6).map((co) => (
+                  <div class="nu-section-point"><strong>{co.name}</strong>: {co.design}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. AI NEXUS ══ */}
+    <section class="nu-section nu-section-alt">
+      <div class="nu-container">
+        <span class="nu-eyebrow nu-reveal">Industry Trend</span>
+        <h2 class="nu-section-title nu-reveal">The <span class="nu-grad-text">AI-Nuclear Nexus</span></h2>
+        <p class="nu-section-sub nu-reveal">Tech giants are securing nuclear power to meet the explosive energy demands of AI infrastructure.</p>
+        <div class="nu-nexus-grid nu-reveal">
+          {c.aiNexusSection.deals.map((d, i) => (
+            <div class="nu-nexus-card">
+              <div class="nu-nexus-img-wrap">
+                <img class="nu-nexus-img" src={nexusImages[i % nexusImages.length]} alt={d.company} loading="lazy" />
+                <div class="nu-nexus-img-overlay"></div>
+              </div>
+              <h3 class="nu-nexus-company">{d.company}</h3>
+              <div class="nu-nexus-partner">{d.partner}</div>
+              <p class="nu-nexus-desc">{d.detail}</p>
+              <span class="nu-nexus-type">{d.type}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. GEN IV ══ */}
+    <section class="nu-section">
+      <div class="nu-container">
+        <span class="nu-eyebrow nu-reveal">Emerging Technology</span>
+        <h2 class="nu-section-title nu-reveal">Generation IV <span class="nu-grad-text">Reactors</span></h2>
+        <p class="nu-section-sub nu-reveal">Beyond traditional light water reactors — molten salt, liquid metal, and high-temperature gas coolants.</p>
+        <div class="nu-gen-grid nu-reveal">
+          {c.advancedReactorsSection.types.map((t, i) => (
+            <div class="nu-gen-card">
+              <div class="nu-gen-img-wrap">
+                <img class="nu-gen-img" src={genImages[i % genImages.length]} alt={t.name} loading="lazy" />
+                <div class="nu-gen-img-overlay"></div>
+              </div>
+              <h3 class="nu-gen-name">{t.name}</h3>
+              <div class="nu-gen-coolant">{t.coolant} • {t.temp}</div>
+              <p class="nu-gen-desc">{t.advantage}</p>
+              <span class="nu-gen-temp">{t.companies}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. FUSION ══ */}
+    <section class="nu-section nu-section-alt">
+      <div class="nu-container">
+        <span class="nu-eyebrow nu-reveal">Future Technology</span>
+        <h2 class="nu-section-title nu-reveal">Nuclear <span class="nu-grad-text">Fusion</span></h2>
+        <p class="nu-section-sub nu-reveal">The path to unlimited clean energy — driven by breakthroughs in magnetic confinement and laser ignition.</p>
+        <div class="nu-section-grid nu-reveal">
+          <div class="nu-section-card">
+            <div class="nu-section-img-wrap">
+              <img class="nu-section-img" src={fusionImages[0]} alt="Key Events" loading="lazy" />
+              <div class="nu-section-img-overlay"></div>
+            </div>
+            <div class="nu-section-header">
+              <div class="nu-section-eyebrow">Fusion Milestones</div>
+              <h3 class="nu-section-title">Key Events</h3>
+            </div>
+            <div class="nu-section-body">
+              <div class="nu-section-points">
+                {c.fusionSection.milestones.map((m) => (
+                  <div class="nu-section-point"><strong>{m.year}</strong>: {m.event}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="nu-section-card">
+            <div class="nu-section-img-wrap">
+              <img class="nu-section-img" src={fusionImages[1]} alt="Fusion Startups" loading="lazy" />
+              <div class="nu-section-img-overlay"></div>
+            </div>
+            <div class="nu-section-header">
+              <div class="nu-section-eyebrow">Leading Companies</div>
+              <h3 class="nu-section-title">Fusion Startups</h3>
+            </div>
+            <div class="nu-section-body">
+              <div class="nu-section-points">
+                {c.fusionSection.companies.map((co) => (
+                  <div class="nu-section-point"><strong>{co.name}</strong>: {co.approach}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. FUTURE — Nuclear timeline ══ */}
+    <section class="nu-section">
+      <div class="nu-container">
+        <span class="nu-eyebrow nu-reveal">2026 → 2030</span>
+        <h2 class="nu-section-title nu-reveal">The <span class="nu-grad-text">Nuclear</span> Future</h2>
+        <p class="nu-section-sub nu-reveal">Key milestones shaping the nuclear energy sector through 2030 and beyond.</p>
+        <div class="nu-future-timeline nu-reveal">
+          {c.futureOutlookSection.timeline.map((t) => (
+            <div class="nu-future-item">
+              <div class="nu-future-year-marker">{t.year}</div>
+              <div class="nu-future-content">
+                <div class="nu-future-year">{t.year}</div>
+                <div class="nu-future-prediction">{t.events[0]}</div>
+                <div class="nu-future-detail">{t.events.slice(1).join(' • ')}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="nu-section nu-section-alt" id="faq">
+      <div class="nu-container">
+        <span class="nu-eyebrow nu-reveal">FAQ</span>
+        <h2 class="nu-section-title nu-reveal">Frequently Asked <span class="nu-grad-text">Questions</span></h2>
+        <p class="nu-section-sub nu-reveal">Structured answers to the most common nuclear energy questions — optimized for AI search citation.</p>
+        <div class="nu-faq-list">
+          {c.faqSection.items.map((f) => (
+            <details class="nu-faq-item">
+              <summary>{f.q}</summary>
+              <div class="nu-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. CTA ══ */}
+    <section class="nu-cta">
+      <div class="nu-cta-bg">
+        <img src="/images/022-nuclear-character-yellow-green.webp" alt="Nuclear character" loading="lazy" />
+      </div>
+      <div class="nu-cta-inner">
+        <h3>Power the Future</h3>
+        <p>Get the latest SMR breakthroughs, fusion updates, and nuclear energy insights delivered weekly.</p>
+        <a href="/blog?category=Nuclear" class="nu-cta-btn">Explore Nuclear Articles →</a>
+        <div class="nu-cta-pills">
+          <span class="nu-cta-pill">⚛️ SMRs</span>
+          <span class="nu-cta-pill">🔥 Fusion</span>
+          <span class="nu-cta-pill">🤖 AI-Nuclear</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.nu-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Nuclear' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Nuclear', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqSection.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

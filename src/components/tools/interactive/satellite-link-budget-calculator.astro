@@ -1,0 +1,458 @@
+---
+/**
+ * Satellite Link Budget Calculator — Interactive tool
+ * Compute satellite communication link budgets
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="link-budget-calc">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">📡</div>
+      <div>
+        <h2>Satellite Link Budget Calculator</h2>
+        <p>Compute complete link budget with path loss, EIRP, G/T, and SNR analysis</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Frequency <span class="it-label-hint">(GHz)</span></label>
+          <input type="number" class="it-input" id="lbc-freq" value="14" min="0.1" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Orbit Type</label>
+          <select class="it-select" id="lbc-orbit">
+            <option value="geo">GEO (35,786 km)</option>
+            <option value="meo">MEO (10,000 km)</option>
+            <option value="leo">LEO (550 km)</option>
+            <option value="custom">Custom</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Tx Power <span class="it-label-hint">(W)</span></label>
+          <input type="number" class="it-input" id="lbc-tx-power" value="100" min="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Tx Antenna Gain <span class="it-label-hint">(dBi)</span></label>
+          <input type="number" class="it-input" id="lbc-tx-gain" value="45" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Rx Antenna Gain <span class="it-label-hint">(dBi)</span></label>
+          <input type="number" class="it-input" id="lbc-rx-gain" value="40" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">System Noise Temp <span class="it-label-hint">(K)</span></label>
+          <input type="number" class="it-input" id="lbc-noise-temp" value="150" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Bandwidth <span class="it-label-hint">(MHz)</span></label>
+          <input type="number" class="it-input" id="lbc-bandwidth" value="36" min="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Atmospheric Loss <span class="it-label-hint">(dB)</span></label>
+          <input type="number" class="it-input" id="lbc-atmo-loss" value="0.5" step="0.1" />
+        </div>
+      </div>
+
+      <!-- Feature 6: Frequency Band Preset -->
+      <div class="it-field" style="border-top:1px solid var(--tl-border);padding-top:1rem;">
+        <label class="it-label">📻 Frequency Band Preset</label>
+        <select class="it-select" id="lbc-band-preset">
+          <option value="">Custom</option>
+          <option value="1.5">L-band (1.5 GHz — MSS)</option>
+          <option value="2.4">S-band (2.4 GHz — MSS/Sci)</option>
+          <option value="4">C-band (4 GHz — Fixed)</option>
+          <option value="8">X-band (8 GHz — Mil/Gov)</option>
+          <option value="14">Ku-band (14 GHz — VSAT)</option>
+          <option value="30">Ka-band (30 GHz — HTS)</option>
+          <option value="50">V-band (50 GHz — Future)</option>
+        </select>
+      </div>
+
+      <!-- Feature 3: Modulation & Coding -->
+      <div class="it-field">
+        <label class="it-label">📡 Modulation & Coding (DVB-S2X)</label>
+        <select class="it-select" id="lbc-modcod">
+          <option value="qpsk14">QPSK 1/4 (Spectral eff: 0.5 b/s/Hz)</option>
+          <option value="qpsk12">QPSK 1/2 (Spectral eff: 1.0 b/s/Hz)</option>
+          <option value="qpsk34" selected>QPSK 3/4 (Spectral eff: 1.5 b/s/Hz)</option>
+          <option value="8psk34">8PSK 3/4 (Spectral eff: 2.25 b/s/Hz)</option>
+          <option value="16apsk23">16APSK 2/3 (Spectral eff: 3.2 b/s/Hz)</option>
+          <option value="32apsk34">32APSK 3/4 (Spectral eff: 4.5 b/s/Hz)</option>
+        </select>
+      </div>
+
+      <!-- Feature 5: Pointing Loss -->
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Antenna Pointing Error <span class="it-label-hint">(°)</span></label>
+          <input type="number" class="it-input" id="lbc-pointing-error" value="0.1" min="0" step="0.01" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Antenna Beamwidth <span class="it-label-hint">(°)</span></label>
+          <input type="number" class="it-input" id="lbc-beamwidth" value="0.5" min="0.01" step="0.01" />
+        </div>
+      </div>
+
+      <!-- Feature 1: Rain Region -->
+      <div class="it-field">
+        <label class="it-label">🌧️ Rain Climate Region (ITU-R P.837)</label>
+        <select class="it-select" id="lbc-rain-region">
+          <option value="A">A — Dry (desert)</option>
+          <option value="E">E — Moderate</option>
+          <option value="K" selected>K — Temperate</option>
+          <option value="N">N — Wet tropical</option>
+          <option value="Q">Q — Very wet (monsoon)</option>
+        </select>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="lbc-calculate">Calculate Link Budget</button>
+        <button class="it-btn it-btn-secondary" id="lbc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="lbc-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="lbc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Link Budget Analysis</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">EIRP</div>
+            <div class="it-stat-value" id="lbc-eirp">0<span class="it-stat-unit"> dBW</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Free Space Path Loss</div>
+            <div class="it-stat-value" id="lbc-fspl">0<span class="it-stat-unit"> dB</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">C/N Ratio</div>
+            <div class="it-stat-value" id="lbc-cn">0<span class="it-stat-unit"> dB</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Link Margin</div>
+            <div class="it-stat-value" id="lbc-margin">0<span class="it-stat-unit"> dB</span></div>
+          </div>
+        </div>
+
+        <div id="lbc-breakdown"></div>
+        <div class="it-alert" id="lbc-alert"></div>
+      </div>
+
+      <!-- Feature 1: Rain Fade -->
+      <div class="it-results-card" id="lbc-rain-section" style="display:none;">
+        <div class="it-results-title">🌧️ Rain Fade Margin Analysis</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Rain Attenuation</div><div class="it-stat-value" id="lbc-rain-loss" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Rain Margin</div><div class="it-stat-value" id="lbc-rain-margin" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">99.9% Avail.</div><div class="it-stat-value" id="lbc-avail-999" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">99.99% Avail.</div><div class="it-stat-value" id="lbc-avail-9999" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="lbc-rain-insight"></div>
+      </div>
+
+      <!-- Feature 2: Uplink/Downlink Separation -->
+      <div class="it-results-card" id="lbc-split-section" style="display:none;">
+        <div class="it-results-title">⬆️⬇️ Uplink / Downlink Budget</div>
+        <table class="it-table" id="lbc-split-table">
+          <thead><tr><th>Parameter</th><th>Uplink</th><th>Downlink</th></tr></thead>
+          <tbody id="lbc-split-body"></tbody>
+        </table>
+      </div>
+
+      <!-- Feature 3: Modcod Analysis -->
+      <div class="it-results-card" id="lbc-modcod-section" style="display:none;">
+        <div class="it-results-title">📡 Modulation & Coding Analysis</div>
+        <div id="lbc-modcod-list"></div>
+      </div>
+
+      <!-- Feature 4: BER Estimator -->
+      <div class="it-results-card" id="lbc-ber-section" style="display:none;">
+        <div class="it-results-title">📊 Bit Error Rate Estimator</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Eb/N0</div><div class="it-stat-value" id="lbc-ebno" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">BER</div><div class="it-stat-value" id="lbc-ber" style="font-size:0.875rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Data Rate</div><div class="it-stat-value" id="lbc-datarate" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Spectral Eff.</div><div class="it-stat-value" id="lbc-speceff" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="lbc-ber-insight"></div>
+      </div>
+
+      <!-- Feature 5: Pointing Loss -->
+      <div class="it-results-card" id="lbc-pointing-section" style="display:none;">
+        <div class="it-results-title">🎯 Antenna Pointing Loss</div>
+        <div id="lbc-pointing-list"></div>
+      </div>
+
+      <!-- Feature 7: EIRP Density -->
+      <div class="it-results-card" id="lbc-eirpdensity-section" style="display:none;">
+        <div class="it-results-title">⚖️ EIRP Density & Regulatory Compliance</div>
+        <div id="lbc-eirpdensity-list"></div>
+      </div>
+
+      <!-- Feature 8: Link Availability -->
+      <div class="it-results-card" id="lbc-availability-section" style="display:none;">
+        <div class="it-results-title">📈 Link Availability Forecast</div>
+        <div id="lbc-availability-list"></div>
+      </div>
+
+      <!-- Feature 9: Interference Analysis -->
+      <div class="it-results-card" id="lbc-interference-section" style="display:none;">
+        <div class="it-results-title">🔀 Adjacent Satellite Interference</div>
+        <div id="lbc-interference-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const orbitDistances = { geo: 35786, meo: 10000, leo: 550 };
+
+  function calculate() {
+    const freq = parseFloat(document.getElementById('lbc-freq').value) || 14;
+    const orbitType = document.getElementById('lbc-orbit').value;
+    const txPower = parseFloat(document.getElementById('lbc-tx-power').value) || 100;
+    const txGain = parseFloat(document.getElementById('lbc-tx-gain').value) || 45;
+    const rxGain = parseFloat(document.getElementById('lbc-rx-gain').value) || 40;
+    const noiseTemp = parseFloat(document.getElementById('lbc-noise-temp').value) || 150;
+    const bandwidth = parseFloat(document.getElementById('lbc-bandwidth').value) || 36;
+    const atmoLoss = parseFloat(document.getElementById('lbc-atmo-loss').value) || 0.5;
+
+    const distance = orbitType === 'custom' ? 20000 : orbitDistances[orbitType];
+    const distanceM = distance * 1000;
+
+    // EIRP
+    const txPowerDbW = 10 * Math.log10(txPower);
+    const eirp = txPowerDbW + txGain;
+
+    // Free Space Path Loss
+    const wavelength = 3e8 / (freq * 1e9);
+    const fspl = 20 * Math.log10(4 * Math.PI * distanceM / wavelength);
+
+    // G/T
+    const gtRatio = rxGain - 10 * Math.log10(noiseTemp);
+
+    // C/N
+    const k = 1.38e-23; // Boltzmann constant
+    const noisePowerDbW = 10 * Math.log10(k * noiseTemp * bandwidth * 1e6);
+    const receivedPower = eirp - fspl - atmoLoss + rxGain;
+    const cnRatio = receivedPower - noisePowerDbW;
+
+    // Link margin (assuming required C/N of 10 dB for digital)
+    const requiredCN = 10;
+    const margin = cnRatio - requiredCN;
+
+    // Update UI
+    document.getElementById('lbc-eirp').innerHTML = eirp.toFixed(1) + '<span class="it-stat-unit"> dBW</span>';
+    document.getElementById('lbc-fspl').innerHTML = fspl.toFixed(1) + '<span class="it-stat-unit"> dB</span>';
+    document.getElementById('lbc-cn').innerHTML = cnRatio.toFixed(1) + '<span class="it-stat-unit"> dB</span>';
+    document.getElementById('lbc-margin').innerHTML = (margin >= 0 ? '+' : '') + margin.toFixed(1) + '<span class="it-stat-unit"> dB</span>';
+
+    const breakdown = document.getElementById('lbc-breakdown');
+    breakdown.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Link Budget Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Frequency</td><td>${freq} GHz (${wavelength * 1000).toFixed(1)} mm wavelength)</td></tr>
+          <tr><td>Orbit Distance</td><td>${distance.toLocaleString()} km</td></tr>
+          <tr><td>Tx Power</td><td>${txPower} W (${txPowerDbW.toFixed(1)} dBW)</td></tr>
+          <tr><td>Tx Antenna Gain</td><td>${txGain} dBi</td></tr>
+          <tr><td class="it-highlight">EIRP</td><td class="it-highlight">${eirp.toFixed(1)} dBW</td></tr>
+          <tr><td>Free Space Path Loss</td><td>${fspl.toFixed(1)} dB</td></tr>
+          <tr><td>Atmospheric Loss</td><td>${atmoLoss} dB</td></tr>
+          <tr><td>Rx Antenna Gain</td><td>${rxGain} dBi</td></tr>
+          <tr><td>System Noise Temperature</td><td>${noiseTemp} K</td></tr>
+          <tr><td>G/T Ratio</td><td>${gtRatio.toFixed(1)} dB/K</td></tr>
+          <tr><td>Bandwidth</td><td>${bandwidth} MHz</td></tr>
+          <tr><td>Noise Power</td><td>${noisePowerDbW.toFixed(1)} dBW</td></tr>
+          <tr><td>Received Power (C)</td><td>${receivedPower.toFixed(1)} dBW</td></tr>
+          <tr><td class="it-highlight">C/N Ratio</td><td class="it-highlight">${cnRatio.toFixed(1)} dB</td></tr>
+          <tr><td>Required C/N</td><td>${requiredCN} dB</td></tr>
+          <tr><td class="it-highlight">Link Margin</td><td class="it-highlight" style="color:${margin >= 0 ? '#059669' : '#dc2626'};">${(margin >= 0 ? '+' : '') + margin.toFixed(1)} dB</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const alert = document.getElementById('lbc-alert');
+    if (margin >= 6) {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>Excellent link margin (${margin.toFixed(1)} dB).</strong> The link is robust with significant margin for rain fade and other impairments.`;
+    } else if (margin >= 0) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>Marginal link margin (${margin.toFixed(1)} dB).</strong> The link will work under clear conditions but may degrade during rain or atmospheric disturbances. Consider increasing Tx power or antenna gain.`;
+    } else {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>Negative link margin (${margin.toFixed(1)} dB).</strong> The link will NOT close. Increase Tx power, antenna gain, or reduce bandwidth/distance.`;
+    }
+
+    document.getElementById('lbc-results').classList.add('show');
+
+    // === Feature 1: Rain Fade Margin ===
+    const rainRegion = document.getElementById('lbc-rain-region').value;
+    const rainRates = { A: 0.1, E: 1.5, K: 6, N: 30, Q: 60 }; // mm/hr
+    const rainRate = rainRates[rainRegion] || 6;
+    // Simplified ITU-R P.618 rain attenuation: A = a*R^b * L_eff
+    const aCoeff = freq < 10 ? 0.003 : freq < 20 ? 0.015 : 0.05;
+    const bCoeff = freq < 10 ? 1.0 : freq < 20 ? 1.1 : 1.2;
+    const effPath = Math.min(distance, 10); // effective path km (simplified)
+    const rainAtten = aCoeff * Math.pow(rainRate, bCoeff) * effPath;
+    const rainMargin = margin - rainAtten;
+    const avail999 = rainMargin > 0 ? '✓ Link closes' : '✗ Link fails';
+    const avail9999 = (margin - rainAtten * 3) > 0 ? '✓ Link closes' : '✗ Link fails';
+    document.getElementById('lbc-rain-loss').textContent = rainAtten.toFixed(2) + ' dB';
+    document.getElementById('lbc-rain-margin').textContent = (rainMargin >= 0 ? '+' : '') + rainMargin.toFixed(2) + ' dB';
+    document.getElementById('lbc-rain-margin').style.color = rainMargin >= 0 ? '#059669' : '#dc2626';
+    document.getElementById('lbc-avail-999').textContent = avail999;
+    document.getElementById('lbc-avail-999').style.color = avail999.includes('✓') ? '#059669' : '#dc2626';
+    document.getElementById('lbc-avail-9999').textContent = avail9999;
+    document.getElementById('lbc-avail-9999').style.color = avail9999.includes('✓') ? '#059669' : '#dc2626';
+    document.getElementById('lbc-rain-insight').innerHTML = `Rain region <strong>${rainRegion}</strong> (R = ${rainRate} mm/hr). Estimated rain attenuation at ${freq} GHz: <strong>${rainAtten.toFixed(2)} dB</strong>. ${rainMargin < 0 ? '🚨 Link fails during rain — increase margin or use ACM.' : '✓ Link survives typical rain events.'} 99.99% availability requires ${(rainAtten * 3).toFixed(1)} dB margin.`;
+    document.getElementById('lbc-rain-section').style.display = 'block';
+
+    // === Feature 2: Uplink/Downlink Separation ===
+    const ulFreq = freq;
+    const dlFreq = freq - 2; // typical offset
+    const ulFspl = 20 * Math.log10(4 * Math.PI * distanceM / (3e8 / (ulFreq * 1e9)));
+    const dlFspl = 20 * Math.log10(4 * Math.PI * distanceM / (3e8 / (dlFreq * 1e9)));
+    const ulEirp = eirp;
+    const dlEirp = eirp - 3; // satellite typically lower
+    const ulCn = ulEirp - ulFspl - atmoLoss + rxGain - noisePowerDbW;
+    const dlCn = dlEirp - dlFspl - atmoLoss + rxGain - noisePowerDbW;
+    document.getElementById('lbc-split-body').innerHTML = `
+      <tr><td>Frequency</td><td>${ulFreq} GHz</td><td>${dlFreq} GHz</td></tr>
+      <tr><td>EIRP</td><td>${ulEirp.toFixed(1)} dBW</td><td>${dlEirp.toFixed(1)} dBW</td></tr>
+      <tr><td>FSPL</td><td>${ulFspl.toFixed(1)} dB</td><td>${dlFspl.toFixed(1)} dB</td></tr>
+      <tr><td>C/N</td><td>${ulCn.toFixed(1)} dB</td><td>${dlCn.toFixed(1)} dB</td></tr>
+      <tr><td>Margin</td><td style="color:${ulCn - requiredCN >= 0 ? '#059669' : '#dc2626'};">${(ulCn - requiredCN >= 0 ? '+' : '') + (ulCn - requiredCN).toFixed(1)} dB</td><td style="color:${dlCn - requiredCN >= 0 ? '#059669' : '#dc2626'};">${(dlCn - requiredCN >= 0 ? '+' : '') + (dlCn - requiredCN).toFixed(1)} dB</td></tr>
+      <tr class="it-highlight"><td>Overall C/N</td><td colspan="2">${(1 / (1 / Math.pow(10, ulCn/10) + 1 / Math.pow(10, dlCn/10)) > 0 ? (10 * Math.log10(1 / (1 / Math.pow(10, ulCn/10) + 1 / Math.pow(10, dlCn/10)))).toFixed(1) : '0')} dB</td></tr>
+    `;
+    document.getElementById('lbc-split-section').style.display = 'block';
+
+    // === Feature 3: Modcod Analysis ===
+    const modcods = {
+      'qpsk14': { mod: 'QPSK', rate: '1/4', reqEbN0: -2.0, specEff: 0.5 },
+      'qpsk12': { mod: 'QPSK', rate: '1/2', reqEbN0: 1.0, specEff: 1.0 },
+      'qpsk34': { mod: 'QPSK', rate: '3/4', reqEbN0: 3.1, specEff: 1.5 },
+      '8psk34': { mod: '8PSK', rate: '3/4', reqEbN0: 6.6, specEff: 2.25 },
+      '16apsk23': { mod: '16APSK', rate: '2/3', reqEbN0: 8.5, specEff: 3.2 },
+      '32apsk34': { mod: '32APSK', rate: '3/4', reqEbN0: 12.5, specEff: 4.5 },
+    };
+    const selectedModcod = document.getElementById('lbc-modcod').value;
+    const mc = modcods[selectedModcod];
+    const ebno = cnRatio - 10 * Math.log10(bandwidth * 1e6) + 10 * Math.log10(bandwidth * 1e6 * mc.specEff / 2);
+    const mcMargin = ebno - mc.reqEbN0;
+    const modcodList = document.getElementById('lbc-modcod-list');
+    modcodList.innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Selected MODCOD</span><strong>${mc.mod} ${mc.rate}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Required Eb/N0</span><strong>${mc.reqEbN0} dB</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Available Eb/N0</span><strong>${ebno.toFixed(1)} dB</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>MODCOD Margin</span><strong style="color:${mcMargin >= 0 ? '#059669' : '#dc2626'};">${(mcMargin >= 0 ? '+' : '') + mcMargin.toFixed(1)} dB</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Spectral Efficiency</span><strong>${mc.specEff} b/s/Hz</strong></div>
+      <div class="it-alert ${mcMargin >= 0 ? 'it-alert-good' : 'it-alert-bad'}" style="margin-top:0.5rem;">${mcMargin >= 0 ? '✓' : '✗'} ${mc.mod} ${mc.rate} ${mcMargin >= 0 ? 'is supported with ' + mcMargin.toFixed(1) + ' dB margin' : 'requires ' + Math.abs(mcMargin).toFixed(1) + ' dB more margin — consider lower MODCOD'}</div>
+    `;
+    document.getElementById('lbc-modcod-section').style.display = 'block';
+
+    // === Feature 4: BER Estimator ===
+    const dataRate = bandwidth * 1e6 * mc.specEff;
+    const berApprox = Math.pow(10, -(ebno - mc.reqEbN0 + 5) / 2 * 0.5);
+    const berVal = Math.min(berApprox, 0.5);
+    document.getElementById('lbc-ebno').textContent = ebno.toFixed(1) + ' dB';
+    document.getElementById('lbc-ber').textContent = berVal.toExponential(2);
+    document.getElementById('lbc-datarate').textContent = (dataRate / 1e6).toFixed(1) + ' Mbps';
+    document.getElementById('lbc-speceff').textContent = mc.specEff + ' b/s/Hz';
+    document.getElementById('lbc-ber-insight').innerHTML = `Estimated BER: <strong>${berVal.toExponential(2)}</strong> at ${ebno.toFixed(1)} dB Eb/N0. ${berVal < 1e-6 ? '✓ BER below FEC threshold — error-free operation expected.' : berVal < 1e-3 ? '⚠️ Marginal BER — FEC can correct most errors.' : '🚨 High BER — link quality insufficient for reliable data.'}`;
+    document.getElementById('lbc-ber-section').style.display = 'block';
+
+    // === Feature 5: Pointing Loss ===
+    const pointingError = parseFloat(document.getElementById('lbc-pointing-error').value) || 0.1;
+    const beamwidth = parseFloat(document.getElementById('lbc-beamwidth').value) || 0.5;
+    const pointingLoss = 12 * Math.pow(pointingError / (beamwidth / 2), 2);
+    const adjustedMargin = margin - pointingLoss;
+    document.getElementById('lbc-pointing-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Pointing Error</span><strong>${pointingError}°</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>3 dB Beamwidth</span><strong>${beamwidth}°</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Off-axis Ratio</span><strong>${(pointingError / (beamwidth/2)).toFixed(2)}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Pointing Loss</span><strong style="color:${pointingLoss > 3 ? '#dc2626' : pointingLoss > 1 ? '#d97706' : '#059669'};">${pointingLoss.toFixed(2)} dB</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Adjusted Link Margin</span><strong style="color:${adjustedMargin >= 0 ? '#059669' : '#dc2626'};">${(adjustedMargin >= 0 ? '+' : '') + adjustedMargin.toFixed(1)} dB</strong></div>
+      <div class="it-alert ${pointingLoss > 3 ? 'it-alert-bad' : 'it-alert-good'}" style="margin-top:0.5rem;">${pointingLoss > 3 ? '🚨 Significant pointing loss — improve tracking accuracy.' : '✓ Pointing loss within acceptable range.'}</div>
+    `;
+    document.getElementById('lbc-pointing-section').style.display = 'block';
+
+    // === Feature 7: EIRP Density & Regulatory ===
+    const eirpDensity = eirp - 10 * Math.log10(bandwidth * 1e6); // dBW/Hz
+    const eirpDensity4kHz = eirp - 10 * Math.log10(4000);
+    const regulatoryLimits = { 4: -10, 8: -5, 14: 0, 30: 5, 50: 10 };
+    const freqBand = Object.keys(regulatoryLimits).reverse().find(f => freq >= parseFloat(f)) || '4';
+    const limit = regulatoryLimits[freqBand];
+    const compliant = eirpDensity4kHz <= limit + 10; // with some tolerance
+    document.getElementById('lbc-eirpdensity-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>EIRP</span><strong>${eirp.toFixed(1)} dBW</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>EIRP Density (dBW/Hz)</span><strong>${eirpDensity.toFixed(1)}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>EIRP Density (dBW/4kHz)</span><strong>${eirpDensity4kHz.toFixed(1)}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Regulatory Limit (${freqBand} GHz band)</span><strong>${limit} dBW/4kHz</strong></div>
+      <div class="it-alert ${compliant ? 'it-alert-good' : 'it-alert-bad'}" style="margin-top:0.5rem;">${compliant ? '✓ EIRP density within regulatory limits.' : '🚨 EIRP density exceeds regulatory limits — reduce power or increase antenna gain.'}</div>
+    `;
+    document.getElementById('lbc-eirpdensity-section').style.display = 'block';
+
+    // === Feature 8: Link Availability ===
+    const availLevels = [
+      { avail: 99.0, label: '99.0% (clear sky)', marginNeeded: 0, color: '#059669' },
+      { avail: 99.5, label: '99.5%', marginNeeded: 1, color: '#059669' },
+      { avail: 99.9, label: '99.9%', marginNeeded: rainAtten * 0.5, color: '#84cc16' },
+      { avail: 99.95, label: '99.95%', marginNeeded: rainAtten, color: '#d97706' },
+      { avail: 99.99, label: '99.99% (carrier grade)', marginNeeded: rainAtten * 3, color: '#dc2626' },
+    ];
+    document.getElementById('lbc-availability-list').innerHTML = availLevels.map(a => {
+      const achievable = margin >= a.marginNeeded;
+      return `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>${a.label}</span><span style="color:${achievable ? a.color : '#dc2626'};">${achievable ? '✓ Achievable' : '✗ Not achievable'} (needs ${a.marginNeeded.toFixed(1)} dB)</span></div>`;
+    }).join('') + `<div class="it-alert it-alert-info" style="margin-top:0.5rem;">Current margin: <strong>${margin.toFixed(1)} dB</strong>. Maximum achievable availability: <strong>${availLevels.filter(a => margin >= a.marginNeeded).pop()?.label || 'Below 99%'}</strong></div>`;
+    document.getElementById('lbc-availability-section').style.display = 'block';
+
+    // === Feature 9: Interference Analysis ===
+    const adjSatSpacing = 2; // degrees typical
+    const offAxisGain = 29 - 25 * Math.log10(Math.max(pointingError + adjSatSpacing, 0.1));
+    const interferenceCNI = eirp - fspl + offAxisGain - noisePowerDbW;
+    const cnir = cnRatio - 10 * Math.log10(1 + Math.pow(10, (cnRatio - interferenceCNI) / 10));
+    document.getElementById('lbc-interference-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Adjacent Satellite Spacing</span><strong>${adjSatSpacing}°</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Off-axis Antenna Gain</span><strong>${offAxisGain.toFixed(1)} dBi</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>C/I (Carrier-to-Interference)</span><strong>${interferenceCNI.toFixed(1)} dB</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>C/(N+I) Degradation</span><strong>${(cnRatio - cnir).toFixed(1)} dB</strong></div>
+      <div class="it-alert ${cnir - requiredCN >= 0 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${cnir - requiredCN >= 0 ? '✓' : '⚠️'} C/(N+I) = ${cnir.toFixed(1)} dB. ${cnir - requiredCN >= 0 ? 'Link survives adjacent satellite interference.' : 'Interference degrades link below threshold — improve antenna discrimination.'}</div>
+    `;
+    document.getElementById('lbc-interference-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('lbc-export').style.display = 'inline-flex';
+    document.getElementById('lbc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), frequency: freq, orbit: orbitType, distance, eirp, fspl, cnRatio, linkMargin: margin, rainFade: { region: rainRegion, attenuation: rainAtten, rainMargin }, modcod: mc, ebno, ber: berVal, dataRate, pointingLoss, eirpDensity: eirpDensity4kHz, interference: { cnI: interferenceCNI, cnir } };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'link-budget-report.json'; a.click();
+    };
+  }
+
+  // Feature 6: Band preset listener
+  document.getElementById('lbc-band-preset').addEventListener('change', (e) => {
+    if (e.target.value) document.getElementById('lbc-freq').value = e.target.value;
+  });
+
+  document.getElementById('lbc-calculate').addEventListener('click', calculate);
+  document.getElementById('lbc-reset').addEventListener('click', () => {
+    document.getElementById('lbc-results').classList.remove('show');
+  });
+})();
+</script>

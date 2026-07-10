@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './guides-styles.css';
+import GuidesHero from '../../components/guides/GuidesHero.astro';
+import GuidesTracks from '../../components/guides/GuidesTracks.astro';
+import GuidesFilter from '../../components/guides/GuidesFilter.astro';
+import GuidesGrid from '../../components/guides/GuidesGrid.astro';
+import GuidesCTA from '../../components/guides/GuidesCTA.astro';
+
+const title = 'Guides — Step-by-Step Emerging Tech Tutorials';
+const description = '62+ structured learning guides across 12 emerging technology frontiers. From beginner fundamentals to expert-level implementation — AI, cybersecurity, space, biotech, nuclear, energy storage, robotics, fusion, BCI, AV, materials, and quantum.';
+const keywords = 'emerging technology guides, AI tutorials, cybersecurity guides, space technology, biotech, nuclear energy, SMR, energy storage, robotics, fusion, BCI, autonomous vehicles, quantum computing, advanced materials';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="gd-page">
+    <GuidesHero />
+    <GuidesTracks />
+    <GuidesFilter />
+    <GuidesGrid />
+    <GuidesCTA />
+  </div>
+</BaseLayout>
+
+<script>
+  const PER_PAGE = 30;
+
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.gd-card'));
+  const noResults = document.getElementById('gd-no-results');
+  const countEl = document.getElementById('gd-grid-count');
+  const paginationEl = document.getElementById('gd-pagination');
+  const searchInput = document.getElementById('gd-search-input') as HTMLInputElement | null;
+
+  let currentTopic = 'All';
+  let currentDifficulty = 'All';
+  let currentSearch = '';
+  let currentPage = 1;
+
+  function getFilteredCards(): HTMLElement[] {
+    return cards.filter((card) => {
+      const cardTopic = card.dataset.topic || '';
+      const cardDifficulty = card.dataset.difficulty || '';
+      const cardTitle = card.dataset.title || '';
+      const topicMatch = currentTopic === 'All' || cardTopic === currentTopic;
+      const difficultyMatch = currentDifficulty === 'All' || cardDifficulty === currentDifficulty;
+      const searchMatch = !currentSearch || cardTitle.includes(currentSearch);
+      return topicMatch && difficultyMatch && searchMatch;
+    });
+  }
+
+  function renderPage() {
+    const filtered = getFilteredCards();
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    const start = (currentPage - 1) * PER_PAGE;
+    const end = start + PER_PAGE;
+    const pageCards = filtered.slice(start, end);
+
+    cards.forEach((c) => (c.style.display = 'none'));
+    pageCards.forEach((c) => (c.style.display = ''));
+
+    if (countEl) countEl.textContent = `Showing ${filtered.length} guide${filtered.length !== 1 ? 's' : ''}`;
+    if (noResults) noResults.classList.toggle('active', filtered.length === 0);
+
+    // Render pagination
+    if (paginationEl) {
+      if (totalPages <= 1) {
+        paginationEl.innerHTML = '';
+      } else {
+        let html = '';
+        // Prev button
+        html += `<button class="gd-page-btn ${currentPage === 1 ? 'disabled' : ''}" data-page="${currentPage - 1}">‹</button>`;
+        
+        // Page numbers with ellipsis
+        const maxVisible = 7;
+        let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+        let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+        if (endPage - startPage < maxVisible - 1) startPage = Math.max(1, endPage - maxVisible + 1);
+
+        if (startPage > 1) {
+          html += `<button class="gd-page-btn" data-page="1">1</button>`;
+          if (startPage > 2) html += `<span class="gd-page-ellipsis">…</span>`;
+        }
+        for (let i = startPage; i <= endPage; i++) {
+          html += `<button class="gd-page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+        if (endPage < totalPages) {
+          if (endPage < totalPages - 1) html += `<span class="gd-page-ellipsis">…</span>`;
+          html += `<button class="gd-page-btn" data-page="${totalPages}">${totalPages}</button>`;
+        }
+
+        // Next button
+        html += `<button class="gd-page-btn ${currentPage === totalPages ? 'disabled' : ''}" data-page="${currentPage + 1}">›</button>`;
+        paginationEl.innerHTML = html;
+      }
+    }
+
+    // Scroll to grid top on page change
+    if (currentPage > 1) {
+      const gridEl = document.getElementById('gd-grid');
+      if (gridEl) gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Topic filter
+  document.querySelectorAll<HTMLElement>('.gd-topic-pill').forEach((pill) => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.gd-topic-pill').forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentTopic = pill.dataset.topic || 'All';
+      currentPage = 1;
+      renderPage();
+    });
+  });
+
+  // Difficulty filter
+  document.querySelectorAll<HTMLElement>('.gd-difficulty-pill').forEach((pill) => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.gd-difficulty-pill').forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentDifficulty = pill.dataset.difficulty || 'All';
+      currentPage = 1;
+      renderPage();
+    });
+  });
+
+  // Search
+  if (searchInput) {
+    let searchTimer: ReturnType<typeof setTimeout>;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        currentSearch = searchInput.value.toLowerCase().trim();
+        currentPage = 1;
+        renderPage();
+      }, 200);
+    });
+  }
+
+  // Pagination clicks
+  if (paginationEl) {
+    paginationEl.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('.gd-page-btn');
+      if (!btn || btn.classList.contains('disabled')) return;
+      const page = parseInt(btn.dataset.page || '1');
+      if (page >= 1) {
+        currentPage = page;
+        renderPage();
+      }
+    });
+  }
+
+  // Initial render
+  renderPage();
+
+  // ── Quick guide modal ───────────────────
+  const quickDataEl = document.getElementById('gd-quick-data');
+  const modalBackdrop = document.getElementById('gd-modal-backdrop');
+  const modalBody = document.getElementById('gd-modal-body');
+  const modalClose = document.getElementById('gd-modal-close');
+
+  let quickData: Record<string, { intro: string; keyConcepts: { term: string; definition: string }[]; summary: string; faqs: { question: string; answer: string }[] }> = {};
+  if (quickDataEl && quickDataEl.textContent) {
+    try { quickData = JSON.parse(quickDataEl.textContent); } catch (e) {}
+  }
+
+  function escapeHtml(str: string): string {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function openModal(slug: string) {
+    const data = quickData[slug];
+    if (!data || !modalBody || !modalBackdrop) return;
+
+    let html = '';
+    html += `<p class="gd-modal-intro">${escapeHtml(data.intro)}</p>`;
+
+    if (data.keyConcepts.length) {
+      html += `<h4 class="gd-modal-section-title">Key Concepts</h4>`;
+      html += `<div class="gd-modal-concepts">`;
+      for (const c of data.keyConcepts) {
+        html += `<div class="gd-modal-concept"><div class="gd-modal-concept-term">${escapeHtml(c.term)}</div><div class="gd-modal-concept-def">${escapeHtml(c.definition)}</div></div>`;
+      }
+      html += `</div>`;
+    }
+
+    if (data.summary) {
+      html += `<h4 class="gd-modal-section-title">Summary</h4>`;
+      html += `<p class="gd-modal-summary">${escapeHtml(data.summary)}</p>`;
+    }
+
+    if (data.faqs.length) {
+      html += `<h4 class="gd-modal-section-title">FAQs</h4>`;
+      html += `<div class="gd-modal-faqs">`;
+      for (const f of data.faqs) {
+        html += `<div class="gd-modal-faq"><div class="gd-modal-faq-q">${escapeHtml(f.question)}</div><div class="gd-modal-faq-a">${escapeHtml(f.answer)}</div></div>`;
+      }
+      html += `</div>`;
+    }
+
+    modalBody.innerHTML = html;
+    modalBackdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    if (modalBackdrop) modalBackdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('.gd-quick-btn');
+    if (btn) {
+      e.preventDefault();
+      e.stopPropagation();
+      openModal(btn.dataset.slug || '');
+    }
+  });
+
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) closeModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>

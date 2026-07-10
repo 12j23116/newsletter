@@ -1,0 +1,492 @@
+---
+/**
+ * Model Benchmark Comparer — Interactive tool
+ * Side-by-side comparison of LLM benchmarks
+ */
+import './interactive-tools.css';
+
+const benchmarks = [
+  { id: 'mmlu', name: 'MMLU', desc: 'General knowledge (57 subjects)', max: 100, unit: '%' },
+  { id: 'humaneval', name: 'HumanEval', desc: 'Code generation', max: 100, unit: '%' },
+  { id: 'gsm8k', name: 'GSM8K', desc: 'Math reasoning', max: 100, unit: '%' },
+  { id: 'mtbench', name: 'MT-Bench', desc: 'Multi-turn conversation', max: 10, unit: '' },
+  { id: 'arena', name: 'Arena ELO', desc: 'Human preference ELO', max: 1400, unit: '' },
+  { id: 'context', name: 'Context Length', desc: 'Max context window', max: 2000000, unit: ' tokens' },
+];
+
+const models = [
+  { id: 'claude-opus-4', name: 'Claude Opus 4', mmlu: 88.2, humaneval: 90.5, gsm8k: 95.2, mtbench: 9.1, arena: 1355, context: 200000 },
+  { id: 'claude-sonnet-4', name: 'Claude Sonnet 4', mmlu: 86.5, humaneval: 87.2, gsm8k: 93.8, mtbench: 8.8, arena: 1320, context: 200000 },
+  { id: 'gpt-4o', name: 'GPT-4o', mmlu: 88.7, humaneval: 90.2, gsm8k: 95.1, mtbench: 9.0, arena: 1338, context: 128000 },
+  { id: 'gpt-4o-mini', name: 'GPT-4o mini', mmlu: 82.0, humaneval: 87.2, gsm8k: 90.2, mtbench: 8.5, arena: 1277, context: 128000 },
+  { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro', mmlu: 85.8, humaneval: 89.6, gsm8k: 94.4, mtbench: 8.9, arena: 1310, context: 1000000 },
+  { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash', mmlu: 78.5, humaneval: 83.5, gsm8k: 88.1, mtbench: 8.2, arena: 1250, context: 1000000 },
+  { id: 'llama-3.1-405b', name: 'Llama 3.1 405B', mmlu: 86.0, humaneval: 85.0, gsm8k: 92.5, mtbench: 8.6, arena: 1290, context: 128000 },
+  { id: 'mistral-large', name: 'Mistral Large', mmlu: 81.2, humaneval: 81.0, gsm8k: 88.5, mtbench: 8.3, arena: 1240, context: 128000 },
+];
+---
+
+<div class="it-container" id="benchmark-comparer">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">📊</div>
+      <div>
+        <h2>Model Benchmark Comparer</h2>
+        <p>Compare LLM benchmarks across models — MMLU, HumanEval, GSM8K, and more</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Select Models to Compare</label>
+        <div class="it-checkbox-group" id="mbc-models">
+          {models.map(m => (
+            <label class="it-checkbox-item" data-model={m.id}>
+              <input type="checkbox" value={m.id} />
+              {m.name}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Select Benchmarks</label>
+        <div class="it-checkbox-group" id="mbc-benchmarks">
+          {benchmarks.map(b => (
+            <label class="it-checkbox-item" data-bench={b.id}>
+              <input type="checkbox" value={b.id} />
+              {b.name}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <!-- Feature 4: Weighted Scoring -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem;">
+        <label class="it-label">⚖️ Custom Benchmark Weights <span class="it-label-hint">(0-10 importance)</span></label>
+        <div class="it-row" id="mbc-weights">
+          <div class="it-field"><label class="it-label" style="font-size:0.75rem;">MMLU</label><input type="number" class="it-input" id="mbc-w-mmlu" value="5" min="0" max="10" /></div>
+          <div class="it-field"><label class="it-label" style="font-size:0.75rem;">HumanEval</label><input type="number" class="it-input" id="mbc-w-humaneval" value="5" min="0" max="10" /></div>
+          <div class="it-field"><label class="it-label" style="font-size:0.75rem;">GSM8K</label><input type="number" class="it-input" id="mbc-w-gsm8k" value="5" min="0" max="10" /></div>
+          <div class="it-field"><label class="it-label" style="font-size:0.75rem;">MT-Bench</label><input type="number" class="it-input" id="mbc-w-mtbench" value="5" min="0" max="10" /></div>
+          <div class="it-field"><label class="it-label" style="font-size:0.75rem;">Arena</label><input type="number" class="it-input" id="mbc-w-arena" value="5" min="0" max="10" /></div>
+        </div>
+      </div>
+
+      <!-- Feature 6: Open-source filter -->
+      <div class="it-field">
+        <label class="it-label">🔓 Model Type Filter</label>
+        <select class="it-select" id="mbc-model-filter">
+          <option value="all">All models</option>
+          <option value="proprietary">Proprietary only</option>
+          <option value="open">Open-source only</option>
+        </select>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="mbc-compare">Compare Models</button>
+        <button class="it-btn it-btn-secondary" id="mbc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="mbc-export" style="display:none;">📄 Export CSV</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="mbc-results">
+      <!-- Main comparison -->
+      <div class="it-results-card">
+        <div class="it-results-title">Benchmark Comparison</div>
+        <table class="it-table" id="mbc-table">
+          <thead id="mbc-table-head"></thead>
+          <tbody id="mbc-table-body"></tbody>
+        </table>
+        <div id="mbc-chart-container" style="margin-top: 1.5rem;">
+          <div class="it-results-title">Visual Comparison</div>
+          <div id="mbc-chart" class="it-chart" style="height: 220px;"></div>
+        </div>
+        <div class="it-alert it-alert-info" id="mbc-insight"></div>
+      </div>
+
+      <!-- Feature 1: Cost-Performance -->
+      <div class="it-results-card" id="mbc-cost-section" style="display:none;">
+        <div class="it-results-title">💰 Cost-Performance Ratio</div>
+        <table class="it-table" id="mbc-cost-table">
+          <thead><tr><th>Model</th><th>Input $/1M</th><th>Output $/1M</th><th>Avg Score</th><th>Score per $</th><th>Value Rating</th></tr></thead>
+          <tbody id="mbc-cost-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-good" id="mbc-cost-insight"></div>
+      </div>
+
+      <!-- Feature 2: Speed/Latency -->
+      <div class="it-results-card" id="mbc-speed-section" style="display:none;">
+        <div class="it-results-title">⚡ Speed & Latency Comparison</div>
+        <div id="mbc-speed-chart" class="it-chart" style="height:140px;margin-bottom:1rem;"></div>
+        <table class="it-table" id="mbc-speed-table">
+          <thead><tr><th>Model</th><th>Tokens/sec</th><th>Latency (ms)</th><th>Throughput Rank</th></tr></thead>
+          <tbody id="mbc-speed-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="mbc-speed-insight"></div>
+      </div>
+
+      <!-- Feature 3: Use Case Recommender -->
+      <div class="it-results-card" id="mbc-usecase-section" style="display:none;">
+        <div class="it-results-title">🎯 Use Case Recommender</div>
+        <div id="mbc-usecase-list"></div>
+      </div>
+
+      <!-- Feature 4: Weighted Scores -->
+      <div class="it-results-card" id="mbc-weighted-section" style="display:none;">
+        <div class="it-results-title">⚖️ Weighted Composite Scores</div>
+        <div id="mbc-weighted-chart" class="it-chart" style="height:140px;margin-bottom:1rem;"></div>
+        <table class="it-table" id="mbc-weighted-table">
+          <thead><tr><th>Model</th><th>Weighted Score</th><th>Rank</th></tr></thead>
+          <tbody id="mbc-weighted-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="mbc-weighted-insight"></div>
+      </div>
+
+      <!-- Feature 5: Model Size -->
+      <div class="it-results-card" id="mbc-size-section" style="display:none;">
+        <div class="it-results-title">📐 Model Size & Parameters</div>
+        <table class="it-table" id="mbc-size-table">
+          <thead><tr><th>Model</th><th>Parameters</th><th>Type</th><th>License</th><th>Open Weights</th></tr></thead>
+          <tbody id="mbc-size-body"></tbody>
+        </table>
+      </div>
+
+      <!-- Feature 7: Radar Chart -->
+      <div class="it-results-card" id="mbc-radar-section" style="display:none;">
+        <div class="it-results-title">🕸️ Radar Chart (Normalized)</div>
+        <canvas id="mbc-radar-canvas" width="500" height="400" style="width:100%;max-width:500px;margin:0 auto;display:block;"></canvas>
+      </div>
+
+      <!-- Feature 9: Performance Delta -->
+      <div class="it-results-card" id="mbc-delta-section" style="display:none;">
+        <div class="it-results-title">📈 Performance Delta (vs Previous Gen)</div>
+        <table class="it-table" id="mbc-delta-table">
+          <thead><tr><th>Model</th><th>vs Previous</th><th>MMLU Δ</th><th>HumanEval Δ</th><th>GSM8K Δ</th><th>Trend</th></tr></thead>
+          <tbody id="mbc-delta-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="mbc-delta-insight"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const modelData = {
+    'claude-opus-4': { name: 'Claude Opus 4', mmlu: 88.2, humaneval: 90.5, gsm8k: 95.2, mtbench: 9.1, arena: 1355, context: 200000 },
+    'claude-sonnet-4': { name: 'Claude Sonnet 4', mmlu: 86.5, humaneval: 87.2, gsm8k: 93.8, mtbench: 8.8, arena: 1320, context: 200000 },
+    'gpt-4o': { name: 'GPT-4o', mmlu: 88.7, humaneval: 90.2, gsm8k: 95.1, mtbench: 9.0, arena: 1338, context: 128000 },
+    'gpt-4o-mini': { name: 'GPT-4o mini', mmlu: 82.0, humaneval: 87.2, gsm8k: 90.2, mtbench: 8.5, arena: 1277, context: 128000 },
+    'gemini-2.5-pro': { name: 'Gemini 2.5 Pro', mmlu: 85.8, humaneval: 89.6, gsm8k: 94.4, mtbench: 8.9, arena: 1310, context: 1000000 },
+    'gemini-2.5-flash': { name: 'Gemini 2.5 Flash', mmlu: 78.5, humaneval: 83.5, gsm8k: 88.1, mtbench: 8.2, arena: 1250, context: 1000000 },
+    'llama-3.1-405b': { name: 'Llama 3.1 405B', mmlu: 86.0, humaneval: 85.0, gsm8k: 92.5, mtbench: 8.6, arena: 1290, context: 128000 },
+    'mistral-large': { name: 'Mistral Large', mmlu: 81.2, humaneval: 81.0, gsm8k: 88.5, mtbench: 8.3, arena: 1240, context: 128000 },
+  };
+
+  // Extended model metadata
+  const modelMeta = {
+    'claude-opus-4': { inputPrice: 15, outputPrice: 75, tokensPerSec: 60, latency: 1200, params: '~200B', type: 'Proprietary', license: 'Commercial', open: false, prevGen: 'claude-opus-3', prevScores: { mmlu: 86.8, humaneval: 82.5, gsm8k: 91.5 } },
+    'claude-sonnet-4': { inputPrice: 3, outputPrice: 15, tokensPerSec: 90, latency: 800, params: '~70B', type: 'Proprietary', license: 'Commercial', open: false, prevGen: 'claude-sonnet-3.5', prevScores: { mmlu: 85.0, humaneval: 84.9, gsm8k: 92.0 } },
+    'gpt-4o': { inputPrice: 2.5, outputPrice: 10, tokensPerSec: 100, latency: 700, params: '~200B', type: 'Proprietary', license: 'Commercial', open: false, prevGen: 'gpt-4-turbo', prevScores: { mmlu: 86.4, humaneval: 85.4, gsm8k: 92.0 } },
+    'gpt-4o-mini': { inputPrice: 0.15, outputPrice: 0.6, tokensPerSec: 150, latency: 400, params: '~8B', type: 'Proprietary', license: 'Commercial', open: false, prevGen: 'gpt-3.5-turbo', prevScores: { mmlu: 70.0, humaneval: 48.1, gsm8k: 57.1 } },
+    'gemini-2.5-pro': { inputPrice: 1.25, outputPrice: 10, tokensPerSec: 80, latency: 900, params: '~150B', type: 'Proprietary', license: 'Commercial', open: false, prevGen: 'gemini-1.5-pro', prevScores: { mmlu: 81.9, humaneval: 84.1, gsm8k: 91.1 } },
+    'gemini-2.5-flash': { inputPrice: 0.075, outputPrice: 0.3, tokensPerSec: 200, latency: 300, params: '~20B', type: 'Proprietary', license: 'Commercial', open: false, prevGen: 'gemini-1.5-flash', prevScores: { mmlu: 77.9, humaneval: 78.0, gsm8k: 85.0 } },
+    'llama-3.1-405b': { inputPrice: 2.0, outputPrice: 6, tokensPerSec: 70, latency: 1000, params: '405B', type: 'Open-source', license: 'Llama 3.1', open: true, prevGen: 'llama-3-70b', prevScores: { mmlu: 79.0, humaneval: 76.0, gsm8k: 83.0 } },
+    'mistral-large': { inputPrice: 2, outputPrice: 6, tokensPerSec: 85, latency: 850, params: '~120B', type: 'Proprietary', license: 'Mistral', open: false, prevGen: 'mistral-large-2', prevScores: { mmlu: 78.5, humaneval: 78.0, gsm8k: 85.0 } },
+  };
+
+  const benchInfo = {
+    mmlu: { name: 'MMLU', max: 100, unit: '%' },
+    humaneval: { name: 'HumanEval', max: 100, unit: '%' },
+    gsm8k: { name: 'GSM8K', max: 100, unit: '%' },
+    mtbench: { name: 'MT-Bench', max: 10, unit: '' },
+    arena: { name: 'Arena ELO', max: 1400, unit: '' },
+    context: { name: 'Context', max: 2000000, unit: '' },
+  };
+
+  const colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#06b6d4', '#10b981', '#f59e0b', '#ef4444', '#6366f1'];
+
+  function toggle(el) {
+    el.classList.toggle('active');
+    el.querySelector('input').checked = el.classList.contains('active');
+  }
+
+  document.querySelectorAll('#mbc-models .it-checkbox-item').forEach(el => {
+    el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); });
+  });
+  document.querySelectorAll('#mbc-benchmarks .it-checkbox-item').forEach(el => {
+    el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); });
+  });
+
+  // Pre-select
+  ['gpt-4o', 'claude-sonnet-4', 'gemini-2.5-pro'].forEach(id => {
+    const el = document.querySelector(`#mbc-models [data-model="${id}"]`); if (el) toggle(el);
+  });
+  ['mmlu', 'humaneval', 'gsm8k'].forEach(id => {
+    const el = document.querySelector(`#mbc-benchmarks [data-bench="${id}"]`); if (el) toggle(el);
+  });
+
+  function compare() {
+    const selModels = [...document.querySelectorAll('#mbc-models .it-checkbox-item.active')].map(el => el.getAttribute('data-model'));
+    const selBench = [...document.querySelectorAll('#mbc-benchmarks .it-checkbox-item.active')].map(el => el.getAttribute('data-bench'));
+
+    if (selModels.length < 2) { alert('Select at least 2 models to compare.'); return; }
+    if (selBench.length === 0) { alert('Select at least 1 benchmark.'); return; }
+
+    // Table header
+    const head = document.getElementById('mbc-table-head');
+    head.innerHTML = `<tr><th>Model</th>${selBench.map(b => `<th>${benchInfo[b].name}</th>`).join('')}</tr>`;
+
+    // Table body
+    const body = document.getElementById('mbc-table-body');
+    const winners = {};
+    selBench.forEach(b => {
+      let best = -1, bestModel = null;
+      selModels.forEach(m => {
+        const val = modelData[m][b];
+        if (val > best) { best = val; bestModel = m; }
+      });
+      winners[b] = bestModel;
+    });
+
+    body.innerHTML = selModels.map((m, i) => {
+      const color = colors[i % colors.length];
+      return `<tr>
+        <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${color};margin-right:6px;"></span><strong>${modelData[m].name}</strong></td>
+        ${selBench.map(b => {
+          const val = modelData[m][b];
+          const isWinner = winners[b] === m;
+          const display = b === 'context' ? val.toLocaleString() : (b === 'arena' ? val : val.toFixed(1) + (benchInfo[b].unit || ''));
+          return `<td${isWinner ? ' class="it-highlight"' : ''}>${display}${isWinner ? ' ★' : ''}</td>`;
+        }).join('')}
+      </tr>`;
+    }).join('');
+
+    // Chart — grouped bars per benchmark
+    const chart = document.getElementById('mbc-chart');
+    chart.innerHTML = '';
+    const benchGroups = selBench.map(b => {
+      const maxVal = Math.max(...selModels.map(m => modelData[m][b]));
+      return { bench: b, maxVal };
+    });
+
+    const groupWidth = 100 / selBench.length;
+    chart.style.display = 'flex';
+    chart.style.alignItems = 'flex-end';
+    chart.style.gap = '1rem';
+
+    selBench.forEach((b, bi) => {
+      const group = document.createElement('div');
+      group.style.cssText = `flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;`;
+      const bars = document.createElement('div');
+      bars.style.cssText = `display:flex;align-items:flex-end;gap:4px;height:160px;width:100%;justify-content:center;`;
+      const maxVal = Math.max(...selModels.map(m => modelData[m][b]));
+      selModels.forEach((m, mi) => {
+        const val = modelData[m][b];
+        const h = (val / maxVal) * 100;
+        const bar = document.createElement('div');
+        bar.style.cssText = `width:${Math.max(12, 40/selModels.length)}px;height:${h}%;background:${colors[mi % colors.length]};border-radius:4px 4px 0 0;transition:height 600ms;`;
+        bars.appendChild(bar);
+      });
+      group.appendChild(bars);
+      const label = document.createElement('div');
+      label.style.cssText = `font-size:0.625rem;color:var(--tl-text-muted);white-space:nowrap;`;
+      label.textContent = benchInfo[b].name;
+      group.appendChild(label);
+      chart.appendChild(group);
+    });
+
+    // Insight
+    const winCount = {};
+    selModels.forEach(m => winCount[m] = 0);
+    Object.values(winners).forEach(w => winCount[w]++);
+    const topModel = Object.entries(winCount).sort((a, b) => b[1] - a[1])[0];
+    const insight = document.getElementById('mbc-insight');
+    insight.innerHTML = `<strong>💡 Insight:</strong> ${modelData[topModel[0]].name} leads in ${topModel[1]} of ${selBench.length} benchmarks. ${selModels.length === 2 ? 'Consider your specific use case — different models excel at different tasks.' : 'Check individual benchmarks to find the best fit for your workload.'}`;
+
+    document.getElementById('mbc-results').classList.add('show');
+
+    // === Feature 1: Cost-Performance Ratio ===
+    const costBody = document.getElementById('mbc-cost-body');
+    const costData = selModels.map(m => {
+      const meta = modelMeta[m];
+      const avgScore = (modelData[m].mmlu + modelData[m].humaneval + modelData[m].gsm8k) / 3;
+      const avgPrice = (meta.inputPrice + meta.outputPrice) / 2;
+      const scorePerDollar = avgScore / avgPrice;
+      return { m, name: modelData[m].name, inputPrice: meta.inputPrice, outputPrice: meta.outputPrice, avgScore, scorePerDollar };
+    }).sort((a, b) => b.scorePerDollar - a.scorePerDollar);
+    costBody.innerHTML = costData.map((d, i) => {
+      const rating = i === 0 ? '🏆 Best Value' : i === 1 ? 'Great' : i === 2 ? 'Good' : 'Fair';
+      const color = i === 0 ? '#059669' : '#5c5c72';
+      return `<tr${i === 0 ? ' style="background:color-mix(in srgb,#059669 5%,transparent);"' : ''}><td><strong>${d.name}</strong></td><td>$${d.inputPrice}</td><td>$${d.outputPrice}</td><td>${d.avgScore.toFixed(1)}%</td><td class="it-highlight">${d.scorePerDollar.toFixed(2)}</td><td style="color:${color};">${rating}</td></tr>`;
+    }).join('');
+    document.getElementById('mbc-cost-insight').innerHTML = `🏆 <strong>${costData[0].name}</strong> offers the best cost-performance ratio at ${costData[0].scorePerDollar.toFixed(2)} score-points per dollar. That's ${(costData[0].scorePerDollar / costData[costData.length-1].scorePerDollar).toFixed(1)}x better value than ${costData[costData.length-1].name}.`;
+    document.getElementById('mbc-cost-section').style.display = 'block';
+
+    // === Feature 2: Speed/Latency ===
+    const speedBody = document.getElementById('mbc-speed-body');
+    const speedData = selModels.map(m => ({ m, name: modelData[m].name, tps: modelMeta[m].tokensPerSec, latency: modelMeta[m].latency })).sort((a, b) => b.tps - a.tps);
+    speedBody.innerHTML = speedData.map((d, i) => `<tr><td><strong>${d.name}</strong></td><td>${d.tps}</td><td>${d.latency}</td><td>${i+1}${i === 0 ? ' 🏆' : ''}</td></tr>`).join('');
+    const speedChart = document.getElementById('mbc-speed-chart');
+    const maxTps = Math.max(...speedData.map(d => d.tps));
+    speedChart.innerHTML = speedData.map((d, i) => `<div class="it-chart-bar" style="height:${(d.tps/maxTps*100)}%;background:${colors[i % colors.length]};"><div class="it-chart-bar-label">${d.name.split(' ').slice(-1)[0]}</div></div>`).join('');
+    document.getElementById('mbc-speed-insight').innerHTML = `⚡ <strong>${speedData[0].name}</strong> is fastest at ${speedData[0].tps} tokens/sec (${speedData[0].latency}ms latency). ${speedData[0].tps > 150 ? 'Excellent for real-time applications.' : speedData[0].tps > 80 ? 'Good for interactive use.' : 'Best for batch processing.'}`;
+    document.getElementById('mbc-speed-section').style.display = 'block';
+
+    // === Feature 3: Use Case Recommender ===
+    const useCases = [
+      { name: 'Coding & Software Dev', benchmarks: ['humaneval'], weight: 0.5, extra: ['gsm8k'] },
+      { name: 'Math & Reasoning', benchmarks: ['gsm8k'], weight: 0.6, extra: ['mmlu'] },
+      { name: 'General Knowledge', benchmarks: ['mmlu'], weight: 0.5, extra: ['mtbench'] },
+      { name: 'Chat & Conversation', benchmarks: ['mtbench', 'arena'], weight: 0.4, extra: [] },
+      { name: 'Long Context / RAG', benchmarks: ['context'], weight: 1.0, extra: [] },
+      { name: 'Cost-Sensitive Production', benchmarks: [], weight: 0, extra: [], costOptimized: true },
+    ];
+    const useCaseHtml = useCases.map(uc => {
+      let best, bestScore = -1;
+      if (uc.costOptimized) {
+        best = costData[0];
+        bestScore = best.scorePerDollar;
+      } else {
+        selModels.forEach(m => {
+          let score = uc.benchmarks.reduce((s, b) => s + modelData[m][b] * uc.weight, 0);
+          uc.extra.forEach(b => score += modelData[m][b] * 0.2);
+          if (score > bestScore) { bestScore = score; best = { m, name: modelData[m].name }; }
+        });
+      }
+      return `<div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${uc.name}</strong></div><div><span class="it-badge it-badge-good">${best.name}</span></div></div>`;
+    }).join('');
+    document.getElementById('mbc-usecase-list').innerHTML = useCaseHtml;
+    document.getElementById('mbc-usecase-section').style.display = 'block';
+
+    // === Feature 4: Weighted Composite Scores ===
+    const weights = {
+      mmlu: parseFloat(document.getElementById('mbc-w-mmlu').value) || 0,
+      humaneval: parseFloat(document.getElementById('mbc-w-humaneval').value) || 0,
+      gsm8k: parseFloat(document.getElementById('mbc-w-gsm8k').value) || 0,
+      mtbench: parseFloat(document.getElementById('mbc-w-mtbench').value) || 0,
+      arena: parseFloat(document.getElementById('mbc-w-arena').value) || 0,
+    };
+    const totalWeight = Object.values(weights).reduce((a, b) => a + b, 0);
+    if (totalWeight > 0) {
+      const weightedData = selModels.map(m => {
+        let score = 0;
+        ['mmlu', 'humaneval', 'gsm8k', 'mtbench', 'arena'].forEach(b => {
+          const norm = b === 'mtbench' ? modelData[m][b] * 10 : b === 'arena' ? (modelData[m][b] / 1400) * 100 : modelData[m][b];
+          score += norm * weights[b];
+        });
+        return { m, name: modelData[m].name, score: score / totalWeight };
+      }).sort((a, b) => b.score - a.score);
+      document.getElementById('mbc-weighted-body').innerHTML = weightedData.map((d, i) => `<tr${i === 0 ? ' class="it-highlight-row"' : ''}><td><strong>${d.name}</strong></td><td class="it-highlight">${d.score.toFixed(2)}</td><td>${i + 1}</td></tr>`).join('');
+      const wChart = document.getElementById('mbc-weighted-chart');
+      const maxW = Math.max(...weightedData.map(d => d.score));
+      wChart.innerHTML = weightedData.map((d, i) => `<div class="it-chart-bar" style="height:${(d.score/maxW*100)}%;background:${colors[i % colors.length]};"><div class="it-chart-bar-label">${d.name.split(' ').slice(-1)[0]}</div></div>`).join('');
+      document.getElementById('mbc-weighted-insight').innerHTML = `With your custom weights, <strong>${weightedData[0].name}</strong> ranks #1 with a composite score of ${weightedData[0].score.toFixed(2)}. Adjust weights to match your use case priorities.`;
+      document.getElementById('mbc-weighted-section').style.display = 'block';
+    } else {
+      document.getElementById('mbc-weighted-section').style.display = 'none';
+    }
+
+    // === Feature 5: Model Size ===
+    document.getElementById('mbc-size-body').innerHTML = selModels.map(m => {
+      const meta = modelMeta[m];
+      return `<tr><td><strong>${modelData[m].name}</strong></td><td>${meta.params}</td><td>${meta.type}</td><td>${meta.license}</td><td>${meta.open ? '✓ Yes' : '✗ No'}</td></tr>`;
+    }).join('');
+    document.getElementById('mbc-size-section').style.display = 'block';
+
+    // === Feature 7: Radar Chart ===
+    const radarCanvas = document.getElementById('mbc-radar-canvas');
+    const rctx = radarCanvas.getContext('2d');
+    const rcx = radarCanvas.width / 2, rcy = radarCanvas.height / 2, rRadius = 140;
+    rctx.fillStyle = '#ebedf5';
+    rctx.fillRect(0, 0, radarCanvas.width, radarCanvas.height);
+    const radarBench = ['mmlu', 'humaneval', 'gsm8k', 'mtbench', 'arena'];
+    const numAxes = radarBench.length;
+    // Grid circles
+    for (let r = 1; r <= 4; r++) {
+      rctx.strokeStyle = 'rgba(15,23,42,0.08)';
+      rctx.beginPath();
+      for (let a = 0; a <= numAxes; a++) {
+        const angle = (a / numAxes) * 2 * Math.PI - Math.PI / 2;
+        const x = rcx + Math.cos(angle) * (rRadius * r / 4);
+        const y = rcy + Math.sin(angle) * (rRadius * r / 4);
+        if (a === 0) rctx.moveTo(x, y); else rctx.lineTo(x, y);
+      }
+      rctx.stroke();
+    }
+    // Axes & labels
+    radarBench.forEach((b, i) => {
+      const angle = (i / numAxes) * 2 * Math.PI - Math.PI / 2;
+      rctx.strokeStyle = 'rgba(15,23,42,0.1)';
+      rctx.beginPath(); rctx.moveTo(rcx, rcy); rctx.lineTo(rcx + Math.cos(angle) * rRadius, rcy + Math.sin(angle) * rRadius); rctx.stroke();
+      rctx.fillStyle = '#5c5c72'; rctx.font = '11px sans-serif'; rctx.textAlign = 'center';
+      rctx.fillText(benchInfo[b].name, rcx + Math.cos(angle) * (rRadius + 20), rcy + Math.sin(angle) * (rRadius + 20) + 4);
+    });
+    // Plot models
+    selModels.forEach((m, mi) => {
+      const color = colors[mi % colors.length];
+      rctx.strokeStyle = color; rctx.fillStyle = color + '22'; rctx.lineWidth = 2;
+      rctx.beginPath();
+      radarBench.forEach((b, bi) => {
+        const norm = b === 'mtbench' ? modelData[m][b] * 10 : b === 'arena' ? (modelData[m][b] / 1400) * 100 : modelData[m][b];
+        const angle = (bi / numAxes) * 2 * Math.PI - Math.PI / 2;
+        const r = (norm / 100) * rRadius;
+        const x = rcx + Math.cos(angle) * r, y = rcy + Math.sin(angle) * r;
+        if (bi === 0) rctx.moveTo(x, y); else rctx.lineTo(x, y);
+      });
+      rctx.closePath(); rctx.fill(); rctx.stroke();
+    });
+    document.getElementById('mbc-radar-section').style.display = 'block';
+
+    // === Feature 9: Performance Delta ===
+    const deltaBody = document.getElementById('mbc-delta-body');
+    const deltaData = selModels.map(m => {
+      const meta = modelMeta[m];
+      const prev = meta.prevScores;
+      if (!prev) return null;
+      const mmluDelta = modelData[m].mmlu - prev.mmlu;
+      const heDelta = modelData[m].humaneval - prev.humaneval;
+      const gsmDelta = modelData[m].gsm8k - prev.gsm8k;
+      const avgDelta = (mmluDelta + heDelta + gsmDelta) / 3;
+      return { m, name: modelData[m].name, prev: meta.prevGen, mmluDelta, heDelta, gsmDelta, avgDelta };
+    }).filter(Boolean);
+    deltaBody.innerHTML = deltaData.map(d => {
+      const fmt = (v) => `<span style="color:${v > 0 ? '#059669' : v < 0 ? '#dc2626' : '#5c5c72'};">${v > 0 ? '+' : ''}${v.toFixed(1)}</span>`;
+      const trend = d.avgDelta > 3 ? '🚀 Major improvement' : d.avgDelta > 0 ? '📈 Improving' : d.avgDelta === 0 ? '➡️ Stable' : '📉 Regressing';
+      return `<tr><td><strong>${d.name}</strong></td><td>${d.prev}</td><td>${fmt(d.mmluDelta)}</td><td>${fmt(d.heDelta)}</td><td>${fmt(d.gsmDelta)}</td><td>${trend}</td></tr>`;
+    }).join('');
+    const avgImprovement = deltaData.reduce((a, d) => a + d.avgDelta, 0) / deltaData.length;
+    document.getElementById('mbc-delta-insight').innerHTML = `Average improvement across models: <strong>${avgImprovement > 0 ? '+' : ''}${avgImprovement.toFixed(1)} points</strong> vs previous generation. ${avgImprovement > 2 ? 'Significant generational leap.' : avgImprovement > 0 ? 'Steady progress.' : 'Minimal improvement.'}`;
+    document.getElementById('mbc-delta-section').style.display = 'block';
+
+    // === Feature 10: Export CSV ===
+    document.getElementById('mbc-export').style.display = 'inline-flex';
+    document.getElementById('mbc-export').onclick = () => {
+      const headers = ['Model', ...selBench.map(b => benchInfo[b].name)];
+      const rows = selModels.map(m => [modelData[m].name, ...selBench.map(b => modelData[m][b])]);
+      const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'benchmark-comparison.csv'; a.click();
+      URL.revokeObjectURL(url);
+    };
+  }
+
+  document.getElementById('mbc-compare').addEventListener('click', compare);
+  document.getElementById('mbc-reset').addEventListener('click', () => {
+    document.getElementById('mbc-results').classList.remove('show');
+    document.querySelectorAll('.it-checkbox-item').forEach(el => {
+      el.classList.remove('active');
+      el.querySelector('input').checked = false;
+    });
+    ['gpt-4o', 'claude-sonnet-4', 'gemini-2.5-pro'].forEach(id => {
+      const el = document.querySelector(`#mbc-models [data-model="${id}"]`); if (el) toggle(el);
+    });
+    ['mmlu', 'humaneval', 'gsm8k'].forEach(id => {
+      const el = document.querySelector(`#mbc-benchmarks [data-bench="${id}"]`); if (el) toggle(el);
+    });
+  });
+})();
+</script>

@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Cookie Policy';
+const description = 'TechNanoAI cookie policy — what cookies we use, why we use them, how to manage or disable cookies, and third-party cookie information.';
+const keywords = 'cookie policy, TechNanoAI cookies, cookie management, GDPR cookies, CCPA cookies, tracking cookies';
+
+const lastUpdated = 'January 2026';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="legal-page">
+    <div class="legal-container">
+      <h1>Cookie Policy</h1>
+      <p class="legal-updated">Last updated: {lastUpdated}</p>
+
+      <section>
+        <h2>1. What Are Cookies?</h2>
+        <p>Cookies are small text files stored on your device when you visit a website. They help the website remember your actions and preferences over time. Cookies are widely used to make websites work efficiently and to provide reporting information.</p>
+      </section>
+
+      <section>
+        <h2>2. Cookies We Use</h2>
+        <p>TechNanoAI uses a minimal set of cookies. We categorize them as follows:</p>
+
+        <h3>Essential Cookies</h3>
+        <p>These cookies are necessary for the website to function. They cannot be disabled in our system.</p>
+        <ul>
+          <li><strong>Session cookies</strong> — maintain your session as you navigate the site.</li>
+        </ul>
+
+        <h3>Analytics Cookies</h3>
+        <p>These cookies help us understand how visitors interact with our website so we can improve the experience.</p>
+        <ul>
+          <li><strong>Google Analytics</strong> — anonymous usage data including page views, session duration, and referral source.</li>
+        </ul>
+
+        <h3>Preference Cookies</h3>
+        <p>These cookies remember your choices such as theme preference or filter selections.</p>
+        <ul>
+          <li><strong>Theme/filter preferences</strong> — remember your view settings on listing pages.</li>
+        </ul>
+
+        <h3>Marketing Cookies (if applicable)</h3>
+        <p>We do not currently use third-party advertising or marketing cookies. If this changes, we will update this policy and seek your consent.</p>
+      </section>
+
+      <section>
+        <h2>3. Third-Party Cookies</h2>
+        <p>In addition to our own cookies, we may use cookies from trusted third-party services:</p>
+        <ul>
+          <li><strong>Google Analytics</strong> — to analyze website traffic. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+          <li><strong>Google Fonts</strong> — to serve web fonts. Google may set cookies when loading fonts.</li>
+          <li><strong>Podcast platforms</strong> — embedded podcast players (Apple, Spotify) may set their own cookies.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Managing Cookies</h2>
+        <p>You can control and delete cookies through your browser settings. Here's how for major browsers:</p>
+        <ul>
+          <li><strong>Chrome</strong> — Settings &gt; Privacy and security &gt; Cookies and other site data</li>
+          <li><strong>Firefox</strong> — Settings &gt; Privacy &amp; Security &gt; Cookies and Site Data</li>
+          <li><strong>Safari</strong> — Preferences &gt; Privacy &gt; Cookies and website data</li>
+          <li><strong>Edge</strong> — Settings &gt; Cookies and site permissions</li>
+        </ul>
+        <p>Disabling all cookies may affect website functionality. Essential cookies are required for the site to operate correctly.</p>
+      </section>
+
+      <section>
+        <h2>5. Do Not Track</h2>
+        <p>If your browser is set to "Do Not Track," we respect that signal for analytics cookies. Essential cookies will still be set to ensure the website functions properly.</p>
+      </section>
+
+      <section>
+        <h2>6. GDPR and ePrivacy Compliance</h2>
+        <p>For users in the European Union and United Kingdom, we comply with the GDPR and ePrivacy Directive. Analytics cookies are set only with your consent. You have the right to withdraw consent at any time by adjusting your browser settings.</p>
+      </section>
+
+      <section>
+        <h2>7. CCPA Compliance</h2>
+        <p>For California residents, the CCPA gives you the right to opt out of the sale of personal information. TechNanoAI does not sell personal information to third parties.</p>
+      </section>
+
+      <section>
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this Cookie Policy as our use of cookies changes. We will post the updated policy on this page with a revised "Last updated" date.</p>
+      </section>
+
+      <section>
+        <h2>9. Contact</h2>
+        <p>For questions about our use of cookies, contact us at <a href="mailto:privacy@technanoai.com">privacy@technanoai.com</a> or visit our <a href="/contact">contact page</a>. See also our <a href="/privacy">Privacy Policy</a>.</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: 2rem 1.5rem 4rem;
+    background: var(--bg, #0a0a0f);
+    color: var(--text, #e4e4e7);
+    min-height: 60vh;
+  }
+  .legal-container {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .legal-container h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .legal-updated {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .legal-container section {
+    margin-bottom: 2rem;
+  }
+  .legal-container h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+  }
+  .legal-container p {
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container li {
+    line-height: 1.7;
+    margin-bottom: 0.4rem;
+  }
+  .legal-container a {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './podcast-styles.css';
+import PodcastHero from '../../components/podcast/PodcastHero.astro';
+import PodcastPlatforms from '../../components/podcast/PodcastPlatforms.astro';
+import PodcastHosts from '../../components/podcast/PodcastHosts.astro';
+import PodcastFilter from '../../components/podcast/PodcastFilter.astro';
+import PodcastRecent from '../../components/podcast/PodcastRecent.astro';
+import PodcastArchive from '../../components/podcast/PodcastArchive.astro';
+import PodcastSubscribe from '../../components/podcast/PodcastSubscribe.astro';
+
+const title = 'Podcast — The Frontier Tech Show';
+const description = 'Weekly conversations with researchers, engineers, and founders building the future. 104 episodes covering AI, fusion, quantum, biotech, cybersecurity, and more — with 4.5M downloads.';
+const keywords = 'technology podcast, AI podcast, frontier tech podcast, emerging technology interviews, fusion energy podcast, quantum computing podcast, biotech podcast, cybersecurity podcast';
+
+const podcastLd = {
+  '@context': 'https://schema.org',
+  '@type': 'PodcastSeries',
+  name: 'The Frontier Tech Show',
+  description: description,
+  url: 'https://technanoai.com/podcast',
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+};
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="pc-page">
+    <PodcastHero />
+    <PodcastPlatforms />
+    <PodcastHosts />
+    <PodcastFilter />
+    <PodcastRecent />
+    <PodcastArchive />
+    <PodcastSubscribe />
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(podcastLd)} />
+</BaseLayout>
+
+<script>
+  const filterPills = document.querySelectorAll<HTMLElement>('.pc-filter-pill');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.pc-ep-card'));
+  const noResults = document.getElementById('pc-no-results');
+  const countEl = document.getElementById('pc-archive-count');
+  const paginationEl = document.getElementById('pc-pagination') as HTMLElement | null;
+  const perPage = parseInt(paginationEl?.dataset.perPage || '30', 10);
+  let currentPage = 1;
+  let currentFilter = 'All';
+
+  function getVisibleCards() {
+    if (currentFilter === 'All') return cards;
+    return cards.filter((c) => c.dataset.topic === currentFilter);
+  }
+
+  function render() {
+    const visible = getVisibleCards();
+    const totalPages = Math.ceil(visible.length / perPage);
+    if (currentPage > totalPages) currentPage = 1;
+    if (currentPage < 1) currentPage = 1;
+
+    const start = (currentPage - 1) * perPage;
+    const end = start + perPage;
+
+    cards.forEach((card) => {
+      const idx = visible.indexOf(card);
+      if (idx >= start && idx < end) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (countEl) {
+      const showing = Math.min(visible.length, end) - start;
+      countEl.textContent = `Showing ${showing} of ${visible.length} episode${visible.length !== 1 ? 's' : ''}`;
+    }
+    if (noResults) noResults.classList.toggle('active', visible.length === 0);
+    if (paginationEl) paginationEl.style.display = totalPages > 1 ? 'flex' : 'none';
+
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages: number) {
+    if (!paginationEl || totalPages <= 1) {
+      if (paginationEl) paginationEl.innerHTML = '';
+      return;
+    }
+
+    let html = '';
+    // Prev button
+    html += `<button class="pc-page-btn ${currentPage === 1 ? 'disabled' : ''}" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>`;
+
+    // Page numbers with ellipsis
+    const maxVisible = 7;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+    if (endPage - startPage < maxVisible - 1) startPage = Math.max(1, endPage - maxVisible + 1);
+
+    if (startPage > 1) {
+      html += `<button class="pc-page-num" data-page="1">1</button>`;
+      if (startPage > 2) html += `<span class="pc-page-ellipsis">…</span>`;
+    }
+
+    for (let p = startPage; p <= endPage; p++) {
+      html += `<button class="pc-page-num ${p === currentPage ? 'active' : ''}" data-page="${p}">${p}</button>`;
+    }
+
+    if (endPage < totalPages) {
+      if (endPage < totalPages - 1) html += `<span class="pc-page-ellipsis">…</span>`;
+      html += `<button class="pc-page-num" data-page="${totalPages}">${totalPages}</button>`;
+    }
+
+    // Next button
+    html += `<button class="pc-page-btn ${currentPage === totalPages ? 'disabled' : ''}" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>`;
+
+    paginationEl.innerHTML = html;
+
+    paginationEl.querySelectorAll<HTMLButtonElement>('button[data-page]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.disabled) return;
+        currentPage = parseInt(btn.dataset.page || '1', 10);
+        render();
+        document.querySelector('.pc-archive')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+
+  filterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      currentFilter = pill.dataset.topic || 'All';
+      currentPage = 1;
+      filterPills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      render();
+    });
+  });
+
+  render();
+</script>

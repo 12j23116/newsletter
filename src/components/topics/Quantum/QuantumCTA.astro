@@ -1,0 +1,39 @@
+---
+import { quantumContent as c } from '../../../data/topics/Quantum/quantum-content';
+---
+<section class="qm-section">
+  <div class="qm-container">
+    <div class="qm-section-head">
+      <span class="qm-eyebrow">Latest Research</span>
+      <h2 class="qm-section-title">Quantum Computing Articles & Reports</h2>
+      <p class="qm-section-sub">In-depth analysis of the hardware, algorithms, and applications reshaping computation, cryptography, and drug discovery.</p>
+    </div>
+    <div class="qm-section-grid">
+      {c.articles.map((a) => (
+        <div class="qm-section-card">
+          <div class="qm-section-body">
+            <span class="qm-section-eyebrow">{a.date}</span>
+            <h3 class="qm-section-title"><a href={a.href} style="color: inherit; text-decoration: none;">{a.title}</a></h3>
+            <p class="qm-section-desc">{a.excerpt}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="qm-cta">
+  <div class="qm-cta-bg">
+    <img src="/images/quantum-01-quantum-processor.webp" alt="" class="qm-hero-bg-img" />
+  </div>
+  <div class="qm-cta-inner">
+    <h3>Unlock the Quantum Future</h3>
+    <p>Get weekly analysis on error correction breakthroughs, quantum advantage milestones, post-quantum crypto, and the race to useful quantum computing — delivered to your inbox.</p>
+    <a href="/newsletter" class="qm-cta-btn">Subscribe to TechNanoAI →</a>
+    <div class="qm-cta-pills">
+      <span class="qm-cta-pill">✦ Weekly insights</span>
+      <span class="qm-cta-pill">✦ 50K+ readers</span>
+      <span class="qm-cta-pill">✦ No spam</span>
+    </div>
+  </div>
+</section>

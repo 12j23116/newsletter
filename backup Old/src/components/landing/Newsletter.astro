@@ -1,0 +1,47 @@
+---
+const pills = [
+  { icon: '✨', text: 'No credit card needed' },
+  { icon: '📰', text: 'Weekly digest' },
+  { icon: '🚀', text: 'Free forever' },
+  { icon: '🔒', text: 'Your data is safe' },
+];
+---
+
+<section class="cta-section lv-section-dark" id="newsletter">
+  <div class="lv-orb" style="width:400px;height:400px;background:var(--accent-blue);top:20%;left:10%;opacity:.3"></div>
+  <div class="lv-orb" style="width:350px;height:350px;background:var(--accent-purple);bottom:10%;right:10%;opacity:.3;animation-delay:-5s"></div>
+  <div class="lv-container" style="position:relative;z-index:1">
+    <div class="cta-inner reveal">
+      <div class="lv-eyebrow" style="justify-content:center">Begin Your Journey</div>
+      <h2 class="lv-section-h2 lv-section-h2-light">
+        Your tech intelligence<br />
+        <span class="lv-grad-text">starts now.</span>
+      </h2>
+      <p class="lv-section-sub" style="margin-inline:auto;color:var(--text-muted)">
+        Join 50,000+ builders, investors, and technologists receiving our curated analysis every Sunday morning. No fluff. Just signal.
+      </p>
+
+      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed!';">
+        <input
+          type="email"
+          class="cta-input"
+          placeholder="you@example.com"
+          required
+          aria-label="Email address"
+        />
+        <button type="submit" class="lv-btn lv-btn-primary">
+          Subscribe Free
+        </button>
+      </form>
+
+      <div class="cta-pills">
+        {pills.map((p) => (
+          <div class="cta-pill">
+            <span>{p.icon}</span>
+            <span>{p.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

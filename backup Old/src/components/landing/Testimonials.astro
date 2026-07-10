@@ -1,0 +1,100 @@
+---
+const testimonials = [
+  {
+    quote: 'TechScope is the only newsletter I read cover to cover. The depth of analysis across fusion, quantum, and AI is unmatched anywhere else.',
+    name: 'Rachel Torres', role: 'Partner at Andreessen Horowitz', init: 'RT', color: '#3b82f6', img: '/images/ai-07-healthcare-diagnostic.webp',
+  },
+  {
+    quote: "As a CTO, I need to stay ahead of emerging tech trends. TechScope's radar is my go-to resource for strategic planning every quarter.",
+    name: 'David Park', role: 'CTO at Quantum Labs', init: 'DP', color: '#8b5cf6', img: '/images/quantum-07-topological-qubit.webp',
+  },
+  {
+    quote: 'The biotech coverage is phenomenal. I have recommended TechScope to every researcher in my lab. It bridges the gap between academia and industry.',
+    name: 'Dr. Emily Chen', role: 'Principal Investigator, Stanford', init: 'EC', color: '#06b6d4', img: '/images/biotech-06-stem-cell-culture.webp',
+  },
+  {
+    quote: "I invested in three SMR startups after reading TechScope's nuclear energy series. The analysis is sharp, data-driven, and ahead of the curve.",
+    name: 'Michael Brennan', role: 'Angel Investor', init: 'MB', color: '#ec4899', img: '/images/nuclear-07-molten-salt-reactor.webp',
+  },
+];
+---
+
+<section class="lv-section lv-section-light" id="testimonials">
+  <div class="lv-container">
+    <div class="lv-section-head reveal">
+      <div class="lv-eyebrow">Success Stories</div>
+      <h2 class="lv-section-h2">
+        Real journeys. Real wins.<br />
+        <span class="lv-grad-text-dark">Real readers like you.</span>
+      </h2>
+      <p class="lv-section-sub">
+        From first discovery to strategic deployment, from investment thesis to research breakthrough — these are the technologists who stayed ahead.
+      </p>
+    </div>
+
+    <div class="testi-showcase reveal">
+      <div class="testi-hero" id="testi-hero">
+        <div class="testi-hero-img-wrap" id="testi-hero-img" style="background:linear-gradient(135deg,#3b82f6,rgba(0,0,0,.3))">
+          <img src={testimonials[0].img} alt={testimonials[0].name} class="testi-hero-img" id="testi-hero-img-el" loading="lazy" />
+          <div class="testi-hero-img-overlay"></div>
+        </div>
+        <div class="testi-hero-content" id="testi-hero-content">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="rgba(59,130,246,.4)" style="margin-bottom:1rem">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+          </svg>
+          <p class="testi-quote" id="testi-quote">{testimonials[0].quote}</p>
+          <div class="testi-author">
+            <div class="testi-avatar" id="testi-avatar" style={`background:${testimonials[0].color}`}>{testimonials[0].init}</div>
+            <div>
+              <div class="testi-name" id="testi-name">{testimonials[0].name}</div>
+              <div class="testi-role" id="testi-role">{testimonials[0].role}</div>
+            </div>
+            <div style="margin-left:auto;display:flex;gap:3px">
+              {[...Array(5)].map(() => (
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-dots">
+        {testimonials.map((_, i) => (
+          <button class={`testi-dot ${i === 0 ? 'active' : ''}`} data-testi={i} aria-label={`Testimonial ${i + 1}`} />
+        ))}
+      </div>
+    </div>
+
+    <div class="testi-grid">
+      {testimonials.map((t, i) => (
+        <div
+          class={`testi-card reveal ${i === 0 ? 'testi-card-active' : ''}`}
+          data-testi-card={i}
+          style={`transition-delay:${i * 0.05}s;cursor:pointer`}
+        >
+          <div class="testi-card-img-wrap" style={`background:linear-gradient(135deg,${t.color}40,rgba(0,0,0,.3))`}>
+            <img src={t.img} alt={t.name} class="testi-card-img" loading="lazy" />
+            <div class="testi-card-img-overlay"></div>
+            <div class="testi-mini-avatar" style={`background:${t.color}`}>{t.init}</div>
+          </div>
+          <div class="testi-card-body">
+            <div style="display:flex;gap:3px;margin-bottom:.6rem">
+              {[...Array(5)].map(() => (
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              ))}
+            </div>
+            <p class="testi-card-text">"{t.quote.slice(0, 100)}..."</p>
+            <div class="testi-card-footer">
+              <div class="testi-card-name">{t.name}</div>
+              <div class="testi-card-role">{t.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

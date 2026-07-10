@@ -1,0 +1,74 @@
+---
+import { spaceContent as c } from '../../../data/topics/Space/space-content';
+---
+<section class="sp-hero">
+  <div class="sp-hero-bg">
+    <img src={c.heroImage} alt="" class="sp-hero-bg-img" loading="eager" />
+    <div class="sp-hero-bg-overlay"></div>
+  </div>
+  <div class="sp-hero-grid"></div>
+  <div class="sp-orb sp-hero-orb-1"></div>
+  <div class="sp-orb sp-hero-orb-2"></div>
+  <div class="sp-orb sp-hero-orb-3"></div>
+
+  <div class="container sp-hero-inner">
+    <div class="sp-hero-left">
+      <nav class="sp-hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/#topics">topics</a>
+        <span>/</span>
+        <span>Space</span>
+      </nav>
+      <div class="sp-hero-pill">
+        <span class="sp-hero-pill-dot"></span>
+        <span>Tracking 260+ orbital launches in real-time</span>
+      </div>
+      <span class="sp-hero-icon">{c.icon}</span>
+      <h1 class="sp-hero-name">{c.name}</h1>
+      <p class="sp-hero-tagline">{c.tagline}</p>
+      <p class="sp-hero-desc">{c.description}</p>
+      <div class="sp-hero-cta">
+        <a href="#space-economy" class="sp-hero-cta-btn sp-hero-cta-primary">
+          Explore Sections
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+        </a>
+        <a href="#sp-trends" class="sp-hero-cta-btn sp-hero-cta-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+          Trending Now
+        </a>
+      </div>
+    </div>
+
+    <div class="sp-hero-right">
+      <div class="sp-hero-stats-panel">
+        <div class="sp-hero-stats-panel-header">
+          <span class="sp-hero-stats-dot"></span>
+          <span class="sp-hero-stats-label">Space Economy Index</span>
+          <span class="sp-hero-stats-live">Live</span>
+        </div>
+        <div class="sp-hero-stats">
+          {c.stats.map((s) => (
+            <div class="sp-hero-stat">
+              <span class="sp-hero-stat-value">{s.value}</span>
+              <span class="sp-hero-stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="sp-hero-floating-badge sp-hero-badge-top">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><path d="M22 4L12 14.01l-3-3" /></svg>
+        <span>Real-time data</span>
+      </div>
+      <div class="sp-hero-floating-badge sp-hero-badge-bottom">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2.5"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z" /></svg>
+        <span>$626B market</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sp-hero-scroll">
+    <span>Scroll</span>
+    <div class="sp-hero-scroll-line"></div>
+  </div>
+</section>

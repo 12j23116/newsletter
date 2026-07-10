@@ -1,0 +1,105 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-header">
+    <div class="tool-header-icon">🎣</div>
+    <div>
+      <h3 class="tool-header-title">Phishing URL Scanner</h3>
+      <p class="tool-header-desc">Check any URL for phishing indicators</p>
+    </div>
+  </div>
+
+  <div class="tool-card" style="margin-bottom:1rem">
+    <div class="tool-field">
+      <label class="tool-label">URL to analyze</label>
+      <input type="text" class="tool-input" id="pu-url" placeholder="https://example.com/login" />
+    </div>
+    <button class="tool-btn" id="pu-scan-btn" style="width:100%">Scan URL</button>
+  </div>
+
+  <div class="tool-output" id="pu-results"></div>
+</div>
+
+<script is:inline>
+(function() {
+  function scan() {
+    const urlInput = document.getElementById('pu-url')?.value?.trim() || '';
+    const container = document.getElementById('pu-results');
+    if (!container) return;
+    if (!urlInput) { container.innerHTML = '<div class="tool-note">Enter a URL to scan.</div>'; return; }
+
+    let url;
+    try { url = new URL(urlInput); } catch { url = null; }
+
+    if (!url) {
+      container.innerHTML = '<div class="tool-badge tool-badge-bad">❌ Invalid URL format</div><p class="tool-note">Please enter a valid URL including the protocol (http:// or https://).</p>';
+      return;
+    }
+
+    const checks = [];
+    let riskScore = 0;
+
+    const protocol = url.protocol;
+    if (protocol === 'https:') checks.push({ name: 'HTTPS Protocol', status: 'good', detail: 'Connection is encrypted' });
+    else { checks.push({ name: 'HTTPS Protocol', status: 'bad', detail: 'No encryption — credentials can be intercepted' }); riskScore += 25; }
+
+    const hostname = url.hostname;
+    const parts = hostname.split('.');
+    const tld = parts[parts.length - 1];
+    const suspiciousTlds = ['tk', 'ml', 'ga', 'cf', 'gq', 'xyz', 'top', 'click', 'country', 'stream', 'download'];
+    if (suspiciousTlds.includes(tld)) { checks.push({ name: 'TLD Reputation', status: 'bad', detail: `.${tld} is commonly used in phishing` }); riskScore += 15; }
+    else checks.push({ name: 'TLD Reputation', status: 'good', detail: `.${tld} has standard reputation` });
+
+    const subdomains = parts.length - 2;
+    if (subdomains > 3) { checks.push({ name: 'Subdomain Depth', status: 'warn', detail: `${subdomains} subdomain levels — unusual depth` }); riskScore += 10; }
+    else checks.push({ name: 'Subdomain Depth', status: 'good', detail: 'Normal subdomain structure' });
+
+    if (hostname.length > 30) { checks.push({ name: 'Domain Length', status: 'warn', detail: 'Domain is unusually long — possible typosquatting' }); riskScore += 10; }
+    else checks.push({ name: 'Domain Length', status: 'good', detail: 'Normal domain length' });
+
+    const ipPattern = /^(\d{1,3}\.){3}\d{1,3}$/;
+    if (ipPattern.test(hostname)) { checks.push({ name: 'IP Address URL', status: 'bad', detail: 'URL uses raw IP instead of domain name' }); riskScore += 20; }
+    else checks.push({ name: 'Domain Name', status: 'good', detail: 'Uses proper domain name' });
+
+    if (url.username || url.password) { checks.push({ name: 'Embedded Credentials', status: 'bad', detail: 'URL contains username/password — classic phishing trick' }); riskScore += 25; }
+    else checks.push({ name: 'Embedded Credentials', status: 'good', detail: 'No credentials in URL' });
+
+    const brandKeywords = ['paypal', 'apple', 'amazon', 'google', 'microsoft', 'facebook', 'instagram', 'netflix', 'bank', 'secure', 'login', 'verify', 'account', 'update', 'confirm'];
+    const hasBrand = brandKeywords.some(k => hostname.toLowerCase().includes(k));
+    const knownBrands = ['paypal.com', 'apple.com', 'amazon.com', 'google.com', 'microsoft.com', 'facebook.com', 'instagram.com', 'netflix.com'];
+    const isOfficial = knownBrands.some(b => hostname === b || hostname.endsWith('.' + b));
+    if (hasBrand && !isOfficial) { checks.push({ name: 'Brand Impersonation', status: 'bad', detail: 'Domain contains brand name but is not official' }); riskScore += 20; }
+    else if (hasBrand && isOfficial) checks.push({ name: 'Brand Impersonation', status: 'good', detail: 'Official brand domain verified' });
+    else checks.push({ name: 'Brand Impersonation', status: 'good', detail: 'No brand keywords detected' });
+
+    const specialChars = (urlInput.match(/[@%]/g) || []).length;
+    if (specialChars > 2) { checks.push({ name: 'Special Characters', status: 'warn', detail: `${specialChars} special characters — possible obfuscation` }); riskScore += 10; }
+    else checks.push({ name: 'Special Characters', status: 'good', detail: 'No excessive special characters' });
+
+    if (url.port && url.port !== '80' && url.port !== '443') { checks.push({ name: 'Non-Standard Port', status: 'warn', detail: `Port ${url.port} — non-standard` }); riskScore += 5; }
+    else checks.push({ name: 'Port', status: 'good', detail: 'Standard port' });
+
+    riskScore = Math.min(100, riskScore);
+    const level = riskScore < 20 ? 'good' : riskScore < 50 ? 'warn' : 'bad';
+    const levelText = riskScore < 20 ? 'LOW RISK' : riskScore < 50 ? 'MEDIUM RISK' : 'HIGH RISK';
+
+    let html = `<div class="tool-result-big">${riskScore}<span class="tool-result-unit">/100</span></div>`;
+    html += `<div style="text-align:center; margin-bottom:1rem"><span class="tool-badge tool-badge-${level}">${levelText}</span></div>`;
+    html += '<div class="tool-section-title">Detailed Checks</div>';
+    checks.forEach(c => {
+      const icon = c.status === 'good' ? '✅' : c.status === 'warn' ? '⚠️' : '❌';
+      html += `<div class="tool-result-row"><span class="tool-result-label">${icon} ${c.name}</span><span class="tool-result-value" style="font-size:0.75rem; font-weight:400; max-width:60%; text-align:right">${c.detail}</span></div>`;
+    });
+    html += '<div class="tool-note">⚠️ This is a heuristic analysis based on URL structure only. For production use, integrate with threat intelligence APIs (Google Safe Browsing, PhishTank, VirusTotal) for real-time reputation data.</div>';
+
+    container.innerHTML = html;
+  }
+
+  document.getElementById('pu-scan-btn')?.addEventListener('click', scan);
+  document.getElementById('pu-url')?.addEventListener('keydown', e => { if (e.key === 'Enter') scan(); });
+})();
+</script>

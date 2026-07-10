@@ -1,0 +1,21 @@
+{
+  "name": "techscope",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-post": "node scripts/generate-blog-post.mjs",
+    "write-posts-local": "node scripts/local-llm-batch-writer.mjs",
+    "news": "node scripts/generate-daily-news.mjs",
+    "news:dry": "node scripts/generate-daily-news.mjs --dry-run",
+    "news:cleanup": "node scripts/generate-daily-news.mjs --cleanup-only"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.7.0"
+  }
+}

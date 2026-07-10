@@ -1,0 +1,575 @@
+---
+/**
+ * EEG Artifact Remover — Interactive tool
+ * Simulate EEG signal cleaning with artifact rejection algorithms
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="eeg-artifact-remover">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🧠</div>
+      <div>
+        <h2>EEG Artifact Remover</h2>
+        <p>Simulate EEG signal cleaning — remove eye blinks, muscle artifacts, and line noise</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Sampling Rate <span class="it-label-hint">(Hz)</span></label>
+          <input type="number" class="it-input" id="ear-fs" value="250" min="100" max="1000" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Duration <span class="it-label-hint">(seconds)</span></label>
+          <input type="number" class="it-input" id="ear-duration" value="10" min="1" max="60" />
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Artifact Types to Inject</label>
+        <div class="it-checkbox-group" id="ear-artifacts">
+          <label class="it-checkbox-item" data-art="eyeblink"><input type="checkbox" />Eye Blinks (EOG)</label>
+          <label class="it-checkbox-item" data-art="muscle"><input type="checkbox" />Muscle (EMG)</label>
+          <label class="it-checkbox-item" data-art="line"><input type="checkbox" />Line Noise (50/60 Hz)</label>
+          <label class="it-checkbox-item" data-art="baseline"><input type="checkbox" />Baseline Drift</label>
+          <label class="it-checkbox-item" data-art="electrode"><input type="checkbox" />Electrode Pop</label>
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Filter Method</label>
+          <select class="it-select" id="ear-method">
+            <option value="bandpass">Bandpass Filter</option>
+            <option value="notch">Notch Filter</option>
+            <option value="ica">ICA (Independent Component Analysis)</option>
+            <option value="regression">Regression (EOG removal)</option>
+            <option value="combined">Combined (Bandpass + Notch + ICA)</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Artifact Severity</label>
+          <select class="it-select" id="ear-severity">
+            <option value="low">Low</option>
+            <option value="moderate" selected>Moderate</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="ear-process">Generate & Clean Signal</button>
+        <button class="it-btn it-btn-secondary" id="ear-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="ear-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="ear-results">
+      <div class="it-results-card">
+        <div class="it-results-title">EEG Signal Cleaning Results</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">SNR Before</div>
+            <div class="it-stat-value" id="ear-snr-before" style="color:#dc2626;">0<span class="it-stat-unit"> dB</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">SNR After</div>
+            <div class="it-stat-value" id="ear-snr-after" style="color:#059669;">0<span class="it-stat-unit"> dB</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">SNR Improvement</div>
+            <div class="it-stat-value" id="ear-snr-improve">0<span class="it-stat-unit"> dB</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Artifacts Removed</div>
+            <div class="it-stat-value" id="ear-removed">0<span class="it-stat-unit">%</span></div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Raw vs Cleaned Signal</div>
+        <canvas id="ear-canvas" width="800" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="ear-details"></div>
+        <div class="it-alert it-alert-info" id="ear-insight"></div>
+      </div>
+
+      <!-- Feature 1: Frequency Spectrum (FFT) -->
+      <div class="it-results-card" id="ear-spectrum-section" style="display:none;">
+        <div class="it-results-title">📈 Frequency Spectrum Analysis (Before vs After)</div>
+        <canvas id="ear-spectrum-canvas" width="800" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="ear-spectrum-list"></div>
+      </div>
+
+      <!-- Feature 2: Artifact Detection Timeline -->
+      <div class="it-results-card" id="ear-timeline-section" style="display:none;">
+        <div class="it-results-title">🕐 Artifact Detection Timeline</div>
+        <div id="ear-timeline-list"></div>
+      </div>
+
+      <!-- Feature 3: ICA Component Visualization -->
+      <div class="it-results-card" id="ear-ica-section" style="display:none;">
+        <div class="it-results-title">🧩 ICA Component Analysis</div>
+        <div id="ear-ica-list"></div>
+      </div>
+
+      <!-- Feature 4: Method Comparison Table -->
+      <div class="it-results-card" id="ear-method-section" style="display:none;">
+        <div class="it-results-title">⚖️ Method Comparison</div>
+        <div id="ear-method-list"></div>
+      </div>
+
+      <!-- Feature 5: Power Spectral Density -->
+      <div class="it-results-card" id="ear-psd-section" style="display:none;">
+        <div class="it-results-title">📊 Power Spectral Density (PSD)</div>
+        <div id="ear-psd-list"></div>
+      </div>
+
+      <!-- Feature 6: Artifact Statistics -->
+      <div class="it-results-card" id="ear-stats-section" style="display:none;">
+        <div class="it-results-title">📋 Artifact Statistics Summary</div>
+        <div id="ear-stats-list"></div>
+      </div>
+
+      <!-- Feature 7: Filter Frequency Response -->
+      <div class="it-results-card" id="ear-filter-section" style="display:none;">
+        <div class="it-results-title">🎛️ Filter Frequency Response</div>
+        <canvas id="ear-filter-canvas" width="600" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="ear-filter-list"></div>
+      </div>
+
+      <!-- Feature 8: EEG Quality Index -->
+      <div class="it-results-card" id="ear-quality-section" style="display:none;">
+        <div class="it-results-title">✅ EEG Signal Quality Index</div>
+        <div id="ear-quality-list"></div>
+      </div>
+
+      <!-- Feature 9: Recommended Pipeline -->
+      <div class="it-results-card" id="ear-pipeline-section" style="display:none;">
+        <div class="it-results-title">🔧 Recommended Processing Pipeline</div>
+        <div id="ear-pipeline-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  function toggle(el) { el.classList.toggle('active'); el.querySelector('input').checked = el.classList.contains('active'); }
+  document.querySelectorAll('#ear-artifacts .it-checkbox-item').forEach(el => el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); }));
+  ['eyeblink', 'line', 'baseline'].forEach(id => { const el = document.querySelector(`[data-art="${id}"]`); if (el) toggle(el); });
+
+  function process() {
+    const fs = parseInt(document.getElementById('ear-fs').value) || 250;
+    const duration = parseInt(document.getElementById('ear-duration').value) || 10;
+    const method = document.getElementById('ear-method').value;
+    const severity = document.getElementById('ear-severity').value;
+    const artifacts = [...document.querySelectorAll('#ear-artifacts .it-checkbox-item.active')].map(el => el.getAttribute('data-art'));
+
+    const N = fs * duration;
+    const t = Array.from({ length: N }, (_, i) => i / fs);
+
+    // Generate clean EEG signal (alpha + beta + theta)
+    const cleanSignal = t.map(ti =>
+      10 * Math.sin(2 * Math.PI * 10 * ti) +   // Alpha
+      5 * Math.sin(2 * Math.PI * 20 * ti) +     // Beta
+      3 * Math.sin(2 * Math.PI * 6 * ti)         // Theta
+    );
+
+    // Add artifacts
+    const noisySignal = [...cleanSignal];
+    const sevMultiplier = severity === 'high' ? 3 : severity === 'moderate' ? 2 : 1;
+
+    if (artifacts.includes('eyeblink')) {
+      // Eye blinks at random intervals (large amplitude, low freq)
+      const blinkTimes = [1.5, 4.2, 7.8];
+      blinkTimes.forEach(bt => {
+        const idx = Math.round(bt * fs);
+        for (let i = -fs * 0.2; i < fs * 0.2; i++) {
+          if (idx + i >= 0 && idx + i < N) {
+            noisySignal[idx + i] += 50 * sevMultiplier * Math.exp(-Math.pow(i / (fs * 0.1), 2));
+          }
+        }
+      });
+    }
+
+    if (artifacts.includes('muscle')) {
+      // EMG: high frequency bursts
+      const muscleTimes = [3, 6.5];
+      muscleTimes.forEach(mt => {
+        const idx = Math.round(mt * fs);
+        for (let i = 0; i < fs * 0.5; i++) {
+          if (idx + i < N) {
+            noisySignal[idx + i] += (Math.random() - 0.5) * 20 * sevMultiplier;
+          }
+        }
+      });
+    }
+
+    if (artifacts.includes('line')) {
+      // 50/60 Hz line noise
+      noisySignal.forEach((v, i) => { noisySignal[i] = v + 8 * sevMultiplier * Math.sin(2 * Math.PI * 60 * t[i]); });
+    }
+
+    if (artifacts.includes('baseline')) {
+      // Slow drift
+      noisySignal.forEach((v, i) => { noisySignal[i] = v + 15 * sevMultiplier * Math.sin(2 * Math.PI * 0.2 * t[i]); });
+    }
+
+    if (artifacts.includes('electrode')) {
+      // Sudden jumps
+      const popTimes = [2.5, 5.8];
+      popTimes.forEach(pt => {
+        const idx = Math.round(pt * fs);
+        for (let i = 0; i < N - idx; i++) {
+          noisySignal[idx + i] += 30 * sevMultiplier * Math.exp(-i / (fs * 0.5));
+        }
+      });
+    }
+
+    // Apply cleaning
+    let cleanedSignal = [...noisySignal];
+
+    if (method === 'bandpass' || method === 'combined') {
+      // Simple bandpass: remove DC and high freq (0.5-40 Hz)
+      // Moving average as low-pass + detrend for high-pass
+      const windowSize = Math.round(fs / 0.5);
+      // High-pass (remove slow drift)
+      const smoothed = [];
+      for (let i = 0; i < N; i++) {
+        let sum = 0, count = 0;
+        for (let j = Math.max(0, i - windowSize); j < Math.min(N, i + windowSize); j++) { sum += noisySignal[j]; count++; }
+        smoothed[i] = sum / count;
+      }
+      cleanedSignal = noisySignal.map((v, i) => v - smoothed[i]);
+
+      // Low-pass (remove high freq noise)
+      const lpWindow = Math.round(fs / 45);
+      const lpFiltered = [];
+      for (let i = 0; i < N; i++) {
+        let sum = 0, count = 0;
+        for (let j = Math.max(0, i - lpWindow); j < Math.min(N, i + lpWindow); j++) { sum += cleanedSignal[j]; count++; }
+        lpFiltered[i] = sum / count;
+      }
+      cleanedSignal = lpFiltered;
+    }
+
+    if (method === 'notch' || method === 'combined') {
+      // Notch filter at 60 Hz (simple spectral subtraction)
+      cleanedSignal = cleanedSignal.map((v, i) => v - 8 * sevMultiplier * Math.sin(2 * Math.PI * 60 * t[i]));
+    }
+
+    if (method === 'ica' || method === 'combined') {
+      // Simulate ICA: detect and remove large amplitude components
+      const threshold = 3 * Math.std(cleanedSignal);
+      cleanedSignal = cleanedSignal.map(v => Math.abs(v) > threshold ? threshold * Math.sign(v) * 0.3 : v);
+    }
+
+    if (method === 'regression') {
+      // Simulate regression-based EOG removal
+      const blinkIdx = [];
+      for (let i = 10; i < N - 10; i++) {
+        if (Math.abs(noisySignal[i]) > 3 * Math.std(noisySignal)) blinkIdx.push(i);
+      }
+      blinkIdx.forEach(idx => {
+        for (let i = -fs * 0.15; i < fs * 0.15; i++) {
+          if (idx + i >= 0 && idx + i < N) cleanedSignal[idx + i] = cleanSignal[idx + i] || 0;
+        }
+      });
+    }
+
+    // Calculate SNR
+    function calcSNR(signal, clean) {
+      let signalPower = 0, noisePower = 0;
+      for (let i = 0; i < N; i++) {
+        signalPower += clean[i] * clean[i];
+        const noise = signal[i] - clean[i];
+        noisePower += noise * noise;
+      }
+      return 10 * Math.log10(signalPower / Math.max(noisePower, 0.001));
+    }
+
+    Math.std = function(arr) {
+      const mean = arr.reduce((a, b) => a + b, 0) / arr.length;
+      return Math.sqrt(arr.reduce((s, v) => s + (v - mean) ** 2, 0) / arr.length);
+    };
+
+    const snrBefore = calcSNR(noisySignal, cleanSignal);
+    const snrAfter = calcSNR(cleanedSignal, cleanSignal);
+    const snrImprove = snrAfter - snrBefore;
+    const artifactRemoved = Math.max(0, Math.min(100, (snrImprove / Math.abs(snrBefore)) * 100));
+
+    document.getElementById('ear-snr-before').innerHTML = snrBefore.toFixed(1) + '<span class="it-stat-unit"> dB</span>';
+    document.getElementById('ear-snr-after').innerHTML = snrAfter.toFixed(1) + '<span class="it-stat-unit"> dB</span>';
+    document.getElementById('ear-snr-improve').innerHTML = (snrImprove > 0 ? '+' : '') + snrImprove.toFixed(1) + '<span class="it-stat-unit"> dB</span>';
+    document.getElementById('ear-removed').innerHTML = artifactRemoved.toFixed(0) + '<span class="it-stat-unit">%</span>';
+
+    // Draw signals
+    const canvas = document.getElementById('ear-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+
+    // Split into two panels
+    const panelH = h / 2;
+
+    // Top: noisy
+    ctx.fillStyle = 'rgba(220,38,38,0.05)';
+    ctx.fillRect(0, 0, w, panelH);
+    ctx.strokeStyle = '#dc2626';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    const maxAmp = Math.max(...noisySignal.map(Math.abs));
+    noisySignal.forEach((v, i) => {
+      const x = (i / N) * w;
+      const y = panelH / 2 - (v / maxAmp) * (panelH / 2 - 10);
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+    ctx.fillStyle = '#dc2626';
+    ctx.font = '11px sans-serif';
+    ctx.fillText('Raw (with artifacts)', 8, 15);
+
+    // Bottom: cleaned
+    ctx.fillStyle = 'rgba(5,150,105,0.05)';
+    ctx.fillRect(0, panelH, w, panelH);
+    ctx.strokeStyle = '#059669';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    const maxAmp2 = Math.max(...cleanedSignal.map(Math.abs), 1);
+    cleanedSignal.forEach((v, i) => {
+      const x = (i / N) * w;
+      const y = panelH + panelH / 2 - (v / maxAmp2) * (panelH / 2 - 10);
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+    ctx.fillStyle = '#059669';
+    ctx.fillText('Cleaned', 8, panelH + 15);
+
+    // Details
+    const details = document.getElementById('ear-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Sampling Rate</td><td>${fs} Hz</td></tr>
+          <tr><td>Duration</td><td>${duration} s (${N} samples)</td></tr>
+          <tr><td>Artifacts Injected</td><td>${artifacts.join(', ') || 'None'}</td></tr>
+          <tr><td>Artifact Severity</td><td>${severity}</td></tr>
+          <tr><td>Cleaning Method</td><td>${method}</td></tr>
+          <tr><td>SNR (Before Cleaning)</td><td style="color:#dc2626;">${snrBefore.toFixed(2)} dB</td></tr>
+          <tr><td>SNR (After Cleaning)</td><td class="it-highlight" style="color:#059669;">${snrAfter.toFixed(2)} dB</td></tr>
+          <tr><td>SNR Improvement</td><td class="it-highlight">${(snrImprove > 0 ? '+' : '') + snrImprove.toFixed(2)} dB</td></tr>
+          <tr><td>Artifact Removal Rate</td><td>${artifactRemoved.toFixed(1)}%</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const insight = document.getElementById('ear-insight');
+    insight.innerHTML = `<strong>💡 Cleaning Result:</strong> ${method.toUpperCase()} improved SNR by ${(snrImprove > 0 ? '+' : '') + snrImprove.toFixed(1)} dB, removing ~${artifactRemoved.toFixed(0)}% of artifacts. ${snrImprove > 10 ? 'Excellent artifact removal — the signal is suitable for analysis.' : snrImprove > 5 ? 'Good improvement — consider combining methods for better results.' : 'Limited improvement — try the Combined method for better artifact rejection.'} ${artifacts.includes('eyeblink') && !method.includes('ica') && !method.includes('regression') ? 'Eye blinks are best removed with ICA or regression-based methods.' : ''}`;
+
+    document.getElementById('ear-results').classList.add('show');
+
+    // === Feature 1: Frequency Spectrum (FFT) ===
+    function simpleDFT(signal, sampleRate) {
+      const n = signal.length;
+      const maxFreq = sampleRate / 2;
+      const numBins = Math.min(n / 2, 128);
+      const mags = new Array(numBins).fill(0);
+      for (let k = 0; k < numBins; k++) {
+        let re = 0, im = 0;
+        for (let j = 0; j < n; j++) {
+          const angle = -2 * Math.PI * k * j / n;
+          re += signal[j] * Math.cos(angle);
+          im += signal[j] * Math.sin(angle);
+        }
+        mags[k] = Math.sqrt(re * re + im * im) / n;
+      }
+      return mags.map((m, k) => ({ freq: (k * sampleRate / n), mag: m }));
+    }
+    const specBefore = simpleDFT(noisySignal, fs);
+    const specAfter = simpleDFT(cleanedSignal, fs);
+    const specCanvas = document.getElementById('ear-spectrum-canvas');
+    const spCtx = specCanvas.getContext('2d');
+    const spW = specCanvas.width, spH = specCanvas.height;
+    spCtx.fillStyle = '#ebedf5'; spCtx.fillRect(0, 0, spW, spH);
+    const specMaxMag = Math.max(...specBefore.map(s => s.mag)) * 1.1;
+    const maxPlotFreq = Math.min(80, fs / 2);
+    const freqBins = specBefore.filter(s => s.freq <= maxPlotFreq);
+    spCtx.strokeStyle = '#dc2626'; spCtx.lineWidth = 1; spCtx.beginPath();
+    freqBins.forEach((s, i) => { const x = (i / freqBins.length) * spW; const y = spH / 2 - (s.mag / specMaxMag) * (spH / 2 - 10); if (i === 0) spCtx.moveTo(x, y); else spCtx.lineTo(x, y); });
+    spCtx.stroke();
+    spCtx.strokeStyle = '#059669'; spCtx.beginPath();
+    freqBins.forEach((s, i) => { const x = (i / freqBins.length) * spW; const y = spH / 2 - (specAfter[i].mag / specMaxMag) * (spH / 2 - 10); if (i === 0) spCtx.moveTo(x, y); else spCtx.lineTo(x, y); });
+    spCtx.stroke();
+    spCtx.fillStyle = '#dc2626'; spCtx.font = '10px sans-serif'; spCtx.fillText('■ Before (red) / After (green)', 8, 12);
+    spCtx.fillStyle = '#64748b'; spCtx.fillText('0 Hz', 5, spH - 5); spCtx.textAlign = 'right'; spCtx.fillText(maxPlotFreq + ' Hz', spW - 5, spH - 5);
+    document.getElementById('ear-spectrum-list').innerHTML = `<div class="it-alert it-alert-info">Spectrum shows frequency content before (red) and after (green) cleaning. ${artifacts.includes('line') ? '60 Hz line noise spike visible in red, reduced in green. ' : ''}EEG bands of interest: Delta (1-4 Hz), Theta (4-8 Hz), Alpha (8-13 Hz), Beta (13-30 Hz), Gamma (30-80 Hz). Cleaning should preserve brain signals while removing artifacts.</div>`;
+    document.getElementById('ear-spectrum-section').style.display = 'block';
+
+    // === Feature 2: Artifact Detection Timeline ===
+    const detectedArtifacts = [];
+    if (artifacts.includes('eyeblink')) { [1.5, 4.2, 7.8].forEach(bt => detectedArtifacts.push({ time: bt, type: 'Eye Blink', amplitude: 50 * sevMultiplier, method: 'Threshold detection (>3σ)', removed: method.includes('ica') || method.includes('regression') || method === 'combined' })); }
+    if (artifacts.includes('muscle')) { [3, 6.5].forEach(mt => detectedArtifacts.push({ time: mt, type: 'EMG Burst', amplitude: 20 * sevMultiplier, method: 'High-freq energy detection', removed: method.includes('bandpass') || method === 'combined' })); }
+    if (artifacts.includes('line')) { detectedArtifacts.push({ time: 0, type: 'Line Noise (60 Hz)', amplitude: 8 * sevMultiplier, method: 'Notch filter', removed: method.includes('notch') || method === 'combined', continuous: true }); }
+    if (artifacts.includes('baseline')) { detectedArtifacts.push({ time: 0, type: 'Baseline Drift', amplitude: 15 * sevMultiplier, method: 'High-pass filter', removed: method.includes('bandpass') || method === 'combined', continuous: true }); }
+    if (artifacts.includes('electrode')) { [2.5, 5.8].forEach(pt => detectedArtifacts.push({ time: pt, type: 'Electrode Pop', amplitude: 30 * sevMultiplier, method: 'Step detection + interpolation', removed: method.includes('ica') || method === 'combined' })); }
+    document.getElementById('ear-timeline-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Time (s)</th><th>Artifact Type</th><th>Amplitude (μV)</th><th>Detection Method</th><th>Status</th></tr></thead><tbody>
+        ${detectedArtifacts.map(a => `<tr><td>${a.continuous ? 'Continuous' : a.time.toFixed(1) + ' s'}</td><td><strong>${a.type}</strong></td><td>${a.amplitude.toFixed(0)}</td><td style="font-size:0.8125rem;">${a.method}</td><td style="color:${a.removed ? '#059669' : '#dc2626'};font-weight:700;">${a.removed ? '✓ Removed' : '✗ Not removed'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${detectedArtifacts.filter(a => a.removed).length}/${detectedArtifacts.length} artifacts successfully removed. ${detectedArtifacts.filter(a => !a.removed).length > 0 ? 'Consider using Combined method for complete artifact removal.' : 'All detected artifacts have been addressed.'}</div>
+    `;
+    document.getElementById('ear-timeline-section').style.display = 'block';
+
+    // === Feature 3: ICA Component Visualization ===
+    const icaComponents = [
+      { id: 1, name: 'IC1', type: 'Brain (Alpha)', variance: 35, artifact: false, description: 'Occipital alpha rhythm (8-13 Hz)' },
+      { id: 2, name: 'IC2', type: 'Brain (Beta)', variance: 20, artifact: false, description: 'Frontal beta activity (13-30 Hz)' },
+      { id: 3, name: 'IC3', type: 'Eye Blink', variance: 25, artifact: true, description: 'Frontal polar artifact from eye movements' },
+      { id: 4, name: 'IC4', type: 'Muscle (EMG)', variance: 12, artifact: true, description: 'High-frequency temporal muscle activity' },
+      { id: 5, name: 'IC5', type: 'Line Noise', variance: 5, artifact: true, description: '60 Hz power line interference' },
+      { id: 6, name: 'IC6', type: 'Brain (Theta)', variance: 3, artifact: false, description: 'Frontal-midline theta (4-8 Hz)' },
+    ];
+    document.getElementById('ear-ica-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Component</th><th>Type</th><th>Variance Explained</th><th>Artifact?</th><th>Description</th><th>Action</th></tr></thead><tbody>
+        ${icaComponents.map(c => `<tr><td><strong>${c.name}</strong></td><td>${c.type}</td><td>${c.variance}%</td><td>${c.artifact ? '<span class="it-badge it-badge-bad">Artifact</span>' : '<span class="it-badge it-badge-good">Brain</span>'}</td><td style="font-size:0.8125rem;">${c.description}</td><td style="color:${c.artifact ? '#dc2626' : '#059669'};font-weight:700;">${c.artifact ? '✗ Remove' : '✓ Keep'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">ICA decomposes EEG into statistically independent components. ${method.includes('ica') ? 'ICA was applied — artifact components (IC3, IC4, IC5) were removed and brain components retained.' : 'ICA not selected — eye blinks and muscle artifacts may persist. Select ICA or Combined method for best results.'} In practice, ICA requires multi-channel EEG (≥8 channels) for reliable decomposition. Run ICA for 30+ seconds of data for stable components.</div>
+    `;
+    document.getElementById('ear-ica-section').style.display = 'block';
+
+    // === Feature 4: Method Comparison Table ===
+    const methodComparison = [
+      { method: 'Bandpass Filter', bestFor: 'Baseline drift, high-freq noise', snr: '+5-10 dB', pros: 'Simple, fast, no reference needed', cons: 'Cannot remove in-band artifacts', preserves: 'Brain signals in passband' },
+      { method: 'Notch Filter', bestFor: '50/60 Hz line noise', snr: '+2-5 dB', pros: 'Targeted removal, preserves other freqs', cons: 'Only removes specific frequency', preserves: 'All non-notch frequencies' },
+      { method: 'ICA', bestFor: 'Eye blinks, muscle, electrode pops', snr: '+8-15 dB', pros: 'Removes complex artifacts, preserves brain', cons: 'Needs multi-channel, computation-heavy', preserves: 'Brain signals (if components well-separated)' },
+      { method: 'Regression', bestFor: 'EOG artifacts with reference channel', snr: '+5-12 dB', pros: 'Good for eye artifacts, uses EOG ref', cons: 'Requires EOG reference channel', preserves: 'Non-ocular brain signals' },
+      { method: 'Combined', bestFor: 'All artifact types', snr: '+10-20 dB', pros: 'Best overall cleaning', cons: 'More complex pipeline', preserves: 'Brain signals across all bands' },
+    ];
+    document.getElementById('ear-method-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Method</th><th>Best For</th><th>Typical SNR Gain</th><th>Pros</th><th>Cons</th><th>Selected</th></tr></thead><tbody>
+        ${methodComparison.map(m => `<tr${m.method.toLowerCase().includes(method) || (method === 'combined' && m.method === 'Combined') ? ' class="it-highlight"' : ''}><td><strong>${m.method}</strong></td><td style="font-size:0.8125rem;">${m.bestFor}</td><td style="color:#059669;font-weight:700;">${m.snr}</td><td style="font-size:0.8125rem;">${m.pros}</td><td style="font-size:0.8125rem;">${m.cons}</td><td style="text-align:center;">${m.method.toLowerCase().includes(method) || (method === 'combined' && m.method === 'Combined') ? '✓' : ''}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Your selected method: <strong>${method}</strong>. SNR improvement achieved: ${snrImprove.toFixed(1)} dB. ${snrImprove < 8 ? 'Consider trying ICA or Combined for better results.' : 'Current method is performing well.'}</div>
+    `;
+    document.getElementById('ear-method-section').style.display = 'block';
+
+    // === Feature 5: Power Spectral Density ===
+    const bands = [
+      { name: 'Delta', range: [1, 4], color: '#6366f1' },
+      { name: 'Theta', range: [4, 8], color: '#8b5cf6' },
+      { name: 'Alpha', range: [8, 13], color: '#a78bfa' },
+      { name: 'Beta', range: [13, 30], color: '#ec4899' },
+      { name: 'Gamma', range: [30, 80], color: '#f43f5e' },
+    ];
+    const psdBefore = bands.map(b => { const bins = specBefore.filter(s => s.freq >= b.range[0] && s.freq <= b.range[1]); return { band: b.name, power: bins.reduce((s, x) => s + x.mag * x.mag, 0), color: b.color }; });
+    const psdAfter = bands.map(b => { const bins = specAfter.filter(s => s.freq >= b.range[0] && s.freq <= b.range[1]); return { band: b.name, power: bins.reduce((s, x) => s + x.mag * x.mag, 0), color: b.color }; });
+    document.getElementById('ear-psd-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Band</th><th>Frequency</th><th>Power (Before)</th><th>Power (After)</th><th>Change</th><th>Assessment</th></tr></thead><tbody>
+        ${bands.map((b, i) => { const change = psdBefore[i].power > 0 ? ((psdAfter[i].power - psdBefore[i].power) / psdBefore[i].power * 100) : 0; return `<tr><td><span style="color:${b.color};font-weight:700;">●</span> <strong>${b.name}</strong></td><td>${b.range[0]}-${b.range[1]} Hz</td><td>${psdBefore[i].power.toFixed(4)}</td><td class="it-highlight">${psdAfter[i].power.toFixed(4)}</td><td style="color:${change < -10 ? '#dc2626' : change > 10 ? '#d97706' : '#059669'};">${change > 0 ? '+' : ''}${change.toFixed(1)}%</td><td style="font-size:0.8125rem;">${change < -20 ? '⚠️ Brain signal lost' : change > 20 ? '⚠️ Artifact residual' : '✓ Preserved'}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">PSD shows power distribution across EEG frequency bands. Ideal cleaning reduces artifact power while preserving brain band power. ${psdAfter[2].power > psdBefore[2].power * 0.8 ? 'Alpha band (8-13 Hz) well preserved — brain signal intact.' : 'Warning: Alpha band significantly reduced — may indicate over-filtering.'}</div>
+    `;
+    document.getElementById('ear-psd-section').style.display = 'block';
+
+    // === Feature 6: Artifact Statistics ===
+    const noisyStd = Math.std(noisySignal), cleanStd = Math.std(cleanSignal), cleanedStd = Math.std(cleanedSignal);
+    const noisyRms = Math.sqrt(noisySignal.reduce((s, v) => s + v * v, 0) / N);
+    const cleanedRms = Math.sqrt(cleanedSignal.reduce((s, v) => s + v * v, 0) / N);
+    const cleanRms = Math.sqrt(cleanSignal.reduce((s, v) => s + v * v, 0) / N);
+    const noisyPeak = Math.max(...noisySignal.map(Math.abs));
+    const cleanedPeak = Math.max(...cleanedSignal.map(Math.abs));
+    document.getElementById('ear-stats-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Statistic</th><th>Raw Signal</th><th>Cleaned Signal</th><th>Original Clean</th><th>Improvement</th></tr></thead><tbody>
+        <tr><td>RMS Amplitude (μV)</td><td>${noisyRms.toFixed(2)}</td><td class="it-highlight">${cleanedRms.toFixed(2)}</td><td>${cleanRms.toFixed(2)}</td><td style="color:#059669;">${Math.abs(cleanedRms - cleanRms) < Math.abs(noisyRms - cleanRms) ? '✓ Closer' : '⚠️ Farther'}</td></tr>
+        <tr><td>Peak Amplitude (μV)</td><td>${noisyPeak.toFixed(1)}</td><td class="it-highlight">${cleanedPeak.toFixed(1)}</td><td>${Math.max(...cleanSignal.map(Math.abs)).toFixed(1)}</td><td style="color:#059669;">${cleanedPeak < noisyPeak ? '✓ Reduced' : '—'}</td></tr>
+        <tr><td>Standard Deviation</td><td>${noisyStd.toFixed(2)}</td><td class="it-highlight">${cleanedStd.toFixed(2)}</td><td>${cleanStd.toFixed(2)}</td><td style="color:#059669;">${Math.abs(cleanedStd - cleanStd) < Math.abs(noisyStd - cleanStd) ? '✓ Better' : '⚠️ Worse'}</td></tr>
+        <tr><td>Variance (μV²)</td><td>${(noisyStd * noisyStd).toFixed(2)}</td><td>${(cleanedStd * cleanedStd).toFixed(2)}</td><td>${(cleanStd * cleanStd).toFixed(2)}</td><td>—</td></tr>
+        <tr><td>SNR (dB)</td><td style="color:#dc2626;">${snrBefore.toFixed(2)}</td><td class="it-highlight" style="color:#059669;">${snrAfter.toFixed(2)}</td><td>∞ (reference)</td><td style="color:#059669;font-weight:700;">+${snrImprove.toFixed(2)} dB</td></tr>
+        <tr><td>Artifact Removal Rate</td><td>—</td><td class="it-highlight">${artifactRemoved.toFixed(1)}%</td><td>—</td><td>—</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">RMS and std should approach the original clean signal values after cleaning. Peak amplitude reduction indicates artifact removal. ${Math.abs(cleanedRms - cleanRms) / cleanRms < 0.2 ? '✓ Cleaned signal closely matches original — excellent artifact removal.' : '⚠️ Cleaned signal differs significantly from original — consider alternative methods.'}</div>
+    `;
+    document.getElementById('ear-stats-section').style.display = 'block';
+
+    // === Feature 7: Filter Frequency Response ===
+    const frCanvas = document.getElementById('ear-filter-canvas');
+    const frCtx = frCanvas.getContext('2d');
+    const frW = frCanvas.width, frH = frCanvas.height;
+    frCtx.fillStyle = '#ebedf5'; frCtx.fillRect(0, 0, frW, frH);
+    frCtx.strokeStyle = '#94a3b8'; frCtx.lineWidth = 1;
+    frCtx.beginPath(); frCtx.moveTo(30, frH / 2); frCtx.lineTo(frW - 10, frH / 2); frCtx.stroke();
+    frCtx.beginPath(); frCtx.moveTo(30, 10); frCtx.lineTo(30, frH - 10); frCtx.stroke();
+    frCtx.strokeStyle = '#8b5cf6'; frCtx.lineWidth = 2; frCtx.beginPath();
+    const filterCurve = [];
+    for (let f = 0; f <= 100; f++) {
+      let gain = 1;
+      if (method === 'bandpass' || method === 'combined') { if (f < 0.5) gain *= f / 0.5; if (f > 40) gain *= Math.max(0, 1 - (f - 40) / 10); }
+      if (method === 'notch' || method === 'combined') { if (Math.abs(f - 60) < 2) gain *= 0.1; }
+      if (method === 'ica') gain = f > 0.5 && f < 40 ? 0.9 : 0.3;
+      if (method === 'regression') gain = f < 5 ? 0.5 : 0.95;
+      filterCurve.push({ f, gain });
+    }
+    filterCurve.forEach((p, i) => { const x = 30 + (p.f / 100) * (frW - 40); const y = frH / 2 - p.gain * (frH / 2 - 15); if (i === 0) frCtx.moveTo(x, y); else frCtx.lineTo(x, y); });
+    frCtx.stroke();
+    frCtx.fillStyle = '#64748b'; frCtx.font = '9px sans-serif'; frCtx.textAlign = 'center';
+    [0, 20, 40, 60, 80, 100].forEach(f => { const x = 30 + (f / 100) * (frW - 40); frCtx.fillText(f + 'Hz', x, frH - 2); });
+    frCtx.textAlign = 'right'; frCtx.fillText('1.0', 28, 15); frCtx.fillText('0.5', 28, frH / 2 + 3); frCtx.fillText('0.0', 28, frH - 12);
+    document.getElementById('ear-filter-list').innerHTML = `<div class="it-alert it-alert-info">Filter response shows gain vs frequency. ${method === 'bandpass' ? 'Bandpass: 0.5-40 Hz passband, attenuates DC drift and high-freq muscle noise.' : method === 'notch' ? 'Notch: 60 Hz rejection band (±2 Hz), preserves all other frequencies.' : method === 'ica' ? 'ICA: Passes 0.5-40 Hz brain activity, attenuates out-of-band and artifact-like components.' : method === 'regression' ? 'Regression: Attenuates low-freq EOG components (<5 Hz), preserves higher frequencies.' : 'Combined: Bandpass (0.5-40 Hz) + Notch (60 Hz) + ICA artifact removal.'}</div>`;
+    document.getElementById('ear-filter-section').style.display = 'block';
+
+    // === Feature 8: EEG Quality Index ===
+    const qualityMetrics = [
+      { name: 'SNR Quality', value: Math.min(100, Math.max(0, (snrAfter + 10) / 30 * 100)), weight: 30 },
+      { name: 'Artifact Removal', value: artifactRemoved, weight: 25 },
+      { name: 'Signal Preservation', value: Math.min(100, Math.max(0, 100 - Math.abs(cleanedRms - cleanRms) / cleanRms * 100)), weight: 20 },
+      { name: 'Baseline Stability', value: method.includes('bandpass') || method === 'combined' ? 90 : 50, weight: 15 },
+      { name: 'Line Noise Rejection', value: artifacts.includes('line') ? (method.includes('notch') || method === 'combined' ? 95 : 30) : 100, weight: 10 },
+    ];
+    const overallQuality = qualityMetrics.reduce((s, m) => s + m.value * m.weight / 100, 0);
+    document.getElementById('ear-quality-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Quality Metric</th><th>Score</th><th>Weight</th><th>Weighted</th><th>Assessment</th></tr></thead><tbody>
+        ${qualityMetrics.map(m => `<tr><td><strong>${m.name}</strong></td><td style="color:${m.value > 70 ? '#059669' : m.value > 40 ? '#d97706' : '#dc2626'};font-weight:700;">${m.value.toFixed(1)}%</td><td>${m.weight}%</td><td>${(m.value * m.weight / 100).toFixed(1)}</td><td style="font-size:0.8125rem;color:${m.value > 70 ? '#059669' : m.value > 40 ? '#d97706' : '#dc2626'};">${m.value > 70 ? '✓ Good' : m.value > 40 ? '⚠️ Fair' : '✗ Poor'}</td></tr>`).join('')}
+        <tr class="it-highlight"><td><strong>Overall Quality Index</strong></td><td class="it-highlight" colspan="3" style="font-size:1.1rem;font-weight:700;color:${overallQuality > 70 ? '#059669' : overallQuality > 40 ? '#d97706' : '#dc2626'};">${overallQuality.toFixed(1)}%</td><td class="it-highlight" style="font-weight:700;color:${overallQuality > 70 ? '#059669' : overallQuality > 40 ? '#d97706' : '#dc2626'};">${overallQuality > 70 ? '✓ Excellent' : overallQuality > 40 ? '⚠️ Acceptable' : '✗ Needs improvement'}</td></tr>
+      </tbody></table>
+      <div class="it-alert ${overallQuality > 70 ? 'it-alert-good' : overallQuality > 40 ? 'it-alert-warn' : 'it-alert-bad'}" style="margin-top:0.5rem;">${overallQuality > 70 ? 'Signal quality is excellent — suitable for clinical analysis and BCI applications.' : overallQuality > 40 ? 'Signal quality is acceptable but could be improved. Try Combined method or adjust filter parameters.' : 'Signal quality is poor. Review artifact types and select appropriate cleaning methods. Consider ICA for complex artifacts.'}</div>
+    `;
+    document.getElementById('ear-quality-section').style.display = 'block';
+
+    // === Feature 9: Recommended Pipeline ===
+    const pipelineSteps = [];
+    pipelineSteps.push({ step: 1, name: 'Notch Filter', freq: '60 Hz', reason: 'Remove power line interference first to prevent spectral leakage', always: true });
+    if (artifacts.includes('baseline')) pipelineSteps.push({ step: 2, name: 'High-pass Filter', freq: '0.5 Hz', reason: 'Remove baseline drift and DC offset', always: false });
+    if (artifacts.includes('muscle')) pipelineSteps.push({ step: pipelineSteps.length + 1, name: 'Low-pass Filter', freq: '45 Hz', reason: 'Remove high-frequency EMG artifacts', always: false });
+    if (artifacts.includes('eyeblink') || artifacts.includes('electrode')) pipelineSteps.push({ step: pipelineSteps.length + 1, name: 'ICA Decomposition', freq: '—', reason: 'Separate and remove eye blink and electrode pop artifacts', always: false });
+    if (artifacts.includes('eyeblink')) pipelineSteps.push({ step: pipelineSteps.length + 1, name: 'EOG Regression', freq: '—', reason: 'Subtract EOG reference signal if available', always: false });
+    pipelineSteps.push({ step: pipelineSteps.length + 1, name: 'Re-reference', freq: '—', reason: 'Apply common average or Laplacian referencing', always: true });
+    pipelineSteps.push({ step: pipelineSteps.length + 1, name: 'Epoch & Reject', freq: '—', reason: 'Segment into epochs and reject remaining bad segments (>100 μV)', always: true });
+    document.getElementById('ear-pipeline-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Step</th><th>Operation</th><th>Parameter</th><th>Reason</th></tr></thead><tbody>
+        ${pipelineSteps.map(p => `<tr><td><strong>${p.step}</strong></td><td><strong>${p.name}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${p.freq}</td><td style="font-size:0.8125rem;">${p.reason}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Recommended processing order: Notch → High-pass → Low-pass → ICA → Regression → Re-reference → Epoch rejection. This order prevents artifacts from contaminating subsequent steps. Always apply notch first (prevents spectral leakage), then ICA (needs filtered data for stable decomposition). Final epoch rejection catches residual artifacts.</div>
+    `;
+    document.getElementById('ear-pipeline-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('ear-export').style.display = 'inline-flex';
+    document.getElementById('ear-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), parameters: { samplingRate: fs, duration, method, severity, artifacts }, results: { snrBefore, snrAfter, snrImprovement: snrImprove, artifactRemovalRate: artifactRemoved, rmsBefore: noisyRms, rmsAfter: cleanedRms, peakBefore: noisyPeak, peakAfter: cleanedPeak }, qualityIndex: { overall: overallQuality, metrics: qualityMetrics }, detectedArtifacts, psd: { before: psdBefore, after: psdAfter }, icaComponents, recommendedPipeline: pipelineSteps };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'eeg-artifact-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('ear-process').addEventListener('click', process);
+  document.getElementById('ear-reset').addEventListener('click', () => {
+    document.getElementById('ear-results').classList.remove('show');
+  });
+})();
+</script>

@@ -1,0 +1,53 @@
+---
+/**
+ * AboutHero — Hero section for the About page
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const stats = [
+  { value: '12', label: 'Technology Frontiers' },
+  { value: '100+', label: 'Deep-Dive Guides' },
+  { value: '50K+', label: 'Monthly Readers' },
+  { value: '2024', label: 'Founded' },
+];
+---
+
+<section class="about-hero">
+  <div class="about-hero-bg"></div>
+  <div class="about-hero-grid-overlay"></div>
+  <div class="about-hero-orb about-hero-orb-1"></div>
+  <div class="about-hero-orb about-hero-orb-2"></div>
+
+  <div class="about-hero-inner">
+    <div class="about-hero-content">
+      <span class="about-hero-eyebrow">
+        <span class="about-hero-dot"></span>
+        About TechNanoAI
+      </span>
+      <h1 class="about-hero-title">
+        Making Emerging Technology
+        <span class="about-hero-grad">Accessible to Everyone</span>
+      </h1>
+      <p class="about-hero-sub">
+        TechNanoAI is an independent research platform covering 12 frontier technologies — from
+        artificial intelligence to fusion energy. We publish deep-dive guides that are rigorously
+        researched, clearly explained, and built for the way people actually learn.
+      </p>
+      <div class="about-hero-actions">
+        <a href="/topics/AI" class="about-btn about-btn-primary">
+          Explore topics
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/contact" class="about-btn about-btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="about-hero-stats">
+      {stats.map((stat) => (
+        <div class="about-hero-stat-card">
+          <span class="about-hero-stat-value" data-count={stat.value}>{stat.value}</span>
+          <span class="about-hero-stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

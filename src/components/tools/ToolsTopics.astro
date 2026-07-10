@@ -1,0 +1,30 @@
+---
+import { tooltopics } from '../../data/tools/tools-content';
+---
+
+<section class="tl-topics">
+  <div class="tl-section-head">
+    <span class="tl-section-label">Browse by topic</span>
+    <h2 class="tl-section-title">12 Frontiers, <span class="tl-grad">183 Tools</span></h2>
+    <p class="tl-section-desc">Browse tools by technology topic — each category features the top frameworks, platforms, simulators, and SDKs — 183 tools for practitioners, researchers, and engineers.</p>
+  </div>
+  <div class="tl-cat-grid">
+    {tooltopics.map((cat) => (
+      <a href="#tl-all" class="tl-cat-card" style={`--cat-color:${cat.color}; --cat-grad:${cat.gradient}`} data-topic={cat.id}>
+        <div class="tl-cat-card-icon">{cat.icon}</div>
+        <div class="tl-cat-card-body">
+          <h3 class="tl-cat-card-name">{cat.name}</h3>
+          <p class="tl-cat-card-desc">{cat.description}</p>
+        </div>
+        <div class="tl-cat-card-foot">
+          <span class="tl-cat-card-count">{cat.toolCount} {cat.toolCount === 1 ? 'tool' : 'tools'}</span>
+          <span class="tl-cat-card-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+import { materialsContent as c } from '../../../data/topics/Materials/materials-content';
+
+const articleImages = [
+  '/images/materials-01-graphene-lattice.webp',
+  '/images/materials-02-aerogel-insulation.webp',
+  '/images/materials-03-carbon-fiber-weave.webp',
+  '/images/materials-04-bio-inspired-composite.webp',
+  '/images/materials-05-nanoparticle-synthesis.webp',
+];
+---
+<section class="mat-section">
+  <div class="container">
+    <div class="mat-section-head mat-section-head-center">
+      <span class="mat-eyebrow">Latest Research</span>
+      <h2 class="mat-section-title">Materials Science Articles & Reports</h2>
+      <p class="mat-section-sub">In-depth analysis of the breakthroughs, companies, and applications reshaping materials science.</p>
+    </div>
+    <div class="mat-articles-grid">
+      {c.articles.map((a, i) => (
+        <a href={a.href} class="mat-article-card">
+          <div class="mat-article-img-wrap">
+            <img src={articleImages[i % articleImages.length]} alt={a.title} class="mat-article-img" loading="lazy" />
+            <div class="mat-article-img-overlay"></div>
+          </div>
+          <div class="mat-article-body">
+            <span class="mat-article-date">{a.date}</span>
+            <h3 class="mat-article-title">{a.title}</h3>
+            <p class="mat-article-excerpt">{a.excerpt}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

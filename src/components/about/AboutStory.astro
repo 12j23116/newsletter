@@ -1,0 +1,42 @@
+---
+/**
+ * AboutStory — Origin story and timeline section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const milestones = [
+  { year: '2024 Q1', title: 'The Idea', desc: 'Frustrated by shallow tech coverage, our founders set out to build a platform that treats readers as smart, curious people who deserve depth without jargon.' },
+  { year: '2024 Q2', title: 'First 12 Pillars', desc: 'We published our first 12 pillar guides — one per technology frontier — establishing the hub-and-spoke content model we still use today.' },
+  { year: '2024 Q3', title: 'Community Launch', desc: 'Crossed 10,000 monthly readers and launched our community platform, enabling discussions, Q&A, and contributor-submitted guides.' },
+  { year: '2025 Q1', title: '100+ Guides', desc: 'Reached 100+ published guides across all 12 topics, with an average word count of 2,500+ and a 95% reader-satisfaction score.' },
+  { year: '2025 Q2', title: 'Research Expansion', desc: 'Launched original research reports and data visualizations, cited by AI search engines and referenced across the tech industry.' },
+];
+---
+
+<section class="about-story">
+  <div class="about-container">
+    <div class="about-section-head">
+      <span class="about-eyebrow">Our Story</span>
+      <h2 class="about-section-title">From a Newsletter to a Research Platform</h2>
+      <p class="about-section-sub">
+        TechNanoAI started as a side project — a weekly email breaking down one emerging technology
+        in plain language. Today, it is a full-fledged research platform read by investors,
+        engineers, researchers, and curious minds in over 80 countries.
+      </p>
+    </div>
+
+    <div class="about-timeline">
+      {milestones.map((m, i) => (
+        <div class={`about-timeline-item ${i % 2 === 0 ? 'about-timeline-left' : 'about-timeline-right'}`}>
+          <div class="about-timeline-marker">
+            <span class="about-timeline-dot"></span>
+          </div>
+          <div class="about-timeline-card">
+            <span class="about-timeline-year">{m.year}</span>
+            <h3 class="about-timeline-title">{m.title}</h3>
+            <p class="about-timeline-desc">{m.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

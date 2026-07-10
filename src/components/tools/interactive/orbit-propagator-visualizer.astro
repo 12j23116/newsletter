@@ -1,0 +1,534 @@
+---
+/**
+ * Orbit Propagator Visualizer — Interactive tool
+ * Visualize satellite orbits with real-time propagation and ground track display
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="orbit-propagator">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🌐</div>
+      <div>
+        <h2>Orbit Propagator Visualizer</h2>
+        <p>Input orbital elements to visualize satellite orbits in 2D with ground track</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Orbit Type Preset</label>
+          <select class="it-select" id="opv-preset">
+            <option value="iss">ISS (LEO)</option>
+            <option value="geo">GEO</option>
+            <option value="molniya">Molniya (HEO)</option>
+            <option value="polar">Polar Sun-Sync (LEO)</option>
+            <option value="custom">Custom</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Propagation Duration <span class="it-label-hint">(hours)</span></label>
+          <input type="number" class="it-input" id="opv-duration" value="6" min="1" max="48" />
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">Semi-Major Axis <span class="it-label-hint">(km)</span></label>
+          <input type="number" class="it-input" id="opv-sma" value="6771" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Eccentricity</label>
+          <input type="number" class="it-input" id="opv-ecc" value="0.0001" step="0.0001" min="0" max="0.99" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Inclination <span class="it-label-hint">(°)</span></label>
+          <input type="number" class="it-input" id="opv-inc" value="51.6" />
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">RAAN <span class="it-label-hint">(°)</span></label>
+          <input type="number" class="it-input" id="opv-raan" value="0" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Arg of Perigee <span class="it-label-hint">(°)</span></label>
+          <input type="number" class="it-input" id="opv-aop" value="0" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">True Anomaly <span class="it-label-hint">(°)</span></label>
+          <input type="number" class="it-input" id="opv-ta" value="0" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="opv-propagate">Propagate Orbit</button>
+        <button class="it-btn it-btn-secondary" id="opv-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="opv-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="opv-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Orbit Propagation Results</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Orbital Period</div>
+            <div class="it-stat-value" id="opv-period">0<span class="it-stat-unit"> min</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Apogee Altitude</div>
+            <div class="it-stat-value" id="opv-apogee">0<span class="it-stat-unit"> km</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Perigee Altitude</div>
+            <div class="it-stat-value" id="opv-perigee">0<span class="it-stat-unit"> km</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Orbital Velocity</div>
+            <div class="it-stat-value" id="opv-velocity">0<span class="it-stat-unit"> km/s</span></div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Ground Track (2D)</div>
+        <canvas id="opv-canvas" width="800" height="400" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="opv-breakdown"></div>
+        <div class="it-alert it-alert-info" id="opv-insight"></div>
+      </div>
+
+      <!-- Feature 1: J2 Perturbation -->
+      <div class="it-results-card" id="opv-j2-section" style="display:none;">
+        <div class="it-results-title">🔄 J2 Perturbation Drift</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">RAAN Drift</div><div class="it-stat-value" id="opv-raan-drift" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">AOP Drift</div><div class="it-stat-value" id="opv-aop-drift" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Sun-Sync Rate</div><div class="it-stat-value" id="opv-ss-rate" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Drift Status</div><div class="it-stat-value" id="opv-drift-status" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="opv-j2-insight"></div>
+      </div>
+
+      <!-- Feature 2: Atmospheric Drag -->
+      <div class="it-results-card" id="opv-drag-section" style="display:none;">
+        <div class="it-results-title">💨 Atmospheric Drag Estimation</div>
+        <div id="opv-drag-list"></div>
+      </div>
+
+      <!-- Feature 3: Ground Station Visibility -->
+      <div class="it-results-card" id="opv-visibility-section" style="display:none;">
+        <div class="it-results-title">📡 Ground Station Visibility Windows</div>
+        <div id="opv-visibility-list"></div>
+      </div>
+
+      <!-- Feature 4: Sun-Sync Check -->
+      <div class="it-results-card" id="opv-sunsync-section" style="display:none;">
+        <div class="it-results-title">🌅 Sun-Synchronous Orbit Analysis</div>
+        <div id="opv-sunsync-list"></div>
+      </div>
+
+      <!-- Feature 5: Orbit Regime -->
+      <div class="it-results-card" id="opv-regime-section" style="display:none;">
+        <div class="it-results-title">🏷️ Orbit Regime Classification</div>
+        <div id="opv-regime-list"></div>
+      </div>
+
+      <!-- Feature 6: Eclipse Duration -->
+      <div class="it-results-card" id="opv-eclipse-section" style="display:none;">
+        <div class="it-results-title">🌑 Eclipse / Umbra Duration</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Eclipse Duration</div><div class="it-stat-value" id="opv-eclipse-dur" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">% of Orbit</div><div class="it-stat-value" id="opv-eclipse-pct" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Sunlit Time</div><div class="it-stat-value" id="opv-sunlit" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Eclipses/Day</div><div class="it-stat-value" id="opv-eclipses-day" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="opv-eclipse-insight"></div>
+      </div>
+
+      <!-- Feature 7: TLE Generator -->
+      <div class="it-results-card" id="opv-tle-section" style="display:none;">
+        <div class="it-results-title">📋 TLE (Two-Line Element) Generator</div>
+        <div id="opv-tle-output"></div>
+      </div>
+
+      <!-- Feature 8: Maneuver Delta-V -->
+      <div class="it-results-card" id="opv-maneuver-section" style="display:none;">
+        <div class="it-results-title">🛸 Maneuver Delta-V Estimator</div>
+        <div id="opv-maneuver-list"></div>
+      </div>
+
+      <!-- Feature 9: Collision Risk -->
+      <div class="it-results-card" id="opv-collision-section" style="display:none;">
+        <div class="it-results-title">⚠️ Debris Collision Risk Estimator</div>
+        <div id="opv-collision-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const presets = {
+    iss: { sma: 6771, ecc: 0.0001, inc: 51.6, raan: 0, aop: 0, ta: 0, duration: 6 },
+    geo: { sma: 42164, ecc: 0.0001, inc: 0, raan: 0, aop: 0, ta: 0, duration: 24 },
+    molniya: { sma: 26600, ecc: 0.72, inc: 63.4, raan: 0, aop: 270, ta: 0, duration: 12 },
+    polar: { sma: 7078, ecc: 0.001, inc: 98.2, raan: 0, aop: 0, ta: 0, duration: 6 },
+  };
+
+  const mu = 398600;
+  const earthR = 6371;
+
+  document.getElementById('opv-preset').addEventListener('change', function() {
+    const p = presets[this.value];
+    if (p) {
+      document.getElementById('opv-sma').value = p.sma;
+      document.getElementById('opv-ecc').value = p.ecc;
+      document.getElementById('opv-inc').value = p.inc;
+      document.getElementById('opv-raan').value = p.raan;
+      document.getElementById('opv-aop').value = p.aop;
+      document.getElementById('opv-ta').value = p.ta;
+      document.getElementById('opv-duration').value = p.duration;
+    }
+  });
+
+  function propagate() {
+    const sma = parseFloat(document.getElementById('opv-sma').value);
+    const ecc = parseFloat(document.getElementById('opv-ecc').value);
+    const inc = parseFloat(document.getElementById('opv-inc').value) * Math.PI / 180;
+    const raan = parseFloat(document.getElementById('opv-raan').value) * Math.PI / 180;
+    const aop = parseFloat(document.getElementById('opv-aop').value) * Math.PI / 180;
+    const duration = parseFloat(document.getElementById('opv-duration').value);
+
+    if (!sma || sma < earthR) { alert('Semi-major axis must be greater than Earth radius (6371 km).'); return; }
+
+    // Orbital period (Kepler's third law)
+    const period = 2 * Math.PI * Math.sqrt(Math.pow(sma, 3) / mu); // seconds
+    const periodMin = period / 60;
+
+    // Apogee and perigee
+    const apogee = sma * (1 + ecc) - earthR;
+    const perigee = sma * (1 - ecc) - earthR;
+
+    // Orbital velocity (circular approximation)
+    const velocity = Math.sqrt(mu / sma);
+
+    // Update stats
+    document.getElementById('opv-period').innerHTML = periodMin.toFixed(1) + '<span class="it-stat-unit"> min</span>';
+    document.getElementById('opv-apogee').innerHTML = Math.round(apogee).toLocaleString() + '<span class="it-stat-unit"> km</span>';
+    document.getElementById('opv-perigee').innerHTML = Math.round(perigee).toLocaleString() + '<span class="it-stat-unit"> km</span>';
+    document.getElementById('opv-velocity').innerHTML = velocity.toFixed(2) + '<span class="it-stat-unit"> km/s</span>';
+
+    // Generate ground track
+    const canvas = document.getElementById('opv-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+
+    // Draw world map grid
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(15,23,42,0.08)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 360; i += 30) {
+      ctx.beginPath();
+      ctx.moveTo(i / 360 * w, 0);
+      ctx.lineTo(i / 360 * w, h);
+      ctx.stroke();
+    }
+    for (let i = 0; i <= 180; i += 30) {
+      ctx.beginPath();
+      ctx.moveTo(0, i / 180 * h);
+      ctx.lineTo(w, i / 180 * h);
+      ctx.stroke();
+    }
+    // Equator
+    ctx.strokeStyle = 'rgba(15,23,42,0.15)';
+    ctx.beginPath();
+    ctx.moveTo(0, h / 2);
+    ctx.lineTo(w, h / 2);
+    ctx.stroke();
+
+    // Propagate orbit
+    const steps = 500;
+    const dt = (duration * 3600) / steps;
+    const points = [];
+
+    for (let i = 0; i <= steps; i++) {
+      const t = i * dt;
+      const nu = (2 * Math.PI * t / period); // mean anomaly approximation
+      const trueAnom = nu; // simplified for circular
+
+      // Position in orbital plane
+      const r = sma * (1 - ecc * ecc) / (1 + ecc * Math.cos(trueAnom));
+      const xp = r * Math.cos(trueAnom + aop);
+      const yp = r * Math.sin(trueAnom + aop);
+
+      // Rotate by inclination and RAAN (simplified)
+      const x = xp * Math.cos(raan) - yp * Math.cos(inc) * Math.sin(raan);
+      const y = xp * Math.sin(raan) + yp * Math.cos(inc) * Math.cos(raan);
+      const z = yp * Math.sin(inc);
+
+      // Convert to lat/lon (simplified, ignoring Earth rotation)
+      const lat = Math.asin(z / r) * 180 / Math.PI;
+      let lon = Math.atan2(y, x) * 180 / Math.PI - (t / 240) % 360; // Earth rotation ~ 0.25°/min
+      if (lon < -180) lon += 360;
+      if (lon > 180) lon -= 360;
+
+      points.push({ lat, lon });
+    }
+
+    // Draw ground track
+    ctx.strokeStyle = '#06b6d4';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    points.forEach((p, i) => {
+      const x = ((p.lon + 180) / 360) * w;
+      const y = ((90 - p.lat) / 180) * h;
+      if (i === 0) ctx.moveTo(x, y);
+      else {
+        // Handle wrap-around
+        const prev = points[i - 1];
+        if (Math.abs(p.lon - prev.lon) > 180) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+    });
+    ctx.stroke();
+
+    // Draw start point
+    const start = points[0];
+    ctx.fillStyle = '#059669';
+    ctx.beginPath();
+    ctx.arc(((start.lon + 180) / 360) * w, ((90 - start.lat) / 180) * h, 5, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = '11px sans-serif';
+    ctx.fillText('Start', ((start.lon + 180) / 360) * w + 8, ((90 - start.lat) / 180) * h + 4);
+
+    // Draw end point
+    const end = points[points.length - 1];
+    ctx.fillStyle = '#dc2626';
+    ctx.beginPath();
+    ctx.arc(((end.lon + 180) / 360) * w, ((90 - end.lat) / 180) * h, 5, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.fillText('End', ((end.lon + 180) / 360) * w + 8, ((90 - end.lat) / 180) * h + 4);
+
+    // Breakdown
+    const breakdown = document.getElementById('opv-breakdown');
+    breakdown.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Orbital Element</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Semi-Major Axis</td><td>${sma.toLocaleString()} km</td></tr>
+          <tr><td>Eccentricity</td><td>${ecc.toFixed(4)}</td></tr>
+          <tr><td>Inclination</td><td>${(inc * 180 / Math.PI).toFixed(1)}°</td></tr>
+          <tr><td>RAAN</td><td>${(raan * 180 / Math.PI).toFixed(1)}°</td></tr>
+          <tr><td>Arg of Perigee</td><td>${(aop * 180 / Math.PI).toFixed(1)}°</td></tr>
+          <tr><td>Orbital Period</td><td>${periodMin.toFixed(1)} min (${(periodMin / 60).toFixed(2)} hrs)</td></tr>
+          <tr><td>Apogee Altitude</td><td>${Math.round(apogee).toLocaleString()} km</td></tr>
+          <tr><td>Perigee Altitude</td><td>${Math.round(perigee).toLocaleString()} km</td></tr>
+          <tr><td>Mean Velocity</td><td>${velocity.toFixed(2)} km/s</td></tr>
+          <tr><td>Orbits in ${duration}h</td><td>${(duration / (periodMin / 60)).toFixed(2)}</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const insight = document.getElementById('opv-insight');
+    const orbits = duration / (periodMin / 60);
+    insight.innerHTML = `<strong>💡 Insight:</strong> This ${ecc < 0.01 ? 'near-circular' : 'elliptical'} orbit at ${(inc * 180 / Math.PI).toFixed(0)}° inclination completes <strong>${orbits.toFixed(1)} orbits</strong> in ${duration} hours. ${apogee > 35000 ? 'At GEO altitude, the satellite appears stationary from Earth.' : perigee < 200 ? 'Low perigee — atmospheric drag will be significant.' : 'The ground track shows the satellite's sub-satellite point over ${duration} hours.'}`;
+
+    document.getElementById('opv-results').classList.add('show');
+
+    // === Feature 1: J2 Perturbation ===
+    const j2 = 0.00108263;
+    const earthRadiusM = 6371;
+    const raanDrift = -3 * Math.sqrt(mu) * j2 * Math.pow(earthRadiusM, 2) / (2 * Math.pow(sma, 3.5) * Math.pow(1 - ecc * ecc, 2)) * Math.cos(inc) * 180 / Math.PI * 86400; // deg/day
+    const aopDrift = 3 * Math.sqrt(mu) * j2 * Math.pow(earthRadiusM, 2) / (2 * Math.pow(sma, 3.5) * Math.pow(1 - ecc * ecc, 2)) * (2 - 2.5 * Math.pow(Math.sin(inc), 2)) * 180 / Math.PI * 86400;
+    const sunSyncRate = 0.9856; // deg/day (Earth's orbital rate)
+    const isSunSync = Math.abs(raanDrift - sunSyncRate) < 0.1;
+    document.getElementById('opv-raan-drift').textContent = raanDrift.toFixed(3) + ' °/day';
+    document.getElementById('opv-aop-drift').textContent = aopDrift.toFixed(3) + ' °/day';
+    document.getElementById('opv-ss-rate').textContent = sunSyncRate.toFixed(4) + ' °/day';
+    document.getElementById('opv-drift-status').textContent = isSunSync ? 'Sun-Sync ✓' : 'Not Sun-Sync';
+    document.getElementById('opv-drift-status').style.color = isSunSync ? '#059669' : '#d97706';
+    document.getElementById('opv-j2-insight').innerHTML = `RAAN precesses at <strong>${raanDrift.toFixed(3)}°/day</strong> due to Earth's J2 oblateness. ${isSunSync ? '✓ This matches Earth's orbital rate — orbit is sun-synchronous.' : 'For sun-synchronous orbit, RAAN drift should be ~0.986°/day. Adjust SMA/inclination to achieve this.'} ${Math.abs(inc * 180 / Math.PI - 63.4) < 1 ? '✓ Critical inclination (63.4°) — AOP frozen (Molniya).' : ''}`;
+    document.getElementById('opv-j2-section').style.display = 'block';
+
+    // === Feature 2: Atmospheric Drag ===
+    const perigeeAlt = perigee;
+    const densityModel = [
+      { alt: 200, rho: 2.5e-10 }, { alt: 300, rho: 2.0e-11 }, { alt: 400, rho: 2.8e-12 },
+      { alt: 500, rho: 5.0e-13 }, { alt: 600, rho: 1.0e-13 }, { alt: 800, rho: 1.0e-14 }, { alt: 1000, rho: 3.0e-15 }
+    ];
+    let density = 0;
+    for (let i = 0; i < densityModel.length - 1; i++) {
+      if (perigeeAlt >= densityModel[i].alt && perigeeAlt < densityModel[i+1].alt) {
+        const t = (perigeeAlt - densityModel[i].alt) / (densityModel[i+1].alt - densityModel[i].alt);
+        density = densityModel[i].rho * (1 - t) + densityModel[i+1].rho * t;
+        break;
+      }
+    }
+    if (perigeeAlt > 1000) density = 3e-15;
+    if (perigeeAlt < 200) density = 2.5e-10;
+    const dragArea = 0.01; // m² (assumed)
+    const dragCoeff = 2.2;
+    const dragForce = 0.5 * density * velocity * velocity * dragArea * dragCoeff;
+    const satMass = 500; // kg assumed
+    const dragAccel = dragForce / satMass;
+    const altitudeLossPerDay = dragAccel * 86400 * velocity / 1000; // km/day (approx)
+    const orbitLifetime = perigeeAlt > 800 ? '> 100 years' : perigeeAlt > 500 ? Math.round(perigeeAlt / Math.max(altitudeLossPerDay, 0.001)) + ' days' : perigeeAlt > 300 ? Math.round(perigeeAlt / Math.max(altitudeLossPerDay, 0.01)) + ' days' : '< 30 days';
+    document.getElementById('opv-drag-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Perigee Altitude</span><strong>${Math.round(perigeeAlt)} km</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Atmospheric Density (est.)</span><strong>${density.toExponential(2)} kg/m³</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Drag Force (est.)</span><strong>${dragForce.toExponential(3)} N</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Drag Acceleration</span><strong>${dragAccel.toExponential(3)} m/s²</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Altitude Loss / Day</span><strong style="color:${altitudeLossPerDay > 1 ? '#dc2626' : altitudeLossPerDay > 0.1 ? '#d97706' : '#059669'};">${altitudeLossPerDay.toFixed(3)} km/day</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Est. Orbit Lifetime</span><strong>${orbitLifetime}</strong></div>
+      <div class="it-alert ${perigeeAlt < 300 ? 'it-alert-bad' : perigeeAlt < 500 ? 'it-alert-warn' : 'it-alert-good'}" style="margin-top:0.5rem;">${perigeeAlt < 300 ? '🚨 Very low perigee — rapid orbital decay. Station-keeping required.' : perigeeAlt < 500 ? '⚠️ Moderate drag — periodic reboost maneuvers needed.' : '✓ Perigee high enough — drag is minimal.'}</div>
+    `;
+    document.getElementById('opv-drag-section').style.display = 'block';
+
+    // === Feature 3: Ground Station Visibility ===
+    const stations = [
+      { name: 'Cape Canaveral', lat: 28.5, lon: -80.6 },
+      { name: 'Baikonur', lat: 45.9, lon: 63.3 },
+      { name: 'Kourou', lat: 5.2, lon: -52.7 },
+      { name: 'Svalbard', lat: 78.2, lon: 15.6 },
+      { name: 'Singapore', lat: 1.3, lon: 103.8 },
+    ];
+    const minElevation = 10; // degrees
+    const visList = document.getElementById('opv-visibility-list');
+    const visResults = stations.map(s => {
+      const passes = [];
+      for (let i = 0; i < points.length; i++) {
+        const p = points[i];
+        const dLat = (p.lat - s.lat) * Math.PI / 180;
+        const dLon = (p.lon - s.lon) * Math.PI / 180;
+        const a = Math.sin(dLat/2)**2 + Math.cos(s.lat*Math.PI/180) * Math.cos(p.lat*Math.PI/180) * Math.sin(dLon/2)**2;
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        const earthCentralAngle = Math.acos(Math.cos(minElevation * Math.PI / 180) / (1 + perigeeAlt / earthR) * Math.cos(minElevation * Math.PI / 180) - Math.sin(minElevation * Math.PI / 180) * Math.tan(minElevation * Math.PI / 180));
+        const maxAngle = Math.acos(earthR / (earthR + perigeeAlt)) * 180 / Math.PI;
+        if (c * 180 / Math.PI < maxAngle) {
+          passes.push(i);
+        }
+      }
+      const passCount = passes.length > 0 ? Math.ceil(passes.length / 50) : 0;
+      const avgDuration = passCount > 0 ? Math.round(periodMin * 0.3) : 0;
+      const maxElev = passes.length > 0 ? Math.round(90 - Math.abs(s.lat - points[passes[Math.floor(passes.length/2)]].lat)) : 0;
+      return { name: s.name, passCount, avgDuration, maxElev: Math.min(maxElev, 90) };
+    });
+    visList.innerHTML = visResults.map(v => {
+      const color = v.passCount > 3 ? '#059669' : v.passCount > 0 ? '#d97706' : '#dc2626';
+      return `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${v.name}</strong></div><div style="color:${color};">${v.passCount > 0 ? v.passCount + ' passes · ~' + v.avgDuration + ' min · max ' + v.maxElev + '°' : 'No visibility'}</div></div>`;
+    }).join('') + `<div class="it-alert it-alert-info" style="margin-top:0.5rem;">Visibility calculated for min 10° elevation. Higher orbits have longer but fewer passes. Polar stations (Svalbard) see more passes for high-inclination orbits.</div>`;
+    document.getElementById('opv-visibility-section').style.display = 'block';
+
+    // === Feature 4: Sun-Sync Check ===
+    const ltan = (raan * 180 / Math.PI / 15 + 12) % 24; // Local Time of Ascending Node (approx)
+    const requiredIncForSSO = Math.acos(-Math.pow(sma / earthR, 3.5) * sunSyncRate * 2 * Math.pow(1 - ecc * ecc, 2) / (3 * j2 * Math.sqrt(mu / Math.pow(earthR, 5))) * Math.PI / 180) * 180 / Math.PI;
+    const incDeg = inc * 180 / Math.PI;
+    document.getElementById('opv-sunsync-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Current RAAN Drift</span><strong>${raanDrift.toFixed(3)} °/day</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Required for SSO</span><strong>0.9856 °/day</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Current Inclination</span><strong>${incDeg.toFixed(1)}°</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Required Inc. for SSO at this SMA</span><strong>${isNaN(requiredIncForSSO) ? 'N/A' : requiredIncForSSO.toFixed(1) + '°'}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>LTAN (Local Time Ascending Node)</span><strong>${ltan.toFixed(1)}h</strong></div>
+      <div class="it-alert ${isSunSync ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${isSunSync ? '✓ Orbit is sun-synchronous. LTAN = ' + ltan.toFixed(1) + 'h. Constant solar illumination conditions.' : '⚠️ Not sun-synchronous. Adjust inclination to ' + (isNaN(requiredIncForSSO) ? 'N/A' : requiredIncForSSO.toFixed(1) + '°') + ' for SSO at this altitude.'}</div>
+    `;
+    document.getElementById('opv-sunsync-section').style.display = 'block';
+
+    // === Feature 5: Orbit Regime ===
+    const regimes = [
+      { name: 'LEO', minAlt: 0, maxAlt: 2000, desc: 'Low Earth Orbit', color: '#059669' },
+      { name: 'MEO', minAlt: 2000, maxAlt: 35786, desc: 'Medium Earth Orbit', color: '#84cc16' },
+      { name: 'GEO', minAlt: 35786, maxAlt: 37000, desc: 'Geostationary Orbit', color: '#d97706' },
+      { name: 'HEO', minAlt: 0, maxAlt: 999999, desc: 'Highly Elliptical Orbit', color: '#dc2626' },
+    ];
+    let regime;
+    if (ecc > 0.3) regime = regimes[3];
+    else if (perigeeAlt < 2000) regime = regimes[0];
+    else if (perigeeAlt >= 35786 && apogee <= 37000) regime = regimes[2];
+    else regime = regimes[1];
+    document.getElementById('opv-regime-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Classification</span><strong style="color:${regime.color};">${regime.name} — ${regime.desc}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Perigee</span><strong>${Math.round(perigeeAlt)} km</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Apogee</span><strong>${Math.round(apogee)} km</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Eccentricity</span><strong>${ecc.toFixed(4)} ${ecc > 0.3 ? '(Highly Elliptical)' : ecc < 0.01 ? '(Near-Circular)' : '(Elliptical)'}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Inclination Class</span><strong>${incDeg < 5 ? 'Equatorial' : incDeg > 95 ? 'Retrograde/Polar' : incDeg > 80 ? 'Polar' : 'Inclined'}</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Orbit classified as <strong>${regime.name}</strong>. ${regime.name === 'LEO' ? 'Subject to atmospheric drag and debris density.' : regime.name === 'GEO' ? 'Station-keeping required for longitude control.' : regime.name === 'HEO' ? 'Apogee near high latitudes — good for high-latitude coverage.' : 'Van Allen belt radiation environment.'}</div>
+    `;
+    document.getElementById('opv-regime-section').style.display = 'block';
+
+    // === Feature 6: Eclipse Duration ===
+    const earthShadowRadius = earthR * 1.1; // penumbra approx
+    const eclipseFrac = 2 * Math.asin(Math.min(earthShadowRadius / sma, 1)) / (2 * Math.PI);
+    const eclipseDur = periodMin * eclipseFrac;
+    const sunlitDur = periodMin - eclipseDur;
+    const eclipsesPerDay = (24 * 60 / periodMin);
+    document.getElementById('opv-eclipse-dur').textContent = eclipseDur.toFixed(1) + ' min';
+    document.getElementById('opv-eclipse-pct').textContent = (eclipseFrac * 100).toFixed(1) + '%';
+    document.getElementById('opv-sunlit').textContent = sunlitDur.toFixed(1) + ' min';
+    document.getElementById('opv-eclipses-day').textContent = eclipsesPerDay.toFixed(1);
+    document.getElementById('opv-eclipse-insight').innerHTML = `Each orbit, satellite spends ~<strong>${eclipseDur.toFixed(1)} min</strong> in Earth's shadow (${(eclipseFrac * 100).toFixed(1)}% of orbit). ${eclipseDur > 35 ? '⚠️ Long eclipses — battery sizing critical for power continuity.' : '✓ Eclipse duration manageable for typical battery systems.'} ${eclipsesPerDay.toFixed(1)} eclipse cycles per day.`;
+    document.getElementById('opv-eclipse-section').style.display = 'block';
+
+    // === Feature 7: TLE Generator ===
+    const epochYear = new Date().getUTCFullYear() % 100;
+    const epochDay = Math.floor((new Date() - new Date(new Date().getUTCFullYear(), 0, 0)) / 86400000);
+    const epochFrac = ((new Date().getUTCHours() * 3600 + new Date().getUTCMinutes() * 60 + new Date().getUTCSeconds()) / 86400).toFixed(8).substring(2);
+    const meanMotion = 1440 / periodMin;
+    const tleLine1 = `1 99999U 25001A   ${String(epochYear).padStart(2,'0')}${String(epochDay).padStart(3,'0')}.${epochFrac}  .00000000  00000-0  00000-0 0  999`;
+    const tleLine2 = `2 99999  ${incDeg.toFixed(4).padStart(8,' ')} ${(raan * 180 / Math.PI).toFixed(4).padStart(8,' ')} ${ecc.toFixed(7).substring(2).padStart(7,' ')} ${(aop * 180 / Math.PI).toFixed(4).padStart(8,' ')} 000.0000  ${meanMotion.toFixed(8).padStart(11,' ')} 00000`;
+    document.getElementById('opv-tle-output').innerHTML = `<pre style="background:var(--tl-card);border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:0.75rem;font-size:0.75rem;overflow-x:auto;color:var(--tl-text);line-height:1.6;">${tleLine1}\n${tleLine2}</pre><div class="it-alert it-alert-info" style="margin-top:0.5rem;">⚠️ Simplified TLE format for educational use. Real TLEs require precise epoch, mean motion derivative, and checksum calculations.</div>`;
+    document.getElementById('opv-tle-section').style.display = 'block';
+
+    // === Feature 8: Maneuver Delta-V ===
+    const planeChangeDV = 2 * velocity * Math.sin(Math.abs(inc - 0) / 2);
+    const phasingDV = 2 * Math.sqrt(mu / sma) * (1 - Math.cos(Math.PI / 2 * 0.1));
+    const hohmannDV = Math.sqrt(mu * (2 / (sma + 42164) - 1 / sma)) - Math.sqrt(mu / sma);
+    const deorbitDV = Math.sqrt(mu / sma) - Math.sqrt(mu * (2 / (earthR + 200) - 1 / sma));
+    document.getElementById('opv-maneuver-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Plane Change (to equatorial)</span><strong>${planeChangeDV.toFixed(0)} m/s</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Phasing (10% orbit shift)</span><strong>${phasingDV.toFixed(0)} m/s</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Hohmann to GEO</span><strong>${hohmannDV.toFixed(0)} m/s</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Deorbit to 200km</span><strong>${deorbitDV.toFixed(0)} m/s</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Station-keeping (annual)</span><strong>${perigeeAlt < 1000 ? '50-100 m/s' : regime.name === 'GEO' ? '45-55 m/s' : '< 10 m/s'}</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Delta-V estimates for common maneuvers. Plane changes are most expensive — combine with altitude changes when possible (bi-elliptic transfer).</div>
+    `;
+    document.getElementById('opv-maneuver-section').style.display = 'block';
+
+    // === Feature 9: Collision Risk ===
+    const debrisDensity = perigeeAlt < 500 ? 1e-6 : perigeeAlt < 800 ? 1e-7 : perigeeAlt < 1500 ? 1e-8 : 1e-9;
+    const collisionProb = debrisDensity * 2 * sma * Math.PI * 86400 * 365;
+    const riskLevel = collisionProb > 0.01 ? 'High' : collisionProb > 0.001 ? 'Moderate' : collisionProb > 0.0001 ? 'Low' : 'Very Low';
+    const riskColor = riskLevel === 'High' ? '#dc2626' : riskLevel === 'Moderate' ? '#d97706' : riskLevel === 'Low' ? '#84cc16' : '#059669';
+    const conjunctionRate = Math.round(collisionProb * 365 * 100);
+    document.getElementById('opv-collision-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Orbit Regime</span><strong>${regime.name}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Debris Density (est.)</span><strong>${debrisDensity.toExponential(1)} /km³</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Collision Probability</span><strong>${(collisionProb * 100).toFixed(3)}%</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Risk Level</span><strong style="color:${riskColor};">${riskLevel}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Close Conjunctions/Year</span><strong>~${conjunctionRate}</strong></div>
+      <div class="it-alert ${riskLevel === 'High' ? 'it-alert-bad' : riskLevel === 'Moderate' ? 'it-alert-warn' : 'it-alert-good'}" style="margin-top:0.5rem;">${riskLevel === 'High' ? '🚨 High collision risk — frequent conjunction screening required (JSpOC/18th SPCS).' : riskLevel === 'Moderate' ? '⚠️ Moderate risk — regular screening recommended.' : '✓ Low collision risk environment.'}</div>
+    `;
+    document.getElementById('opv-collision-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('opv-export').style.display = 'inline-flex';
+    document.getElementById('opv-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), orbitalElements: { sma, ecc, inc: incDeg, raan: raan * 180 / Math.PI, aop: aop * 180 / Math.PI }, period: periodMin, apogee, perigee, velocity, regime: regime.name, j2: { raanDrift, aopDrift, isSunSync }, drag: { density, altitudeLossPerDay, orbitLifetime }, eclipse: { duration: eclipseDur, fraction: eclipseFrac }, tle: { line1: tleLine1, line2: tleLine2 }, collisionRisk: { probability: collisionProb, level: riskLevel } };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'orbit-propagation-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('opv-propagate').addEventListener('click', propagate);
+  document.getElementById('opv-reset').addEventListener('click', () => {
+    document.getElementById('opv-results').classList.remove('show');
+  });
+})();
+</script>

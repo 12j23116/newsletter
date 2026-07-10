@@ -1,0 +1,63 @@
+---
+const stats = [
+  { icon: '📊', value: '100', suffix: '+', label: 'In-Depth Articles' },
+  { icon: '🔍', value: '12', suffix: '', label: 'Tech Categories' },
+  { icon: '👥', value: '50000', suffix: '+', label: 'Monthly Readers' },
+  { icon: '📈', value: '92', suffix: '%', label: 'Reader Retention' },
+  { icon: '🛠️', value: '8', suffix: '+', label: 'Free Tools' },
+  { icon: '⭐', value: '4.9', suffix: '', label: 'Avg. Rating' },
+];
+
+const badges = [
+  { icon: '🔒', text: 'Data-driven analysis' },
+  { icon: '🌍', text: 'Available worldwide' },
+  { icon: '✨', text: 'Expert-curated' },
+  { icon: '🚀', text: 'Updated weekly' },
+];
+
+const pressLogos = ['TechCrunch', 'Wired', 'The Verge', 'Ars Technica', 'MIT Tech Review'];
+---
+
+<section class="impact-section" id="stats">
+  <div class="impact-bg">
+    <img src="/images/002-robotics-precision-lab.webp" alt="" class="impact-bg-img" loading="lazy" />
+    <div class="impact-bg-overlay"></div>
+  </div>
+  <div class="lv-container" style="position:relative;z-index:1">
+    <div class="lv-section-head reveal">
+      <div class="lv-eyebrow">Numbers That Matter</div>
+      <h2 class="lv-section-h2 lv-section-h2-light">
+        Real data. Real insights.<br />
+        <span class="lv-grad-text">Real technological change.</span>
+      </h2>
+    </div>
+
+    <div class="impact-stats">
+      {stats.map((s, i) => (
+        <div class="impact-stat reveal" style={`transition-delay:${i * 0.05}s`}>
+          <div class="impact-stat-icon">{s.icon}</div>
+          <div class="impact-stat-value" data-count={s.value} data-suffix={s.suffix}>
+            0{s.suffix}
+          </div>
+          <div class="impact-stat-label">{s.label}</div>
+        </div>
+      ))}
+    </div>
+
+    <div class="impact-badges reveal">
+      {badges.map((b) => (
+        <div class="impact-badge">
+          <span>{b.icon}</span>
+          <span>{b.text}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="press-row reveal">
+      <span class="press-label">As seen in</span>
+      {pressLogos.map((l) => (
+        <span class="press-logo">{l}</span>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+const navLinks = [
+  { label: 'Categories', href: '#cat-group-1' },
+  { label: 'Tools', href: '#tools' },
+  { label: 'Trending', href: '#trending' },
+  { label: 'Radar', href: '#radar' },
+  { label: 'Community', href: '#community' },
+];
+---
+
+<nav class="navbar">
+  <div class="lv-container">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <span class="navbar-logo-icon">⚡</span>
+        <span>TechScope</span>
+      </a>
+
+      <div class="navbar-links">
+        {navLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+
+      <div class="navbar-actions">
+        <a href="#newsletter" class="lv-btn lv-btn-primary">Subscribe</a>
+        <button class="navbar-toggle" aria-label="Toggle menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-mobile">
+    {navLinks.map((link) => (
+      <a href={link.href}>{link.label}</a>
+    ))}
+    <a href="#newsletter" class="lv-btn lv-btn-primary" style="margin-top:.5rem">Subscribe</a>
+  </div>
+</nav>

@@ -1,0 +1,34 @@
+---
+import { glossarytopics, glossaryTerms } from '../../data/glossary/glossary-content';
+---
+
+<section class="gl-section gl-section-alt" id="gl-topics">
+  <div class="gl-section-alt-inner">
+    <div class="gl-section-head gl-reveal">
+      <div class="gl-eyebrow-sm">Browse topics</div>
+      <h2>Explore by <span class="gl-grad">Technology Frontier</span></h2>
+      <p>Click a topic to filter terms. Each frontier covers foundational concepts and cutting-edge developments shaping 2026-2027.</p>
+    </div>
+    <div class="gl-cat-grid" id="gl-cat-grid">
+      <button class="gl-cat-card gl-cat-all gl-cat-active gl-reveal" data-cat="all">
+        <span class="gl-cat-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </span>
+        <div class="gl-cat-card-name">All Terms</div>
+        <div class="gl-cat-card-count">{glossaryTerms.length} terms</div>
+      </button>
+      {glossarytopics.map((cat) => {
+        const count = glossaryTerms.filter(t => t.c === cat.id).length;
+        return (
+          <button class="gl-cat-card gl-reveal" data-cat={cat.id} style={`--cat-color:${cat.color}`}>
+            <span class="gl-cat-card-icon" style={`color:${cat.color}`}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d={cat.svg}/></svg>
+            </span>
+            <div class="gl-cat-card-name">{cat.name}</div>
+            <div class="gl-cat-card-count">{count} terms</div>
+          </button>
+        );
+      })}
+    </div>
+  </div>
+</section>

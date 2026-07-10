@@ -1,0 +1,228 @@
+---
+import '../styles/landing.css';
+import Navbar from '../components/landing/Navbar.astro';
+import Hero from '../components/landing/Hero.astro';
+import PlatformOverview from '../components/landing/PlatformOverview.astro';
+import CategoryGroup from '../components/landing/CategoryGroup.astro';
+import FeaturedTools from '../components/landing/FeaturedTools.astro';
+import LearnTabs from '../components/landing/LearnTabs.astro';
+import TrendingTopics from '../components/landing/TrendingTopics.astro';
+import TechRadar from '../components/landing/TechRadar.astro';
+import HowItWorks from '../components/landing/HowItWorks.astro';
+import Stats from '../components/landing/Stats.astro';
+import Testimonials from '../components/landing/Testimonials.astro';
+import Community from '../components/landing/Community.astro';
+import Newsletter from '../components/landing/Newsletter.astro';
+import Footer from '../components/landing/Footer.astro';
+
+const title = 'TechScope — Emerging Technology Intelligence';
+const description = 'Deep-dive analysis across 12 emerging technology frontiers: AI, Robotics, Fusion, Biotech, BCI, Autonomous Vehicles, Space, Materials, Quantum, Nuclear, Energy Storage, and Cybersecurity.';
+
+const catGroup1 = [
+  { name: 'Artificial Intelligence', desc: 'LLMs, agents, and the race toward AGI', icon: '🧠', color: '#3b82f6', img: '/images/ai-01-neural-brain.webp', articles: '25', readers: '18K', href: '/categories/AI' },
+  { name: 'Robotics', desc: 'Humanoids, drones, and industrial automation', icon: '🤖', color: '#ec4899', img: '/images/robotics-01-cobot-assembly.webp', articles: '12', readers: '8K', href: '/categories/Robotics' },
+  { name: 'Fusion Energy', desc: 'Tokamaks, laser confinement, and the path to net power', icon: '⚛️', color: '#f59e0b', img: '/images/fusion-01-tokamak-plasma.webp', articles: '8', readers: '6K', href: '/categories/Fusion' },
+];
+
+const catGroup2 = [
+  { name: 'Biotech', desc: 'CRISPR, mRNA, and lab-grown organs', icon: '🧬', color: '#10b981', img: '/images/biotech-01-crispr-editing.webp', articles: '15', readers: '10K', href: '/categories/Biotech' },
+  { name: 'Brain-Computer Interfaces', desc: 'Neural implants, EEG, and prosthetic control', icon: '🔌', color: '#06b6d4', img: '/images/bci-01-neural-implant-surgery.webp', articles: '7', readers: '5K', href: '/categories/BCI' },
+  { name: 'Autonomous Vehicles', desc: 'Robotaxis, lidar, and Level 4 autonomy', icon: '🚗', color: '#8b5cf6', img: '/images/av-01-self-driving-sedan.webp', articles: '10', readers: '7K', href: '/categories/AV' },
+];
+
+const catGroup3 = [
+  { name: 'Space Tech', desc: 'Launch vehicles, satellites, and lunar economy', icon: '🚀', color: '#06b6d4', img: '/images/space-01-orbital-station.webp', articles: '14', readers: '12K', href: '/categories/Space' },
+  { name: 'Advanced Materials', desc: 'Graphene, metamaterials, and superconductors', icon: '🔬', color: '#ec4899', img: '/images/materials-01-graphene-lattice.webp', articles: '6', readers: '4K', href: '/categories/Materials' },
+  { name: 'Quantum Computing', desc: 'Qubits, error correction, and quantum advantage', icon: '🔮', color: '#8b5cf6', img: '/images/quantum-01-cryogenic-fridge.webp', articles: '11', readers: '9K', href: '/categories/Quantum' },
+];
+
+const catGroup4 = [
+  { name: 'Nuclear Energy', desc: 'SMRs, molten salt reactors, and next-gen fission', icon: '☢️', color: '#f59e0b', img: '/images/nuclear-01-smr-vessel.webp', articles: '9', readers: '5K', href: '/categories/Nuclear' },
+  { name: 'Energy Storage', desc: 'Solid-state batteries, grid storage, and supercaps', icon: '🔋', color: '#ef4444', img: '/images/energy-01-grid-battery-farm.webp', articles: '8', readers: '6K', href: '/categories/EnergyStorage' },
+  { name: 'Cybersecurity', desc: 'Post-quantum crypto, zero trust, and AI defense', icon: '🛡️', color: '#3b82f6', img: '/images/cyber-01-soc-threat-hunting.webp', articles: '13', readers: '11K', href: '/categories/Cybersecurity' },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <Hero />
+      <PlatformOverview />
+      <CategoryGroup id="cat-group-1" groupNumber="01 / 04" groupTitle="AI · Robotics · Fusion" categories={catGroup1} />
+      <CategoryGroup id="cat-group-2" groupNumber="02 / 04" groupTitle="Biotech · BCI · Autonomous Vehicles" categories={catGroup2} />
+      <CategoryGroup id="cat-group-3" groupNumber="03 / 04" groupTitle="Space · Materials · Quantum" categories={catGroup3} />
+      <CategoryGroup id="cat-group-4" groupNumber="04 / 04" groupTitle="Nuclear · Energy Storage · Cybersecurity" categories={catGroup4} />
+      <FeaturedTools />
+      <LearnTabs />
+      <TrendingTopics />
+      <TechRadar />
+      <HowItWorks />
+      <Stats />
+      <Testimonials />
+      <Community />
+      <Newsletter />
+    </main>
+    <Footer />
+
+    <script>
+      // ===== Scroll reveal =====
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      // ===== Mobile menu toggle =====
+      const toggle = document.querySelector('.navbar-toggle');
+      const mobileMenu = document.querySelector('.navbar-mobile');
+      if (toggle && mobileMenu) {
+        toggle.addEventListener('click', () => {
+          toggle.classList.toggle('open');
+          mobileMenu.classList.toggle('open');
+        });
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            toggle.classList.remove('open');
+            mobileMenu.classList.remove('open');
+          });
+        });
+      }
+
+      // ===== Animated counters =====
+      const counters = document.querySelectorAll<HTMLElement>('[data-count]');
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target as HTMLElement;
+            const target = parseFloat(el.dataset.count || '0');
+            const suffix = el.dataset.suffix || '';
+            const duration = 2000;
+            const start = performance.now();
+            const animate = (now: number) => {
+              const progress = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const value = target * eased;
+              el.textContent =
+                target >= 1000
+                  ? Math.floor(value).toLocaleString() + suffix
+                  : value.toFixed(target % 1 === 0 ? 0 : 1) + suffix;
+              if (progress < 1) requestAnimationFrame(animate);
+            };
+            requestAnimationFrame(animate);
+            counterObserver.unobserve(el);
+          });
+        },
+        { threshold: 0.5 }
+      );
+      counters.forEach((el) => counterObserver.observe(el));
+
+      // ===== Learn tabs =====
+      const learntabs = document.querySelectorAll('.learntab');
+      const learntabPanels = document.querySelectorAll('.learntabs-panel');
+      learntabs.forEach((tab) => {
+        const handleTab = () => {
+          const idx = parseInt(tab.getAttribute('data-tab') || '0');
+          learntabs.forEach((t) => t.classList.remove('learntab-active'));
+          tab.classList.add('learntab-active');
+          learntabPanels.forEach((p) => {
+            p.style.display = parseInt(p.getAttribute('data-panel') || '0') === idx ? '' : 'none';
+          });
+        };
+        tab.addEventListener('mouseenter', handleTab);
+        tab.addEventListener('click', handleTab);
+      });
+
+      // ===== Testimonials =====
+      const testiData = [
+        { quote: 'TechScope is the only newsletter I read cover to cover. The depth of analysis across fusion, quantum, and AI is unmatched anywhere else.', name: 'Rachel Torres', role: 'Partner at Andreessen Horowitz', init: 'RT', color: '#3b82f6' },
+        { quote: "As a CTO, I need to stay ahead of emerging tech trends. TechScope's radar is my go-to resource for strategic planning every quarter.", name: 'David Park', role: 'CTO at Quantum Labs', init: 'DP', color: '#8b5cf6' },
+        { quote: 'The biotech coverage is phenomenal. I have recommended TechScope to every researcher in my lab. It bridges the gap between academia and industry.', name: 'Dr. Emily Chen', role: 'Principal Investigator, Stanford', init: 'EC', color: '#06b6d4' },
+        { quote: "I invested in three SMR startups after reading TechScope's nuclear energy series. The analysis is sharp, data-driven, and ahead of the curve.", name: 'Michael Brennan', role: 'Angel Investor', init: 'MB', color: '#ec4899' },
+      ];
+      const testiDots = document.querySelectorAll('[data-testi]');
+      const testiCards = document.querySelectorAll('[data-testi-card]');
+      const testiQuote = document.getElementById('testi-quote');
+      const testiName = document.getElementById('testi-name');
+      const testiRole = document.getElementById('testi-role');
+      const testiAvatar = document.getElementById('testi-avatar');
+      const testiHeroImg = document.getElementById('testi-hero-img');
+      const setTesti = (idx: number) => {
+        const t = testiData[idx];
+        if (!t) return;
+        if (testiQuote) testiQuote.textContent = t.quote;
+        if (testiName) testiName.textContent = t.name;
+        if (testiRole) testiRole.textContent = t.role;
+        if (testiAvatar) { testiAvatar.textContent = t.init; testiAvatar.style.background = t.color; }
+        if (testiHeroImg) testiHeroImg.style.background = `linear-gradient(135deg, ${t.color}, rgba(0,0,0,.3))`;
+        testiDots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        testiCards.forEach((c, i) => c.classList.toggle('testi-card-active', i === idx));
+      };
+      testiDots.forEach((dot) => {
+        dot.addEventListener('click', () => setTesti(parseInt(dot.getAttribute('data-testi') || '0')));
+      });
+      testiCards.forEach((card) => {
+        card.addEventListener('click', () => setTesti(parseInt(card.getAttribute('data-testi-card') || '0')));
+      });
+      let autoTesti = 0;
+      setInterval(() => { autoTesti = (autoTesti + 1) % testiData.length; setTesti(autoTesti); }, 5000);
+
+      // ===== How it works =====
+      const howtoCards = document.querySelectorAll('[data-step]');
+      howtoCards.forEach((card) => {
+        card.addEventListener('mouseenter', () => {
+          howtoCards.forEach((c) => c.classList.remove('howto-card-active'));
+          card.classList.add('howto-card-active');
+        });
+      });
+
+      // ===== Radar interaction =====
+      const radarDots = document.querySelectorAll('[data-radar-dot]');
+      const radarCards = document.querySelectorAll('[data-radar-card]');
+      radarDots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          radarCards.forEach((c) => c.classList.remove('active'));
+          radarDots.forEach((d) => d.classList.remove('active'));
+          dot.classList.add('active');
+          radarCards[idx]?.classList.add('active');
+        });
+      });
+      radarCards.forEach((card, idx) => {
+        card.addEventListener('click', () => {
+          radarCards.forEach((c) => c.classList.remove('active'));
+          radarDots.forEach((d) => d.classList.remove('active'));
+          card.classList.add('active');
+          radarDots[idx]?.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

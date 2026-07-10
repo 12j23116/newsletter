@@ -1,0 +1,41 @@
+---
+import { popularGuides, topicImages } from '../../data/guides/guides-listing';
+---
+
+<section class="gd-popular">
+  <div class="gd-popular-grid">
+    {popularGuides.map((guide, i) => (
+      <a
+        href={`/guides/${guide.slug}`}
+        class="gd-popular-card"
+        style={`--card-color:${guide.topicColor}`}
+      >
+        <div class="gd-popular-card-banner">
+          <img src={topicImages[guide.topic] || '/images/001-ai-neural-agent-cluster.webp'} alt="" class="gd-popular-card-banner-img" loading="lazy" />
+          <div class="gd-popular-card-banner-overlay"></div>
+          <div class="gd-popular-card-num">{String(i + 1).padStart(2, '0')}</div>
+        </div>
+        <div class="gd-popular-card-body">
+          <div class="gd-popular-card-top">
+            <span class="gd-difficulty-badge" data-level={guide.difficulty}>{guide.difficulty}</span>
+          </div>
+          <h3 class="gd-popular-card-title">{guide.title}</h3>
+          <p class="gd-popular-card-desc">{guide.description}</p>
+          <div class="gd-popular-card-foot">
+            <span class="gd-guide-cat" style={`--cat-color:${guide.topicColor}`}>{guide.topic}</span>
+            <div class="gd-guide-meta">
+              <span class="gd-meta-item">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+                {guide.readTime}
+              </span>
+              <span class="gd-meta-item">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                {guide.steps} steps
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

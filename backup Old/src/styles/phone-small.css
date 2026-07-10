@@ -1,0 +1,72 @@
+/* ============================================
+   PHONE SMALL STYLES — 358px and below
+   Loaded globally via BaseLayout.astro
+   ============================================ */
+
+@media (max-width: 358px) {
+  :root {
+    --container-padding: 0.75rem;
+    --header-height: 52px;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.625rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  /* Ultra-small screens: single column everything */
+  .xs\:grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .xs\:stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .xs\:hidden {
+    display: none;
+  }
+
+  .xs\:text-center {
+    text-align: center;
+  }
+
+  /* Tighter spacing */
+  .xs\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .xs\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Smaller buttons */
+  .xs\:btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  /* Hide non-essential elements */
+  .xs\:hide-extras {
+    display: none !important;
+  }
+}

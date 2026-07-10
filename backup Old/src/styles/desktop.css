@@ -1,0 +1,56 @@
+/* ============================================
+   DESKTOP STYLES — min-width: 1024px
+   Loaded globally via BaseLayout.astro
+   ============================================ */
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2rem;
+  }
+
+  /* Larger headings on desktop */
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  /* Multi-column layouts */
+  .lg\:grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .lg\:grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .lg\:grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+}

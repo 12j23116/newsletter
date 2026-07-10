@@ -1,0 +1,149 @@
+---
+import { podcastStats, featuredEpisode, getAudioUrl } from '../../data/podcast/podcast-content';
+const heroAudioUrl = getAudioUrl(featuredEpisode);
+---
+
+<section class="pc-hero">
+  <div class="pc-hero-bg">
+    <div class="pc-hero-wave"></div>
+    <div class="pc-hero-orb pc-hero-orb-1"></div>
+    <div class="pc-hero-orb pc-hero-orb-2"></div>
+  </div>
+  <div class="pc-hero-inner">
+    <div class="pc-hero-left">
+      <span class="pc-eyebrow">
+        <span class="pc-live-dot"></span>
+        Season 4 · Now Streaming
+      </span>
+      <h1 class="pc-hero-title">
+        The <span class="pc-grad">Frontier</span> Podcast
+      </h1>
+      <p class="pc-hero-sub">
+        Weekly conversations with the researchers, engineers, and founders building the future.
+        From AI agents to fusion energy — deep dives into the technologies reshaping our world.
+      </p>
+      <div class="pc-hero-stats">
+        {podcastStats.map((stat) => (
+          <div class="pc-hero-stat">
+            <strong>{stat.value}{stat.suffix}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+      <a href="/podcast/schedule" class="pc-sched-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        View Episode Schedule
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="pc-hero-right">
+      <div class="pc-player-card" style={`--card-color:${featuredEpisode.topicColor}`}>
+        <audio id="pc-hero-audio" preload="metadata" src={heroAudioUrl}></audio>
+        <div class="pc-player-cover">
+          <div class="pc-player-cover-inner">
+            <div class="pc-player-cover-icon">🎙️</div>
+            <span class="pc-player-cover-label">Latest Episode</span>
+            <span class="pc-player-cover-ep">S{featuredEpisode.season} · E{featuredEpisode.episode}</span>
+          </div>
+          <div class="pc-player-rings">
+            <div class="pc-player-ring"></div>
+            <div class="pc-player-ring"></div>
+            <div class="pc-player-ring"></div>
+          </div>
+        </div>
+        <div class="pc-player-body">
+          <span class="pc-player-cat" style={`--cat-color:${featuredEpisode.topicColor}`}>{featuredEpisode.topic}</span>
+          <h2 class="pc-player-title">{featuredEpisode.title}</h2>
+          <p class="pc-player-desc">{featuredEpisode.description}</p>
+          <div class="pc-player-guest">
+            <span class="pc-guest-avatar" style={`background:${featuredEpisode.topicColor}`}></span>
+            <div class="pc-guest-info">
+              <span class="pc-guest-name">{featuredEpisode.guest}</span>
+              <span class="pc-guest-role">{featuredEpisode.guestRole} · {featuredEpisode.guestCompany}</span>
+            </div>
+          </div>
+          <div class="pc-player-controls">
+            <button class="pc-play-btn" aria-label="Play episode">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="pc-progress">
+              <div class="pc-progress-bar">
+                <div class="pc-progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="pc-progress-time">
+                <span class="pc-current-time">0:00</span>
+                <span class="pc-duration-time">{featuredEpisode.duration}</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-player-topics">
+            {featuredEpisode.topics.map((topic) => (
+              <span class="pc-topic-tag">#{topic}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const audio = document.getElementById('pc-hero-audio') as HTMLAudioElement | null;
+  const playBtn = document.querySelector('.pc-hero .pc-play-btn');
+  const progressFill = document.querySelector('.pc-hero .pc-progress-fill');
+  const progressBar = document.querySelector('.pc-hero .pc-progress-bar');
+  const currentTimeEl = document.querySelector('.pc-hero .pc-current-time');
+  const durationEl = document.querySelector('.pc-hero .pc-duration-time');
+
+  function formatTime(s: number) {
+    if (!s || isNaN(s)) return '0:00';
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    const sec = Math.floor(s % 60);
+    if (h > 0) return h + ':' + m.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
+    return m + ':' + sec.toString().padStart(2, '0');
+  }
+
+  playBtn?.addEventListener('click', () => {
+    if (!audio) return;
+    if (audio.paused) audio.play();
+    else audio.pause();
+  });
+
+  audio?.addEventListener('play', () => {
+    playBtn?.classList.add('playing');
+    const icon = playBtn?.querySelector('svg path');
+    if (icon) icon.setAttribute('d', 'M6 4h4v16H6zM14 4h4v16h-4z');
+  });
+
+  audio?.addEventListener('pause', () => {
+    playBtn?.classList.remove('playing');
+    const icon = playBtn?.querySelector('svg path');
+    if (icon) icon.setAttribute('d', 'M8 5v14l11-7z');
+  });
+
+  audio?.addEventListener('loadedmetadata', () => {
+    if (durationEl) durationEl.textContent = formatTime(audio.duration);
+  });
+
+  audio?.addEventListener('timeupdate', () => {
+    if (audio.duration) {
+      const pct = (audio.currentTime / audio.duration) * 100;
+      if (progressFill) (progressFill as HTMLElement).style.width = pct + '%';
+      if (currentTimeEl) currentTimeEl.textContent = formatTime(audio.currentTime);
+    }
+  });
+
+  audio?.addEventListener('ended', () => {
+    playBtn?.classList.remove('playing');
+    const icon = playBtn?.querySelector('svg path');
+    if (icon) icon.setAttribute('d', 'M8 5v14l11-7z');
+  });
+
+  progressBar?.addEventListener('click', (e) => {
+    if (!audio || !audio.duration) return;
+    const rect = (progressBar as HTMLElement).getBoundingClientRect();
+    const pct = (e.clientX - rect.left) / rect.width;
+    audio.currentTime = pct * audio.duration;
+  });
+</script>

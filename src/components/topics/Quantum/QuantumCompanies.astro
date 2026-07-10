@@ -1,0 +1,24 @@
+---
+import { quantumContent as c } from '../../../data/topics/Quantum/quantum-content';
+---
+<section class="qm-section">
+  <div class="qm-container">
+    <div class="qm-section-head">
+      <span class="qm-eyebrow">Industry Leaders</span>
+      <h2 class="qm-section-title">Companies Driving the Quantum Revolution</h2>
+      <p class="qm-section-sub">From IBM's 100,000-qubit roadmap to Google's error correction breakthrough and IonQ's first practical quantum advantage — the players reshaping computation.</p>
+    </div>
+    <div class="qm-companies-grid">
+      {c.companies.map((company) => (
+        <div class="qm-company-card">
+          <div class="qm-company-header">
+            <div class="qm-company-icon" style={`background: linear-gradient(135deg, ${company.color}20, ${company.color}40)`}>⚛</div>
+            <span class="qm-company-name">{company.name}</span>
+          </div>
+          <p class="qm-company-desc">{company.desc}</p>
+          <span class="qm-company-metric">{company.metric}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

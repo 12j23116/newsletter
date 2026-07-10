@@ -1,0 +1,17 @@
+---
+import { episodetopics } from '../../data/podcast/podcast-content';
+---
+
+<div class="pc-filter-bar" id="pc-filter-bar">
+  <div class="pc-filter-scroll">
+    {episodetopics.map((cat, i) => (
+      <button
+        class={`pc-filter-pill ${i === 0 ? 'active' : ''}`}
+        data-topic={cat.name}
+        style={`--pill-color:${cat.color}`}
+      >
+        {cat.name}
+      </button>
+    ))}
+  </div>
+</div>

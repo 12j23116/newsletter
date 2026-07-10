@@ -1,0 +1,81 @@
+---
+/**
+ * RecommendationsComparisons — Comparison tables for decision-making
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const comparisons = [
+  {
+    title: 'AI Coding Assistants Compared',
+    topic: 'AI',
+    color: '#3b82f6',
+    rows: [
+      { tool: 'GitHub Copilot', best: 'IDE integration', pricing: '$10/mo', verdict: 'Best for daily coding' },
+      { tool: 'Claude (Anthropic)', best: 'Long-context analysis', pricing: '$20/mo', verdict: 'Best for code review' },
+      { tool: 'GPT-4o (OpenAI)', best: 'General versatility', pricing: '$20/mo', verdict: 'Best all-rounder' },
+      { tool: 'Cursor IDE', best: 'AI-native editor', pricing: '$20/mo', verdict: 'Best for AI-first workflow' },
+    ],
+  },
+  {
+    title: 'Quantum Computing Platforms Compared',
+    topic: 'Quantum',
+    color: '#a78bfa',
+    rows: [
+      { tool: 'IBM Quantum', best: 'Real hardware access', pricing: 'Free tier', verdict: 'Best for research' },
+      { tool: 'Google Quantum AI', best: 'Simulation speed', pricing: 'Free', verdict: 'Best for learning' },
+      { tool: 'AWS Braket', best: 'Cloud integration', pricing: 'Pay-per-use', verdict: 'Best for enterprise' },
+      { tool: 'Azure Quantum', best: 'Hybrid computing', pricing: 'Pay-per-use', verdict: 'Best for .NET stack' },
+    ],
+  },
+  {
+    title: 'Battery Technologies Compared',
+    topic: 'Energy Storage',
+    color: '#f97316',
+    rows: [
+      { tool: 'Lithium-ion (NMC)', best: 'Energy density', pricing: '$100/kWh', verdict: 'Best for EVs' },
+      { tool: 'LFP', best: 'Safety & cycle life', pricing: '$80/kWh', verdict: 'Best for grid storage' },
+      { tool: 'Solid-state', best: 'Theoretical density', pricing: 'Pre-commercial', verdict: 'Watch this space' },
+      { tool: 'Sodium-ion', best: 'Cost & abundance', pricing: '$70/kWh est.', verdict: 'Best for budget storage' },
+    ],
+  },
+];
+---
+
+<section class="rec-comparisons-section">
+  <div class="rec-container">
+    <div class="rec-section-head">
+      <span class="rec-eyebrow">Side-by-Side</span>
+      <h2 class="rec-section-title">Expert Comparison Guides</h2>
+      <p class="rec-section-sub">
+        When choosing between tools or technologies, these comparison tables help you decide
+        based on what matters most — use case, budget, and maturity.
+      </p>
+    </div>
+
+    <div class="rec-comparisons-grid">
+      {comparisons.map((comp) => (
+        <div class="rec-comparison-card" style={`--comp-color:${comp.color}`}>
+          <div class="rec-comparison-header">
+            <span class="rec-comparison-cat">{comp.topic}</span>
+            <h3 class="rec-comparison-title">{comp.title}</h3>
+          </div>
+          <div class="rec-comparison-table">
+            <div class="rec-comparison-row rec-comparison-row-head">
+              <span>Tool</span>
+              <span>Best For</span>
+              <span>Pricing</span>
+              <span>Verdict</span>
+            </div>
+            {comp.rows.map((row) => (
+              <div class="rec-comparison-row">
+                <span class="rec-comparison-tool">{row.tool}</span>
+                <span class="rec-comparison-best">{row.best}</span>
+                <span class="rec-comparison-pricing">{row.pricing}</span>
+                <span class="rec-comparison-verdict">{row.verdict}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

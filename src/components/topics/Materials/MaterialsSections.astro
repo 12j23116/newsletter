@@ -1,0 +1,36 @@
+---
+import { materialsContent as c } from '../../../data/topics/Materials/materials-content';
+---
+<section class="mat-section mat-section-alt">
+  <div class="container">
+    <div class="mat-section-head mat-section-head-center">
+      <span class="mat-eyebrow">Market Overview</span>
+      <h2 class="mat-section-title">Advanced Materials Breakthroughs</h2>
+      <p class="mat-section-subtitle">From AI-driven discovery to 2D materials and sustainable polymers — the technologies reshaping semiconductors, aerospace, energy, and manufacturing.</p>
+    </div>
+    <div class="mat-bento-grid">
+      {c.sections.map((section) => (
+        <div class="mat-bento-card">
+          <div class="mat-bento-img-wrap">
+            <img src={section.image} alt={section.title} class="mat-bento-img" loading="lazy" />
+            <div class="mat-bento-img-overlay"></div>
+            <span class="mat-bento-img-badge">{section.eyebrow}</span>
+          </div>
+          <div class="mat-bento-body">
+            <h3 class="mat-bento-title">{section.title}</h3>
+            <p class="mat-bento-subtitle">{section.subtitle}</p>
+            <div class="mat-points-grid">
+              {section.points.map((p) => (
+                <div class="mat-point-card">
+                  <div class="mat-point-value">{p.value}</div>
+                  <div class="mat-point-label">{p.label}</div>
+                  <div class="mat-point-desc">{p.desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

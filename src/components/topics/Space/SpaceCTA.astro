@@ -1,0 +1,53 @@
+---
+import { spaceContent as c } from '../../../data/topics/Space/space-content';
+
+const articleImages = [
+  '/images/space-04-rocket-launch.webp',
+  '/images/space-05-satellite-constellation.webp',
+  '/images/space-08-space-telescope.webp',
+  '/images/space-06-lunar-construction.webp',
+  '/images/space-07-asteroid-mining.webp',
+];
+---
+<section class="sp-section">
+  <div class="container">
+    <div class="sp-section-head sp-section-head-center">
+      <span class="sp-eyebrow">Latest Research</span>
+      <h2 class="sp-section-title">Space Exploration Articles & Reports</h2>
+      <p class="sp-section-subtitle">In-depth analysis of the technologies, companies, and trends reshaping the space industry.</p>
+    </div>
+    <div class="sp-articles-grid">
+      {c.articles.map((a, i) => (
+        <a href={a.href} class="sp-article-card">
+          <div class="sp-article-img-wrap">
+            <img src={articleImages[i % articleImages.length]} alt={a.title} class="sp-article-img" loading="lazy" />
+            <div class="sp-article-img-overlay"></div>
+          </div>
+          <div class="sp-article-body">
+            <h3 class="sp-article-title">{a.title}</h3>
+            <p class="sp-article-excerpt">{a.excerpt}</p>
+            <span class="sp-article-date">{a.date}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="sp-cta">
+  <div class="sp-orb sp-cta-orb-1"></div>
+  <div class="sp-orb sp-cta-orb-2"></div>
+  <div class="container sp-cta-inner">
+    <h2 class="sp-cta-title">Stay Ahead of the Space Economy</h2>
+    <p class="sp-cta-desc">Get weekly analysis on launch vehicles, satellite technology, lunar mining, and the multi-planetary future — delivered to your inbox.</p>
+    <a href="/newsletter" class="sp-cta-btn">
+      Subscribe to TechNanoAI
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+    </a>
+    <div class="sp-cta-pills">
+      <span class="sp-cta-pill">✦ Weekly insights</span>
+      <span class="sp-cta-pill">✦ 50K+ readers</span>
+      <span class="sp-cta-pill">✦ No spam</span>
+    </div>
+  </div>
+</section>

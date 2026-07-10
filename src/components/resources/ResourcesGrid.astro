@@ -1,0 +1,40 @@
+---
+import { allResources } from '../../data/resources/resources-index';
+---
+
+<section class="res-section" id="res-grid-section">
+  <div class="res-grid-head res-reveal">
+    <h2>All Resources</h2>
+    <span class="res-grid-count" id="res-grid-count">Showing {allResources.length} resources</span>
+  </div>
+  <div class="res-grid" id="res-grid">
+    {allResources.map((item) => (
+      <a
+        href={`/resources/${item.slug}`}
+        class="res-card res-reveal"
+        data-type={item.type}
+        data-title={item.title.toLowerCase()}
+        data-desc={item.description.toLowerCase()}
+        data-cat={item.topic.toLowerCase()}
+        style={`--card-color:${item.topicColor}`}
+      >
+        <div class="res-card-top">
+          <span class="res-card-icon">{item.icon}</span>
+          <span class="res-card-type">{item.type}</span>
+        </div>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+        <div class="res-card-foot">
+          <span class="res-card-cat">{item.topic}</span>
+          {item.readTime ? <span>{item.readTime} read</span> : <span>{item.date}</span>}
+        </div>
+      </a>
+    ))}
+  </div>
+  <div class="res-no-results" id="res-no-results">
+    <div class="res-no-results-icon">🔍</div>
+    <h3>No resources found</h3>
+    <p>Try a different search term or filter.</p>
+    <button class="res-btn res-btn-primary" id="res-clear-filters">Clear Filters</button>
+  </div>
+</section>

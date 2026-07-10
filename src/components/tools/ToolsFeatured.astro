@@ -1,0 +1,37 @@
+---
+import { featuredTools } from '../../data/tools/tools-content';
+---
+
+<section class="tl-featured" id="tl-featured">
+  <div class="tl-section-head">
+    <span class="tl-section-label">Most Used</span>
+    <h2 class="tl-section-title">Featured <span class="tl-grad">Tools</span></h2>
+    <p class="tl-section-desc">The most widely used tools across emerging tech — trusted by millions of developers, researchers, and engineers worldwide.</p>
+  </div>
+  <div class="tl-featured-grid">
+    {featuredTools.map((tool) => (
+      <a href={tool.url} target="_blank" rel="noopener noreferrer" class="tl-featured-card" style={`--card-color:${tool.topicColor}`}>
+        <div class="tl-featured-card-glow"></div>
+        <div class="tl-featured-card-top">
+          <span class="tl-featured-card-icon">{tool.icon}</span>
+          <span class="tl-status-badge" data-status={tool.status}>{tool.status}</span>
+        </div>
+        <h3 class="tl-featured-card-name">{tool.name}</h3>
+        <p class="tl-featured-card-desc">{tool.description}</p>
+        <div class="tl-featured-card-meta">
+          <div class="tl-featured-card-rating">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span>{tool.rating}</span>
+          </div>
+          <span class="tl-featured-card-users">{tool.users}</span>
+        </div>
+        <div class="tl-featured-card-foot">
+          <span class="tl-featured-card-cat" style={`--cat-color:${tool.topicColor}`}>{tool.topic}</span>
+          <span class="tl-featured-card-type">{tool.type}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

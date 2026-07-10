@@ -1,0 +1,108 @@
+---
+/**
+ * CommunityDiscussions — Active discussions section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const discussions = [
+  {
+    topic: 'AI',
+    topicColor: '#3b82f6',
+    title: 'Are LLMs hitting a capability wall?',
+    author: 'QuantumExplorer',
+    replies: 142,
+    views: '4.2K',
+    excerpt: 'GPT-5 and Claude 4 show diminishing returns on reasoning benchmarks. Are we approaching the limits of the transformer architecture, or is this a data problem?',
+    tag: 'Hot',
+    tagColor: '#ef4444',
+  },
+  {
+    topic: 'Fusion',
+    topicColor: '#f59e0b',
+    title: 'Helion 2028 deadline: realistic or hype?',
+    author: 'FusionFanatic',
+    replies: 89,
+    views: '2.8K',
+    excerpt: 'Helion promised 50 MW to Microsoft by 2028. With their FRC approach and pulsed magnetic fields, can they actually deliver or is this another fusion pipe dream?',
+    tag: 'Debate',
+    tagColor: '#8b5cf6',
+  },
+  {
+    topic: 'Cybersecurity',
+    topicColor: '#ef4444',
+    title: 'Post-quantum crypto migration: where to start?',
+    author: 'CyberSentinel',
+    replies: 67,
+    views: '3.1K',
+    excerpt: 'NIST finalized PQC standards in 2024. With a 10-15 year migration window, what should organizations prioritize now? Kyber or Dilithium first?',
+    tag: 'Practical',
+    tagColor: '#10b981',
+  },
+  {
+    topic: 'Biotech',
+    topicColor: '#10b981',
+    title: 'CRISPR off-target effects: solved or still a risk?',
+    author: 'BioHacker2025',
+    replies: 54,
+    views: '2.5K',
+    excerpt: 'Prime editing and base editing claim higher fidelity, but recent studies show subtle off-target changes. How concerned should we be for clinical applications?',
+    tag: 'Research',
+    tagColor: '#06b6d4',
+  },
+  {
+    topic: 'Space',
+    topicColor: '#06b6d4',
+    title: 'Starship V3: can it really hit $10/kg to LEO?',
+    author: 'SpacePioneer',
+    replies: 112,
+    views: '5.6K',
+    excerpt: 'SpaceX claims Starship V3 will reduce launch costs to $10/kg. With full reusability and 100+ ton payload, is this achievable by 2027 or is it aspirational?',
+    tag: 'Hot',
+    tagColor: '#ef4444',
+  },
+  {
+    topic: 'Quantum',
+    topicColor: '#a78bfa',
+    title: 'IBM 100K qubit roadmap: credible or marketing?',
+    author: 'NeuroNerd',
+    replies: 78,
+    views: '3.4K',
+    excerpt: 'IBM announced a roadmap to 100,000 qubits by 2033. Given current error rates and the need for error correction, is this timeline realistic?',
+    tag: 'Analysis',
+    tagColor: '#f59e0b',
+  },
+];
+
+---
+
+<section class="community-discussions-section">
+  <div class="community-container">
+    <div class="community-section-head">
+      <span class="community-eyebrow">Active Threads</span>
+      <h2 class="community-section-title">What People Are Talking About</h2>
+      <p class="community-section-sub">
+        Real discussions from our community — from technical deep dives to heated debates.
+        Join the conversation or start your own thread.
+      </p>
+    </div>
+
+    <div class="community-discussions-list">
+      {discussions.map((d) => (
+        <a href="#" class="community-discussion-card" style={`--card-color:${d.topicColor}`}>
+          <div class="community-discussion-header">
+            <span class="community-discussion-topic" style={`background:${d.topicColor}22;color:${d.topicColor}`}>{d.topic}</span>
+            <span class="community-discussion-tag" style={`background:${d.tagColor}22;color:${d.tagColor}`}>{d.tag}</span>
+          </div>
+          <h3 class="community-discussion-title">{d.title}</h3>
+          <p class="community-discussion-excerpt">{d.excerpt}</p>
+          <div class="community-discussion-footer">
+            <span class="community-discussion-author">by {d.author}</span>
+            <span class="community-discussion-stats">
+              <span class="community-discussion-replies">{d.replies} replies</span>
+              <span class="community-discussion-views">{d.views} views</span>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

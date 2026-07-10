@@ -1,0 +1,54 @@
+---
+import { allTrending } from '../../data/trending/trending-content';
+---
+
+<section class="tr-main" id="tr-all">
+  <div class="tr-main-layout">
+    <div class="tr-main-content tr-main-content--full">
+      <div class="tr-main-head">
+        <h2 class="tr-section-title">All <span class="tr-grad">Trending</span></h2>
+        <span class="tr-main-count" id="tr-main-count">Showing {allTrending.length} articles</span>
+      </div>
+      <div class="tr-grid" id="tr-grid">
+        {allTrending.map((article) => (
+          <article
+            class="tr-card tr-card-clickable"
+            data-topic={article.topic}
+            data-slug={article.slug}
+            style={`--card-color:${article.topicColor}`}
+          >
+            <div class="tr-card-cover">
+              <img src={article.img} alt={article.title} class="tr-card-img" loading="lazy" />
+              <div class="tr-card-overlay"></div>
+              <span class="tr-card-rank">{article.rank}</span>
+              <span class="tr-card-tag" style={`--tag-color:${article.topicColor}`}>{article.topic}</span>
+            </div>
+            <div class="tr-card-body">
+              <h3 class="tr-card-title">{article.title}</h3>
+              <div class="tr-card-tags">
+                {article.tags.slice(0, 3).map((tag) => (
+                  <span class="tr-card-tag-pill">#{tag.replace(/\s+/g, '')}</span>
+                ))}
+              </div>
+              <div class="tr-card-meta">
+                <div class="tr-card-author">
+                  <div class="tr-card-avatar" style={`background:${article.gradient}`}>{article.author}</div>
+                  <span>{article.authorName}</span>
+                </div>
+                <span class="tr-card-dot">·</span>
+                <span>{article.readTime}</span>
+                <span class="tr-card-dot">·</span>
+                <span>{article.views} reads</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="tr-no-results" id="tr-no-results">
+        <div class="tr-no-results-icon">📰</div>
+        <h3>No articles found</h3>
+        <p>Try a different topic filter.</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+import { quantumContent as c } from '../../../data/topics/Quantum/quantum-content';
+---
+<section class="qm-section">
+  <div class="qm-container">
+    <div class="qm-section-head">
+      <span class="qm-eyebrow">Emerging Trends</span>
+      <h2 class="qm-section-title">Quantum Computing Trends to Watch</h2>
+      <p class="qm-section-sub">From useful quantum computing to room-temperature systems and the quantum AI convergence — these trends define the next decade of quantum innovation.</p>
+    </div>
+    <div class="qm-trends-grid">
+      {c.trends.map((t) => (
+        <div class="qm-trend-card" style={`--qm-grad: linear-gradient(135deg, ${t.color} 0%, ${t.color} 100%)`}>
+          <span class="qm-trend-tag" style={`background: ${t.color}20; color: ${t.color}`}>{t.tag}</span>
+          <h3 class="qm-trend-title">{t.title}</h3>
+          <p class="qm-trend-desc">{t.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

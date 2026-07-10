@@ -1,0 +1,290 @@
+/* ============================================
+   BIOTECH topic STYLES — Premium Redesign
+   Unique layout: DNA-helix hero, organic shapes,
+   biology-styled cards, cellular patterns.
+   ============================================ */
+
+/* ── Biotech Page Tokens ─────────────────────────────── */
+.bt-page {
+  --bt-green: #10b981;
+  --bt-emerald: #059669;
+  --bt-teal: #047857;
+  --bt-lime: #84cc16;
+  --bt-grad: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  --bt-grad-soft: linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(5,150,105,0.12) 50%, rgba(4,120,87,0.12) 100%);
+  --bt-bg: #0a0a0f;
+  --bt-bg-alt: #0d0d18;
+  --bt-surface: #11111e;
+  --bt-surface-2: #161628;
+  --bt-surface-hover: #1a1a30;
+  --bt-border: rgba(255,255,255,0.08);
+  --bt-border-strong: rgba(255,255,255,0.14);
+  --bt-text: #e2e8f0;
+  --bt-text-muted: #94a3b8;
+  --bt-text-dim: #64748b;
+  --bt-radius: 12px;
+  --bt-radius-lg: 20px;
+  --bt-radius-xl: 28px;
+  --bt-transition: 250ms ease;
+  --bt-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* ── Section Base ────────────────────────────────────────── */
+.bt-section { padding: 5rem 0; position: relative; overflow: hidden; }
+.bt-section-alt { background: var(--bt-bg-alt); }
+.bt-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; position: relative; z-index: 1; }
+.bt-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--bt-green); margin-bottom: 0.75rem; }
+.bt-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--bt-green); }
+.bt-section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+.bt-section-sub { font-size: 1.0625rem; color: var(--bt-text-muted); max-width: 640px; line-height: 1.7; margin-bottom: 2.5rem; }
+.bt-grad-text { background: var(--bt-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── Scroll Reveal ───────────────────────────────────────── */
+.bt-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.bt-reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ── Grid Overlay ────────────────────────────────────────── */
+.bt-grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); z-index: 0; pointer-events: none; }
+
+/* ── Orb ─────────────────────────────────────────────────── */
+.bt-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; z-index: 0; animation: bt-orb-float 20s ease-in-out infinite; pointer-events: none; }
+@keyframes bt-orb-float { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(30px,-30px) scale(1.1);} 66%{transform:translate(-20px,20px) scale(.95);} }
+
+/* ── DNA Helix Pattern (Biotech unique element) ─────────── */
+.bt-dna-pattern { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0 Q 20 20, 40 40 T 40 80' fill='none' stroke='rgba(16,185,129,0.06)' stroke-width='2'/%3E%3Cpath d='M40 0 Q 60 20, 40 40 T 40 80' fill='none' stroke='rgba(5,150,105,0.06)' stroke-width='2'/%3E%3Cline x1='40' y1='10' x2='40' y2='30' stroke='rgba(16,185,129,0.08)' stroke-width='1'/%3E%3Cline x1='40' y1='50' x2='40' y2='70' stroke='rgba(16,185,129,0.08)' stroke-width='1'/%3E%3C/svg%3E"); background-size: 80px 80px; z-index: 0; pointer-events: none; }
+
+/* ════════════════════════════════════════════════════════════
+   1. HERO — DNA helix themed (unique)
+   ════════════════════════════════════════════════════════════ */
+.bt-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 80px; }
+.bt-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.bt-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.15; }
+.bt-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 0%, var(--bt-bg) 80%); }
+.bt-dna-pattern { position: absolute; inset: 0; opacity: 0.6; }
+.bt-hero-orb-1 { width: 400px; height: 400px; background: var(--bt-green); top: 10%; right: -100px; }
+.bt-hero-orb-2 { width: 350px; height: 350px; background: var(--bt-emerald); bottom: 20%; left: -80px; animation-delay: -5s; }
+.bt-hero-orb-3 { width: 300px; height: 300px; background: var(--bt-teal); top: 50%; right: 30%; animation-delay: -10s; }
+
+.bt-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.bt-hero-left { max-width: 540px; }
+.bt-hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--bt-border); font-size: 0.8125rem; color: var(--bt-text-muted); margin-bottom: 1.5rem; }
+.bt-hero-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bt-green); box-shadow: 0 0 8px var(--bt-green); animation: bt-dot-blink 1.5s ease-in-out infinite; }
+@keyframes bt-dot-blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.bt-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #fff; margin-bottom: 1.25rem; }
+.bt-hero-tagline { font-size: 1.125rem; color: var(--bt-green); font-weight: 600; margin-bottom: 0.75rem; }
+.bt-hero-desc { font-size: 1rem; color: var(--bt-text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 2rem; }
+.bt-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.bt-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; font-size: 0.9375rem; transition: all var(--bt-transition); white-space: nowrap; cursor: pointer; }
+.bt-btn-primary { background: var(--bt-grad); color: #fff; box-shadow: 0 4px 20px rgba(16,185,129,0.3); }
+.bt-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(16,185,129,0.45); }
+.bt-btn-secondary { background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: var(--bt-text); border: 1px solid var(--bt-border); }
+.bt-btn-secondary:hover { background: var(--bt-surface-hover); border-color: var(--bt-border-strong); transform: translateY(-2px); }
+
+/* Hero stats — 2x2 grid with organic-style borders */
+.bt-hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+.bt-hero-stat { padding: 1rem; border-radius: var(--bt-radius); background: rgba(17,17,30,0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--bt-border); border-radius: 20px 4px 20px 4px; transition: transform var(--bt-transition), border-color var(--bt-transition); }
+.bt-hero-stat:hover { transform: translateY(-4px); border-color: var(--bt-border-strong); }
+.bt-hero-stat-value { font-size: 1.5rem; font-weight: 800; background: var(--bt-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: block; margin-bottom: 0.125rem; }
+.bt-hero-stat-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--bt-text-dim); }
+
+/* Hero right — DNA visualization */
+.bt-hero-right { position: relative; height: 400px; display: flex; align-items: center; justify-content: center; }
+.bt-hero-img-wrap { border-radius: var(--bt-radius-xl); overflow: hidden; border: 1px solid var(--bt-border); box-shadow: var(--bt-shadow); position: relative; }
+.bt-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.bt-hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(0,0,0,0.3)); border-radius: var(--bt-radius-xl); pointer-events: none; }
+
+/* ════════════════════════════════════════════════════════════
+   2. MARQUEE
+   ════════════════════════════════════════════════════════════ */
+.bt-marquee { overflow: hidden; padding: 0.75rem 0; border-block: 1px solid var(--bt-border); background: var(--bt-bg-alt); }
+.bt-marquee-track { display: flex; gap: 0; animation: bt-marquee 30s linear infinite; width: max-content; }
+@keyframes bt-marquee { to { transform: translateX(-33.333%); } }
+.bt-marquee-group { display: flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem; }
+.bt-marquee-group span { font-size: 0.875rem; color: var(--bt-text-dim); white-space: nowrap; font-weight: 500; }
+.bt-marquee-sep { color: var(--bt-green) !important; }
+
+/* ════════════════════════════════════════════════════════════
+   3. SECTION CARDS — Organic biology-style cards
+   ════════════════════════════════════════════════════════════ */
+.bt-section-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.bt-section-card { border-radius: var(--bt-radius-lg); background: var(--bt-surface); border: 1px solid var(--bt-border); overflow: hidden; transition: transform var(--bt-transition), border-color var(--bt-transition); }
+.bt-section-card:hover { transform: translateY(-6px); border-color: var(--bt-green); box-shadow: var(--bt-shadow), 0 0 30px rgba(16,185,129,0.15); }
+.bt-section-img-wrap { position: relative; height: 160px; overflow: hidden; }
+.bt-section-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.bt-section-card:hover .bt-section-img { transform: scale(1.05); }
+.bt-section-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(0,0,0,0.4)); }
+.bt-section-header { padding: 1.25rem; background: var(--bt-surface-2); border-bottom: 1px solid var(--bt-border); }
+.bt-section-eyebrow { font-size: 0.6875rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; color: var(--bt-green); margin-bottom: 0.5rem; }
+.bt-section-title { font-size: 1.125rem; font-weight: 700; color: #fff; }
+.bt-section-body { padding: 1.25rem; }
+.bt-section-desc { font-size: 0.8125rem; color: var(--bt-text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.bt-section-points { display: flex; flex-direction: column; gap: 0.5rem; }
+.bt-section-point { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--bt-text-muted); }
+.bt-section-point::before { content: '🧬'; font-size: 0.625rem; }
+
+/* ════════════════════════════════════════════════════════════
+   4. CRISPR — Technology cards
+   ════════════════════════════════════════════════════════════ */
+.bt-crispr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.bt-crispr-card { padding: 0; border-radius: var(--bt-radius-lg); background: var(--bt-surface); border: 1px solid var(--bt-border); overflow: hidden; transition: transform var(--bt-transition), border-color var(--bt-transition); }
+.bt-crispr-card:hover { transform: translateY(-6px); border-color: var(--bt-green); }
+.bt-crispr-img-wrap { position: relative; height: 140px; overflow: hidden; }
+.bt-crispr-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.bt-crispr-card:hover .bt-crispr-img { transform: scale(1.05); }
+.bt-crispr-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(0,0,0,0.4)); }
+.bt-crispr-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; padding: 1.25rem 1.25rem 0; }
+.bt-crispr-stage { font-size: 0.75rem; color: var(--bt-green); margin-bottom: 0.5rem; padding: 0 1.25rem; }
+.bt-crispr-desc { font-size: 0.8125rem; color: var(--bt-text-muted); line-height: 1.6; margin-bottom: 0.75rem; padding: 0 1.25rem; }
+.bt-crispr-metric { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.625rem; border-radius: 999px; background: rgba(16,185,129,0.12); color: var(--bt-green); display: inline-block; }
+
+/* ════════════════════════════════════════════════════════════
+   5. AI DRUG DISCOVERY — Pipeline visualization
+   ════════════════════════════════════════════════════════════ */
+.bt-pipeline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.bt-pipeline-card { padding: 1.5rem; border-radius: var(--bt-radius-lg); background: var(--bt-surface); border: 1px solid var(--bt-border); text-align: center; transition: border-color var(--bt-transition); }
+.bt-pipeline-card:hover { border-color: var(--bt-border-strong); }
+.bt-pipeline-phase { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; font-weight: 700; color: var(--bt-green); margin-bottom: 0.5rem; }
+.bt-pipeline-count { font-size: 2rem; font-weight: 800; background: var(--bt-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.bt-pipeline-label { font-size: 0.75rem; color: var(--bt-text-muted); }
+
+/* ════════════════════════════════════════════════════════════
+   6. COMPANIES — Company cards
+   ════════════════════════════════════════════════════════════ */
+.bt-companies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.bt-company-card { padding: 0; border-radius: var(--bt-radius-lg); background: var(--bt-surface); border: 1px solid var(--bt-border); overflow: hidden; transition: transform var(--bt-transition), border-color var(--bt-transition); }
+.bt-company-card:hover { transform: translateY(-6px); border-color: var(--bt-green); }
+.bt-company-img-wrap { position: relative; height: 140px; overflow: hidden; }
+.bt-company-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.bt-company-card:hover .bt-company-img { transform: scale(1.05); }
+.bt-company-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(0,0,0,0.4)); }
+.bt-company-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; padding: 1.25rem 1.25rem 0; }
+.bt-company-focus { font-size: 0.75rem; color: var(--bt-green); margin-bottom: 0.5rem; padding: 0 1.25rem; }
+.bt-company-desc { font-size: 0.8125rem; color: var(--bt-text-muted); line-height: 1.6; margin-bottom: 0.75rem; padding: 0 1.25rem; }
+.bt-company-metric { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.625rem; border-radius: 999px; background: rgba(16,185,129,0.12); color: var(--bt-green); display: inline-block; }
+
+/* ════════════════════════════════════════════════════════════
+   7. FUTURE — Cellular timeline
+   ════════════════════════════════════════════════════════════ */
+.bt-future-timeline { position: relative; display: flex; flex-direction: column; gap: 1rem; }
+.bt-future-timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--bt-grad); opacity: 0.3; }
+.bt-future-item { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; align-items: start; }
+.bt-future-year-marker { width: 40px; height: 40px; border-radius: 50%; background: var(--bt-grad); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; color: #fff; flex-shrink: 0; position: relative; z-index: 1; }
+.bt-future-content { padding: 1rem; border-radius: var(--bt-radius); background: var(--bt-surface); border: 1px solid var(--bt-border); transition: border-color var(--bt-transition); }
+.bt-future-content:hover { border-color: var(--bt-border-strong); }
+.bt-future-year { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; font-weight: 700; color: var(--bt-green); margin-bottom: 0.25rem; }
+.bt-future-prediction { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.375rem; }
+.bt-future-detail { font-size: 0.8125rem; color: var(--bt-text-muted); line-height: 1.6; }
+
+/* ════════════════════════════════════════════════════════════
+   8. FAQ
+   ════════════════════════════════════════════════════════════ */
+.bt-faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.bt-faq-item { border-radius: var(--bt-radius); background: var(--bt-surface); border: 1px solid var(--bt-border); overflow: hidden; transition: border-color var(--bt-transition); }
+.bt-faq-item:hover { border-color: var(--bt-border-strong); }
+.bt-faq-item summary { padding: 1rem 1.25rem; font-size: 0.9375rem; font-weight: 600; color: #fff; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: background var(--bt-transition); }
+.bt-faq-item summary::-webkit-details-marker { display: none; }
+.bt-faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--bt-green); flex-shrink: 0; transition: transform var(--bt-transition); }
+.bt-faq-item[open] summary::after { transform: rotate(45deg); }
+.bt-faq-item summary:hover { background: rgba(16,185,129,0.04); }
+.bt-faq-answer { padding: 0 1.25rem 1.25rem; font-size: 0.875rem; color: var(--bt-text-muted); line-height: 1.7; }
+
+/* ════════════════════════════════════════════════════════════
+   9. CTA
+   ════════════════════════════════════════════════════════════ */
+.bt-cta { position: relative; text-align: center; padding: 5rem 0; overflow: hidden; }
+.bt-cta-bg { position: absolute; inset: 0; z-index: 0; }
+.bt-cta-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.12; }
+.bt-cta-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(4,120,87,0.15)); }
+.bt-cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
+.bt-cta h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+.bt-cta p { font-size: 0.9375rem; color: var(--bt-text-muted); margin-bottom: 1.5rem; }
+.bt-cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; border-radius: 999px; background: var(--bt-grad); color: #fff; font-weight: 600; font-size: 0.9375rem; transition: transform var(--bt-transition), box-shadow var(--bt-transition); box-shadow: 0 4px 20px rgba(16,185,129,0.3); }
+.bt-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(16,185,129,0.45); }
+.bt-cta-pills { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
+.bt-cta-pill { display: flex; align-items: center; gap: 0.375rem; padding: 0.5rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--bt-border); font-size: 0.8125rem; color: var(--bt-text-muted); }
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .bt-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .bt-hero-right { height: 320px; }
+  .bt-section-grid { grid-template-columns: 1fr; }
+  .bt-crispr-grid { grid-template-columns: 1fr; }
+  .bt-pipeline-grid { grid-template-columns: 1fr; }
+  .bt-companies-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .bt-section { padding: 3.5rem 0; }
+  .bt-companies-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .bt-section { padding: 2.75rem 0; }
+  .bt-container { padding: 0 1rem; }
+  .bt-hero { min-height: auto; padding: 5rem 0 2.5rem; }
+  .bt-hero h1 { font-size: 1.75rem; }
+  .bt-hero-tagline { font-size: 0.9375rem; }
+  .bt-hero-desc { font-size: 0.875rem; }
+  .bt-hero-ctas { flex-direction: column; width: 100%; }
+  .bt-hero-ctas .bt-btn { width: 100%; }
+  .bt-hero-stats { grid-template-columns: 1fr 1fr; }
+  .bt-hero-stat { padding: 0.875rem 0.625rem; }
+  .bt-hero-stat-value { font-size: 1.25rem; }
+  .bt-hero-stat-label { font-size: 0.625rem; }
+  .bt-section-title { font-size: 1.5rem; }
+  .bt-section-sub { font-size: 0.875rem; margin-bottom: 1.5rem; }
+  .bt-cta { padding: 3rem 0; }
+  .bt-cta h3 { font-size: 1.375rem; }
+  .bt-cta p { font-size: 0.8125rem; }
+}
+
+@media (max-width: 358px) {
+  .bt-section { padding: 2.25rem 0; }
+  .bt-container { padding: 0 0.75rem; }
+  .bt-hero { padding: 4rem 0 2rem; }
+  .bt-hero h1 { font-size: 1.5rem; line-height: 1.15; }
+  .bt-hero-pill { font-size: 0.625rem; padding: 0.25rem 0.75rem; }
+  .bt-hero-tagline { font-size: 0.8125rem; }
+  .bt-hero-desc { font-size: 0.8125rem; line-height: 1.6; }
+  .bt-hero-ctas { gap: 0.5rem; }
+  .bt-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .bt-hero-stats { gap: 0.5rem; }
+  .bt-hero-stat { padding: 0.625rem 0.5rem; }
+  .bt-hero-stat-value { font-size: 1rem; }
+  .bt-hero-stat-label { font-size: 0.5625rem; }
+  .bt-eyebrow { font-size: 0.5625rem; }
+  .bt-eyebrow::before { width: 16px; }
+  .bt-section-title { font-size: 1.25rem; }
+  .bt-section-sub { font-size: 0.8125rem; margin-bottom: 1.25rem; }
+  .bt-section-header { padding: 1rem; }
+  .bt-section-body { padding: 1rem; }
+  .bt-section-title { font-size: 1rem; }
+  .bt-section-desc { font-size: 0.75rem; }
+  .bt-section-point { font-size: 0.6875rem; }
+  .bt-crispr-card { padding: 0; }
+  .bt-crispr-name { font-size: 0.875rem; padding: 1rem 1rem 0; }
+  .bt-crispr-desc { font-size: 0.75rem; padding: 0 1rem; }
+  .bt-crispr-img-wrap { height: 110px; }
+  .bt-section-img-wrap { height: 120px; }
+  .bt-company-card { padding: 0; }
+  .bt-company-name { font-size: 0.875rem; padding: 1rem 1rem 0; }
+  .bt-company-desc { font-size: 0.75rem; padding: 0 1rem; }
+  .bt-company-img-wrap { height: 110px; }
+  .bt-future-item { grid-template-columns: 32px 1fr; }
+  .bt-future-year-marker { width: 32px; height: 32px; font-size: 0.625rem; }
+  .bt-future-content { padding: 0.75rem; }
+  .bt-future-year { font-size: 0.75rem; }
+  .bt-future-prediction { font-size: 0.875rem; }
+  .bt-future-detail { font-size: 0.6875rem; }
+  .bt-faq-item summary { padding: 0.75rem 1rem; font-size: 0.8125rem; }
+  .bt-faq-answer { padding: 0 1rem 1rem; font-size: 0.75rem; }
+  .bt-cta { padding: 2.5rem 0; }
+  .bt-cta h3 { font-size: 1.125rem; }
+  .bt-cta p { font-size: 0.75rem; }
+  .bt-cta-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .bt-cta-pills { gap: 0.375rem; }
+  .bt-cta-pill { font-size: 0.6875rem; padding: 0.375rem 0.625rem; }
+  .bt-marquee-group span { font-size: 0.6875rem; }
+}

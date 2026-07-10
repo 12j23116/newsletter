@@ -1,0 +1,436 @@
+---
+/**
+ * Materials Database Search — Interactive tool
+ * Search a curated materials database by properties, composition, or application
+ */
+import './interactive-tools.css';
+
+const materials = [
+  { id: 1, name: 'Silicon', formula: 'Si', category: 'Semiconductor', bandgap: 1.12, density: 2.33, crystal: 'Diamond', mP: 1414, applications: ['Electronics', 'Solar', 'MEMS'], enDiff: 0 },
+  { id: 2, name: 'Gallium Arsenide', formula: 'GaAs', category: 'Semiconductor', bandgap: 1.42, density: 5.32, crystal: 'Zincblende', mP: 1238, applications: ['LED', 'Solar', 'RF'], enDiff: 0.4 },
+  { id: 3, name: 'Silicon Carbide', formula: 'SiC', category: 'Semiconductor', bandgap: 3.26, density: 3.21, crystal: 'Hexagonal', mP: 2730, applications: ['Power Electronics', 'EV', 'HEV'], enDiff: 0.7 },
+  { id: 4, name: 'Gallium Nitride', formula: 'GaN', category: 'Semiconductor', bandgap: 3.40, density: 6.15, crystal: 'Wurtzite', mP: 2500, applications: ['LED', 'RF', 'Power'], enDiff: 1.0 },
+  { id: 5, name: 'Copper', formula: 'Cu', category: 'Metal', bandgap: 0, density: 8.96, crystal: 'FCC', mP: 1085, applications: ['Wiring', 'Electronics', 'Heat Sink'], enDiff: 0 },
+  { id: 6, name: 'Aluminum', formula: 'Al', category: 'Metal', bandgap: 0, density: 2.70, crystal: 'FCC', mP: 660, applications: ['Structural', 'Packaging', 'Electronics'], enDiff: 0 },
+  { id: 7, name: 'Titanium', formula: 'Ti', category: 'Metal', bandgap: 0, density: 4.51, crystal: 'HCP', mP: 1668, applications: ['Aerospace', 'Biomedical', 'Chemical'], enDiff: 0 },
+  { id: 8, name: 'Tungsten', formula: 'W', category: 'Metal', bandgap: 0, density: 19.25, crystal: 'BCC', mP: 3422, applications: ['Filament', 'Armor', 'Alloy'], enDiff: 0 },
+  { id: 9, name: 'Iron', formula: 'Fe', category: 'Metal', bandgap: 0, density: 7.87, crystal: 'BCC', mP: 1538, applications: ['Structural', 'Magnetic', 'Alloy'], enDiff: 0 },
+  { id: 10, name: 'Alumina', formula: 'Al2O3', category: 'Ceramic', bandgap: 8.8, density: 3.95, crystal: 'Corundum', mP: 2072, applications: ['Insulator', 'Abrasive', 'Refractory'], enDiff: 1.83 },
+  { id: 11, name: 'Zirconia', formula: 'ZrO2', category: 'Ceramic', bandgap: 5.0, density: 5.68, crystal: 'Monoclinic', mP: 2715, applications: ['Thermal Barrier', 'Dental', 'Fuel Cell'], enDiff: 2.11 },
+  { id: 12, name: 'Silica', formula: 'SiO2', category: 'Ceramic', bandgap: 9.0, density: 2.20, crystal: 'Quartz', mP: 1710, applications: ['Glass', 'Insulator', 'Optics'], enDiff: 1.54 },
+  { id: 13, name: 'Barium Titanate', formula: 'BaTiO3', category: 'Ceramic', bandgap: 3.20, density: 6.02, crystal: 'Perovskite', mP: 1625, applications: ['Capacitor', 'Sensor', 'Actuator'], enDiff: 2.55 },
+  { id: 14, name: 'Lithium Cobalt Oxide', formula: 'LiCoO2', category: 'Battery', bandgap: 2.7, density: 5.10, crystal: 'Layered', mP: 1100, applications: ['Li-ion Battery', 'Cathode'], enDiff: 2.51 },
+  { id: 15, name: 'Lithium Iron Phosphate', formula: 'LiFePO4', category: 'Battery', bandgap: 3.1, density: 3.60, crystal: 'Olivine', mP: 950, applications: ['Li-ion Battery', 'Cathode', 'EV'], enDiff: 2.13 },
+  { id: 16, name: 'Graphite', formula: 'C', category: 'Carbon', bandgap: 0, density: 2.27, crystal: 'Hexagonal', mP: 3600, applications: ['Battery', 'Lubricant', 'Electrode'], enDiff: 0 },
+  { id: 17, name: 'Graphene', formula: 'C', category: 'Carbon', bandgap: 0, density: 2.27, crystal: '2D Sheet', mP: 3600, applications: ['Electronics', 'Composite', 'Sensor'], enDiff: 0 },
+  { id: 18, name: 'Diamond', formula: 'C', category: 'Carbon', bandgap: 5.47, density: 3.52, crystal: 'Diamond', mP: 3550, applications: ['Cutting', 'Thermal', 'Optics'], enDiff: 0 },
+  { id: 19, name: 'PEDOT:PSS', formula: 'C27H16S4', category: 'Polymer', bandgap: 1.6, density: 1.01, crystal: 'Amorphous', mP: 250, applications: ['OLED', 'Solar', 'Bioelectronic'], enDiff: 0.3 },
+  { id: 20, name: 'YBCO', formula: 'YBa2Cu3O7', category: 'Superconductor', bandgap: 0, density: 6.36, crystal: 'Perovskite', mP: 1000, applications: ['Superconductor', 'MRI', 'Power'], enDiff: 2.44 },
+  { id: 21, name: 'MgB2', formula: 'MgB2', category: 'Superconductor', bandgap: 0, density: 2.57, crystal: 'Hexagonal', mP: 830, applications: ['Superconductor', 'Magnet'], enDiff: 0.44 },
+  { id: 22, name: 'Stainless Steel 316', formula: 'FeCrNi', category: 'Alloy', bandgap: 0, density: 8.00, crystal: 'FCC', mP: 1400, applications: ['Structural', 'Medical', 'Chemical'], enDiff: 0 },
+  { id: 23, name: 'Inconel 718', formula: 'NiCrFe', category: 'Alloy', bandgap: 0, density: 8.19, crystal: 'FCC', mP: 1340, applications: ['Aerospace', 'Turbine', 'Nuclear'], enDiff: 0 },
+  { id: 24, name: 'Titanium Dioxide', formula: 'TiO2', category: 'Ceramic', bandgap: 3.20, density: 4.23, crystal: 'Rutile', mP: 1843, applications: ['Photocatalyst', 'Pigment', 'Solar'], enDiff: 1.90 },
+  { id: 25, name: 'CZTS', formula: 'Cu2ZnSnS4', category: 'Semiconductor', bandgap: 1.50, density: 4.50, crystal: 'Kesterite', mP: 990, applications: ['Solar', 'Thermoelectric'], enDiff: 0.7 },
+  { id: 26, name: 'MAPbI3', formula: 'CH3NH3PbI3', category: 'Perovskite', bandgap: 1.55, density: 4.30, crystal: 'Perovskite', mP: 300, applications: ['Solar', 'LED', 'Detector'], enDiff: 1.2 },
+  { id: 27, name: 'NMC 811', formula: 'LiNi0.8Mn0.1Co0.1O2', category: 'Battery', bandgap: 2.8, density: 4.80, crystal: 'Layered', mP: 1000, applications: ['Li-ion Battery', 'EV', 'Cathode'], enDiff: 2.44 },
+  { id: 28, name: 'Sodium Chloride', formula: 'NaCl', category: 'Ionic', bandgap: 8.5, density: 2.17, crystal: 'Rock Salt', mP: 801, applications: ['Model System', 'Optics'], enDiff: 2.23 },
+  { id: 29, name: 'Calcium Fluoride', formula: 'CaF2', category: 'Ionic', bandgap: 12.0, density: 3.18, crystal: 'Fluorite', mP: 1418, applications: ['Optics', 'Lens', 'Scintillator'], enDiff: 2.98 },
+  { id: 30, name: 'Molybdenum Disulfide', formula: 'MoS2', category: '2D Material', bandgap: 1.80, density: 5.06, crystal: 'Hexagonal', mP: 2375, applications: ['Lubricant', 'Catalyst', 'Electronics'], enDiff: 0.58 },
+];
+---
+
+<div class="it-container" id="materials-search">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🔍</div>
+      <div>
+        <h2>Materials Database Search</h2>
+        <p>Search a curated database of 30+ advanced materials by properties, composition, or application</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Search Query</label>
+        <input type="text" class="it-input" id="mds-query" placeholder="Search by name, formula, or application (e.g. battery, semiconductor, perovskite)" />
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Category</label>
+          <select class="it-select" id="mds-category">
+            <option value="all">All Categories</option>
+            <option value="Semiconductor">Semiconductor</option>
+            <option value="Metal">Metal</option>
+            <option value="Ceramic">Ceramic</option>
+            <option value="Battery">Battery Material</option>
+            <option value="Carbon">Carbon Material</option>
+            <option value="Polymer">Polymer</option>
+            <option value="Superconductor">Superconductor</option>
+            <option value="Alloy">Alloy</option>
+            <option value="Ionic">Ionic Crystal</option>
+            <option value="2D Material">2D Material</option>
+            <option value="Perovskite">Perovskite</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Sort By</label>
+          <select class="it-select" id="mds-sort">
+            <option value="name">Name (A-Z)</option>
+            <option value="bandgap">Bandgap</option>
+            <option value="density">Density</option>
+            <option value="mP">Melting Point</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">Min Bandgap <span class="it-label-hint">(eV)</span></label>
+          <input type="number" class="it-input" id="mds-min-bg" value="0" min="0" max="15" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Max Density <span class="it-label-hint">(g/cm³)</span></label>
+          <input type="number" class="it-input" id="mds-max-density" value="20" min="0" max="25" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Min Melting Point <span class="it-label-hint">(°C)</span></label>
+          <input type="number" class="it-input" id="mds-min-mp" value="0" min="0" max="4000" step="50" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="mds-search">Search Materials</button>
+        <button class="it-btn it-btn-secondary" id="mds-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="mds-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="mds-results">
+      <div class="it-results-card">
+        <div class="it-results-title" id="mds-title">Search Results</div>
+        <div id="mds-list"></div>
+      </div>
+
+      <!-- Feature 1: Property Distribution Charts -->
+      <div class="it-results-card" id="mds-dist-section" style="display:none;">
+        <div class="it-results-title">📊 Property Distributions</div>
+        <canvas id="mds-dist-canvas" width="700" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="mds-dist-list"></div>
+      </div>
+
+      <!-- Feature 2: Category Statistics -->
+      <div class="it-results-card" id="mds-catstats-section" style="display:none;">
+        <div class="it-results-title">📈 Category Statistics</div>
+        <div id="mds-catstats-list"></div>
+      </div>
+
+      <!-- Feature 3: Material Comparison Table -->
+      <div class="it-results-card" id="mds-compare-section" style="display:none;">
+        <div class="it-results-title">⚖️ Side-by-Side Material Comparison</div>
+        <div id="mds-compare-list"></div>
+      </div>
+
+      <!-- Feature 4: Application Heatmap -->
+      <div class="it-results-card" id="mds-heatmap-section" style="display:none;">
+        <div class="it-results-title">🔥 Application × Category Heatmap</div>
+        <div id="mds-heatmap-list"></div>
+      </div>
+
+      <!-- Feature 5: Property Correlation Matrix -->
+      <div class="it-results-card" id="mds-corr-section" style="display:none;">
+        <div class="it-results-title">🔗 Property Correlation Matrix</div>
+        <div id="mds-corr-list"></div>
+      </div>
+
+      <!-- Feature 6: Crystal Structure Distribution -->
+      <div class="it-results-card" id="mds-crystal-section" style="display:none;">
+        <div class="it-results-title">💎 Crystal Structure Distribution</div>
+        <div id="mds-crystal-list"></div>
+      </div>
+
+      <!-- Feature 7: Top Materials Rankings -->
+      <div class="it-results-card" id="mds-ranking-section" style="display:none;">
+        <div class="it-results-title">🏆 Top Materials Rankings</div>
+        <div id="mds-ranking-list"></div>
+      </div>
+
+      <!-- Feature 8: Application Finder -->
+      <div class="it-results-card" id="mds-finder-section" style="display:none;">
+        <div class="it-results-title">🎯 Application-Based Material Finder</div>
+        <div id="mds-finder-list"></div>
+      </div>
+
+      <!-- Feature 9: Database Coverage Report -->
+      <div class="it-results-card" id="mds-coverage-section" style="display:none;">
+        <div class="it-results-title">📋 Database Coverage Report</div>
+        <div id="mds-coverage-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const materials = [
+    { id: 1, name: 'Silicon', formula: 'Si', category: 'Semiconductor', bandgap: 1.12, density: 2.33, crystal: 'Diamond', mP: 1414, applications: ['Electronics', 'Solar', 'MEMS'] },
+    { id: 2, name: 'Gallium Arsenide', formula: 'GaAs', category: 'Semiconductor', bandgap: 1.42, density: 5.32, crystal: 'Zincblende', mP: 1238, applications: ['LED', 'Solar', 'RF'] },
+    { id: 3, name: 'Silicon Carbide', formula: 'SiC', category: 'Semiconductor', bandgap: 3.26, density: 3.21, crystal: 'Hexagonal', mP: 2730, applications: ['Power Electronics', 'EV', 'HEV'] },
+    { id: 4, name: 'Gallium Nitride', formula: 'GaN', category: 'Semiconductor', bandgap: 3.40, density: 6.15, crystal: 'Wurtzite', mP: 2500, applications: ['LED', 'RF', 'Power'] },
+    { id: 5, name: 'Copper', formula: 'Cu', category: 'Metal', bandgap: 0, density: 8.96, crystal: 'FCC', mP: 1085, applications: ['Wiring', 'Electronics', 'Heat Sink'] },
+    { id: 6, name: 'Aluminum', formula: 'Al', category: 'Metal', bandgap: 0, density: 2.70, crystal: 'FCC', mP: 660, applications: ['Structural', 'Packaging', 'Electronics'] },
+    { id: 7, name: 'Titanium', formula: 'Ti', category: 'Metal', bandgap: 0, density: 4.51, crystal: 'HCP', mP: 1668, applications: ['Aerospace', 'Biomedical', 'Chemical'] },
+    { id: 8, name: 'Tungsten', formula: 'W', category: 'Metal', bandgap: 0, density: 19.25, crystal: 'BCC', mP: 3422, applications: ['Filament', 'Armor', 'Alloy'] },
+    { id: 9, name: 'Iron', formula: 'Fe', category: 'Metal', bandgap: 0, density: 7.87, crystal: 'BCC', mP: 1538, applications: ['Structural', 'Magnetic', 'Alloy'] },
+    { id: 10, name: 'Alumina', formula: 'Al2O3', category: 'Ceramic', bandgap: 8.8, density: 3.95, crystal: 'Corundum', mP: 2072, applications: ['Insulator', 'Abrasive', 'Refractory'] },
+    { id: 11, name: 'Zirconia', formula: 'ZrO2', category: 'Ceramic', bandgap: 5.0, density: 5.68, crystal: 'Monoclinic', mP: 2715, applications: ['Thermal Barrier', 'Dental', 'Fuel Cell'] },
+    { id: 12, name: 'Silica', formula: 'SiO2', category: 'Ceramic', bandgap: 9.0, density: 2.20, crystal: 'Quartz', mP: 1710, applications: ['Glass', 'Insulator', 'Optics'] },
+    { id: 13, name: 'Barium Titanate', formula: 'BaTiO3', category: 'Ceramic', bandgap: 3.20, density: 6.02, crystal: 'Perovskite', mP: 1625, applications: ['Capacitor', 'Sensor', 'Actuator'] },
+    { id: 14, name: 'Lithium Cobalt Oxide', formula: 'LiCoO2', category: 'Battery', bandgap: 2.7, density: 5.10, crystal: 'Layered', mP: 1100, applications: ['Li-ion Battery', 'Cathode'] },
+    { id: 15, name: 'Lithium Iron Phosphate', formula: 'LiFePO4', category: 'Battery', bandgap: 3.1, density: 3.60, crystal: 'Olivine', mP: 950, applications: ['Li-ion Battery', 'Cathode', 'EV'] },
+    { id: 16, name: 'Graphite', formula: 'C', category: 'Carbon', bandgap: 0, density: 2.27, crystal: 'Hexagonal', mP: 3600, applications: ['Battery', 'Lubricant', 'Electrode'] },
+    { id: 17, name: 'Graphene', formula: 'C', category: 'Carbon', bandgap: 0, density: 2.27, crystal: '2D Sheet', mP: 3600, applications: ['Electronics', 'Composite', 'Sensor'] },
+    { id: 18, name: 'Diamond', formula: 'C', category: 'Carbon', bandgap: 5.47, density: 3.52, crystal: 'Diamond', mP: 3550, applications: ['Cutting', 'Thermal', 'Optics'] },
+    { id: 19, name: 'PEDOT:PSS', formula: 'C27H16S4', category: 'Polymer', bandgap: 1.6, density: 1.01, crystal: 'Amorphous', mP: 250, applications: ['OLED', 'Solar', 'Bioelectronic'] },
+    { id: 20, name: 'YBCO', formula: 'YBa2Cu3O7', category: 'Superconductor', bandgap: 0, density: 6.36, crystal: 'Perovskite', mP: 1000, applications: ['Superconductor', 'MRI', 'Power'] },
+    { id: 21, name: 'MgB2', formula: 'MgB2', category: 'Superconductor', bandgap: 0, density: 2.57, crystal: 'Hexagonal', mP: 830, applications: ['Superconductor', 'Magnet'] },
+    { id: 22, name: 'Stainless Steel 316', formula: 'FeCrNi', category: 'Alloy', bandgap: 0, density: 8.00, crystal: 'FCC', mP: 1400, applications: ['Structural', 'Medical', 'Chemical'] },
+    { id: 23, name: 'Inconel 718', formula: 'NiCrFe', category: 'Alloy', bandgap: 0, density: 8.19, crystal: 'FCC', mP: 1340, applications: ['Aerospace', 'Turbine', 'Nuclear'] },
+    { id: 24, name: 'Titanium Dioxide', formula: 'TiO2', category: 'Ceramic', bandgap: 3.20, density: 4.23, crystal: 'Rutile', mP: 1843, applications: ['Photocatalyst', 'Pigment', 'Solar'] },
+    { id: 25, name: 'CZTS', formula: 'Cu2ZnSnS4', category: 'Semiconductor', bandgap: 1.50, density: 4.50, crystal: 'Kesterite', mP: 990, applications: ['Solar', 'Thermoelectric'] },
+    { id: 26, name: 'MAPbI3', formula: 'CH3NH3PbI3', category: 'Perovskite', bandgap: 1.55, density: 4.30, crystal: 'Perovskite', mP: 300, applications: ['Solar', 'LED', 'Detector'] },
+    { id: 27, name: 'NMC 811', formula: 'LiNi0.8Mn0.1Co0.1O2', category: 'Battery', bandgap: 2.8, density: 4.80, crystal: 'Layered', mP: 1000, applications: ['Li-ion Battery', 'EV', 'Cathode'] },
+    { id: 28, name: 'Sodium Chloride', formula: 'NaCl', category: 'Ionic', bandgap: 8.5, density: 2.17, crystal: 'Rock Salt', mP: 801, applications: ['Model System', 'Optics'] },
+    { id: 29, name: 'Calcium Fluoride', formula: 'CaF2', category: 'Ionic', bandgap: 12.0, density: 3.18, crystal: 'Fluorite', mP: 1418, applications: ['Optics', 'Lens', 'Scintillator'] },
+    { id: 30, name: 'Molybdenum Disulfide', formula: 'MoS2', category: '2D Material', bandgap: 1.80, density: 5.06, crystal: 'Hexagonal', mP: 2375, applications: ['Lubricant', 'Catalyst', 'Electronics'] },
+  ];
+
+  const categoryColors = { Semiconductor: '#7c3aed', Metal: '#059669', Ceramic: '#d97706', Battery: '#dc2626', Carbon: '#374151', Polymer: '#ec4899', Superconductor: '#2563eb', Alloy: '#0891b2', Ionic: '#65a30d', '2D Material': '#f59e0b', Perovskite: '#a78bfa' };
+
+  function search() {
+    const query = document.getElementById('mds-query').value.trim().toLowerCase();
+    const category = document.getElementById('mds-category').value;
+    const sort = document.getElementById('mds-sort').value;
+    const minBg = parseFloat(document.getElementById('mds-min-bg').value) || 0;
+    const maxDensity = parseFloat(document.getElementById('mds-max-density').value) || 25;
+    const minMP = parseFloat(document.getElementById('mds-min-mp').value) || 0;
+
+    let results = materials.filter(m => {
+      if (category !== 'all' && m.category !== category) return false;
+      if (m.bandgap < minBg) return false;
+      if (m.density > maxDensity) return false;
+      if (m.mP < minMP) return false;
+      if (query) {
+        const haystack = (m.name + ' ' + m.formula + ' ' + m.applications.join(' ') + ' ' + m.category + ' ' + m.crystal).toLowerCase();
+        if (!haystack.includes(query)) return false;
+      }
+      return true;
+    });
+
+    // Sort
+    results.sort((a, b) => {
+      if (sort === 'name') return a.name.localeCompare(b.name);
+      if (sort === 'bandgap') return b.bandgap - a.bandgap;
+      if (sort === 'density') return a.density - b.density;
+      if (sort === 'mP') return b.mP - a.mP;
+      return 0;
+    });
+
+    document.getElementById('mds-title').textContent = `Search Results (${results.length} material${results.length !== 1 ? 's' : ''})`;
+
+    const list = document.getElementById('mds-list');
+    if (results.length === 0) {
+      list.innerHTML = '<div class="it-alert it-alert-warn">No materials found matching your criteria. Try widening your filters.</div>';
+    } else {
+      list.innerHTML = results.map(m => {
+        const color = categoryColors[m.category] || '#5c5c72';
+        return `<div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:1rem 1.25rem;margin-bottom:0.75rem;border-left:4px solid ${color};">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem;">
+            <div>
+              <strong style="font-size:0.9375rem;">${m.name}</strong>
+              <span style="font-family:var(--tl-mono);font-size:0.8125rem;color:var(--tl-text-muted);margin-left:0.5rem;">${m.formula}</span>
+            </div>
+            <span class="it-badge" style="background:${color}22;color:${color};">${m.category}</span>
+          </div>
+          <table class="it-table" style="margin-top:0.5rem;">
+            <tbody>
+              <tr><td>Crystal Structure</td><td>${m.crystal}</td><td>Bandgap</td><td>${m.bandgap > 0 ? m.bandgap + ' eV' : 'Metallic'}</td></tr>
+              <tr><td>Density</td><td>${m.density} g/cm³</td><td>Melting Point</td><td>${m.mP}°C</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:0.75rem;color:var(--tl-text-muted);margin-top:0.5rem;">
+            <strong>Applications:</strong> ${m.applications.map(a => `<span class="it-badge it-badge-neutral">${a}</span>`).join(' ')}
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    document.getElementById('mds-results').classList.add('show');
+
+    // === Feature 1: Property Distributions ===
+    const distCanvas = document.getElementById('mds-dist-canvas');
+    const dCtx = distCanvas.getContext('2d');
+    const dW = distCanvas.width, dH = distCanvas.height;
+    dCtx.fillStyle = '#ebedf5'; dCtx.fillRect(0, 0, dW, dH);
+    dCtx.strokeStyle = '#94a3b8'; dCtx.lineWidth = 1;
+    dCtx.beginPath(); dCtx.moveTo(50, 10); dCtx.lineTo(50, dH - 30); dCtx.lineTo(dW - 10, dH - 30); dCtx.stroke();
+    const bandgaps = results.filter(m => m.bandgap > 0).map(m => m.bandgap);
+    const densities = results.map(m => m.density);
+    const meltPoints = results.map(m => m.mP);
+    const allProps = [{ label: 'Bandgap (eV)', data: bandgaps, color: '#7c3aed' }, { label: 'Density (g/cm³)', data: densities, color: '#059669' }, { label: 'Melt Pt (°C/1000)', data: meltPoints.map(m => m / 1000), color: '#dc2626' }];
+    allProps.forEach((prop, pi) => {
+      const max = Math.max(...prop.data, 1);
+      const x0 = 55 + pi * (dW - 60) / 3;
+      const barW = (dW - 70) / 3 / Math.max(prop.data.length, 1);
+      prop.data.forEach((v, i) => { const bh = (v / max) * (dH - 50); const bx = x0 + i * barW; dCtx.fillStyle = prop.color + '44'; dCtx.fillRect(bx, dH - 30 - bh, barW - 2, bh); dCtx.strokeStyle = prop.color; dCtx.lineWidth = 1; dCtx.strokeRect(bx, dH - 30 - bh, barW - 2, bh); });
+      dCtx.fillStyle = prop.color; dCtx.font = 'bold 9px sans-serif'; dCtx.textAlign = 'center'; dCtx.fillText(prop.label, x0 + (dW - 70) / 6, 15);
+    });
+    dCtx.fillStyle = '#64748b'; dCtx.font = '9px sans-serif'; dCtx.textAlign = 'center'; dCtx.fillText('Materials →', dW / 2, dH - 10);
+    const avgBg = bandgaps.length > 0 ? (bandgaps.reduce((s, v) => s + v, 0) / bandgaps.length).toFixed(2) : 'N/A';
+    const avgD = densities.length > 0 ? (densities.reduce((s, v) => s + v, 0) / densities.length).toFixed(2) : 'N/A';
+    const avgMP = meltPoints.length > 0 ? (meltPoints.reduce((s, v) => s + v, 0) / meltPoints.length).toFixed(0) : 'N/A';
+    document.getElementById('mds-dist-list').innerHTML = `
+      <div class="it-results-grid" style="margin-bottom:0.75rem;">
+        <div class="it-stat"><div class="it-stat-label">Avg Bandgap</div><div class="it-stat-value">${avgBg}<span class="it-stat-unit"> eV</span></div></div>
+        <div class="it-stat"><div class="it-stat-label">Avg Density</div><div class="it-stat-value">${avgD}<span class="it-stat-unit"> g/cm³</span></div></div>
+        <div class="it-stat"><div class="it-stat-label">Avg Melt Pt</div><div class="it-stat-value">${avgMP}<span class="it-stat-unit"> °C</span></div></div>
+        <div class="it-stat"><div class="it-stat-label">Range Bandgap</div><div class="it-stat-value" style="font-size:0.875rem;">${bandgaps.length > 0 ? Math.min(...bandgaps).toFixed(2) + '-' + Math.max(...bandgaps).toFixed(2) : 'N/A'}</div></div>
+      </div>
+      <div class="it-alert it-alert-info">Property distributions for ${results.length} filtered materials. Bars show individual values sorted by index. Bandgap range: ${bandgaps.length > 0 ? Math.min(...bandgaps).toFixed(2) + '-' + Math.max(...bandgaps).toFixed(2) + ' eV' : 'N/A (all metallic)'}. Density range: ${Math.min(...densities).toFixed(2)}-${Math.max(...densities).toFixed(2)} g/cm³. Melting point range: ${Math.min(...meltPoints)}-${Math.max(...meltPoints)}°C.</div>
+    `;
+    document.getElementById('mds-dist-section').style.display = 'block';
+
+    // === Feature 2: Category Statistics ===
+    const catStats = {};
+    results.forEach(m => { if (!catStats[m.category]) catStats[m.category] = { count: 0, avgBg: 0, avgD: 0, avgMP: 0, bgList: [] }; catStats[m.category].count++; catStats[m.category].avgD += m.density; catStats[m.category].avgMP += m.mP; if (m.bandgap > 0) catStats[m.category].bgList.push(m.bandgap); });
+    Object.keys(catStats).forEach(cat => { catStats[cat].avgD = (catStats[cat].avgD / catStats[cat].count).toFixed(2); catStats[cat].avgMP = (catStats[cat].avgMP / catStats[cat].count).toFixed(0); catStats[cat].avgBg = catStats[cat].bgList.length > 0 ? (catStats[cat].bgList.reduce((s, v) => s + v, 0) / catStats[cat].bgList.length).toFixed(2) : 'Metallic'; });
+    document.getElementById('mds-catstats-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Category</th><th>Count</th><th>% of Results</th><th>Avg Bandgap</th><th>Avg Density</th><th>Avg Melt Pt</th><th>Distribution</th></tr></thead><tbody>
+        ${Object.entries(catStats).sort((a, b) => b[1].count - a[1].count).map(([cat, s]) => `<tr><td><span class="it-badge" style="background:${categoryColors[cat] || '#5c5c72'}22;color:${categoryColors[cat] || '#5c5c72'};">${cat}</span></td><td class="it-highlight">${s.count}</td><td>${(s.count / results.length * 100).toFixed(0)}%</td><td>${s.avgBg}${s.avgBg !== 'Metallic' ? ' eV' : ''}</td><td>${s.avgD} g/cm³</td><td>${s.avgMP}°C</td><td style="width:150px;"><div style="background:var(--tl-border);height:10px;border-radius:5px;overflow:hidden;"><div style="width:${s.count / results.length * 100}%;height:100%;background:${categoryColors[cat] || '#5c5c72'};"></div></div></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${Object.keys(catStats).length} categories in current results. ${Object.entries(catStats).sort((a, b) => b[1].count - a[1].count)[0][0]} is the most common (${Object.entries(catStats).sort((a, b) => b[1].count - a[1].count)[0][1].count} materials). ${results.length} total materials matching filters.</div>
+    `;
+    document.getElementById('mds-catstats-section').style.display = 'block';
+
+    // === Feature 3: Material Comparison Table ===
+    const topCompare = results.slice(0, 8);
+    document.getElementById('mds-compare-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Property</th>${topCompare.map(m => `<th style="font-size:0.75rem;">${m.name.substring(0, 10)}</th>`).join('')}</tr></thead><tbody>
+        <tr><td><strong>Formula</strong></td>${topCompare.map(m => `<td style="font-family:var(--tl-mono);font-size:0.75rem;">${m.formula}</td>`).join('')}</tr>
+        <tr><td><strong>Category</strong></td>${topCompare.map(m => `<td><span class="it-badge" style="background:${categoryColors[m.category] || '#5c5c72'}22;color:${categoryColors[m.category] || '#5c5c72'};font-size:0.7rem;">${m.category.substring(0, 6)}</span></td>`).join('')}</tr>
+        <tr><td><strong>Bandgap (eV)</strong></td>${topCompare.map(m => `<td class="it-highlight" style="font-family:var(--tl-mono);font-size:0.75rem;">${m.bandgap > 0 ? m.bandgap : '—'}</td>`).join('')}</tr>
+        <tr><td><strong>Density (g/cm³)</strong></td>${topCompare.map(m => `<td style="font-family:var(--tl-mono);font-size:0.75rem;">${m.density}</td>`).join('')}</tr>
+        <tr><td><strong>Melt Point (°C)</strong></td>${topCompare.map(m => `<td style="font-family:var(--tl-mono);font-size:0.75rem;">${m.mP}</td>`).join('')}</tr>
+        <tr><td><strong>Crystal</strong></td>${topCompare.map(m => `<td style="font-size:0.75rem;">${m.crystal}</td>`).join('')}</tr>
+        <tr><td><strong>Applications</strong></td>${topCompare.map(m => `<td style="font-size:0.7rem;">${m.applications.join(', ')}</td>`).join('')}</tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Side-by-side comparison of top ${topCompare.length} materials from current search results. Use this to quickly compare key properties across candidates. For detailed material cards, see the search results above.</div>
+    `;
+    document.getElementById('mds-compare-section').style.display = 'block';
+
+    // === Feature 4: Application Heatmap ===
+    const allApps = [...new Set(results.flatMap(m => m.applications))].sort();
+    const allCats = [...new Set(results.map(m => m.category))].sort();
+    const heatmapData = {};
+    allApps.forEach(app => { heatmapData[app] = {}; allCats.forEach(cat => { heatmapData[app][cat] = results.filter(m => m.applications.includes(app) && m.category === cat).length; }); });
+    const maxHeat = Math.max(...allApps.flatMap(app => allCats.map(cat => heatmapData[app][cat])), 1);
+    document.getElementById('mds-heatmap-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Application</th>${allCats.map(cat => `<th style="font-size:0.7rem;text-align:center;">${cat.substring(0, 6)}</th>`).join('')}</tr></thead><tbody>
+        ${allApps.map(app => `<tr><td style="font-size:0.8125rem;"><strong>${app}</strong></td>${allCats.map(cat => { const count = heatmapData[app][cat]; const intensity = count / maxHeat; return `<td style="text-align:center;background:rgba(124,58,237,${intensity * 0.7});color:${intensity > 0.4 ? '#fff' : '#111125'};font-weight:700;font-size:0.75rem;">${count > 0 ? count : '·'}</td>`; }).join('')}</tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Heatmap shows material count per application × category. Darker cells = more materials. ${allApps.length} applications across ${allCats.length} categories. Most common application: ${allApps.sort((a, b) => allCats.reduce((s, c) => s + heatmapData[b][c], 0) - allCats.reduce((s, c) => s + heatmapData[a][c], 0))[0]}.</div>
+    `;
+    document.getElementById('mds-heatmap-section').style.display = 'block';
+
+    // === Feature 5: Property Correlation Matrix ===
+    const corrProps = ['bandgap', 'density', 'mP'];
+    const corrLabels = ['Bandgap', 'Density', 'Melt Pt'];
+    function pearson(x, y) { const n = x.length; if (n === 0) return 0; const sx = x.reduce((a, b) => a + b, 0) / n; const sy = y.reduce((a, b) => a + b, 0) / n; let num = 0, dx = 0, dy = 0; for (let i = 0; i < n; i++) { num += (x[i] - sx) * (y[i] - sy); dx += (x[i] - sx) ** 2; dy += (y[i] - sy) ** 2; } return dx === 0 || dy === 0 ? 0 : num / Math.sqrt(dx * dy); }
+    const corrMatrix = corrProps.map(p1 => corrProps.map(p2 => pearson(results.map(m => m[p1]), results.map(m => m[p2]))));
+    document.getElementById('mds-corr-list').innerHTML = `
+      <table class="it-table"><thead><tr><th></th>${corrLabels.map(l => `<th style="text-align:center;">${l}</th>`).join('')}</tr></thead><tbody>
+        ${corrLabels.map((l, i) => `<tr><td><strong>${l}</strong></td>${corrLabels.map((l2, j) => { const r = corrMatrix[i][j]; const color = r > 0.5 ? '#059669' : r > 0 ? '#65a30d' : r > -0.5 ? '#d97706' : '#dc2626'; return `<td style="text-align:center;background:${color}22;color:${color};font-weight:700;font-family:var(--tl-mono);">${r.toFixed(2)}</td>`; }).join('')}</tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Pearson correlation coefficients between material properties. ${corrMatrix[0][1] > 0.3 ? 'Positive bandgap-density correlation — wider gap materials tend to be denser.' : corrMatrix[0][1] < -0.3 ? 'Negative bandgap-density correlation — metals (no gap) tend to be denser.' : 'Weak bandgap-density correlation.'} ${corrMatrix[0][2] > 0.3 ? 'Wider bandgap materials have higher melting points (stronger bonds).' : 'No strong bandgap-melting point correlation.'} ${corrMatrix[1][2] > 0.3 ? 'Denser materials tend to have higher melting points.' : 'Weak density-melting point correlation.'}</div>
+    `;
+    document.getElementById('mds-corr-section').style.display = 'block';
+
+    // === Feature 6: Crystal Structure Distribution ===
+    const crystalCounts = {};
+    results.forEach(m => { crystalCounts[m.crystal] = (crystalCounts[m.crystal] || 0) + 1; });
+    const crystalSorted = Object.entries(crystalCounts).sort((a, b) => b[1] - a[1]);
+    document.getElementById('mds-crystal-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Crystal Structure</th><th>Count</th><th>% of Results</th><th>Materials</th><th>Distribution</th></tr></thead><tbody>
+        ${crystalSorted.map(([crystal, count]) => { const mats = results.filter(m => m.crystal === crystal).map(m => m.name).join(', '); return `<tr><td><strong>${crystal}</strong></td><td class="it-highlight">${count}</td><td>${(count / results.length * 100).toFixed(0)}%</td><td style="font-size:0.75rem;">${mats.substring(0, 60)}${mats.length > 60 ? '...' : ''}</td><td style="width:150px;"><div style="background:var(--tl-border);height:10px;border-radius:5px;overflow:hidden;"><div style="width:${count / results.length * 100}%;height:100%;background:#7c3aed;"></div></div></td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${crystalSorted.length} crystal structures represented. Most common: ${crystalSorted[0][0]} (${crystalSorted[0][1]} materials). ${crystalSorted.length > 5 ? 'High structural diversity — materials span multiple crystal systems.' : 'Low structural diversity — most materials share the same structure type.'} Crystal structure determines many physical properties including cleavage, anisotropy, and XRD pattern.</div>
+    `;
+    document.getElementById('mds-crystal-section').style.display = 'block';
+
+    // === Feature 7: Top Materials Rankings ===
+    const rankings = [
+      { title: 'Highest Bandgap', data: results.filter(m => m.bandgap > 0).sort((a, b) => b.bandgap - a.bandgap).slice(0, 5), prop: 'bandgap', unit: 'eV' },
+      { title: 'Highest Density', data: [...results].sort((a, b) => b.density - a.density).slice(0, 5), prop: 'density', unit: 'g/cm³' },
+      { title: 'Highest Melting Point', data: [...results].sort((a, b) => b.mP - a.mP).slice(0, 5), prop: 'mP', unit: '°C' },
+      { title: 'Lowest Density', data: [...results].sort((a, b) => a.density - b.density).slice(0, 5), prop: 'density', unit: 'g/cm³' },
+    ];
+    document.getElementById('mds-ranking-list').innerHTML = `
+      ${rankings.map(r => `<div style="margin-bottom:1rem;"><strong style="font-size:0.875rem;">${r.title}</strong><table class="it-table" style="margin-top:0.25rem;"><thead><tr><th>#</th><th>Material</th><th>Formula</th><th>Category</th><th>${r.prop === 'bandgap' ? 'Bandgap' : r.prop === 'density' ? 'Density' : 'Melt Pt'}</th></tr></thead><tbody>${r.data.map((m, i) => `<tr><td style="font-weight:700;color:${i === 0 ? '#d97706' : '#111125'};">${i + 1}${i === 0 ? ' 🥇' : i === 1 ? ' 🥈' : i === 2 ? ' 🥉' : ''}</td><td><strong>${m.name}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${m.formula}</td><td><span class="it-badge" style="background:${categoryColors[m.category] || '#5c5c72'}22;color:${categoryColors[m.category] || '#5c5c72'};font-size:0.7rem;">${m.category}</span></td><td class="it-highlight" style="font-family:var(--tl-mono);">${m[r.prop]} ${r.unit}</td></tr>`).join('')}</tbody></table></div>`).join('')}
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Top 5 rankings across key properties from current search results. ${rankings[0].data.length > 0 ? 'Widest bandgap: ' + rankings[0].data[0].name + ' (' + rankings[0].data[0].bandgap + ' eV).' : ''} ${rankings[1].data.length > 0 ? 'Densest: ' + rankings[1].data[0].name + ' (' + rankings[1].data[0].density + ' g/cm³).' : ''} ${rankings[2].data.length > 0 ? 'Highest melt point: ' + rankings[2].data[0].name + ' (' + rankings[2].data[0].mP + '°C).' : ''}</div>
+    `;
+    document.getElementById('mds-ranking-section').style.display = 'block';
+
+    // === Feature 8: Application Finder ===
+    const appCounts = {};
+    results.forEach(m => m.applications.forEach(app => { if (!appCounts[app]) appCounts[app] = []; appCounts[app].push(m); }));
+    const appSorted = Object.entries(appCounts).sort((a, b) => b[1].length - a[1].length);
+    document.getElementById('mds-finder-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Application</th><th># Materials</th><th>Top Material</th><th>Categories</th><th>Materials List</th></tr></thead><tbody>
+        ${appSorted.map(([app, mats]) => { const topM = mats[0]; const cats = [...new Set(mats.map(m => m.category))]; return `<tr><td><strong>${app}</strong></td><td class="it-highlight">${mats.length}</td><td style="font-size:0.8125rem;">${topM.name} (${topM.formula})</td><td style="font-size:0.75rem;">${cats.map(c => `<span class="it-badge" style="background:${categoryColors[c] || '#5c5c72'}22;color:${categoryColors[c] || '#5c5c72'};font-size:0.7rem;">${c.substring(0, 6)}</span>`).join(' ')}</td><td style="font-size:0.7rem;">${mats.map(m => m.name).join(', ').substring(0, 80)}${mats.map(m => m.name).join(', ').length > 80 ? '...' : ''}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${appSorted.length} unique applications found. Most served: ${appSorted[0][0]} (${appSorted[0][1].length} materials). Use this to find materials for specific use cases — e.g., search 'battery' to find cathode materials, 'solar' for photovoltaics, 'aerospace' for high-temperature alloys.</div>
+    `;
+    document.getElementById('mds-finder-section').style.display = 'block';
+
+    // === Feature 9: Database Coverage Report ===
+    const totalMats = materials.length;
+    const catCoverage = {};
+    materials.forEach(m => { if (!catCoverage[m.category]) catCoverage[m.category] = { total: 0, withBg: 0, withHighMP: 0 }; catCoverage[m.category].total++; if (m.bandgap > 0) catCoverage[m.category].withBg++; if (m.mP > 1000) catCoverage[m.category].withHighMP++; });
+    const appCoverage = {};
+    materials.forEach(m => m.applications.forEach(a => { appCoverage[a] = (appCoverage[a] || 0) + 1; }));
+    document.getElementById('mds-coverage-list').innerHTML = `
+      <div class="it-results-grid" style="margin-bottom:1rem;">
+        <div class="it-stat"><div class="it-stat-label">Total Materials</div><div class="it-stat-value">${totalMats}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Categories</div><div class="it-stat-value">${Object.keys(catCoverage).length}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Applications</div><div class="it-stat-value">${Object.keys(appCoverage).length}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Crystal Types</div><div class="it-stat-value">${new Set(materials.map(m => m.crystal)).size}</div></div>
+      </div>
+      <table class="it-table"><thead><tr><th>Category</th><th>Total</th><th>% of DB</th><th>With Bandgap</th><th>High MP (>1000°C)</th><th>Coverage</th></tr></thead><tbody>
+        ${Object.entries(catCoverage).sort((a, b) => b[1].total - a[1].total).map(([cat, s]) => `<tr><td><span class="it-badge" style="background:${categoryColors[cat] || '#5c5c72'}22;color:${categoryColors[cat] || '#5c5c72'};">${cat}</span></td><td class="it-highlight">${s.total}</td><td>${(s.total / totalMats * 100).toFixed(0)}%</td><td>${s.withBg}/${s.total}</td><td>${s.withHighMP}/${s.total}</td><td style="width:120px;"><div style="background:var(--tl-border);height:10px;border-radius:5px;overflow:hidden;"><div style="width:${s.total / totalMats * 100}%;height:100%;background:${categoryColors[cat] || '#5c5c72'};"></div></div></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Database covers ${totalMats} materials across ${Object.keys(catCoverage).length} categories and ${Object.keys(appCoverage).length} applications. ${Object.entries(catCoverage).sort((a, b) => b[1].total - a[1].total)[0][0]} is the largest category. For comprehensive searches, use Materials Project (${totalMats * 1000}+ materials), OQMD, or AFLOW. This database is curated for educational and exploratory use.</div>
+    `;
+    document.getElementById('mds-coverage-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('mds-export').style.display = 'inline-flex';
+    document.getElementById('mds-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), searchCriteria: { query, category, sort, minBg, maxDensity, minMP }, results, statistics: { totalResults: results.length, categoryStats: catStats, avgBandgap: avgBg, avgDensity: avgD, avgMeltPoint: avgMP, crystalStructures: crystalSorted, applications: appSorted.map(([app, mats]) => ({ app, count: mats.length, materials: mats.map(m => m.name })) }, correlations: corrMatrix, databaseCoverage: { totalMaterials: totalMats, categories: catCoverage, applications: appCoverage } };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'materials-search-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('mds-search').addEventListener('click', search);
+  document.getElementById('mds-reset').addEventListener('click', () => {
+    document.getElementById('mds-query').value = '';
+    document.getElementById('mds-category').value = 'all';
+    document.getElementById('mds-sort').value = 'name';
+    document.getElementById('mds-min-bg').value = '0';
+    document.getElementById('mds-max-density').value = '20';
+    document.getElementById('mds-min-mp').value = '0';
+    document.getElementById('mds-results').classList.remove('show');
+  });
+  document.getElementById('mds-query').addEventListener('keydown', e => { if (e.key === 'Enter') search(); });
+})();
+</script>

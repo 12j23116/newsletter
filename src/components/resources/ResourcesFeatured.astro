@@ -1,0 +1,26 @@
+---
+import { featuredResources } from '../../data/resources/resources-content';
+---
+
+<section class="res-featured">
+  <div class="res-featured-head res-reveal">
+    <div class="res-eyebrow-sm">Featured</div>
+    <h2>Top Resources <span style="color: var(--res-text-muted); font-weight: 400;">— Editor's Picks</span></h2>
+  </div>
+  <div class="res-featured-grid">
+    {featuredResources.map((item) => (
+      <a href={`/resources/${item.slug}`} class="res-feat-card res-reveal" style={`--card-color:${item.topicColor}`}>
+        <div class="res-feat-card-top">
+          <span class="res-feat-card-icon">{item.icon}</span>
+          <span class="res-feat-card-type">{item.type}</span>
+        </div>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+        <div class="res-feat-card-foot">
+          <span class="res-feat-card-cat">{item.topic}</span>
+          {item.readTime && <span>{item.readTime} read</span>}
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,192 @@
+{
+  "id": 207,
+  "title": "Quantum Chemistry: Simulating Molecules That Classical Computers Can't",
+  "slug": "quantum-chemistry-simulating-molecules",
+  "topic": "Quantum",
+  "topicColor": "#a78bfa",
+  "duration": "49:15",
+  "date": "2026-02-18",
+  "season": 4,
+  "episode": 32,
+  "featured": false,
+  "guest": {
+    "name": "Bert de Jong",
+    "role": "Senior Scientist",
+    "company": "Lawrence Berkeley National Lab"
+  },
+  "hosts": [
+    {
+      "name": "Dr. Sarah Chen",
+      "role": "Host & AI Research Lead"
+    },
+    {
+      "name": "Marcus Webb",
+      "role": "Co-host & Security Analyst"
+    }
+  ],
+  "topics": [
+    "Quantum Chemistry",
+    "Materials",
+    "Drug Discovery"
+  ],
+  "script": [
+    {
+      "segment": "COLD OPEN",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Bert, there's a narrative going around about quantum chemistry that I think misses the mark. People either think it's overhyped or they think it's going to change everything overnight. Where does the truth actually lie?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "(laughs) That's the perfect framing, because the truth is always in between. What's happening with simulating molecules that classical computers can't is real — it's not hype. But it's also not overnight. We've been working on this for years, and what people are seeing now is the result of a lot of unglamorous engineering and science that happened behind the scenes."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Welcome to TechNova. I'm Dr. Sarah Chen."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "And I'm Marcus Webb. Today we're joined by Bert de Jong, Senior Scientist at Lawrence Berkeley National Lab. Bert, welcome to the show."
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "Thanks for having me. Really glad to be here."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 1: Where Things Stand Today",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Bert, give us the honest state of quantum chemistry in Quantum as of mid-2026. Not the hype version — the real version."
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "The honest version is that we're at an inflection point. The breakthroughs in qubit scaling and error correction over the past eighteen months have been genuine — not just press releases, but real technical progress that you can measure. The key thing that's changed is quantum advantage has gone from theoretical to practical. We're no longer asking 'can this work?' — we're asking 'how do we scale it?'"
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "What does that scaling look like in concrete terms?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "It means we're moving from bench-scale demonstrations to real-world deployment. The numbers I can share: we're seeing improvements in hardware platforms that are orders of magnitude better than where we were two years ago. And critically, the cost curve is bending in the right direction. When you combine better performance with lower cost, you get adoption, and that's what's happening now."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What surprised you most in the last year?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "The speed. I expected progress, but the pace has been remarkable. algorithm development advanced faster than I predicted, and investment landscape turned out to be more tractable than we thought. When you have multiple breakthroughs happening simultaneously, they compound on each other, and that's when you get these nonlinear jumps."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 2: The Hard Problems",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Bert, let's talk about what's still hard. What are the problems that keep you up at night?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "The biggest one is workforce development. It's the difference between something that works in the lab and something that works in production, every day, under real conditions. We've solved the science. What we haven't fully solved is the engineering — geopolitical competition, practical applications, and the integration of all these components into a reliable system. That's the 80 percent of the work that nobody sees."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Can you give us a specific example of a problem you had to solve?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "Sure. Take timeline to fault tolerance — six months ago, we were hitting a wall there. The conventional approach wasn't working, and we had to rethink the problem from scratch. What we ended up doing was materials-centric — we restructured the entire approach around that, and it unlocked everything else. Sometimes the breakthrough isn't a new technique — it's a new framing of the problem."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "How many people are working on these problems at your level?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "Globally? Maybe a few hundred people who truly understand the cutting edge. It's a small field, and the expertise is concentrated in a handful of teams. That's both a challenge and an opportunity — it means progress is bottlenecked by talent, but it also means that a single breakthrough from one team can advance the entire field."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 3: The Competitive Landscape",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Bert, who else is working in this space, and how does your approach differ?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "There are several serious players. Some are taking the qubit scaling route, which is well-established but has limitations. Others are betting on error correction, which is newer and riskier but potentially more powerful. Our approach is different because we prioritize quantum advantage — most teams optimize for peak performance, but we optimize for reliability and cost at scale. That's what matters for real-world deployment."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "Is this a winner-take-all market?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "I don't think so. The market is large and diverse enough that different approaches will win in different segments. The real competition isn't between the companies in this space — it's between quantum chemistry and the incumbent technology. We're all fighting to prove this is better than what exists today, and there's room for multiple winners once we do that."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What about the investment environment? Is there enough capital flowing in?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "The capital is there — maybe too much, in some ways. The risk isn't lack of funding. It's that funding without focus leads to wasted effort. The companies that will succeed are the ones that can turn capital into concrete milestones — not more press releases, but real technical progress that moves the needle."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 4: What Comes Next",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Bert, what should people be watching for in the next twelve to eighteen months?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "Three things. First, hardware platforms — we'll see meaningful progress there, and it'll be measurable. Second, algorithm development — there are developments coming that the public doesn't know about yet, and they'll change the conversation. Third, the policy and regulatory side — investment landscape is going to become a much bigger topic as the technology matures."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "If you could give one piece of advice to someone listening who's trying to understand where Quantum is heading, what would it be?"
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "Don't trust the extremes — neither the hype that says everything changes tomorrow, nor the skepticism that says nothing will ever work. The truth is in the middle, and it's moving faster than most people realize. The best thing you can do is engage with the actual data — read the papers, look at the numbers, talk to the practitioners. The signal is there if you know where to look."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "Bert de Jong, Senior Scientist at Lawrence Berkeley National Lab. Thank you so much for joining us today."
+        },
+        {
+          "speaker": "Bert de Jong",
+          "text": "Thank you both. This was a really enjoyable conversation."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And thanks to all of you for listening. This is TechNova — see you next time."
+        }
+      ]
+    }
+  ],
+  "showNotes": {
+    "keyTopics": [
+      "qubit scaling",
+      "error correction",
+      "quantum advantage",
+      "hardware platforms",
+      "algorithm development",
+      "investment landscape",
+      "workforce development",
+      "geopolitical competition"
+    ],
+    "estimatedDuration": "10-12 minutes"
+  }
+}

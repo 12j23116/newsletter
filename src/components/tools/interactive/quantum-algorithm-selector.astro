@@ -1,0 +1,419 @@
+---
+/**
+ * Quantum Algorithm Selector — Interactive tool
+ * Find the right quantum algorithm for your problem
+ */
+import './interactive-tools.css';
+
+const algorithms = [
+  { id: 'shor', name: "Shor's Algorithm", category: 'Factoring', problem: 'Integer factorization / discrete log', speedup: 'Exponential', qubits: '2n+3', depth: 'O(n³)', nisq: false, faultTolerant: true, useCase: 'Breaking RSA, ECC, DH' },
+  { id: 'grover', name: "Grover's Algorithm", category: 'Search', problem: 'Unstructured search', speedup: 'Quadratic', qubits: 'n', depth: 'O(√N)', nisq: true, faultTolerant: false, useCase: 'Database search, optimization, SAT' },
+  { id: 'vqe', name: 'VQE (Variational Quantum Eigensolver)', category: 'Chemistry', problem: 'Ground state energy / molecular simulation', speedup: 'Heuristic', qubits: '2× orbitals', depth: 'Shallow (ansatz-dependent)', nisq: true, faultTolerant: false, useCase: 'Drug discovery, materials, catalysis' },
+  { id: 'qaoa', name: 'QAOA', category: 'Optimization', problem: 'Combinatorial optimization (MaxCut, etc.)', speedup: 'Heuristic', qubits: 'n variables', depth: 'p layers (tunable)', nisq: true, faultTolerant: false, useCase: 'Logistics, scheduling, portfolio optimization' },
+  { id: 'qml', name: 'Quantum Machine Learning', category: 'ML', problem: 'Classification / kernel methods', speedup: 'Potential exponential', qubits: 'feature dims', depth: 'Shallow', nisq: true, faultTolerant: false, useCase: 'Pattern recognition, anomaly detection' },
+  { id: 'hhl', name: 'HHL Algorithm', category: 'Linear Algebra', problem: 'Linear systems Ax=b', speedup: 'Exponential (sparse)', qubits: 'O(log N)', depth: 'O(poly(log N))', nisq: false, faultTolerant: true, useCase: 'Differential equations, data fitting' },
+  { id: 'qft', name: 'Quantum Fourier Transform', category: 'Transform', problem: 'Fourier transform', speedup: 'Exponential', qubits: 'n', depth: 'O(n²)', nisq: false, faultTolerant: true, useCase: 'Signal processing, phase estimation' },
+  { id: 'qpe', name: 'Quantum Phase Estimation', category: 'Eigenvalue', problem: 'Estimate eigenvalues of unitary', speedup: 'Exponential', qubits: 'n + t (precision)', depth: 'O(t²)', nisq: false, faultTolerant: true, useCase: 'Chemistry, quantum metrology' },
+  { id: 'amplitude', name: 'Amplitude Amplification', category: 'Search', problem: 'Boost success probability', speedup: 'Quadratic', qubits: 'problem-dependent', depth: 'O(1/√p)', nisq: true, faultTolerant: false, useCase: 'Monte Carlo, counting' },
+  { id: 'qwalk', name: 'Quantum Walk', category: 'Search', problem: 'Graph traversal / element distinctness', speedup: 'Polynomial', qubits: 'O(log N)', depth: 'O(√N)', nisq: false, faultTolerant: true, useCase: 'Graph algorithms, clustering' },
+];
+
+const problemTypes = [
+  { id: 'factoring', label: 'Integer Factorization / Cryptanalysis' },
+  { id: 'search', label: 'Unstructured Search' },
+  { id: 'optimization', label: 'Combinatorial Optimization' },
+  { id: 'chemistry', label: 'Molecular Simulation / Chemistry' },
+  { id: 'ml', label: 'Machine Learning / Classification' },
+  { id: 'linear', label: 'Linear Systems / Equations' },
+  { id: 'simulation', label: 'Quantum Simulation' },
+  { id: 'metrology', label: 'Precision Measurement' },
+];
+---
+
+<div class="it-container" id="quantum-algo-selector">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🎯</div>
+      <div>
+        <h2>Quantum Algorithm Selector</h2>
+        <p>Find the right quantum algorithm for your computational problem</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Problem Type</label>
+        <select class="it-select" id="qas-problem">
+          {problemTypes.map(p => <option value={p.id}>{p.label}</option>)}
+        </select>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Problem Size <span class="it-label-hint">(n, bits/qubits)</span></label>
+          <input type="number" class="it-input" id="qas-size" value="20" min="1" max="1000" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Hardware Era</label>
+          <select class="it-select" id="qas-era">
+            <option value="nisq">NISQ (current, noisy)</option>
+            <option value="ft">Fault-Tolerant (future)</option>
+            <option value="both">Both</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Priority</label>
+          <select class="it-select" id="qas-priority">
+            <option value="speedup">Maximize Speedup</option>
+            <option value="feasibility">Near-Term Feasibility</option>
+            <option value="qubits">Minimize Qubits</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Classical Baseline Time <span class="it-label-hint">(seconds)</span></label>
+          <input type="number" class="it-input" id="qas-classical" value="3600" min="0.001" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="qas-recommend">Recommend Algorithms</button>
+        <button class="it-btn it-btn-secondary" id="qas-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="qas-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="qas-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Recommended Quantum Algorithms</div>
+        <div id="qas-recommendations"></div>
+        <div class="it-alert it-alert-info" id="qas-insight"></div>
+      </div>
+
+      <!-- Feature 1: Speedup Comparison Chart -->
+      <div class="it-results-card" id="qas-speedup-section" style="display:none;">
+        <div class="it-results-title">📊 Speedup Comparison Chart</div>
+        <canvas id="qas-speedup-canvas" width="600" height="350" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="qas-speedup-list"></div>
+      </div>
+
+      <!-- Feature 2: Resource Requirements Table -->
+      <div class="it-results-card" id="qas-resource-section" style="display:none;">
+        <div class="it-results-title">💾 Resource Requirements Estimator</div>
+        <div id="qas-resource-list"></div>
+      </div>
+
+      <!-- Feature 3: Quantum-Classical Time Comparison -->
+      <div class="it-results-card" id="qas-time-section" style="display:none;">
+        <div class="it-results-title">⏱️ Quantum vs Classical Time Comparison</div>
+        <div id="qas-time-list"></div>
+      </div>
+
+      <!-- Feature 4: Algorithm Complexity Analysis -->
+      <div class="it-results-card" id="qas-complexity-section" style="display:none;">
+        <div class="it-results-title">🧮 Algorithm Complexity Analysis</div>
+        <div id="qas-complexity-list"></div>
+      </div>
+
+      <!-- Feature 5: Implementation Roadmap -->
+      <div class="it-results-card" id="qas-roadmap-section" style="display:none;">
+        <div class="it-results-title">🗺️ Implementation Roadmap</div>
+        <div id="qas-roadmap-list"></div>
+      </div>
+
+      <!-- Feature 6: Hardware Compatibility Matrix -->
+      <div class="it-results-card" id="qas-hw-section" style="display:none;">
+        <div class="it-results-title">🖥️ Hardware Compatibility Matrix</div>
+        <div id="qas-hw-list"></div>
+      </div>
+
+      <!-- Feature 7: Error Correction Requirements -->
+      <div class="it-results-card" id="qas-qec-section" style="display:none;">
+        <div class="it-results-title">🛡️ Error Correction Requirements</div>
+        <div id="qas-qec-list"></div>
+      </div>
+
+      <!-- Feature 8: Benchmark Problem Generator -->
+      <div class="it-results-card" id="qas-bench-section" style="display:none;">
+        <div class="it-results-title">🧪 Benchmark Problem Generator</div>
+        <div id="qas-bench-list"></div>
+      </div>
+
+      <!-- Feature 9: Algorithm Combination Suggestions -->
+      <div class="it-results-card" id="qas-combo-section" style="display:none;">
+        <div class="it-results-title">🔗 Algorithm Combination Suggestions</div>
+        <div id="qas-combo-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const algos = {
+    shor: { name: "Shor's Algorithm", category: 'Factoring', problems: ['factoring'], speedup: 'Exponential', qubits: '2n+3', depth: 'O(n³)', nisq: false, ft: true, useCase: 'Breaking RSA, ECC, DH' },
+    grover: { name: "Grover's Algorithm", category: 'Search', problems: ['search'], speedup: 'Quadratic', qubits: 'n', depth: 'O(√N)', nisq: true, ft: false, useCase: 'Database search, optimization, SAT' },
+    vqe: { name: 'VQE', category: 'Chemistry', problems: ['chemistry', 'simulation'], speedup: 'Heuristic', qubits: '2× orbitals', depth: 'Shallow', nisq: true, ft: false, useCase: 'Drug discovery, materials, catalysis' },
+    qaoa: { name: 'QAOA', category: 'Optimization', problems: ['optimization'], speedup: 'Heuristic', qubits: 'n variables', depth: 'p layers', nisq: true, ft: false, useCase: 'Logistics, scheduling, portfolio' },
+    qml: { name: 'Quantum ML', category: 'ML', problems: ['ml'], speedup: 'Potential exponential', qubits: 'feature dims', depth: 'Shallow', nisq: true, ft: false, useCase: 'Pattern recognition, anomaly detection' },
+    hhl: { name: 'HHL Algorithm', category: 'Linear Algebra', problems: ['linear'], speedup: 'Exponential (sparse)', qubits: 'O(log N)', depth: 'O(poly(log N))', nisq: false, ft: true, useCase: 'Differential equations, data fitting' },
+    qft: { name: 'Quantum Fourier Transform', category: 'Transform', problems: ['simulation', 'metrology'], speedup: 'Exponential', qubits: 'n', depth: 'O(n²)', nisq: false, ft: true, useCase: 'Signal processing, phase estimation' },
+    qpe: { name: 'Quantum Phase Estimation', category: 'Eigenvalue', problems: ['chemistry', 'metrology', 'simulation'], speedup: 'Exponential', qubits: 'n + t', depth: 'O(t²)', nisq: false, ft: true, useCase: 'Chemistry, quantum metrology' },
+    amplitude: { name: 'Amplitude Amplification', category: 'Search', problems: ['search', 'optimization'], speedup: 'Quadratic', qubits: 'problem-dependent', depth: 'O(1/√p)', nisq: true, ft: false, useCase: 'Monte Carlo, counting' },
+    qwalk: { name: 'Quantum Walk', category: 'Search', problems: ['search', 'optimization'], speedup: 'Polynomial', qubits: 'O(log N)', depth: 'O(√N)', nisq: false, ft: true, useCase: 'Graph algorithms, clustering' },
+  };
+
+  const speedupMap = { 'Exponential': 3, 'Exponential (sparse)': 3, 'Potential exponential': 2.5, 'Quadratic': 2, 'Polynomial': 1.5, 'Heuristic': 1 };
+
+  function recommend() {
+    const problem = document.getElementById('qas-problem').value;
+    const size = parseInt(document.getElementById('qas-size').value) || 20;
+    const era = document.getElementById('qas-era').value;
+    const priority = document.getElementById('qas-priority').value;
+    const classicalTime = parseFloat(document.getElementById('qas-classical').value) || 3600;
+
+    // Filter by problem and era
+    let candidates = Object.entries(algos).filter(([id, a]) => {
+      if (!a.problems.includes(problem)) return false;
+      if (era === 'nisq' && !a.nisq) return false;
+      if (era === 'ft' && !a.ft) return false;
+      return true;
+    });
+
+    if (candidates.length === 0) {
+      candidates = Object.entries(algos).filter(([id, a]) => a.problems.includes(problem));
+    }
+
+    // Score and sort
+    candidates.forEach(([id, a]) => {
+      let score = 0;
+      if (priority === 'speedup') score = speedupMap[a.speedup] * 30;
+      else if (priority === 'feasibility') score = (a.nisq ? 40 : 10) + speedupMap[a.speedup] * 10;
+      else if (priority === 'qubits') score = 50 - size * (a.qubits.includes('2n') ? 2 : a.qubits.includes('n') ? 1 : 0.5);
+
+      // Estimate quantum time
+      let quantumTime;
+      if (a.speedup === 'Exponential' || a.speedup.includes('Exponential')) {
+        quantumTime = classicalTime / Math.pow(2, size / 4);
+      } else if (a.speedup === 'Quadratic') {
+        quantumTime = Math.sqrt(classicalTime);
+      } else {
+        quantumTime = classicalTime / 10; // heuristic estimate
+      }
+      a.score = Math.round(score);
+      a.quantumTime = quantumTime;
+    });
+
+    candidates.sort((a, b) => b[1].score - a[1].score);
+
+    const html = candidates.map(([id, a], i) => {
+      const eraBadge = a.nisq ? '<span class="it-badge it-badge-good">NISQ Ready</span>' : '<span class="it-badge it-badge-warn">Fault-Tolerant Required</span>';
+      const speedupBadge = a.speedup === 'Exponential' || a.speedup.includes('Exponential') ? 'it-badge-good' : a.speedup === 'Quadratic' ? 'it-badge-warn' : 'it-badge-neutral';
+      return `<div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:1rem 1.25rem;margin-bottom:0.75rem;border-left:4px solid #a78bfa;${i === 0 ? 'background:color-mix(in srgb,#a78bfa 5%,transparent);' : ''}">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem;">
+          <div>
+            <strong style="font-size:0.9375rem;">${i + 1}. ${a.name}</strong>
+            <span style="font-size:0.75rem;color:var(--tl-text-muted);margin-left:0.5rem;">${a.category}</span>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="it-badge ${speedupBadge}">${a.speedup} speedup</span>
+            ${eraBadge}
+            <span class="it-badge it-badge-neutral">Score: ${a.score}</span>
+          </div>
+        </div>
+        <table class="it-table" style="margin-top:0.5rem;">
+          <tbody>
+            <tr><td>Use Case</td><td>${a.useCase}</td></tr>
+            <tr><td>Qubits Required</td><td>${a.qubits}</td></tr>
+            <tr><td>Circuit Depth</td><td>${a.depth}</td></tr>
+            <tr><td>Est. Quantum Time</td><td class="it-highlight">${a.quantumTime < 1 ? a.quantumTime.toFixed(4) + ' s' : a.quantumTime < 60 ? a.quantumTime.toFixed(1) + ' s' : a.quantumTime < 3600 ? (a.quantumTime / 60).toFixed(1) + ' min' : (a.quantumTime / 3600).toFixed(1) + ' hr'}</td></tr>
+            <tr><td>Classical Baseline</td><td>${classicalTime < 60 ? classicalTime + ' s' : classicalTime < 3600 ? (classicalTime / 60).toFixed(0) + ' min' : (classicalTime / 3600).toFixed(1) + ' hr'}</td></tr>
+          </tbody>
+        </table>
+      </div>`;
+    }).join('');
+
+    document.getElementById('qas-recommendations').innerHTML = html || '<div class="it-alert it-alert-warn">⚠️ No algorithms found for this problem type. Try a different problem or hardware era.</div>';
+
+    const best = candidates[0];
+    const insight = document.getElementById('qas-insight');
+    if (best) {
+      insight.innerHTML = `<strong>💡 Top Recommendation: ${best[1].name}</strong> with ${best[1].speedup} speedup. ${best[1].nisq ? 'This algorithm is NISQ-compatible and can run on current quantum hardware.' : 'This algorithm requires fault-tolerant quantum hardware — not yet available at scale.'} Estimated quantum runtime: ${best[1].quantumTime < 1 ? best[1].quantumTime.toFixed(4) + ' seconds' : best[1].quantumTime.toFixed(1) + ' seconds'} vs ${classicalTime} seconds classical. ${best[1].speedup.includes('Heuristic') ? 'Note: Heuristic speedup is not guaranteed — results depend on problem structure.' : ''}`;
+    }
+
+    document.getElementById('qas-results').classList.add('show');
+
+    // === Feature 1: Speedup Comparison Chart ===
+    const suCanvas = document.getElementById('qas-speedup-canvas');
+    const suCtx = suCanvas.getContext('2d');
+    const suW = suCanvas.width, suH = suCanvas.height;
+    suCtx.fillStyle = '#ebedf5'; suCtx.fillRect(0, 0, suW, suH);
+    const suData = candidates.map(([id, a]) => ({ name: a.name, speedup: speedupMap[a.speedup], quantumTime: a.quantumTime, classicalTime }));
+    const suMax = Math.max(...suData.map(d => d.speedup)) * 1.1;
+    const suBarW = (suW - 150) / suData.length - 10;
+    suData.forEach((d, i) => {
+      const x = 130 + i * (suBarW + 10);
+      const barH = (d.speedup / suMax) * (suH - 60);
+      const colors = ['#a78bfa', '#8b5cf6', '#7c3aed', '#6d28d9', '#5b21b6'];
+      suCtx.fillStyle = colors[i % colors.length];
+      suCtx.fillRect(x, suH - 30 - barH, suBarW, barH);
+      suCtx.fillStyle = '#1e293b'; suCtx.font = '9px sans-serif'; suCtx.textAlign = 'center';
+      suCtx.fillText(d.name.substring(0, 12), x + suBarW / 2, suH - 15);
+      suCtx.fillText(d.speedup.toFixed(1) + 'x', x + suBarW / 2, suH - 35 - barH);
+    });
+    suCtx.fillStyle = '#64748b'; suCtx.font = '10px sans-serif'; suCtx.textAlign = 'left';
+    suCtx.fillText('Speedup Score (higher = better)', 10, 20);
+    document.getElementById('qas-speedup-list').innerHTML = `<div class="it-alert it-alert-info">Speedup scores: Exponential = 3.0, Potential Exponential = 2.5, Quadratic = 2.0, Polynomial = 1.5, Heuristic = 1.0. Higher scores indicate greater theoretical advantage over classical computation. Heuristic speedups (VQE, QAOA, QML) are not guaranteed and depend on problem structure and ansatz selection.</div>`;
+    document.getElementById('qas-speedup-section').style.display = 'block';
+
+    // === Feature 2: Resource Requirements ===
+    const resourceData = candidates.map(([id, a]) => {
+      const logicalQubits = a.qubits.includes('2n') ? 2 * size + 3 : a.qubits.includes('n') ? size : a.qubits.includes('log') ? Math.ceil(Math.log2(Math.pow(2, size))) : Math.ceil(size * 0.5);
+      const physicalQubits = a.ft ? logicalQubits * 1000 : logicalQubits * 10;
+      const depthVal = a.depth.includes('n³') ? Math.pow(size, 3) : a.depth.includes('√N') ? Math.sqrt(Math.pow(2, size)) : a.depth.includes('n²') ? size * size : a.depth.includes('t²') ? size * size : a.depth.includes('log') ? Math.ceil(Math.log2(Math.pow(2, size))) : size * 10;
+      return { name: a.name, logicalQubits, physicalQubits, depth: Math.round(depthVal), ft: a.ft };
+    });
+    document.getElementById('qas-resource-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Algorithm</th><th>Logical Qubits</th><th>Physical Qubits (est.)</th><th>Circuit Depth</th><th>Gate Count (est.)</th><th>Memory (qubits×depth)</th></tr></thead><tbody>
+        ${resourceData.map(r => `<tr><td><strong>${r.name}</strong></td><td>${r.logicalQubits}</td><td class="it-highlight">${r.physicalQubits.toLocaleString()}</td><td>${r.depth.toLocaleString()}</td><td>${(r.depth * r.logicalQubits).toLocaleString()}</td><td>${(r.logicalQubits * r.depth).toLocaleString()}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Physical qubit estimates assume 1000:1 overhead for fault-tolerant algorithms (surface code) and 10:1 for NISQ (no error correction). Gate count ≈ depth × qubits. Current hardware: IBM Condor (1121 qubits), Atom Computing (1180 qubits). Fault-tolerant algorithms at n=${size} require ${resourceData.find(r => r.ft)?.physicalQubits.toLocaleString() || 'N/A'} physical qubits — likely available by 2030-2035.</div>
+    `;
+    document.getElementById('qas-resource-section').style.display = 'block';
+
+    // === Feature 3: Quantum vs Classical Time ===
+    document.getElementById('qas-time-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Algorithm</th><th>Classical Time</th><th>Quantum Time</th><th>Speedup Factor</th><th>Crossover Point</th></tr></thead><tbody>
+        ${candidates.map(([id, a]) => {
+          const qt = a.quantumTime;
+          const factor = classicalTime / qt;
+          const crossover = a.speedup.includes('Exponential') ? Math.ceil(Math.log(classicalTime) / Math.log(2) * 4) : a.speedup === 'Quadratic' ? Math.ceil(classicalTime) : 'N/A';
+          return `<tr><td><strong>${a.name}</strong></td><td>${classicalTime < 60 ? classicalTime + ' s' : classicalTime < 3600 ? (classicalTime / 60).toFixed(0) + ' min' : (classicalTime / 3600).toFixed(1) + ' hr'}</td><td class="it-highlight">${qt < 0.001 ? qt.toExponential(2) + ' s' : qt < 1 ? qt.toFixed(4) + ' s' : qt < 60 ? qt.toFixed(1) + ' s' : qt < 3600 ? (qt / 60).toFixed(1) + ' min' : (qt / 3600).toFixed(1) + ' hr'}</td><td style="color:${factor > 100 ? '#059669' : factor > 10 ? '#d97706' : '#94a3b8'};font-weight:700;">${factor > 1000 ? factor.toExponential(1) + 'x' : factor.toFixed(1) + 'x'}</td><td>${typeof crossover === 'number' ? 'n ≈ ' + crossover : crossover}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Crossover point = problem size where quantum beats classical. Exponential speedup algorithms have low crossover points (n ≈ 20-30). Quadratic speedup requires larger problems (n > 1000). For small problems, classical computers may still be faster due to quantum overhead (initialization, readout, error correction latency).</div>
+    `;
+    document.getElementById('qas-time-section').style.display = 'block';
+
+    // === Feature 4: Algorithm Complexity Analysis ===
+    const complexityData = candidates.map(([id, a]) => ({ name: a.name, timeComplexity: a.depth, spaceComplexity: a.qubits, speedup: a.speedup, category: a.category }));
+    document.getElementById('qas-complexity-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Algorithm</th><th>Time Complexity</th><th>Space Complexity</th><th>Speedup Type</th><th>Optimal?</th><th>Lower Bound</th></tr></thead><tbody>
+        ${complexityData.map(c => `<tr><td><strong>${c.name}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${c.timeComplexity}</td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${c.spaceComplexity}</td><td>${c.speedup}</td><td style="color:${c.speedup.includes('Exponential') ? '#059669' : '#d97706'};">${c.speedup.includes('Exponential') ? '✓ Optimal' : '~ Near-optimal'}</td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${c.speedup === 'Quadratic' ? 'Ω(√N)' : c.speedup.includes('Exponential') ? 'Ω(log N)' : 'Ω(poly)'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Grover's algorithm is provably optimal for unstructured search (Ω(√N) lower bound). Shor's algorithm achieves exponential speedup for factoring — no known classical polynomial-time algorithm exists. Heuristic algorithms (VQE, QAOA) have no proven speedup guarantee — performance depends on ansatz and problem structure. Always validate with benchmarks.</div>
+    `;
+    document.getElementById('qas-complexity-section').style.display = 'block';
+
+    // === Feature 5: Implementation Roadmap ===
+    const roadmapSteps = [
+      { phase: 'Phase 1: Problem Encoding', duration: '1-2 weeks', desc: 'Map your problem to quantum circuit representation. Define input encoding, oracle construction, and measurement strategy.', tools: 'Qiskit, Cirq, PennyLane' },
+      { phase: 'Phase 2: Simulator Validation', duration: '2-4 weeks', desc: 'Test algorithm on classical simulator with small problem sizes. Verify correctness and calibrate parameters.', tools: 'Aer simulator, statevector sim' },
+      { phase: 'Phase 3: Noise-Aware Design', duration: '2-6 weeks', desc: 'Optimize circuit for target hardware. Apply noise mitigation (ZNE, PEC, dynamical decoupling). Minimize depth and two-qubit gates.', tools: 'Qiskit transpiler, t|ket⟩' },
+      { phase: 'Phase 4: Hardware Execution', duration: '4-12 weeks', desc: 'Run on real quantum hardware. Collect statistics over many shots. Apply error mitigation post-processing.', tools: 'IBM Quantum, IonQ, Rigetti' },
+      { phase: 'Phase 5: Benchmarking', duration: '2-4 weeks', desc: 'Compare quantum results vs classical baselines. Measure solution quality, runtime, and cost. Document performance.', tools: 'Custom benchmarks, Qiskit benchmarks' },
+      { phase: 'Phase 6: Production Deployment', duration: 'Ongoing', desc: 'Integrate quantum solution into production pipeline. Set up monitoring, job scheduling, and hybrid orchestration.', tools: 'Qiskit Runtime, AWS Braket, Azure Quantum' },
+    ];
+    document.getElementById('qas-roadmap-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Phase</th><th>Duration</th><th>Description</th><th>Tools</th></tr></thead><tbody>
+        ${roadmapSteps.map(r => `<tr><td><strong>${r.phase}</strong></td><td>${r.duration}</td><td style="font-size:0.8125rem;">${r.desc}</td><td style="font-size:0.8125rem;">${r.tools}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Total estimated timeline: 11-32 weeks for first production deployment. NISQ algorithms (VQE, QAOA) can be deployed faster. Fault-tolerant algorithms (Shor, HHL) require waiting for hardware maturity. Start with simulator validation to de-risk before committing hardware budget.</div>
+    `;
+    document.getElementById('qas-roadmap-section').style.display = 'block';
+
+    // === Feature 6: Hardware Compatibility Matrix ===
+    const hwBackends = ['IBM (Superconducting)', 'IonQ (Trapped Ion)', 'Rigetti (Superconducting)', 'Quantinuum (Trapped Ion)', 'Atom Computing (Neutral Atom)', 'PsiQuantum (Photonic)'];
+    const hwCompat = {
+      shor: [false, false, false, false, false, true],
+      grover: [true, true, true, true, true, false],
+      vqe: [true, true, true, true, true, false],
+      qaoa: [true, true, true, true, true, false],
+      qml: [true, true, true, true, true, false],
+      hhl: [false, false, false, false, false, true],
+      qft: [false, true, false, true, false, true],
+      qpe: [false, true, false, true, false, true],
+      amplitude: [true, true, true, true, true, false],
+      qwalk: [false, true, false, true, false, true],
+    };
+    document.getElementById('qas-hw-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Algorithm</th>${hwBackends.map(h => `<th style="font-size:0.7rem;">${h.split(' ')[0]}</th>`).join('')}</tr></thead><tbody>
+        ${candidates.map(([id, a]) => `<tr><td><strong>${a.name}</strong></td>${(hwCompat[id] || [false,false,false,false,false,false]).map(c => `<td style="text-align:center;color:${c ? '#059669' : '#94a3b8'};">${c ? '✓' : '—'}</td>`).join('')}</tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">NISQ algorithms run on current superconducting and trapped ion hardware. Fault-tolerant algorithms require photonic or large-scale trapped ion systems with error correction. Trapped ion systems (IonQ, Quantinuum) support all-to-all connectivity — better for algorithms requiring long-range entanglement. Superconducting (IBM) has faster gates but limited connectivity.</div>
+    `;
+    document.getElementById('qas-hw-section').style.display = 'block';
+
+    // === Feature 7: Error Correction Requirements ===
+    const qecData = candidates.filter(([id, a]) => a.ft).map(([id, a]) => {
+      const logQ = a.qubits.includes('2n') ? 2 * size + 3 : a.qubits.includes('n') ? size : Math.ceil(size * 0.5);
+      const surfaceCode = Math.ceil(logQ * 1000);
+      const codeDistance = Math.ceil(Math.sqrt(surfaceCode / logQ));
+      const tGateCount = Math.pow(size, 3) * 10;
+      const tFactories = Math.ceil(tGateCount / 1000000);
+      return { name: a.name, logicalQubits: logQ, physicalQubits: surfaceCode, codeDistance, tGateCount, tFactories };
+    });
+    document.getElementById('qas-qec-list').innerHTML = qecData.length > 0 ? `
+      <table class="it-table"><thead><tr><th>Algorithm</th><th>Logical Qubits</th><th>Physical Qubits</th><th>Code Distance</th><th>T-Gate Count</th><th>T-Factory Count</th><th>Error Budget</th></tr></thead><tbody>
+        ${qecData.map(q => `<tr><td><strong>${q.name}</strong></td><td>${q.logicalQubits}</td><td class="it-highlight">${q.physicalQubits.toLocaleString()}</td><td>${q.codeDistance}</td><td>${q.tGateCount.toLocaleString()}</td><td>${q.tFactories}</td><td style="color:#059669;">≤ 1/1000</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Surface code parameters: physical error rate 1e-3, code distance d=${qecData[0]?.codeDistance || 17}, logical error rate ~1e-12. T-gate factories produce magic states for non-Clifford operations. Each T-factory uses ~100 physical qubits. Total physical qubit count includes data qubits + ancilla + T-factories. Current hardware is 10-100x short of fault-tolerant requirements for n=${size}.</div>
+    ` : '<div class="it-alert it-alert-good">✓ All recommended algorithms are NISQ-compatible — no error correction required. Use error mitigation instead (ZNE, PEC, readout calibration).</div>';
+    document.getElementById('qas-qec-section').style.display = 'block';
+
+    // === Feature 8: Benchmark Problem Generator ===
+    const benchProblems = {
+      factoring: { name: 'Semi-prime factoring', instances: [`N = ${Math.pow(2, size) - 1} (Mersenne)`, `N = ${size}-bit RSA modulus`, `N = 15 (test case)`, `N = 21 (smallest Shor demo)`, `N = ${Math.pow(2, Math.min(size, 8)) * 3 + 1}`], metric: 'Correct factor found' },
+      search: { name: 'Unstructured search', instances: [`N = ${Math.pow(2, size)} items`, `Find marked item in ${Math.pow(2, Math.min(size, 10))}-element database`, `SAT with ${size} variables`, `3-SAT instance with ${Math.min(size * 2, 100)} clauses`], metric: 'Iterations to find target' },
+      optimization: { name: 'Combinatorial optimization', instances: [`MaxCut on ${size}-node graph`, `TSP with ${Math.min(size, 20)} cities`, `Portfolio with ${size} assets`, `QUBO with ${size} variables`], metric: 'Approximation ratio' },
+      chemistry: { name: 'Molecular simulation', instances: [`H2 (2 qubits)`, `LiH (12 qubits)`, `H2O (14 qubits)`, `N2 (20 qubits)`, `FeMoco (154 qubits, future)`], metric: 'Energy accuracy (Hartree)' },
+      ml: { name: 'Quantum ML', instances: [`Iris classification (4 features)`, `MNIST subset (${size} features)`, `Anomaly detection (${size} dims)`, `Quantum kernel SVM`], metric: 'Classification accuracy' },
+      linear: { name: 'Linear systems', instances: [`Random ${size}×${size} sparse matrix`, `Banded matrix (bandwidth ${Math.min(size, 10)})`, `Laplacian on ${size}-node graph`, `Toeplitz matrix ${size}×${size}`], metric: 'Solution error ||x-x*||' },
+      simulation: { name: 'Quantum simulation', instances: [`Heisenberg model (${size} spins)`, `Transverse-field Ising (${size} sites)`, `Hubbard model (${size} sites)`, `Trotter steps: ${Math.min(size, 50)}`], metric: 'Fidelity to exact solution' },
+      metrology: { name: 'Quantum metrology', instances: [`Phase estimation (precision 1e-${Math.min(size, 12)})`, `Frequency estimation`, `Magnetic field sensing`, `Atomic clock comparison`], metric: 'Estimation variance' },
+    };
+    const bench = benchProblems[problem] || benchProblems.optimization;
+    document.getElementById('qas-bench-list').innerHTML = `
+      <div class="it-results-title">Benchmark: ${bench.name}</div>
+      <table class="it-table"><thead><tr><th>Instance</th><th>Expected Metric</th><th>Classical Baseline</th><th>Quantum Target</th></tr></thead><tbody>
+        ${bench.instances.map((inst, i) => `<tr><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${inst}</td><td>${bench.metric}</td><td>${i === 0 ? 'Exact (small)' : i === 1 ? 'Approximate' : 'Heuristic'}</td><td class="it-highlight">${i === 0 ? 'Exact (fast)' : i === 1 ? 'Exact (slower)' : 'Heuristic (faster)'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Use these benchmark instances to validate your quantum implementation. Start with the smallest instance and scale up. Compare quantum results against classical baselines using the specified metric. For NISQ algorithms, run 1000+ shots and report mean ± std. For fault-tolerant, simulate with exact statevector on small instances.</div>
+    `;
+    document.getElementById('qas-bench-section').style.display = 'block';
+
+    // === Feature 9: Algorithm Combination Suggestions ===
+    const combos = [
+      { combo: 'Grover + QAOA', desc: 'Use Grover amplitude amplification to speed up QAOA state preparation', benefit: 'Quadratic speedup on ansatz preparation', applicable: problem === 'optimization' || problem === 'search' },
+      { combo: 'VQE + QPE', desc: 'Use VQE for initial state, then QPE for high-precision energy refinement', benefit: 'Chemically accurate results with fewer qubits', applicable: problem === 'chemistry' || problem === 'simulation' },
+      { combo: 'QAOA + Classical Optimizer', desc: 'Hybrid approach: quantum circuit evaluates objective, classical optimizer updates parameters', benefit: 'Leverages both quantum and classical strengths', applicable: problem === 'optimization' },
+      { combo: 'Grover + HHL', desc: 'Use Grover to prepare input state for HHL linear solver', benefit: 'Quadratic speedup on state preparation', applicable: problem === 'linear' || problem === 'search' },
+      { combo: 'QML + Classical Preprocessing', desc: 'Classical dimensionality reduction (PCA) followed by quantum kernel classification', benefit: 'Reduces qubit requirements while keeping quantum advantage', applicable: problem === 'ml' },
+      { combo: 'QFT + Shor', desc: "QFT is a subroutine of Shor's algorithm for period finding", benefit: 'Essential component — already integrated', applicable: problem === 'factoring' },
+    ];
+    const relevantCombos = combos.filter(c => c.applicable);
+    document.getElementById('qas-combo-list').innerHTML = relevantCombos.length > 0 ? `
+      <table class="it-table"><thead><tr><th>Combination</th><th>Description</th><th>Benefit</th></tr></thead><tbody>
+        ${relevantCombos.map(c => `<tr><td><strong>${c.combo}</strong></td><td style="font-size:0.8125rem;">${c.desc}</td><td style="color:#059669;font-size:0.8125rem;">${c.benefit}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${relevantCombos.length} algorithm combination(s) applicable to your problem. Hybrid quantum-classical approaches often outperform pure quantum on NISQ hardware. Consider variational approaches that delegate heavy computation to classical optimizers while using quantum circuits for state evaluation.</div>
+    ` : '<div class="it-alert it-alert-info">No specific algorithm combinations recommended for this problem type. Consider hybrid quantum-classical approaches with classical preprocessing.</div>';
+    document.getElementById('qas-combo-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('qas-export').style.display = 'inline-flex';
+    document.getElementById('qas-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), problem, problemSize: size, era, priority, classicalTime, recommendations: candidates.map(([id, a]) => ({ id, name: a.name, category: a.category, speedup: a.speedup, score: a.score, quantumTime: a.quantumTime, nisq: a.nisq, ft: a.ft, qubits: a.qubits, depth: a.depth })), resourceEstimates: resourceData, benchmark: bench, combinations: relevantCombos };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'quantum-algorithm-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('qas-recommend').addEventListener('click', recommend);
+  document.getElementById('qas-reset').addEventListener('click', () => {
+    document.getElementById('qas-results').classList.remove('show');
+  });
+})();
+</script>

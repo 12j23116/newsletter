@@ -1,0 +1,75 @@
+---
+import { allEpisodes } from '../../data/podcast/podcast-content';
+
+const topicImages: Record<string, string[]> = {
+  AI: ['ai-01-neural-brain.webp','ai-02-ml-training.webp','ai-03-llm-chat.webp','ai-04-computer-vision.webp','ai-05-chip-fabrication.webp','ai-06-drone-swarm.webp','ai-07-healthcare-diagnostic.webp','ai-08-generative-art.webp','ai-09-edge-iot.webp','ai-10-ethics-governance.webp'],
+  Cybersecurity: ['cyber-01-soc-threat-hunting.webp','cyber-02-red-team-pentest.webp','cyber-03-firewall-shield.webp','cyber-04-zero-trust-architecture.webp','cyber-05-ransomware-response.webp','cyber-06-bug-bounty.webp','cyber-07-hsm-vault.webp','cyber-08-phishing-training.webp','cyber-09-cloud-security-scan.webp','cyber-10-mfa-biometric-gate.webp'],
+  Space: ['space-01-orbital-station.webp','space-02-mars-habitat.webp','space-03-spacewalk-repair.webp','space-04-rocket-launch.webp','space-05-satellite-constellation.webp','space-06-lunar-construction.webp','space-07-asteroid-mining.webp','space-08-space-telescope.webp','space-09-booster-landing.webp','space-10-ice-moon-probe.webp'],
+  Biotech: ['biotech-01-crispr-editing.webp','biotech-02-mrna-bioreactor.webp','biotech-03-lab-grown-organ.webp','biotech-04-microbiome-research.webp','biotech-05-protein-folding.webp','biotech-06-stem-cell-culture.webp','biotech-07-vertical-farm.webp','biotech-08-dna-sequencer.webp','biotech-09-personalized-genomics.webp','biotech-10-biosensor-wearable.webp'],
+  Nuclear: ['nuclear-01-smr-vessel.webp','nuclear-02-control-room.webp','nuclear-03-spent-fuel-casks.webp','nuclear-04-reactor-internals.webp','nuclear-05-nuclear-medicine.webp','nuclear-06-decommissioning-robot.webp','nuclear-07-molten-salt-reactor.webp','nuclear-08-cooling-towers.webp','nuclear-09-rtg-space-power.webp','nuclear-10-hybrid-reactor.webp'],
+  'Energy Storage': ['energy-01-grid-battery-farm.webp','energy-02-battery-rack-wiring.webp','energy-03-home-battery-garage.webp','energy-04-pumped-hydro.webp','energy-05-solid-state-lab.webp','energy-06-ev-megacharger.webp','energy-07-flow-battery-tanks.webp','energy-08-smart-grid-control.webp','energy-09-solar-microgrid.webp','energy-10-battery-repurpose.webp'],
+  Robotics: ['robotics-01-cobot-assembly.webp','robotics-02-surgical-robot.webp','robotics-03-warehouse-amr.webp','robotics-04-agricultural-harvest.webp','robotics-05-underwater-rov.webp','robotics-06-quadruped-rescue.webp','robotics-07-welding-arm.webp','robotics-08-exoskeleton.webp','robotics-09-mars-rover.webp','robotics-10-micro-drones.webp'],
+  AV: ['av-01-self-driving-sedan.webp','av-02-robotaxi-urban.webp','av-03-lidar-pointcloud.webp','av-04-truck-platoon.webp','av-05-valet-parking.webp','av-06-delivery-van.webp','av-07-smart-intersection.webp','av-08-hands-free-commute.webp','av-09-evtol-vertiport.webp','av-10-fleet-charging.webp'],
+  Quantum: ['quantum-01-cryogenic-fridge.webp','quantum-02-ion-trap-processor.webp','quantum-03-entanglement-photons.webp','quantum-04-annealing-machine.webp','quantum-05-cryptography-qkd.webp','quantum-06-molecule-simulation.webp','quantum-07-topological-qubit.webp','quantum-08-internet-repeater.webp','quantum-09-error-correction.webp','quantum-10-quantum-radar.webp'],
+  Materials: ['materials-01-graphene-lattice.webp','materials-02-carbon-nanotube.webp','materials-03-aerogel-demo.webp','materials-04-metamaterial-cloak.webp','materials-05-3d-printed-titanium.webp','materials-06-self-healing-polymer.webp','materials-07-superconductor-levitation.webp','materials-08-perovskite-solar.webp','materials-09-nanomaterial-fab.webp','materials-10-biodegradable-plastic.webp'],
+  BCI: ['bci-01-neural-implant-surgery.webp','bci-02-eeg-meditation.webp','bci-03-prosthetic-arm.webp','bci-04-vr-neurofeedback.webp','bci-05-brain-to-text.webp','bci-06-fmri-mapping.webp','bci-07-cochlear-implant.webp','bci-08-mind-wheelchair.webp','bci-09-sleep-lab.webp','bci-10-neural-dust.webp'],
+  Fusion: ['fusion-01-tokamak-plasma.webp','fusion-02-stellarator-coils.webp','fusion-03-control-room.webp','fusion-04-laser-ignition.webp','fusion-05-tritium-fuel.webp','fusion-06-magnet-winding.webp','fusion-07-power-plant-skyline.webp','fusion-08-helium3-mining.webp','fusion-09-plasma-spectroscopy.webp','fusion-10-compact-prototype.webp'],
+};
+
+const topicCounters: Record<string, number> = {};
+const getImage = (topic: string) => {
+  const images = topicImages[topic] || topicImages['AI'];
+  const idx = (topicCounters[topic] || 0) % images.length;
+  topicCounters[topic] = (topicCounters[topic] || 0) + 1;
+  return `/images/${images[idx]}`;
+};
+---
+
+<section class="pc-archive">
+  <div class="pc-archive-head">
+    <h2 class="pc-section-title">Episode <span class="pc-grad">Archive</span></h2>
+    <span class="pc-archive-count" id="pc-archive-count">Showing {allEpisodes.length} episodes</span>
+  </div>
+  <div class="pc-archive-grid" id="pc-archive-grid">
+    {allEpisodes.map((ep, i) => (
+      <a
+        href={`/podcast/${ep.slug}`}
+        class="pc-ep-card"
+        data-topic={ep.topic}
+        data-index={i}
+        style={`--card-color:${ep.topicColor}`}
+      >
+        <div class="pc-ep-card-img" style={`background:${ep.topicColor}15;`}>
+          <img src={getImage(ep.topic)} alt={ep.title} loading="lazy" width="400" height="225" />
+          <div class="pc-ep-card-img-overlay" style={`background: linear-gradient(180deg, transparent 40%, ${ep.topicColor}25);`}></div>
+          <span class="pc-ep-card-cat" style={`--cat-color:${ep.topicColor}; background:${ep.topicColor};`}>{ep.topic}</span>
+          <div class="pc-ep-card-play-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="pc-ep-card-body">
+          <div class="pc-ep-card-top">
+            <span class="pc-ep-card-num">#{ep.id}</span>
+            <span class="pc-ep-card-date">{ep.date}</span>
+          </div>
+          <h3 class="pc-ep-card-title">{ep.title}</h3>
+          <p class="pc-ep-card-guest">{ep.guest}</p>
+          <p class="pc-ep-card-role">{ep.guestRole}</p>
+          <div class="pc-ep-card-foot">
+            <span class="pc-ep-card-play">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Play
+            </span>
+            <span class="pc-ep-card-duration">{ep.duration}</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+  <div class="pc-no-results" id="pc-no-results">
+    <div class="pc-no-results-icon">🎙️</div>
+    <h3>No episodes found</h3>
+    <p>Try a different topic filter.</p>
+  </div>
+  <div class="pc-pagination" id="pc-pagination" data-per-page="30" data-total={allEpisodes.length}></div>
+</section>

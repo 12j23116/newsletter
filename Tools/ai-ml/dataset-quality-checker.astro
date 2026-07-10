@@ -1,0 +1,27 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-coming-soon">
+    <div class="tool-coming-soon-icon">📋</div>
+    <h3 class="tool-coming-soon-title">Dataset Quality Checker</h3>
+    <p class="tool-coming-soon-desc">Upload your dataset and get automated quality analysis — class imbalance, missing values, label noise detection, outlier identification, and distribution shift alerts with actionable recommendations.</p>
+    <form class="tool-coming-soon-form" id="dqc-notify">
+      <input type="email" placeholder="you@example.com" required />
+      <button type="submit" class="tool-btn">Notify Me</button>
+    </form>
+    <div class="tool-coming-soon-success" id="dqc-success">✓ Thanks! We'll email you when this tool is ready.</div>
+  </div>
+</div>
+
+<script is:inline>
+document.getElementById('dqc-notify')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.querySelector('input').value = '';
+  document.getElementById('dqc-success')?.classList.add('show');
+  setTimeout(() => document.getElementById('dqc-success')?.classList.remove('show'), 4000);
+});
+</script>

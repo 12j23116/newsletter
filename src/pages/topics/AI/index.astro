@@ -1,0 +1,446 @@
+---
+/**
+ * AI topic Page — Premium Redesign
+ * Image-rich, glass-morphism, scroll reveals, unique layout.
+ * 13 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { aiContent } from '../../../data/topics/AI/ai-content';
+import './ai-styles.css';
+const c = aiContent;
+
+const topicImages = [
+  '/images/ai-06-drone-swarm.webp',
+  '/images/ai-03-llm-chat.webp',
+  '/images/ai-02-ml-training.webp',
+  '/images/ai-08-generative-art.webp',
+  '/images/ai-09-edge-iot.webp',
+  '/images/ai-05-chip-fabrication.webp',
+  '/images/ai-10-ethics-governance.webp',
+  '/images/ai-07-healthcare-diagnostic.webp',
+  '/images/ai-01-neural-brain.webp',
+];
+
+const industryImages = [
+  '/images/ai-07-healthcare-diagnostic.webp',
+  '/images/ai-05-chip-fabrication.webp',
+  '/images/ai-03-llm-chat.webp',
+  '/images/ai-08-generative-art.webp',
+];
+
+const marqueeItems = ['Agentic AI', 'LLMs', 'RAG', 'Multimodal', 'Edge AI', 'Coding Agents', 'AI Ethics', 'Path to AGI', '149M+ Searches', '$40B Market', '770% Growth', '90% Adoption'];
+---
+
+<BaseLayout title={`${c.name} — Trends, Tools & Future Outlook 2026-2030`} description={c.description} keywords="artificial intelligence, AI, LLMs, large language models, agentic AI, AI agents, RAG, multimodal AI, edge AI, AGI, machine learning, deep learning, generative AI, ChatGPT, GPT-5, Claude, Gemini, AI coding agents, AI ethics, AI in healthcare">
+  <div class="ai-page">
+
+    {/* ══ 1. HERO — Full-height with bg image + floating glass cards ══ */}
+    <section class="ai-hero">
+      <div class="ai-hero-bg">
+        <img src="/images/001-ai-neural-agent-cluster.webp" alt="AI neural agent cluster" loading="eager" />
+      </div>
+      <div class="ai-grid-overlay"></div>
+      <div class="ai-orb ai-hero-orb-1"></div>
+      <div class="ai-orb ai-hero-orb-2"></div>
+      <div class="ai-orb ai-hero-orb-3"></div>
+      <div class="ai-hero-inner">
+        <div class="ai-hero-left">
+          <span class="ai-hero-pill"><span class="ai-hero-dot"></span> Live · Updated 2026</span>
+          <h1>Artificial <span class="ai-grad-text">Intelligence</span></h1>
+          <p class="ai-hero-tagline">{c.tagline}</p>
+          <p class="ai-hero-desc">{c.description}</p>
+          <div class="ai-hero-ctas">
+            <a href="#topics" class="ai-btn ai-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="ai-btn ai-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="ai-hero-trust">
+            <div class="ai-avatar-stack">
+              <div class="ai-avatar" style="background:#3b82f6">A</div>
+              <div class="ai-avatar" style="background:#8b5cf6">B</div>
+              <div class="ai-avatar" style="background:#06b6d4">C</div>
+              <div class="ai-avatar" style="background:#10b981">D</div>
+            </div>
+            <div class="ai-hero-trust-text">
+              <strong>18K+ readers</strong> following AI coverage<br />
+              <span style="color:var(--ai-text-dim);font-size:0.75rem">★ ★ ★ ★ ★ Trusted by developers & researchers</span>
+            </div>
+          </div>
+        </div>
+        <div class="ai-hero-right">
+          <div class="ai-hero-badge ai-hero-badge-top">📈 +770% YoY</div>
+          <div class="ai-hero-card">
+            <div class="ai-hero-card-header">
+              <div class="ai-hero-card-dot"></div>
+              <span style="font-size:0.75rem;font-weight:600;color:var(--ai-text)">Agentic AI Market</span>
+              <span class="ai-hero-card-live">Live</span>
+            </div>
+            <div class="ai-hero-card-label">Market Size 2026</div>
+            <div class="ai-hero-card-value">$40B</div>
+            <div class="ai-hero-card-change">▲ +210% from 2024</div>
+            <div class="ai-hero-card-bar"><div class="ai-hero-card-bar-fill" style="width:78%"></div></div>
+          </div>
+          <div class="ai-hero-card">
+            <div class="ai-hero-card-header">
+              <div class="ai-hero-card-dot"></div>
+              <span style="font-size:0.75rem;font-weight:600;color:var(--ai-text)">Search Demand</span>
+              <span class="ai-hero-card-live">Trending</span>
+            </div>
+            <div class="ai-hero-card-label">Monthly US Searches</div>
+            <div class="ai-hero-card-value">149M+</div>
+            <div class="ai-hero-card-change">▲ 3.6× since 2022</div>
+            <div class="ai-hero-card-bar"><div class="ai-hero-card-bar-fill" style="width:92%"></div></div>
+          </div>
+          <div class="ai-hero-badge ai-hero-badge-bottom">🤖 57% deploy agents</div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="ai-marquee">
+      <div class="ai-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'ai-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="ai-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. MARKET STATS ══ */}
+    <section class="ai-section">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Market Snapshot</span>
+        <h2 class="ai-section-title ai-reveal">The AI Market by the <span class="ai-grad-text">Numbers</span></h2>
+        <p class="ai-section-sub ai-reveal">Real data from Google search demand, enterprise surveys, and market reports — not projections.</p>
+        <div class="ai-market-grid">
+          {c.marketStats.map((s) => (
+            <div class="ai-market-card ai-reveal">
+              <div class="ai-market-value">{s.value}</div>
+              <div class="ai-market-label">{s.label}</div>
+              <div class="ai-market-source">{s.source}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. TOPICS — Image-backed showcase cards ══ */}
+    <section class="ai-section ai-section-alt" id="topics">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Core Topics</span>
+        <h2 class="ai-section-title ai-reveal">What's Driving AI <span class="ai-grad-text">Search Demand</span></h2>
+        <p class="ai-section-sub ai-reveal">The nine topics capturing the most search interest — each backed by real volume and growth data.</p>
+        <div class="ai-topics-grid">
+          {c.topics.map((t, i) => (
+            <div class="ai-topic-card ai-reveal">
+              <div class="ai-topic-img-wrap">
+                <img class="ai-topic-img" src={topicImages[i]} alt={t.title} loading="lazy" />
+                <div class="ai-topic-img-overlay"></div>
+                <div class="ai-topic-icon">{t.icon}</div>
+              </div>
+              <div class="ai-topic-body">
+                <h3 class="ai-topic-title">{t.title}</h3>
+                <p class="ai-topic-desc">{t.description}</p>
+                <div class="ai-topic-meta">
+                  <span class="ai-topic-trend">{t.trend}</span>
+                  <span class="ai-topic-searches">{t.searches}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. AGENTIC AI DEEP DIVE — Split with image ══ */}
+    <section class="ai-section ai-agentic">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Deep Dive</span>
+        <div class="ai-agentic-inner">
+          <div class="ai-agentic-left ai-reveal">
+            <h3>{c.agenticAi.title}</h3>
+            <p class="ai-agentic-subtitle">{c.agenticAi.subtitle}</p>
+            <p class="ai-agentic-desc">{c.agenticAi.description}</p>
+            <div class="ai-agentic-stats">
+              {c.agenticAi.stats.map((s) => (
+                <div class="ai-agentic-stat">
+                  <div class="ai-agentic-stat-val">{s.value}</div>
+                  <div class="ai-agentic-stat-lbl">{s.label}</div>
+                </div>
+              ))}
+            </div>
+            <div class="ai-agentic-features">
+              {c.agenticAi.features.map((f) => (
+                <div class="ai-agentic-feature">
+                  <h4>{f.title}</h4>
+                  <p>{f.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="ai-agentic-right ai-reveal">
+            <div class="ai-agentic-img-wrap">
+              <img class="ai-agentic-img" src="/images/ai-06-drone-swarm.webp" alt="Autonomous AI agents" loading="lazy" />
+            </div>
+            <div class="ai-agentic-img-overlay"></div>
+            <div class="ai-agentic-badge">⚡ Fastest-growing AI topic</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. LLM LANDSCAPE ══ */}
+    <section class="ai-section">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Model Landscape</span>
+        <h2 class="ai-section-title ai-reveal">The LLM <span class="ai-grad-text">Frontier</span> in 2026</h2>
+        <p class="ai-section-sub ai-reveal">From proprietary frontier models to open-weight challengers — the landscape has never been more competitive.</p>
+        <div class="ai-llm-grid">
+          {c.llmModels.map((m) => (
+            <div class="ai-llm-card ai-reveal" style={`border-top:3px solid ${m.color}`}>
+              <div class="ai-llm-header">
+                <span class="ai-llm-name">{m.name}</span>
+                <span class="ai-llm-tag" style={`background:${m.color}22;color:${m.color}`}>{m.tag}</span>
+              </div>
+              <div class="ai-llm-vendor">{m.vendor}</div>
+              <div class="ai-llm-strength">{m.strength}</div>
+              <div class="ai-llm-pricing">{m.pricing}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. RAG — Bento grid ══ */}
+    <section class="ai-section ai-section-alt">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Enterprise AI</span>
+        <h2 class="ai-section-title ai-reveal">RAG: The Enterprise <span class="ai-grad-text">Standard</span></h2>
+        <p class="ai-section-sub ai-reveal">Retrieval-augmented generation has evolved from simple pipelines to sophisticated agentic loops with knowledge graphs.</p>
+        <div class="ai-rag-grid">
+          <div class="ai-rag-card ai-rag-card-large ai-reveal">
+            <h4>{c.ragFeatures[0].title}</h4>
+            <p>{c.ragFeatures[0].description}</p>
+            <span class="ai-rag-tag">🔥 Hot</span>
+          </div>
+          {c.ragFeatures.slice(1).map((f) => (
+            <div class="ai-rag-card ai-reveal">
+              <h4>{f.title}</h4>
+              <p>{f.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. MULTIMODAL — Cards with gradient headers ══ */}
+    <section class="ai-section">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Next Paradigm</span>
+        <h2 class="ai-section-title ai-reveal">Multimodal <span class="ai-grad-text">Intelligence</span></h2>
+        <p class="ai-section-sub ai-reveal">AI that sees, hears, reads, and generates across every modality — the next frontier beyond text-only models.</p>
+        <div class="ai-multi-grid">
+          {c.multimodalFeatures.map((f, i) => (
+            <div class="ai-multi-card ai-reveal">
+              <div class={`ai-multi-header ai-multi-header-${i + 1}`}>{['📝🖼️', '🎬', '🎙️', '🔄'][i]}</div>
+              <div class="ai-multi-body">
+                <h4>{f.title}</h4>
+                <p>{f.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. EDGE AI — Full-width with bg image ══ */}
+    <section class="ai-section ai-edge-section">
+      <div class="ai-edge-bg">
+        <img src="/images/ai-09-edge-iot.webp" alt="Edge AI and IoT devices" loading="lazy" />
+      </div>
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Privacy & Speed</span>
+        <h2 class="ai-section-title ai-reveal">Edge AI & <span class="ai-grad-text">On-Device</span> Intelligence</h2>
+        <p class="ai-section-sub ai-reveal">Small language models running locally — privacy-first, zero-latency, offline-capable. Gartner predicts 3× growth by 2027.</p>
+        <div class="ai-edge-grid">
+          {c.edgeAiFeatures.map((f) => (
+            <div class="ai-edge-card ai-reveal">
+              <h4>{f.title}</h4>
+              <p>{f.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 10. INDUSTRY APPS — Image header cards ══ */}
+    <section class="ai-section">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Real-World Impact</span>
+        <h2 class="ai-section-title ai-reveal">AI Across <span class="ai-grad-text">Industries</span></h2>
+        <p class="ai-section-sub ai-reveal">From drug discovery to automated coding — how AI is transforming every sector of the economy.</p>
+        <div class="ai-industry-grid">
+          {c.industryApps.map((ind, i) => (
+            <div class="ai-industry-card ai-reveal">
+              <div class="ai-industry-img-wrap">
+                <img class="ai-industry-img" src={industryImages[i]} alt={ind.industry} loading="lazy" />
+                <div class="ai-industry-img-overlay"></div>
+                <div class="ai-industry-icon" style={`background:${ind.color}22`}>{ind.icon}</div>
+              </div>
+              <div class="ai-industry-body">
+                <h3 class="ai-industry-name">{ind.industry}</h3>
+                <div class="ai-industry-list">
+                  {ind.applications.map((a) => (
+                    <div class="ai-industry-item">{a}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 11. ETHICS ══ */}
+    <section class="ai-section ai-section-alt">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Responsible AI</span>
+        <h2 class="ai-section-title ai-reveal">AI Ethics & <span class="ai-grad-text">Safety</span></h2>
+        <p class="ai-section-sub ai-reveal">As capabilities accelerate, alignment, bias, regulation, and transparency become critical challenges.</p>
+        <div class="ai-ethics-grid">
+          {c.ethicsTopics.map((t) => (
+            <div class="ai-ethics-card ai-reveal">
+              <h4>{t.title}</h4>
+              <p>{t.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 12. FUTURE TIMELINE ══ */}
+    <section class="ai-section">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">2026 → 2030</span>
+        <h2 class="ai-section-title ai-reveal">The <span class="ai-grad-text">Future</span> of AI</h2>
+        <p class="ai-section-sub ai-reveal">Five predictions for how AI evolves over the next four years — based on current trajectories and expert analysis.</p>
+        <div class="ai-future-timeline">
+          {c.futurePredictions.map((p) => (
+            <div class="ai-future-item ai-reveal">
+              <div class="ai-future-year">{p.year}</div>
+              <div class="ai-future-content">
+                <div class="ai-future-prediction">{p.prediction}</div>
+                <div class="ai-future-detail">{p.detail}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 13. TOOLS COMPARISON ══ */}
+    <section class="ai-section ai-section-alt">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">Tool Guide</span>
+        <h2 class="ai-section-title ai-reveal">Top AI <span class="ai-grad-text">Tools</span> Compared</h2>
+        <p class="ai-section-sub ai-reveal">The leading AI tools by topic — rated by user satisfaction, adoption, and real-world performance.</p>
+        <div class="ai-tools-grid">
+          {c.toolsComparison.map((t) => (
+            <div class="ai-tool-card ai-reveal">
+              <div class="ai-tool-header">
+                <span class="ai-tool-name">{t.tool}</span>
+                <span class="ai-tool-rating">★ {t.rating}</span>
+              </div>
+              <div class="ai-tool-cat">{t.topic}</div>
+              <div class="ai-tool-strength">{t.strength}</div>
+              <div class="ai-tool-users">{t.users} users</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 14. TRENDING SEARCHES ══ */}
+    <section class="ai-section">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">SEO Data</span>
+        <h2 class="ai-section-title ai-reveal">Trending AI <span class="ai-grad-text">Searches</span></h2>
+        <p class="ai-section-sub ai-reveal">Real Google search volume data showing what people are searching for — and how fast it's growing.</p>
+        <table class="ai-trending-table">
+          <thead>
+            <tr>
+              <th>Search Term</th>
+              <th>Volume</th>
+              <th>Growth</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.trendingSearches.map((s) => (
+              <tr>
+                <td class="ai-trending-term">{s.term}</td>
+                <td>{s.volume}</td>
+                <td class="ai-trending-growth">{s.growth}</td>
+                <td><span class={`ai-trending-type ${s.type.toLowerCase()}`}>{s.type}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ══ 15. FAQ ══ */}
+    <section class="ai-section ai-section-alt" id="faq">
+      <div class="ai-container">
+        <span class="ai-eyebrow ai-reveal">FAQ</span>
+        <h2 class="ai-section-title ai-reveal">Frequently Asked <span class="ai-grad-text">Questions</span></h2>
+        <p class="ai-section-sub ai-reveal">Structured answers to the most common AI questions — optimized for AI search citation.</p>
+        <div class="ai-faq-list">
+          {c.faqs.map((f) => (
+            <details class="ai-faq-item">
+              <summary>{f.q}</summary>
+              <div class="ai-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 16. CTA — Full-width with bg image ══ */}
+    <section class="ai-cta">
+      <div class="ai-cta-bg">
+        <img src="/images/013-ai-character-violet.webp" alt="AI character" loading="lazy" />
+      </div>
+      <div class="ai-cta-inner">
+        <h3>Stay Ahead of the AI Curve</h3>
+        <p>Get the latest AI trends, tool reviews, and deep-dive analysis delivered weekly.</p>
+        <a href="/blog?category=AI" class="ai-cta-btn">Explore AI Articles →</a>
+        <div class="ai-cta-pills">
+          <span class="ai-cta-pill">📊 Weekly trends</span>
+          <span class="ai-cta-pill">🔧 Tool reviews</span>
+          <span class="ai-cta-pill">🧠 Deep analysis</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.ai-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/AI' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/AI', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

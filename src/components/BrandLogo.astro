@@ -1,0 +1,23 @@
+---
+interface Props {
+  size?: number;
+  alt?: string;
+  class?: string;
+}
+
+const {
+  size = 34,
+  alt = 'TechNanoAI logo',
+  class: className = '',
+} = Astro.props;
+---
+
+<div class:list={['brand-logo-wrap', className]} style={`width:${size}px;height:${size}px`}>
+  <img
+    src="/images/logo/technanoai-icon.jfif"
+    alt={alt}
+    class="brand-logo"
+    loading="eager"
+    decoding="async"
+  />
+</div>

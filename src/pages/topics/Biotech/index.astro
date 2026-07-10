@@ -1,0 +1,257 @@
+---
+/**
+ * Biotech topic Page — Premium Redesign
+ * Unique layout: DNA-helix hero, organic shapes,
+ * biology-styled cards, cellular patterns.
+ * 8 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { biotechContent } from '../../../data/topics/Biotech/biotech-content';
+import './biotech-styles.css';
+const c = biotechContent;
+
+const marqueeItems = ['$1.77T Market', '13.6% CAGR', '2,154 Gene Therapies', 'CRISPR Casgevy', 'AI Drug Discovery', 'mRNA Vaccines', 'Synthetic Biology', '3D Bioprinting', 'Cell Therapy', 'Base Editing', 'Prime Editing', 'Regenerative Medicine'];
+
+const overviewImages = ['/images/biotech-01-crispr-editing.webp', '/images/biotech-02-mrna-bioreactor.webp'];
+const crisprImages = ['/images/biotech-03-lab-grown-organ.webp', '/images/biotech-04-microbiome-research.webp', '/images/biotech-05-protein-folding.webp', '/images/biotech-06-stem-cell-culture.webp'];
+const companyImages = ['/images/biotech-01-crispr-editing.webp', '/images/biotech-02-mrna-bioreactor.webp', '/images/biotech-03-lab-grown-organ.webp', '/images/biotech-04-microbiome-research.webp', '/images/biotech-05-protein-folding.webp', '/images/biotech-06-stem-cell-culture.webp'];
+---
+
+<BaseLayout title={`${c.name} — CRISPR, AI Drug Discovery & Gene Therapy 2026-2035`} description={c.description} keywords={[...c.seoKeywords.primary, ...c.seoKeywords.secondary].join(', ')}>
+  <div class="bt-page">
+
+    {/* ══ 1. HERO — DNA helix themed ══ */}
+    <section class="bt-hero">
+      <div class="bt-hero-bg">
+        <img src="/images/004-biotech-gene-editing.webp" alt="Biotechnology DNA helix" loading="eager" />
+      </div>
+      <div class="bt-grid-overlay"></div>
+      <div class="bt-dna-pattern"></div>
+      <div class="bt-orb bt-hero-orb-1"></div>
+      <div class="bt-orb bt-hero-orb-2"></div>
+      <div class="bt-orb bt-hero-orb-3"></div>
+      <div class="bt-hero-inner">
+        <div class="bt-hero-left">
+          <span class="bt-hero-pill"><span class="bt-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="bt-grad-text">Biotechnology</span></h1>
+          <p class="bt-hero-tagline">{c.tagline}</p>
+          <p class="bt-hero-desc">{c.description}</p>
+          <div class="bt-hero-ctas">
+            <a href="#sections" class="bt-btn bt-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="bt-btn bt-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="bt-hero-stats">
+            {c.stats.map((s) => (
+              <div class="bt-hero-stat">
+                <span class="bt-hero-stat-value">{s.value}</span>
+                <span class="bt-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="bt-hero-right">
+          <div class="bt-hero-img-wrap">
+            <img class="bt-hero-img" src="/images/biotech-01-crispr-editing.webp" alt="CRISPR gene editing" loading="eager" />
+            <div class="bt-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="bt-marquee">
+      <div class="bt-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'bt-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="bt-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. MARKET OVERVIEW ══ */}
+    <section class="bt-section" id="sections">
+      <div class="bt-container">
+        <span class="bt-eyebrow bt-reveal">Market Overview</span>
+        <h2 class="bt-section-title bt-reveal">The <span class="bt-grad-text">$1.77 Trillion</span> Biotech Market</h2>
+        <p class="bt-section-sub bt-reveal">Gene therapy breakthroughs, AI-powered drug discovery, and biosimilar adoption driving 13.6% CAGR.</p>
+        <div class="bt-section-grid bt-reveal">
+          <div class="bt-section-card">
+            <div class="bt-section-img-wrap">
+              <img class="bt-section-img" src={overviewImages[0]} alt={c.marketOverview.title} loading="lazy" />
+              <div class="bt-section-img-overlay"></div>
+            </div>
+            <div class="bt-section-header">
+              <div class="bt-section-eyebrow">Market Overview</div>
+              <h3 class="bt-section-title">{c.marketOverview.title}</h3>
+            </div>
+            <div class="bt-section-body">
+              <p class="bt-section-desc">{c.marketOverview.subtitle}</p>
+              <div class="bt-section-points">
+                {c.marketOverview.keyDrivers.map((d) => (
+                  <div class="bt-section-point">{d.title}: {d.desc}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="bt-section-card">
+            <div class="bt-section-img-wrap">
+              <img class="bt-section-img" src={overviewImages[1]} alt="Growth Catalysts" loading="lazy" />
+              <div class="bt-section-img-overlay"></div>
+            </div>
+            <div class="bt-section-header">
+              <div class="bt-section-eyebrow">Key Drivers</div>
+              <h3 class="bt-section-title">Growth Catalysts</h3>
+            </div>
+            <div class="bt-section-body">
+              <p class="bt-section-desc">Four key drivers accelerating biotech growth through 2035.</p>
+              <div class="bt-section-points">
+                {c.marketOverview.keyDrivers.map((d) => (
+                  <div class="bt-section-point"><strong>{d.title}</strong></div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. CRISPR ══ */}
+    <section class="bt-section bt-section-alt">
+      <div class="bt-container">
+        <span class="bt-eyebrow bt-reveal">Gene Editing</span>
+        <h2 class="bt-section-title bt-reveal">CRISPR & <span class="bt-grad-text">Gene Editing</span></h2>
+        <p class="bt-section-sub bt-reveal">From FDA-approved Casgevy to base editing and prime editing — the frontier of genome engineering.</p>
+        <div class="bt-crispr-grid bt-reveal">
+          {c.crispr.technologies.map((t, i) => (
+            <div class="bt-crispr-card">
+              <div class="bt-crispr-img-wrap">
+                <img class="bt-crispr-img" src={crisprImages[i % crisprImages.length]} alt={t.name} loading="lazy" />
+                <div class="bt-crispr-img-overlay"></div>
+              </div>
+              <h3 class="bt-crispr-name">{t.name}</h3>
+              <div class="bt-crispr-stage">{t.stage}</div>
+              <p class="bt-crispr-desc">{t.desc}</p>
+              <span class="bt-crispr-metric">{t.patients} patients</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. AI DRUG DISCOVERY ══ */}
+    <section class="bt-section">
+      <div class="bt-container">
+        <span class="bt-eyebrow bt-reveal">AI Revolution</span>
+        <h2 class="bt-section-title bt-reveal">AI-Powered <span class="bt-grad-text">Drug Discovery</span></h2>
+        <p class="bt-section-sub bt-reveal">200+ clinical-stage AI drug candidates — the $28 billion revolution transforming pharmaceuticals.</p>
+        <div class="bt-pipeline-grid bt-reveal">
+          {c.aiDrugDiscovery.pipeline.map((p) => (
+            <div class="bt-pipeline-card">
+              <div class="bt-pipeline-phase">{p.phase}</div>
+              <div class="bt-pipeline-count">{p.count}</div>
+              <div class="bt-pipeline-label">{p.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. COMPANIES ══ */}
+    <section class="bt-section bt-section-alt">
+      <div class="bt-container">
+        <span class="bt-eyebrow bt-reveal">Key Players</span>
+        <h2 class="bt-section-title bt-reveal">Leading <span class="bt-grad-text">Biotech Companies</span></h2>
+        <p class="bt-section-sub bt-reveal">The companies defining the next decade of biotechnology.</p>
+        <div class="bt-companies-grid bt-reveal">
+          {c.companies.list.map((co, i) => (
+            <div class="bt-company-card">
+              <div class="bt-company-img-wrap">
+                <img class="bt-company-img" src={companyImages[i % companyImages.length]} alt={co.name} loading="lazy" />
+                <div class="bt-company-img-overlay"></div>
+              </div>
+              <h3 class="bt-company-name">{co.name}</h3>
+              <div class="bt-company-focus">{co.focus}</div>
+              <p class="bt-company-desc">{co.notable}</p>
+              <span class="bt-company-metric">{co.stage}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. FUTURE — Cellular timeline ══ */}
+    <section class="bt-section">
+      <div class="bt-container">
+        <span class="bt-eyebrow bt-reveal">2026 → 2030</span>
+        <h2 class="bt-section-title bt-reveal">The <span class="bt-grad-text">Biotech</span> Future</h2>
+        <p class="bt-section-sub bt-reveal">Five predictions for the future of biotechnology.</p>
+        <div class="bt-future-timeline bt-reveal">
+          {c.futureOutlook.predictions.map((p) => (
+            <div class="bt-future-item">
+              <div class="bt-future-year-marker">{p.year}</div>
+              <div class="bt-future-content">
+                <div class="bt-future-year">{p.year}</div>
+                <div class="bt-future-prediction">{p.prediction}</div>
+                <div class="bt-future-detail">{p.detail}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="bt-section bt-section-alt" id="faq">
+      <div class="bt-container">
+        <span class="bt-eyebrow bt-reveal">FAQ</span>
+        <h2 class="bt-section-title bt-reveal">Frequently Asked <span class="bt-grad-text">Questions</span></h2>
+        <p class="bt-section-sub bt-reveal">Structured answers to the most common biotech questions — optimized for AI search citation.</p>
+        <div class="bt-faq-list">
+          {c.faq.items.map((f) => (
+            <details class="bt-faq-item">
+              <summary>{f.q}</summary>
+              <div class="bt-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. CTA ══ */}
+    <section class="bt-cta">
+      <div class="bt-cta-bg">
+        <img src="/images/016-biotech-character-green.webp" alt="Biotech character" loading="lazy" />
+      </div>
+      <div class="bt-cta-inner">
+        <h3>Engineer the Future</h3>
+        <p>Get the latest CRISPR breakthroughs, AI drug discovery updates, and biotech insights delivered weekly.</p>
+        <a href="/blog?category=Biotech" class="bt-cta-btn">Explore Biotech Articles →</a>
+        <div class="bt-cta-pills">
+          <span class="bt-cta-pill">🧬 CRISPR updates</span>
+          <span class="bt-cta-pill">💊 AI drug discovery</span>
+          <span class="bt-cta-pill">🧪 Gene therapy</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.bt-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Biotech' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Biotech', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

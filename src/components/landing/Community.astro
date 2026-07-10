@@ -1,0 +1,72 @@
+---
+const features = [
+  { icon: '💬', text: 'Active daily discussions' },
+  { icon: '🏆', text: 'Win-sharing & milestones' },
+  { icon: '🤝', text: 'Expert AMAs & live Q&A' },
+  { icon: '✨', text: 'Topic-specific channels' },
+];
+
+const posts = [
+  { name: 'Alex', text: 'Just published our Q3 AI adoption report. The enterprise numbers are staggering.', color: '#3b82f6' },
+  { name: 'Sarah', text: 'Anyone attending the Quantum Computing Conference in Boston? Would love to meet up.', color: '#8b5cf6' },
+  { name: 'Marcus', text: 'My fusion startup just closed Series A. TechNanoAI\'s coverage helped us pitch investors.', color: '#ec4899' },
+];
+---
+
+<section class="lv-section lv-section-dark" id="community">
+  <div class="lv-orb" style="width:300px;height:300px;background:var(--accent-purple);bottom:20%;right:-50px"></div>
+  <div class="lv-container" style="position:relative;z-index:1">
+    <div class="community-inner">
+      <div class="community-left reveal">
+        <div class="lv-eyebrow">Join the Movement</div>
+        <h2 class="lv-section-h2 lv-section-h2-light" style="text-align:left;margin-bottom:1rem">
+          50,000+ technologists are<br />
+          <span class="lv-grad-text">growing together.</span>
+        </h2>
+        <p style="color:var(--text-muted);font-size:1rem;line-height:1.75;max-width:480px;margin-bottom:1.5rem">
+          Share insights, ask questions, find collaborators, and learn from experts at every stage of their technology journey. No gatekeeping, no judgment — just signal.
+        </p>
+        <div class="community-features">
+          {features.map((f) => (
+            <div class="community-feature">
+              <span>{f.icon}</span>
+              <span>{f.text}</span>
+            </div>
+          ))}
+        </div>
+        <a href="#" class="lv-btn lv-btn-primary" style="margin-top:.5rem">
+          Join the community
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="community-card">
+          <div class="community-card-header">
+            <div class="avatar-stack">
+              <div class="avatar">A</div>
+              <div class="avatar">S</div>
+              <div class="avatar">M</div>
+              <div class="avatar">E</div>
+              <div class="avatar">J</div>
+            </div>
+            <span style="font-size:.78rem;color:var(--text-muted)">+ 50K members</span>
+          </div>
+          <div class="community-feed">
+            {posts.map((p) => (
+              <div class="community-post">
+                <div class="community-post-avatar" style={`background:${p.color}`}>{p.name[0]}</div>
+                <div>
+                  <div class="community-post-name">{p.name}</div>
+                  <div class="community-post-text">{p.text}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

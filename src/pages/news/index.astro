@@ -1,0 +1,496 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './news-styles.css';
+import { newsTopics, allNewsItems as newsItems, type NewsItem } from '../../data/news/news-content';
+
+const title = 'News — Latest Emerging Tech News & Updates';
+const description = 'Breaking news and real-time updates across 12 emerging technology frontiers — AI breakthroughs, fusion milestones, quantum advances, cybersecurity threats, biotech innovations, and more.';
+const keywords = 'emerging tech news, AI news today, fusion energy news, quantum computing updates, cybersecurity news, biotech news, robotics news, space exploration news, nuclear energy news, energy storage news';
+
+const totalNews = newsItems.length;
+const totalTopics = newsTopics.filter(t => t.id !== 'all').length;
+const latestDate = newsItems[0]?.date || '2026-07-09';
+
+function getItemsForTopic(topicId: string) {
+  if (topicId === 'all') return newsItems;
+  return newsItems.filter(item => item.topic === topicId);
+}
+
+function getFeaturedForTopic(topicId: string) {
+  const items = getItemsForTopic(topicId);
+  return items.find(item => item.featured) || items[0] || null;
+}
+
+function getRegularForTopic(topicId: string) {
+  const items = getItemsForTopic(topicId);
+  const featured = getFeaturedForTopic(topicId);
+  return items.filter(item => item.slug !== featured?.slug);
+}
+
+function relativeTime(dateStr: string): string {
+  const now = new Date();
+  const date = new Date(dateStr);
+  const diffMs = now.getTime() - date.getTime();
+  const diffH = Math.floor(diffMs / 3600000);
+  const diffD = Math.floor(diffMs / 86400000);
+  if (diffH < 1) return 'Just now';
+  if (diffH < 24) return `${diffH}h ago`;
+  if (diffD === 1) return 'Yesterday';
+  if (diffD < 7) return `${diffD}d ago`;
+  if (diffD < 14) return 'Last week';
+  if (diffD < 30) return `${Math.floor(diffD / 7)}w ago`;
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function getDateGroup(dateStr: string): string {
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  const date = new Date(dateStr);
+  date.setHours(0, 0, 0, 0);
+  const diffD = Math.floor((now.getTime() - date.getTime()) / 86400000);
+  if (diffD <= 0) return 'today';
+  if (diffD === 1) return 'yesterday';
+  if (diffD < 7) return 'thisweek';
+  return 'earlier';
+}
+
+const dateGroupLabels: Record<string, string> = {
+  today: 'Today',
+  yesterday: 'Yesterday',
+  thisweek: 'This Week',
+  earlier: 'Earlier',
+};
+const dateGroupOrder = ['today', 'yesterday', 'thisweek', 'earlier'];
+
+function groupByDate(items: NewsItem[]): { group: string; label: string; items: NewsItem[] }[] {
+  const groups: Record<string, NewsItem[]> = {};
+  for (const item of items) {
+    const g = getDateGroup(item.date);
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(item);
+  }
+  return dateGroupOrder
+    .filter((g) => groups[g]?.length)
+    .map((g) => ({ group: g, label: dateGroupLabels[g], items: groups[g] }));
+}
+
+const breakingNews = newsItems.filter((item) => {
+  const diffD = Math.floor((Date.now() - new Date(item.date).getTime()) / 86400000);
+  return diffD <= 2;
+}).slice(0, 8);
+
+const trendingNews = [...newsItems]
+  .sort((a, b) => {
+    const aScore = (a.featured ? 100 : 0) + (a.poll ? a.poll.options.reduce((s, o) => s + o.votes, 0) : 0);
+    const bScore = (b.featured ? 100 : 0) + (b.poll ? b.poll.options.reduce((s, o) => s + o.votes, 0) : 0);
+    return bScore - aScore;
+  })
+  .slice(0, 5);
+
+const newsLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'TechNanoAI News',
+  description: description,
+  url: 'https://technanoai.com/news',
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+};
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="news-page">
+    <div class="news-bg"></div>
+    <div class="news-bg-grid"></div>
+
+    <!-- Breaking News Ticker -->
+    {breakingNews.length > 0 && (
+      <div class="news-ticker-bar" id="news-ticker-bar">
+        <div class="news-ticker-label">
+          <span class="news-ticker-bolt">⚡</span>
+          <span>BREAKING</span>
+        </div>
+        <div class="news-ticker-track" id="news-ticker-track">
+          <div class="news-ticker-content" id="news-ticker-content">
+            {breakingNews.map((item) => (
+              <a href={`/news/${item.slug}`} class="news-ticker-item" style={`--ticker-color:${item.topicColor}`}>
+                <span class="news-ticker-dot" style={`background:${item.topicColor}`}></span>
+                <span class="news-ticker-text">{item.title}</span>
+              </a>
+            ))}
+          </div>
+          <div class="news-ticker-content" aria-hidden="true">
+            {breakingNews.map((item) => (
+              <a href={`/news/${item.slug}`} class="news-ticker-item" style={`--ticker-color:${item.topicColor}`}>
+                <span class="news-ticker-dot" style={`background:${item.topicColor}`}></span>
+                <span class="news-ticker-text">{item.title}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+
+    <div class="news-content">
+      <!-- Hero -->
+      <section class="news-hero">
+        <span class="news-hero-pill">
+          <span class="news-hero-dot"></span>
+          Live Updates — {latestDate}
+        </span>
+        <h1>Emerging Tech News</h1>
+        <p>Breaking developments and real-time updates across 12 frontier technology domains — from AI breakthroughs to fusion milestones, quantum advances, and beyond.</p>
+
+        <div class="news-stats">
+          <div class="news-stat">
+            <div class="news-stat-value">{totalNews}+</div>
+            <div class="news-stat-label">News</div>
+          </div>
+          <div class="news-stat">
+            <div class="news-stat-value">{totalTopics}</div>
+            <div class="news-stat-label">Topics</div>
+          </div>
+          <div class="news-stat">
+            <div class="news-stat-value">Daily</div>
+            <div class="news-stat-label">Updates</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search Bar -->
+      <div class="news-search-wrapper">
+        <div class="news-search-box">
+          <svg class="news-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="news-search-input" placeholder="Search news articles..." autocomplete="off" />
+          <button class="news-search-clear" id="news-search-clear" aria-label="Clear search" style="display:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="news-search-count" id="news-search-count" style="display:none;"></div>
+      </div>
+
+      <!-- Sticky Tab Bar -->
+      <div class="news-tabs-wrapper">
+        <div class="news-tabs" id="news-tabs">
+          {newsTopics.map((topic, i) => {
+            const count = getItemsForTopic(topic.id).length;
+            return (
+              <button
+                class={`news-tab${i === 0 ? ' active' : ''}`}
+                data-topic={topic.id}
+                type="button"
+                style={i === 0 ? '' : `--tab-color:${topic.color}`}
+              >
+                <span class="news-tab-icon">{topic.icon}</span>
+                <span>{topic.shortLabel}</span>
+                <span class="news-tab-count">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <!-- Main Layout: Content + Sidebar -->
+      <div class="news-main-layout">
+        <div class="news-main-content">
+          <!-- Tab Content Panels -->
+          {newsTopics.map((topic, i) => {
+            const featured = getFeaturedForTopic(topic.id);
+            const regular = getRegularForTopic(topic.id);
+            const dateGroups = groupByDate(regular);
+
+            return (
+              <div class={`news-tab-content${i === 0 ? ' active' : ''}`} data-topic={topic.id}>
+                {featured && (
+                  <div class="news-featured">
+                    <a href={`/news/${featured.slug}`} class="news-featured-card">
+                      <div class="news-featured-image">
+                        <img src={featured.img} alt={featured.title} loading={i === 0 ? 'eager' : 'lazy'} />
+                      </div>
+                      <div class="news-featured-body">
+                        <span class="news-featured-badge" style={`color:${featured.topicColor}`}>
+                          <span class="news-featured-badge-dot" style={`background:${featured.topicColor}; box-shadow:0 0 6px ${featured.topicColor}`}></span>
+                          {featured.topicLabel} · Featured
+                        </span>
+                        <h2 class="news-featured-title">{featured.title}</h2>
+                        <p class="news-featured-excerpt">{featured.excerpt}</p>
+                        <div class="news-featured-meta">
+                          <span class="news-featured-meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            {relativeTime(featured.date)}
+                          </span>
+                          <span class="news-featured-meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            {featured.readTime}
+                          </span>
+                          <span class="news-featured-meta-item">{featured.source}</span>
+                        </div>
+                        <span class="news-featured-read">
+                          Read full story
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                )}
+
+                {/* Chronological grouping for regular items */}
+                {dateGroups.map((dg) => (
+                  <div class="news-date-group" data-group={dg.group}>
+                    <div class="news-date-group-header">
+                      <h3 class="news-date-group-title">{dg.label}</h3>
+                      <span class="news-date-group-line"></span>
+                      <span class="news-date-group-count">{dg.items.length}</span>
+                    </div>
+                    <div class="news-grid">
+                      {dg.items.map((item) => (
+                        <a href={`/news/${item.slug}`} class="news-card" key={item.id} data-search-title={item.title.toLowerCase()} data-search-excerpt={item.excerpt.toLowerCase()} data-search-topic={item.topicLabel.toLowerCase()} data-search-date={item.date}>
+                          <div class="news-card-image">
+                            <img src={item.img} alt={item.title} loading="lazy" />
+                            <span class="news-card-topic" style={`color:${item.topicColor}; background:${item.topicColor}22; border:1px solid ${item.topicColor}44`}>
+                              {item.topicLabel}
+                            </span>
+                          </div>
+                          <div class="news-card-body">
+                            <div class="news-card-date">
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                              <span class="news-card-date-rel">{relativeTime(item.date)}</span>
+                              <span class="news-card-date-abs">{item.date}</span>
+                            </div>
+                            <h4 class="news-card-title">{item.title}</h4>
+                            <p class="news-card-excerpt">{item.excerpt}</p>
+                            <div class="news-card-footer">
+                              <span class="news-card-source">{item.source}</span>
+                              <span class="news-card-read">
+                                Read →
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+
+                {regular.length === 0 && !featured && (
+                  <div class="news-empty">
+                    <div class="news-empty-icon">📭</div>
+                    <p>No news yet for {topic.label}. Check back soon for updates.</p>
+                  </div>
+                )}
+
+                <!-- No search results -->
+                <div class="news-search-empty" id={`news-search-empty-${topic.id}`} style="display:none;">
+                  <div class="news-empty-icon">🔍</div>
+                  <p>No articles found. Try a different search term.</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Trending Sidebar -->
+        <aside class="news-sidebar">
+          <div class="news-sidebar-section">
+            <h3 class="news-sidebar-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Trending
+            </h3>
+            {trendingNews.map((item, idx) => (
+              <a href={`/news/${item.slug}`} class="news-trending-item">
+                <span class="news-trending-num">{idx + 1}</span>
+                <div class="news-trending-body">
+                  <span class="news-trending-topic" style={`color:${item.topicColor}`}>{item.topicLabel}</span>
+                  <h4 class="news-trending-title">{item.title}</h4>
+                  <span class="news-trending-meta">{relativeTime(item.date)} · {item.readTime}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div class="news-sidebar-section news-sidebar-cta">
+            <h3 class="news-sidebar-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Newsletter
+            </h3>
+            <p>Weekly emerging tech digest. No fluff.</p>
+            <a href="/newsletter" class="news-sidebar-btn">Subscribe →</a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- CTA -->
+      <div class="news-cta">
+        <h2>Stay Ahead of the Frontier</h2>
+        <p>Get the latest emerging tech news delivered to your inbox every Monday. No fluff, no spam — just the breakthroughs that matter.</p>
+        <a href="/newsletter" class="news-cta-btn">
+          Subscribe to Newsletter
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(newsLd)} />
+</BaseLayout>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLElement>('.news-tab');
+  const tabContents = document.querySelectorAll<HTMLElement>('.news-tab-content');
+
+  function activateTab(topicId: string) {
+    tabs.forEach((t) => {
+      const isActive = t.dataset.topic === topicId;
+      t.classList.toggle('active', isActive);
+      if (isActive) {
+        const color = t.style.getPropertyValue('--tab-color') || '#3b82f6';
+        t.style.background = `linear-gradient(135deg, ${color}, ${color}cc)`;
+        t.style.borderColor = 'transparent';
+      } else {
+        t.style.background = '';
+        t.style.borderColor = '';
+      }
+    });
+
+    tabContents.forEach((c) => {
+      c.classList.toggle('active', c.dataset.topic === topicId);
+    });
+
+    // Re-run search filter on the newly active tab
+    const searchInput = document.getElementById('news-search-input') as HTMLInputElement | null;
+    if (searchInput && searchInput.value.trim()) {
+      filterNews(searchInput.value.trim().toLowerCase());
+    }
+  }
+
+  // Set initial active tab style
+  const initialActive = document.querySelector<HTMLElement>('.news-tab.active');
+  if (initialActive) {
+    const color = initialActive.style.getPropertyValue('--tab-color') || '#3b82f6';
+    initialActive.style.background = `linear-gradient(135deg, ${color}, ${color}cc)`;
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const topic = tab.dataset.topic;
+      if (topic) activateTab(topic);
+    });
+  });
+
+  // ─── Search Filter ─────────────────────────────────────────────────────────
+  const searchInput = document.getElementById('news-search-input') as HTMLInputElement | null;
+  const searchClear = document.getElementById('news-search-clear') as HTMLButtonElement | null;
+  const searchCount = document.getElementById('news-search-count') as HTMLElement | null;
+
+  function filterNews(query: string) {
+    let totalVisible = 0;
+    let totalCards = 0;
+
+    tabContents.forEach((panel) => {
+      const cards = panel.querySelectorAll<HTMLElement>('.news-card');
+      const dateGroups = panel.querySelectorAll<HTMLElement>('.news-date-group');
+      const searchEmpty = panel.querySelector<HTMLElement>('.news-search-empty');
+      const featuredCard = panel.querySelector<HTMLElement>('.news-featured');
+      let visibleInPanel = 0;
+
+      cards.forEach((card) => {
+        totalCards++;
+        const title = card.dataset.searchTitle || '';
+        const excerpt = card.dataset.searchExcerpt || '';
+        const topic = card.dataset.searchTopic || '';
+        const matches = !query || title.includes(query) || excerpt.includes(query) || topic.includes(query);
+        card.style.display = matches ? '' : 'none';
+        if (matches) { visibleInPanel++; totalVisible++; }
+      });
+
+      // Hide/show date group headers based on visible cards
+      dateGroups.forEach((group) => {
+        const groupCards = group.querySelectorAll<HTMLElement>('.news-card');
+        const hasVisible = Array.from(groupCards).some((c) => c.style.display !== 'none');
+        group.style.display = hasVisible ? '' : 'none';
+      });
+
+      // Hide featured card if it doesn't match
+      if (featuredCard && query) {
+        const featTitle = featuredCard.querySelector('.news-featured-title')?.textContent?.toLowerCase() || '';
+        const featExcerpt = featuredCard.querySelector('.news-featured-excerpt')?.textContent?.toLowerCase() || '';
+        const featTopic = featuredCard.querySelector('.news-featured-badge')?.textContent?.toLowerCase() || '';
+        featuredCard.style.display = (featTitle.includes(query) || featExcerpt.includes(query) || featTopic.includes(query)) ? '' : 'none';
+      }
+
+      if (searchEmpty) {
+        searchEmpty.style.display = (visibleInPanel === 0 && (!featuredCard || featuredCard.style.display === 'none')) ? 'block' : 'none';
+      }
+    });
+
+    if (searchCount) {
+      if (query) {
+        searchCount.style.display = 'block';
+        searchCount.textContent = `${totalVisible} of ${totalCards} articles`;
+      } else {
+        searchCount.style.display = 'none';
+      }
+    }
+  }
+
+  if (searchInput) {
+    let searchTimer: ReturnType<typeof setTimeout>;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      const val = searchInput.value.trim();
+      if (searchClear) searchClear.style.display = val ? 'flex' : 'none';
+      searchTimer = setTimeout(() => {
+        filterNews(val.toLowerCase());
+      }, 200);
+    });
+  }
+
+  if (searchClear) {
+    searchClear.addEventListener('click', () => {
+      if (searchInput) {
+        searchInput.value = '';
+        searchClear.style.display = 'none';
+        filterNews('');
+        searchInput.focus();
+      }
+    });
+  }
+
+  // ─── Breaking News Ticker Animation ────────────────────────────────────────
+  const tickerTrack = document.getElementById('news-ticker-track');
+  if (tickerTrack) {
+    const tickerContent = tickerTrack.querySelector<HTMLElement>('#news-ticker-content');
+    if (tickerContent) {
+      let offset = 0;
+      let paused = false;
+      tickerTrack.addEventListener('mouseenter', () => { paused = true; });
+      tickerTrack.addEventListener('mouseleave', () => { paused = false; });
+
+      function animateTicker() {
+        if (!paused && tickerContent) {
+          offset -= 0.5;
+          const contentWidth = tickerContent.scrollWidth;
+          if (contentWidth > 0 && Math.abs(offset) >= contentWidth) {
+            offset = 0;
+          }
+          tickerTrack.style.transform = `translateX(${offset}px)`;
+        }
+        requestAnimationFrame(animateTicker);
+      }
+      requestAnimationFrame(animateTicker);
+    }
+  }
+
+  // Reveal animation
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+  );
+  document.querySelectorAll('.news-reveal').forEach((el) => revealObserver.observe(el));
+</script>

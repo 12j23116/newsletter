@@ -1,0 +1,177 @@
+---
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  highlight?: string;
+  description?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const {
+  eyebrow = 'Stay Ahead',
+  title = 'Ready to explore the',
+  highlight = 'frontier?',
+  description = 'Join 50,000+ builders, investors, and curious minds who rely on TechNanoAI for emerging technology intelligence. Deep dives, weekly trending digests, and expert analysis across 12 frontiers.',
+  primaryLabel = 'Subscribe to Newsletter',
+  primaryHref = '/newsletter',
+  secondaryLabel = 'Explore Topics',
+  secondaryHref = '/#cat-group-1',
+} = Astro.props;
+---
+
+<section class="pcta">
+  <div class="pcta-bg">
+    <div class="pcta-grid"></div>
+    <div class="pcta-orb pcta-orb-1"></div>
+    <div class="pcta-orb pcta-orb-2"></div>
+  </div>
+  <div class="pcta-inner">
+    <span class="pcta-eyebrow">{eyebrow}</span>
+    <h2 class="pcta-title">{title} <span class="pcta-grad">{highlight}</span></h2>
+    <p class="pcta-desc">{description}</p>
+    <div class="pcta-actions">
+      <a href={primaryHref} class="pcta-btn pcta-btn-primary">
+        {primaryLabel}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href={secondaryHref} class="pcta-btn pcta-btn-secondary">{secondaryLabel}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pcta {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 1.5rem;
+    background: var(--color-bg-alt, #0d1220);
+    border-top: 1px solid var(--color-border, rgba(255,255,255,0.08));
+  }
+  .pcta-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .pcta-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .pcta-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.25;
+  }
+  .pcta-orb-1 {
+    width: 360px;
+    height: 360px;
+    background: #3380ff;
+    top: -20%;
+    left: 5%;
+  }
+  .pcta-orb-2 {
+    width: 320px;
+    height: 320px;
+    background: #7c3aed;
+    bottom: -20%;
+    right: 5%;
+  }
+  .pcta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pcta-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-cyan, #06b6d4);
+    margin-bottom: 1rem;
+  }
+  .pcta-title {
+    font-family: var(--font-sans, sans-serif);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text, #e2e8f0);
+    margin-bottom: 1rem;
+  }
+  .pcta-grad {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .pcta-desc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--color-text-muted, #94a3b8);
+    margin-bottom: 2rem;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pcta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .pcta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--radius-md, 12px);
+    font-family: var(--font-sans, sans-serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 200ms ease;
+    cursor: pointer;
+  }
+  .pcta-btn-primary {
+    background: linear-gradient(135deg, #3380ff 0%, #7c3aed 100%);
+    color: #fff;
+    box-shadow: 0 4px 20px -4px rgba(51, 128, 255, 0.5);
+  }
+  .pcta-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px -4px rgba(51, 128, 255, 0.6);
+  }
+  .pcta-btn-secondary {
+    background: transparent;
+    color: var(--color-text, #e2e8f0);
+    border: 1px solid var(--color-border-strong, rgba(255,255,255,0.14));
+  }
+  .pcta-btn-secondary:hover {
+    background: var(--color-surface-hover, #1e293b);
+    border-color: rgba(255,255,255,0.25);
+  }
+
+  @media (max-width: 480px) {
+    .pcta {
+      padding: 3rem 1.25rem;
+    }
+    .pcta-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+    .pcta-btn {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,84 @@
+name: Daily News Generation
+
+on:
+  schedule:
+    # Runs at 06:00 UTC every day
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
+
+jobs:
+  generate-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run daily news generator
+        id: generate
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+        run: |
+          if [ -n "$OPENAI_API_KEY" ]; then
+            echo "Using OpenAI LLM mode"
+            node scripts/generate-daily-news.mjs --use-llm --max-per-topic=6
+          elif [ -n "$GLM_API_KEY" ]; then
+            echo "Using GLM LLM mode"
+            node scripts/generate-daily-news.mjs --use-llm --provider=glm --max-per-topic=6
+          else
+            echo "No API key secrets found — running in FREE mode (RSS only)"
+            node scripts/generate-daily-news.mjs --max-per-topic=6
+          fi
+
+      - name: Verify articles were generated
+        run: |
+          COUNT=$(find src/data/news/articles -name "*.json" | wc -l)
+          echo "Total articles: $COUNT"
+          if [ "$COUNT" -lt 10 ]; then
+            echo "⚠️  Warning: Only $COUNT articles generated. Expected at least 10."
+          fi
+
+      - name: Build site (verify no errors)
+        run: npm run build
+
+      - name: Commit and push new articles
+        run: |
+          git config user.name "TechNanoAI News Bot"
+          git config user.email "news-bot@technanoai.com"
+          git add src/data/news/articles/
+          if git diff --cached --quiet; then
+            echo "No new articles to commit."
+          else
+            git commit -m "📰 Daily news update $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              git pull --rebase origin main || true
+              if git push; then
+                echo "Push successful"
+                break
+              else
+                echo "Push attempt $i failed, retrying..."
+                sleep 5
+              fi
+            done
+          fi

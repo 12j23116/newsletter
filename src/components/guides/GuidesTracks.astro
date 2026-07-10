@@ -1,0 +1,31 @@
+---
+import { guideTracks } from '../../data/guides/guides-listing';
+---
+
+<section class="gd-tracks">
+  <div class="gd-tracks-head">
+    <span class="gd-section-label">Learning Paths</span>
+    <h2 class="gd-section-title">Choose Your <span class="gd-grad">Track</span></h2>
+    <p class="gd-section-desc">Follow a structured curriculum from basics to advanced — or jump straight to the guide you need.</p>
+  </div>
+  <div class="gd-tracks-grid">
+    {guideTracks.map((track) => (
+      <a href={`#gd-filter`} class="gd-track-card" style={`--track-color:${track.color}; --track-grad:${track.gradient}`}>
+        <div class="gd-track-card-icon">{track.icon}</div>
+        <div class="gd-track-card-body">
+          <h3 class="gd-track-card-name">{track.name}</h3>
+          <p class="gd-track-card-desc">{track.description}</p>
+          <div class="gd-track-card-meta">
+            <span class="gd-track-card-count">{track.guideCount} guides</span>
+            <span class="gd-track-card-time">{track.totalReadTime}</span>
+          </div>
+        </div>
+        <div class="gd-track-card-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

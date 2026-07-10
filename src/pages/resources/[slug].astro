@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { allResources, relatedResources } from '../../data/resources/resources-index';
+import './resources-styles.css';
+
+export function getStaticPaths() {
+  return allResources.map((resource) => ({
+    params: { slug: resource.slug },
+    props: { resource },
+  }));
+}
+
+interface Props {
+  resource: (typeof allResources)[number];
+}
+
+const { resource } = Astro.props;
+const related = relatedResources(resource.slug, 4);
+
+const topicHrefMap: Record<string, string> = {
+  'AI & Machine Learning': '/topics/AI',
+  'Cybersecurity': '/topics/Cybersecurity',
+  'Space Tech': '/topics/Space',
+  'Biotech': '/topics/Biotech',
+  'Nuclear Energy': '/topics/Nuclear',
+  'Energy Storage': '/topics/Energy-Storage',
+  'Robotics': '/topics/Robotics',
+  'Quantum Computing': '/topics/Quantum',
+  'Fusion Energy': '/topics/Fusion',
+  'Autonomous Vehicles': '/topics/AV',
+  'Advanced Materials': '/topics/Materials',
+  'Brain-Computer Interfaces': '/topics/BCI',
+};
+
+const title = `${resource.title} — TechNanoAI`;
+const description = resource.description.slice(0, 160);
+
+const formatDate = (dateStr: string) => {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': resource.type === 'Course' ? 'LearningResource' : resource.type === 'Video' ? 'VideoObject' : 'Article',
+  headline: resource.title,
+  description: resource.overview,
+  author: { '@type': 'Organization', name: 'TechNanoAI' },
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+  articleSection: resource.topic,
+  keywords: resource.tags.join(', '),
+  datePublished: resource.date,
+};
+
+const resourceUrl = `https://technanoai.com/resources/${resource.slug}`;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://technanoai.com/resources' },
+    { '@type': 'ListItem', position: 3, name: resource.title, item: resourceUrl },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} type="article" keywords={resource.tags.join(', ')} section={resource.topic} publishedDate={resource.date}>
+  <article class="res-page res-detail" style={`--card-color:${resource.topicColor}`}>
+    <!-- Hero -->
+    <header class="res-detail-hero">
+      <div class="res-hero-orb res-hero-orb-1"></div>
+      <div class="res-hero-orb res-hero-orb-2"></div>
+      <div class="res-detail-hero-inner">
+        <nav class="res-detail-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="res-bc-sep">/</span>
+          <a href="/resources">Resources</a>
+          <span class="res-bc-sep">/</span>
+          <span class="res-bc-current">{resource.type}</span>
+        </nav>
+        <div class="res-detail-meta">
+          <span class="res-detail-type-badge" style={`--card-color:${resource.topicColor}`}>
+            {resource.icon} {resource.type}
+          </span>
+          <span class="res-detail-topic">{resource.topic}</span>
+          {resource.readTime && <span class="res-detail-readtime">⏱ {resource.readTime}</span>}
+          <span class="res-detail-date">{formatDate(resource.date)}</span>
+        </div>
+        <h1>{resource.title}</h1>
+        <p class="res-detail-desc">{resource.description}</p>
+      </div>
+    </header>
+
+    <!-- Highlights -->
+    <section class="res-detail-section res-reveal">
+      <div class="res-detail-highlights">
+        <h2>Key Highlights</h2>
+        <ul class="res-highlights-list">
+          {resource.highlights.map((h) => (
+            <li class="res-highlight-item">
+              <span class="res-highlight-check">✓</span>
+              <span>{h}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="res-detail-section res-reveal">
+      <div class="res-detail-overview">
+        <h2>Overview</h2>
+        <p>{resource.overview}</p>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="res-detail-section res-reveal">
+      <div class="res-detail-content">
+        <h2>What's Inside</h2>
+        {resource.sections.map((section) => (
+          <div class="res-content-block">
+            <h3>{section.heading}</h3>
+            <p>{section.content}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tags -->
+    <section class="res-detail-section res-reveal">
+      <div class="res-detail-tags">
+        <h2>Topics & Tags</h2>
+        <div class="res-tags-list">
+          {resource.tags.map((tag) => (
+            <span class="res-tag">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="res-detail-section res-reveal">
+      <div class="res-detail-cta">
+        <h2>Ready to dive in?</h2>
+        <p>Explore this resource and discover more across our 12 technology frontiers.</p>
+        <div class="res-cta-buttons">
+          <a href="/resources" class="res-btn res-btn-secondary">← All Resources</a>
+          <a href={topicHrefMap[resource.topic] || '/topics'} class="res-btn res-btn-primary">Explore {resource.topic} →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    {related.length > 0 && (
+      <section class="res-detail-section res-reveal">
+        <div class="res-detail-related">
+          <h2>Related Resources</h2>
+          <div class="res-related-grid">
+            {related.map((item) => (
+              <a href={`/resources/${item.slug}`} class="res-card res-reveal" style={`--card-color:${item.topicColor}`}>
+                <div class="res-card-top">
+                  <span class="res-card-icon">{item.icon}</span>
+                  <span class="res-card-type">{item.type}</span>
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <div class="res-card-foot">
+                  <span class="res-card-cat">{item.topic}</span>
+                  {item.readTime ? <span>{item.readTime}</span> : <span>{formatDate(item.date)}</span>}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  </article>
+
+  <script>
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.res-reveal').forEach((el) => revealObserver.observe(el));
+  </script>
+</BaseLayout>

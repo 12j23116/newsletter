@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { comparisons, type ComparisonItem } from '../../data/comparisons/comparisons-content';
+import './comparisons-styles.css';
+
+export function getStaticPaths() {
+  return comparisons.map((item) => ({
+    params: { slug: item.id },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: ComparisonItem;
+}
+
+const { item } = Astro.props as Props;
+
+const title = `${item.title} — TechNanoAI Comparisons`;
+const description = item.description.slice(0, 160);
+
+const relatedComparisons = comparisons
+  .filter((c) => c.id !== item.id && c.topic === item.topic)
+  .slice(0, 4);
+
+const fallbackRelated = comparisons
+  .filter((c) => c.id !== item.id && !relatedComparisons.includes(c))
+  .slice(0, 4);
+
+const finalRelated = relatedComparisons.length >= 4 ? relatedComparisons : [...relatedComparisons, ...fallbackRelated].slice(0, 4);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: item.title,
+  description: item.description,
+  author: { '@type': 'Organization', name: 'TechNanoAI' },
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+  articleSection: item.topic,
+  about: item.subjects,
+};
+
+const comparisonUrl = `https://technanoai.com/comparisons/${item.id}`;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Comparisons', item: 'https://technanoai.com/comparisons' },
+    { '@type': 'ListItem', position: 3, name: item.title, item: comparisonUrl },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} type="article" keywords={`${item.subjects.join(', ')}, ${item.topic} comparison, head-to-head technology comparison`} section={item.topic}>
+  <article class="cmp-page cmp-detail-page" style={`--cat-color: ${item.topicColor}`}>
+    <!-- Hero -->
+    <header class="cmp-detail-hero">
+      <div class="cmp-detail-hero-bg"></div>
+      <div class="cmp-detail-hero-inner">
+        <nav class="cmp-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="cmp-bc-sep">/</span>
+          <a href="/comparisons">Comparisons</a>
+          <span class="cmp-bc-sep">/</span>
+          <span class="cmp-bc-current">{item.title}</span>
+        </nav>
+        <div class="cmp-detail-meta">
+          <span class="cmp-detail-cat-badge" style={`background: ${item.topicColor}20; color: ${item.topicColor};`}>
+            {item.icon} {item.topic}
+          </span>
+          {item.trending && <span class="cmp-card-trending">🔥 Trending</span>}
+          <span class="cmp-detail-popularity">📊 {item.popularity}% Search Interest</span>
+        </div>
+        <h1>{item.title}</h1>
+        <p class="cmp-detail-subtitle">{item.subtitle}</p>
+        <p class="cmp-detail-description">{item.description}</p>
+        <div class="cmp-subjects cmp-detail-subjects">
+          {item.subjects.map((subject) => (
+            <span class="cmp-subject-pill" style={`border-color: ${item.topicColor}40;`}>{subject}</span>
+          ))}
+        </div>
+      </div>
+    </header>
+
+    <!-- Full Comparison Table -->
+    <section class="cmp-detail-section">
+      <h2 class="cmp-detail-heading">
+        <span class="cmp-detail-heading-icon">📋</span>
+        Full Specification Comparison
+      </h2>
+      <div class="cmp-detail-table-wrap">
+        <table class="cmp-detail-table">
+          <thead>
+            <tr>
+              <th>Specification</th>
+              {item.subjects.map((subject, i) => (
+                <th style={i === 0 ? '' : `border-left: 2px solid ${item.topicColor}30;`}>{subject}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {item.rows.map((row) => (
+              <tr>
+                <td class="cmp-detail-row-label">{row.label}</td>
+                {row.values.map((value, i) => (
+                  <td class={row.highlight === i ? 'cmp-highlight' : ''} style={i === 0 ? '' : `border-left: 2px solid ${item.topicColor}15;`}>
+                    {value}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Expert Verdict -->
+    <section class="cmp-detail-section">
+      <h2 class="cmp-detail-heading">
+        <span class="cmp-detail-heading-icon">⚖️</span>
+        Expert Verdict
+      </h2>
+      <div class="cmp-detail-verdict" style={`border-left-color: ${item.topicColor};`}>
+        <p>{item.verdict}</p>
+      </div>
+    </section>
+
+    <!-- Subject Breakdown -->
+    <section class="cmp-detail-section">
+      <h2 class="cmp-detail-heading">
+        <span class="cmp-detail-heading-icon">🔍</span>
+        Subject Breakdown
+      </h2>
+      <div class="cmp-detail-breakdown">
+        {item.subjects.map((subject, i) => {
+          const wins = item.rows.filter((r) => r.highlight === i).length;
+          return (
+            <div class="cmp-detail-subject-card" style={`--subj-color: ${item.topicColor};`}>
+              <h3>{subject}</h3>
+              <div class="cmp-detail-wins">
+                <span class="cmp-detail-wins-count">{wins}</span>
+                <span class="cmp-detail-wins-label">Category Wins</span>
+              </div>
+              <ul class="cmp-detail-wins-list">
+                {item.rows.filter((r) => r.highlight === i).map((r) => (
+                  <li>★ {r.label}: {r.values[i]}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Popularity -->
+    <section class="cmp-detail-section">
+      <h2 class="cmp-detail-heading">
+        <span class="cmp-detail-heading-icon">📊</span>
+        Search Interest & Popularity
+      </h2>
+      <div class="cmp-detail-popularity-bar">
+        <div class="cmp-detail-popularity-fill" style={`width: ${item.popularity}%; background: linear-gradient(90deg, ${item.topicColor}, ${item.topicColor}88);`}></div>
+        <span class="cmp-detail-popularity-text">{item.popularity}%</span>
+      </div>
+    </section>
+
+    <!-- Back link -->
+    <div class="cmp-detail-back">
+      <a href="/comparisons">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to All Comparisons
+      </a>
+    </div>
+
+    <!-- Related Comparisons -->
+    {finalRelated.length > 0 && (
+      <section class="cmp-detail-related">
+        <h2 class="cmp-detail-heading">
+          <span class="cmp-detail-heading-icon">🔗</span>
+          Related {item.topic} Comparisons
+        </h2>
+        <div class="cmp-detail-related-grid">
+          {finalRelated.map((rc) => (
+            <a href={`/comparisons/${rc.id}`} class="cmp-detail-related-card">
+              <div class="cmp-detail-related-top">
+                <span class="cmp-detail-related-icon">{rc.icon}</span>
+                {rc.trending && <span class="cmp-card-trending">🔥</span>}
+              </div>
+              <h3>{rc.title}</h3>
+              <p>{rc.subtitle}</p>
+              <div class="cmp-detail-related-subjects">
+                {rc.subjects.slice(0, 3).map((s) => (
+                  <span class="cmp-subject-pill">{s}</span>
+                ))}
+                {rc.subjects.length > 3 && <span class="cmp-subject-pill">+{rc.subjects.length - 3}</span>}
+              </div>
+              <span class="cmp-detail-related-arrow">→</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  </article>
+</BaseLayout>

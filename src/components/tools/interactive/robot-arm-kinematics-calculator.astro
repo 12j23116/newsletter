@@ -1,0 +1,626 @@
+---
+/**
+ * Robot Arm Kinematics Calculator — Interactive tool
+ * Calculate forward and inverse kinematics for serial robot manipulators
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="robot-kinematics">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">📐</div>
+      <div>
+        <h2>Robot Arm Kinematics Calculator</h2>
+        <p>Forward and inverse kinematics for serial manipulators with DH parameters</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Robot Configuration</label>
+        <select class="it-select" id="rak-config">
+          <option value="2dof">2-DOF Planar Arm</option>
+          <option value="3dof">3-DOF Planar Arm</option>
+          <option value="scara">SCARA (4-DOF)</option>
+          <option value="6dof">6-DOF Articulated</option>
+        </select>
+      </div>
+
+      <div id="rak-dh-params" style="display:grid;gap:0.75rem;">
+        <div class="it-row" style="font-size:0.75rem;font-weight:600;color:var(--tl-text-muted);padding:0 0.25rem;">
+          <span>θ (deg)</span><span>d (mm)</span><span>a (mm)</span><span>α (deg)</span>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="rak-forward">Forward Kinematics</button>
+        <button class="it-btn it-btn-secondary" id="rak-inverse">Inverse Kinematics</button>
+        <button class="it-btn it-btn-secondary" id="rak-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="rak-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="rak-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Kinematics Results</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">End-Effector X</div>
+            <div class="it-stat-value" id="rak-x">0<span class="it-stat-unit"> mm</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">End-Effector Y</div>
+            <div class="it-stat-value" id="rak-y">0<span class="it-stat-unit"> mm</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">End-Effector Z</div>
+            <div class="it-stat-value" id="rak-z">0<span class="it-stat-unit"> mm</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Orientation</div>
+            <div class="it-stat-value" id="rak-orient" style="font-size:1.25rem;">0°</div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Robot Arm Visualization</div>
+        <canvas id="rak-canvas" width="800" height="400" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="rak-details"></div>
+        <div class="it-alert it-alert-info" id="rak-insight"></div>
+      </div>
+
+      <!-- Feature 1: Workspace Envelope -->
+      <div class="it-results-card" id="rak-workspace-section" style="display:none;">
+        <div class="it-results-title">🎯 Workspace Envelope Visualization</div>
+        <canvas id="rak-workspace-canvas" width="800" height="400" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="rak-workspace-list"></div>
+      </div>
+
+      <!-- Feature 2: Jacobian & Manipulability -->
+      <div class="it-results-card" id="rak-jacobian-section" style="display:none;">
+        <div class="it-results-title">📐 Jacobian Matrix & Manipulability Index</div>
+        <div id="rak-jacobian-list"></div>
+      </div>
+
+      <!-- Feature 3: Singularity Analysis -->
+      <div class="it-results-card" id="rak-singularity-section" style="display:none;">
+        <div class="it-results-title">⚠️ Singularity Detection & Analysis</div>
+        <div id="rak-singularity-list"></div>
+      </div>
+
+      <!-- Feature 4: Joint Torque & Payload -->
+      <div class="it-results-card" id="rak-torque-section" style="display:none;">
+        <div class="it-results-title">💪 Joint Torque & Payload Capacity Analysis</div>
+        <div id="rak-torque-list"></div>
+      </div>
+
+      <!-- Feature 5: Velocity & Acceleration Profile -->
+      <div class="it-results-card" id="rak-velocity-section" style="display:none;">
+        <div class="it-results-title">📈 Velocity & Acceleration Profile Planner</div>
+        <canvas id="rak-velocity-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="rak-velocity-list"></div>
+      </div>
+
+      <!-- Feature 6: Trajectory Generation -->
+      <div class="it-results-card" id="rak-trajectory-section" style="display:none;">
+        <div class="it-results-title">🛤️ Trajectory Generation (Joint-Space Interpolation)</div>
+        <div id="rak-trajectory-list"></div>
+      </div>
+
+      <!-- Feature 7: URDF Export -->
+      <div class="it-results-card" id="rak-urdf-section" style="display:none;">
+        <div class="it-results-title">🔧 DH-to-URDF Conversion</div>
+        <div id="rak-urdf-list"></div>
+      </div>
+
+      <!-- Feature 8: Collision Detection -->
+      <div class="it-results-card" id="rak-collision-section" style="display:none;">
+        <div class="it-results-title">🚧 Collision Detection & Obstacle Avoidance</div>
+        <div id="rak-collision-list"></div>
+      </div>
+
+      <!-- Feature 9: Motor Selection -->
+      <div class="it-results-card" id="rak-motor-section" style="display:none;">
+        <div class="it-results-title">⚙️ Motor Selection Helper (Torque-Speed Requirements)</div>
+        <div id="rak-motor-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const configs = {
+    '2dof': { joints: 2, defaults: [[0, 0, 300, 0], [45, 0, 300, 0]] },
+    '3dof': { joints: 3, defaults: [[0, 0, 300, 0], [30, 0, 250, 0], [45, 0, 200, 0]] },
+    'scara': { joints: 4, defaults: [[0, 300, 200, 0], [30, 0, 200, 180], [0, 0, 0, 0], [0, 50, 0, 0]] },
+    '6dof': { joints: 6, defaults: [[0, 400, 0, 90], [30, 0, 300, 0], [45, 0, 300, 90], [0, 0, 0, 90], [30, 0, 0, 90], [45, 100, 0, 0]] },
+  };
+
+  function renderDH() {
+    const config = document.getElementById('rak-config').value;
+    const joints = configs[config].joints;
+    const defaults = configs[config].defaults;
+    const container = document.getElementById('rak-dh-params');
+    container.innerHTML = '<div class="it-row" style="font-size:0.75rem;font-weight:600;color:var(--tl-text-muted);padding:0 0.25rem;"><span>θ (deg)</span><span>d (mm)</span><span>a (mm)</span><span>α (deg)</span></div>';
+    for (let i = 0; i < joints; i++) {
+      const row = document.createElement('div');
+      row.className = 'it-row';
+      row.style.gap = '0.5rem';
+      row.innerHTML = `
+        <input type="number" class="it-input rak-dh" data-joint="${i}" data-param="theta" value="${defaults[i][0]}" style="font-size:0.8125rem;" />
+        <input type="number" class="it-input rak-dh" data-joint="${i}" data-param="d" value="${defaults[i][1]}" style="font-size:0.8125rem;" />
+        <input type="number" class="it-input rak-dh" data-joint="${i}" data-param="a" value="${defaults[i][2]}" style="font-size:0.8125rem;" />
+        <input type="number" class="it-input rak-dh" data-joint="${i}" data-param="alpha" value="${defaults[i][3]}" style="font-size:0.8125rem;" />
+      `;
+      container.appendChild(row);
+    }
+  }
+
+  renderDH();
+  document.getElementById('rak-config').addEventListener('change', renderDH);
+
+  function getDHParams() {
+    const inputs = document.querySelectorAll('.rak-dh');
+    const config = document.getElementById('rak-config').value;
+    const joints = configs[config].joints;
+    const dh = [];
+    for (let i = 0; i < joints; i++) {
+      dh.push({ theta: 0, d: 0, a: 0, alpha: 0 });
+    }
+    inputs.forEach(inp => {
+      const j = parseInt(inp.getAttribute('data-joint'));
+      const p = inp.getAttribute('data-param');
+      dh[j][p] = parseFloat(inp.value) || 0;
+    });
+    return dh;
+  }
+
+  function dhTransform(theta, d, a, alpha) {
+    const t = theta * Math.PI / 180;
+    const al = alpha * Math.PI / 180;
+    const ct = Math.cos(t), st = Math.sin(t);
+    const ca = Math.cos(al), sa = Math.sin(al);
+    return [
+      [ct, -st * ca, st * sa, a * ct],
+      [st, ct * ca, -ct * sa, a * st],
+      [0, sa, ca, d],
+      [0, 0, 0, 1]
+    ];
+  }
+
+  function matMul(a, b) {
+    const r = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+    for (let i = 0; i < 4; i++)
+      for (let j = 0; j < 4; j++)
+        for (let k = 0; k < 4; k++)
+          r[i][j] += a[i][k] * b[k][j];
+    return r;
+  }
+
+  function forwardKinematics() {
+    const dh = getDHParams();
+    let T = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+    const positions = [{ x: 0, y: 0, z: 0 }];
+
+    dh.forEach(params => {
+      T = matMul(T, dhTransform(params.theta, params.d, params.a, params.alpha));
+      positions.push({ x: T[0][3], y: T[1][3], z: T[2][3] });
+    });
+
+    const ee = positions[positions.length - 1];
+    const orient = Math.atan2(T[1][0], T[0][0]) * 180 / Math.PI;
+
+    document.getElementById('rak-x').innerHTML = ee.x.toFixed(1) + '<span class="it-stat-unit"> mm</span>';
+    document.getElementById('rak-y').innerHTML = ee.y.toFixed(1) + '<span class="it-stat-unit"> mm</span>';
+    document.getElementById('rak-z').innerHTML = ee.z.toFixed(1) + '<span class="it-stat-unit"> mm</span>';
+    document.getElementById('rak-orient').textContent = orient.toFixed(1) + '°';
+
+    drawRobot(positions);
+
+    const details = document.getElementById('rak-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Joint</th><th>θ (°)</th><th>d (mm)</th><th>a (mm)</th><th>α (°)</th><th>X (mm)</th><th>Y (mm)</th><th>Z (mm)</th></tr></thead>
+        <tbody>
+          ${dh.map((p, i) => `<tr><td>${i + 1}</td><td>${p.theta}</td><td>${p.d}</td><td>${p.a}</td><td>${p.alpha}</td><td>${positions[i + 1].x.toFixed(1)}</td><td>${positions[i + 1].y.toFixed(1)}</td><td>${positions[i + 1].z.toFixed(1)}</td></tr>`).join('')}
+          <tr style="background:color-mix(in srgb,#8b5cf6 5%,transparent);"><td colspan="5"><strong>End-Effector</strong></td><td class="it-highlight">${ee.x.toFixed(1)}</td><td class="it-highlight">${ee.y.toFixed(1)}</td><td class="it-highlight">${ee.z.toFixed(1)}</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    document.getElementById('rak-insight').innerHTML = `<strong>💡 Forward Kinematics:</strong> End-effector position: (${ee.x.toFixed(1)}, ${ee.y.toFixed(1)}, ${ee.z.toFixed(1)}) mm with orientation ${orient.toFixed(1)}°. The manipulator has ${dh.length} joints with a total reach of ${Math.sqrt(ee.x * ee.x + ee.y * ee.y + ee.z * ee.z).toFixed(1)} mm from the base.`;
+
+    document.getElementById('rak-results').classList.add('show');
+
+    // === Feature 1: Workspace Envelope ===
+    const wsCanvas = document.getElementById('rak-workspace-canvas');
+    const wsCtx = wsCanvas.getContext('2d');
+    const wsw = wsCanvas.width, wsh = wsCanvas.height;
+    wsCtx.fillStyle = '#ebedf5'; wsCtx.fillRect(0, 0, wsw, wsh);
+    const wsOx = wsw / 2, wsOy = wsh - 50, wsScale = 0.4;
+    wsCtx.strokeStyle = 'rgba(15,23,42,0.06)'; wsCtx.lineWidth = 1;
+    for (let i = 0; i < wsw; i += 40) { wsCtx.beginPath(); wsCtx.moveTo(i, 0); wsCtx.lineTo(i, wsh); wsCtx.stroke(); }
+    for (let i = 0; i < wsh; i += 40) { wsCtx.beginPath(); wsCtx.moveTo(0, i); wsCtx.lineTo(wsw, i); wsCtx.stroke(); }
+    wsCtx.strokeStyle = '#5c5c72'; wsCtx.beginPath(); wsCtx.moveTo(0, wsOy); wsCtx.lineTo(wsw, wsOy); wsCtx.stroke();
+    wsCtx.beginPath(); wsCtx.moveTo(wsOx, 0); wsCtx.lineTo(wsOx, wsh); wsCtx.stroke();
+    const wsPoints = [];
+    const config = document.getElementById('rak-config').value;
+    if (config === '2dof' || config === '3dof') {
+      const l1 = dh[0].a, l2 = dh[1].a, l3 = config === '3dof' ? dh[2].a : 0;
+      const maxR = l1 + l2 + l3, minR = Math.abs(l1 - l2) - l3;
+      wsCtx.fillStyle = 'rgba(139,92,246,0.1)'; wsCtx.beginPath(); wsCtx.arc(wsOx, wsOy, maxR * wsScale, 0, Math.PI * 2); wsCtx.fill();
+      wsCtx.fillStyle = '#ebedf5'; wsCtx.beginPath(); wsCtx.arc(wsOx, wsOy, Math.max(0, minR) * wsScale, 0, Math.PI * 2); wsCtx.fill();
+      for (let t1 = 0; t1 < 360; t1 += 5) {
+        for (let t2 = 0; t2 < 360; t2 += 10) {
+          const r1 = t1 * Math.PI / 180, r2 = t2 * Math.PI / 180;
+          const x = l1 * Math.cos(r1) + l2 * Math.cos(r1 + r2) + (config === '3dof' ? l3 * Math.cos(r1 + r2) : 0);
+          const z = l1 * Math.sin(r1) + l2 * Math.sin(r1 + r2) + (config === '3dof' ? l3 * Math.sin(r1 + r2) : 0);
+          wsPoints.push({ x, z });
+        }
+      }
+      wsCtx.fillStyle = 'rgba(139,92,246,0.3)';
+      wsPoints.forEach(p => { wsCtx.fillRect(wsOx + p.x * wsScale - 1, wsOy - p.z * wsScale - 1, 2, 2); });
+      wsCtx.fillStyle = '#dc2626'; wsCtx.beginPath(); wsCtx.arc(wsOx + ee.x * wsScale, wsOy - ee.z * wsScale, 6, 0, Math.PI * 2); wsCtx.fill();
+      wsCtx.strokeStyle = '#dc2626'; wsCtx.setLineDash([4, 4]); wsCtx.beginPath(); wsCtx.arc(wsOx, wsOy, maxR * wsScale, 0, Math.PI * 2); wsCtx.stroke(); wsCtx.setLineDash([]);
+    } else {
+      const maxReach = dh.reduce((s, p) => s + Math.abs(p.a) + Math.abs(p.d), 0);
+      wsCtx.fillStyle = 'rgba(139,92,246,0.1)'; wsCtx.beginPath(); wsCtx.arc(wsOx, wsOy, maxReach * wsScale, 0, Math.PI * 2); wsCtx.fill();
+      wsCtx.strokeStyle = '#8b5cf6'; wsCtx.setLineDash([4, 4]); wsCtx.beginPath(); wsCtx.arc(wsOx, wsOy, maxReach * wsScale, 0, Math.PI * 2); wsCtx.stroke(); wsCtx.setLineDash([]);
+      wsCtx.fillStyle = '#dc2626'; wsCtx.beginPath(); wsCtx.arc(wsOx + ee.x * wsScale, wsOy - ee.z * wsScale, 6, 0, Math.PI * 2); wsCtx.fill();
+    }
+    const totalReach = dh.reduce((s, p) => s + Math.abs(p.a), 0);
+    document.getElementById('rak-workspace-list').innerHTML = `
+      <div class="it-alert it-alert-info">Workspace envelope: ${config === '2dof' || config === '3dof' ? 'Annular region from ' + Math.abs(dh[0].a - dh[1].a) + 'mm to ' + totalReach + 'mm radius' : 'Approximate spherical workspace with ' + totalReach + 'mm reach'}. Current EE position marked in red. The workspace represents all positions the end-effector can reach.</div>
+    `;
+    document.getElementById('rak-workspace-section').style.display = 'block';
+
+    // === Feature 2: Jacobian & Manipulability ===
+    let jacobian;
+    if (config === '2dof') {
+      const l1 = dh[0].a, l2 = dh[1].a;
+      const t1 = dh[0].theta * Math.PI / 180, t2 = dh[1].theta * Math.PI / 180;
+      jacobian = [[-l1 * Math.sin(t1) - l2 * Math.sin(t1 + t2), -l2 * Math.sin(t1 + t2)], [l1 * Math.cos(t1) + l2 * Math.cos(t1 + t2), l2 * Math.cos(t1 + t2)]];
+    } else if (config === '3dof') {
+      const l1 = dh[0].a, l2 = dh[1].a, l3 = dh[2].a;
+      const t1 = dh[0].theta * Math.PI / 180, t2 = dh[1].theta * Math.PI / 180, t3 = dh[2].theta * Math.PI / 180;
+      const c1 = Math.cos(t1), c12 = Math.cos(t1 + t2), c123 = Math.cos(t1 + t2 + t3);
+      const s1 = Math.sin(t1), s12 = Math.sin(t1 + t2), s123 = Math.sin(t1 + t2 + t3);
+      jacobian = [[-l1 * s1 - l2 * s12 - l3 * s123, -l2 * s12 - l3 * s123, -l3 * s123], [l1 * c1 + l2 * c12 + l3 * c123, l2 * c12 + l3 * c123, l3 * c123]];
+    } else {
+      const eps = 0.01; jacobian = [];
+      for (let axis = 0; axis < 2; axis++) { jacobian.push([]); for (let j = 0; j < dh.length; j++) {
+        const dhPert = dh.map((p, i) => i === j ? { ...p, theta: p.theta + eps * 180 / Math.PI } : p);
+        let TP = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+        dhPert.forEach(p => { TP = matMul(TP, dhTransform(p.theta, p.d, p.a, p.alpha)); });
+        const coord = axis === 0 ? TP[0][3] : TP[2][3];
+        jacobian[axis].push((coord - (axis === 0 ? ee.x : ee.z)) / eps);
+      }}
+    }
+    const JJT = [[0,0],[0,0]];
+    for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) for (let k = 0; k < jacobian[0].length; k++) JJT[i][j] += jacobian[i][k] * jacobian[j][k];
+    const detJJT = JJT[0][0] * JJT[1][1] - JJT[0][1] * JJT[1][0];
+    const manipulability = Math.sqrt(Math.max(0, detJJT));
+    const condNum = JJT[0][0] > 0 && JJT[1][1] > 0 ? Math.sqrt(JJT[0][0] * JJT[1][1]) / Math.max(0.001, Math.sqrt(Math.abs(detJJT))) : 999;
+    document.getElementById('rak-jacobian-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Jacobian J</th>${jacobian[0].map((_, j) => `<th>θ${j + 1}</th>`).join('')}</tr></thead><tbody>
+        ${jacobian.map((row, i) => `<tr><td><strong>${i === 0 ? '∂x/∂θ' : '∂z/∂θ'}</strong></td>${row.map(v => `<td>${v.toFixed(2)}</td>`).join('')}</tr>`).join('')}
+      </tbody></table>
+      <div style="margin-top:0.75rem;">
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Manipulability Index (w)</span><strong>${manipulability.toFixed(2)}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Condition Number</span><strong>${condNum.toFixed(1)}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Max EE Velocity (@1 rad/s)</span><strong>${Math.sqrt(JJT[0][0] + JJT[1][1]).toFixed(1)} mm/s</strong></div>
+      </div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Manipulability index w = sqrt(det(J·Jᵀ)). Higher values indicate better dexterity. w → 0 means the arm is near a singularity. Condition number > 10 indicates poor motion resolution.</div>
+    `;
+    document.getElementById('rak-jacobian-section').style.display = 'block';
+
+    // === Feature 3: Singularity Analysis ===
+    const singularities = [];
+    if (config === '2dof') {
+      const t2 = dh[1].theta * Math.PI / 180;
+      if (Math.abs(Math.sin(t2)) < 0.1) singularities.push({ type: 'Elbow singular', desc: `θ2 ≈ ${dh[1].theta}° (arm fully extended or folded). Jacobian loses rank — cannot move radially.` });
+      const r = Math.sqrt(ee.x * ee.x + ee.z * ee.z);
+      if (Math.abs(r - (dh[0].a + dh[1].a)) < 20) singularities.push({ type: 'Boundary singular', desc: 'End-effector at maximum reach. All motion is tangential.' });
+      if (Math.abs(r - Math.abs(dh[0].a - dh[1].a)) < 20) singularities.push({ type: 'Inner singular', desc: 'End-effector at minimum reach. Motion limited.' });
+    } else if (config === '3dof') {
+      const t2 = dh[1].theta * Math.PI / 180;
+      if (Math.abs(Math.sin(t2)) < 0.1) singularities.push({ type: 'Elbow singular', desc: `θ2 ≈ ${dh[1].theta}° — arm aligned. Loses radial motion capability.` });
+    } else {
+      if (dh[4] && Math.abs(Math.sin(dh[4].theta * Math.PI / 180)) < 0.1) singularities.push({ type: 'Wrist singular', desc: 'Wrist axes aligned — loses orientation DOF.' });
+      if (dh[2] && Math.abs(Math.sin(dh[2].theta * Math.PI / 180)) < 0.1) singularities.push({ type: 'Elbow singular', desc: 'Elbow at 0° or 180° — radial motion lost.' });
+    }
+    if (manipulability < 1) singularities.push({ type: 'Low manipulability', desc: `w = ${manipulability.toFixed(2)} — near-singular configuration.` });
+    document.getElementById('rak-singularity-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Singularity Type</th><th>Description</th><th>Risk</th></tr></thead><tbody>
+        ${singularities.length > 0 ? singularities.map(s => `<tr><td><strong>${s.type}</strong></td><td>${s.desc}</td><td style="color:#dc2626;font-weight:700;">⚠️ High</td></tr>`).join('') : '<tr><td colspan="3" style="text-align:center;color:#059669;">✓ No singularities detected — arm is in a healthy configuration.</td></tr>'}
+      </tbody></table>
+      <div class="it-alert ${singularities.length > 0 ? 'it-alert-warn' : 'it-alert-good'}" style="margin-top:0.5rem;">${singularities.length > 0 ? `${singularities.length} singularit${singularities.length > 1 ? 'ies' : 'y'} detected. Avoid these configurations during path planning.` : 'Arm is well-conditioned. All DOFs are independent.'}</div>
+    `;
+    document.getElementById('rak-singularity-section').style.display = 'block';
+
+    // === Feature 4: Joint Torque & Payload ===
+    const g = 9.81; const payload = 2;
+    const linkMasses = dh.map(p => Math.abs(p.a) * 0.005);
+    const torques = [];
+    for (let j = 0; j < dh.length; j++) {
+      let torque = 0;
+      for (let k = j; k < dh.length; k++) {
+        const mass = linkMasses[k] + (k === dh.length - 1 ? payload : 0);
+        const armLength = dh.slice(j, k + 1).reduce((s, p) => s + Math.abs(p.a), 0) / 2;
+        torque += mass * g * armLength / 1000;
+      }
+      torques.push(torque);
+    }
+    const maxTorque = Math.max(...torques);
+    const maxPayload = maxTorque > 0 ? payload * (10 / maxTorque) : 10;
+    document.getElementById('rak-torque-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Joint</th><th>Link Mass (kg)</th><th>Torque (N·m)</th><th>Max Payload (kg)</th><th>Load Rating</th></tr></thead><tbody>
+        ${dh.map((p, i) => {
+          const jointPayload = maxTorque > 0 ? (torques[i] / maxTorque) * 10 : 10;
+          const rating = torques[i] < 5 ? '✓ Light' : torques[i] < 20 ? 'Moderate' : '⚠️ Heavy';
+          return `<tr><td><strong>Joint ${i + 1}</strong></td><td>${linkMasses[i].toFixed(2)}</td><td class="it-highlight">${torques[i].toFixed(2)}</td><td>${jointPayload.toFixed(1)}</td><td style="color:${torques[i] < 5 ? '#059669' : torques[i] < 20 ? '#d97706' : '#dc2626'};">${rating}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div style="margin-top:0.75rem;">
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Max Joint Torque</span><strong>${maxTorque.toFixed(2)} N·m (Joint ${torques.indexOf(maxTorque) + 1})</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Estimated Max Payload</span><strong>${maxPayload.toFixed(1)} kg</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Safety Factor (1.5x)</span><strong>${(maxPayload / 1.5).toFixed(1)} kg recommended</strong></div>
+      </div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Torque calculated using static gravity loading (worst case). Assumes ~5g/mm link mass. Joint 1 (base) typically bears the highest torque. Safety factor 1.5x recommended for continuous operation.</div>
+    `;
+    document.getElementById('rak-torque-section').style.display = 'block';
+
+    // === Feature 5: Velocity & Acceleration Profile ===
+    const moveTime = 2;
+    const vCanvas = document.getElementById('rak-velocity-canvas');
+    const vctx = vCanvas.getContext('2d');
+    const vw = vCanvas.width, vh = vCanvas.height;
+    vctx.fillStyle = '#ebedf5'; vctx.fillRect(0, 0, vw, vh);
+    vctx.strokeStyle = 'rgba(15,23,42,0.08)'; vctx.lineWidth = 1;
+    for (let i = 0; i <= 10; i++) { vctx.beginPath(); vctx.moveTo(i / 10 * vw, 0); vctx.lineTo(i / 10 * vw, vh); vctx.stroke(); }
+    for (let i = 0; i <= 4; i++) { vctx.beginPath(); vctx.moveTo(0, i / 4 * vh); vctx.lineTo(vw, i / 4 * vh); vctx.stroke(); }
+    const accelTime = moveTime * 0.25, cruiseTime = moveTime * 0.5, decelTime = moveTime * 0.25;
+    const maxVel = 1 / (cruiseTime / moveTime);
+    const velData = [];
+    for (let t = 0; t <= moveTime; t += 0.01) {
+      let v;
+      if (t < accelTime) v = (t / accelTime) * maxVel;
+      else if (t < accelTime + cruiseTime) v = maxVel;
+      else v = maxVel * (1 - (t - accelTime - cruiseTime) / decelTime);
+      velData.push({ t, v: Math.max(0, v), a: t < accelTime ? maxVel / accelTime : t < accelTime + cruiseTime ? 0 : -maxVel / decelTime });
+    }
+    vctx.strokeStyle = '#06b6d4'; vctx.lineWidth = 2; vctx.beginPath();
+    velData.forEach((d, i) => { const x = d.t / moveTime * vw; const y = vh - d.v * (vh - 20) - 10; if (i === 0) vctx.moveTo(x, y); else vctx.lineTo(x, y); }); vctx.stroke();
+    vctx.strokeStyle = '#d97706'; vctx.lineWidth = 1.5; vctx.setLineDash([3, 3]); vctx.beginPath();
+    velData.forEach((d, i) => { const x = d.t / moveTime * vw; const y = vh - (d.a + 2) / 4 * (vh - 20) - 10; if (i === 0) vctx.moveTo(x, y); else vctx.lineTo(x, y); }); vctx.stroke(); vctx.setLineDash([]);
+    vctx.fillStyle = '#5c5c72'; vctx.font = '10px sans-serif'; vctx.textAlign = 'center';
+    ['0', '0.5s', '1.0s', '1.5s', '2.0s'].forEach((l, i) => vctx.fillText(l, i / 4 * vw, vh - 2));
+    vctx.fillStyle = '#06b6d4'; vctx.fillRect(10, 5, 10, 10); vctx.fillStyle = '#1e293b'; vctx.fillText('Velocity', 28, 14);
+    vctx.fillStyle = '#d97706'; vctx.fillRect(80, 5, 10, 10); vctx.fillStyle = '#1e293b'; vctx.fillText('Acceleration', 98, 14);
+    const peakVel = maxVel * 1000, peakAccel = (maxVel / accelTime) * 1000;
+    document.getElementById('rak-velocity-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Move Time</span><strong>${moveTime}s</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Peak Velocity</span><strong>${peakVel.toFixed(0)} mm/s</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Peak Acceleration</span><strong>${peakAccel.toFixed(0)} mm/s²</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Profile Type</span><strong>Trapezoidal</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Jerk</span><strong>⚠️ Use S-curve for smooth motion</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Trapezoidal velocity profile: 25% accel, 50% cruise, 25% decel. For smooth motion, use S-curve profiles that limit jerk. Max joint speed: ${peakVel.toFixed(0)} mm/s requires motor RPM: ${Math.round(peakVel * 60 / (2 * Math.PI * 10))} at 10mm pitch.</div>
+    `;
+    document.getElementById('rak-velocity-section').style.display = 'block';
+
+    // === Feature 6: Trajectory Generation ===
+    const trajSteps = 10;
+    const startAngles = dh.map(p => p.theta);
+    const endAngles = startAngles.map(a => a + 30);
+    const trajData = [];
+    for (let step = 0; step <= trajSteps; step++) {
+      const s = step / trajSteps;
+      const blend = 3 * s * s - 2 * s * s * s;
+      const angles = startAngles.map((a, i) => a + (endAngles[i] - a) * blend);
+      let TT = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+      dh.forEach((p, i) => { TT = matMul(TT, dhTransform(angles[i], p.d, p.a, p.alpha)); });
+      trajData.push({ step, angles, x: TT[0][3], z: TT[2][3] });
+    }
+    document.getElementById('rak-trajectory-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Step</th>${dh.map((_, i) => `<th>θ${i + 1} (°)</th>`).join('')}<th>X (mm)</th><th>Z (mm)</th></tr></thead><tbody>
+        ${trajData.filter((_, i) => i % 2 === 0).map(d => `<tr><td><strong>${d.step}</strong></td>${d.angles.map(a => `<td>${a.toFixed(1)}</td>`).join('')}<td class="it-highlight">${d.x.toFixed(1)}</td><td class="it-highlight">${d.z.toFixed(1)}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Cubic polynomial interpolation (3s² - 2s³) ensures smooth start/stop with zero velocity at endpoints. ${trajSteps} steps over ${moveTime}s. For Cartesian-space trajectories, interpolate in task space then solve IK at each waypoint.</div>
+    `;
+    document.getElementById('rak-trajectory-section').style.display = 'block';
+
+    // === Feature 7: URDF Conversion ===
+    const urdfJoints = dh.map((p, i) => {
+      const jointType = i === 0 ? 'revolute' : Math.abs(p.d) > 1 ? 'prismatic' : 'revolute';
+      const axis = Math.abs(p.alpha - 90) < 1 ? '0 0 1' : '0 1 0';
+      const origin = i === 0 ? '0 0 0' : `${dh[i - 1].a / 1000} 0 ${dh[i - 1].d / 1000}`;
+      return `  <joint name="joint_${i + 1}" type="${jointType}">\n    <origin xyz="${origin}" rpy="0 0 ${(dh[i - 1]?.alpha || 0) * Math.PI / 180}"/>\n    <parent link="link_${i}"/>\n    <child link="link_${i + 1}"/>\n    <axis xyz="${axis}"/>\n    <limit lower="-3.14" upper="3.14" effort="${torques[i].toFixed(1)}" velocity="2.0"/>\n  </joint>`;
+    }).join('\n');
+    const urdfLinks = dh.map((p, i) => `  <link name="link_${i + 1}">\n    <visual>\n      <geometry><box size="${Math.abs(p.a) / 1000} 0.05 0.05"/></geometry>\n      <origin xyz="${p.a / 2000} 0 0"/>\n    </visual>\n    <inertial>\n      <mass value="${linkMasses[i].toFixed(2)}"/>\n      <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0" ixz="0" iyz="0"/>\n    </inertial>\n  </link>`).join('\n');
+    document.getElementById('rak-urdf-list').innerHTML = `
+      <div class="it-alert it-alert-info" style="margin-bottom:0.5rem;">URDF (Unified Robot Description Format) conversion from DH parameters. Copy this to a .urdf file for use with ROS, Gazebo, or MoveIt.</div>
+      <pre style="background:#1e293b;color:#e2e8f0;padding:1rem;border-radius:var(--tl-radius-sm);overflow-x:auto;font-size:0.75rem;line-height:1.4;"><code>&lt;?xml version="1.0"?&gt;\n&lt;robot name="${config}_arm"&gt;\n${urdfLinks}\n${urdfJoints}\n&lt;/robot&gt;</code></pre>
+    `;
+    document.getElementById('rak-urdf-section').style.display = 'block';
+
+    // === Feature 8: Collision Detection ===
+    const obstacles = [{ x: 300, z: 200, r: 50, name: 'Obstacle A' }, { x: -200, z: 350, r: 40, name: 'Obstacle B' }];
+    const collisions = [];
+    for (let i = 0; i < positions.length - 1; i++) {
+      const p1 = positions[i], p2 = positions[i + 1];
+      obstacles.forEach(obs => {
+        const dx = p2.x - p1.x, dz = p2.z - p1.z;
+        const len2 = dx * dx + dz * dz;
+        if (len2 === 0) return;
+        let t = ((obs.x - p1.x) * dx + (obs.z - p1.z) * dz) / len2;
+        t = Math.max(0, Math.min(1, t));
+        const cx = p1.x + t * dx, cz = p1.z + t * dz;
+        const dist = Math.sqrt((obs.x - cx) ** 2 + (obs.z - cz) ** 2);
+        if (dist < obs.r) collisions.push({ link: i + 1, obstacle: obs.name, distance: dist.toFixed(1) });
+      });
+    }
+    const mainCanvas = document.getElementById('rak-canvas');
+    const mCtx = mainCanvas.getContext('2d');
+    const mOx = mainCanvas.width / 2, mOy = mainCanvas.height - 50, mScale = 0.5;
+    obstacles.forEach(obs => {
+      mCtx.fillStyle = collisions.some(c => c.obstacle === obs.name) ? 'rgba(220,38,38,0.3)' : 'rgba(245,158,11,0.2)';
+      mCtx.strokeStyle = collisions.some(c => c.obstacle === obs.name) ? '#dc2626' : '#f59e0b';
+      mCtx.lineWidth = 2;
+      mCtx.beginPath(); mCtx.arc(mOx + obs.x * mScale, mOy - obs.z * mScale, obs.r * mScale, 0, Math.PI * 2); mCtx.fill(); mCtx.stroke();
+    });
+    document.getElementById('rak-collision-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Obstacle</th><th>Position (X,Z)</th><th>Radius (mm)</th><th>Collision?</th></tr></thead><tbody>
+        ${obstacles.map(o => {
+          const hit = collisions.find(c => c.obstacle === o.name);
+          return `<tr><td><strong>${o.name}</strong></td><td>(${o.x}, ${o.z})</td><td>${o.r}</td><td style="color:${hit ? '#dc2626' : '#059669'};font-weight:700;">${hit ? '⚠️ Link ' + hit.link + ' (' + hit.distance + 'mm)' : '✓ Clear'}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert ${collisions.length > 0 ? 'it-alert-bad' : 'it-alert-good'}" style="margin-top:0.5rem;">${collisions.length > 0 ? `${collisions.length} collision(s) detected! Repath using RRT, PRM, or potential field methods. ` : 'No collisions detected — current configuration is safe. '} Obstacles shown on robot visualization. Link-obstacle distance computed using point-to-segment distance formula.</div>
+    `;
+    document.getElementById('rak-collision-section').style.display = 'block';
+
+    // === Feature 9: Motor Selection ===
+    const motorData = dh.map((p, i) => {
+      const torque = torques[i];
+      const maxRPM = 60;
+      const gearRatio = Math.max(1, Math.ceil(torque / 2));
+      const motorTorque = torque / gearRatio;
+      const motorType = torque < 5 ? 'NEMA 17 Stepper' : torque < 20 ? 'NEMA 23 Stepper' : torque < 50 ? 'BLDC 100W' : 'Harmonic Drive + BLDC';
+      const encoder = torque > 10 ? 'Absolute Encoder (20-bit)' : 'Incremental Encoder (1000 CPR)';
+      const power = Math.max(10, torque * maxRPM * 2 * Math.PI / 60);
+      return { joint: i + 1, torque, gearRatio, motorTorque, motorType, encoder, power };
+    });
+    document.getElementById('rak-motor-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Joint</th><th>Required Torque</th><th>Gear Ratio</th><th>Motor Torque</th><th>Motor Type</th><th>Encoder</th><th>Power (W)</th></tr></thead><tbody>
+        ${motorData.map(m => `<tr><td><strong>Joint ${m.joint}</strong></td><td class="it-highlight">${m.torque.toFixed(1)} N·m</td><td>${m.gearRatio}:1</td><td>${m.motorTorque.toFixed(2)} N·m</td><td>${m.motorType}</td><td style="font-size:0.8125rem;">${m.encoder}</td><td>${m.power.toFixed(0)}W</td></tr>`).join('')}
+      </tbody></table>
+      <div style="margin-top:0.75rem;">
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Total System Power</span><strong>${motorData.reduce((s, m) => s + m.power, 0).toFixed(0)} W</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Power Supply (24V)</span><strong>${Math.ceil(motorData.reduce((s, m) => s + m.power, 0) / 24 + 5)}A</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Controller</span><strong>${dh.length <= 4 ? 'Arduino Mega / Teensy 4.1' : 'EtherCAT Master (Beckhoff/ROS)'}</strong></div>
+      </div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Motor selection based on static torque with 2x safety margin. Stepper motors: good for positioning, limited speed. BLDC: high speed + torque, needs encoder. Harmonic drives: zero backlash, high ratio. Total power: ${motorData.reduce((s, m) => s + m.power, 0).toFixed(0)}W at 24V.</div>
+    `;
+    document.getElementById('rak-motor-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('rak-export').style.display = 'inline-flex';
+    document.getElementById('rak-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), config, dhParams: dh, endEffector: { x: ee.x, y: ee.y, z: ee.z, orientation: orient }, jointPositions: positions, jacobian, manipulability, conditionNumber: condNum, singularities, torques, maxPayload, velocityProfile: { moveTime, peakVel, peakAccel }, trajectory: trajData, motorSpecs: motorData, collisions };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'robot-kinematics-report.json'; a.click();
+    };
+  }
+
+  function drawRobot(positions) {
+    const canvas = document.getElementById('rak-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+
+    // Grid
+    ctx.strokeStyle = 'rgba(15,23,42,0.06)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i < w; i += 40) { ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, h); ctx.stroke(); }
+    for (let i = 0; i < h; i += 40) { ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(w, i); ctx.stroke(); }
+
+    // Origin
+    const ox = w / 2, oy = h - 50;
+    const scale = 0.5;
+
+    // Draw axes
+    ctx.strokeStyle = '#5c5c72';
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0, oy); ctx.lineTo(w, oy); ctx.stroke(); // X axis
+    ctx.beginPath(); ctx.moveTo(ox, 0); ctx.lineTo(ox, h); ctx.stroke(); // Z axis
+    ctx.fillStyle = '#5c5c72'; ctx.font = '10px sans-serif';
+    ctx.fillText('X →', w - 25, oy - 5);
+    ctx.fillText('Z ↑', ox + 5, 15);
+
+    // Draw links
+    ctx.strokeStyle = '#8b5cf6';
+    ctx.lineWidth = 4;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(ox, oy);
+    positions.forEach((p, i) => {
+      const px = ox + p.x * scale;
+      const py = oy - p.z * scale;
+      ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Draw joints
+    positions.forEach((p, i) => {
+      const px = ox + p.x * scale;
+      const py = oy - p.z * scale;
+      ctx.fillStyle = i === 0 ? '#059669' : i === positions.length - 1 ? '#dc2626' : '#8b5cf6';
+      ctx.beginPath();
+      ctx.arc(px, py, i === 0 ? 8 : i === positions.length - 1 ? 10 : 6, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.fillStyle = '#111125';
+      ctx.font = '10px sans-serif';
+      if (i === 0) ctx.fillText('Base', px + 12, py + 4);
+      if (i === positions.length - 1) ctx.fillText('EE', px + 14, py + 4);
+    });
+  }
+
+  function inverseKinematics() {
+    const config = document.getElementById('rak-config').value;
+    if (config !== '2dof' && config !== '3dof') {
+      alert('Inverse kinematics is currently supported for 2-DOF and 3-DOF planar arms only.');
+      return;
+    }
+    const dh = getDHParams();
+    const l1 = dh[0].a, l2 = dh[1].a;
+    const l3 = config === '3dof' ? dh[2].a : 0;
+
+    // Current target = current end-effector position
+    let T = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+    dh.forEach(p => { T = matMul(T, dhTransform(p.theta, p.d, p.a, p.alpha)); });
+    const targetX = T[0][3];
+    const targetY = T[1][3];
+
+    // For planar arm, use x and y (ignore z)
+    const x = targetX, y = targetY;
+
+    if (config === '2dof') {
+      // Closed-form IK for 2-DOF
+      const cos2 = (x * x + y * y - l1 * l1 - l2 * l2) / (2 * l1 * l2);
+      if (Math.abs(cos2) > 1) { alert('Target out of reach!'); return; }
+      const theta2 = Math.acos(cos2);
+      const theta1 = Math.atan2(y, x) - Math.atan2(l2 * Math.sin(theta2), l1 + l2 * Math.cos(theta2));
+
+      const t1 = theta1 * 180 / Math.PI;
+      const t2 = theta2 * 180 / Math.PI;
+
+      document.getElementById('rak-insight').innerHTML = `<strong>💡 Inverse Kinematics (2-DOF):</strong> For target (${x.toFixed(1)}, ${y.toFixed(1)}): θ1 = ${t1.toFixed(2)}°, θ2 = ${t2.toFixed(2)}°. ${Math.abs(cos2) < 0.95 ? 'The arm is in a non-singular configuration.' : 'Warning: near singularity — Jacobian is ill-conditioned.'}`;
+    } else {
+      // 3-DOF: solve for wrist angle first, then 2-DOF
+      const phi = dh[2].theta * Math.PI / 180;
+      const wristX = x - l3 * Math.cos(phi);
+      const wristY = y - l3 * Math.sin(phi);
+      const cos2 = (wristX * wristX + wristY * wristY - l1 * l1 - l2 * l2) / (2 * l1 * l2);
+      if (Math.abs(cos2) > 1) { alert('Target out of reach!'); return; }
+      const theta2 = Math.acos(cos2);
+      const theta1 = Math.atan2(wristY, wristX) - Math.atan2(l2 * Math.sin(theta2), l1 + l2 * Math.cos(theta2));
+      const theta3 = phi - theta1 - theta2;
+
+      document.getElementById('rak-insight').innerHTML = `<strong>💡 Inverse Kinematics (3-DOF):</strong> For target (${x.toFixed(1)}, ${y.toFixed(1)}) with end angle ${(phi * 180 / Math.PI).toFixed(1)}°: θ1 = ${(theta1 * 180 / Math.PI).toFixed(2)}°, θ2 = ${(theta2 * 180 / Math.PI).toFixed(2)}°, θ3 = ${(theta3 * 180 / Math.PI).toFixed(2)}°.`;
+    }
+
+    document.getElementById('rak-results').classList.add('show');
+  }
+
+  document.getElementById('rak-forward').addEventListener('click', forwardKinematics);
+  document.getElementById('rak-inverse').addEventListener('click', inverseKinematics);
+  document.getElementById('rak-reset').addEventListener('click', () => {
+    document.getElementById('rak-results').classList.remove('show');
+    renderDH();
+  });
+})();
+</script>

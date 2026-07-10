@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { nuclearContent } from './nuclear-content';
+import './nuclear-styles.css';
+const c = nuclearContent;
+---
+<BaseLayout title={c.name} description={c.description}>
+  <section class="cat-hero"><div class="container cat-hero-inner">
+    <span class="cat-hero-icon">{c.icon}</span>
+    <h1 class="cat-hero-name">{c.name}</h1>
+    <p class="cat-hero-tagline">{c.tagline}</p>
+    <p class="cat-hero-desc">{c.description}</p>
+    <div class="cat-hero-stats">{c.stats.map((s) => (<div><span class="cat-hero-stat-value">{s.value}</span><span class="cat-hero-stat-label">{s.label}</span></div>))}</div>
+  </div></section>
+  <section class="cat-topics"><div class="container">
+    <h2 class="landing-section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Key Topics</h2>
+    <div class="cat-topics-grid">{c.topics.map((t) => (<div class="cat-topic-card"><h3 class="cat-topic-title">{t.title}</h3><p class="cat-topic-desc">{t.description}</p></div>))}</div>
+  </div></section>
+  <section class="cat-articles"><div class="container">
+    <h2 class="landing-section-title" style="font-size: 2rem;">Latest Articles</h2>
+    <div class="cat-articles-list">{c.articles.map((a) => (<a href={a.href} class="cat-article-item"><h3 class="cat-article-title">{a.title}</h3><p class="cat-article-excerpt">{a.excerpt}</p><span class="cat-article-date">{a.date}</span></a>))}</div>
+  </div></section>
+</BaseLayout>

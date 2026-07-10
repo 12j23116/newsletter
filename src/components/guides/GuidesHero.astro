@@ -1,0 +1,35 @@
+---
+import { guideStats } from '../../data/guides/guides-listing';
+---
+
+<section class="gd-hero">
+  <div class="gd-hero-bg">
+    <div class="gd-hero-grid"></div>
+    <div class="gd-hero-beam gd-hero-beam-1"></div>
+    <div class="gd-hero-beam gd-hero-beam-2"></div>
+  </div>
+  <div class="gd-hero-inner">
+    <span class="gd-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+      </svg>
+      Learning Hub · 62+ Structured Guides
+    </span>
+    <h1 class="gd-hero-title">
+      Master Emerging Tech with
+      <span class="gd-grad">Step-by-Step Guides</span>
+    </h1>
+    <p class="gd-hero-sub">
+      Structured learning paths across 12 technology frontiers — from beginner fundamentals to expert-level
+      implementation. Each guide breaks complex topics into clear, actionable steps with real-world examples.
+    </p>
+    <div class="gd-hero-stats">
+      {guideStats.map((stat) => (
+        <div class="gd-hero-stat">
+          <strong>{stat.value}{stat.suffix}</strong>
+          <span>{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,483 @@
+---
+/**
+ * Plasma Parameter Calculator — Interactive tool
+ * Calculate key fusion plasma parameters: Lawson criterion, beta, confinement time
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="plasma-calc">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🔥</div>
+      <div>
+        <h2>Plasma Parameter Calculator</h2>
+        <p>Calculate fusion plasma parameters — Lawson triple product, beta, confinement time, and bremsstrahlung</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Fusion Reaction</label>
+          <select class="it-select" id="ppc-reaction">
+            <option value="dt">D-T (Deuterium-Tritium)</option>
+            <option value="dd">D-D (Deuterium-Deuterium)</option>
+            <option value="dhe3">D-He3 (Deuterium-Helium-3)</option>
+            <option value="pb11">p-B11 (Proton-Boron-11)</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Confinement Type</label>
+          <select class="it-select" id="ppc-confinement">
+            <option value="tokamak">Tokamak (Magnetic)</option>
+            <option value="stellarator">Stellarator (Magnetic)</option>
+            <option value="icf">Inertial (ICF)</option>
+            <option value="mirror">Magnetic Mirror</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">Temperature <span class="it-label-hint">(keV)</span></label>
+          <input type="number" class="it-input" id="ppc-temp" value="10" min="1" max="500" step="0.5" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Density <span class="it-label-hint">(×10²⁰ m⁻³)</span></label>
+          <input type="number" class="it-input" id="ppc-density" value="1" min="0.01" max="100" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Confinement Time <span class="it-label-hint">(s)</span></label>
+          <input type="number" class="it-input" id="ppc-tau" value="3" min="0.01" max="100" step="0.1" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Magnetic Field <span class="it-label-hint">(T)</span></label>
+          <input type="number" class="it-input" id="ppc-bfield" value="5.3" min="0.1" max="20" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Minor Radius <span class="it-label-hint">(m)</span></label>
+          <input type="number" class="it-input" id="ppc-radius" value="2" min="0.1" max="10" step="0.1" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="ppc-calculate">Calculate Parameters</button>
+        <button class="it-btn it-btn-secondary" id="ppc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="ppc-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="ppc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Plasma Parameters</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Lawson Triple Product</div>
+            <div class="it-stat-value" id="ppc-triple">0<span class="it-stat-unit"> ×10²¹</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Fusion Gain Q</div>
+            <div class="it-stat-value" id="ppc-q">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Beta (β)</div>
+            <div class="it-stat-value" id="ppc-beta">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Ignition?</div>
+            <div class="it-stat-value" id="ppc-ignition" style="font-size:1.25rem;">—</div>
+          </div>
+        </div>
+
+        <div id="ppc-details"></div>
+        <div class="it-alert" id="ppc-alert"></div>
+      </div>
+
+      <!-- Feature 1: Lawson Criterion Chart -->
+      <div class="it-results-card" id="ppc-lawson-section" style="display:none;">
+        <div class="it-results-title">📊 Lawson Criterion: nτ vs Temperature</div>
+        <canvas id="ppc-lawson-canvas" width="700" height="350" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="ppc-lawson-list"></div>
+      </div>
+
+      <!-- Feature 2: Power Balance Breakdown -->
+      <div class="it-results-card" id="ppc-power-section" style="display:none;">
+        <div class="it-results-title">⚡ Power Balance Breakdown</div>
+        <div id="ppc-power-list"></div>
+      </div>
+
+      <!-- Feature 3: Parameter Sensitivity Analysis -->
+      <div class="it-results-card" id="ppc-sensitivity-section" style="display:none;">
+        <div class="it-results-title">📈 Parameter Sensitivity Analysis</div>
+        <div id="ppc-sensitivity-list"></div>
+      </div>
+
+      <!-- Feature 4: Reactor Comparison Table -->
+      <div class="it-results-card" id="ppc-reactor-section" style="display:none;">
+        <div class="it-results-title">🏭 Reactor Parameter Comparison</div>
+        <div id="ppc-reactor-list"></div>
+      </div>
+
+      <!-- Feature 5: Transport Regime Map -->
+      <div class="it-results-card" id="ppc-transport-section" style="display:none;">
+        <div class="it-results-title">🌀 Transport & Collisionality Regime</div>
+        <div id="ppc-transport-list"></div>
+      </div>
+
+      <!-- Feature 6: Radiation Loss Analysis -->
+      <div class="it-results-card" id="ppc-radiation-section" style="display:none;">
+        <div class="it-results-title">☢️ Radiation Loss Analysis</div>
+        <div id="ppc-radiation-list"></div>
+      </div>
+
+      <!-- Feature 7: MHD Stability Assessment -->
+      <div class="it-results-card" id="ppc-mhd-section" style="display:none;">
+        <div class="it-results-title">🧲 MHD Stability Assessment</div>
+        <div id="ppc-mhd-list"></div>
+      </div>
+
+      <!-- Feature 8: Fusion Cross-Section Plot -->
+      <div class="it-results-card" id="ppc-cross-section-section" style="display:none;">
+        <div class="it-results-title">🔬 Fusion Cross-Section vs Temperature</div>
+        <canvas id="ppc-cross-canvas" width="700" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="ppc-cross-list"></div>
+      </div>
+
+      <!-- Feature 9: Ignition Path Recommendations -->
+      <div class="it-results-card" id="ppc-path-section" style="display:none;">
+        <div class="it-results-title">🛤️ Path to Ignition Recommendations</div>
+        <div id="ppc-path-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const reactions = {
+    dt: { name: 'D-T', energy: 17.6, Lawson: 3e21, optimalTemp: 15, crossSection: 5e-28, ignitionTemp: 4.4 },
+    dd: { name: 'D-D', energy: 3.65, Lawson: 1e22, optimalTemp: 50, crossSection: 3e-30, ignitionTemp: 50 },
+    dhe3: { name: 'D-He3', energy: 18.3, Lawson: 5e22, optimalTemp: 100, crossSection: 5e-31, ignitionTemp: 100 },
+    pb11: { name: 'p-B11', energy: 8.7, Lawson: 5e23, optimalTemp: 300, crossSection: 3e-32, ignitionTemp: 300 },
+  };
+
+  function calculate() {
+    const reaction = document.getElementById('ppc-reaction').value;
+    const confinement = document.getElementById('ppc-confinement').value;
+    const temp = parseFloat(document.getElementById('ppc-temp').value) || 10;
+    const density = (parseFloat(document.getElementById('ppc-density').value) || 1) * 1e20;
+    const tau = parseFloat(document.getElementById('ppc-tau').value) || 3;
+    const bField = parseFloat(document.getElementById('ppc-bfield').value) || 5.3;
+    const radius = parseFloat(document.getElementById('ppc-radius').value) || 2;
+
+    const rx = reactions[reaction];
+
+    // Lawson triple product: n * T * tau
+    const tripleProduct = density * temp * tau / 1e21;
+
+    // Fusion power density: P_f = n² * <σv> * E / 4
+    // <σv> approximation: scales with temperature
+    const sigmaV = rx.crossSection * Math.pow(temp / rx.optimalTemp, 2) * 1e6;
+    const fusionPowerDensity = density * density * sigmaV * rx.energy * 1.6e-13 / 4; // W/m³
+
+    // Bremsstrahlung power: P_b = C_b * n² * sqrt(T)
+    const bremsConstant = 5.35e-37; // W·m³ / keV^0.5
+    const bremsPower = bremsConstant * density * density * Math.sqrt(temp);
+
+    // Heating power (alpha particles for D-T)
+    const alphaHeating = reaction === 'dt' ? fusionPowerDensity * 0.2 : fusionPowerDensity * 0.1;
+
+    // Fusion gain Q = P_fusion / P_heating
+    const externalHeating = Math.max(0, fusionPowerDensity - alphaHeating);
+    const Q = alphaHeating / Math.max(externalHeating, 1e-10);
+
+    // Beta: β = p / (B²/(2μ₀))
+    const mu0 = 4 * Math.PI * 1e-7;
+    const plasmaPressure = density * temp * 1.6e-16; // Pa (n * kT)
+    const magneticPressure = bField * bField / (2 * mu0);
+    const beta = (plasmaPressure / magneticPressure) * 100;
+
+    // Ignition condition: triple product > Lawson criterion
+    const lawsonNeeded = rx.Lawson / 1e21;
+    const ignition = tripleProduct >= lawsonNeeded;
+
+    // Larmor radius
+    const ionMass = 2.5 * 1.67e-27; // average ion mass
+    const ionCharge = 1.6e-19;
+    const vThermal = Math.sqrt(2 * temp * 1.6e-16 / ionMass);
+    const larmorRadius = ionMass * vThermal / (ionCharge * bField);
+
+    // Collisionality parameter
+    const coulombLog = 17;
+    const collisionTime = 3.44e5 * Math.pow(temp, 1.5) * ionMass / (density * coulombLog);
+
+    // Update UI
+    document.getElementById('ppc-triple').innerHTML = tripleProduct.toFixed(2) + '<span class="it-stat-unit"> ×10²¹</span>';
+    document.getElementById('ppc-q').textContent = Q > 100 ? '∞ (ignition)' : Q.toFixed(2);
+    document.getElementById('ppc-beta').innerHTML = beta.toFixed(2) + '<span class="it-stat-unit">%</span>';
+    const ignEl = document.getElementById('ppc-ignition');
+    if (ignition) { ignEl.textContent = '✓ Yes'; ignEl.style.color = '#059669'; }
+    else { ignEl.textContent = '✗ No'; ignEl.style.color = '#dc2626'; }
+
+    // Details
+    const details = document.getElementById('ppc-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Parameter</th><th>Value</th><th>Threshold/Context</th></tr></thead>
+        <tbody>
+          <tr><td>Reaction</td><td>${rx.name}</td><td>${rx.energy} MeV per reaction</td></tr>
+          <tr><td>Confinement Type</td><td>${confinement}</td><td>—</td></tr>
+          <tr><td>Temperature</td><td>${temp} keV (${(temp * 1.16e7).toFixed(0)} K)</td><td>Optimal: ${rx.optimalTemp} keV</td></tr>
+          <tr><td>Density (n)</td><td>${(density / 1e20).toFixed(2)} ×10²⁰ m⁻³</td><td>—</td></tr>
+          <tr><td>Confinement Time (τₑ)</td><td>${tau} s</td><td>—</td></tr>
+          <tr><td class="it-highlight">Lawson Triple Product (nTτ)</td><td class="it-highlight">${tripleProduct.toFixed(2)} ×10²¹ keV·s/m³</td><td>Required: ${lawsonNeeded.toFixed(2)} ×10²¹</td></tr>
+          <tr><td>Fusion Power Density</td><td>${fusionPowerDensity.toExponential(2)} W/m³</td><td>—</td></tr>
+          <tr><td>Bremsstrahlung Loss</td><td>${bremsPower.toExponential(2)} W/m³</td><td>${bremsPower < fusionPowerDensity ? '✓ Below fusion power' : '⚠️ Exceeds fusion power'}</td></tr>
+          <tr><td>Alpha Heating</td><td>${alphaHeating.toExponential(2)} W/m³</td><td>—</td></tr>
+          <tr><td class="it-highlight">Fusion Gain (Q)</td><td class="it-highlight">${Q > 100 ? '∞ (ignition)' : Q.toFixed(2)}</td><td>Q>1: burning plasma, Q=∞: ignition</td></tr>
+          <tr><td>Plasma Pressure</td><td>${plasmaPressure.toFixed(2)} Pa</td><td>—</td></tr>
+          <tr><td>Magnetic Pressure</td><td>${magneticPressure.toFixed(0)} Pa</td><td>B = ${bField} T</td></tr>
+          <tr><td class="it-highlight">Beta (β)</td><td class="it-highlight">${beta.toFixed(2)}%</td><td>Typical tokamak: 2-5%, limit: ~5%</td></tr>
+          <tr><td>Larmor Radius</td><td>${(larmorRadius * 1000).toFixed(2)} mm</td><td>Must be << minor radius (${radius} m)</td></tr>
+          <tr><td>Collision Time</td><td>${collisionTime.toFixed(2)} s</td><td>—</td></tr>
+          <tr><td>Ratio: τₑ/τ_collision</td><td>${(tau / collisionTime).toFixed(2)}</td><td>${tau / collisionTime > 10 ? '✓ Collisionless regime' : '⚠️ Collisional'}</td></tr>
+          <tr><td>Total Fusion Power (est.)</td><td>${(fusionPowerDensity * Math.PI * Math.pow(radius, 2) * 2 * Math.PI * radius * 3).toExponential(2)} W</td><td>Volume ≈ 2π²a²R</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const alert = document.getElementById('ppc-alert');
+    if (ignition) {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>Ignition condition met!</strong> The Lawson triple product (${tripleProduct.toFixed(2)} ×10²¹) exceeds the ${rx.name} threshold (${lawsonNeeded.toFixed(2)} ×10²¹). Self-sustaining burn is possible. Q = ${Q > 100 ? '∞' : Q.toFixed(2)}. ${beta > 5 ? 'Warning: beta is above typical MHD stability limit.' : 'Beta is within stable operating range.'}`;
+    } else {
+      const ratio = tripleProduct / lawsonNeeded;
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>Below ignition threshold.</strong> Triple product is ${tripleProduct.toFixed(2)} ×10²¹ vs required ${lawsonNeeded.toFixed(2)} ×10²¹ (${(ratio * 100).toFixed(0)}% of threshold). ${ratio > 0.5 ? 'Close to ignition — consider increasing density or confinement time.' : ratio > 0.2 ? 'Significant improvement needed. Consider higher temperature or better confinement.' : 'Far from ignition. Major parameter improvements required.'} Q = ${Q.toFixed(2)}.`;
+    }
+
+    document.getElementById('ppc-results').classList.add('show');
+
+    // === Feature 1: Lawson Criterion Chart ===
+    const lawsonCanvas = document.getElementById('ppc-lawson-canvas');
+    const lwCtx = lawsonCanvas.getContext('2d');
+    const lwW = lawsonCanvas.width, lwH = lawsonCanvas.height;
+    lwCtx.fillStyle = '#ebedf5'; lwCtx.fillRect(0, 0, lwW, lwH);
+    lwCtx.strokeStyle = '#94a3b8'; lwCtx.lineWidth = 1;
+    lwCtx.beginPath(); lwCtx.moveTo(60, 10); lwCtx.lineTo(60, lwH - 40); lwCtx.lineTo(lwW - 10, lwH - 40); lwCtx.stroke();
+    const tempRange = [1, 2, 5, 10, 15, 20, 30, 50, 80, 100, 150, 200, 300, 500];
+    const lawsonCurves = {
+      dt: tempRange.map(T => ({ T, nTau: 3e20 / Math.max(0.1, T / 15) * (1 + Math.pow(T / 15, -0.5)) })),
+      dd: tempRange.map(T => ({ T, nTau: 1e21 / Math.max(0.1, T / 50) * (1 + Math.pow(T / 50, -0.5)) })),
+      dhe3: tempRange.map(T => ({ T, nTau: 5e21 / Math.max(0.1, T / 100) * (1 + Math.pow(T / 100, -0.5)) })),
+      pb11: tempRange.map(T => ({ T, nTau: 5e22 / Math.max(0.1, T / 300) * (1 + Math.pow(T / 300, -0.5)) })),
+    };
+    const allNTau = lawsonCurves[reaction].map(p => p.nTau);
+    const lwMaxNTau = Math.max(...allNTau) * 1.5;
+    const lwMaxT = 500;
+    const curveColors = { dt: '#059669', dd: '#d97706', dhe3: '#8b5cf6', pb11: '#dc2626' };
+    Object.entries(lawsonCurves).forEach(([rxn, curve]) => {
+      lwCtx.strokeStyle = curveColors[rxn]; lwCtx.lineWidth = rxn === reaction ? 3 : 1; lwCtx.setLineDash(rxn === reaction ? [] : [4, 3]); lwCtx.beginPath();
+      curve.forEach((p, i) => { const x = 60 + (Math.log(p.T) / Math.log(lwMaxT)) * (lwW - 70); const y = lwH - 40 - (p.nTau / lwMaxNTau) * (lwH - 50); if (i === 0) lwCtx.moveTo(x, y); else lwCtx.lineTo(x, y); });
+      lwCtx.stroke(); lwCtx.setLineDash([]);
+    });
+    const opX = 60 + (Math.log(temp) / Math.log(lwMaxT)) * (lwW - 70);
+    const opY = lwH - 40 - (density * tau / lwMaxNTau) * (lwH - 50);
+    lwCtx.fillStyle = '#1e40af'; lwCtx.beginPath(); lwCtx.arc(opX, opY, 6, 0, 2 * Math.PI); lwCtx.fill();
+    lwCtx.fillStyle = '#1e40af'; lwCtx.font = '10px sans-serif'; lwCtx.textAlign = 'left'; lwCtx.fillText('Your operating point', opX + 10, opY + 3);
+    lwCtx.fillStyle = '#64748b'; lwCtx.textAlign = 'center'; lwCtx.fillText('Temperature (keV, log scale)', lwW / 2, lwH - 10);
+    lwCtx.save(); lwCtx.translate(20, lwH / 2); lwCtx.rotate(-Math.PI / 2); lwCtx.textAlign = 'center'; lwCtx.fillText('nτ (m⁻³·s)', 0, 0); lwCtx.restore();
+    [1, 10, 100, 500].forEach(T => { const x = 60 + (Math.log(T) / Math.log(lwMaxT)) * (lwW - 70); lwCtx.textAlign = 'center'; lwCtx.fillStyle = '#64748b'; lwCtx.font = '9px sans-serif'; lwCtx.fillText(T + ' keV', x, lwH - 28); });
+    Object.entries(curveColors).forEach(([rxn, color], i) => { lwCtx.fillStyle = color; lwCtx.textAlign = 'left'; lwCtx.font = '9px sans-serif'; lwCtx.fillText('● ' + reactions[rxn].name, lwW - 90, 15 + i * 12); });
+    document.getElementById('ppc-lawson-list').innerHTML = `<div class="it-alert it-alert-info">Lawson criterion plot shows required nτ for ignition vs temperature. Solid line: your reaction (${rx.name}). Dashed: other reactions. Blue dot: your operating point. ${ignition ? '✓ Your point is above the curve — ignition achieved!' : '✗ Your point is below the curve — need higher nτ or different temperature.'} D-T has the lowest threshold, making it the easiest reaction for fusion.</div>`;
+    document.getElementById('ppc-lawson-section').style.display = 'block';
+
+    // === Feature 2: Power Balance Breakdown ===
+    const synchrotronLoss = 6.21e-17 * density * bField * bField * bField * Math.pow(temp, 2) * 1e-20;
+    const lineRadiation = reaction === 'pb11' ? bremsPower * 5 : reaction === 'dhe3' ? bremsPower * 1.5 : bremsPower * 0.3;
+    const totalLoss = bremsPower + synchrotronLoss + lineRadiation;
+    const netPower = fusionPowerDensity - totalLoss;
+    const powerItems = [
+      { name: 'Fusion Power', value: fusionPowerDensity, color: '#059669', type: 'gain' },
+      { name: 'Alpha Heating', value: alphaHeating, color: '#10b981', type: 'gain' },
+      { name: 'Bremsstrahlung', value: bremsPower, color: '#d97706', type: 'loss' },
+      { name: 'Synchrotron', value: synchrotronLoss, color: '#f59e0b', type: 'loss' },
+      { name: 'Line Radiation', value: lineRadiation, color: '#dc2626', type: 'loss' },
+      { name: 'Net Power', value: netPower, color: netPower > 0 ? '#059669' : '#dc2626', type: 'net' },
+    ];
+    document.getElementById('ppc-power-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Power Term</th><th>Value (W/m³)</th><th>Type</th><th>% of Fusion</th><th>Bar</th></tr></thead><tbody>
+        ${powerItems.map(p => { const pct = fusionPowerDensity > 0 ? (p.value / fusionPowerDensity * 100) : 0; return `<tr${p.type === 'net' ? ' class="it-highlight"' : ''}><td><strong>${p.name}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${p.value.toExponential(2)}</td><td style="color:${p.type === 'gain' ? '#059669' : p.type === 'loss' ? '#dc2626' : p.color};font-weight:700;">${p.type === 'gain' ? 'Gain' : p.type === 'loss' ? 'Loss' : 'Net'}</td><td>${Math.abs(pct).toFixed(1)}%</td><td style="width:120px;"><div style="background:var(--tl-border);height:8px;border-radius:4px;overflow:hidden;"><div style="width:${Math.min(100, Math.abs(pct))}%;height:100%;background:${p.color};"></div></div></td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert ${netPower > 0 ? 'it-alert-good' : 'it-alert-bad'}" style="margin-top:0.5rem;">${netPower > 0 ? '✓ Net power is positive — fusion produces more energy than radiation losses.' : '✗ Net power is negative — radiation losses exceed fusion output. ' + (reaction === 'pb11' ? 'p-B11 has severe bremsstrahlung losses due to high Z=5 boron. ' : '') + 'Increase temperature or density to overcome losses.'} Bremsstrahlung scales as n²√T, fusion as n²<σv>E — both scale with density², so temperature is the key lever.</div>
+    `;
+    document.getElementById('ppc-power-section').style.display = 'block';
+
+    // === Feature 3: Parameter Sensitivity Analysis ===
+    const sensitivityParams = ['Temperature', 'Density', 'Confinement Time', 'Magnetic Field'];
+    const sensitivityData = sensitivityParams.map((param, i) => {
+      const deltas = [-20, -10, 0, 10, 20];
+      const results = deltas.map(d => {
+        let t = temp, n = density, ta = tau, b = bField;
+        if (i === 0) t *= (1 + d / 100); if (i === 1) n *= (1 + d / 100); if (i === 2) ta *= (1 + d / 100); if (i === 3) b *= (1 + d / 100);
+        const tp = n * t * ta / 1e21;
+        const sv = rx.crossSection * Math.pow(t / rx.optimalTemp, 2) * 1e6;
+        const fp = n * n * sv * rx.energy * 1.6e-13 / 4;
+        const bp = 5.35e-37 * n * n * Math.sqrt(t);
+        return { delta: d, tripleProduct: tp, fusionPower: fp, netPower: fp - bp };
+      });
+      const baseline = results[2];
+      const sensitivity = Math.abs((results[4].tripleProduct - results[0].tripleProduct) / baseline.tripleProduct / 0.4 * 100);
+      return { param, results, sensitivity };
+    });
+    document.getElementById('ppc-sensitivity-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Parameter</th><th>-20%</th><th>-10%</th><th>Baseline</th><th>+10%</th><th>+20%</th><th>Sensitivity</th></tr></thead><tbody>
+        ${sensitivityData.map(s => `<tr><td><strong>${s.param}</strong></td>${s.results.map((r, i) => `<td${i === 2 ? ' class="it-highlight"' : ''} style="font-size:0.8125rem;">${r.tripleProduct.toFixed(2)}</td>`).join('')}<td style="color:${s.sensitivity > 50 ? '#dc2626' : s.sensitivity > 20 ? '#d97706' : '#059669'};font-weight:700;">${s.sensitivity.toFixed(0)}%</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Sensitivity analysis shows how ±20% changes in each parameter affect the Lawson triple product. ${sensitivityData[0].sensitivity > sensitivityData[1].sensitivity && sensitivityData[0].sensitivity > sensitivityData[2].sensitivity ? 'Temperature has the highest impact — optimizing heating is critical.' : sensitivityData[1].sensitivity > sensitivityData[2].sensitivity ? 'Density has the highest impact — fueling and compression are key levers.' : 'Confinement time is the most sensitive parameter — improving confinement (H-mode, transport barriers) is critical.'} All parameters scale linearly with the triple product (nTτ), so equal % improvements yield equal gains.</div>
+    `;
+    document.getElementById('ppc-sensitivity-section').style.display = 'block';
+
+    // === Feature 4: Reactor Comparison Table ===
+    const reactors = [
+      { name: 'ITER', type: 'Tokamak', temp: 10, density: 1e20, tau: 3.7, bField: 5.3, radius: 2.0, status: 'Under construction', q: 10, ignition: false },
+      { name: 'JET', type: 'Tokamak', temp: 8, density: 0.8e20, tau: 1.0, bField: 3.45, radius: 1.0, status: 'Operational', q: 0.33, ignition: false },
+      { name: 'DEMO', type: 'Tokamak', temp: 15, density: 1.5e20, tau: 5.0, bField: 7.5, radius: 2.5, status: 'Planned', q: 25, ignition: true },
+      { name: 'Wendelstein 7-X', type: 'Stellarator', temp: 5, density: 0.3e20, tau: 0.5, bField: 3.0, radius: 0.53, status: 'Operational', q: 0, ignition: false },
+      { name: 'NIF (ICF)', type: 'Inertial', temp: 5, density: 1e31, tau: 1e-9, bField: 0, radius: 0.001, status: 'Operational', q: 1.5, ignition: false },
+      { name: 'Your Setup', type: confinement, temp: temp * 1000, density: density, tau: tau, bField: bField, radius: radius, status: 'Calculated', q: Q > 100 ? Infinity : Q, ignition: ignition },
+    ];
+    reactors.forEach(r => { r.triple = r.density * r.temp / 1000 * r.tau / 1e21; r.temp = r.temp / 1000; });
+    const yourReactor = reactors[5]; yourReactor.temp = temp; yourReactor.density = density; yourReactor.triple = tripleProduct;
+    document.getElementById('ppc-reactor-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Reactor</th><th>Type</th><th>T (keV)</th><th>n (×10²⁰)</th><th>τ (s)</th><th>nTτ (×10²¹)</th><th>B (T)</th><th>Q</th><th>Status</th></tr></thead><tbody>
+        ${reactors.map(r => `<tr${r.name === 'Your Setup' ? ' class="it-highlight"' : ''}><td><strong>${r.name}</strong></td><td style="font-size:0.8125rem;">${r.type}</td><td>${r.temp.toFixed(1)}</td><td>${(r.density / 1e20).toFixed(2)}</td><td>${r.tau.toFixed(2)}</td><td class="it-highlight">${r.triple.toFixed(2)}</td><td>${r.bField.toFixed(1)}</td><td style="color:${r.ignition ? '#059669' : '#d97706'};font-weight:700;">${r.q === Infinity ? '∞' : r.q.toFixed(2)}</td><td style="font-size:0.75rem;">${r.status}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Comparison with major fusion experiments. ITER aims for Q=10 (ten times more power out than in). DEMO targets Q=25 with ignition. NIF achieved Q>1 in December 2022 (first scientific breakeven). Your setup: ${ignition ? '✓ exceeds ignition threshold!' : 'is at ' + (tripleProduct / lawsonNeeded * 100).toFixed(0) + '% of ignition threshold.'} ${tripleProduct > 3 ? 'Comparable to or exceeding ITER parameters.' : 'Below ITER — needs improvement.'}</div>
+    `;
+    document.getElementById('ppc-reactor-section').style.display = 'block';
+
+    // === Feature 5: Transport Regime Map ===
+    const collisionality = tau / collisionTime;
+    const transportRegimes = [
+      { regime: 'Collisionless (Banana)', condition: 'ν* < 0.1', description: 'Particles complete banana orbits before colliding. Neoclassical transport dominates. Typical of tokamak cores.', applicable: collisionality < 0.1 },
+      { regime: 'Plateau', condition: '0.1 < ν* < 1', description: 'Transitional regime between banana and fluid. Moderate transport.', applicable: collisionality >= 0.1 && collisionality < 1 },
+      { regime: 'Fluid (Pfirsch-Schlüter)', condition: 'ν* > 1', description: 'Collision-dominated. Classical+neoclassical transport. Edge plasma regime.', applicable: collisionality >= 1 },
+      { regime: 'Bohm', condition: 'Anomalous', description: 'Turbulent transport dominates over neoclassical. Most tokamaks operate here.', applicable: true },
+      { regime: 'Gyro-Bohm', condition: 'ρ* << 1', description: 'Turbulence scales with Larmor radius. Modern H-mode tokamaks.', applicable: larmorRadius / radius < 0.01 },
+    ];
+    document.getElementById('ppc-transport-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Regime</th><th>Condition</th><th>Description</th><th>Applicable?</th></tr></thead><tbody>
+        ${transportRegimes.map(r => `<tr${r.applicable ? ' class="it-highlight"' : ''}><td><strong>${r.regime}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${r.condition}</td><td style="font-size:0.8125rem;">${r.description}</td><td style="color:${r.applicable ? '#059669' : '#94a3b8'};font-weight:700;">${r.applicable ? '✓ Yes' : '—'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Your plasma: collisionality ν* = ${collisionality.toFixed(3)}, Larmor/Radius = ${(larmorRadius / radius).toFixed(4)}. ${collisionality < 0.1 ? 'Collisionless regime — neoclassical transport dominates. Good for confinement.' : collisionality < 1 ? 'Plateau regime — moderate transport losses.' : 'Fluid regime — collisional transport. Typical of edge plasma.'} In practice, most tokamaks have anomalous transport 10-100× above neoclassical due to turbulence. H-mode reduces turbulence via transport barriers.</div>
+    `;
+    document.getElementById('ppc-transport-section').style.display = 'block';
+
+    // === Feature 6: Radiation Loss Analysis ===
+    const radTypes = [
+      { type: 'Bremsstrahlung (free-free)', formula: 'P ∝ n² Z² √T', value: bremsPower, fraction: bremsPower / fusionPowerDensity * 100, mitigation: 'Minimize high-Z impurities, use low-Z wall materials (Be, C)' },
+      { type: 'Synchrotron', formula: 'P ∝ n B² T²', value: synchrotronLoss, fraction: synchrotronLoss / fusionPowerDensity * 100, mitigation: 'Optimize B-field, use reflective wall coatings' },
+      { type: 'Line Radiation (bound-bound)', formula: 'P ∝ n nZ L(T)', value: lineRadiation, fraction: lineRadiation / fusionPowerDensity * 100, mitigation: 'Reduce impurity concentration, radiative divertor' },
+      { type: 'Cyclotron', formula: 'P ∝ B² T² / R', value: synchrotronLoss * 0.3, fraction: synchrotronLoss * 0.3 / fusionPowerDensity * 100, mitigation: 'Wall reflectivity >90% for synchrotron recovery' },
+    ];
+    const totalRad = radTypes.reduce((s, r) => s + r.value, 0);
+    document.getElementById('ppc-radiation-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Radiation Type</th><th>Scaling</th><th>Value (W/m³)</th><th>% of Fusion Power</th><th>Mitigation Strategy</th></tr></thead><tbody>
+        ${radTypes.map(r => `<tr><td><strong>${r.type}</strong></td><td style="font-family:var(--tl-mono);font-size:0.75rem;">${r.formula}</td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${r.value.toExponential(2)}</td><td style="color:${r.fraction > 50 ? '#dc2626' : r.fraction > 20 ? '#d97706' : '#059669'};font-weight:700;">${r.fraction.toFixed(1)}%</td><td style="font-size:0.75rem;">${r.mitigation}</td></tr>`).join('')}
+        <tr class="it-highlight"><td><strong>Total Radiation</strong></td><td>—</td><td class="it-highlight">${totalRad.toExponential(2)}</td><td class="it-highlight" style="font-weight:700;color:${totalRad / fusionPowerDensity > 1 ? '#dc2626' : '#059669'};">${(totalRad / fusionPowerDensity * 100).toFixed(1)}%</td><td>—</td></tr>
+      </tbody></table>
+      <div class="it-alert ${totalRad < fusionPowerDensity ? 'it-alert-good' : 'it-alert-bad'}" style="margin-top:0.5rem;">${totalRad < fusionPowerDensity ? '✓ Total radiation losses are ' + (totalRad / fusionPowerDensity * 100).toFixed(0) + '% of fusion power — manageable with proper impurity control.' : ('✗ Radiation losses exceed fusion power — ' + (reaction === 'pb11' ? 'p-B11 is particularly challenging due to high-Z boron bremsstrahlung. Consider D-T or D-He3 instead.' : 'Reduce impurities or increase temperature to improve power balance.'))} Impurity control (Z_eff < 1.5) is critical for all fusion reactors.</div>
+    `;
+    document.getElementById('ppc-radiation-section').style.display = 'block';
+
+    // === Feature 7: MHD Stability Assessment ===
+    const betaN = beta * radius * bField / 2.5;
+    const q95 = 3 * radius * radius * bField / (2 * Math.PI * 6.2 * temp * 0.001);
+    const mhdChecks = [
+      { check: 'Beta limit (β < 5%)', value: beta.toFixed(2) + '%', limit: '< 5%', passed: beta < 5, severity: beta > 7 ? 'critical' : 'warning' },
+      { check: 'Normalized beta (βN < 2.5)', value: betaN.toFixed(2), limit: '< 2.5 (Troyon)', passed: betaN < 2.5, severity: betaN > 3 ? 'critical' : 'warning' },
+      { check: 'Safety factor (q > 2)', value: q95.toFixed(2), limit: '> 2', passed: q95 > 2, severity: q95 < 1.5 ? 'critical' : 'warning' },
+      { check: 'Kink mode (q > 1)', value: q95.toFixed(2), limit: '> 1 (internal kink)', passed: q95 > 1, severity: q95 < 1 ? 'critical' : 'ok' },
+      { check: 'Larmor/radius (ρ* << 1)', value: (larmorRadius / radius).toExponential(2), limit: '< 0.01', passed: larmorRadius / radius < 0.01, severity: 'ok' },
+      { check: 'Vertical stability (κ < 1.8)', value: '1.7 (assumed)', limit: '< 1.8', passed: true, severity: 'ok' },
+      { check: 'Density limit (Greenwald)', value: (density / 1e20).toFixed(2), limit: '< ' + (bField * radius / 20).toFixed(2) + ' ×10²⁰', passed: density / 1e20 < bField * radius / 20, severity: 'warning' },
+    ];
+    document.getElementById('ppc-mhd-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Stability Check</th><th>Value</th><th>Limit</th><th>Status</th><th>Severity</th></tr></thead><tbody>
+        ${mhdChecks.map(c => `<tr><td><strong>${c.check}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${c.value}</td><td style="font-size:0.8125rem;">${c.limit}</td><td style="color:${c.passed ? '#059669' : '#dc2626'};font-weight:700;">${c.passed ? '✓ Pass' : '✗ Fail'}</td><td style="color:${c.severity === 'critical' ? '#dc2626' : c.severity === 'warning' ? '#d97706' : '#059669'};">${c.severity === 'critical' ? '🔴 Critical' : c.severity === 'warning' ? '🟡 Warning' : '🟢 OK'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${mhdChecks.every(c => c.passed) ? 'it-alert-good' : mhdChecks.some(c => c.severity === 'critical') ? 'it-alert-bad' : 'it-alert-warn'}" style="margin-top:0.5rem;">${mhdChecks.every(c => c.passed) ? '✓ All MHD stability checks passed — plasma is within stable operating space.' : mhdChecks.some(c => c.severity === 'critical') ? '🔴 Critical MHD instability risk — discharge may disrupt. Reduce beta or adjust q-profile.' : '⚠️ Some stability margins are tight — operate with feedback control and disruption mitigation systems.'} Troyon limit (βN < 2.5) is the most common beta limit in tokamaks. Greenwald density limit prevents high-density disruptions.</div>
+    `;
+    document.getElementById('ppc-mhd-section').style.display = 'block';
+
+    // === Feature 8: Fusion Cross-Section Plot ===
+    const csCanvas = document.getElementById('ppc-cross-canvas');
+    const csCtx = csCanvas.getContext('2d');
+    const csW = csCanvas.width, csH = csCanvas.height;
+    csCtx.fillStyle = '#ebedf5'; csCtx.fillRect(0, 0, csW, csH);
+    csCtx.strokeStyle = '#94a3b8'; csCtx.lineWidth = 1;
+    csCtx.beginPath(); csCtx.moveTo(60, 10); csCtx.lineTo(60, csH - 30); csCtx.lineTo(csW - 10, csH - 30); csCtx.stroke();
+    const csTempRange = [1, 2, 5, 10, 20, 50, 100, 200, 500];
+    const csCurves = {
+      dt: csTempRange.map(T => ({ T, sigma: 5e-28 * Math.pow(T / 15, 2) / (1 + Math.pow(T / 15, 4)) * 1e28 })),
+      dd: csTempRange.map(T => ({ T, sigma: 3e-30 * Math.pow(T / 50, 2) / (1 + Math.pow(T / 50, 3)) * 1e28 })),
+      dhe3: csTempRange.map(T => ({ T, sigma: 5e-31 * Math.pow(T / 100, 2) / (1 + Math.pow(T / 100, 2)) * 1e28 })),
+      pb11: csTempRange.map(T => ({ T, sigma: 3e-32 * Math.pow(T / 300, 2) / (1 + Math.pow(T / 300, 2)) * 1e28 })),
+    };
+    const csMaxSigma = Math.max(...csCurves.dt.map(p => p.sigma)) * 1.1;
+    Object.entries(csCurves).forEach(([rxn, curve]) => {
+      csCtx.strokeStyle = curveColors[rxn]; csCtx.lineWidth = rxn === reaction ? 3 : 1; csCtx.setLineDash(rxn === reaction ? [] : [4, 3]); csCtx.beginPath();
+      curve.forEach((p, i) => { const x = 60 + (Math.log(p.T) / Math.log(500)) * (csW - 70); const y = csH - 30 - (p.sigma / csMaxSigma) * (csH - 40); if (i === 0) csCtx.moveTo(x, y); else csCtx.lineTo(x, y); });
+      csCtx.stroke(); csCtx.setLineDash([]);
+    });
+    const csOpX = 60 + (Math.log(temp) / Math.log(500)) * (csW - 70);
+    csCtx.strokeStyle = '#1e40af'; csCtx.setLineDash([3, 3]); csCtx.beginPath(); csCtx.moveTo(csOpX, 10); csCtx.lineTo(csOpX, csH - 30); csCtx.stroke(); csCtx.setLineDash([]);
+    csCtx.fillStyle = '#1e40af'; csCtx.font = '9px sans-serif'; csCtx.textAlign = 'center'; csCtx.fillText('Your T=' + temp + 'keV', csOpX, 8);
+    csCtx.fillStyle = '#64748b'; csCtx.textAlign = 'center'; csCtx.fillText('Temperature (keV, log)', csW / 2, csH - 8);
+    csCtx.save(); csCtx.translate(20, csH / 2); csCtx.rotate(-Math.PI / 2); csCtx.textAlign = 'center'; csCtx.fillText('Cross-section (×10⁻²⁸ m²)', 0, 0); csCtx.restore();
+    document.getElementById('ppc-cross-list').innerHTML = `<div class="it-alert it-alert-info">Fusion cross-sections peak at different temperatures: D-T at ~64 keV, D-D at ~1000 keV, D-He3 at ~250 keV, p-B11 at ~550 keV. D-T has the largest cross-section at the lowest temperature, making it the easiest fusion reaction. Your temperature (${temp} keV) is ${temp < rx.optimalTemp ? 'below' : 'above'} the optimal for ${rx.name} (${rx.optimalTemp} keV).</div>`;
+    document.getElementById('ppc-cross-section-section').style.display = 'block';
+
+    // === Feature 9: Path to Ignition Recommendations ===
+    const pathRecs = [];
+    const currentRatio = tripleProduct / lawsonNeeded;
+    if (!ignition) {
+      if (temp < rx.optimalTemp) pathRecs.push({ priority: 1, action: 'Increase temperature to ' + rx.optimalTemp + ' keV', impact: 'Cross-section increases by ' + Math.pow(rx.optimalTemp / temp, 2).toFixed(1) + '×', difficulty: 'Requires additional heating (NBI, ICRH, ECRH)' });
+      if (tau < 3) pathRecs.push({ priority: 2, action: 'Improve confinement time to >3s', impact: 'Triple product increases by ' + (3 / tau).toFixed(1) + '×', difficulty: 'H-mode transition, transport barriers, optimized magnetic configuration' });
+      if (density / 1e20 < 1) pathRecs.push({ priority: 3, action: 'Increase density to >1×10²⁰ m⁻³', impact: 'Fusion power scales as n²', difficulty: 'Pellet injection, gas puffing, optimized fueling' });
+      if (beta > 4) pathRecs.push({ priority: 4, action: 'Reduce beta below 4%', impact: 'Avoid MHD instabilities and disruptions', difficulty: 'Reduce density or increase B-field' });
+      if (bField < 5 && confinement !== 'icf') pathRecs.push({ priority: 5, action: 'Increase magnetic field to >5T', impact: 'Higher pressure limit, better confinement', difficulty: 'Superconducting magnets (REBCO, Nb₃Sn)' });
+    } else {
+      pathRecs.push({ priority: 1, action: 'Maintain ignition conditions', impact: 'Self-sustaining burn', difficulty: 'Burn control, ash removal, steady-state operation' });
+      pathRecs.push({ priority: 2, action: 'Optimize Q for power production', impact: 'Q > 25 needed for DEMO', difficulty: 'Increase density and confinement beyond ignition' });
+      pathRecs.push({ priority: 3, action: 'Address engineering challenges', impact: 'First wall, divertor, tritium breeding', difficulty: 'Materials science, blanket design' });
+    }
+    document.getElementById('ppc-path-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Priority</th><th>Action</th><th>Impact</th><th>Difficulty</th></tr></thead><tbody>
+        ${pathRecs.map(r => `<tr><td style="text-align:center;font-weight:700;color:${r.priority === 1 ? '#dc2626' : r.priority === 2 ? '#d97706' : '#059669'};">${r.priority}</td><td><strong>${r.action}</strong></td><td style="font-size:0.8125rem;color:#059669;">${r.impact}</td><td style="font-size:0.8125rem;">${r.difficulty}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${ignition ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${ignition ? '✓ Ignition achieved! Focus shifts to sustaining the burn and engineering for power extraction. Key challenges: alpha particle confinement, ash removal (helium pumping), and first wall heat load management.' : 'Path to ignition requires ' + (1 - currentRatio).toFixed(0) + '% improvement in triple product. Most efficient approach: ' + pathRecs[0].action + '. Current: ' + tripleProduct.toFixed(2) + ' vs needed ' + lawsonNeeded.toFixed(2) + ' ×10²¹.'}</div>
+    `;
+    document.getElementById('ppc-path-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('ppc-export').style.display = 'inline-flex';
+    document.getElementById('ppc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), parameters: { reaction: rx.name, confinement, temp, density: density / 1e20, tau, bField, radius }, results: { tripleProduct, Q: Q > 100 ? 'ignition' : Q, beta, ignition, fusionPowerDensity, bremsPower, synchrotronLoss, lineRadiation, netPower, larmorRadius, collisionTime, collisionality, betaN, q95 }, powerBalance: powerItems, sensitivity: sensitivityData, reactorComparison: reactors, transportRegimes, radiationAnalysis: radTypes, mhdStability: mhdChecks, pathToIgnition: pathRecs };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'plasma-parameter-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('ppc-calculate').addEventListener('click', calculate);
+  document.getElementById('ppc-reset').addEventListener('click', () => {
+    document.getElementById('ppc-results').classList.remove('show');
+  });
+})();
+</script>

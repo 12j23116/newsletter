@@ -1,0 +1,64 @@
+---
+/**
+ * BaseLayout — HTML shell shared by all pages
+ * ───────────────────────────────────────────
+ * Loads global styles + Header + Footer.
+ * Page-specific styles are imported by each page, not here.
+ */
+import '../styles/general.css';
+import '../styles/desktop.css';
+import '../styles/tablet.css';
+import '../styles/phone.css';
+import '../styles/phone-small.css';
+
+import Header from '../components/Header/Header.astro';
+import Footer from '../components/Footer/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Deep-dive guides on 12 emerging technology frontiers. Explained simply, backed by research.',
+} = Astro.props;
+
+const siteName = 'TechScope';
+const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- SEO -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={Astro.url.pathname} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Header />
+    <main id="main-content" style="padding-top: var(--header-height);">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

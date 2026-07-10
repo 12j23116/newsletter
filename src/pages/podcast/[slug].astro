@@ -1,0 +1,490 @@
+---
+/**
+ * [slug].astro — Individual Podcast Episode Page
+ * ────────────────────────────────────────────────
+ * Uses getStaticPaths() to pre-generate one HTML file per episode.
+ * Data comes from podcast-content.ts + JSON scripts in /podcast/Content/.
+ */
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './episode-styles.css';
+import { allEpisodes, podcastHosts, podcastPlatforms, type Episode, getAudioUrl } from '../../data/podcast/podcast-content';
+
+interface ScriptData {
+  id: number;
+  title: string;
+  slug: string;
+  topic: string;
+  script?: Array<{ segment: string; lines: Array<{ speaker: string; text: string }> }>;
+  showNotes?: {
+    keyTopics?: string[];
+    estimatedDuration?: string;
+  };
+  guest?: { name: string; role: string; company: string };
+  hosts?: Array<{ name: string; role: string }>;
+}
+
+export function getStaticPaths() {
+  return allEpisodes.map((ep: Episode) => {
+    let scriptData: ScriptData | null = null;
+    try {
+      const jsonPath = join(process.cwd(), 'podcast', 'Content', `ep-${ep.id}-${ep.slug}.json`);
+      scriptData = JSON.parse(readFileSync(jsonPath, 'utf-8')) as ScriptData;
+    } catch {
+      // JSON file not found — page still works with TS data only
+    }
+    return {
+      params: { slug: ep.slug },
+      props: { ep, scriptData },
+    };
+  });
+}
+
+interface Props {
+  ep: Episode;
+  scriptData: ScriptData | null;
+}
+
+const { ep, scriptData } = Astro.props as Props;
+
+const formatDate = (dateStr: string) => {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
+
+const formattedDate = formatDate(ep.date);
+const audioUrl = getAudioUrl(ep);
+
+// Related episodes: same topic, exclude current
+const relatedEpisodes = allEpisodes
+  .filter((e) => e.slug !== ep.slug && e.topic === ep.topic)
+  .slice(0, 4);
+
+// Fallback: if not enough related, fill from other topics
+if (relatedEpisodes.length < 4) {
+  const fallback = allEpisodes
+    .filter((e) => e.slug !== ep.slug && !relatedEpisodes.includes(e))
+    .slice(0, 4 - relatedEpisodes.length);
+  relatedEpisodes.push(...fallback);
+}
+
+// Determine host based on topic
+const host = podcastHosts[0];
+
+// Parse duration into seconds for the player display
+const durationParts = ep.duration.split(':').map(Number);
+const totalSeconds = durationParts.length === 3
+  ? durationParts[0] * 3600 + durationParts[1] * 60 + durationParts[2]
+  : durationParts[0] * 60 + durationParts[1];
+
+const formatTime = (s: number) => {
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  if (h > 0) return `${h}:${m.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+  return `${m}:${sec.toString().padStart(2, '0')}`;
+};
+
+const shareScript = `
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.querySelector('.pe-share-copy');
+    if (btn) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    }
+  });
+}
+document.querySelector('.pe-share-copy')?.addEventListener('click', copyLink);
+`;
+
+const playerScript = `
+const audio = document.getElementById('pe-audio');
+const playBtn = document.querySelector('.pe-play-btn');
+const progressFill = document.querySelector('.pe-progress-fill');
+const progressBar = document.querySelector('.pe-progress-bar');
+const currentTimeEl = document.querySelector('.pe-current-time');
+const durationEl = document.querySelector('.pe-duration-time');
+
+function formatTime(s) {
+  if (!s || isNaN(s)) return '0:00';
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = Math.floor(s % 60);
+  if (h > 0) return h + ':' + m.toString().padStart(2,'0') + ':' + sec.toString().padStart(2,'0');
+  return m + ':' + sec.toString().padStart(2,'0');
+}
+
+playBtn?.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+audio?.addEventListener('play', () => {
+  playBtn.classList.add('playing');
+  const icon = playBtn.querySelector('svg path');
+  if (icon) icon.setAttribute('d', 'M6 4h4v16H6zM14 4h4v16h-4z');
+});
+
+audio?.addEventListener('pause', () => {
+  playBtn.classList.remove('playing');
+  const icon = playBtn.querySelector('svg path');
+  if (icon) icon.setAttribute('d', 'M8 5v14l11-7z');
+});
+
+audio?.addEventListener('loadedmetadata', () => {
+  if (durationEl) durationEl.textContent = formatTime(audio.duration);
+});
+
+audio?.addEventListener('timeupdate', () => {
+  if (audio.duration) {
+    const pct = (audio.currentTime / audio.duration) * 100;
+    if (progressFill) progressFill.style.width = pct + '%';
+    if (currentTimeEl) currentTimeEl.textContent = formatTime(audio.currentTime);
+  }
+});
+
+audio?.addEventListener('ended', () => {
+  playBtn.classList.remove('playing');
+  const icon = playBtn.querySelector('svg path');
+  if (icon) icon.setAttribute('d', 'M8 5v14l11-7z');
+});
+
+progressBar?.addEventListener('click', (e) => {
+  const rect = progressBar.getBoundingClientRect();
+  const pct = (e.clientX - rect.left) / rect.width;
+  if (audio.duration) audio.currentTime = pct * audio.duration;
+});
+`;
+
+const episodeUrl = `https://technanoai.com/podcast/${ep.slug}`;
+const fullAudioUrl = `https://technanoai.com${audioUrl}`;
+
+// ── SEO Content Generation ──────────────────────
+// Generate 800-1200+ words of SEO-optimized content from episode data + script
+
+const keyTopics = scriptData?.showNotes?.keyTopics ?? ep.topics;
+
+// Build episode overview paragraphs
+const topicLower = ep.topic.toLowerCase();
+const guestName = ep.guest;
+const guestRole = ep.guestRole;
+const guestCompany = ep.guestCompany;
+
+const overviewP1 = `In Episode ${ep.id} of The Frontier Tech Show, host ${host.name} sits down with ${guestName}, ${guestRole} at ${guestCompany}, to discuss "${ep.title}." This ${topicLower} podcast episode, published on ${formattedDate} as part of Season ${ep.season}, runs ${ep.duration} and covers ${keyTopics.slice(0, 3).join(', ')}, and ${keyTopics.length > 3 ? keyTopics.slice(3).join(', ') : 'related developments'}. The conversation provides a deep dive into the current state of ${topicLower} technology, exploring both the technical breakthroughs driving the field forward and the real-world challenges that remain.`;
+
+const overviewP2 = `${guestName} brings deep expertise to this conversation. As ${guestRole} at ${guestCompany}, ${guestName} offers a front-line perspective on ${keyTopics[0] ?? ep.topic} that goes beyond surface-level analysis. The discussion covers how ${topicLower} has evolved over the past year, what the key inflection points have been, and where the technology is heading in the next twelve to eighteen months. Whether you are a practitioner, investor, or simply following the ${topicLower} space, this episode delivers insights you will not find elsewhere.`;
+
+const overviewP3 = `Listeners will come away from this episode with a clear understanding of ${keyTopics[0] ?? ep.topic} and its implications for the broader ${topicLower} landscape. The conversation covers the science, the engineering, the economics, and the policy dimensions of ${ep.title.toLowerCase()}, making it essential listening for anyone who wants to understand where ${topicLower} is going in 2026 and beyond.`;
+
+// Build key topics section
+const keyTopicsHtml = keyTopics.map((topic: string) => {
+  return `<li><strong>${topic.charAt(0).toUpperCase() + topic.slice(1)}:</strong> The discussion explores ${topic} in depth, examining current capabilities, limitations, and the trajectory of development. ${guestName} shares specific examples and data points from work at ${guestCompany}, giving listeners a concrete sense of where the technology stands today and what milestones to watch for.</li>`;
+}).join('');
+
+// Build "Why This Episode Matters" section
+const whyMattersP1 = `This episode matters because ${topicLower} is at a critical juncture in 2026. The conversation between ${host.name} and ${guestName} cuts through the hype to deliver a grounded, evidence-based assessment of where ${keyTopics[0] ?? ep.topic} actually stands. For decision-makers in technology, finance, and policy, understanding the nuances discussed here is essential for making informed bets on the future of ${topicLower}.`;
+
+const whyMattersP2 = `What sets this episode apart is the combination of technical depth and accessibility. ${guestName} explains complex concepts in ${topicLower} without oversimplifying, making this episode valuable for both experts and newcomers to the field. The discussion of ${keyTopics.slice(0, 2).join(' and ')} alone makes this episode worth listening to, but the broader conversation about the future direction of ${topicLower} technology is what makes it truly essential.`;
+
+// Build transcript HTML from script data
+const transcriptHtml = scriptData?.script
+  ? scriptData.script.map((seg) => {
+      const linesHtml = seg.lines.map((line) => {
+        return `<p class="pe-transcript-line"><span class="pe-transcript-speaker">${line.speaker}:</span> <span class="pe-transcript-text">${line.text}</span></p>`;
+      }).join('');
+      return `<div class="pe-transcript-segment"><h3 class="pe-transcript-seg-title">${seg.segment}</h3>${linesHtml}</div>`;
+    }).join('')
+  : '';
+
+// Word count estimate for display
+const transcriptWordCount = scriptData?.script
+  ? scriptData.script.reduce((acc, seg) => acc + seg.lines.reduce((s, l) => s + l.text.split(/\s+/).length, 0), 0)
+  : 0;
+
+const episodeLd = {
+  '@context': 'https://schema.org',
+  '@type': 'PodcastEpisode',
+  name: ep.title,
+  description: ep.description,
+  episodeNumber: ep.episode,
+  seasonNumber: ep.season,
+  datePublished: ep.date,
+  duration: `PT${totalSeconds}S`,
+  associatedMedia: {
+    '@type': 'MediaObject',
+    contentUrl: fullAudioUrl,
+    encodingFormat: 'audio/mpeg',
+  },
+  partOfSeries: {
+    '@type': 'PodcastSeries',
+    name: 'The Frontier Tech Show',
+    url: 'https://technanoai.com/podcast',
+  },
+  url: episodeUrl,
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Podcast', item: 'https://technanoai.com/podcast' },
+    { '@type': 'ListItem', position: 3, name: ep.title, item: episodeUrl },
+  ],
+};
+---
+
+<BaseLayout title={`${ep.title} — The Frontier Tech Show`} description={ep.description} type="article" publishedDate={ep.date} section={ep.topic} keywords={ep.topics.join(', ')}>
+  <article class="pe-page" data-topic={ep.topic.toLowerCase()} style={`--card-color:${ep.topicColor}`}>
+    <!-- Hero / Episode Header -->
+    <header class="pe-hero">
+      <div class="pe-hero-bg">
+        <div class="pe-hero-orb pe-hero-orb-1" style={`background: radial-gradient(circle, ${ep.topicColor}30, transparent 70%);`}></div>
+        <div class="pe-hero-orb pe-hero-orb-2" style={`background: radial-gradient(circle, ${ep.topicColor}15, transparent 70%);`}></div>
+      </div>
+      <div class="pe-hero-inner">
+        <a href="/podcast" class="pe-back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          All Episodes
+        </a>
+
+        <div class="pe-hero-meta">
+          <span class="pe-topic-badge" style={`background:${ep.topicColor};`}>{ep.topic}</span>
+          <span class="pe-ep-num">S{ep.season} · E{ep.episode}</span>
+          <span class="pe-ep-date">{formattedDate}</span>
+          <span class="pe-ep-duration">{ep.duration}</span>
+        </div>
+
+        <h1 class="pe-hero-title">{ep.title}</h1>
+        <p class="pe-hero-desc">{ep.description}</p>
+
+        <!-- Topic tags -->
+        <div class="pe-tags">
+          {ep.topics.map((tag) => (
+            <span class="pe-tag">#{tag}</span>
+          ))}
+        </div>
+      </div>
+    </header>
+
+    <!-- Player Section -->
+    <section class="pe-player-section">
+      <audio id="pe-audio" preload="metadata" src={audioUrl}></audio>
+      <div class="pe-player-card">
+        <div class="pe-player-cover">
+          <div class="pe-player-cover-inner" style={`background: linear-gradient(135deg, ${ep.topicColor}40, ${ep.topicColor}10);`}>
+            <div class="pe-player-cover-icon">🎙️</div>
+            <span class="pe-player-cover-label">Episode {ep.id}</span>
+            <span class="pe-player-cover-ep">{ep.topic}</span>
+          </div>
+          <div class="pe-player-rings">
+            <div class="pe-player-ring" style={`border-color:${ep.topicColor}30;`}></div>
+            <div class="pe-player-ring" style={`border-color:${ep.topicColor}20;`}></div>
+            <div class="pe-player-ring" style={`border-color:${ep.topicColor}10;`}></div>
+          </div>
+        </div>
+        <div class="pe-player-body">
+          <div class="pe-player-controls">
+            <button class="pe-play-btn" aria-label="Play episode" style={`background:${ep.topicColor};`}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="pe-progress">
+              <div class="pe-progress-bar">
+                <div class="pe-progress-fill" style={`background:${ep.topicColor}; width: 0%;`}></div>
+              </div>
+              <div class="pe-progress-time">
+                <span class="pe-current-time">0:00</span>
+                <span class="pe-duration-time">{ep.duration}</span>
+              </div>
+            </div>
+          </div>
+          <div class="pe-player-platforms">
+            {podcastPlatforms.slice(0, 4).map((p) => (
+              <a href={p.href} class="pe-platform-btn" aria-label={`Listen on ${p.name}`}>
+                <span class="pe-platform-icon">{p.icon}</span>
+                <span class="pe-platform-name">{p.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guest & Host Section -->
+    <section class="pe-people">
+      <div class="pe-guest-card">
+        <div class="pe-guest-avatar" style={`background: linear-gradient(135deg, ${ep.topicColor}, ${ep.topicColor}88);`}>
+          {ep.guest.split(' ').map(n => n[0]).join('').slice(0, 2)}
+        </div>
+        <div class="pe-guest-info">
+          <span class="pe-guest-label">Guest</span>
+          <h3 class="pe-guest-name">{ep.guest}</h3>
+          <p class="pe-guest-role">{ep.guestRole}</p>
+          <p class="pe-guest-company">{ep.guestCompany}</p>
+        </div>
+      </div>
+      <div class="pe-host-card">
+        <div class="pe-host-avatar" style={`background: linear-gradient(135deg, ${host.avatarColor}, ${host.avatarColor}88);`}>
+          {host.initials}
+        </div>
+        <div class="pe-host-info">
+          <span class="pe-host-label">Host</span>
+          <h3 class="pe-host-name">{host.name}</h3>
+          <p class="pe-host-role">{host.role}</p>
+          <p class="pe-host-bio">{host.bio}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Content: Episode Overview -->
+    <section class="pe-seo-content">
+      <div class="pe-seo-inner">
+        <h2 class="pe-seo-heading">About This Episode</h2>
+        <div class="pe-seo-body">
+          <p class="pe-seo-para">{overviewP1}</p>
+          <p class="pe-seo-para">{overviewP2}</p>
+          <p class="pe-seo-para">{overviewP3}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Content: Key Topics Discussed -->
+    <section class="pe-seo-content">
+      <div class="pe-seo-inner">
+        <h2 class="pe-seo-heading">Key Topics Discussed</h2>
+        <ul class="pe-seo-topics" set:html={keyTopicsHtml} />
+      </div>
+    </section>
+
+    <!-- SEO Content: Episode Details -->
+    <section class="pe-notes">
+      <div class="pe-notes-inner">
+        <h2 class="pe-notes-title">Episode Details</h2>
+        <div class="pe-notes-body">
+          <p class="pe-notes-para">{ep.description}</p>
+          <div class="pe-notes-meta">
+            <div class="pe-meta-row">
+              <span class="pe-meta-label">Topic</span>
+              <span class="pe-meta-value" style={`color:${ep.topicColor};`}>{ep.topic}</span>
+            </div>
+            <div class="pe-meta-row">
+              <span class="pe-meta-label">Season</span>
+              <span class="pe-meta-value">{ep.season}</span>
+            </div>
+            <div class="pe-meta-row">
+              <span class="pe-meta-label">Episode</span>
+              <span class="pe-meta-value">{ep.episode}</span>
+            </div>
+            <div class="pe-meta-row">
+              <span class="pe-meta-label">Duration</span>
+              <span class="pe-meta-value">{ep.duration}</span>
+            </div>
+            <div class="pe-meta-row">
+              <span class="pe-meta-label">Published</span>
+              <span class="pe-meta-value">{formattedDate}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Content: Full Transcript -->
+    {transcriptHtml && (
+      <section class="pe-transcript">
+        <div class="pe-transcript-inner">
+          <h2 class="pe-transcript-title">Episode Transcript</h2>
+          <p class="pe-transcript-intro">
+            Full transcript of "{ep.title}" — Episode {ep.id} of The Frontier Tech Show with {ep.guest}, {ep.guestRole} at {ep.guestCompany}.
+            {transcriptWordCount > 0 && <span class="pe-transcript-wc">({transcriptWordCount} words)</span>}
+          </p>
+          <div class="pe-transcript-body" set:html={transcriptHtml} />
+        </div>
+      </section>
+    )}
+
+    <!-- SEO Content: Why This Episode Matters -->
+    <section class="pe-seo-content">
+      <div class="pe-seo-inner">
+        <h2 class="pe-seo-heading">Why This Episode Matters</h2>
+        <div class="pe-seo-body">
+          <p class="pe-seo-para">{whyMattersP1}</p>
+          <p class="pe-seo-para">{whyMattersP2}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Share -->
+    <section class="pe-share">
+      <span class="pe-share-label">Share this episode</span>
+      <div class="pe-share-buttons">
+        <a class="pe-share-btn pe-share-twitter" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(ep.title + ' — The Frontier Tech Show')}&url=${encodeURIComponent(Astro.url.href)}`} target="_blank" rel="noopener" aria-label="Share on Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="pe-share-btn pe-share-linkedin" href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`} target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <button class="pe-share-btn pe-share-copy" aria-label="Copy link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </button>
+        <a class="pe-share-btn pe-share-download" href={audioUrl} download={`ep-${ep.id}-${ep.slug}.mp3`} aria-label="Download MP3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Related Episodes -->
+    {relatedEpisodes.length > 0 && (
+      <section class="pe-related">
+        <div class="pe-related-head">
+          <h2 class="pe-related-title">More <span class="pe-grad-text" style={`background: linear-gradient(135deg, ${ep.topicColor}, ${ep.topicColor}88); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;`}>{ep.topic}</span> Episodes</h2>
+          <a href="/podcast" class="pe-related-all">View all →</a>
+        </div>
+        <div class="pe-related-grid">
+          {relatedEpisodes.map((re) => (
+            <a href={`/podcast/${re.slug}`} class="pe-related-card" style={`--card-color:${re.topicColor}`}>
+              <div class="pe-related-card-top">
+                <span class="pe-related-card-num">#{re.id}</span>
+                <span class="pe-related-card-cat" style={`--cat-color:${re.topicColor}`}>{re.topic}</span>
+              </div>
+              <h3 class="pe-related-card-title">{re.title}</h3>
+              <p class="pe-related-card-guest">{re.guest}</p>
+              <div class="pe-related-card-foot">
+                <span class="pe-related-card-play">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  Play
+                </span>
+                <span class="pe-related-card-duration">{re.duration}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Newsletter CTA -->
+    <section class="pe-newsletter">
+      <div class="pe-newsletter-inner" style={`background: linear-gradient(135deg, ${ep.topicColor}15, transparent);`}>
+        <h2 class="pe-newsletter-title">Never miss an episode</h2>
+        <p class="pe-newsletter-text">Subscribe to The Frontier Tech Show and get notified every Tuesday when a new episode drops.</p>
+        <form class="pe-newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="you@example.com" class="pe-newsletter-input" aria-label="Email address" />
+          <button type="submit" class="pe-newsletter-btn" style={`background:${ep.topicColor};`}>Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(episodeLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script is:inline set:html={shareScript + playerScript}></script>
+</BaseLayout>

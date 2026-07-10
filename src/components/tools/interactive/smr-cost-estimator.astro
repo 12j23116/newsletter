@@ -1,0 +1,464 @@
+---
+/**
+ * SMR Cost Estimator — Interactive tool
+ * Estimate overnight capital costs and LCOE for small modular reactor deployments
+ */
+import './interactive-tools.css';
+
+const smrDesigns = [
+  { id: 'nuward', name: 'Nuward (77 MWe)', capex: 6000, om: 150, fuel: 8, construction: 36, efficiency: 30 },
+  { id: 'voygr', name: 'Voygr-6 (77 MWe)', capex: 6500, om: 140, fuel: 7, construction: 36, efficiency: 30 },
+  { id: 'rolls', name: 'Rolls-Royce SMR (470 MWe)', capex: 5000, om: 120, fuel: 6, construction: 48, efficiency: 33 },
+  { id: 'xenergy', name: 'Xe-100 (80 MWe)', capex: 7000, om: 130, fuel: 10, construction: 48, efficiency: 40 },
+  { id: 'holtec', name: 'Holtec SMR-160 (160 MWe)', capex: 5500, om: 135, fuel: 7, construction: 36, efficiency: 32 },
+];
+---
+
+<div class="it-container" id="smr-cost-estimator">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">💰</div>
+      <div>
+        <h2>SMR Cost Estimator</h2>
+        <p>Estimate overnight capital costs and LCOE for small modular reactor deployments</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">SMR Design</label>
+          <select class="it-select" id="smr-design">
+            {smrDesigns.map(d => <option value={d.id}>{d.name}</option>)}
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Number of Units</label>
+          <input type="number" class="it-input" id="smr-units" value="4" min="1" max="20" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Capacity Factor <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="smr-capacity" value="90" min="50" max="100" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Discount Rate <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="smr-discount" value="7" min="0" max="20" step="0.5" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Plant Lifetime <span class="it-label-hint">(years)</span></label>
+          <input type="number" class="it-input" id="smr-lifetime" value="60" min="20" max="80" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Location Factor</label>
+          <select class="it-select" id="smr-location">
+            <option value="1.0">US/Europe (1.0x)</option>
+            <option value="1.3">Remote/Arctic (1.3x)</option>
+            <option value="0.8">Asia - Low Cost (0.8x)</option>
+            <option value="1.5">Island/Off-grid (1.5x)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="smr-calculate">Estimate Costs</button>
+        <button class="it-btn it-btn-secondary" id="smr-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="smr-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="smr-results">
+      <div class="it-results-card">
+        <div class="it-results-title">SMR Cost Estimate</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Overnight Capital Cost</div>
+            <div class="it-stat-value" id="smr-capex">$0<span class="it-stat-unit"> M</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">LCOE</div>
+            <div class="it-stat-value" id="smr-lcoe">$0<span class="it-stat-unit">/MWh</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Total Power</div>
+            <div class="it-stat-value" id="smr-power">0<span class="it-stat-unit"> MWe</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Annual Energy</div>
+            <div class="it-stat-value" id="smr-energy">0<span class="it-stat-unit"> GWh</span></div>
+          </div>
+        </div>
+
+        <div id="smr-breakdown"></div>
+        <div class="it-alert it-alert-info" id="smr-insight"></div>
+      </div>
+
+      <!-- Feature 1: Fuel Cycle Breakdown -->
+      <div class="it-results-card" id="smr-fuelcycle-section" style="display:none;">
+        <div class="it-results-title">⚛️ Fuel Cycle Cost Breakdown</div>
+        <div id="smr-fuelcycle-list"></div>
+      </div>
+
+      <!-- Feature 2: Decommissioning Fund -->
+      <div class="it-results-card" id="smr-decom-section" style="display:none;">
+        <div class="it-results-title">🏗️ Decommissioning & Waste Management Fund</div>
+        <div id="smr-decom-list"></div>
+      </div>
+
+      <!-- Feature 3: Carbon Abatement -->
+      <div class="it-results-card" id="smr-carbon-section" style="display:none;">
+        <div class="it-results-title">🌍 Carbon Abatement vs Fossil Alternatives</div>
+        <div id="smr-carbon-list"></div>
+      </div>
+
+      <!-- Feature 4: Financing Scenarios -->
+      <div class="it-results-card" id="smr-finance-section" style="display:none;">
+        <div class="it-results-title">🏦 Financing Scenarios (WACC Analysis)</div>
+        <div id="smr-finance-list"></div>
+      </div>
+
+      <!-- Feature 5: LCOE Comparison -->
+      <div class="it-results-card" id="smr-comparison-section" style="display:none;">
+        <div class="it-results-title">📊 LCOE Comparison with Alternatives</div>
+        <canvas id="smr-comparison-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);"></canvas>
+        <div id="smr-comparison-list" style="margin-top:0.75rem;"></div>
+      </div>
+
+      <!-- Feature 6: Construction Schedule -->
+      <div class="it-results-card" id="smr-schedule-section" style="display:none;">
+        <div class="it-results-title">📅 Construction Schedule & Cash Flow Timeline</div>
+        <div id="smr-schedule-list"></div>
+      </div>
+
+      <!-- Feature 7: EPZ & Staffing -->
+      <div class="it-results-card" id="smr-epz-section" style="display:none;">
+        <div class="it-results-title">☢️ Emergency Planning Zone & Staffing</div>
+        <div id="smr-epz-list"></div>
+      </div>
+
+      <!-- Feature 8: Grid Integration -->
+      <div class="it-results-card" id="smr-grid-section" style="display:none;">
+        <div class="it-results-title">⚡ Grid Integration & Load Following</div>
+        <div id="smr-grid-list"></div>
+      </div>
+
+      <!-- Feature 9: Learning Curve Chart -->
+      <div class="it-results-card" id="smr-learning-section" style="display:none;">
+        <div class="it-results-title">📈 Multi-Unit Learning Curve</div>
+        <canvas id="smr-learning-canvas" width="800" height="200" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);"></canvas>
+        <div id="smr-learning-list" style="margin-top:0.75rem;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const designs = {
+    'nuward': { name: 'Nuward', mwe: 77, capex: 6000, om: 150, fuel: 8, construction: 36, efficiency: 30 },
+    'voygr': { name: 'Voygr-6', mwe: 77, capex: 6500, om: 140, fuel: 7, construction: 36, efficiency: 30 },
+    'rolls': { name: 'Rolls-Royce SMR', mwe: 470, capex: 5000, om: 120, fuel: 6, construction: 48, efficiency: 33 },
+    'xenergy': { name: 'Xe-100', mwe: 80, capex: 7000, om: 130, fuel: 10, construction: 48, efficiency: 40 },
+    'holtec': { name: 'Holtec SMR-160', mwe: 160, capex: 5500, om: 135, fuel: 7, construction: 36, efficiency: 32 },
+  };
+
+  function calculate() {
+    const designId = document.getElementById('smr-design').value;
+    const units = parseInt(document.getElementById('smr-units').value) || 1;
+    const capFactor = parseFloat(document.getElementById('smr-capacity').value) / 100;
+    const discount = parseFloat(document.getElementById('smr-discount').value) / 100;
+    const lifetime = parseInt(document.getElementById('smr-lifetime').value);
+    const locFactor = parseFloat(document.getElementById('smr-location').value);
+
+    const d = designs[designId];
+    const totalMWe = d.mwe * units;
+
+    // Overnight capital cost ($/kW × MWe × 1000 × location factor × learning curve)
+    const learningCurve = Math.pow(0.95, Math.log2(units)); // 5% cost reduction per doubling
+    const capexPerKW = d.capex * locFactor * learningCurve;
+    const totalCapex = capexPerKW * totalMWe; // $M (capex is $/kW, MWe × 1000 kW/MW / 1000 = MWe)
+
+    // Annual energy (GWh)
+    const annualEnergyMWh = totalMWe * 1000 * capFactor * 8760;
+    const annualEnergyGWh = annualEnergyMWh / 1000;
+
+    // Annual costs
+    const annualOM = d.om * totalMWe; // $M/year (om is $/kW-yr × MWe)
+    const annualFuel = d.fuel * annualEnergyMWh / 1e6; // $M/year (fuel is $/MWh)
+
+    // LCOE calculation
+    // CRF (Capital Recovery Factor)
+    const crf = (discount * Math.pow(1 + discount, lifetime)) / (Math.pow(1 + discount, lifetime) - 1);
+    const annualizedCapex = totalCapex * crf;
+    const totalAnnualCost = annualizedCapex + annualOM + annualFuel;
+    const lcoe = (totalAnnualCost * 1e6) / annualEnergyMWh; // $/MWh
+
+    // Decommissioning (10% of capex, spread over lifetime)
+    const decommissioning = totalCapex * 0.1;
+    const annualDecom = decommissioning * crf;
+
+    // Update UI
+    document.getElementById('smr-capex').innerHTML = '$' + (totalCapex / 1000).toFixed(2) + '<span class="it-stat-unit"> B</span>';
+    document.getElementById('smr-lcoe').innerHTML = '$' + lcoe.toFixed(1) + '<span class="it-stat-unit">/MWh</span>';
+    document.getElementById('smr-power').innerHTML = totalMWe + '<span class="it-stat-unit"> MWe</span>';
+    document.getElementById('smr-energy').innerHTML = annualEnergyGWh.toFixed(0) + '<span class="it-stat-unit"> GWh</span>';
+
+    const breakdown = document.getElementById('smr-breakdown');
+    breakdown.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Cost Component</th><th>Value</th><th>Share</th></tr></thead>
+        <tbody>
+          <tr><td>Design</td><td>${d.name} (${d.mwe} MWe × ${units} units)</td><td>—</td></tr>
+          <tr><td>Capital Cost per kW</td><td>$${capexPerKW.toFixed(0)}/kW ${units > 1 ? `(after ${(Math.round((1 - learningCurve) * 100))}% learning curve)` : ''}</td><td>—</td></tr>
+          <tr><td class="it-highlight">Total Overnight Capital</td><td class="it-highlight">$${(totalCapex / 1000).toFixed(2)} B</td><td class="it-highlight">${((annualizedCapex / totalAnnualCost) * 100).toFixed(0)}%</td></tr>
+          <tr><td>Annual O&M</td><td>$${(annualOM).toFixed(1)} M/yr</td><td>${((annualOM / totalAnnualCost) * 100).toFixed(0)}%</td></tr>
+          <tr><td>Annual Fuel</td><td>$${annualFuel.toFixed(2)} M/yr</td><td>${((annualFuel / totalAnnualCost) * 100).toFixed(0)}%</td></tr>
+          <tr><td>Decommissioning Reserve</td><td>$${(decommissioning / 1000).toFixed(2)} B</td><td>—</td></tr>
+          <tr><td>Annualized Capital (CRF=${(crf * 100).toFixed(2)}%)</td><td>$${annualizedCapex.toFixed(1)} M/yr</td><td>—</td></tr>
+          <tr><td>Total Annual Cost</td><td>$${totalAnnualCost.toFixed(1)} M/yr</td><td>100%</td></tr>
+          <tr><td>Construction Time</td><td>${d.construction} months</td><td>—</td></tr>
+          <tr><td>Thermal Efficiency</td><td>${d.efficiency}%</td><td>—</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const insight = document.getElementById('smr-insight');
+    insight.innerHTML = `<strong>💡 Insight:</strong> ${units} × ${d.name} SMR${units > 1 ? 's' : ''} (${totalMWe} MWe total) costs <strong>$${(totalCapex / 1000).toFixed(2)}B</strong> overnight with an LCOE of <strong>$${lcoe.toFixed(1)}/MWh</strong>. ${units > 1 ? `Multi-unit deployment saves ${(Math.round((1 - learningCurve) * 100))}% via learning curve effects. ` : ''}Capital costs dominate at ${((annualizedCapex / totalAnnualCost) * 100).toFixed(0)}% of total annual cost. ${lcoe < 80 ? 'This is competitive with natural gas ($40-80/MWh).' : lcoe < 120 ? 'This is competitive with other low-carbon baseload options.' : 'This is more expensive than conventional nuclear — consider larger deployments or different designs.'}`;
+
+    document.getElementById('smr-results').classList.add('show');
+
+    // === Feature 1: Fuel Cycle Cost Breakdown ===
+    const fuelCycle = {
+      uranium: d.fuel * 0.35,
+      enrichment: d.fuel * 0.25,
+      fabrication: d.fuel * 0.20,
+      wasteDisposal: d.fuel * 0.15,
+      transport: d.fuel * 0.05,
+    };
+    const annualFuelBreakdown = {};
+    Object.entries(fuelCycle).forEach(([k, v]) => annualFuelBreakdown[k] = v * annualEnergyMWh / 1e6);
+    document.getElementById('smr-fuelcycle-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Fuel Cycle Component</th><th>Share</th><th>Annual Cost</th><th>$ / MWh</th></tr></thead><tbody>
+        ${Object.entries(fuelCycle).map(([k, v]) => {
+          const labels = { uranium: 'Uranium Ore (Yellowcake)', enrichment: 'Enrichment (SWU)', fabrication: 'Fuel Fabrication', wasteDisposal: 'Spent Fuel Management', transport: 'Transport & Storage' };
+          return `<tr><td>${labels[k]}</td><td>${(v / d.fuel * 100).toFixed(0)}%</td><td>$${annualFuelBreakdown[k].toFixed(2)} M/yr</td><td>$${v.toFixed(2)}</td></tr>`;
+        }).join('')}
+        <tr class="it-highlight"><td>Total Fuel Cost</td><td>100%</td><td>$${annualFuel.toFixed(2)} M/yr</td><td>$${d.fuel.toFixed(2)}</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Fuel costs for nuclear are low relative to capital. Uranium price volatility has minimal impact on LCOE (~10% of total). Trinity fuel cycles (HEU downblending) can further reduce costs.</div>
+    `;
+    document.getElementById('smr-fuelcycle-section').style.display = 'block';
+
+    // === Feature 2: Decommissioning Fund ===
+    const decomFund = totalCapex * 0.1;
+    const annualDecomContribution = decomFund * crf;
+    const wasteStorageCost = totalMWe * 0.5; // $0.5M/MWe for interim storage
+    const totalDecomLiability = decomFund + wasteStorageCost;
+    document.getElementById('smr-decom-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Decommissioning Reserve (10% of CAPEX)</span><strong>$${(decomFund / 1000).toFixed(2)} B</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Interim Spent Fuel Storage</span><strong>$${wasteStorageCost.toFixed(1)} M</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Total Decommissioning Liability</span><strong>$${(totalDecomLiability / 1000).toFixed(2)} B</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Contribution (at CRF)</span><strong>$${annualDecomContribution.toFixed(1)} M/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Decom Cost per MWe</span><strong>$${(decomFund / totalMWe).toFixed(0)} k/MWe</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Decommissioning funds must be accumulated during operation. NRC requires financial assurance for decommissioning before license issuance. SMRs benefit from modular design — simpler decommissioning than large LWRs.</div>
+    `;
+    document.getElementById('smr-decom-section').style.display = 'block';
+
+    // === Feature 3: Carbon Abatement ===
+    const annualEnergyTWh = annualEnergyGWh / 1000;
+    const coalCO2 = 1000; // tCO2/GWh
+    const gasCO2 = 400; // tCO2/GWh
+    const annualCO2vsCoal = annualEnergyGWh * coalCO2;
+    const annualCO2vsGas = annualEnergyGWh * gasCO2;
+    const carbonPrice = 50; // $/tCO2 (EU ETS approx)
+    const carbonValueCoal = annualCO2vsCoal * carbonPrice / 1e6;
+    const carbonValueGas = annualCO2vsGas * carbonPrice / 1e6;
+    document.getElementById('smr-carbon-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Energy Output</span><strong>${annualEnergyGWh.toFixed(0)} GWh</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>CO₂ Avoided vs Coal</span><strong>${(annualCO2vsCoal / 1e6).toFixed(2)} Mt/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>CO₂ Avoided vs Natural Gas</span><strong>${(annualCO2vsGas / 1e6).toFixed(2)} Mt/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Carbon Credit Value (vs Coal @ $50/t)</span><strong>$${carbonValueCoal.toFixed(1)} M/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Carbon Credit Value (vs Gas @ $50/t)</span><strong>$${carbonValueGas.toFixed(1)} M/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Lifetime CO₂ Avoided vs Coal</span><strong>${(annualCO2vsCoal * lifetime / 1e9).toFixed(2)} Gt</strong></div>
+      <div class="it-alert it-alert-good" style="margin-top:0.5rem;">✓ Over ${lifetime} years, this SMR deployment avoids ${(annualCO2vsCoal * lifetime / 1e9).toFixed(2)} Gt CO₂ vs coal. At $50/t carbon price, this represents $${(carbonValueCoal * lifetime).toFixed(0)}M in avoided carbon costs.</div>
+    `;
+    document.getElementById('smr-carbon-section').style.display = 'block';
+
+    // === Feature 4: Financing Scenarios ===
+    const scenarios = [
+      { name: 'Public/Muni (Low cost)', debt: 100, equity: 0, debtRate: 4, equityRate: 8 },
+      { name: 'Regulated Utility', debt: 60, equity: 40, debtRate: 5, equityRate: 10 },
+      { name: 'Merchant (High risk)', debt: 40, equity: 60, debtRate: 7, equityRate: 14 },
+      { name: 'Government-backed', debt: 80, equity: 20, debtRate: 3.5, equityRate: 8 },
+    ];
+    const financeResults = scenarios.map(s => {
+      const wacc = (s.debt / 100) * s.debtRate * (1 - 0.21) + (s.equity / 100) * s.equityRate;
+      const sCrf = (wacc * Math.pow(1 + wacc, lifetime)) / (Math.pow(1 + wacc, lifetime) - 1);
+      const sAnnualCapex = totalCapex * sCrf;
+      const sTotalAnnual = sAnnualCapex + annualOM + annualFuel;
+      const sLcoe = (sTotalAnnual * 1e6) / annualEnergyMWh;
+      return { ...s, wacc, lcoe: sLcoe, annualCapex: sAnnualCapex };
+    });
+    document.getElementById('smr-finance-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Scenario</th><th>Debt/Equity</th><th>WACC</th><th>Annualized CAPEX</th><th>LCOE</th></tr></thead><tbody>
+        ${financeResults.map(f => `<tr${f.name === 'Regulated Utility' ? ' style="background:color-mix(in srgb,#059669 5%,transparent);"' : ''}><td><strong>${f.name}</strong></td><td>${f.debt}/${f.equity}</td><td>${f.wacc.toFixed(2)}%</td><td>$${f.annualCapex.toFixed(1)} M/yr</td><td class="it-highlight">$${f.lcoe.toFixed(1)}/MWh</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">WACC significantly impacts LCOE. Government-backed financing can reduce LCOE by $${(financeResults[3].lcoe - financeResults[2].lcoe).toFixed(0)}/MWh vs merchant. SMRs may qualify for DOE loan guarantees (up to 80% debt at Treasury rates).</div>
+    `;
+    document.getElementById('smr-finance-section').style.display = 'block';
+
+    // === Feature 5: LCOE Comparison ===
+    const alternatives = [
+      { name: 'This SMR', lcoe: lcoe, color: '#059669' },
+      { name: 'Large Nuclear (1GW)', lcoe: 95, color: '#06b6d4' },
+      { name: 'Natural Gas (CCGT)', lcoe: 55, color: '#d97706' },
+      { name: 'Coal', lcoe: 70, color: '#475569' },
+      { name: 'Onshore Wind', lcoe: 40, color: '#84cc16' },
+      { name: 'Solar PV', lcoe: 35, color: '#eab308' },
+      { name: 'Offshore Wind', lcoe: 75, color: '#0ea5e9' },
+      { name: 'Battery Storage (4hr)', lcoe: 120, color: '#a855f7' },
+    ];
+    const compCanvas = document.getElementById('smr-comparison-canvas');
+    const compCtx = compCanvas.getContext('2d');
+    const cw = compCanvas.width, ch = compCanvas.height;
+    compCtx.fillStyle = '#ebedf5'; compCtx.fillRect(0, 0, cw, ch);
+    const maxLcoe = Math.max(...alternatives.map(a => a.lcoe)) * 1.1;
+    const barH = ch / alternatives.length - 4;
+    alternatives.forEach((a, i) => {
+      const y = i * (barH + 4) + 2;
+      const barW = (a.lcoe / maxLcoe) * (cw - 180);
+      compCtx.fillStyle = a.color;
+      compCtx.fillRect(120, y, barW, barH);
+      compCtx.fillStyle = '#1e293b';
+      compCtx.font = '12px sans-serif';
+      compCtx.textAlign = 'right';
+      compCtx.fillText(a.name, 110, y + barH / 2 + 4);
+      compCtx.textAlign = 'left';
+      compCtx.fillText('$' + a.lcoe.toFixed(0) + '/MWh', 120 + barW + 5, y + barH / 2 + 4);
+    });
+    const cheapest = alternatives.filter(a => a.name !== 'This SMR').reduce((min, a) => a.lcoe < min.lcoe ? a : min);
+    document.getElementById('smr-comparison-list').innerHTML = `
+      <div class="it-alert ${lcoe < 80 ? 'it-alert-good' : lcoe < 120 ? 'it-alert-warn' : 'it-alert-bad'}">${lcoe < 80 ? '✓ SMR LCOE is competitive with fossil baseload.' : lcoe < 120 ? '⚠️ SMR LCOE is higher than fossil but competitive with other low-carbon dispatchable sources.' : '⚠️ SMR LCOE is high — consider multi-unit deployment, government financing, or carbon pricing to improve competitiveness.'} Cheapest alternative: ${cheapest.name} at $${cheapest.lcoe}/MWh.</div>
+    `;
+    document.getElementById('smr-comparison-section').style.display = 'block';
+
+    // === Feature 6: Construction Schedule ===
+    const phases = [
+      { name: 'Site Permit & Licensing', months: [0, 12], spend: 0.05 },
+      { name: 'Site Preparation', months: [12, 18], spend: 0.10 },
+      { name: 'First Concrete (Nuclear Island)', months: [18, 24], spend: 0.20 },
+      { name: 'Module Manufacturing', months: [18, d.construction], spend: 0.35 },
+      { name: 'Module Installation', months: [Math.max(24, d.construction - 12), d.construction], spend: 0.15 },
+      { name: 'Commissioning & Testing', months: [d.construction, d.construction + 6], spend: 0.10 },
+      { name: 'Fuel Load & Power Ascension', months: [d.construction + 6, d.construction + 9], spend: 0.05 },
+    ];
+    const totalMonths = d.construction + 9;
+    document.getElementById('smr-schedule-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Phase</th><th>Duration</th><th>Months</th><th>Cumulative Spend</th></tr></thead><tbody>
+        ${phases.map((p, i) => {
+          let cumSpend = 0;
+          for (let j = 0; j <= i; j++) cumSpend += phases[j].spend;
+          return `<tr><td><strong>${p.name}</strong></td><td>${p.months[1] - p.months[0]} mo</td><td>M${p.months[0]} — M${p.months[1]}</td><td>${(cumSpend * 100).toFixed(0)}% ($${(cumSpend * totalCapex / 1000).toFixed(2)}B)</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Total construction: ${d.construction} months + 9 months commissioning. Factory-fabricated modules can be manufactured in parallel with site work, reducing critical path. First-of-a-kind (FOAK) may take 20-30% longer.</div>
+    `;
+    document.getElementById('smr-schedule-section').style.display = 'block';
+
+    // === Feature 7: EPZ & Staffing ===
+    const epzRadius = d.mwe <= 100 ? 2 : d.mwe <= 200 ? 5 : 10; // miles, simplified
+    const staffing = Math.ceil(d.mwe / 10 + 50 * Math.sqrt(units));
+    const securityStaff = Math.ceil(staffing * 0.15);
+    const annualLaborCost = staffing * 0.15; // $0.15M/person average
+    document.getElementById('smr-epz-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Plume Exposure EPZ</span><strong>${epzRadius} miles</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Ingestion Pathway Zone</span><strong>${epzRadius * 5} miles</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Estimated Operating Staff</span><strong>${staffing} personnel</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Security Force</span><strong>${securityStaff} personnel</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Labor Cost</span><strong>$${annualLaborCost.toFixed(1)} M/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Staff per MWe</span><strong>${(staffing / totalMWe).toFixed(2)}</strong></div>
+      <div class="it-alert ${epzRadius <= 2 ? 'it-alert-good' : 'it-alert-info'}" style="margin-top:0.5rem;">${epzRadius <= 2 ? '✓ Reduced EPZ (${epzRadius}mi) — SMR may qualify for co-location with industrial facilities.' : 'Standard EPZ applies. SMRs have enhanced passive safety but still require emergency planning.'} Staffing ratio of ${(staffing / totalMWe).toFixed(2)} persons/MWe is ${staffing / totalMWe < 0.5 ? 'efficient' : 'higher than large nuclear (0.3-0.4)'}.</div>
+    `;
+    document.getElementById('smr-epz-section').style.display = 'block';
+
+    // === Feature 8: Grid Integration ===
+    const loadFollowingMin = d.mwe <= 200 ? 20 : 50; // % minimum power
+    const rampRate = d.mwe <= 200 ? 5 : 2; // %/min
+    const blackStartCapable = d.mwe <= 100;
+    const gridStability = totalMWe >= 300 ? 'Baseload' : totalMWe >= 100 ? 'Distributed baseload' : 'Microgrid-capable';
+    const renewableCurtailmentReduction = annualEnergyGWh * 0.05; // 5% of output can absorb curtailment
+    document.getElementById('smr-grid-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Minimum Load</span><strong>${loadFollowingMin}% of rated</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Ramp Rate</span><strong>${rampRate}%/min</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Black Start Capability</span><strong style="color:${blackStartCapable ? '#059669' : '#dc2626'};">${blackStartCapable ? '✓ Yes' : '✗ No'}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Grid Role</span><strong>${gridStability}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Renewable Curtailment Absorption</span><strong>${renewableCurtailmentReduction.toFixed(0)} GWh/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Load Following Range</span><strong>${100 - loadFollowingMin}% of capacity</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">SMRs can complement renewables by load-following (${100 - loadFollowingMin}% range at ${rampRate}%/min). ${blackStartCapable ? 'Small SMRs can provide black start services for grid restoration.' : 'Larger SMRs require external power for startup.'} This deployment can absorb ~${renewableCurtailmentReduction.toFixed(0)} GWh/yr of otherwise curtailed renewable energy.</div>
+    `;
+    document.getElementById('smr-grid-section').style.display = 'block';
+
+    // === Feature 9: Learning Curve Chart ===
+    const learnCanvas = document.getElementById('smr-learning-canvas');
+    const learnCtx = learnCanvas.getContext('2d');
+    const lw = learnCanvas.width, lh = learnCanvas.height;
+    learnCtx.fillStyle = '#ebedf5'; learnCtx.fillRect(0, 0, lw, lh);
+    learnCtx.strokeStyle = 'rgba(15,23,42,0.1)'; learnCtx.lineWidth = 1;
+    learnCtx.beginPath(); learnCtx.moveTo(40, 10); learnCtx.lineTo(40, lh - 20); learnCtx.lineTo(lw - 10, lh - 20); learnCtx.stroke();
+    const maxUnits = 20;
+    const capexValues = [];
+    for (let u = 1; u <= maxUnits; u++) {
+      const lc = Math.pow(0.95, Math.log2(u));
+      capexValues.push(d.capex * locFactor * lc);
+    }
+    const maxCapex = capexValues[0] * 1.05;
+    const minCapex = capexValues[maxUnits - 1] * 0.95;
+    learnCtx.strokeStyle = '#059669'; learnCtx.lineWidth = 2;
+    learnCtx.beginPath();
+    capexValues.forEach((v, i) => {
+      const x = 40 + (i / (maxUnits - 1)) * (lw - 50);
+      const y = lh - 20 - ((v - minCapex) / (maxCapex - minCapex)) * (lh - 30);
+      if (i === 0) learnCtx.moveTo(x, y); else learnCtx.lineTo(x, y);
+    });
+    learnCtx.stroke();
+    // Mark current deployment
+    learnCtx.fillStyle = '#dc2626';
+    const curX = 40 + ((units - 1) / (maxUnits - 1)) * (lw - 50);
+    const curY = lh - 20 - ((capexPerKW - minCapex) / (maxCapex - minCapex)) * (lh - 30);
+    learnCtx.beginPath(); learnCtx.arc(curX, curY, 5, 0, Math.PI * 2); learnCtx.fill();
+    learnCtx.fillStyle = '#1e293b'; learnCtx.font = '11px sans-serif';
+    learnCtx.fillText('Your deployment', curX + 8, curY - 5);
+    learnCtx.textAlign = 'center'; learnCtx.fillText('Units', lw / 2, lh - 5);
+    learnCtx.save(); learnCtx.translate(15, lh / 2); learnCtx.rotate(-Math.PI / 2); learnCtx.textAlign = 'center'; learnCtx.fillText('$/kW', 0, 0); learnCtx.restore();
+    const savingsAt20 = Math.round((1 - capexValues[19] / capexValues[0]) * 100);
+    document.getElementById('smr-learning-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Unit 1 CAPEX</span><strong>$${capexValues[0].toFixed(0)}/kW</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Unit ${units} CAPEX (yours)</span><strong>$${capexPerKW.toFixed(0)}/kW</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Unit 20 CAPEX (projected)</span><strong>$${capexValues[19].toFixed(0)}/kW</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Savings at ${units} units</span><strong>${Math.round((1 - learningCurve) * 100)}%</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Potential savings at 20 units</span><strong>${savingsAt20}%</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">5% cost reduction per doubling of units (Wright's Law). Factory production of SMR modules enables significant learning curve benefits not available to site-built large reactors.</div>
+    `;
+    document.getElementById('smr-learning-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('smr-export').style.display = 'inline-flex';
+    document.getElementById('smr-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), design: d.name, units, totalMWe, capexPerKW, totalCapex, lcoe, annualEnergyGWh, capacityFactor: capFactor, discountRate: discount, lifetime, constructionMonths: d.construction, efficiency: d.efficiency, fuelCycle: annualFuelBreakdown, decommissioning: { fund: decomFund, wasteStorage: wasteStorageCost, annualContribution: annualDecomContribution }, carbon: { avoidedVsCoal: annualCO2vsCoal, avoidedVsGas: annualCO2vsGas, carbonValueCoal }, financingScenarios: financeResults.map(f => ({ name: f.name, wacc: f.wacc, lcoe: f.lcoe })), schedule: phases, epz: { radius: epzRadius, staffing, securityStaff }, grid: { loadFollowingMin, rampRate, blackStartCapable, gridStability } };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'smr-cost-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('smr-calculate').addEventListener('click', calculate);
+  document.getElementById('smr-reset').addEventListener('click', () => {
+    document.getElementById('smr-results').classList.remove('show');
+  });
+})();
+</script>

@@ -1,0 +1,47 @@
+---
+/**
+ * AboutTeam — Team and contributors section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const team = [
+  { name: 'Alex Morgan', role: 'Founder & Editor-in-Chief', bio: 'Former research engineer turned science communicator. 10+ years bridging academia and industry.', initials: 'AM', color: '#3b82f6', gradient: 'linear-gradient(135deg,#3b82f6,#8b5cf6)' },
+  { name: 'Dr. Sarah Kim', role: 'Head of Research', bio: 'PhD in Quantum Information Science. Leads our original research reports and data analysis.', initials: 'SK', color: '#06b6d4', gradient: 'linear-gradient(135deg,#06b6d4,#3b82f6)' },
+  { name: 'James Chen', role: 'Lead Engineer', bio: 'Full-stack engineer and former SpaceX alum. Builds the tools, calculators, and interactive features.', initials: 'JC', color: '#10b981', gradient: 'linear-gradient(135deg,#10b981,#06b6d4)' },
+  { name: 'Maya Patel', role: 'Content Strategist', bio: 'SEO specialist and content architect. Designs the hub-and-spoke structure behind every topic.', initials: 'MP', color: '#ec4899', gradient: 'linear-gradient(135deg,#ec4899,#8b5cf6)' },
+  { name: 'David Okafor', role: 'Biotech & Energy Editor', bio: 'Molecular biologist covering biotech, nuclear, and energy storage. Former lab researcher.', initials: 'DO', color: '#f59e0b', gradient: 'linear-gradient(135deg,#f59e0b,#ef4444)' },
+  { name: 'Lisa Zhang', role: 'Community Manager', bio: 'Manages contributor program, community discussions, and reader feedback loops.', initials: 'LZ', color: '#8b5cf6', gradient: 'linear-gradient(135deg,#8b5cf6,#ec4899)' },
+];
+---
+
+<section class="about-team-section">
+  <div class="about-container">
+    <div class="about-section-head">
+      <span class="about-eyebrow">The People Behind It</span>
+      <h2 class="about-section-title">A Small Team With Deep Expertise</h2>
+      <p class="about-section-sub">
+        We are researchers, engineers, and communicators who believe technology literacy matters.
+        Every team member has hands-on experience in the fields they cover.
+      </p>
+    </div>
+
+    <div class="about-team-grid">
+      {team.map((member) => (
+        <div class="about-team-card">
+          <div class="about-team-avatar" style={`background:${member.gradient}`}>
+            <span>{member.initials}</span>
+          </div>
+          <div class="about-team-info">
+            <h3 class="about-team-name">{member.name}</h3>
+            <span class="about-team-role" style={`color:${member.color}`}>{member.role}</span>
+            <p class="about-team-bio">{member.bio}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="about-team-cta">
+      <p>Want to join our contributor program?</p>
+      <a href="/community" class="about-btn about-btn-primary">Join the Community</a>
+    </div>
+  </div>
+</section>

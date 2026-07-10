@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './newsletter-styles.css';
+
+const topics = [
+  { icon: '🤖', name: 'AI' },
+  { icon: '🦾', name: 'Robotics' },
+  { icon: '⚛️', name: 'Fusion' },
+  { icon: '🧬', name: 'Biotech' },
+  { icon: '🧠', name: 'BCI' },
+  { icon: '🚗', name: 'Autonomous Vehicles' },
+  { icon: '🚀', name: 'Space' },
+  { icon: '🔬', name: 'Materials' },
+  { icon: '💠', name: 'Quantum' },
+  { icon: '☢️', name: 'Nuclear' },
+  { icon: '🔋', name: 'Energy Storage' },
+  { icon: '🛡️', name: 'Cybersecurity' },
+];
+
+const perks = [
+  { icon: '📰', title: 'Weekly Digest', desc: 'The week's most important tech developments, summarized in a 5-minute read every Monday morning.', tag: 'Every Monday' },
+  { icon: '🔬', title: 'Deep Dives', desc: 'Exclusive in-depth analysis of breakthroughs before they appear on the website.', tag: 'Subscriber-only' },
+  { icon: '📊', title: 'Trend Reports', desc: 'Monthly trend reports tracking search interest, funding, and market movements across all 12 topics.', tag: 'Monthly' },
+  { icon: '⚡', title: 'Breaking Alerts', desc: 'Instant notifications for major breakthroughs — fusion milestones, AI model releases, quantum supremacy claims.', tag: 'Real-time' },
+  { icon: '🎯', title: 'Curated Picks', desc: 'Hand-selected research papers, videos, and tools worth your time. No noise, just signal.', tag: 'Weekly' },
+  { icon: '🏆', title: 'Community Access', desc: 'Join our Slack community of builders, investors, and technologists shaping the future.', tag: 'Members-only' },
+];
+
+const faqs = [
+  { q: 'Is the newsletter really free?', a: 'Yes — the weekly digest and trend reports are completely free. No credit card required, no hidden fees. We may introduce a premium tier in the future, but the core newsletter will always be free.' },
+  { q: 'How often will I receive emails?', a: 'You\'ll get one weekly digest every Monday morning, plus occasional breaking alerts for major developments. We typically send 4-6 emails per month total. No daily spam.' },
+  { q: 'What makes this different from other tech newsletters?', a: 'We cover 12 emerging technology frontiers in one place — from AI and fusion to BCI and quantum. Each issue connects the dots across disciplines, so you see patterns others miss. Our analysis is research-backed, not hype-driven.' },
+  { q: 'Can I unsubscribe anytime?', a: 'Absolutely. Every email includes a one-click unsubscribe link. No questions asked, no guilt trips. You can also manage your preferences to receive only specific topics.' },
+  { q: 'Do you share my email with third parties?', a: 'Never. Your email is used solely for delivering the newsletter. We do not sell, rent, or share your data with anyone. Read our privacy policy for full details.' },
+];
+---
+<BaseLayout title="Newsletter" description="Subscribe to the TechNanoAI newsletter — weekly briefings on AI, space, biotech, nuclear, quantum, and more." keywords="tech newsletter, emerging technology newsletter, AI newsletter, weekly tech briefing, frontier technology updates">
+  <!-- Hero -->
+  <section class="nl-hero">
+    <div class="nl-orb nl-orb-1"></div>
+    <div class="nl-orb nl-orb-2"></div>
+    <div class="nl-orb nl-orb-3"></div>
+    <div class="nl-hero-inner">
+      <div class="nl-eyebrow">
+        <span class="nl-eyebrow-dot"></span>
+        Stay Ahead of the Frontier
+      </div>
+      <h1 class="nl-title">
+        Get the frontier<br />
+        <span class="nl-title-grad">delivered to your inbox</span>
+      </h1>
+      <p class="nl-subtitle">
+        Weekly briefings on AI, space, biotech, nuclear, quantum, and more.
+        No fluff — just the breakthroughs that matter, backed by research.
+      </p>
+
+      <form class="nl-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed!'; this.querySelector('button').classList.add('nl-btn-subscribed');">
+        <input class="nl-input" type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
+        <button class="nl-btn" type="submit">Subscribe Free</button>
+      </form>
+
+      <div class="nl-trust">
+        <span class="nl-trust-item">Weekly digest</span>
+        <span class="nl-trust-item">No spam, ever</span>
+        <span class="nl-trust-item">Unsubscribe anytime</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="nl-stats">
+    <div class="nl-stat">
+      <div class="nl-stat-num">50K+</div>
+      <div class="nl-stat-label">SUBSCRIBERS</div>
+    </div>
+    <div class="nl-stat">
+      <div class="nl-stat-num">12</div>
+      <div class="nl-stat-label">TECH FRONTIERS</div>
+    </div>
+    <div class="nl-stat">
+      <div class="nl-stat-num">5 min</div>
+      <div class="nl-stat-label">WEEKLY READ TIME</div>
+    </div>
+    <div class="nl-stat">
+      <div class="nl-stat-num">100%</div>
+      <div class="nl-stat-label">FREE FOREVER</div>
+    </div>
+  </div>
+
+  <!-- Topics Coverage -->
+  <section class="nl-topics">
+    <h2 class="nl-section-title">12 Frontiers. One Inbox.</h2>
+    <p class="nl-section-sub">Every week, we cover the most important developments across all twelve emerging technology categories.</p>
+    <div class="nl-topics-grid">
+      {topics.map((t) => (
+        <div class="nl-topic-badge">
+          <span>{t.icon}</span>
+          {t.name}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Perks -->
+  <section class="nl-perks">
+    <h2 class="nl-section-title" style="text-align:center;">What You Get</h2>
+    <p class="nl-section-sub" style="text-align:center;">More than just a newsletter — a complete intelligence briefing system.</p>
+    <div class="nl-perks-grid">
+      {perks.map((p) => (
+        <div class="nl-perk">
+          <div class="nl-perk-icon">{p.icon}</div>
+          <h3>{p.title}</h3>
+          <p>{p.desc}</p>
+          <span class="nl-perk-tag">{p.tag}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Email Preview -->
+  <section class="nl-preview">
+    <h2 class="nl-section-title" style="text-align:center;">See What You'll Get</h2>
+    <p class="nl-section-sub" style="text-align:center;">A sneak peek at a typical weekly digest.</p>
+    <div class="nl-preview-card">
+      <div class="nl-preview-header">
+        <div class="nl-preview-logo">T</div>
+        <div class="nl-preview-meta">
+          <div class="nl-preview-name">TechNanoAI Weekly</div>
+          <div class="nl-preview-date">Monday, 8:00 AM · Issue #142</div>
+        </div>
+      </div>
+      <div class="nl-preview-body">
+        <div class="nl-preview-subject">This Week: GPT-5 benchmarks, Commonwealth Fusion hits Q>2, and Neuralink's first human data</div>
+        <div class="nl-preview-line"></div>
+        <div class="nl-preview-line"></div>
+        <div class="nl-preview-line"></div>
+        <div class="nl-preview-line"></div>
+        <div class="nl-preview-line"></div>
+        <div class="nl-preview-topics">
+          <span class="nl-preview-topic">🤖 AI</span>
+          <span class="nl-preview-topic">⚛️ Fusion</span>
+          <span class="nl-preview-topic">🧠 BCI</span>
+          <span class="nl-preview-topic">🛡️ Cybersecurity</span>
+          <span class="nl-preview-topic">🔋 Energy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="nl-faq">
+    <h2 class="nl-section-title" style="text-align:center;">Frequently Asked Questions</h2>
+    <p class="nl-section-sub" style="text-align:center;">Everything you need to know before subscribing.</p>
+    {faqs.map((f) => (
+      <details class="nl-faq-item">
+        <summary>{f.q}</summary>
+        <p>{f.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <!-- Final CTA -->
+  <section class="nl-final-cta">
+    <div class="nl-orb nl-orb-1" style="opacity:0.15"></div>
+    <div class="nl-orb nl-orb-2" style="opacity:0.12"></div>
+    <div class="nl-final-inner">
+      <h2 class="nl-final-title">Join 50,000+ frontier thinkers</h2>
+      <p class="nl-final-sub">Start receiving your weekly intelligence briefing every Monday. It takes 10 seconds to subscribe.</p>
+      <form class="nl-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed!'; this.querySelector('button').classList.add('nl-btn-subscribed');">
+        <input class="nl-input" type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
+        <button class="nl-btn" type="submit">Subscribe Free</button>
+      </form>
+      <div class="nl-trust" style="margin-top:1.25rem;">
+        <span class="nl-trust-item">Free forever</span>
+        <span class="nl-trust-item">No credit card</span>
+        <span class="nl-trust-item">Cancel anytime</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

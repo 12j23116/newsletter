@@ -1,0 +1,32 @@
+---
+import { blogStats } from '../../data/blog/blog-content';
+---
+
+<section class="bl-hero">
+  <div class="bl-hero-bg">
+    <div class="bl-hero-grid"></div>
+    <div class="bl-hero-orb bl-hero-orb-1"></div>
+    <div class="bl-hero-orb bl-hero-orb-2"></div>
+  </div>
+  <div class="bl-hero-inner">
+    <span class="bl-eyebrow">
+      <span class="bl-eyebrow-pulse"></span>
+      TechNanoAI Blog · Updated Daily
+    </span>
+    <h1 class="bl-hero-title">
+      The <span class="bl-grad">Frontier</span> Tech Blog
+    </h1>
+    <p class="bl-hero-sub">
+      Breaking analysis, deep dives, and expert commentary across 12 emerging technology frontiers —
+      from AI agents to fusion energy. Written by researchers, for builders.
+    </p>
+    <div class="bl-hero-stats">
+      {blogStats.map((stat) => (
+        <div class="bl-hero-stat">
+          <strong>{stat.value}{stat.suffix}</strong>
+          <span>{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,440 @@
+---
+/**
+ * [slug].astro — Individual Tool Detail Page
+ * ───────────────────────────────────────────
+ * Uses getStaticPaths() to pre-generate one HTML file per "our tool".
+ * Data comes from tools-content.ts (ourTools array).
+ * External tools link to their official URLs and don't get individual pages.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './tools-styles.css';
+import './tool-detail.css';
+import { ourTools, type Tool } from '../../data/tools/tools-content';
+
+// Interactive tool component imports
+import LlmCostCalculator from '../../components/tools/interactive/llm-cost-calculator.astro';
+import HallucinationDetector from '../../components/tools/interactive/hallucination-detector.astro';
+import ModelBenchmarkComparer from '../../components/tools/interactive/model-benchmark-comparer.astro';
+import PhishingUrlScanner from '../../components/tools/interactive/phishing-url-scanner.astro';
+import CveImpactChecker from '../../components/tools/interactive/cve-impact-checker.astro';
+import CloudSecurityConfigChecker from '../../components/tools/interactive/cloud-security-config-checker.astro';
+import LaunchWindowCalculator from '../../components/tools/interactive/launch-window-calculator.astro';
+import SatelliteLinkBudgetCalculator from '../../components/tools/interactive/satellite-link-budget-calculator.astro';
+import OrbitPropagatorVisualizer from '../../components/tools/interactive/orbit-propagator-visualizer.astro';
+import CrisprGuideRnaDesigner from '../../components/tools/interactive/crispr-guide-rna-designer.astro';
+import DnaSequenceAnalyzer from '../../components/tools/interactive/dna-sequence-analyzer.astro';
+import ProteinStabilityPredictor from '../../components/tools/interactive/protein-stability-predictor.astro';
+import SmrCostEstimator from '../../components/tools/interactive/smr-cost-estimator.astro';
+import ReactorTypeComparator from '../../components/tools/interactive/reactor-type-comparator.astro';
+import IsotopeDecayCalculator from '../../components/tools/interactive/isotope-decay-calculator.astro';
+import BatteryDegradationPredictor from '../../components/tools/interactive/battery-degradation-predictor.astro';
+import BatteryChemistryComparator from '../../components/tools/interactive/battery-chemistry-comparator.astro';
+import SolarStorageSizingTool from '../../components/tools/interactive/solar-storage-sizing-tool.astro';
+import RobotArmKinematicsCalculator from '../../components/tools/interactive/robot-arm-kinematics-calculator.astro';
+import UrdfValidator from '../../components/tools/interactive/urdf-validator.astro';
+import RobotPowerBudgetCalculator from '../../components/tools/interactive/robot-power-budget-calculator.astro';
+import AvScenarioTestGenerator from '../../components/tools/interactive/av-scenario-test-generator.astro';
+import OddBoundaryDefiner from '../../components/tools/interactive/odd-boundary-definer.astro';
+import AvRegulatoryComplianceChecker from '../../components/tools/interactive/av-regulatory-compliance-checker.astro';
+import QuantumCircuitOptimizer from '../../components/tools/interactive/quantum-circuit-optimizer.astro';
+import PostQuantumCryptoChecker from '../../components/tools/interactive/post-quantum-crypto-checker.astro';
+import QuantumAlgorithmSelector from '../../components/tools/interactive/quantum-algorithm-selector.astro';
+import EegArtifactRemover from '../../components/tools/interactive/eeg-artifact-remover.astro';
+import EegBandPowerAnalyzer from '../../components/tools/interactive/eeg-band-power-analyzer.astro';
+import BciClassificationTrainer from '../../components/tools/interactive/bci-classification-trainer.astro';
+import PlasmaParameterCalculator from '../../components/tools/interactive/plasma-parameter-calculator.astro';
+import FusionPowerOutputEstimator from '../../components/tools/interactive/fusion-power-output-estimator.astro';
+import FusionGlossaryDecoder from '../../components/tools/interactive/fusion-glossary-decoder.astro';
+import CrystalStructureVisualizer from '../../components/tools/interactive/crystal-structure-visualizer.astro';
+import FormationEnergyEstimator from '../../components/tools/interactive/formation-energy-estimator.astro';
+import MaterialsDatabaseSearch from '../../components/tools/interactive/materials-database-search.astro';
+
+// Slug → Component mapping
+const toolComponents: Record<string, any> = {
+  'llm-cost-calculator': LlmCostCalculator,
+  'hallucination-detector': HallucinationDetector,
+  'model-benchmark-comparer': ModelBenchmarkComparer,
+  'phishing-url-scanner': PhishingUrlScanner,
+  'cve-impact-checker': CveImpactChecker,
+  'cloud-security-config-checker': CloudSecurityConfigChecker,
+  'launch-window-calculator': LaunchWindowCalculator,
+  'satellite-link-budget-calculator': SatelliteLinkBudgetCalculator,
+  'orbit-propagator-visualizer': OrbitPropagatorVisualizer,
+  'crispr-guide-rna-designer': CrisprGuideRnaDesigner,
+  'dna-sequence-analyzer': DnaSequenceAnalyzer,
+  'protein-stability-predictor': ProteinStabilityPredictor,
+  'smr-cost-estimator': SmrCostEstimator,
+  'reactor-type-comparator': ReactorTypeComparator,
+  'isotope-decay-calculator': IsotopeDecayCalculator,
+  'battery-degradation-predictor': BatteryDegradationPredictor,
+  'battery-chemistry-comparator': BatteryChemistryComparator,
+  'solar-storage-sizing-tool': SolarStorageSizingTool,
+  'robot-arm-kinematics-calculator': RobotArmKinematicsCalculator,
+  'urdf-validator': UrdfValidator,
+  'robot-power-budget-calculator': RobotPowerBudgetCalculator,
+  'av-scenario-test-generator': AvScenarioTestGenerator,
+  'odd-boundary-definer': OddBoundaryDefiner,
+  'av-regulatory-compliance-checker': AvRegulatoryComplianceChecker,
+  'quantum-circuit-optimizer': QuantumCircuitOptimizer,
+  'post-quantum-crypto-checker': PostQuantumCryptoChecker,
+  'quantum-algorithm-selector': QuantumAlgorithmSelector,
+  'eeg-artifact-remover': EegArtifactRemover,
+  'eeg-band-power-analyzer': EegBandPowerAnalyzer,
+  'bci-classification-trainer': BciClassificationTrainer,
+  'plasma-parameter-calculator': PlasmaParameterCalculator,
+  'fusion-power-output-estimator': FusionPowerOutputEstimator,
+  'fusion-glossary-decoder': FusionGlossaryDecoder,
+  'crystal-structure-visualizer': CrystalStructureVisualizer,
+  'formation-energy-estimator': FormationEnergyEstimator,
+  'materials-database-search': MaterialsDatabaseSearch,
+};
+
+export function getStaticPaths() {
+  return ourTools.map((tool: Tool) => ({
+    params: { slug: tool.slug },
+    props: { tool },
+  }));
+}
+
+interface Props {
+  tool: Tool;
+}
+
+const { tool } = Astro.props as Props;
+
+const isLive = tool.status === 'Live' || tool.status === 'New';
+const isComingSoon = tool.status === 'Coming Soon';
+
+const relatedTools = ourTools
+  .filter((t) => t.slug !== tool.slug && t.topic === tool.topic)
+  .slice(0, 3);
+
+const fallbackRelated = ourTools
+  .filter((t) => t.slug !== tool.slug && t.topic !== tool.topic)
+  .slice(0, 3);
+
+const finalRelated = relatedTools.length >= 3 ? relatedTools : [...relatedTools, ...fallbackRelated].slice(0, 3);
+
+const title = `${tool.name} — Free Online Tool | TechNanoAI`;
+const description = tool.description;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: tool.name,
+  description: tool.description,
+  applicationCategory: tool.type,
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: tool.rating,
+    ratingCount: '1',
+  },
+  keywords: tool.tags.join(', '),
+  about: tool.topic,
+};
+
+const toolUrl = `https://technanoai.com/tools/${tool.slug}`;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://technanoai.com/tools' },
+    { '@type': 'ListItem', position: 3, name: tool.name, item: toolUrl },
+  ],
+};
+
+const notifyScript = `
+document.getElementById('td-notify-form')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const input = document.getElementById('td-notify-email') as HTMLInputElement;
+  const success = document.getElementById('td-notify-success');
+  if (input && input.value && success) {
+    success.classList.add('show');
+    input.value = '';
+    setTimeout(() => success.classList.remove('show'), 4000);
+  }
+});
+`;
+---
+
+<BaseLayout title={title} description={description} type="article" keywords={tool.tags.join(', ')} section={tool.topic}>
+  <div class="tool-detail-page" style={`--td-color: ${tool.topicColor}`}>
+    <!-- Tool Section (First) — Interactive tool or Coming Soon -->
+    <section class="td-tool-section" id="td-tool-container">
+      {isComingSoon && !toolComponents[tool.slug] ? (
+        <div class="td-coming-soon">
+          <div class="td-coming-soon-icon">{tool.icon}</div>
+          <h2 class="td-coming-soon-title">This tool is coming soon</h2>
+          <p class="td-coming-soon-desc">
+            We're actively building {tool.name}. Enter your email below and we'll notify you the moment it goes live.
+          </p>
+          <form id="td-notify-form" class="td-coming-soon-notify">
+            <input type="email" id="td-notify-email" class="td-notify-input" placeholder="you@example.com" required />
+            <button type="submit" class="td-notify-btn">Notify Me</button>
+          </form>
+          <div class="td-notify-success" id="td-notify-success">
+            ✓ Thanks! We'll email you when {tool.name} is ready.
+          </div>
+        </div>
+      ) : toolComponents[tool.slug] ? (
+        <div class="td-tool-interactive">
+          {(() => {
+            const ActiveComponent = toolComponents[tool.slug];
+            return <ActiveComponent />;
+          })()}
+        </div>
+      ) : (
+        <div class="td-tool-placeholder">
+          <div class="td-tool-placeholder-icon">{tool.icon}</div>
+          <h2 class="td-tool-placeholder-title">{tool.name}</h2>
+          <p class="td-tool-placeholder-desc">{tool.description}</p>
+          <a href="#td-tool-launch" class="td-interface-btn" id="td-tool-launch">
+            Launch {tool.name}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      )}
+    </section>
+
+    <!-- Hero (Second Section) -->
+    <header class="td-hero">
+      <div class="td-hero-bg">
+        <div class="td-hero-grid"></div>
+        <div class="td-hero-orb td-hero-orb-1" style={`background: ${tool.topicColor};`}></div>
+        <div class="td-hero-orb td-hero-orb-2" style={`background: ${tool.topicColor};`}></div>
+      </div>
+      <div class="td-hero-inner">
+        <!-- Breadcrumbs at top of hero -->
+        <nav class="td-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="td-bc-sep">/</span>
+          <a href="/tools">Tools</a>
+          <span class="td-bc-sep">/</span>
+          <span class="td-bc-current">{tool.name}</span>
+        </nav>
+        <div class="td-hero-top">
+          <div class="td-hero-icon">{tool.icon}</div>
+          <div class="td-hero-meta">
+            <div class="td-hero-badges">
+              <span class="td-badge td-badge-topic">{tool.topic}</span>
+              <span class="td-badge td-badge-type">{tool.type}</span>
+              <span class="td-badge td-badge-status" data-status={tool.status}>{tool.status}</span>
+              <span class="td-badge td-badge-ours">Our Tool</span>
+            </div>
+            <h1 class="td-hero-title">{tool.name}</h1>
+            <p class="td-hero-desc">{tool.description}</p>
+          </div>
+        </div>
+        <!-- Hero Stats Row -->
+        <div class="td-hero-stats">
+          <div class="td-hero-stat">
+            <span class="td-hero-stat-icon">⭐</span>
+            <strong>{tool.rating}</strong>
+            <span>Rating</span>
+          </div>
+          <div class="td-hero-stat">
+            <span class="td-hero-stat-icon">👥</span>
+            <strong>{tool.users}</strong>
+            <span>Users</span>
+          </div>
+          <div class="td-hero-stat">
+            <span class="td-hero-stat-icon">💰</span>
+            <strong>Free</strong>
+            <span>Price</span>
+          </div>
+          <div class="td-hero-stat">
+            <span class="td-hero-stat-icon">🏷️</span>
+            <strong>{tool.type}</strong>
+            <span>Type</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="td-layout">
+      <!-- Main Content -->
+      <div class="td-main">
+        <!-- Overview -->
+        <section class="td-section">
+          <h2 class="td-section-heading">
+            <span class="td-section-heading-icon">📋</span>
+            Overview
+          </h2>
+          <div class="td-long-desc">
+            {tool.longDescription}
+          </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="td-section">
+          <h2 class="td-section-heading">
+            <span class="td-section-heading-icon">✨</span>
+            Key Features
+          </h2>
+          <div class="td-features">
+            {tool.tags.map((tag) => (
+              <div class="td-feature">
+                <div class="td-feature-icon">✓</div>
+                <div class="td-feature-text">
+                  <strong>{tag}</strong>
+                  Built-in {tag.toLowerCase()} capabilities with intuitive controls and real-time results.
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="td-section">
+          <h2 class="td-section-heading">
+            <span class="td-section-heading-icon">🔧</span>
+            How It Works
+          </h2>
+          <div class="td-long-desc">
+            <p style="margin-bottom: 1rem;">{tool.name} is designed to be simple and powerful. Here's how to get started:</p>
+            <ol style="padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><strong>Input your data</strong> — Enter the required parameters for your {tool.topic.toLowerCase()} use case.</li>
+              <li><strong>Run the analysis</strong> — The tool processes your input using validated algorithms and models.</li>
+              <li><strong>Review results</strong> — Get detailed outputs with visualizations, recommendations, and export options.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section class="td-section">
+          <h2 class="td-section-heading">
+            <span class="td-section-heading-icon">🎯</span>
+            Who Is This For?
+          </h2>
+          <div class="td-long-desc">
+            <p>{tool.name} is built for professionals, researchers, and enthusiasts working in {tool.topic.toLowerCase()}. Whether you're validating designs, estimating costs, analyzing data, or learning the fundamentals, this tool provides accurate, reliable results without requiring specialized software or extensive domain expertise.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="td-sidebar">
+        <div class="td-sidebar-card">
+          <div class="td-sidebar-title">Tool Details</div>
+          <div class="td-info-row">
+            <span class="td-info-label">Type</span>
+            <span class="td-info-value">{tool.type}</span>
+          </div>
+          <div class="td-info-row">
+            <span class="td-info-label">Topic</span>
+            <span class="td-info-value">{tool.topic}</span>
+          </div>
+          <div class="td-info-row">
+            <span class="td-info-label">Status</span>
+            <span class="td-info-value">{tool.status}</span>
+          </div>
+          <div class="td-info-row">
+            <span class="td-info-label">Rating</span>
+            <span class="td-info-value td-rating">
+              <svg class="td-rating-star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <span class="td-rating-value">{tool.rating}</span>
+            </span>
+          </div>
+          <div class="td-info-row">
+            <span class="td-info-label">Users</span>
+            <span class="td-info-value">{tool.users}</span>
+          </div>
+          <div class="td-info-row">
+            <span class="td-info-label">Price</span>
+            <span class="td-info-value">Free</span>
+          </div>
+        </div>
+
+        <div class="td-sidebar-card">
+          <div class="td-sidebar-title">Tags</div>
+          <div class="td-tags-wrap">
+            {tool.tags.map((tag) => (
+              <span class="td-tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+
+        <div class="td-sidebar-card">
+          <div class="td-sidebar-title">Explore More</div>
+          <nav class="td-explore-links">
+            <a href={`/tools`} class="td-explore-link td-explore-link-accent">
+              <span>←</span> All Tools
+            </a>
+            <a href={`/tools/request`} class="td-explore-link">
+              <span>+</span> Request a Tool
+            </a>
+            <a href={`/guides`} class="td-explore-link">
+              <span>📖</span> Browse Guides
+            </a>
+          </nav>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Related Tools -->
+    {finalRelated.length > 0 && (
+      <section class="td-related">
+        <h2 class="td-related-heading">More {tool.topic} Tools</h2>
+        <div class="td-related-grid">
+          {finalRelated.map((rt) => (
+            <a href={`/tools/${rt.slug}`} class="td-related-card" style={`--td-color: ${rt.topicColor}`}>
+              <div class="td-related-card-top">
+                <div class="td-related-icon">{rt.icon}</div>
+                <span class="td-related-status" data-status={rt.status}>{rt.status}</span>
+              </div>
+              <h3 class="td-related-name">{rt.name}</h3>
+              <p class="td-related-desc">{rt.description}</p>
+              <div class="td-related-foot">
+                <span class="td-related-type">{rt.type}</span>
+                <span class="td-related-arrow">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- CTA -->
+    <section class="td-cta">
+      <div class="td-cta-inner">
+        <h2 class="td-cta-title">Need a different tool?</h2>
+        <p class="td-cta-desc">
+          We're constantly building new tools for emerging technology. If you need something specific that's not in our catalog, let us know.
+        </p>
+        <div class="td-cta-actions">
+          <a href="/tools/request" class="td-cta-btn td-cta-btn-primary">
+            Request a Tool
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/tools" class="td-cta-btn td-cta-btn-outline">Browse All Tools</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  </div>
+
+  {isComingSoon && <script is:inline set:html={notifyScript} />}
+</BaseLayout>

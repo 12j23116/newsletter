@@ -1,0 +1,48 @@
+---
+import { materialsContent as c } from '../../../data/topics/Materials/materials-content';
+---
+<section class="mat-hero">
+  <div class="mat-hero-bg">
+    <img src={c.heroImage} alt="" class="mat-hero-bg-img" loading="eager" />
+    <div class="mat-hero-bg-overlay"></div>
+  </div>
+  <div class="mat-hero-grid"></div>
+  <div class="mat-orb mat-hero-orb-1"></div>
+  <div class="mat-orb mat-hero-orb-2"></div>
+
+  <div class="container mat-hero-inner">
+    <nav class="mat-hero-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/#topics">topics</a>
+      <span>/</span>
+      <span>Materials</span>
+    </nav>
+    <div class="mat-hero-pill">
+      <span class="mat-hero-pill-dot"></span>
+      <span>AI-accelerated material discovery at 100x speed</span>
+    </div>
+    <span class="mat-hero-icon">{c.icon}</span>
+    <h1 class="mat-hero-name">{c.name}</h1>
+    <p class="mat-hero-tagline">{c.tagline}</p>
+    <p class="mat-hero-desc">{c.description}</p>
+    <div class="mat-hero-cta">
+      <a href="#materials-economy" class="mat-hero-cta-btn mat-hero-cta-primary">
+        Explore Sections
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+      </a>
+      <a href="#mat-trends" class="mat-hero-cta-btn mat-hero-cta-secondary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+        Trending Now
+      </a>
+    </div>
+    <div class="mat-hero-stats">
+      {c.stats.map((s) => (
+        <div class="mat-hero-stat">
+          <span class="mat-hero-stat-value">{s.value}</span>
+          <span class="mat-hero-stat-label">{s.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

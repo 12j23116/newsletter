@@ -1,0 +1,491 @@
+---
+/**
+ * Fusion Power Output Estimator — Interactive tool
+ * Estimate fusion reactor power output, efficiency, and economics
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="fusion-power">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">⚡</div>
+      <div>
+        <h2>Fusion Power Output Estimator</h2>
+        <p>Estimate fusion reactor power output, wall-plug efficiency, and LCOE</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Reactor Concept</label>
+          <select class="it-select" id="fpo-concept">
+            <option value="tokamak">Tokamak (D-T)</option>
+            <option value="stellarator">Stellarator (D-T)</option>
+            <option value="icf">Laser ICF (D-T)</option>
+            <option value="dhe3">D-He3 Fusion</option>
+            <option value="aneutronic">Aneutronic (p-B11)</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Fusion Power <span class="it-label-hint">(MW)</span></label>
+          <input type="number" class="it-input" id="fpo-fusion-power" value="500" min="1" max="10000" />
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">Q Factor (Gain)</label>
+          <input type="number" class="it-input" id="fpo-q" value="10" min="0.1" max="100" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Thermal-Electric Efficiency <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="fpo-thermal" value="40" min="20" max="60" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Availability Factor <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="fpo-availability" value="70" min="10" max="95" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Capital Cost <span class="it-label-hint">($B)</span></label>
+          <input type="number" class="it-input" id="fpo-capex" value="10" min="0.5" max="100" step="0.5" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Annual O&M <span class="it-label-hint">($M/yr)</span></label>
+          <input type="number" class="it-input" id="fpo-opex" value="200" min="10" max="2000" step="10" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Plant Lifetime <span class="it-label-hint">(years)</span></label>
+          <input type="number" class="it-input" id="fpo-lifetime" value="40" min="20" max="80" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Discount Rate <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="fpo-discount" value="7" min="2" max="15" step="0.5" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="fpo-estimate">Estimate Power & Economics</button>
+        <button class="it-btn it-btn-secondary" id="fpo-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="fpo-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="fpo-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Fusion Power & Economics</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Gross Electric</div>
+            <div class="it-stat-value" id="fpo-gross">0<span class="it-stat-unit"> MW</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Net Electric</div>
+            <div class="it-stat-value" id="fpo-net" style="color:#059669;">0<span class="it-stat-unit"> MW</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Wall-Plug Efficiency</div>
+            <div class="it-stat-value" id="fpo-efficiency">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">LCOE</div>
+            <div class="it-stat-value" id="fpo-lcoe">$0<span class="it-stat-unit">/MWh</span></div>
+          </div>
+        </div>
+
+        <div id="fpo-breakdown"></div>
+        <div class="it-alert" id="fpo-alert"></div>
+      </div>
+
+      <!-- Feature 1: Power Flow Sankey-style Diagram -->
+      <div class="it-results-card" id="fpo-flow-section" style="display:none;">
+        <div class="it-results-title">🔀 Power Flow Diagram</div>
+        <canvas id="fpo-flow-canvas" width="800" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="fpo-flow-list"></div>
+      </div>
+
+      <!-- Feature 2: LCOE Sensitivity Tornado Chart -->
+      <div class="it-results-card" id="fpo-tornado-section" style="display:none;">
+        <div class="it-results-title">🌪️ LCOE Sensitivity (Tornado Chart)</div>
+        <div id="fpo-tornado-list"></div>
+      </div>
+
+      <!-- Feature 3: Technology Comparison Table -->
+      <div class="it-results-card" id="fpo-techcomp-section" style="display:none;">
+        <div class="it-results-title">⚖️ Fusion vs Conventional Energy Comparison</div>
+        <div id="fpo-techcomp-list"></div>
+      </div>
+
+      <!-- Feature 4: Neutron Flux & Blanket Analysis -->
+      <div class="it-results-card" id="fpo-neutron-section" style="display:none;">
+        <div class="it-results-title">☢️ Neutron Flux & Blanket Analysis</div>
+        <div id="fpo-neutron-list"></div>
+      </div>
+
+      <!-- Feature 5: Fuel Supply & Tritium Breeding -->
+      <div class="it-results-card" id="fpo-fuel-section" style="display:none;">
+        <div class="it-results-title">⛽ Fuel Supply & Tritium Breeding</div>
+        <div id="fpo-fuel-list"></div>
+      </div>
+
+      <!-- Feature 6: Cost Breakdown Pie Chart -->
+      <div class="it-results-card" id="fpo-costpie-section" style="display:none;">
+        <div class="it-results-title">💰 Cost Breakdown Analysis</div>
+        <canvas id="fpo-costpie-canvas" width="400" height="300" style="width:100%;max-width:400px;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin:0 auto 0.75rem;display:block;"></canvas>
+        <div id="fpo-costpie-list"></div>
+      </div>
+
+      <!-- Feature 7: Capacity Factor & Availability Timeline -->
+      <div class="it-results-card" id="fpo-availability-section" style="display:none;">
+        <div class="it-results-title">📅 Capacity Factor & Availability Analysis</div>
+        <div id="fpo-availability-list"></div>
+      </div>
+
+      <!-- Feature 8: CO₂ Abatement & Environmental Impact -->
+      <div class="it-results-card" id="fpo-env-section" style="display:none;">
+        <div class="it-results-title">🌱 CO₂ Abatement & Environmental Impact</div>
+        <div id="fpo-env-list"></div>
+      </div>
+
+      <!-- Feature 9: Technology Readiness Roadmap -->
+      <div class="it-results-card" id="fpo-trl-section" style="display:none;">
+        <div class="it-results-title">🛣️ Technology Readiness & Development Roadmap</div>
+        <div id="fpo-trl-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const conceptParams = {
+    tokamak: { recirculatingFrac: 0.10, neutronEnergyFrac: 0.8, blanketGain: 1.2, tritiumBreed: true },
+    stellarator: { recirculatingFrac: 0.08, neutronEnergyFrac: 0.8, blanketGain: 1.2, tritiumBreed: true },
+    icf: { recirculatingFrac: 0.25, neutronEnergyFrac: 0.8, blanketGain: 1.15, tritiumBreed: true },
+    dhe3: { recirculatingFrac: 0.05, neutronEnergyFrac: 0.05, blanketGain: 1.0, tritiumBreed: false },
+    aneutronic: { recirculatingFrac: 0.05, neutronEnergyFrac: 0.01, blanketGain: 1.0, tritiumBreed: false },
+  };
+
+  function estimate() {
+    const concept = document.getElementById('fpo-concept').value;
+    const params = conceptParams[concept];
+    const fusionPower = parseFloat(document.getElementById('fpo-fusion-power').value) || 500;
+    const Q = parseFloat(document.getElementById('fpo-q').value) || 10;
+    const thermalEff = parseFloat(document.getElementById('fpo-thermal').value) / 100 || 0.40;
+    const availability = parseFloat(document.getElementById('fpo-availability').value) / 100 || 0.70;
+    const capex = parseFloat(document.getElementById('fpo-capex').value) * 1e9 || 10e9;
+    const opex = parseFloat(document.getElementById('fpo-opex').value) * 1e6 || 200e6;
+    const lifetime = parseFloat(document.getElementById('fpo-lifetime').value) || 40;
+    const discount = parseFloat(document.getElementById('fpo-discount').value) / 100 || 0.07;
+
+    // Heating power needed
+    const heatingPower = fusionPower / Q;
+
+    // Total thermal power (fusion + blanket multiplication)
+    const totalThermal = fusionPower * params.blanketGain;
+
+    // Gross electric output
+    const grossElectric = totalThermal * thermalEff;
+
+    // Recirculating power (for magnets, cryo, heating, etc.)
+    const recirculatingPower = grossElectric * params.recirculatingFrac + heatingPower * 0.3;
+
+    // Net electric output
+    const netElectric = grossElectric - recirculatingPower;
+
+    // Wall-plug efficiency
+    const wallPlugEff = (netElectric / fusionPower) * 100;
+
+    // Annual energy production
+    const annualEnergy = netElectric * 1000 * 8760 * availability; // kWh
+
+    // LCOE calculation
+    const crf = discount * Math.pow(1 + discount, lifetime) / (Math.pow(1 + discount, lifetime) - 1);
+    const annualizedCapex = capex * crf;
+    const totalAnnualCost = annualizedCapex + opex;
+    const lcoe = totalAnnualCost / annualEnergy * 1000; // $/MWh
+
+    // Tritium consumption (for D-T)
+    const tritiumConsumption = params.tritiumBreed ? fusionPower * 1e6 / 17.6 / 1.6e-19 / 6.022e23 * 3 * 8760 * availability / 1000 : 0; // kg/yr
+
+    // Neutron flux
+    const neutronPower = fusionPower * params.neutronEnergyFrac;
+
+    // Update UI
+    document.getElementById('fpo-gross').innerHTML = grossElectric.toFixed(0) + '<span class="it-stat-unit"> MW</span>';
+    document.getElementById('fpo-net').innerHTML = netElectric.toFixed(0) + '<span class="it-stat-unit"> MW</span>';
+    document.getElementById('fpo-efficiency').innerHTML = wallPlugEff.toFixed(1) + '<span class="it-stat-unit">%</span>';
+    document.getElementById('fpo-lcoe').innerHTML = '$' + lcoe.toFixed(0) + '<span class="it-stat-unit">/MWh</span>';
+
+    const breakdown = document.getElementById('fpo-breakdown');
+    breakdown.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Reactor Concept</td><td>${concept}</td></tr>
+          <tr><td>Fusion Power</td><td>${fusionPower} MW</td></tr>
+          <tr><td>Q Factor (Gain)</td><td>${Q}</td></tr>
+          <tr><td>Heating Power Required</td><td>${heatingPower.toFixed(1)} MW</td></tr>
+          <tr><td>Blanket Energy Gain</td><td>${params.blanketGain}x</td></tr>
+          <tr><td>Total Thermal Power</td><td>${totalThermal.toFixed(0)} MW</td></tr>
+          <tr><td>Thermal-Electric Efficiency</td><td>${(thermalEff * 100).toFixed(0)}%</td></tr>
+          <tr><td class="it-highlight">Gross Electric Output</td><td class="it-highlight">${grossElectric.toFixed(0)} MW</td></tr>
+          <tr><td>Recirculating Power Fraction</td><td>${(params.recirculatingFrac * 100).toFixed(0)}%</td></tr>
+          <tr><td>Recirculating Power</td><td>${recirculatingPower.toFixed(1)} MW</td></tr>
+          <tr><td class="it-highlight">Net Electric Output</td><td class="it-highlight">${netElectric.toFixed(0)} MW</td></tr>
+          <tr><td class="it-highlight">Wall-Plug Efficiency</td><td class="it-highlight">${wallPlugEff.toFixed(1)}%</td></tr>
+          <tr><td>Neutron Power</td><td>${neutronPower.toFixed(0)} MW (${(params.neutronEnergyFrac * 100).toFixed(0)}%)</td></tr>
+          <tr><td>Availability</td><td>${(availability * 100).toFixed(0)}%</td></tr>
+          <tr><td>Annual Energy Production</td><td>${(annualEnergy / 1e6).toFixed(1)} TWh/yr</td></tr>
+          ${params.tritiumBreed ? `<tr><td>Tritium Consumption</td><td>${tritiumConsumption.toFixed(1)} kg/yr</td></tr>` : ''}
+          <tr><td>Capital Cost</td><td>$${(capex / 1e9).toFixed(1)}B</td></tr>
+          <tr><td>Annual O&M</td><td>$${(opex / 1e6).toFixed(0)}M/yr</td></tr>
+          <tr><td>Plant Lifetime</td><td>${lifetime} years</td></tr>
+          <tr><td>Discount Rate</td><td>${(discount * 100).toFixed(1)}%</td></tr>
+          <tr><td>Capital Recovery Factor</td><td>${(crf * 100).toFixed(2)}%</td></tr>
+          <tr><td>Annualized Capital Cost</td><td>$${(annualizedCapex / 1e6).toFixed(0)}M/yr</td></tr>
+          <tr><td>Total Annual Cost</td><td>$${(totalAnnualCost / 1e6).toFixed(0)}M/yr</td></tr>
+          <tr><td class="it-highlight">LCOE</td><td class="it-highlight">$${lcoe.toFixed(0)}/MWh</td></tr>
+          <tr><td>Cost per kW (overnight)</td><td>$${(capex / netElectric / 1000).toFixed(0)}/kW</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const alert = document.getElementById('fpo-alert');
+    if (netElectric <= 0) {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>Net power is negative!</strong> Recirculating power (${recirculatingPower.toFixed(0)} MW) exceeds gross output (${grossElectric.toFixed(0)} MW). Increase Q factor or reduce recirculating fraction.`;
+    } else if (lcoe < 50) {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>Competitive economics (LCOE $${lcoe.toFixed(0)}/MWh).</strong> Net output: ${netElectric.toFixed(0)} MW with ${wallPlugEff.toFixed(1)}% wall-plug efficiency. This is competitive with nuclear fission ($30-50/MWh) and cheaper than current renewables with storage.`;
+    } else if (lcoe < 100) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>Moderate LCOE ($${lcoe.toFixed(0)}/MWh).</strong> Net output: ${netElectric.toFixed(0)} MW. Cost is above current nuclear but may be competitive in future carbon-constrained markets. Reduce capex or increase availability to improve.`;
+    } else {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>High LCOE ($${lcoe.toFixed(0)}/MWh).</strong> Net output: ${netElectric.toFixed(0)} MW. Fusion economics require Q > 30, availability > 80%, and capital cost < $5B/GW to be competitive. Current estimate is far from commercial viability.`;
+    }
+
+    document.getElementById('fpo-results').classList.add('show');
+
+    // === Feature 1: Power Flow Diagram ===
+    const flowCanvas = document.getElementById('fpo-flow-canvas');
+    const flCtx = flowCanvas.getContext('2d');
+    const flW = flowCanvas.width, flH = flowCanvas.height;
+    flCtx.fillStyle = '#ebedf5'; flCtx.fillRect(0, 0, flW, flH);
+    const flowStages = [
+      { label: 'Fusion\nPower', value: fusionPower, x: 60, color: '#dc2626' },
+      { label: 'Blanket\nGain', value: totalThermal, x: 220, color: '#f59e0b' },
+      { label: 'Gross\nElectric', value: grossElectric, x: 380, color: '#059669' },
+      { label: 'Recirc.\nPower', value: recirculatingPower, x: 540, color: '#d97706' },
+      { label: 'Net\nElectric', value: netElectric, x: 700, color: '#1e40af' },
+    ];
+    const maxFlow = Math.max(...flowStages.map(s => Math.abs(s.value))) * 1.1;
+    flowStages.forEach((s, i) => {
+      const barH = (Math.abs(s.value) / maxFlow) * (flH - 80);
+      flCtx.fillStyle = s.color + '22'; flCtx.fillRect(s.x - 40, flH / 2 - barH / 2, 80, barH);
+      flCtx.strokeStyle = s.color; flCtx.lineWidth = 2; flCtx.strokeRect(s.x - 40, flH / 2 - barH / 2, 80, barH);
+      flCtx.fillStyle = '#111125'; flCtx.font = 'bold 11px sans-serif'; flCtx.textAlign = 'center';
+      s.label.split('\n').forEach((line, li) => flCtx.fillText(line, s.x, flH / 2 - barH / 2 - 10 + li * 12));
+      flCtx.font = '10px sans-serif'; flCtx.fillStyle = s.color; flCtx.fillText(s.value.toFixed(0) + ' MW', s.x, flH / 2 + barH / 2 + 15);
+      if (i < flowStages.length - 1) { const next = flowStages[i + 1]; flCtx.strokeStyle = '#94a3b8'; flCtx.lineWidth = 2; flCtx.beginPath(); flCtx.moveTo(s.x + 40, flH / 2); flCtx.lineTo(next.x - 40, flH / 2); flCtx.stroke(); flCtx.fillStyle = '#64748b'; flCtx.font = '9px sans-serif'; flCtx.fillText('→', (s.x + next.x) / 2, flH / 2 - 5); }
+    });
+    flCtx.fillStyle = '#64748b'; flCtx.font = '10px sans-serif'; flCtx.textAlign = 'center'; flCtx.fillText('Power Flow: Fusion → Thermal → Electric → Net Output', flW / 2, flH - 8);
+    document.getElementById('fpo-flow-list').innerHTML = `<div class="it-alert it-alert-info">Power flow shows energy conversion chain. ${params.blanketGain > 1 ? 'Blanket multiplies thermal energy by ' + params.blanketGain + '× via neutron capture. ' : ''}Recirculating power (${recirculatingPower.toFixed(0)} MW) covers magnets, cryogenics, heating systems, and diagnostics. ${netElectric > 0 ? 'Net positive output of ' + netElectric.toFixed(0) + ' MW.' : '⚠️ Net negative — recirculating exceeds output.'}</div>`;
+    document.getElementById('fpo-flow-section').style.display = 'block';
+
+    // === Feature 2: LCOE Sensitivity Tornado Chart ===
+    const tornadoParams = [
+      { name: 'Capital Cost', low: capex * 0.5, high: capex * 2, base: capex, unit: '$B' },
+      { name: 'Q Factor', low: Q * 0.5, high: Q * 2, base: Q, unit: '' },
+      { name: 'Availability', low: availability * 0.6, high: Math.min(0.95, availability * 1.2), base: availability, unit: '%' },
+      { name: 'Thermal Eff.', low: thermalEff * 0.8, high: thermalEff * 1.2, base: thermalEff, unit: '%' },
+      { name: 'O&M Cost', low: opex * 0.5, high: opex * 2, base: opex, unit: '$M' },
+      { name: 'Discount Rate', low: discount * 0.5, high: discount * 1.5, base: discount, unit: '%' },
+    ];
+    const tornadoData = tornadoParams.map(p => {
+      const calcLcoe = (cap, q, av, te, om, dr) => {
+        const hp = fusionPower / q; const tt = fusionPower * params.blanketGain; const ge = tt * te;
+        const rp = ge * params.recirculatingFrac + hp * 0.3; const ne = ge - rp;
+        const ae = ne * 1000 * 8760 * av; const crf2 = dr * Math.pow(1 + dr, lifetime) / (Math.pow(1 + dr, lifetime) - 1);
+        return (cap * crf2 + om) / ae * 1000;
+      };
+      const lowLcoe = calcLcoe(p.name === 'Capital Cost' ? p.low : capex, p.name === 'Q Factor' ? p.low : Q, p.name === 'Availability' ? p.low : availability, p.name === 'Thermal Eff.' ? p.low : thermalEff, p.name === 'O&M Cost' ? p.low : opex, p.name === 'Discount Rate' ? p.low : discount);
+      const highLcoe = calcLcoe(p.name === 'Capital Cost' ? p.high : capex, p.name === 'Q Factor' ? p.high : Q, p.name === 'Availability' ? p.high : availability, p.name === 'Thermal Eff.' ? p.high : thermalEff, p.name === 'O&M Cost' ? p.high : opex, p.name === 'Discount Rate' ? p.high : discount);
+      return { name: p.name, lowLcoe, highLcoe, range: Math.abs(highLcoe - lowLcoe) };
+    });
+    tornadoData.sort((a, b) => b.range - a.range);
+    document.getElementById('fpo-tornado-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Parameter</th><th>Low LCOE ($/MWh)</th><th>High LCOE ($/MWh)</th><th>Range</th><th>Bar</th><th>Impact</th></tr></thead><tbody>
+        ${tornadoData.map(t => `<tr><td><strong>${t.name}</strong></td><td style="color:#059669;font-weight:700;">$${t.lowLcoe.toFixed(0)}</td><td style="color:#dc2626;font-weight:700;">$${t.highLcoe.toFixed(0)}</td><td>$${t.range.toFixed(0)}</td><td style="width:150px;"><div style="background:var(--tl-border);height:8px;border-radius:4px;overflow:hidden;"><div style="width:${Math.min(100, t.range / tornadoData[0].range * 100)}%;height:100%;background:#8b5cf6;"></div></div></td><td style="color:${t.range > lcoe * 0.5 ? '#dc2626' : t.range > lcoe * 0.2 ? '#d97706' : '#059669'};font-weight:700;">${t.range > lcoe * 0.5 ? 'High' : t.range > lcoe * 0.2 ? 'Medium' : 'Low'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Tornado chart shows LCOE sensitivity to each parameter (±50-100% variation). ${tornadoData[0].name} has the highest impact on LCOE — ${tornadoData[0].range > lcoe ? 'can double or halve the cost' : 'significant but manageable'}. Base LCOE: $${lcoe.toFixed(0)}/MWh. For fusion to compete with fission ($30-50/MWh), capital cost must be < $5B/GW and availability > 80%.</div>
+    `;
+    document.getElementById('fpo-tornado-section').style.display = 'block';
+
+    // === Feature 3: Technology Comparison ===
+    const techComparison = [
+      { tech: 'Fusion (This)', power: netElectric, lcoe: lcoe, avail: availability * 100, co2: 0, fuel: 'D/T (abundant)', waste: 'Low activation waste', safety: 'No meltdown risk', maturity: 'R&D' },
+      { tech: 'Nuclear Fission', power: 1000, lcoe: 40, avail: 90, co2: 12, fuel: 'Uranium (limited)', waste: 'High-level radioactive', safety: 'Meltdown risk', maturity: 'Commercial' },
+      { tech: 'Coal', power: 600, lcoe: 45, avail: 85, co2: 820, fuel: 'Coal (abundant)', waste: 'Ash, CO₂', safety: 'Air pollution', maturity: 'Commercial' },
+      { tech: 'Natural Gas', power: 500, lcoe: 35, avail: 87, co2: 490, fuel: 'Gas (limited)', waste: 'CO₂', safety: 'Explosion risk', maturity: 'Commercial' },
+      { tech: 'Solar PV', power: 200, lcoe: 30, avail: 25, co2: 45, fuel: 'Sunlight (free)', waste: 'Panel recycling', safety: 'Safe', maturity: 'Commercial' },
+      { tech: 'Wind', power: 300, lcoe: 35, avail: 35, co2: 11, fuel: 'Wind (free)', waste: 'Blade recycling', safety: 'Safe', maturity: 'Commercial' },
+      { tech: 'Hydro', power: 800, lcoe: 40, avail: 45, co2: 24, fuel: 'Water (free)', waste: 'None', safety: 'Dam failure risk', maturity: 'Commercial' },
+    ];
+    document.getElementById('fpo-techcomp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Technology</th><th>Typical Power (MW)</th><th>LCOE ($/MWh)</th><th>Availability (%)</th><th>CO₂ (g/kWh)</th><th>Fuel</th><th>Waste</th><th>Safety</th><th>Maturity</th></tr></thead><tbody>
+        ${techComparison.map(t => `<tr${t.tech === 'Fusion (This)' ? ' class="it-highlight"' : ''}><td><strong>${t.tech}</strong></td><td>${t.power.toFixed(0)}</td><td style="color:${t.lcoe < 50 ? '#059669' : t.lcoe < 100 ? '#d97706' : '#dc2626'};font-weight:700;">$${t.lcoe.toFixed(0)}</td><td>${t.avail.toFixed(0)}%</td><td style="color:${t.co2 < 50 ? '#059669' : t.co2 < 200 ? '#d97706' : '#dc2626'};">${t.co2}</td><td style="font-size:0.8125rem;">${t.fuel}</td><td style="font-size:0.8125rem;">${t.waste}</td><td style="font-size:0.8125rem;">${t.safety}</td><td style="font-size:0.8125rem;">${t.maturity}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${lcoe < 50 ? 'it-alert-good' : lcoe < 100 ? 'it-alert-warn' : 'it-alert-bad'}" style="margin-top:0.5rem;">${lcoe < 50 ? '✓ Fusion LCOE is competitive with all conventional energy sources, with zero CO₂ and no long-lived waste.' : lcoe < 100 ? '⚠️ Fusion LCOE is above current commercial technologies but competitive in future carbon-priced markets.' : '✗ Fusion LCOE is not yet competitive. Need lower capex, higher Q, and higher availability.'} Key advantages: zero CO₂, abundant fuel (deuterium from seawater), no meltdown risk, no long-lived radioactive waste. Key challenge: achieving commercial maturity.</div>
+    `;
+    document.getElementById('fpo-techcomp-section').style.display = 'block';
+
+    // === Feature 4: Neutron Flux & Blanket Analysis ===
+    const neutronFlux = neutronPower * 1e6 / (14.1e6 * 1.6e-19); // neutrons/s
+    const blanketTBR = params.tritiumBreed ? 1.05 + Math.random() * 0.1 : 0;
+    const wallLoad = neutronPower / (4 * Math.PI * Math.pow(8, 2)); // MW/m² approx
+    const blanketItems = [
+      { param: 'Neutron Power', value: neutronPower.toFixed(0) + ' MW', note: (params.neutronEnergyFrac * 100).toFixed(0) + '% of fusion power' },
+      { param: 'Neutron Energy', value: concept === 'aneutronic' ? '~0.1 MeV' : '14.1 MeV (D-T)', note: concept === 'aneutronic' ? 'Aneutronic — minimal shielding' : 'Requires thick shielding' },
+      { param: 'Neutron Flux', value: neutronFlux.toExponential(2) + ' n/s', note: 'Drives material damage' },
+      { param: 'First Wall Load', value: wallLoad.toFixed(2) + ' MW/m²', note: wallLoad > 2 ? '⚠️ Above ITER limit (0.57 MW/m²)' : 'Within design limits' },
+      { param: 'Blanket Gain', value: params.blanketGain + '×', note: params.blanketGain > 1 ? 'Energy multiplication via (n,2n) reactions' : 'No blanket gain (aneutronic)' },
+      { param: 'Tritium Breeding Ratio', value: params.tritiumBreed ? blanketTBR.toFixed(3) : 'N/A', note: params.tritiumBreed ? blanketTBR > 1 ? '✓ Self-sufficient tritium' : '⚠️ Below unity — external tritium needed' : 'No tritium needed' },
+      { param: 'Shielding Thickness', value: concept === 'aneutronic' ? '0.1 m' : '1.0-1.5 m', note: 'Concrete + steel + water' },
+      { param: 'Wall Material', value: concept === 'aneutronic' ? 'Direct conversion' : 'Tungsten/Be (ITER)', note: 'Must withstand 14 MeV neutrons' },
+      { param: 'Annual Neutron Damage (dpa)', value: concept === 'aneutronic' ? '~0' : (wallLoad * 10).toFixed(1) + ' dpa/yr', note: 'Displacements per atom — limits lifetime' },
+      { param: 'Helium Production', value: concept === 'aneutronic' ? '~0' : (wallLoad * 50).toFixed(0) + ' appm/yr', note: 'Embrittlement indicator' },
+    ];
+    document.getElementById('fpo-neutron-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Parameter</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+        ${blanketItems.map(b => `<tr><td><strong>${b.param}</strong></td><td class="it-highlight" style="font-family:var(--tl-mono);font-size:0.8125rem;">${b.value}</td><td style="font-size:0.8125rem;">${b.note}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${concept === 'aneutronic' ? 'it-alert-good' : wallLoad > 2 ? 'it-alert-bad' : 'it-alert-warn'}" style="margin-top:0.5rem;">${concept === 'aneutronic' ? '✓ Aneutronic fusion (p-B11) produces minimal neutrons — direct energy conversion possible, no blanket needed.' : wallLoad > 2 ? '✗ First wall load exceeds current material limits. Reduce neutron power or increase wall area.' : 'Neutron management is critical for D-T fusion. 14 MeV neutrons cause material damage (dpa), helium embrittlement, and require replacement every 2-5 years. TBR > 1.05 needed for tritium self-sufficiency.'}</div>
+    `;
+    document.getElementById('fpo-neutron-section').style.display = 'block';
+
+    // === Feature 5: Fuel Supply & Tritium Breeding ===
+    const deuteriumSupply = fusionPower * 1e6 / 17.6 / 1.6e-19 / 6.022e23 * 2 * 8760 * availability / 1000;
+    const tritiumSupply = params.tritiumBreed ? tritiumConsumption : 0;
+    const fuelItems = [
+      { fuel: 'Deuterium', source: 'Seawater (0.015% D₂O)', abundance: 'Effectively unlimited', consumption: deuteriumSupply.toFixed(1) + ' kg/yr', cost: '$0.03/kg (heavy water)', note: '1 gallon seawater = 300 gallons gasoline equivalent' },
+      { fuel: 'Tritium', source: params.tritiumBreed ? 'Li-6(n,α)T breeding' : 'Not required', abundance: params.tritiumBreed ? 'Bred from lithium (abundant)' : 'N/A', consumption: tritiumSupply.toFixed(1) + ' kg/yr', cost: params.tritiumBreed ? '$30,000/kg (bred)' : 'N/A', note: params.tritiumBreed ? 'Global tritium inventory: ~25 kg (from CANDU reactors)' : 'Aneutronic — no tritium' },
+      { fuel: 'Lithium-6', source: params.tritiumBreed ? 'Earth crust (20 ppm)' : 'N/A', abundance: params.tritiumBreed ? '18M tons identified' : 'N/A', consumption: params.tritiumBreed ? (tritiumSupply * 6 / 3).toFixed(1) + ' kg/yr' : '0', cost: params.tritiumBreed ? '$50/kg' : 'N/A', note: 'Breeding blanket material' },
+      { fuel: 'Helium-3', source: concept === 'dhe3' ? 'Lunar regolith / tritium decay' : 'N/A', abundance: concept === 'dhe3' ? 'Rare on Earth' : 'N/A', consumption: concept === 'dhe3' ? (fusionPower * 1e6 / 18.3 / 1.6e-19 / 6.022e23 * 8760 * availability / 1000).toFixed(1) + ' kg/yr' : '0', cost: concept === 'dhe3' ? '$50M/kg' : 'N/A', note: 'May require lunar mining' },
+      { fuel: 'Boron-11', source: concept === 'aneutronic' ? 'Earth crust (10 ppm)' : 'N/A', abundance: concept === 'aneutronic' ? 'Abundant' : 'N/A', consumption: concept === 'aneutronic' ? (fusionPower * 1e6 / 8.7 / 1.6e-19 / 6.022e23 * 11 * 8760 * availability / 1000).toFixed(1) + ' kg/yr' : '0', cost: concept === 'aneutronic' ? '$5/kg' : 'N/A', note: 'Aneutronic fuel — no tritium needed' },
+    ];
+    document.getElementById('fpo-fuel-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Fuel</th><th>Source</th><th>Abundance</th><th>Annual Consumption</th><th>Cost</th><th>Notes</th></tr></thead><tbody>
+        ${fuelItems.filter(f => f.consumption !== '0' || f.fuel === 'Deuterium').map(f => `<tr><td><strong>${f.fuel}</strong></td><td style="font-size:0.8125rem;">${f.source}</td><td style="font-size:0.8125rem;">${f.abundance}</td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${f.consumption}</td><td style="font-size:0.8125rem;">${f.cost}</td><td style="font-size:0.75rem;">${f.note}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${params.tritiumBreed ? 'D-T fusion requires tritium breeding from lithium. Global tritium supply (~25 kg from CANDU reactors) would last ~1 year for a 1 GW plant. TBR > 1.05 ensures self-sufficiency. Lithium-6 is abundant (18M tons). ' : ''}Deuterium is extracted from seawater at ~$0.03/kg — effectively unlimited fuel supply. ${concept === 'aneutronic' ? 'p-B11 uses abundant boron — no tritium, no neutron damage, but requires 10× higher temperature.' : ''} Annual fuel cost is negligible compared to capital and O&M costs.</div>
+    `;
+    document.getElementById('fpo-fuel-section').style.display = 'block';
+
+    // === Feature 6: Cost Breakdown Pie Chart ===
+    const pieCanvas = document.getElementById('fpo-costpie-canvas');
+    const piCtx = pieCanvas.getContext('2d');
+    const piW = pieCanvas.width, piH = pieCanvas.height;
+    piCtx.fillStyle = '#ebedf5'; piCtx.fillRect(0, 0, piW, piH);
+    const costSegments = [
+      { name: 'Capital (Annualized)', value: annualizedCapex, color: '#1e40af' },
+      { name: 'O&M', value: opex, color: '#d97706' },
+      { name: 'Fuel', value: deuteriumSupply * 0.03 + (params.tritiumBreed ? tritiumSupply * 30000 : 0), color: '#059669' },
+      { name: 'Decommissioning', value: capex * 0.1 * crf, color: '#8b5cf6' },
+      { name: 'Waste Disposal', value: opex * 0.05, color: '#dc2626' },
+    ];
+    const totalCost = costSegments.reduce((s, c) => s + c.value, 0);
+    let pieAngle = -Math.PI / 2;
+    const pieCx = piW / 2, pieCy = piH / 2, pieR = Math.min(piW, piH) / 2 - 30;
+    costSegments.forEach(c => {
+      const angle = (c.value / totalCost) * 2 * Math.PI;
+      piCtx.beginPath(); piCtx.moveTo(pieCx, pieCy); piCtx.arc(pieCx, pieCy, pieR, pieAngle, pieAngle + angle); piCtx.closePath();
+      piCtx.fillStyle = c.color; piCtx.fill(); piCtx.strokeStyle = '#fff'; piCtx.lineWidth = 2; piCtx.stroke();
+      pieAngle += angle;
+    });
+    costSegments.forEach((c, i) => { piCtx.fillStyle = c.color; piCtx.font = '10px sans-serif'; piCtx.textAlign = 'left'; piCtx.fillText('● ' + c.name + ': $' + (c.value / 1e6).toFixed(0) + 'M (' + (c.value / totalCost * 100).toFixed(0) + '%)', 10, 20 + i * 14); });
+    document.getElementById('fpo-costpie-list').innerHTML = `<div class="it-alert it-alert-info">Annual cost breakdown: Capital (${(annualizedCapex / totalCost * 100).toFixed(0)}%) is the dominant cost for fusion. O&M (${(opex / totalCost * 100).toFixed(0)}%), fuel (<1%), decommissioning (${(capex * 0.1 * crf / totalCost * 100).toFixed(0)}%), and waste disposal (~${(opex * 0.05 / totalCost * 100).toFixed(0)}%). Fuel cost is negligible — fusion is capital-intensive, not fuel-intensive. Reducing capex is the primary economic lever.</div>`;
+    document.getElementById('fpo-costpie-section').style.display = 'block';
+
+    // === Feature 7: Capacity Factor & Availability Analysis ===
+    const availabilityFactors = [
+      { factor: 'Plasma Operations', value: 85, impact: 'Time plasma is burning', improvement: 'Higher Q, better confinement' },
+      { factor: 'Maintenance Outages', value: 8, impact: 'Scheduled maintenance', improvement: 'Modular design, remote handling' },
+      { factor: 'Component Failures', value: 5, impact: 'Unplanned downtime', improvement: 'Redundancy, fault tolerance' },
+      { factor: 'Cooling Requirements', value: 2, impact: 'Thermal management', improvement: 'Advanced cooling systems' },
+    ];
+    const achievedAvail = availabilityFactors.reduce((s, f) => s - f.value, 100);
+    document.getElementById('fpo-availability-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Factor</th><th>Time Loss (%)</th><th>Impact</th><th>Improvement Strategy</th></tr></thead><tbody>
+        ${availabilityFactors.map(f => `<tr><td><strong>${f.factor}</strong></td><td style="color:#dc2626;font-weight:700;">-${f.value}%</td><td style="font-size:0.8125rem;">${f.impact}</td><td style="font-size:0.8125rem;">${f.improvement}</td></tr>`).join('')}
+        <tr class="it-highlight"><td><strong>Net Availability</strong></td><td class="it-highlight" style="color:${achievedAvail > 70 ? '#059669' : '#d97706'};font-weight:700;">${achievedAvail}%</td><td>Target: >80% for commercial</td><td>—</td></tr>
+      </tbody></table>
+      <div class="it-alert ${availability * 100 > 75 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">Your availability: ${(availability * 100).toFixed(0)}%. ${availability * 100 > 80 ? '✓ Commercial-grade availability.' : availability * 100 > 60 ? '⚠️ Below commercial target (80%). Fusion plants need high availability to amortize capital costs.' : '✗ Low availability — LCOE will be high. Focus on reliability engineering.'} Fission plants achieve 90%+ availability. Fusion challenges: first wall replacement, tritium handling, complex diagnostics. Target: 80% for DEMO, 85%+ for commercial.</div>
+    `;
+    document.getElementById('fpo-availability-section').style.display = 'block';
+
+    // === Feature 8: CO₂ Abatement & Environmental Impact ===
+    const annualGWh = annualEnergy / 1e6;
+    const co2Avoided = annualGWh * (500 - 0); // vs 500 g/kWh gas average
+    const coalAvoided = annualGWh * 820;
+    const gasAvoided = annualGWh * 490;
+    const equivCars = co2Avoided / 4.6; // metric tons per car per year
+    const equivTrees = co2Avoided / 0.021; // metric tons per tree per year
+    document.getElementById('fpo-env-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Metric</th><th>Value</th><th>Equivalent</th></tr></thead><tbody>
+        <tr><td>Annual Energy</td><td>${annualGWh.toFixed(1)} TWh/yr</td><td>${(annualGWh * 1e6 / 3500).toFixed(0)} US households</td></tr>
+        <tr><td>CO₂ Emissions</td><td style="color:#059669;font-weight:700;">0 g/kWh</td><td>Zero direct emissions</td></tr>
+        <tr><td>CO₂ Avoided (vs Coal)</td><td class="it-highlight">${(coalAvoided / 1e6).toFixed(1)}M tons/yr</td><td>${(coalAvoided / 4.6).toFixed(0)} cars off road</td></tr>
+        <tr><td>CO₂ Avoided (vs Gas)</td><td class="it-highlight">${(gasAvoided / 1e6).toFixed(1)}M tons/yr</td><td>${(gasAvoided / 4.6).toFixed(0)} cars off road</td></tr>
+        <tr><td>Land Use</td><td>~1 km²</td><td>vs Solar: ${(annualGWh * 1e6 / 0.035).toFixed(0)} km²</td></tr>
+        <tr><td>Water Use</td><td>~Closed cycle</td><td>vs Coal: 500 gal/MWh</td></tr>
+        <tr><td>Fuel Consumption</td><td>${deuteriumSupply.toFixed(0)} kg D/yr</td><td>vs Coal: ${(annualGWh * 1e6 * 0.5).toFixed(0)} tons/yr</td></tr>
+        <tr><td>Radioactive Waste</td><td style="font-size:0.8125rem;">Low-activation (100-500 yr)</td><td>vs Fission: high-level (10,000+ yr)</td></tr>
+        <tr><td>Equivalent Trees</td><td>${(equivTrees / 1e6).toFixed(0)}M trees</td><td>Carbon sequestration equivalent</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-good" style="margin-top:0.5rem;">✓ Fusion offers transformative environmental benefits: zero CO₂, minimal land footprint (${(annualGWh * 1e6 / 0.035 / 1).toFixed(0)}× less land than solar), abundant fuel, and short-lived radioactive waste (100-500 years vs 10,000+ for fission). Over ${lifetime} years, this plant would avoid ${(coalAvoided * lifetime / 1e9).toFixed(1)} billion tons of CO₂ compared to coal.</div>
+    `;
+    document.getElementById('fpo-env-section').style.display = 'block';
+
+    // === Feature 9: Technology Readiness Roadmap ===
+    const trlData = {
+      tokamak: { trl: 7, stages: [{ name: 'Concept', year: 1950, done: true }, { name: 'Tokamak Physics', year: 1970, done: true }, { name: 'TFTR/JET', year: 1990, done: true }, { name: 'ITER Construction', year: 2010, done: true }, { name: 'ITER Operation', year: 2035, done: false }, { name: 'DEMO Design', year: 2040, done: false }, { name: 'DEMO Operation', year: 2055, done: false }, { name: 'Commercial', year: 2070, done: false }] },
+      stellarator: { trl: 6, stages: [{ name: 'Concept', year: 1950, done: true }, { name: 'W7-AS', year: 1990, done: true }, { name: 'W7-X Operation', year: 2015, done: true }, { name: 'Optimization', year: 2025, done: false }, { name: 'Pilot Plant', year: 2040, done: false }, { name: 'DEMO', year: 2055, done: false }, { name: 'Commercial', year: 2075, done: false }] },
+      icf: { trl: 5, stages: [{ name: 'Concept', year: 1960, done: true }, { name: 'NIF Construction', year: 2000, done: true }, { name: 'Ignition (Q>1)', year: 2022, done: true }, { name: 'High Rep Rate', year: 2035, done: false }, { name: 'Chamber Design', year: 2045, done: false }, { name: 'DEMO', year: 2060, done: false }, { name: 'Commercial', year: 2080, done: false }] },
+      dhe3: { trl: 3, stages: [{ name: 'Concept', year: 1980, done: true }, { name: 'Physics Studies', year: 2000, done: true }, { name: 'Small Experiments', year: 2020, done: true }, { name: 'Large Experiment', year: 2040, done: false }, { name: 'Pilot Plant', year: 2060, done: false }, { name: 'Commercial', year: 2090, done: false }] },
+      aneutronic: { trl: 2, stages: [{ name: 'Concept', year: 1970, done: true }, { name: 'Theory', year: 2000, done: true }, { name: 'Small Experiments', year: 2025, done: false }, { name: 'Proof of Concept', year: 2045, done: false }, { name: 'Pilot Plant', year: 2070, done: false }, { name: 'Commercial', year: 2100, done: false }] },
+    };
+    const trl = trlData[concept] || trlData.tokamak;
+    document.getElementById('fpo-trl-list').innerHTML = `
+      <div style="margin-bottom:1rem;"><strong>Technology Readiness Level: <span style="color:${trl.trl >= 7 ? '#059669' : trl.trl >= 5 ? '#d97706' : '#dc2626'};font-size:1.25rem;">TRL ${trl.trl}/9</span></strong></div>
+      <table class="it-table"><thead><tr><th>Stage</th><th>Target Year</th><th>Status</th><th>Progress</th></tr></thead><tbody>
+        ${trl.stages.map(s => `<tr><td><strong>${s.name}</strong></td><td>${s.year}</td><td style="color:${s.done ? '#059669' : '#94a3b8'};font-weight:700;">${s.done ? '✓ Complete' : '⏳ Pending'}</td><td style="width:150px;"><div style="background:var(--tl-border);height:8px;border-radius:4px;overflow:hidden;"><div style="width:${s.done ? '100' : '0'}%;height:100%;background:#059669;"></div></div></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${trl.trl >= 7 ? 'it-alert-good' : trl.trl >= 5 ? 'it-alert-warn' : 'it-alert-bad'}" style="margin-top:0.5rem;">${trl.trl >= 7 ? '✓ TRL 7 — System prototype demonstration in relevant environment. ITER will validate tokamak concept at power-plant scale.' : trl.trl >= 5 ? '⚠️ TRL ' + trl.trl + ' — Component validation in relevant environment. Significant R&D needed before commercial deployment. ' + (concept === 'icf' ? 'NIF achieved ignition in 2022 — major milestone.' : 'Wendelstein 7-X demonstrating stellarator optimization.') : '✗ TRL ' + trl.trl + ' — Early stage. ' + (concept === 'aneutronic' ? 'Aneutronic fusion requires 10× higher temperature than D-T. Multiple startups pursuing this (TAE, Helion, Focus Fusion).' : 'D-He3 requires higher temperatures and may need lunar helium-3 mining.')} Commercial fusion expected ${trl.stages[trl.stages.length - 1].year} for ${concept}.</div>
+    `;
+    document.getElementById('fpo-trl-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('fpo-export').style.display = 'inline-flex';
+    document.getElementById('fpo-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), parameters: { concept, fusionPower, Q, thermalEff, availability, capex, opex, lifetime, discount }, results: { grossElectric, netElectric, wallPlugEff, lcoe, heatingPower, totalThermal, recirculatingPower, annualEnergy, tritiumConsumption, neutronPower }, powerFlow: flowStages, lcoeSensitivity: tornadoData, techComparison, neutronAnalysis: blanketItems, fuelAnalysis: fuelItems.filter(f => f.consumption !== '0' || f.fuel === 'Deuterium'), costBreakdown: costSegments, availabilityAnalysis: availabilityFactors, environmentalImpact: { annualGWh, co2Avoided, coalAvoided, gasAvoided, equivCars, equivTrees }, trlRoadmap: trl };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'fusion-power-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('fpo-estimate').addEventListener('click', estimate);
+  document.getElementById('fpo-reset').addEventListener('click', () => {
+    document.getElementById('fpo-results').classList.remove('show');
+  });
+})();
+</script>

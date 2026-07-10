@@ -1,0 +1,428 @@
+---
+/**
+ * Cloud Security Config Checker — Interactive tool
+ * Audit AWS, Azure, and GCP configurations against CIS benchmarks
+ */
+import './interactive-tools.css';
+
+const checks = [
+  { id: 'aws-iam-mfa', cloud: 'AWS', category: 'IAM', check: 'MFA enabled for root account', severity: 'Critical', cis: '1.1' },
+  { id: 'aws-iam-keys', cloud: 'AWS', category: 'IAM', check: 'No active root access keys', severity: 'Critical', cis: '1.2' },
+  { id: 'aws-iam-password', cloud: 'AWS', category: 'IAM', check: 'Strong password policy enforced', severity: 'High', cis: '1.5' },
+  { id: 'aws-s3-public', cloud: 'AWS', category: 'Storage', check: 'No publicly accessible S3 buckets', severity: 'Critical', cis: '2.1' },
+  { id: 'aws-s3-encryption', cloud: 'AWS', category: 'Storage', check: 'S3 bucket encryption at rest enabled', severity: 'High', cis: '2.3' },
+  { id: 'aws-sg-open', cloud: 'AWS', category: 'Network', check: 'No security groups open to 0.0.0.0/0 on SSH/RDP', severity: 'Critical', cis: '4.1' },
+  { id: 'aws-cloudtrail', cloud: 'AWS', category: 'Logging', check: 'CloudTrail enabled in all regions', severity: 'High', cis: '3.1' },
+  { id: 'aws-config', cloud: 'AWS', category: 'Logging', check: 'AWS Config enabled in all regions', severity: 'Medium', cis: '3.5' },
+  { id: 'aws-encryption', cloud: 'AWS', category: 'Encryption', check: 'EBS volumes encrypted', severity: 'High', cis: '2.4' },
+  { id: 'aws-rds-public', cloud: 'AWS', category: 'Database', check: 'RDS instances not publicly accessible', severity: 'Critical', cis: '2.5' },
+  { id: 'azure-mfa', cloud: 'Azure', category: 'IAM', check: 'MFA enabled for all privileged users', severity: 'Critical', cis: '1.1' },
+  { id: 'azure-storage-encryption', cloud: 'Azure', category: 'Storage', check: 'Storage accounts encrypted at rest', severity: 'High', cis: '3.1' },
+  { id: 'azure-nsg-open', cloud: 'Azure', category: 'Network', check: 'No NSG rules open to Internet on SSH/RDP', severity: 'Critical', cis: '6.1' },
+  { id: 'azure-monitor', cloud: 'Azure', category: 'Logging', check: 'Activity log diagnostics enabled', severity: 'High', cis: '5.1' },
+  { id: 'azure-keyvault', cloud: 'Azure', category: 'Encryption', check: 'Key Vault purge protection enabled', severity: 'High', cis: '8.4' },
+  { id: 'azure-rbac', cloud: 'Azure', category: 'IAM', check: 'No custom subscription owner roles', severity: 'Medium', cis: '1.22' },
+  { id: 'gcp-iam-sa', cloud: 'GCP', category: 'IAM', check: 'No default service account in use', severity: 'High', cis: '1.1' },
+  { id: 'gcp-iam-keys', cloud: 'GCP', category: 'IAM', check: 'Service account keys rotated < 90 days', severity: 'Medium', cis: '1.3' },
+  { id: 'gcp-storage-public', cloud: 'GCP', category: 'Storage', check: 'No publicly accessible Cloud Storage buckets', severity: 'Critical', cis: '5.1' },
+  { id: 'gcp-firewall', cloud: 'GCP', category: 'Network', check: 'No firewall rules open to 0.0.0.0/0 on SSH/RDP', severity: 'Critical', cis: '4.1' },
+  { id: 'gcp-audit', cloud: 'GCP', category: 'Logging', check: 'Audit logging enabled for all services', severity: 'High', cis: '2.1' },
+  { id: 'gcp-encryption', cloud: 'GCP', category: 'Encryption', check: 'CMEK enabled for compute disks', severity: 'Medium', cis: '7.1' },
+];
+---
+
+<div class="it-container" id="cloud-config-checker">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">☁️</div>
+      <div>
+        <h2>Cloud Security Config Checker</h2>
+        <p>Audit your cloud configuration against CIS benchmarks — AWS, Azure, and GCP</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Cloud Provider</label>
+        <select class="it-select" id="ccc-provider">
+          <option value="all">All Providers</option>
+          <option value="AWS">AWS</option>
+          <option value="Azure">Azure</option>
+          <option value="GCP">GCP</option>
+        </select>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Check Your Configuration Status</label>
+        <div id="ccc-checks-list" style="display:grid;gap:0.625rem;"></div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="ccc-audit">Generate Audit Report</button>
+        <button class="it-btn it-btn-secondary" id="ccc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="ccc-export" style="display:none;">📄 Export Report</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="ccc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Security Audit Report</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Compliance Score</div>
+            <div class="it-stat-value" id="ccc-score">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Passed</div>
+            <div class="it-stat-value" id="ccc-passed" style="color:#059669;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Failed</div>
+            <div class="it-stat-value" id="ccc-failed" style="color:#dc2626;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Critical Issues</div>
+            <div class="it-stat-value" id="ccc-critical" style="color:#dc2626;">0</div>
+          </div>
+        </div>
+
+        <div class="it-progress" style="margin-bottom: 1.5rem;">
+          <div class="it-progress-fill" id="ccc-progress" style="width:0%;background:#059669;"></div>
+        </div>
+
+        <div id="ccc-report"></div>
+      </div>
+
+      <!-- Feature 1: Remediation Commands -->
+      <div class="it-results-card" id="ccc-remediation-section" style="display:none;">
+        <div class="it-results-title">🛠️ Remediation Commands</div>
+        <div id="ccc-remediation-list"></div>
+      </div>
+
+      <!-- Feature 2: Multi-cloud Comparison -->
+      <div class="it-results-card" id="ccc-comparison-section" style="display:none;">
+        <div class="it-results-title">📊 Multi-Cloud Comparison</div>
+        <table class="it-table" id="ccc-comparison-table">
+          <thead><tr><th>Category</th><th>AWS</th><th>Azure</th><th>GCP</th></tr></thead>
+          <tbody id="ccc-comparison-body"></tbody>
+        </table>
+      </div>
+
+      <!-- Feature 3: Risk Heatmap -->
+      <div class="it-results-card" id="ccc-heatmap-section" style="display:none;">
+        <div class="it-results-title">🔥 Risk Heatmap by Category</div>
+        <div id="ccc-heatmap-grid"></div>
+      </div>
+
+      <!-- Feature 4: Cost of Non-Compliance -->
+      <div class="it-results-card" id="ccc-cost-section" style="display:none;">
+        <div class="it-results-title">💰 Cost of Non-Compliance Estimator</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Est. Breach Cost</div><div class="it-stat-value" id="ccc-breach-cost" style="font-size:1rem;">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Fines Exposure</div><div class="it-stat-value" id="ccc-fines" style="font-size:1rem;">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Remediation Hours</div><div class="it-stat-value" id="ccc-remed-hours">0h</div></div>
+          <div class="it-stat"><div class="it-stat-label">Total Risk</div><div class="it-stat-value" id="ccc-total-risk" style="font-size:1rem;">$0</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="ccc-cost-insight"></div>
+      </div>
+
+      <!-- Feature 5: IaC Template Generator -->
+      <div class="it-results-card" id="ccc-iac-section" style="display:none;">
+        <div class="it-results-title">🏗️ Terraform Remediation Snippets</div>
+        <div id="ccc-iac-list"></div>
+      </div>
+
+      <!-- Feature 6: Compliance Framework Mapper -->
+      <div class="it-results-card" id="ccc-framework-section" style="display:none;">
+        <div class="it-results-title">📋 Compliance Framework Impact</div>
+        <div id="ccc-framework-list"></div>
+      </div>
+
+      <!-- Feature 8: Attack Path Analysis -->
+      <div class="it-results-card" id="ccc-attack-section" style="display:none;">
+        <div class="it-results-title">🎯 Attack Path Analysis</div>
+        <div id="ccc-attack-list"></div>
+      </div>
+
+      <!-- Feature 9: Remediation Roadmap -->
+      <div class="it-results-card" id="ccc-roadmap-section" style="display:none;">
+        <div class="it-results-title">🗺️ Priority Remediation Roadmap</div>
+        <div id="ccc-roadmap-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const checks = [
+    { id: 'aws-iam-mfa', cloud: 'AWS', category: 'IAM', check: 'MFA enabled for root account', severity: 'Critical', cis: '1.1' },
+    { id: 'aws-iam-keys', cloud: 'AWS', category: 'IAM', check: 'No active root access keys', severity: 'Critical', cis: '1.2' },
+    { id: 'aws-iam-password', cloud: 'AWS', category: 'IAM', check: 'Strong password policy enforced', severity: 'High', cis: '1.5' },
+    { id: 'aws-s3-public', cloud: 'AWS', category: 'Storage', check: 'No publicly accessible S3 buckets', severity: 'Critical', cis: '2.1' },
+    { id: 'aws-s3-encryption', cloud: 'AWS', category: 'Storage', check: 'S3 bucket encryption at rest enabled', severity: 'High', cis: '2.3' },
+    { id: 'aws-sg-open', cloud: 'AWS', category: 'Network', check: 'No security groups open to 0.0.0.0/0 on SSH/RDP', severity: 'Critical', cis: '4.1' },
+    { id: 'aws-cloudtrail', cloud: 'AWS', category: 'Logging', check: 'CloudTrail enabled in all regions', severity: 'High', cis: '3.1' },
+    { id: 'aws-config', cloud: 'AWS', category: 'Logging', check: 'AWS Config enabled in all regions', severity: 'Medium', cis: '3.5' },
+    { id: 'aws-encryption', cloud: 'AWS', category: 'Encryption', check: 'EBS volumes encrypted', severity: 'High', cis: '2.4' },
+    { id: 'aws-rds-public', cloud: 'AWS', category: 'Database', check: 'RDS instances not publicly accessible', severity: 'Critical', cis: '2.5' },
+    { id: 'azure-mfa', cloud: 'Azure', category: 'IAM', check: 'MFA enabled for all privileged users', severity: 'Critical', cis: '1.1' },
+    { id: 'azure-storage-encryption', cloud: 'Azure', category: 'Storage', check: 'Storage accounts encrypted at rest', severity: 'High', cis: '3.1' },
+    { id: 'azure-nsg-open', cloud: 'Azure', category: 'Network', check: 'No NSG rules open to Internet on SSH/RDP', severity: 'Critical', cis: '6.1' },
+    { id: 'azure-monitor', cloud: 'Azure', category: 'Logging', check: 'Activity log diagnostics enabled', severity: 'High', cis: '5.1' },
+    { id: 'azure-keyvault', cloud: 'Azure', category: 'Encryption', check: 'Key Vault purge protection enabled', severity: 'High', cis: '8.4' },
+    { id: 'azure-rbac', cloud: 'Azure', category: 'IAM', check: 'No custom subscription owner roles', severity: 'Medium', cis: '1.22' },
+    { id: 'gcp-iam-sa', cloud: 'GCP', category: 'IAM', check: 'No default service account in use', severity: 'High', cis: '1.1' },
+    { id: 'gcp-iam-keys', cloud: 'GCP', category: 'IAM', check: 'Service account keys rotated < 90 days', severity: 'Medium', cis: '1.3' },
+    { id: 'gcp-storage-public', cloud: 'GCP', category: 'Storage', check: 'No publicly accessible Cloud Storage buckets', severity: 'Critical', cis: '5.1' },
+    { id: 'gcp-firewall', cloud: 'GCP', category: 'Network', check: 'No firewall rules open to 0.0.0.0/0 on SSH/RDP', severity: 'Critical', cis: '4.1' },
+    { id: 'gcp-audit', cloud: 'GCP', category: 'Logging', check: 'Audit logging enabled for all services', severity: 'High', cis: '2.1' },
+    { id: 'gcp-encryption', cloud: 'GCP', category: 'Encryption', check: 'CMEK enabled for compute disks', severity: 'Medium', cis: '7.1' },
+  ];
+
+  function renderChecks() {
+    const provider = document.getElementById('ccc-provider').value;
+    const filtered = provider === 'all' ? checks : checks.filter(c => c.cloud === provider);
+    const container = document.getElementById('ccc-checks-list');
+    container.innerHTML = filtered.map(c => {
+      const sevColor = c.severity === 'Critical' ? '#dc2626' : c.severity === 'High' ? '#d97706' : '#65a30d';
+      return `<div style="display:flex;align-items:center;gap:0.75rem;padding:0.625rem 0.875rem;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);font-size:0.8125rem;">
+        <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;flex:1;">
+          <input type="checkbox" class="ccc-check" data-id="${c.id}" data-severity="${c.severity}" data-cloud="${c.cloud}" data-category="${c.category}" data-cis="${c.cis}" data-check="${c.check}" checked style="width:18px;height:18px;cursor:pointer;" />
+          <span class="it-badge it-badge-neutral" style="background:${sevColor}22;color:${sevColor};">${c.severity}</span>
+          <span style="color:var(--tl-text-muted);font-size:0.6875rem;">${c.cloud} CIS ${c.cis}</span>
+          <span style="color:var(--tl-text);">${c.check}</span>
+        </label>
+        <select class="ccc-status it-select" data-id="${c.id}" style="width:auto;min-width:110px;font-size:0.75rem;">
+          <option value="pass">✓ Compliant</option>
+          <option value="fail">✗ Non-Compliant</option>
+          <option value="na">N/A</option>
+        </select>
+      </div>`;
+    }).join('');
+  }
+
+  renderChecks();
+  document.getElementById('ccc-provider').addEventListener('change', renderChecks);
+
+  function audit() {
+    const items = [...document.querySelectorAll('.ccc-status')];
+    let passed = 0, failed = 0, critical = 0, total = 0;
+
+    const reportItems = [];
+    items.forEach(sel => {
+      const id = sel.getAttribute('data-id');
+      const checkbox = document.querySelector(`.ccc-check[data-id="${id}"]`);
+      if (!checkbox.checked) return;
+      total++;
+      const status = sel.value;
+      const severity = sel.getAttribute('data-severity') || checkbox.getAttribute('data-severity');
+      const cloud = checkbox.getAttribute('data-cloud');
+      const category = checkbox.getAttribute('data-category');
+      const cis = checkbox.getAttribute('data-cis');
+      const check = checkbox.getAttribute('data-check');
+
+      if (status === 'pass') passed++;
+      else if (status === 'fail') {
+        failed++;
+        if (severity === 'Critical') critical++;
+        reportItems.push({ cloud, category, check, severity, cis, status });
+      }
+    });
+
+    const score = total > 0 ? Math.round((passed / total) * 100) : 0;
+    document.getElementById('ccc-score').innerHTML = `${score}<span class="it-stat-unit">%</span>`;
+    document.getElementById('ccc-passed').textContent = passed;
+    document.getElementById('ccc-failed').textContent = failed;
+    document.getElementById('ccc-critical').textContent = critical;
+    document.getElementById('ccc-progress').style.width = score + '%';
+    document.getElementById('ccc-progress').style.background = score >= 80 ? '#059669' : score >= 50 ? '#d97706' : '#dc2626';
+
+    const report = document.getElementById('ccc-report');
+    if (failed === 0) {
+      report.innerHTML = '<div class="it-alert it-alert-good">✓ All checked configurations are compliant. Your cloud environment meets CIS benchmarks.</div>';
+    } else {
+      report.innerHTML = '<div class="it-results-title">Failed Checks — Remediation Required</div>' + reportItems.map(r => {
+        const sevColor = r.severity === 'Critical' ? '#dc2626' : r.severity === 'High' ? '#d97706' : '#65a30d';
+        return `<div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:0.875rem 1rem;margin-bottom:0.625rem;border-left:4px solid ${sevColor};">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <span class="it-badge" style="background:${sevColor}22;color:${sevColor};">${r.severity}</span>
+              <span style="font-size:0.75rem;color:var(--tl-text-muted);margin-left:0.5rem;">${r.cloud} · CIS ${r.cis} · ${r.category}</span>
+              <div style="margin-top:0.375rem;font-size:0.8125rem;color:var(--tl-text);">${r.check}</div>
+            </div>
+            <span class="it-badge it-badge-bad">✗ Non-Compliant</span>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    document.getElementById('ccc-results').classList.add('show');
+
+    // === Feature 1: Remediation Commands ===
+    const remediationCmds = {
+      'aws-iam-mfa': 'aws iam enable-mfa-device --user-name root --serial-number arn:aws:iam::ACCOUNT:mfa/root --token-code CODE',
+      'aws-iam-keys': 'aws iam delete-access-key --access-key-id AKIA... --user-name root',
+      'aws-iam-password': 'aws iam update-account-password-policy --minimum-password-length 14 --require-symbols --require-numbers --require-uppercase-characters --require-lowercase-characters',
+      'aws-s3-public': 'aws s3api put-public-access-block --bucket BUCKET --public-access-block-configuration BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true',
+      'aws-s3-encryption': 'aws s3api put-bucket-encryption --bucket BUCKET --server-side-encryption-configuration {"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"}}]}',
+      'aws-sg-open': 'aws ec2 revoke-security-group-ingress --group-id sg-xxx --protocol tcp --port 22 --cidr 0.0.0.0/0',
+      'aws-cloudtrail': 'aws cloudtrail create-trail --name org-trail --s3-bucket LOG_BUCKET --is-organization-trail --is-multi-region-trail',
+      'aws-config': 'aws configservice put-configuration-recorder --configuration-recorder name=default,roleARN=arn:aws:iam::ACCOUNT:role/ConfigRole',
+      'aws-encryption': 'aws ec2 enable-ebs-encryption-by-default',
+      'aws-rds-public': 'aws rds modify-db-instance --db-instance-identifier DB_ID --publicly-accessible --apply-immediately',
+      'azure-mfa': 'az ad user update --id user@domain --force-change-password-next-sign-in true',
+      'azure-storage-encryption': 'az storage account update --name ACCOUNT --resource-group RG --encryption-services blob',
+      'azure-nsg-open': 'az network nsg rule delete --resource-group RG --nsg-name NSG --name SSH-Internet',
+      'azure-monitor': 'az monitor log-profiles create --name default --location global --categories Write,Delete,Action',
+      'azure-keyvault': 'az keyvault update --name VAULT --resource-group RG --enable-purge-protection true',
+      'azure-rbac': 'az role definition delete --name CustomOwnerRole',
+      'gcp-iam-sa': 'gcloud iam service-accounts disable SA@PROJECT.iam.gserviceaccount.com',
+      'gcp-iam-keys': 'gcloud iam service-accounts keys create new-key.json --iam-account SA@PROJECT.iam.gserviceaccount.com',
+      'gcp-storage-public': 'gsutil iam ch -d allUsers gs://BUCKET',
+      'gcp-firewall': 'gcloud compute firewall-rules delete FIREWALL_RULE',
+      'gcp-audit': 'gcloud logging buckets update _Default --location global --billing-accounts',
+      'gcp-encryption': 'gcloud compute disks update DISK --zone ZONE --kms-key projects/PROJECT/locations/REGION/keyRings/RING/cryptoKeys/KEY',
+    };
+    const remedList = document.getElementById('ccc-remediation-list');
+    remedList.innerHTML = reportItems.map(r => {
+      const id = checks.find(c => c.check === r.check && c.cloud === r.cloud)?.id;
+      const cmd = id ? remediationCmds[id] : 'Manual remediation required';
+      return `<div style="margin-bottom:0.75rem;"><div style="font-size:0.75rem;color:var(--tl-text-muted);margin-bottom:0.25rem;">${r.cloud} · ${r.check}</div><pre style="background:var(--tl-card);border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:0.625rem;font-size:0.75rem;overflow-x:auto;color:var(--tl-text);">${cmd}</pre></div>`;
+    }).join('') || '<div class="it-alert it-alert-good">✓ No remediation needed.</div>';
+    document.getElementById('ccc-remediation-section').style.display = 'block';
+
+    // === Feature 2: Multi-Cloud Comparison ===
+    const clouds = ['AWS', 'Azure', 'GCP'];
+    const categories = [...new Set(checks.map(c => c.category))];
+    const compBody = document.getElementById('ccc-comparison-body');
+    compBody.innerHTML = categories.map(cat => {
+      const cells = clouds.map(cloud => {
+        const cloudChecks = items.filter(sel => {
+          const cb = document.querySelector(`.ccc-check[data-id="${sel.getAttribute('data-id')}"]`);
+          return cb && cb.checked && cb.getAttribute('data-cloud') === cloud && cb.getAttribute('data-category') === cat;
+        });
+        if (cloudChecks.length === 0) return '<td style="color:var(--tl-text-muted);">—</td>';
+        const failCount = cloudChecks.filter(s => s.value === 'fail').length;
+        const passCount = cloudChecks.filter(s => s.value === 'pass').length;
+        const pct = Math.round(passCount / cloudChecks.length * 100);
+        const color = pct >= 80 ? '#059669' : pct >= 50 ? '#d97706' : '#dc2626';
+        return `<td style="color:${color};">${pct}% (${failCount} failed)</td>`;
+      }).join('');
+      return `<tr><td><strong>${cat}</strong></td>${cells}</tr>`;
+    }).join('');
+    document.getElementById('ccc-comparison-section').style.display = 'block';
+
+    // === Feature 3: Risk Heatmap ===
+    const heatmapGrid = document.getElementById('ccc-heatmap-grid');
+    heatmapGrid.innerHTML = categories.map(cat => {
+      const catChecks = items.filter(sel => {
+        const cb = document.querySelector(`.ccc-check[data-id="${sel.getAttribute('data-id')}"]`);
+        return cb && cb.checked && cb.getAttribute('data-category') === cat;
+      });
+      const fails = catChecks.filter(s => s.value === 'fail').length;
+      const criticals = catChecks.filter(s => s.value === 'fail' && (document.querySelector(`.ccc-check[data-id="${s.getAttribute('data-id')}"]`).getAttribute('data-severity')) === 'Critical').length;
+      const risk = criticals > 0 ? 'critical' : fails > 2 ? 'high' : fails > 0 ? 'medium' : 'low';
+      const colors = { critical: '#dc2626', high: '#ea580c', medium: '#d97706', low: '#059669' };
+      const labels = { critical: 'CRITICAL', high: 'HIGH', medium: 'MEDIUM', low: 'SAFE' };
+      return `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.625rem 0.875rem;border-radius:var(--tl-radius-sm);background:${colors[risk]}22;border:1px solid ${colors[risk]}44;margin-bottom:0.5rem;"><span style="width:8px;height:8px;border-radius:50%;background:${colors[risk]};"></span><strong style="flex:1;">${cat}</strong><span style="color:${colors[risk]};font-size:0.75rem;">${labels[risk]} (${fails} failed)</span></div>`;
+    }).join('');
+    document.getElementById('ccc-heatmap-section').style.display = 'block';
+
+    // === Feature 4: Cost of Non-Compliance ===
+    const breachBase = 4450000; // IBM average breach cost
+    const cloudMultiplier = critical > 0 ? 2.5 : failed > 3 ? 1.8 : failed > 0 ? 1.3 : 1;
+    const breachCost = Math.round(breachBase * cloudMultiplier);
+    const fines = critical * 50000 + failed * 5000;
+    const remedHours = critical * 8 + failed * 3;
+    const totalRisk = breachCost + fines + remedHours * 150;
+    document.getElementById('ccc-breach-cost').textContent = '$' + breachCost.toLocaleString();
+    document.getElementById('ccc-fines').textContent = '$' + fines.toLocaleString();
+    document.getElementById('ccc-remed-hours').textContent = remedHours + 'h';
+    document.getElementById('ccc-total-risk').textContent = '$' + totalRisk.toLocaleString();
+    document.getElementById('ccc-total-risk').style.color = totalRisk > breachBase * 2 ? '#dc2626' : totalRisk > breachBase ? '#d97706' : '#059669';
+    document.getElementById('ccc-cost-insight').innerHTML = `Estimated total risk exposure: <strong>$${totalRisk.toLocaleString()}</strong>. Based on ${failed} failed checks (${critical} critical). ${critical > 0 ? '🚨 Critical issues multiply breach likelihood by ' + cloudMultiplier + 'x.' : '✓ No critical issues — standard risk profile.'}`;
+    document.getElementById('ccc-cost-section').style.display = 'block';
+
+    // === Feature 5: IaC Template Generator ===
+    const iacTemplates = {
+      'aws-s3-public': 'resource "aws_s3_bucket_public_access_block" "fix" {\n  bucket = aws_s3_bucket.example.id\n  block_public_acls = true\n  block_public_policy = true\n  ignore_public_acls = true\n  restrict_public_buckets = true\n}',
+      'aws-sg-open': 'resource "aws_security_group_rule" "deny_ssh" {\n  type = "ingress"\n  from_port = 22\n  to_port = 22\n  protocol = "tcp"\n  cidr_blocks = ["10.0.0.0/8"]\n  security_group_id = aws_security_group.example.id\n}',
+      'aws-cloudtrail': 'resource "aws_cloudtrail" "org" {\n  name = "org-trail"\n  s3_bucket_name = aws_s3_bucket.logs.id\n  is_organization_trail = true\n  is_multi_region_trail = true\n}',
+      'aws-encryption': 'resource "aws_ebs_encryption_by_default" "enable" {\n  enabled = true\n}',
+      'azure-nsg-open': 'resource "azurerm_network_security_rule" "deny_ssh" {\n  name = "DenySSHInternet"\n  priority = 100\n  direction = "Inbound"\n  access = "Deny"\n  protocol = "Tcp"\n  source_port_range = "*"\n  destination_port_range = "22"\n  source_address_prefix = "Internet"\n  resource_group_name = azurerm_resource_group.example.name\n  network_security_group_name = azurerm_network_security_group.example.name\n}',
+      'gcp-storage-public': 'resource "google_storage_bucket_iam_binding" "deny_public" {\n  bucket = google_storage_bucket.example.name\n  role = "roles/storage.objectViewer"\n  members = ["projectOwner:PROJECT_ID"]\n}',
+    };
+    const iacList = document.getElementById('ccc-iac-list');
+    const iacItems = reportItems.filter(r => { const id = checks.find(c => c.check === r.check && c.cloud === r.cloud)?.id; return id && iacTemplates[id]; });
+    iacList.innerHTML = iacItems.length > 0 ? iacItems.map(r => {
+      const id = checks.find(c => c.check === r.check && c.cloud === r.cloud)?.id;
+      return `<div style="margin-bottom:0.75rem;"><div style="font-size:0.75rem;color:var(--tl-text-muted);margin-bottom:0.25rem;">${r.cloud} · ${r.check}</div><pre style="background:var(--tl-card);border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:0.625rem;font-size:0.75rem;overflow-x:auto;color:var(--tl-text);">${iacTemplates[id]}</pre></div>`;
+    }).join('') : '<div class="it-alert it-alert-info">ℹ️ No Terraform snippets available for current failures. Check remediation commands instead.</div>';
+    document.getElementById('ccc-iac-section').style.display = 'block';
+
+    // === Feature 6: Compliance Framework Mapper ===
+    const frameworks = [
+      { name: 'SOC 2 Type II', controls: { 'IAM': 'CC6.1', 'Storage': 'CC6.7', 'Network': 'CC6.6', 'Logging': 'CC7.2', 'Encryption': 'CC6.7' }, impact: 0 },
+      { name: 'PCI-DSS v4.0', controls: { 'IAM': 'Req 8', 'Storage': 'Req 3', 'Network': 'Req 1', 'Logging': 'Req 10', 'Encryption': 'Req 3.5' }, impact: 0 },
+      { name: 'HIPAA', controls: { 'IAM': '§164.312(a)', 'Storage': '§164.312(e)', 'Network': '§164.312(e)(1)', 'Logging': '§164.312(b)', 'Encryption': '§164.312(a)(2)(iv)' }, impact: 0 },
+      { name: 'ISO 27001', controls: { 'IAM': 'A.9.2', 'Storage': 'A.8.2', 'Network': 'A.13.1', 'Logging': 'A.12.4', 'Encryption': 'A.10.1' }, impact: 0 },
+      { name: 'NIST 800-53', controls: { 'IAM': 'IA-2', 'Storage': 'SC-28', 'Network': 'SC-7', 'Logging': 'AU-2', 'Encryption': 'SC-13' }, impact: 0 },
+    ];
+    reportItems.forEach(r => { frameworks.forEach(f => { if (f.controls[r.category]) f.impact++; }); });
+    document.getElementById('ccc-framework-list').innerHTML = frameworks.map(f => {
+      const status = f.impact === 0 ? 'Compliant' : f.impact > 3 ? 'High Risk' : f.impact > 1 ? 'Medium Risk' : 'Low Risk';
+      const color = status === 'Compliant' ? '#059669' : status === 'High Risk' ? '#dc2626' : status === 'Medium Risk' ? '#d97706' : '#65a30d';
+      return `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${f.name}</strong> <span style="font-size:0.75rem;color:var(--tl-text-muted);">${f.impact} control(s) affected</span></div><span style="color:${color};">${status}</span></div>`;
+    }).join('');
+    document.getElementById('ccc-framework-section').style.display = 'block';
+
+    // === Feature 8: Attack Path Analysis ===
+    const attackPaths = [];
+    const failedByCategory = {};
+    reportItems.forEach(r => { if (!failedByCategory[r.category]) failedByCategory[r.category] = []; failedByCategory[r.category].push(r); });
+    // IAM + Network = lateral movement
+    if (failedByCategory['IAM'] && failedByCategory['Network']) attackPaths.push({ path: 'IAM weakness + Open network = Lateral movement & data exfiltration', severity: 'Critical', steps: ['Compromise weak IAM credentials', 'Use open SSH/RDP to access internal systems', 'Exfiltrate data via open network paths'] });
+    // Storage + Encryption = data breach
+    if (failedByCategory['Storage'] && failedByCategory['Encryption']) attackPaths.push({ path: 'Public storage + No encryption = Data breach', severity: 'Critical', steps: ['Access public S3/blob/bucket', 'Read unencrypted sensitive data', 'No audit trail if logging also failed'] });
+    // IAM + Logging = undetected intrusion
+    if (failedByCategory['IAM'] && failedByCategory['Logging']) attackPaths.push({ path: 'IAM weakness + No logging = Undetected intrusion', severity: 'High', steps: ['Exploit weak IAM to gain access', 'Operate without detection due to missing logs', 'Maintain persistent access'] });
+    // Network + Database = direct DB access
+    if (failedByCategory['Network'] && failedByCategory['Database']) attackPaths.push({ path: 'Open network + Public DB = Direct database access', severity: 'Critical', steps: ['Connect to public RDS instance', 'Exploit database vulnerabilities', 'Access or modify data directly'] });
+    if (attackPaths.length === 0 && failed > 0) attackPaths.push({ path: 'Isolated misconfigurations detected', severity: 'Medium', steps: ['Individual misconfigurations may not be directly chainable', 'However, combined with other issues they increase attack surface'] });
+    document.getElementById('ccc-attack-list').innerHTML = attackPaths.length > 0 ? attackPaths.map(a => {
+      const color = a.severity === 'Critical' ? '#dc2626' : a.severity === 'High' ? '#d97706' : '#65a30d';
+      return `<div style="border-left:3px solid ${color};padding:0.5rem 0.75rem;margin-bottom:0.5rem;"><strong style="color:${color};">${a.severity}: ${a.path}</strong><ol style="margin:0.25rem 0 0 1.25rem;font-size:0.8125rem;">${a.steps.map(s => `<li>${s}</li>`).join('')}</ol></div>`;
+    }).join('') : '<div class="it-alert it-alert-good">✓ No attack paths detected.</div>';
+    document.getElementById('ccc-attack-section').style.display = 'block';
+
+    // === Feature 9: Remediation Roadmap ===
+    const roadmap = reportItems.sort((a, b) => {
+      const sevOrder = { 'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3 };
+      return sevOrder[a.severity] - sevOrder[b.severity];
+    });
+    const phases = [
+      { name: 'Phase 1 — Immediate (0-24h)', items: roadmap.filter(r => r.severity === 'Critical'), color: '#dc2626' },
+      { name: 'Phase 2 — Short-term (1-7 days)', items: roadmap.filter(r => r.severity === 'High'), color: '#d97706' },
+      { name: 'Phase 3 — Medium-term (1-4 weeks)', items: roadmap.filter(r => r.severity === 'Medium'), color: '#65a30d' },
+    ];
+    document.getElementById('ccc-roadmap-list').innerHTML = phases.map(p => p.items.length > 0 ? `<div style="margin-bottom:1rem;"><div style="font-weight:600;color:${p.color};margin-bottom:0.5rem;">${p.name}</div>${p.items.map(r => `<div style="padding:0.4rem 0.75rem;border-left:2px solid ${p.color};margin-bottom:0.25rem;font-size:0.8125rem;">${r.cloud} · ${r.check}</div>`).join('')}</div>` : '').join('') || '<div class="it-alert it-alert-good">✓ All checks passed — no roadmap needed.</div>';
+    document.getElementById('ccc-roadmap-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('ccc-export').style.display = 'inline-flex';
+    document.getElementById('ccc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), complianceScore: score, passed, failed, critical, failedChecks: reportItems, costEstimate: { breachCost, fines, remedHours, totalRisk }, frameworks: frameworks.map(f => ({ name: f.name, impact: f.impact })), attackPaths };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'cloud-audit-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('ccc-audit').addEventListener('click', audit);
+  document.getElementById('ccc-reset').addEventListener('click', () => {
+    document.getElementById('ccc-results').classList.remove('show');
+    renderChecks();
+  });
+})();
+</script>

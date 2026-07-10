@@ -1,0 +1,39 @@
+---
+/**
+ * AboutStats — Impact metrics section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const metrics = [
+  { value: '50000', suffix: '+', label: 'Monthly Active Readers', sub: 'Across 80+ countries' },
+  { value: '100', suffix: '+', label: 'Published Guides', sub: 'Avg. 2,500 words each' },
+  { value: '12', suffix: '', label: 'Technology topics', sub: 'From AI to Fusion' },
+  { value: '95', suffix: '%', label: 'Reader Satisfaction', sub: 'Based on 2,000+ surveys' },
+  { value: '48', suffix: 'h', label: 'Avg. Update Cycle', sub: 'Articles refreshed regularly' },
+  { value: '82', suffix: '%', label: 'AI Search Citation', sub: 'Rate for original research' },
+];
+---
+
+<section class="about-stats-section">
+  <div class="about-container">
+    <div class="about-section-head about-section-head-center">
+      <span class="about-eyebrow">By the Numbers</span>
+      <h2 class="about-section-title">Impact That Is Measurable</h2>
+      <p class="about-section-sub">
+        We track what matters — not vanity metrics. These numbers reflect real readers, real
+        engagement, and real influence in the emerging technology space.
+      </p>
+    </div>
+
+    <div class="about-stats-grid">
+      {metrics.map((m) => (
+        <div class="about-stat-card">
+          <div class="about-stat-value-wrap">
+            <span class="about-stat-value" data-count={m.value} data-suffix={m.suffix}>0</span>
+          </div>
+          <span class="about-stat-label">{m.label}</span>
+          <span class="about-stat-sub">{m.sub}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

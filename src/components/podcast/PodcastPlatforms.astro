@@ -1,0 +1,18 @@
+---
+import { podcastPlatforms } from '../../data/podcast/podcast-content';
+---
+
+<section class="pc-platforms">
+  <div class="pc-platforms-inner">
+    <span class="pc-platforms-label">Listen on</span>
+    <div class="pc-platforms-grid">
+      {podcastPlatforms.map((platform) => (
+        <a href={platform.href} class="pc-platform-btn" aria-label={`Listen on ${platform.name}`}>
+          <span class="pc-platform-icon">{platform.icon}</span>
+          <span class="pc-platform-name">{platform.name}</span>
+          <span class="pc-platform-listeners">{platform.listeners}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

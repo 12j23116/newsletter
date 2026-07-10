@@ -1,0 +1,307 @@
+---
+/**
+ * Energy Storage topic Page — Premium Redesign
+ * Unique layout: battery-themed hero, electrical grid patterns,
+ * energy-styled cards, power flow visualization.
+ * 8 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { energyStorageContent } from '../../../data/topics/Energy-Storage/energy-storage-content';
+import './energy-storage-styles.css';
+const c = energyStorageContent;
+
+const marqueeItems = ['158 GW Deployments', '2.9 TW by 2036', 'Lithium-Ion', 'Sodium-Ion', 'Solid-State', 'LDES', 'Grid-Scale BESS', 'AI Data Centers', 'Iron-Air', 'Flow Batteries', 'VPP', 'Battery Recycling'];
+
+const overviewImages = ['/images/energy-01-grid-battery-farm.webp', '/images/energy-02-battery-rack-wiring.webp'];
+const sodiumImages = ['/images/energy-03-home-battery-garage.webp', '/images/energy-04-pumped-hydro.webp'];
+const techImages = ['/images/energy-05-solid-state-lab.webp', '/images/energy-06-ev-megacharger.webp', '/images/energy-07-flow-battery-tanks.webp'];
+const ldesImages = ['/images/energy-08-smart-grid-control.webp', '/images/energy-09-solar-microgrid.webp', '/images/energy-10-battery-repurpose.webp', '/images/energy-04-pumped-hydro.webp'];
+const appImages = ['/images/energy-01-grid-battery-farm.webp', '/images/energy-02-battery-rack-wiring.webp', '/images/energy-03-home-battery-garage.webp', '/images/energy-08-smart-grid-control.webp', '/images/energy-05-solid-state-lab.webp', '/images/energy-06-ev-megacharger.webp'];
+---
+
+<BaseLayout title={`${c.name} — Batteries, BESS & Grid-Scale Storage 2026-2036`} description={c.description} keywords="energy storage, battery technology, lithium-ion, sodium-ion, solid-state batteries, grid-scale BESS, long-duration energy storage, LDES, flow batteries, iron-air batteries, battery recycling, virtual power plant, VPP, solar microgrid, EV charging">
+  <div class="es-page">
+
+    {/* ══ 1. HERO — Battery themed ══ */}
+    <section class="es-hero">
+      <div class="es-hero-bg">
+        <img src="/images/011-energy-storage-smart-grid.webp" alt="Energy storage battery" loading="eager" />
+      </div>
+      <div class="es-grid-overlay"></div>
+      <div class="es-grid-pattern"></div>
+      <div class="es-orb es-hero-orb-1"></div>
+      <div class="es-orb es-hero-orb-2"></div>
+      <div class="es-orb es-hero-orb-3"></div>
+      <div class="es-hero-inner">
+        <div class="es-hero-left">
+          <span class="es-hero-pill"><span class="es-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="es-grad-text">Energy Storage</span></h1>
+          <p class="es-hero-tagline">{c.tagline}</p>
+          <p class="es-hero-desc">{c.description}</p>
+          <div class="es-hero-ctas">
+            <a href="#sections" class="es-btn es-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="es-btn es-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="es-hero-stats">
+            {c.heroStats.map((s) => (
+              <div class="es-hero-stat">
+                <span class="es-hero-stat-value">{s.value}</span>
+                <span class="es-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="es-hero-right">
+          <div class="es-hero-img-wrap">
+            <img class="es-hero-img" src="/images/energy-01-grid-battery-farm.webp" alt="Grid-scale battery energy storage" loading="eager" />
+            <div class="es-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="es-marquee">
+      <div class="es-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'es-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="es-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. MARKET OVERVIEW ══ */}
+    <section class="es-section" id="sections">
+      <div class="es-container">
+        <span class="es-eyebrow es-reveal">Market Overview</span>
+        <h2 class="es-section-title es-reveal">The <span class="es-grad-text">158 GW</span> Storage Market</h2>
+        <p class="es-section-sub es-reveal">Energy storage is the fastest-deploying energy technology in history — growing from 10 GW to 100+ GW in just four years.</p>
+        <div class="es-section-grid es-reveal">
+          <div class="es-section-card">
+            <div class="es-section-img-wrap">
+              <img class="es-section-img" src={overviewImages[0]} alt={c.marketOverviewSection.title} loading="lazy" />
+              <div class="es-section-img-overlay"></div>
+            </div>
+            <div class="es-section-header">
+              <div class="es-section-eyebrow">Market Overview</div>
+              <h3 class="es-section-title">{c.marketOverviewSection.title}</h3>
+            </div>
+            <div class="es-section-body">
+              <p class="es-section-desc">{c.marketOverviewSection.description}</p>
+              <div class="es-section-points">
+                {c.marketOverviewSection.keyStats.map((s) => (
+                  <div class="es-section-point"><strong>{s.stat}</strong>: {s.label}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="es-section-card">
+            <div class="es-section-img-wrap">
+              <img class="es-section-img" src={overviewImages[1]} alt="Global Deployment" loading="lazy" />
+              <div class="es-section-img-overlay"></div>
+            </div>
+            <div class="es-section-header">
+              <div class="es-section-eyebrow">Regional Leaders</div>
+              <h3 class="es-section-title">Global Deployment</h3>
+            </div>
+            <div class="es-section-body">
+              <p class="es-section-desc">Key regions driving global energy storage growth.</p>
+              <div class="es-section-points">
+                {c.marketOverviewSection.regions.map((r) => (
+                  <div class="es-section-point"><strong>{r.region}</strong>: {r.share}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. LITHIUM-ION ══ */}
+    <section class="es-section es-section-alt">
+      <div class="es-container">
+        <span class="es-eyebrow es-reveal">Current Technology</span>
+        <h2 class="es-section-title es-reveal">Lithium-Ion <span class="es-grad-text">Dominance</span></h2>
+        <p class="es-section-sub es-reveal">LFP has emerged as the preferred chemistry for stationary storage due to safety, cycle life, and cost advantages.</p>
+        <div class="es-tech-grid es-reveal">
+          {c.lithiumIonSection.chemistries.map((chem, i) => (
+            <div class="es-tech-card">
+              <div class="es-tech-img-wrap">
+                <img class="es-tech-img" src={techImages[i % techImages.length]} alt={chem.name} loading="lazy" />
+                <div class="es-tech-img-overlay"></div>
+              </div>
+              <h3 class="es-tech-name">{chem.name}</h3>
+              <div class="es-tech-energy">{chem.energy} • {chem.cycles} cycles</div>
+              <p class="es-tech-desc">{chem.advantage}</p>
+              <span class="es-tech-use">{chem.use}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. SODIUM-ION ══ */}
+    <section class="es-section">
+      <div class="es-container">
+        <span class="es-eyebrow es-reveal">Emerging Technology</span>
+        <h2 class="es-section-title es-reveal">Sodium-Ion <span class="es-grad-text">Batteries</span></h2>
+        <p class="es-section-sub es-reveal">The low-cost challenger with 70 GWh produced in 2025 — offering a drop-in alternative to lithium-ion.</p>
+        <div class="es-section-grid es-reveal">
+          <div class="es-section-card">
+            <div class="es-section-img-wrap">
+              <img class="es-section-img" src={sodiumImages[0]} alt="Production Scaling" loading="lazy" />
+              <div class="es-section-img-overlay"></div>
+            </div>
+            <div class="es-section-header">
+              <div class="es-section-eyebrow">Key Facts</div>
+              <h3 class="es-section-title">Production Scaling</h3>
+            </div>
+            <div class="es-section-body">
+              <div class="es-section-points">
+                {c.sodiumIonSection.keyFacts.map((f) => (
+                  <div class="es-section-point"><strong>{f.stat}</strong>: {f.label}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="es-section-card">
+            <div class="es-section-img-wrap">
+              <img class="es-section-img" src={sodiumImages[1]} alt="Why Sodium-Ion?" loading="lazy" />
+              <div class="es-section-img-overlay"></div>
+            </div>
+            <div class="es-section-header">
+              <div class="es-section-eyebrow">Advantages</div>
+              <h3 class="es-section-title">Why Sodium-Ion?</h3>
+            </div>
+            <div class="es-section-body">
+              <div class="es-section-points">
+                {c.sodiumIonSection.advantages.map((a) => (
+                  <div class="es-section-point"><strong>{a.title}</strong>: {a.desc}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. LDES ══ */}
+    <section class="es-section es-section-alt">
+      <div class="es-container">
+        <span class="es-eyebrow es-reveal">Long-Duration Storage</span>
+        <h2 class="es-section-title es-reveal">LDES: <span class="es-grad-text">Beyond 4 Hours</span></h2>
+        <p class="es-section-sub es-reveal">Technologies targeting 10-100+ hour discharge durations at a fraction of lithium-ion costs.</p>
+        <div class="es-ldes-grid es-reveal">
+          {c.longDurationSection.technologies.map((t, i) => (
+            <div class="es-ldes-card">
+              <div class="es-ldes-img-wrap">
+                <img class="es-ldes-img" src={ldesImages[i % ldesImages.length]} alt={t.name} loading="lazy" />
+                <div class="es-ldes-img-overlay"></div>
+              </div>
+              <h3 class="es-ldes-name">{t.name}</h3>
+              <div class="es-ldes-duration">{t.duration} • {t.cost}</div>
+              <p class="es-ldes-desc">{t.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. GRID SCALE ══ */}
+    <section class="es-section">
+      <div class="es-container">
+        <span class="es-eyebrow es-reveal">Industry Trend</span>
+        <h2 class="es-section-title es-reveal">Grid-Scale <span class="es-grad-text">BESS</span></h2>
+        <p class="es-section-sub es-reveal">Battery Energy Storage Systems are becoming mission-critical infrastructure for grid reliability.</p>
+        <div class="es-apps-grid es-reveal">
+          {c.gridScaleSection.applications.map((a, i) => (
+            <div class="es-app-card">
+              <div class="es-app-img-wrap">
+                <img class="es-app-img" src={appImages[i % appImages.length]} alt={a.app} loading="lazy" />
+                <div class="es-app-img-overlay"></div>
+              </div>
+              <h3 class="es-app-name">{a.app}</h3>
+              <p class="es-app-desc">{a.desc}</p>
+              <span class="es-app-share">{a.share}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. FUTURE — Energy timeline ══ */}
+    <section class="es-section es-section-alt">
+      <div class="es-container">
+        <span class="es-eyebrow es-reveal">2026 → 2030</span>
+        <h2 class="es-section-title es-reveal">The <span class="es-grad-text">Energy</span> Future</h2>
+        <p class="es-section-sub es-reveal">Key milestones shaping the energy storage sector through 2030 and beyond.</p>
+        <div class="es-future-timeline es-reveal">
+          {c.futureOutlookSection.timeline.map((t) => (
+            <div class="es-future-item">
+              <div class="es-future-year-marker">{t.year}</div>
+              <div class="es-future-content">
+                <div class="es-future-year">{t.year}</div>
+                <div class="es-future-prediction">{t.events[0]}</div>
+                <div class="es-future-detail">{t.events.slice(1).join(' • ')}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. FAQ ══ */}
+    <section class="es-section" id="faq">
+      <div class="es-container">
+        <span class="es-eyebrow es-reveal">FAQ</span>
+        <h2 class="es-section-title es-reveal">Frequently Asked <span class="es-grad-text">Questions</span></h2>
+        <p class="es-section-sub es-reveal">Structured answers to the most common energy storage questions — optimized for AI search citation.</p>
+        <div class="es-faq-list">
+          {c.faqSection.items.map((f) => (
+            <details class="es-faq-item">
+              <summary>{f.q}</summary>
+              <div class="es-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 10. CTA ══ */}
+    <section class="es-cta">
+      <div class="es-cta-bg">
+        <img src="/images/023-energy-storage-character-emerald.webp" alt="Energy storage character" loading="lazy" />
+      </div>
+      <div class="es-cta-inner">
+        <h3>Power the Future</h3>
+        <p>Get the latest battery breakthroughs, grid-scale storage updates, and energy transition insights delivered weekly.</p>
+        <a href="/blog?category=Energy-Storage" class="es-cta-btn">Explore Energy Storage Articles →</a>
+        <div class="es-cta-pills">
+          <span class="es-cta-pill">🔋 Batteries</span>
+          <span class="es-cta-pill">⚡ Grid-Scale</span>
+          <span class="es-cta-pill">🌱 Clean Energy</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.es-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Energy-Storage' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Energy-Storage', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqSection.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

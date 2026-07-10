@@ -1,0 +1,253 @@
+---
+/**
+ * Space topic Page — Premium Redesign
+ * Unique layout: immersive hero, orbital elements,
+ * feature cards with large images, trends grid.
+ * 7 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { spaceContent } from '../../../data/topics/Space/space-content';
+import './space-styles.css';
+const c = spaceContent;
+
+const marqueeItems = ['$626B Economy', '260+ Launches', 'Starlink 5M+', 'Direct-to-Device', 'In-Space Manufacturing', 'Lunar Economy', 'Artemis 2028', 'Starship V3', 'ISS 2030', 'Commercial Stations', 'Mars Sample Return', 'Space Defense $30B+'];
+---
+
+<BaseLayout title={`${c.name} — Economy, Launch & Future 2026-2034`} description={c.description} keywords="space exploration, space economy, launch vehicles, SpaceX, Starship, satellite constellations, Starlink, direct-to-device, in-space manufacturing, lunar economy, Artemis, Mars exploration, commercial space stations, space debris, orbital launch, NASA">
+  <div class="sp-page">
+
+    {/* ══ 1. HERO — Full-width immersive with orbital elements ══ */}
+    <section class="sp-hero">
+      <div class="sp-hero-bg">
+        <img src="/images/007-space-orbital-station.webp" alt="Space orbital station" loading="eager" />
+      </div>
+      <div class="sp-grid-overlay"></div>
+      <div class="sp-orbit-ring sp-orbit-ring-1"></div>
+      <div class="sp-orbit-ring sp-orbit-ring-2"></div>
+      <div class="sp-orb sp-hero-orb-1"></div>
+      <div class="sp-orb sp-hero-orb-2"></div>
+      <div class="sp-orb sp-hero-orb-3"></div>
+      <div class="sp-hero-inner">
+        <span class="sp-hero-pill"><span class="sp-hero-dot"></span> Live · Updated 2026</span>
+        <h1><span class="sp-grad-text">Space Exploration</span></h1>
+        <p class="sp-hero-tagline">{c.tagline}</p>
+        <p class="sp-hero-desc">{c.description}</p>
+        <div class="sp-hero-ctas">
+          <a href="#sections" class="sp-btn sp-btn-primary">Explore Topics →</a>
+          <a href="#faq" class="sp-btn sp-btn-secondary">Read FAQ</a>
+        </div>
+        <div class="sp-hero-stats">
+          {c.stats.map((s) => (
+            <div class="sp-hero-stat">
+              <span class="sp-hero-stat-value">{s.value}</span>
+              <span class="sp-hero-stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="sp-marquee">
+      <div class="sp-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'sp-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="sp-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. FEATURE CARDS — Large image cards with overlay text ══ */}
+    <section class="sp-section" id="sections">
+      <div class="sp-container">
+        <span class="sp-eyebrow sp-reveal">Market Overview</span>
+        <h2 class="sp-section-title sp-reveal">The <span class="sp-grad-text">$626 Billion</span> Space Economy</h2>
+        <p class="sp-section-sub sp-reveal">From launch vehicles to in-space manufacturing — the technologies and markets defining humanity's multi-planetary future.</p>
+        <div class="sp-feature-grid">
+          {c.sections.map((s, i) => (
+            <div class="sp-feature-card sp-reveal">
+              <div class="sp-feature-img-wrap">
+                <img class="sp-feature-img" src={s.image} alt={s.title} loading="lazy" />
+                <div class="sp-feature-img-overlay"></div>
+              </div>
+              <div class="sp-feature-body">
+                <div class="sp-feature-eyebrow">{s.eyebrow}</div>
+                <h3 class="sp-feature-title">{s.title}</h3>
+                <p class="sp-feature-desc">{s.subtitle}</p>
+                <div class="sp-feature-points">
+                  {s.points.map((p) => (
+                    <div class="sp-feature-point">
+                      <div class="sp-feature-point-label">{p.label}</div>
+                      <div class="sp-feature-point-value">{p.value}</div>
+                      <div class="sp-feature-point-desc">{p.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. TRENDS — Horizontal cards with gradient backgrounds ══ */}
+    <section class="sp-section sp-section-alt">
+      <div class="sp-container">
+        <span class="sp-eyebrow sp-reveal">Emerging Trends</span>
+        <h2 class="sp-section-title sp-reveal">What's <span class="sp-grad-text">Trending</span> in Space</h2>
+        <p class="sp-section-sub sp-reveal">Six trends shaping the future of space exploration and the space economy.</p>
+        <div class="sp-trends-grid">
+          {c.trends.map((t) => (
+            <div class="sp-trend-card sp-reveal" style={`--sp-grad:linear-gradient(135deg, ${t.color}, ${t.color}44)`}>
+              <div class="sp-trend-tag" style={`background:${t.color}22;color:${t.color}`}>{t.tag}</div>
+              <h3 class="sp-trend-title">{t.title}</h3>
+              <p class="sp-trend-desc">{t.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. COMPANIES — Cards with metrics ══ */}
+    <section class="sp-section">
+      <div class="sp-container">
+        <span class="sp-eyebrow sp-reveal">Key Players</span>
+        <h2 class="sp-section-title sp-reveal">Leading <span class="sp-grad-text">Space Companies</span></h2>
+        <p class="sp-section-sub sp-reveal">The companies driving innovation and growth in the new space economy.</p>
+        <div class="sp-companies-grid">
+          {c.companies.map((co) => (
+            <div class="sp-company-card sp-reveal">
+              <div class="sp-company-header">
+                <div class="sp-company-icon" style={`background:${co.color}22;color:${co.color}`}>🚀</div>
+                <h3 class="sp-company-name">{co.name}</h3>
+              </div>
+              <p class="sp-company-desc">{co.desc}</p>
+              <span class="sp-company-metric">{co.metric}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. Market Stats ══ */}
+    <section class="sp-section" id="market-stats">
+      <div class="sp-container">
+        <div class="sp-section-head sp-section-head-center">
+          <span class="sp-eyebrow sp-reveal">By the Numbers</span>
+          <h2 class="sp-section-title sp-reveal">Space <span class="sp-grad-text">Economy</span> at a Glance</h2>
+          <p class="sp-section-sub sp-reveal">Key metrics defining the commercial and government space sector in 2025.</p>
+        </div>
+        <div class="sp-market-grid">
+          {c.marketStats.map((s) => (
+            <div class="sp-market-card sp-reveal">
+              <div class="sp-market-value">{s.value}</div>
+              <div class="sp-market-label">{s.label}</div>
+              <div class="sp-market-source">{s.source}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. Future Timeline ══ */}
+    <section class="sp-section sp-section-alt" id="future">
+      <div class="sp-container">
+        <span class="sp-eyebrow sp-reveal">2026 → 2030</span>
+        <h2 class="sp-section-title sp-reveal">The <span class="sp-grad-text">Orbital</span> Road Ahead</h2>
+        <p class="sp-section-sub sp-reveal">Five predictions for the future of space exploration and the space economy.</p>
+        <div class="sp-future-timeline sp-reveal">
+          {c.futurePredictions.map((p) => (
+            <div class="sp-future-item">
+              <div class="sp-future-year">{p.year}</div>
+              <div class="sp-future-prediction">{p.prediction}</div>
+              <div class="sp-future-detail">{p.detail}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. Trending Searches ══ */}
+    <section class="sp-section" id="trending">
+      <div class="sp-container">
+        <span class="sp-eyebrow sp-reveal">Search Trends</span>
+        <h2 class="sp-section-title sp-reveal">Trending <span class="sp-grad-text">Space</span> Searches</h2>
+        <p class="sp-section-sub sp-reveal">What people are searching for in space — monthly volumes and growth rates.</p>
+        <table class="sp-trending-table sp-reveal">
+          <thead>
+            <tr>
+              <th>Search Term</th>
+              <th>Monthly Volume</th>
+              <th>Growth</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.trendingSearches.map((t) => (
+              <tr>
+                <td class="sp-trending-term">{t.term}</td>
+                <td>{t.volume}</td>
+                <td class="sp-trending-growth">{t.growth}</td>
+                <td><span class={`sp-trending-type ${t.type.toLowerCase()}`}>{t.type}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="sp-section sp-section-alt" id="faq">
+      <div class="sp-container">
+        <span class="sp-eyebrow sp-reveal">FAQ</span>
+        <h2 class="sp-section-title sp-reveal">Frequently Asked <span class="sp-grad-text">Questions</span></h2>
+        <p class="sp-section-sub sp-reveal">Structured answers to the most common space questions — optimized for AI search citation.</p>
+        <div class="sp-faq-list">
+          {c.faqs.map((f) => (
+            <details class="sp-faq-item">
+              <summary>{f.q}</summary>
+              <div class="sp-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. CTA ══ */}
+    <section class="sp-cta">
+      <div class="sp-cta-bg">
+        <img src="/images/019-space-character-indigo.webp" alt="Space character" loading="lazy" />
+      </div>
+      <div class="sp-cta-inner">
+        <h3>Launch Your Space Knowledge</h3>
+        <p>Get the latest launch updates, space economy insights, and exploration news delivered weekly.</p>
+        <a href="/blog?category=Space" class="sp-cta-btn">Explore Space Articles →</a>
+        <div class="sp-cta-pills">
+          <span class="sp-cta-pill">🚀 Launch tracking</span>
+          <span class="sp-cta-pill">🌙 Lunar updates</span>
+          <span class="sp-cta-pill">🛰️ Satellite trends</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.sp-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Space' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Space', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

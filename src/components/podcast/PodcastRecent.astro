@@ -1,0 +1,32 @@
+---
+import { recentEpisodes } from '../../data/podcast/podcast-content';
+---
+
+<section class="pc-recent">
+  <div class="pc-recent-head">
+    <span class="pc-section-label">Fresh Episodes</span>
+    <h2 class="pc-section-title">Recent <span class="pc-grad">Episodes</span></h2>
+  </div>
+  <div class="pc-recent-list">
+    {recentEpisodes.map((ep) => (
+      <a href={`/podcast/${ep.slug}`} class="pc-ep-row" style={`--card-color:${ep.topicColor}`}>
+        <div class="pc-ep-row-num">S{ep.season}·E{ep.episode}</div>
+        <div class="pc-ep-row-play">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="pc-ep-row-body">
+          <div class="pc-ep-row-top">
+            <span class="pc-ep-row-cat" style={`--cat-color:${ep.topicColor}`}>{ep.topic}</span>
+            <span class="pc-ep-row-date">{ep.date}</span>
+          </div>
+          <h3 class="pc-ep-row-title">{ep.title}</h3>
+          <p class="pc-ep-row-desc">{ep.description}</p>
+          <div class="pc-ep-row-foot">
+            <span class="pc-ep-row-guest">Guest: {ep.guest}</span>
+            <span class="pc-ep-row-duration">{ep.duration}</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

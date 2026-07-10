@@ -1,0 +1,94 @@
+---
+import { allGuides, topicImages } from '../../data/guides/guides-listing';
+import { guideContent } from '../../data/guides/guides-content';
+
+const quickData: Record<string, { intro: string; keyConcepts: { term: string; definition: string }[]; summary: string; faqs: { question: string; answer: string }[] }> = {};
+for (const guide of allGuides) {
+  const content = guideContent[guide.slug];
+  if (content) {
+    quickData[guide.slug] = {
+      intro: content.intro,
+      keyConcepts: content.keyConcepts,
+      summary: content.summary,
+      faqs: content.faqs,
+    };
+  }
+}
+---
+
+<section class="gd-grid-section">
+  <div class="gd-all-head">
+    <h2 class="gd-section-title">All <span class="gd-grad">Guides</span></h2>
+    <span class="gd-grid-count" id="gd-grid-count">Showing {allGuides.length} guides</span>
+  </div>
+  <div class="gd-grid" id="gd-grid">
+    {allGuides.map((guide) => (
+      <div
+        class="gd-card"
+        data-difficulty={guide.difficulty}
+        data-topic={guide.topic}
+        data-title={guide.title.toLowerCase()}
+        style={`--card-color:${guide.topicColor}`}
+      >
+        <a href={`/guides/${guide.slug}`} class="gd-card-link">
+        <div class="gd-card-banner">
+          <img src={topicImages[guide.topic] || '/images/001-ai-neural-agent-cluster.webp'} alt="" class="gd-card-banner-img" loading="lazy" />
+          <div class="gd-card-banner-overlay"></div>
+          <div class="gd-card-banner-badges">
+            {guide.popular && <span class="gd-card-tag-pop">Popular</span>}
+            {guide.new && <span class="gd-card-tag-new">New</span>}
+            <span class="gd-difficulty-badge" data-level={guide.difficulty}>{guide.difficulty}</span>
+          </div>
+        </div>
+        <div class="gd-card-body">
+        <h3 class="gd-card-title">{guide.title}</h3>
+        <p class="gd-card-desc">{guide.description}</p>
+        <div class="gd-card-steps">
+          <div class="gd-steps-bar">
+            <div class="gd-steps-fill" style={`width: ${Math.min(guide.steps / 20 * 100, 100)}%`}></div>
+          </div>
+          <span class="gd-steps-count">{guide.steps} steps</span>
+        </div>
+        <div class="gd-card-foot">
+          <span class="gd-guide-cat" style={`--cat-color:${guide.topicColor}`}>{guide.topic}</span>
+          <span class="gd-meta-item">{guide.readTime}</span>
+        </div>
+        </div>
+        </a>
+        <div class="gd-card-actions">
+          {quickData[guide.slug] && (
+            <button class="gd-card-btn gd-quick-btn" data-slug={guide.slug} type="button">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              Quick
+            </button>
+          )}
+          <a class="gd-card-btn gd-full-btn" href={`/guides/${guide.slug}`}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Full Guide
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="gd-no-results" id="gd-no-results">
+    <div class="gd-no-results-icon">📚</div>
+    <h3>No guides found</h3>
+    <p>Try a different filter or search term.</p>
+  </div>
+
+  {/* Pagination */}
+  <div class="gd-pagination" id="gd-pagination"></div>
+
+  {/* Quick guide data */}
+  <script type="application/json" id="gd-quick-data" set:html={JSON.stringify(quickData)} />
+
+  {/* Quick guide modal */}
+  <div class="gd-modal-backdrop" id="gd-modal-backdrop">
+    <div class="gd-modal" id="gd-modal">
+      <button class="gd-modal-close" id="gd-modal-close" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="gd-modal-body" id="gd-modal-body"></div>
+    </div>
+  </div>
+</section>

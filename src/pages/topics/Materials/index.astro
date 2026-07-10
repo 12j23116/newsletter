@@ -1,0 +1,256 @@
+---
+/**
+ * Materials topic Page — Premium Redesign
+ * Unique layout: molecular-pattern hero, gradient-border
+ * cards, hexagonal-themed elements, material texture.
+ * 7 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { materialsContent } from '../../../data/topics/Materials/materials-content';
+import './materials-styles.css';
+const c = materialsContent;
+
+const marqueeItems = ['$300B+ Market', '$68.2B Funding', '978 Companies', 'AI-Driven Discovery', 'Graphene 200x Stronger', '2D Materials', 'High-Entropy Alloys', 'Metamaterials', 'Sustainable Polymers', '3D Printing Materials', 'Nanotechnology', 'Material-as-a-Service'];
+---
+
+<BaseLayout title={`${c.name} — AI Discovery, Graphene & 2D Materials 2026-2034`} description={c.description} keywords="advanced materials, materials science, graphene, 2D materials, high-entropy alloys, metamaterials, sustainable polymers, nanotechnology, 3D printing materials, AI-driven materials discovery, material-as-a-service, biomaterials, computational materials, materials genome">
+  <div class="ma-page">
+
+    {/* ══ 1. HERO — Split with molecular pattern ══ */}
+    <section class="ma-hero">
+      <div class="ma-hero-bg">
+        <img src="/images/008-materials-graphene-lattice.webp" alt="Materials graphene lattice" loading="eager" />
+      </div>
+      <div class="ma-grid-overlay"></div>
+      <div class="ma-hex-pattern"></div>
+      <div class="ma-orb ma-hero-orb-1"></div>
+      <div class="ma-orb ma-hero-orb-2"></div>
+      <div class="ma-orb ma-hero-orb-3"></div>
+      <div class="ma-hero-inner">
+        <div class="ma-hero-left">
+          <span class="ma-hero-pill"><span class="ma-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="ma-grad-text">Advanced Materials</span></h1>
+          <p class="ma-hero-tagline">{c.tagline}</p>
+          <p class="ma-hero-desc">{c.description}</p>
+          <div class="ma-hero-ctas">
+            <a href="#sections" class="ma-btn ma-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="ma-btn ma-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="ma-hero-stats">
+            {c.stats.map((s) => (
+              <div class="ma-hero-stat">
+                <span class="ma-hero-stat-value">{s.value}</span>
+                <span class="ma-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="ma-hero-right">
+          <div class="ma-hero-img-wrap">
+            <img class="ma-hero-img" src="/images/materials-01-graphene-lattice.webp" alt="Graphene lattice" loading="eager" />
+            <div class="ma-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="ma-marquee">
+      <div class="ma-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'ma-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="ma-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. SECTION CARDS — Gradient border cards ══ */}
+    <section class="ma-section" id="sections">
+      <div class="ma-container">
+        <span class="ma-eyebrow ma-reveal">Market Overview</span>
+        <h2 class="ma-section-title ma-reveal">The <span class="ma-grad-text">$300 Billion</span> Materials Economy</h2>
+        <p class="ma-section-sub ma-reveal">From AI-driven discovery to graphene and metamaterials — the breakthroughs reshaping semiconductors, aerospace, and manufacturing.</p>
+        <div class="ma-section-grid">
+          {c.sections.map((s) => (
+            <div class="ma-section-card ma-reveal">
+              <div class="ma-section-img-wrap">
+                <img class="ma-section-img" src={s.image} alt={s.title} loading="lazy" />
+                <div class="ma-section-img-overlay"></div>
+              </div>
+              <div class="ma-section-body">
+                <div class="ma-section-eyebrow">{s.eyebrow}</div>
+                <h3 class="ma-section-title">{s.title}</h3>
+                <p class="ma-section-desc">{s.subtitle}</p>
+                <div class="ma-section-points">
+                  {s.points.map((p) => (
+                    <div class="ma-section-point"><strong>{p.value}</strong> — {p.label}: {p.desc}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. TRENDS — Cards with gradient backgrounds ══ */}
+    <section class="ma-section ma-section-alt">
+      <div class="ma-container">
+        <span class="ma-eyebrow ma-reveal">Emerging Trends</span>
+        <h2 class="ma-section-title ma-reveal">What's <span class="ma-grad-text">Trending</span> in Materials</h2>
+        <p class="ma-section-sub ma-reveal">Six trends shaping the future of advanced materials and their applications.</p>
+        <div class="ma-trends-grid">
+          {c.trends.map((t) => (
+            <div class="ma-trend-card ma-reveal" style={`--ma-grad:linear-gradient(135deg, ${t.color}, ${t.color}44)`}>
+              <div class="ma-trend-tag" style={`background:${t.color}22;color:${t.color}`}>{t.tag}</div>
+              <h3 class="ma-trend-title">{t.title}</h3>
+              <p class="ma-trend-desc">{t.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. COMPANIES — Cards with metrics ══ */}
+    <section class="ma-section">
+      <div class="ma-container">
+        <span class="ma-eyebrow ma-reveal">Key Players</span>
+        <h2 class="ma-section-title ma-reveal">Leading <span class="ma-grad-text">Materials Companies</span></h2>
+        <p class="ma-section-sub ma-reveal">The companies driving innovation and growth in advanced materials.</p>
+        <div class="ma-companies-grid">
+          {c.companies.map((co) => (
+            <div class="ma-company-card ma-reveal">
+              <div class="ma-company-header">
+                <div class="ma-company-icon" style={`background:${co.color}22;color:${co.color}`}>🔬</div>
+                <h3 class="ma-company-name">{co.name}</h3>
+              </div>
+              <p class="ma-company-desc">{co.desc}</p>
+              <span class="ma-company-metric">{co.metric}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. Market Stats ══ */}
+    <section class="ma-section" id="market-stats">
+      <div class="ma-container">
+        <div class="ma-section-head ma-section-head-center">
+          <span class="ma-eyebrow ma-reveal">By the Numbers</span>
+          <h2 class="ma-section-title ma-reveal">Materials <span class="ma-grad-text">Economy</span> at a Glance</h2>
+          <p class="ma-section-sub ma-reveal">Key metrics defining the advanced materials sector in 2025.</p>
+        </div>
+        <div class="ma-market-grid">
+          {c.marketStats.map((s) => (
+            <div class="ma-market-card ma-reveal">
+              <div class="ma-market-value">{s.value}</div>
+              <div class="ma-market-label">{s.label}</div>
+              <div class="ma-market-source">{s.source}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. Future Timeline ══ */}
+    <section class="ma-section ma-section-alt" id="future">
+      <div class="ma-container">
+        <span class="ma-eyebrow ma-reveal">2026 → 2030</span>
+        <h2 class="ma-section-title ma-reveal">The <span class="ma-grad-text">Materials</span> Road Ahead</h2>
+        <p class="ma-section-sub ma-reveal">Five predictions for the future of advanced materials and manufacturing.</p>
+        <div class="ma-future-timeline ma-reveal">
+          {c.futurePredictions.map((p) => (
+            <div class="ma-future-item">
+              <div class="ma-future-year">{p.year}</div>
+              <div class="ma-future-prediction">{p.prediction}</div>
+              <div class="ma-future-detail">{p.detail}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. Trending Searches ══ */}
+    <section class="ma-section" id="trending">
+      <div class="ma-container">
+        <span class="ma-eyebrow ma-reveal">Search Trends</span>
+        <h2 class="ma-section-title ma-reveal">Trending <span class="ma-grad-text">Materials</span> Searches</h2>
+        <p class="ma-section-sub ma-reveal">What people are searching for in advanced materials — monthly volumes and growth rates.</p>
+        <table class="ma-trending-table ma-reveal">
+          <thead>
+            <tr>
+              <th>Search Term</th>
+              <th>Monthly Volume</th>
+              <th>Growth</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.trendingSearches.map((t) => (
+              <tr>
+                <td class="ma-trending-term">{t.term}</td>
+                <td>{t.volume}</td>
+                <td class="ma-trending-growth">{t.growth}</td>
+                <td><span class={`ma-trending-type ${t.type.toLowerCase()}`}>{t.type}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="ma-section ma-section-alt" id="faq">
+      <div class="ma-container">
+        <span class="ma-eyebrow ma-reveal">FAQ</span>
+        <h2 class="ma-section-title ma-reveal">Frequently Asked <span class="ma-grad-text">Questions</span></h2>
+        <p class="ma-section-sub ma-reveal">Structured answers to the most common materials questions — optimized for AI search citation.</p>
+        <div class="ma-faq-list">
+          {c.faqs.map((f) => (
+            <details class="ma-faq-item">
+              <summary>{f.q}</summary>
+              <div class="ma-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. CTA ══ */}
+    <section class="ma-cta">
+      <div class="ma-cta-bg">
+        <img src="/images/020-materials-character-amber.webp" alt="Materials character" loading="lazy" />
+      </div>
+      <div class="ma-cta-inner">
+        <h3>Discover the Materials of Tomorrow</h3>
+        <p>Get the latest materials breakthroughs, AI discovery updates, and application insights delivered weekly.</p>
+        <a href="/blog?category=Materials" class="ma-cta-btn">Explore Materials Articles →</a>
+        <div class="ma-cta-pills">
+          <span class="ma-cta-pill">🔬 AI discovery</span>
+          <span class="ma-cta-pill">⬛ Graphene</span>
+          <span class="ma-cta-pill">🌱 Sustainable</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.ma-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Materials' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Materials', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

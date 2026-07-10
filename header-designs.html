@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechScope — 5 Header Menu Designs</title>
+<style>
+:root{--bg:#0a0e1a;--surface:#0f172a;--border:rgba(255,255,255,.08);--border-s:rgba(255,255,255,.14);--text:#e2e8f0;--tm:#94a3b8;--td:#64748b;--p:#3380ff;--a:#7c3aed;--e:#10b981;--gp:linear-gradient(135deg,#3380ff,#7c3aed);--gt:linear-gradient(135deg,#60a5fa,#a78bfa,#f472b6);--r8:8px;--r12:12px;--r20:20px;--rf:999px;--tf:.15s ease;--tb:.25s ease;--ts:.4s ease;--sg:0 0 28px -6px rgba(51,128,255,.4);--fs:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--fs);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}svg{display:block}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sec{padding:80px 24px 40px;border-bottom:1px solid var(--border)}
+.dl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--td);margin-bottom:8px}
+.dt{font-size:28px;font-weight:800;letter-spacing:-.03em;margin-bottom:4px}
+.dt span{background:var(--gt);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dd{font-size:14px;color:var(--tm);margin-bottom:40px;max-width:600px}
+.demo{min-height:300px;display:flex;align-items:flex-start;justify-content:center;padding-top:20px;background:radial-gradient(ellipse at top,rgba(51,128,255,.06),transparent 60%)}
+
+/* D1 Floating Glass Pill */
+.h1b{position:relative;width:100%;max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:10px 16px;border-radius:var(--rf);background:rgba(13,18,32,.7);backdrop-filter:blur(20px) saturate(160%);border:1px solid var(--border-s);box-shadow:0 8px 32px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05)}
+.h1b::after{content:'';position:absolute;inset:-1px;border-radius:var(--rf);background:linear-gradient(90deg,transparent,rgba(51,128,255,.3),rgba(124,58,237,.3),transparent);z-index:-1;opacity:.6;filter:blur(8px)}
+.h1l{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.1rem;letter-spacing:-.03em;flex-shrink:0;padding-left:8px}
+.h1li{width:32px;height:32px;border-radius:8px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px rgba(51,128,255,.35)}
+.h1n{display:flex;align-items:center;gap:2px}
+.h1nl{position:relative;padding:8px 14px;border-radius:var(--rf);font-size:13px;font-weight:600;color:var(--tm);transition:all var(--tf)}
+.h1nl:hover{color:#fff;background:rgba(255,255,255,.06)}
+.h1dd{position:relative}
+.h1db{display:inline-flex;align-items:center;gap:4px;padding:8px 14px;border-radius:var(--rf);font-size:13px;font-weight:600;color:var(--tm);transition:all var(--tf)}
+.h1db:hover{color:#fff;background:rgba(255,255,255,.06)}
+.h1db .ch{transition:transform var(--tf)}.h1dd:hover .h1db .ch{transform:rotate(180deg)}
+.h1mg{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-8px);min-width:720px;background:rgba(12,16,28,.97);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--border-s);border-radius:var(--r20);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:16px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h1dd:hover .h1mg{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.h1mgg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.h1mi{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--r8);transition:background var(--tf)}
+.h1mi:hover{background:rgba(51,128,255,.08)}
+.h1mii{width:32px;height:32px;border-radius:6px;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.h1mi:hover .h1mii{background:rgba(255,255,255,.08)}
+.h1mil{font-size:12px;font-weight:600;color:var(--text)}.h1mid{font-size:10px;color:var(--td);line-height:1.3}
+.h1sm{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-8px);min-width:170px;background:rgba(12,16,28,.97);backdrop-filter:blur(24px);border:1px solid var(--border-s);border-radius:var(--r12);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:6px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h1dd:hover .h1sm{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.h1sm a{display:block;padding:7px 10px;font-size:12px;font-weight:500;color:var(--tm);border-radius:6px;transition:all var(--tf)}
+.h1sm a:hover{color:#fff;background:rgba(51,128,255,.08)}
+.h1cta{padding:8px 18px;border-radius:var(--rf);font-size:13px;font-weight:700;color:#fff;background:var(--gp);box-shadow:var(--sg);transition:all var(--tf);flex-shrink:0}
+.h1cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(51,128,255,.5)}
+
+/* D2 Split Center Logo */
+.h2b{position:relative;width:100%;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;padding:14px 24px;border-radius:0 0 var(--r12) var(--r12);background:rgba(10,14,26,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.h2lf,.h2rt{display:flex;align-items:center;gap:2px}.h2rt{justify-content:flex-end}
+.h2lk{position:relative;padding:8px 14px;font-size:13px;font-weight:600;color:var(--tm);transition:color var(--tf)}
+.h2lk::after{content:'';position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:0;height:2px;border-radius:2px;background:var(--gp);transition:width var(--tb)}
+.h2lk:hover{color:#fff}.h2lk:hover::after{width:50%}
+.h2lg{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.15rem;letter-spacing:-.03em;justify-self:center}
+.h2lgi{width:34px;height:34px;border-radius:8px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 14px rgba(51,128,255,.35)}
+.h2dd{position:relative}
+.h2db{display:inline-flex;align-items:center;gap:4px;padding:8px 14px;font-size:13px;font-weight:600;color:var(--tm);transition:color var(--tf)}
+.h2db .ch{transition:transform var(--tf)}.h2dd:hover .h2db{color:#fff}.h2dd:hover .h2db .ch{transform:rotate(180deg)}
+.h2mp{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:900px;max-width:calc(100vw - 48px);background:rgba(10,14,26,.98);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--border-s);border-radius:var(--r20);box-shadow:0 20px 60px rgba(0,0,0,.5);padding:20px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h2dd:hover .h2mp{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.h2mh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--td);margin-bottom:12px;padding:0 4px}
+.h2mgg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.h2cc{display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:var(--r12);background:rgba(255,255,255,.02);border:1px solid var(--border);transition:all var(--tf)}
+.h2cc:hover{background:rgba(51,128,255,.06);border-color:rgba(51,128,255,.2);transform:translateY(-2px)}
+.h2cci{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04)}
+.h2cc:hover .h2cci{background:rgba(255,255,255,.08)}
+.h2ccn{font-size:13px;font-weight:700;color:var(--text)}.h2ccd{font-size:11px;color:var(--td);line-height:1.3}
+.h2sm{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);min-width:180px;background:rgba(10,14,26,.98);backdrop-filter:blur(24px);border:1px solid var(--border-s);border-radius:var(--r12);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:6px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h2dd:hover .h2sm{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.h2sm a{display:block;padding:8px 12px;font-size:13px;font-weight:500;color:var(--tm);border-radius:6px;transition:all var(--tf)}
+.h2sm a:hover{color:#fff;background:rgba(51,128,255,.08)}
+.h2si{width:36px;height:36px;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;color:var(--tm);transition:all var(--tf)}
+.h2si:hover{color:#fff;background:rgba(255,255,255,.06)}
+
+/* D3 Minimal Bar + Sidebar */
+.h3b{position:relative;width:100%;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:12px 20px;border-radius:var(--r12);background:rgba(10,14,26,.8);backdrop-filter:blur(16px);border:1px solid var(--border)}
+.h3lf{display:flex;align-items:center;gap:16px}
+.h3bg{display:flex;flex-direction:column;gap:5px;width:36px;height:36px;border-radius:var(--r8);align-items:center;justify-content:center;transition:background var(--tf)}
+.h3bg:hover{background:rgba(255,255,255,.06)}
+.h3bg span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px;transition:all var(--tb)}
+.h3bg.o span:nth-child(1){transform:translateY(7px) rotate(45deg)}.h3bg.o span:nth-child(2){opacity:0}.h3bg.o span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.h3lg{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.1rem;letter-spacing:-.03em}
+.h3lgi{width:32px;height:32px;border-radius:8px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px rgba(51,128,255,.35)}
+.h3cn{display:flex;align-items:center;gap:0}
+.h3lk{padding:8px 12px;font-size:13px;font-weight:600;color:var(--tm);transition:color var(--tf)}.h3lk:hover{color:#fff}
+.h3rt{display:flex;align-items:center;gap:8px}
+.h3si{width:36px;height:36px;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;color:var(--tm);transition:all var(--tf)}.h3si:hover{color:#fff;background:rgba(255,255,255,.06)}
+.h3cta{padding:8px 16px;border-radius:var(--r8);font-size:13px;font-weight:700;color:#fff;background:var(--gp);box-shadow:var(--sg);transition:all var(--tf)}.h3cta:hover{transform:translateY(-1px)}
+.h3sb{position:fixed;top:0;left:0;bottom:0;width:380px;max-width:85vw;background:rgba(10,14,26,.98);backdrop-filter:blur(24px) saturate(180%);border-right:1px solid var(--border-s);transform:translateX(-100%);transition:transform var(--ts);z-index:200;overflow-y:auto;padding:20px}
+.h3sb.o{transform:translateX(0)}
+.h3ov{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:all var(--tb);z-index:199}
+.h3ov.o{opacity:1;visibility:visible}
+.h3sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.h3slg{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.1rem}
+.h3cl{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--tm);transition:all var(--tf)}.h3cl:hover{color:#fff;background:rgba(255,255,255,.06)}
+.h3sl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--td);margin:16px 0 8px}
+.h3sg{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.h3sc{display:flex;align-items:center;gap:8px;padding:10px;border-radius:var(--r8);background:rgba(255,255,255,.02);border:1px solid var(--border);transition:all var(--tf)}
+.h3sc:hover{background:rgba(51,128,255,.06);border-color:rgba(51,128,255,.15);transform:translateX(4px)}
+.h3sci{width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.h3scn{font-size:11px;font-weight:600;color:var(--text)}
+.h3slk{display:block;padding:8px 10px;font-size:13px;font-weight:500;color:var(--tm);border-radius:6px;transition:all var(--tf)}
+.h3slk:hover{color:#fff;background:rgba(255,255,255,.04);padding-left:14px}
+
+/* D4 Gradient Underline + Card Dropdown */
+.h4b{position:relative;width:100%;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 24px;height:64px;border-radius:var(--r12);background:rgba(13,18,32,.6);backdrop-filter:blur(20px) saturate(160%);border:1px solid var(--border)}
+.h4lg{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.15rem;letter-spacing:-.03em;flex-shrink:0}
+.h4lgi{width:34px;height:34px;border-radius:8px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 14px rgba(51,128,255,.35)}
+.h4nv{display:flex;align-items:center;gap:0;height:100%}
+.h4lk{position:relative;display:flex;align-items:center;height:100%;padding:0 16px;font-size:13px;font-weight:600;color:var(--tm);transition:color var(--tf)}
+.h4lk::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:3px;border-radius:3px 3px 0 0;background:var(--gp);transform:scaleX(0);transform-origin:center;transition:transform var(--tb)}
+.h4lk:hover{color:#fff}.h4lk:hover::after{transform:scaleX(1)}
+.h4dd{position:relative;height:100%;display:flex;align-items:center}
+.h4db{display:inline-flex;align-items:center;gap:4px;height:100%;padding:0 16px;font-size:13px;font-weight:600;color:var(--tm);transition:color var(--tf)}
+.h4db .ch{transition:transform var(--tf)}.h4dd:hover .h4db{color:#fff}.h4dd:hover .h4db .ch{transform:rotate(180deg)}
+.h4dd::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:3px;border-radius:3px 3px 0 0;background:var(--gp);transform:scaleX(0);transition:transform var(--tb)}
+.h4dd:hover::after{transform:scaleX(1)}
+.h4mg{position:absolute;top:100%;left:0;transform:translateY(-8px);min-width:680px;background:rgba(13,18,32,.98);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--border-s);border-radius:0 0 var(--r20) var(--r20);border-top:3px solid var(--p);box-shadow:0 20px 60px rgba(0,0,0,.5);padding:16px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h4dd:hover .h4mg{opacity:1;visibility:visible;transform:translateY(0)}
+.h4mgg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.h4mi{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r8);transition:all var(--tf)}
+.h4mi:hover{background:rgba(255,255,255,.04)}
+.h4mii{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform var(--tf)}
+.h4mi:hover .h4mii{transform:scale(1.1)}
+.h4mil{font-size:12px;font-weight:600;color:var(--text)}.h4mid{font-size:10px;color:var(--td)}
+.h4sm{position:absolute;top:100%;left:0;transform:translateY(-8px);min-width:180px;background:rgba(13,18,32,.98);backdrop-filter:blur(24px);border:1px solid var(--border-s);border-radius:0 0 var(--r12) var(--r12);border-top:3px solid var(--a);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:6px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h4dd:hover .h4sm{opacity:1;visibility:visible;transform:translateY(0)}
+.h4sm a{display:block;padding:8px 12px;font-size:12px;font-weight:500;color:var(--tm);border-radius:6px;transition:all var(--tf)}
+.h4sm a:hover{color:#fff;background:rgba(124,58,237,.08)}
+.h4ac{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.h4si{width:36px;height:36px;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;color:var(--tm);transition:all var(--tf)}.h4si:hover{color:#fff;background:rgba(255,255,255,.06)}
+.h4cta{padding:8px 18px;border-radius:var(--r8);font-size:13px;font-weight:700;color:#fff;background:var(--gp);box-shadow:var(--sg);transition:all var(--tf)}.h4cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(51,128,255,.5)}
+
+/* D5 Pill Nav + Icon Mega Grid */
+.h5w{width:100%;max-width:1100px;margin:0 auto;border-radius:var(--r12);overflow:hidden;border:1px solid var(--border)}
+.h5u{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:6px 20px;background:rgba(10,14,26,.6);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);font-size:11px}
+.h5ul{display:flex;align-items:center;gap:12px;color:var(--td)}
+.h5dt{width:6px;height:6px;border-radius:50%;background:var(--e);box-shadow:0 0 8px var(--e);animation:pu 2s infinite}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.4}}
+.h5tg{display:flex;align-items:center;gap:6px}
+.h5t{padding:2px 10px;border-radius:var(--rf);background:rgba(255,255,255,.04);color:var(--tm);font-weight:600;transition:all var(--tf)}.h5t:hover{background:rgba(51,128,255,.1);color:#fff}
+.h5b{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:10px 20px;background:rgba(13,18,32,.7);backdrop-filter:blur(20px) saturate(160%)}
+.h5lg{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.1rem;letter-spacing:-.03em;flex-shrink:0}
+.h5lgi{width:32px;height:32px;border-radius:8px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px rgba(51,128,255,.35)}
+.h5nv{display:flex;align-items:center;gap:4px}
+.h5pl{padding:7px 14px;border-radius:var(--rf);font-size:12px;font-weight:600;color:var(--tm);transition:all var(--tf)}.h5pl:hover{color:#fff;background:rgba(255,255,255,.06)}
+.h5pl.a{color:#fff;background:var(--gp);box-shadow:0 2px 12px rgba(51,128,255,.3)}
+.h5dd{position:relative}
+.h5db{display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:var(--rf);font-size:12px;font-weight:600;color:var(--tm);transition:all var(--tf)}.h5db:hover{color:#fff;background:rgba(255,255,255,.06)}
+.h5db .ch{transition:transform var(--tf)}.h5dd:hover .h5db .ch{transform:rotate(180deg)}
+.h5mg{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-8px);width:760px;max-width:calc(100vw - 48px);background:rgba(12,16,28,.98);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--border-s);border-radius:var(--r20);box-shadow:0 20px 60px rgba(0,0,0,.5);padding:20px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h5dd:hover .h5mg{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.h5mgg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.h5ct{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px;border-radius:var(--r12);background:rgba(255,255,255,.02);border:1px solid var(--border);transition:all var(--tb);position:relative;overflow:hidden}
+.h5ct::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cc,var(--p));opacity:.6;transition:opacity var(--tf)}.h5ct:hover::before{opacity:1}
+.h5ct:hover{background:rgba(255,255,255,.04);border-color:var(--border-s);transform:translateY(-3px)}
+.h5ci{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04);transition:all var(--tb)}.h5ct:hover .h5ci{transform:scale(1.1) rotate(-5deg)}
+.h5cn{font-size:12px;font-weight:700;color:var(--text)}.h5cd{font-size:10px;color:var(--td);line-height:1.3}
+.h5sm{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-8px);min-width:170px;background:rgba(12,16,28,.98);backdrop-filter:blur(24px);border:1px solid var(--border-s);border-radius:var(--r12);box-shadow:0 16px 48px rgba(0,0,0,.5);padding:6px;opacity:0;visibility:hidden;transition:all var(--tb);z-index:100}
+.h5dd:hover .h5sm{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.h5sm a{display:block;padding:7px 10px;font-size:12px;font-weight:500;color:var(--tm);border-radius:6px;transition:all var(--tf)}.h5sm a:hover{color:#fff;background:rgba(51,128,255,.08)}
+.h5cta{padding:7px 16px;border-radius:var(--rf);font-size:12px;font-weight:700;color:#fff;background:var(--gp);box-shadow:var(--sg);transition:all var(--tf);flex-shrink:0}.h5cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(51,128,255,.5)}
+
+@media(max-width:768px){.h1n,.h2lf .h2lk,.h2rt .h2dd,.h4nv,.h5nv{display:none}}
+</style>
+</head>
+<body>
+
+<!-- DESIGN 1 — Floating Glass Pill -->
+<section class="sec">
+  <div class="dl">Design 01</div>
+  <div class="dt"><span>Floating Glass Pill</span></div>
+  <p class="dd">A floating pill-shaped glass bar with a gradient glow border. Nav items are compact pills; the topics mega menu opens on hover with a 3-column grid. CTA button on the right.</p>
+  <div class="demo">
+    <div class="h1b">
+      <a href="/" class="h1l"><span class="h1li">⚡</span><span>TechScope</span></a>
+      <nav class="h1n">
+        <a href="/" class="h1nl">Home</a>
+        <div class="h1dd"><button class="h1db">topics<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h1mg"><div class="h1mgg" id="g1"></div></div></div>
+        <a href="#tools" class="h1nl">Tools</a>
+        <a href="#trending" class="h1nl">Trending</a>
+        <div class="h1dd"><button class="h1db">Resources<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h1sm"><a href="/blog">Blog</a><a href="/guides">Guides</a><a href="/podcast">Podcast</a></div></div>
+        <div class="h1dd"><button class="h1db">Hub<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h1sm"><a href="/resources">Resources</a><a href="/comparisons">Comparisons</a><a href="/glossary">Glossary</a></div></div>
+        <div class="h1dd"><button class="h1db">About<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h1sm"><a href="/about">About Us</a><a href="#community">Community</a><a href="/contact">Contact Us</a><a href="/recommendations">Recommendations</a></div></div>
+        <a href="/faq" class="h1nl">FAQ</a>
+      </nav>
+      <a href="#subscribe" class="h1cta">Subscribe</a>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN 2 — Split Center Logo -->
+<section class="sec">
+  <div class="dl">Design 02</div>
+  <div class="dt"><span>Split Center Logo</span></div>
+  <p class="dd">Logo sits dead-center with nav links split to left and right. The topics dropdown opens a wide 4-column card grid with colored icon tiles. Clean underline indicators on hover.</p>
+  <div class="demo">
+    <div class="h2b">
+      <div class="h2lf">
+        <a href="/" class="h2lk">Home</a>
+        <div class="h2dd"><button class="h2db">topics<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h2mp"><div class="h2mh">Explore 12 Emerging Tech topics</div><div class="h2mgg" id="g2"></div></div></div>
+        <a href="#tools" class="h2lk">Tools</a>
+        <a href="#trending" class="h2lk">Trending</a>
+      </div>
+      <a href="/" class="h2lg"><span class="h2lgi">⚡</span><span>TechScope</span></a>
+      <div class="h2rt">
+        <div class="h2dd"><button class="h2db">Resources<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h2sm"><a href="/blog">Blog</a><a href="/guides">Guides</a><a href="/podcast">Podcast</a></div></div>
+        <div class="h2dd"><button class="h2db">Hub<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h2sm"><a href="/resources">Resources</a><a href="/comparisons">Comparisons</a><a href="/glossary">Glossary</a></div></div>
+        <div class="h2dd"><button class="h2db">About<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h2sm"><a href="/about">About Us</a><a href="#community">Community</a><a href="/contact">Contact Us</a><a href="/recommendations">Recommendations</a></div></div>
+        <a href="/faq" class="h2lk">FAQ</a>
+        <a href="#search" class="h2si"><svg class="ic" width="18" height="18" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN 3 — Minimal Bar + Sidebar -->
+<section class="sec">
+  <div class="dl">Design 03</div>
+  <div class="dt"><span>Minimal Bar + Sidebar</span></div>
+  <p class="dd">Ultra-minimal top bar with just logo, a few inline links, and a hamburger. Clicking the hamburger opens a full-height left sidebar with a 2-column topic grid and all nav sections. Click anywhere outside to close.</p>
+  <div class="demo">
+    <div class="h3b">
+      <div class="h3lf">
+        <button class="h3bg" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        <a href="/" class="h3lg"><span class="h3lgi">⚡</span><span>TechScope</span></a>
+      </div>
+      <nav class="h3cn">
+        <a href="/" class="h3lk">Home</a><a href="#tools" class="h3lk">Tools</a><a href="#trending" class="h3lk">Trending</a><a href="/faq" class="h3lk">FAQ</a>
+      </nav>
+      <div class="h3rt">
+        <a href="#search" class="h3si"><svg class="ic" width="18" height="18" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></a>
+        <a href="#subscribe" class="h3cta">Subscribe</a>
+      </div>
+    </div>
+  </div>
+  <div class="h3ov" id="overlay"></div>
+  <aside class="h3sb" id="sidebar">
+    <div class="h3sh">
+      <div class="h3slg"><span class="h3lgi" style="width:28px;height:28px;font-size:.875rem">⚡</span><span>TechScope</span></div>
+      <button class="h3cl" id="close" aria-label="Close menu"><svg class="ic" width="18" height="18" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="h3sl">topics</div>
+    <div class="h3sg" id="g3"></div>
+    <div class="h3sl">Explore</div>
+    <a href="#tools" class="h3slk">Tools</a><a href="#trending" class="h3slk">Trending</a>
+    <div class="h3sl">Resources</div>
+    <a href="/blog" class="h3slk">Blog</a><a href="/guides" class="h3slk">Guides</a><a href="/podcast" class="h3slk">Podcast</a>
+    <div class="h3sl">Hub</div>
+    <a href="/resources" class="h3slk">Resources</a><a href="/comparisons" class="h3slk">Comparisons</a><a href="/glossary" class="h3slk">Glossary</a>
+    <div class="h3sl">About</div>
+    <a href="/about" class="h3slk">About Us</a><a href="#community" class="h3slk">Community</a><a href="/contact" class="h3slk">Contact Us</a><a href="/recommendations" class="h3slk">Recommendations</a>
+    <a href="/faq" class="h3slk" style="margin-top:8px">FAQ</a>
+  </aside>
+</section>
+
+<!-- DESIGN 4 — Gradient Underline + Card Dropdown -->
+<section class="sec">
+  <div class="dl">Design 04</div>
+  <div class="dt"><span>Gradient Underline + Card Dropdown</span></div>
+  <p class="dd">Clean full-width bar with animated gradient underline indicators. Dropdowns have a colored top border (blue for topics, purple for others) and card-style items with hover scale on icons.</p>
+  <div class="demo">
+    <div class="h4b">
+      <a href="/" class="h4lg"><span class="h4lgi">⚡</span><span>TechScope</span></a>
+      <nav class="h4nv">
+        <a href="/" class="h4lk">Home</a>
+        <div class="h4dd"><button class="h4db">topics<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h4mg"><div class="h4mgg" id="g4"></div></div></div>
+        <a href="#tools" class="h4lk">Tools</a>
+        <a href="#trending" class="h4lk">Trending</a>
+        <div class="h4dd"><button class="h4db">Resources<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h4sm"><a href="/blog">Blog</a><a href="/guides">Guides</a><a href="/podcast">Podcast</a></div></div>
+        <div class="h4dd"><button class="h4db">Hub<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h4sm"><a href="/resources">Resources</a><a href="/comparisons">Comparisons</a><a href="/glossary">Glossary</a></div></div>
+        <div class="h4dd"><button class="h4db">About<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h4sm"><a href="/about">About Us</a><a href="#community">Community</a><a href="/contact">Contact Us</a><a href="/recommendations">Recommendations</a></div></div>
+        <a href="/faq" class="h4lk">FAQ</a>
+      </nav>
+      <div class="h4ac">
+        <a href="#search" class="h4si"><svg class="ic" width="18" height="18" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></a>
+        <a href="#subscribe" class="h4cta">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN 5 — Pill Nav + Icon Mega Grid -->
+<section class="sec">
+  <div class="dl">Design 05</div>
+  <div class="dt"><span>Pill Nav + Icon Mega Grid</span></div>
+  <p class="dd">Two-tier header: a thin utility strip on top with live status and trending tags, then the main bar with pill-shaped nav items. The topics mega menu uses a 4-column card grid with colored top borders per topic.</p>
+  <div class="demo">
+    <div class="h5w">
+      <div class="h5u">
+        <div class="h5ul"><span class="h5dt"></span><span>Live — 12 topics tracked</span></div>
+        <div class="h5tg"><a href="#trending" class="h5t">#AI</a><a href="#trending" class="h5t">#Fusion</a><a href="#trending" class="h5t">#Quantum</a><a href="#trending" class="h5t">#Cybersecurity</a></div>
+      </div>
+      <div class="h5b">
+        <a href="/" class="h5lg"><span class="h5lgi">⚡</span><span>TechScope</span></a>
+        <nav class="h5nv">
+          <a href="/" class="h5pl a">Home</a>
+          <div class="h5dd"><button class="h5db">topics<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h5mg"><div class="h5mgg" id="g5"></div></div></div>
+          <a href="#tools" class="h5pl">Tools</a>
+          <a href="#trending" class="h5pl">Trending</a>
+          <div class="h5dd"><button class="h5db">Resources<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h5sm"><a href="/blog">Blog</a><a href="/guides">Guides</a><a href="/podcast">Podcast</a></div></div>
+          <div class="h5dd"><button class="h5db">Hub<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h5sm"><a href="/resources">Resources</a><a href="/comparisons">Comparisons</a><a href="/glossary">Glossary</a></div></div>
+          <div class="h5dd"><button class="h5db">About<svg class="ch ic" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="h5sm"><a href="/about">About Us</a><a href="#community">Community</a><a href="/contact">Contact Us</a><a href="/recommendations">Recommendations</a></div></div>
+          <a href="/faq" class="h5pl">FAQ</a>
+        </nav>
+        <a href="#subscribe" class="h5cta">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const cats = [
+  {label:'Artificial Intelligence',href:'/topics/AI',icon:'cpu',color:'#3b82f6',desc:'LLMs, agents & the race to AGI'},
+  {label:'Cybersecurity',href:'/topics/Cybersecurity',icon:'shield',color:'#ef4444',desc:'Post-quantum crypto & AI defense'},
+  {label:'Space Exploration',href:'/topics/Space',icon:'rocket',color:'#06b6d4',desc:'Launch vehicles & lunar economy'},
+  {label:'Biotechnology',href:'/topics/Biotech',icon:'dna',color:'#10b981',desc:'CRISPR, mRNA & lab-grown organs'},
+  {label:'Nuclear Energy',href:'/topics/Nuclear',icon:'atom',color:'#f59e0b',desc:'SMRs & next-gen fission reactors'},
+  {label:'Energy Storage',href:'/topics/Energy-Storage',icon:'battery',color:'#f97316',desc:'Solid-state batteries & grid storage'},
+  {label:'Robotics',href:'/topics/Robotics',icon:'bot',color:'#ec4899',desc:'Humanoids, drones & automation'},
+  {label:'Autonomous Vehicles',href:'/topics/AV',icon:'car',color:'#8b5cf6',desc:'Robotaxis & Level 4 autonomy'},
+  {label:'Quantum Computing',href:'/topics/Quantum',icon:'sparkles',color:'#a78bfa',desc:'Qubits & quantum advantage'},
+  {label:'Advanced Materials',href:'/topics/Materials',icon:'flask',color:'#f43f5e',desc:'Graphene & superconductors'},
+  {label:'Brain-Computer Interfaces',href:'/topics/BCI',icon:'chip',color:'#0ea5e9',desc:'Neural implants & EEG control'},
+  {label:'Nuclear Fusion',href:'/topics/Fusion',icon:'flame',color:'#fb923c',desc:'Tokamaks & path to net power'},
+];
+const icons = {
+  cpu:'<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>',
+  shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>',
+  rocket:'<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>',
+  dna:'<path d="M2 15c6.667-6 13.333 0 20-6-6.667 6-13.333 0-20 6z"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m17 6-2.5-2.5"/><path d="m7 18 2.5 2.5"/>',
+  atom:'<circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5z"/>',
+  battery:'<rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="16" y1="11" y2="11"/><line x1="6" x2="6" y1="11" y2="13"/><line x1="10" x2="10" y1="11" y2="13"/><line x1="14" x2="14" y1="11" y2="13"/>',
+  bot:'<path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>',
+  car:'<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18.4 8.5c-.3-.8-1-1.3-1.9-1.3H7.5c-.8 0-1.6.5-1.9 1.3l-2.1 4.6C2.7 11.3 2 12.1 2 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>',
+  sparkles:'<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/>',
+  flask:'<path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/>',
+  chip:'<rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><path d="M8 4h8"/><circle cx="8" cy="14" r="1"/><circle cx="16" cy="14" r="1"/><path d="M8 17h8"/>',
+  flame:'<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>',
+};
+function svg(icon,color){return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${icons[icon]||''}</svg>`}
+
+// Design 1 grid
+document.getElementById('g1').innerHTML = cats.map(c=>`<a href="${c.href}" class="h1mi"><span class="h1mii" style="color:${c.color}">${svg(c.icon,c.color)}</span><span><span class="h1mil">${c.label}</span><br><span class="h1mid">${c.desc}</span></span></a>`).join('');
+
+// Design 2 grid
+document.getElementById('g2').innerHTML = cats.map(c=>`<a href="${c.href}" class="h2cc"><span class="h2cci" style="color:${c.color}">${svg(c.icon,c.color)}</span><span class="h2ccn">${c.label}</span><span class="h2ccd">${c.desc}</span></a>`).join('');
+
+// Design 3 sidebar grid
+document.getElementById('g3').innerHTML = cats.map(c=>`<a href="${c.href}" class="h3sc"><span class="h3sci" style="color:${c.color}">${svg(c.icon,c.color)}</span><span class="h3scn">${c.label}</span></a>`).join('');
+
+// Design 4 grid
+document.getElementById('g4').innerHTML = cats.map(c=>`<a href="${c.href}" class="h4mi"><span class="h4mii" style="color:${c.color}">${svg(c.icon,c.color)}</span><span><span class="h4mil">${c.label}</span><br><span class="h4mid">${c.desc}</span></span></a>`).join('');
+
+// Design 5 grid
+document.getElementById('g5').innerHTML = cats.map(c=>`<a href="${c.href}" class="h5ct" style="--cc:${c.color}"><span class="h5ci" style="color:${c.color}">${svg(c.icon,c.color)}</span><span class="h5cn">${c.label}</span><span class="h5cd">${c.desc}</span></a>`).join('');
+
+// Sidebar toggle
+const burger=document.getElementById('burger'),sidebar=document.getElementById('sidebar'),overlay=document.getElementById('overlay'),closeBtn=document.getElementById('close');
+function toggleSidebar(){burger.classList.toggle('o');sidebar.classList.toggle('o');overlay.classList.toggle('o')}
+burger.addEventListener('click',toggleSidebar);
+closeBtn.addEventListener('click',toggleSidebar);
+overlay.addEventListener('click',toggleSidebar);
+sidebar.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('o');sidebar.classList.remove('o');overlay.classList.remove('o')}));
+</script>
+</body>
+</html>

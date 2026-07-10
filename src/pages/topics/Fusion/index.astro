@@ -1,0 +1,365 @@
+---
+/**
+ * Fusion topic Page — Premium Redesign
+ * Unique layout: centered hero, magazine project cards,
+ * alternating-side timeline, temperature bars.
+ * 11 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { fusionContent } from '../../../data/topics/Fusion/fusion-content';
+import './fusion-styles.css';
+const c = fusionContent;
+
+const topicImages = [
+  '/images/fusion-01-tokamak-plasma.webp',
+  '/images/fusion-04-laser-ignition.webp',
+  '/images/fusion-10-compact-prototype.webp',
+  '/images/fusion-02-stellarator-coils.webp',
+  '/images/fusion-05-tritium-fuel.webp',
+  '/images/fusion-06-magnet-winding.webp',
+  '/images/fusion-07-power-plant-skyline.webp',
+  '/images/fusion-08-helium3-mining.webp',
+  '/images/fusion-09-plasma-spectroscopy.webp',
+];
+
+const projectImages = [
+  '/images/fusion-01-tokamak-plasma.webp',
+  '/images/fusion-10-compact-prototype.webp',
+  '/images/fusion-08-helium3-mining.webp',
+  '/images/fusion-04-laser-ignition.webp',
+];
+
+const fuelBars = ['15%', '40%', '100%'];
+
+const marqueeItems = ['ITER', 'SPARC', 'Helion', 'NIF Ignition', 'Tokamaks', 'Stellarators', 'D-T Fuel', 'Net Energy Gain', '$9.2B Investment', '52 Companies', '2030s Commercial', '150M°C Plasma'];
+---
+
+<BaseLayout title={`${c.name} — Investment, Technology & Timeline 2026-2040`} description={c.description} keywords="nuclear fusion, fusion energy, ITER, tokamak, stellarator, SPARC, Commonwealth Fusion, Helion, NIF ignition, inertial confinement, magnetic confinement, D-T fuel, tritium breeding, net energy gain, fusion startups, fusion investment, fusion timeline">
+  <div class="fu-page">
+
+    {/* ══ 1. HERO — Centered with full-bg image ══ */}
+    <section class="fu-hero">
+      <div class="fu-hero-bg">
+        <img src="/images/003-fusion-tokamak-reactor.webp" alt="Fusion tokamak reactor" loading="eager" />
+      </div>
+      <div class="fu-grid-overlay"></div>
+      <div class="fu-orb fu-hero-orb-1"></div>
+      <div class="fu-orb fu-hero-orb-2"></div>
+      <div class="fu-orb fu-hero-orb-3"></div>
+      <div class="fu-hero-inner">
+        <span class="fu-hero-pill"><span class="fu-hero-dot"></span> Live · Updated 2026</span>
+        <h1>Nuclear <span class="fu-grad-text">Fusion</span></h1>
+        <p class="fu-hero-tagline">{c.tagline}</p>
+        <p class="fu-hero-desc">{c.description}</p>
+        <div class="fu-hero-ctas">
+          <a href="#topics" class="fu-btn fu-btn-primary">Explore Topics →</a>
+          <a href="#faq" class="fu-btn fu-btn-secondary">Read FAQ</a>
+        </div>
+        <div class="fu-hero-stats">
+          {c.heroStats.map((s) => (
+            <div class="fu-hero-stat">
+              <span class="fu-hero-stat-value">{s.value}</span>
+              <span class="fu-hero-stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="fu-marquee">
+      <div class="fu-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'fu-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="fu-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. MARKET STATS ══ */}
+    <section class="fu-section">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">Market Snapshot</span>
+        <h2 class="fu-section-title fu-reveal">Fusion by the <span class="fu-grad-text">Numbers</span></h2>
+        <p class="fu-section-sub fu-reveal">Real data from the Fusion Industry Association, DOE, and national labs — the fusion investment and progress landscape at a glance.</p>
+        <div class="fu-market-grid">
+          {c.marketStats.map((s) => (
+            <div class="fu-market-card fu-reveal">
+              <div class="fu-market-value">{s.value}</div>
+              <div class="fu-market-label">{s.label}</div>
+              <div class="fu-market-source">{s.source}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. TOPICS — Image-header cards ══ */}
+    <section class="fu-section fu-section-alt" id="topics">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">Core Topics</span>
+        <h2 class="fu-section-title fu-reveal">What's Driving Fusion <span class="fu-grad-text">Search Demand</span></h2>
+        <p class="fu-section-sub fu-reveal">Nine topics capturing the most search interest — from tokamaks to fuel cycles, each backed by real volume data.</p>
+        <div class="fu-topics-grid">
+          {c.topics.map((t, i) => (
+            <div class="fu-topic-card fu-reveal">
+              <div class="fu-topic-img-wrap">
+                <img class="fu-topic-img" src={topicImages[i]} alt={t.title} loading="lazy" />
+                <div class="fu-topic-img-overlay"></div>
+                <div class="fu-topic-icon">{t.icon}</div>
+              </div>
+              <div class="fu-topic-body">
+                <h3 class="fu-topic-title">{t.title}</h3>
+                <p class="fu-topic-desc">{t.description}</p>
+                <div class="fu-topic-meta">
+                  <span class="fu-topic-trend">{t.trend}</span>
+                  <span class="fu-topic-searches">{t.searches}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. APPROACHES — 3-col with colored top borders ══ */}
+    <section class="fu-section">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">Technical Approaches</span>
+        <h2 class="fu-section-title fu-reveal">Six Paths to <span class="fu-grad-text">Fusion</span></h2>
+        <p class="fu-section-sub fu-reveal">From tokamaks to field-reversed configurations — the competing approaches that could unlock commercial fusion energy.</p>
+        <div class="fu-approach-grid">
+          {c.approaches.map((a) => (
+            <div class="fu-approach-card fu-reveal" style={`border-top-color:${a.color}`}>
+              <div class="fu-approach-header">
+                <div class="fu-approach-icon" style={`background:${a.color}22`}>{a.icon}</div>
+                <h3 class="fu-approach-name">{a.name}</h3>
+              </div>
+              <p class="fu-approach-desc">{a.description}</p>
+              <div class="fu-approach-companies">{a.companies}</div>
+              <span class="fu-approach-status" style={`background:${a.color}22;color:${a.color}`}>{a.status}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. KEY PROJECTS — Magazine-style with images ══ */}
+    <section class="fu-section fu-section-alt">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">Flagship Projects</span>
+        <h2 class="fu-section-title fu-reveal">The Biggest <span class="fu-grad-text">Experiments</span> in Fusion</h2>
+        <p class="fu-section-sub fu-reveal">From ITER's $20B international megaproject to Helion's Microsoft PPA — the projects racing to put fusion on the grid.</p>
+        <div class="fu-project-grid">
+          {c.keyProjects.map((p, i) => (
+            <div class="fu-project-card fu-reveal">
+              <div class="fu-project-img-wrap">
+                <img class="fu-project-img" src={projectImages[i]} alt={p.name} loading="lazy" />
+                <div class="fu-project-img-overlay"></div>
+                <div class="fu-project-name-wrap">
+                  <h3 class="fu-project-name">{p.name}</h3>
+                  <div class="fu-project-type">{p.type}</div>
+                </div>
+              </div>
+              <div class="fu-project-body">
+                <div class="fu-project-meta">
+                  <span class="fu-project-meta-item">📍 {p.location}</span>
+                  <span class="fu-project-meta-item">🎯 {p.milestone}</span>
+                  <span class="fu-project-meta-item">💰 {p.investment}</span>
+                </div>
+                <p class="fu-project-detail">{p.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. FUEL CYCLES — Cards with temperature bars ══ */}
+    <section class="fu-section">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">Fuel Science</span>
+        <h2 class="fu-section-title fu-reveal">Fusion <span class="fu-grad-text">Fuel Cycles</span></h2>
+        <p class="fu-section-sub fu-reveal">The three main fusion reactions — each with different temperature requirements, energy gains, and engineering challenges.</p>
+        <div class="fu-fuel-grid">
+          {c.fuelCycles.map((f, i) => (
+            <div class="fu-fuel-card fu-reveal">
+              <div class="fu-fuel-icon">{f.icon}</div>
+              <div class="fu-fuel-reaction">{f.reaction}</div>
+              <div class="fu-fuel-temp">{f.temperature} · {f.gain}</div>
+              <div class="fu-fuel-temp-bar"><div class="fu-fuel-temp-bar-fill" style={`width:${fuelBars[i]}`}></div></div>
+              <div class="fu-fuel-advantage">{f.advantage}</div>
+              <div class="fu-fuel-challenge">{f.challenge}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. INVESTMENT — Split layout ══ */}
+    <section class="fu-section fu-invest">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">Investment</span>
+        <div class="fu-invest-inner">
+          <div class="fu-invest-left fu-reveal">
+            <h3>{c.investmentLandscape.title}</h3>
+            <p class="fu-invest-desc">{c.investmentLandscape.description}</p>
+            <div class="fu-invest-stats">
+              {c.investmentLandscape.stats.map((s) => (
+                <div class="fu-invest-stat">
+                  <div class="fu-invest-stat-val">{s.value}</div>
+                  <div class="fu-invest-stat-lbl">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="fu-invest-regions fu-reveal">
+            {c.investmentLandscape.regions.map((r) => (
+              <div class="fu-invest-region">
+                <h4 class="fu-invest-region-name">{r.region}</h4>
+                <div class="fu-invest-region-share">{r.share}</div>
+                <p class="fu-invest-region-detail">{r.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. CHALLENGES — 3x2 grid ══ */}
+    <section class="fu-section">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">Engineering Hurdles</span>
+        <h2 class="fu-section-title fu-reveal">The <span class="fu-grad-text">Challenges</span> Ahead</h2>
+        <p class="fu-section-sub fu-reveal">Six engineering and scientific challenges that must be solved before fusion can power the grid.</p>
+        <div class="fu-challenge-grid">
+          {c.challenges.map((ch) => (
+            <div class="fu-challenge-card fu-reveal">
+              <h4>{ch.title}</h4>
+              <p>{ch.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 10. FUTURE — Alternating-side timeline ══ */}
+    <section class="fu-section fu-section-alt">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">2026 → 2040</span>
+        <h2 class="fu-section-title fu-reveal">The <span class="fu-grad-text">Timeline</span> to Commercial Fusion</h2>
+        <p class="fu-section-sub fu-reveal">Five milestones that could determine whether fusion energy becomes reality in the 2030s — or slips further into the future.</p>
+        <div class="fu-future-timeline">
+          {c.futurePredictions.map((p, i) => (
+            <div class="fu-future-item fu-reveal">
+              {i % 2 === 0 ? (
+                <>
+                  <div class="fu-future-content">
+                    <div class="fu-future-year">{p.year}</div>
+                    <div class="fu-future-prediction">{p.prediction}</div>
+                    <div class="fu-future-detail">{p.detail}</div>
+                  </div>
+                  <div class="fu-future-dot"></div>
+                  <div class="fu-future-spacer"></div>
+                </>
+              ) : (
+                <>
+                  <div class="fu-future-spacer"></div>
+                  <div class="fu-future-dot"></div>
+                  <div class="fu-future-content">
+                    <div class="fu-future-year">{p.year}</div>
+                    <div class="fu-future-prediction">{p.prediction}</div>
+                    <div class="fu-future-detail">{p.detail}</div>
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 11. TRENDING SEARCHES ══ */}
+    <section class="fu-section">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">SEO Data</span>
+        <h2 class="fu-section-title fu-reveal">Trending Fusion <span class="fu-grad-text">Searches</span></h2>
+        <p class="fu-section-sub fu-reveal">Real Google search volume data showing what people are searching for in fusion energy.</p>
+        <table class="fu-trending-table">
+          <thead>
+            <tr>
+              <th>Search Term</th>
+              <th>Volume</th>
+              <th>Growth</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.trendingSearches.map((s) => (
+              <tr>
+                <td class="fu-trending-term">{s.term}</td>
+                <td>{s.volume}</td>
+                <td class="fu-trending-growth">{s.growth}</td>
+                <td><span class="fu-trending-type">{s.type}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ══ 12. FAQ ══ */}
+    <section class="fu-section fu-section-alt" id="faq">
+      <div class="fu-container">
+        <span class="fu-eyebrow fu-reveal">FAQ</span>
+        <h2 class="fu-section-title fu-reveal">Frequently Asked <span class="fu-grad-text">Questions</span></h2>
+        <p class="fu-section-sub fu-reveal">Structured answers to the most common fusion questions — optimized for AI search citation.</p>
+        <div class="fu-faq-list">
+          {c.faqs.map((f) => (
+            <details class="fu-faq-item">
+              <summary>{f.q}</summary>
+              <div class="fu-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 13. CTA ══ */}
+    <section class="fu-cta">
+      <div class="fu-cta-bg">
+        <img src="/images/015-fusion-character-magenta.webp" alt="Fusion character" loading="lazy" />
+      </div>
+      <div class="fu-cta-inner">
+        <h3>Power Your Knowledge of Fusion</h3>
+        <p>Get the latest fusion breakthroughs, investment news, and timeline updates delivered weekly.</p>
+        <a href="/blog?category=Fusion" class="fu-cta-btn">Explore Fusion Articles →</a>
+        <div class="fu-cta-pills">
+          <span class="fu-cta-pill">🔥 Breakthrough alerts</span>
+          <span class="fu-cta-pill">💰 Investment tracking</span>
+          <span class="fu-cta-pill">⚡ Timeline updates</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.fu-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Fusion' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Fusion', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

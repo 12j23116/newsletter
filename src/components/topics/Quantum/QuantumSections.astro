@@ -1,0 +1,32 @@
+---
+import { quantumContent as c } from '../../../data/topics/Quantum/quantum-content';
+---
+<section class="qm-section qm-section-alt">
+  <div class="qm-container">
+    <div class="qm-section-head">
+      <span class="qm-eyebrow">Market Overview</span>
+      <h2 class="qm-section-title">The Path to Quantum Advantage</h2>
+      <p class="qm-section-sub">From error correction breakthroughs and qubit architectures to post-quantum cryptography and quantum AI — the technologies reshaping computing, security, and scientific discovery.</p>
+    </div>
+    <div class="qm-section-grid">
+      {c.sections.map((section) => (
+        <div class="qm-section-card">
+          <div class="qm-section-img-wrap">
+            <img src={section.image} alt={section.title} class="qm-section-img" loading="lazy" />
+            <div class="qm-section-img-overlay"></div>
+          </div>
+          <div class="qm-section-body">
+            <span class="qm-section-eyebrow">{section.eyebrow}</span>
+            <h3 class="qm-section-title">{section.title}</h3>
+            <p class="qm-section-desc">{section.subtitle}</p>
+            <div class="qm-section-points">
+              {section.points.map((p) => (
+                <div class="qm-section-point">{p.label}: {p.value}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

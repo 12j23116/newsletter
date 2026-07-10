@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Terms of Service';
+const description = 'TechNanoAI terms of service — acceptable use, intellectual property, disclaimers, limitation of liability, and user responsibilities for technanoai.com.';
+const keywords = 'terms of service, TechNanoAI terms, acceptable use, intellectual property, disclaimers, user agreement';
+
+const lastUpdated = 'January 2026';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="legal-page">
+    <div class="legal-container">
+      <h1>Terms of Service</h1>
+      <p class="legal-updated">Last updated: {lastUpdated}</p>
+
+      <section>
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using TechNanoAI ("we", "us", "our") at technanoai.com (the "Service"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Service.</p>
+      </section>
+
+      <section>
+        <h2>2. Description of Service</h2>
+        <p>TechNanoAI provides educational content, analysis, guides, tools, and resources covering emerging technologies including AI, robotics, fusion, biotech, cybersecurity, and other frontier technology topics. The Service is provided free of charge unless otherwise specified.</p>
+      </section>
+
+      <section>
+        <h2>3. Intellectual Property</h2>
+        <p>All content on this website — including articles, guides, blog posts, podcast episodes, tools, graphics, logos, and design — is the property of TechNanoAI unless otherwise stated. Content is protected by copyright laws.</p>
+        <ul>
+          <li>You may share links to our content freely.</li>
+          <li>You may quote brief excerpts with attribution and a link to the original source.</li>
+          <li>You may not reproduce, republish, or distribute our content in full without written permission.</li>
+          <li>User-submitted content (tool requests, contact messages) remains your property, but you grant us a license to use it for service improvement.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the Service for any unlawful purpose.</li>
+          <li>Attempt to disrupt, hack, or compromise the Service.</li>
+          <li>Scrape, crawl, or systematically download content without permission.</li>
+          <li>Submit false, misleading, or malicious information through our forms.</li>
+          <li>Use automated bots to interact with the Service in ways that degrade performance.</li>
+          <li>Impersonate TechNanoAI or its team members.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Educational Disclaimer</h2>
+        <p>All content on TechNanoAI is provided for <strong>educational and informational purposes only</strong>. We do not provide:</p>
+        <ul>
+          <li><strong>Financial advice</strong> — any discussion of markets, companies, or investments is not a recommendation to buy, sell, or hold securities.</li>
+          <li><strong>Medical advice</strong> — biotech and health-related content is not a substitute for professional medical consultation.</li>
+          <li><strong>Legal advice</strong> — regulatory and policy analysis is general commentary, not legal counsel.</li>
+          <li><strong>Engineering or safety advice</strong> — technical content about nuclear, fusion, and other technologies is for education, not implementation guidance.</li>
+        </ul>
+        <p>Always consult qualified professionals before making decisions based on information found on this website.</p>
+      </section>
+
+      <section>
+        <h2>6. Third-Party Links and Content</h2>
+        <p>Our website contains links to third-party websites, tools, and services. We are not responsible for the content, accuracy, or practices of any third-party sites. Accessing third-party links is at your own risk.</p>
+      </section>
+
+      <section>
+        <h2>7. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, TechNanoAI shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of (or inability to use) the Service. This includes but is not limited to loss of data, revenue, or profits.</p>
+      </section>
+
+      <section>
+        <h2>8. No Warranty</h2>
+        <p>The Service is provided "as is" and "as available" without warranties of any kind, express or implied. We do not guarantee that the Service will be error-free, secure, or available at all times.</p>
+      </section>
+
+      <section>
+        <h2>9. Newsletter and Email Communications</h2>
+        <p>By subscribing to our newsletter, you consent to receive periodic emails from TechNanoAI. You may unsubscribe at any time using the link provided in each email. We do not share your email address with third parties.</p>
+      </section>
+
+      <section>
+        <h2>10. Changes to Terms</h2>
+        <p>We may update these Terms of Service at any time. Continued use of the Service after changes constitutes acceptance of the updated terms. We encourage you to review this page periodically.</p>
+      </section>
+
+      <section>
+        <h2>11. Governing Law</h2>
+        <p>These terms shall be governed by and construed in accordance with applicable laws. Any disputes shall be resolved in the appropriate jurisdiction.</p>
+      </section>
+
+      <section>
+        <h2>12. Contact</h2>
+        <p>For questions about these Terms, contact us at <a href="mailto:legal@technanoai.com">legal@technanoai.com</a> or visit our <a href="/contact">contact page</a>.</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: 2rem 1.5rem 4rem;
+    background: var(--bg, #0a0a0f);
+    color: var(--text, #e4e4e7);
+    min-height: 60vh;
+  }
+  .legal-container {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .legal-container h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .legal-updated {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .legal-container section {
+    margin-bottom: 2rem;
+  }
+  .legal-container h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container p {
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container li {
+    line-height: 1.7;
+    margin-bottom: 0.4rem;
+  }
+  .legal-container a {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+</style>

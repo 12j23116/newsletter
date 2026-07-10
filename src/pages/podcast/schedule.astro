@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './podcast-styles.css';
+import PodcastScheduleHero from '../../components/podcast/PodcastScheduleHero.astro';
+import PodcastScheduleTimeline from '../../components/podcast/PodcastScheduleTimeline.astro';
+import PodcastScheduleCalendar from '../../components/podcast/PodcastScheduleCalendar.astro';
+import PodcastScheduleNotify from '../../components/podcast/PodcastScheduleNotify.astro';
+
+const title = 'Podcast Schedule — The Frontier Tech Show';
+const description = 'Upcoming episode schedule for The Frontier Podcast. 12 episodes planned through September 2026 — see guests, recording dates, and publish dates for AI, fusion, quantum, biotech, cybersecurity, and more.';
+---
+
+<BaseLayout title={title} description={description} keywords="podcast schedule, Frontier Tech Show schedule, upcoming podcast episodes, technology podcast guests, AI podcast, fusion podcast, quantum podcast, biotech podcast, cybersecurity podcast">
+  <div class="pc-page">
+    <PodcastScheduleHero />
+    <PodcastScheduleTimeline />
+    <PodcastScheduleCalendar />
+    <PodcastScheduleNotify />
+  </div>
+</BaseLayout>

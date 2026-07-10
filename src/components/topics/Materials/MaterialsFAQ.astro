@@ -1,0 +1,25 @@
+---
+import { materialsContent as c } from '../../../data/topics/Materials/materials-content';
+---
+<section class="mat-section mat-section-alt">
+  <div class="container">
+    <div class="mat-section-head mat-section-head-center">
+      <span class="mat-eyebrow">FAQ</span>
+      <h2 class="mat-section-title">Advanced Materials — Frequently Asked Questions</h2>
+      <p class="mat-section-subtitle">Answers to the most searched questions about advanced materials, AI-driven discovery, and the future of manufacturing.</p>
+    </div>
+    <div class="mat-faq-grid">
+      {c.faqs.map((faq) => (
+        <div class="mat-faq-item">
+          <div class="mat-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>{faq.q}</span>
+            <span class="mat-faq-toggle">+</span>
+          </div>
+          <div class="mat-faq-answer">
+            <div class="mat-faq-answer-inner">{faq.a}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

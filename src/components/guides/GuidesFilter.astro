@@ -1,0 +1,59 @@
+---
+import { difficultyLevels, guideTopics } from '../../data/guides/guides-listing';
+---
+
+<div class="gd-filter-bar" id="gd-filter-bar">
+  <div class="gd-filter-inner">
+    {/* Search bar — centered on its own row */}
+    <div class="gd-search-row">
+      <div class="gd-search-wrap">
+        <svg class="gd-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input
+          type="text"
+          id="gd-search-input"
+          class="gd-search-input"
+          placeholder="Search guides..."
+          autocomplete="off"
+        />
+      </div>
+    </div>
+
+    <div class="gd-filter-pills-row">
+      {/* Topic filter pills */}
+      <div class="gd-filter-group">
+        <span class="gd-filter-label">Topic:</span>
+        <div class="gd-filter-pills" id="gd-topic-pills">
+          {guideTopics.map((t, i) => (
+            <button
+              class={`gd-filter-pill gd-topic-pill ${i === 0 ? 'active' : ''}`}
+              data-topic={t.name}
+              style={`--pill-color:${t.color}`}
+            >
+              <span class="gd-filter-pill-icon">{t.icon}</span>
+              {t.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Difficulty filter pills */}
+      <div class="gd-filter-group">
+        <span class="gd-filter-label">Level:</span>
+        <div class="gd-filter-pills" id="gd-difficulty-pills">
+          {difficultyLevels.map((dl) => (
+            <button
+              class={`gd-filter-pill gd-difficulty-pill ${dl.level === 'All' ? 'active' : ''}`}
+              data-difficulty={dl.level}
+              style={`--pill-color:${dl.color}`}
+            >
+              <span class="gd-filter-pill-icon">{dl.icon}</span>
+              {dl.level}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-coming-soon">
+    <div class="tool-coming-soon-icon">🔍</div>
+    <h3 class="tool-coming-soon-title">Hallucination Detector</h3>
+    <p class="tool-coming-soon-desc">Paste AI-generated text and get automated hallucination scoring with source verification. Cross-references claims against trusted databases and flags unsupported statements with confidence scores.</p>
+    <form class="tool-coming-soon-form" id="hd-notify">
+      <input type="email" placeholder="you@example.com" required />
+      <button type="submit" class="tool-btn">Notify Me</button>
+    </form>
+    <div class="tool-coming-soon-success" id="hd-success">✓ Thanks! We'll email you when this tool is ready.</div>
+  </div>
+</div>
+
+<script is:inline>
+document.getElementById('hd-notify')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.querySelector('input').value = '';
+  document.getElementById('hd-success')?.classList.add('show');
+  setTimeout(() => document.getElementById('hd-success')?.classList.remove('show'), 4000);
+});
+</script>

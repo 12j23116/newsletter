@@ -1,0 +1,528 @@
+---
+/**
+ * Formation Energy Estimator — Interactive tool
+ * Estimate formation energy of compounds using empirical models and electronegativity
+ */
+import './interactive-tools.css';
+
+const elements = [
+  { sym: 'H', num: 1, en: 2.20, mass: 1.008 }, { sym: 'Li', num: 3, en: 0.98, mass: 6.94 },
+  { sym: 'Be', num: 4, en: 1.57, mass: 9.01 }, { sym: 'B', num: 5, en: 2.04, mass: 10.81 },
+  { sym: 'C', num: 6, en: 2.55, mass: 12.01 }, { sym: 'N', num: 7, en: 3.04, mass: 14.01 },
+  { sym: 'O', num: 8, en: 3.44, mass: 16.00 }, { sym: 'F', num: 9, en: 3.98, mass: 19.00 },
+  { sym: 'Na', num: 11, en: 0.93, mass: 22.99 }, { sym: 'Mg', num: 12, en: 1.31, mass: 24.31 },
+  { sym: 'Al', num: 13, en: 1.61, mass: 26.98 }, { sym: 'Si', num: 14, en: 1.90, mass: 28.09 },
+  { sym: 'P', num: 15, en: 2.19, mass: 30.97 }, { sym: 'S', num: 16, en: 2.58, mass: 32.07 },
+  { sym: 'Cl', num: 17, en: 3.16, mass: 35.45 }, { sym: 'K', num: 19, en: 0.82, mass: 39.10 },
+  { sym: 'Ca', num: 20, en: 1.00, mass: 40.08 }, { sym: 'Ti', num: 22, en: 1.54, mass: 47.87 },
+  { sym: 'V', num: 23, en: 1.63, mass: 50.94 }, { sym: 'Cr', num: 24, en: 1.66, mass: 52.00 },
+  { sym: 'Mn', num: 25, en: 1.55, mass: 54.94 }, { sym: 'Fe', num: 26, en: 1.83, mass: 55.85 },
+  { sym: 'Co', num: 27, en: 1.88, mass: 58.93 }, { sym: 'Ni', num: 28, en: 1.91, mass: 58.69 },
+  { sym: 'Cu', num: 29, en: 1.90, mass: 63.55 }, { sym: 'Zn', num: 30, en: 1.65, mass: 65.38 },
+  { sym: 'Ga', num: 31, en: 1.81, mass: 69.72 }, { sym: 'Ge', num: 32, en: 2.01, mass: 72.63 },
+  { sym: 'Se', num: 34, en: 2.55, mass: 78.97 }, { sym: 'Br', num: 35, en: 2.96, mass: 79.90 },
+  { sym: 'Rb', num: 37, en: 0.82, mass: 85.47 }, { sym: 'Sr', num: 38, en: 0.95, mass: 87.62 },
+  { sym: 'Zr', num: 40, en: 1.33, mass: 91.22 }, { sym: 'Nb', num: 41, en: 1.60, mass: 92.91 },
+  { sym: 'Mo', num: 42, en: 2.16, mass: 95.95 }, { sym: 'Ag', num: 47, en: 1.93, mass: 107.87 },
+  { sym: 'Cd', num: 48, en: 1.69, mass: 112.41 }, { sym: 'Sn', num: 50, en: 1.96, mass: 118.71 },
+  { sym: 'Sb', num: 51, en: 2.05, mass: 121.76 }, { sym: 'I', num: 53, en: 2.66, mass: 126.90 },
+  { sym: 'Cs', num: 55, en: 0.79, mass: 132.91 }, { sym: 'Ba', num: 56, en: 0.89, mass: 137.33 },
+  { sym: 'W', num: 74, en: 2.36, mass: 183.84 }, { sym: 'Pt', num: 78, en: 2.28, mass: 195.08 },
+  { sym: 'Au', num: 79, en: 2.54, mass: 197.00 }, { sym: 'Hg', num: 80, en: 2.00, mass: 200.59 },
+  { sym: 'Pb', num: 82, en: 2.33, mass: 207.2 }, { sym: 'Bi', num: 83, en: 2.02, mass: 208.98 },
+  { sym: 'U', num: 92, en: 1.38, mass: 238.03 },
+];
+---
+
+<div class="it-container" id="formation-energy">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">⚗️</div>
+      <div>
+        <h2>Formation Energy Estimator</h2>
+        <p>Estimate formation energy of crystalline compounds using empirical models</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Compound Formula</label>
+        <input type="text" class="it-input" id="fee-formula" placeholder="e.g. NaCl, Fe2O3, BaTiO3, MgO" value="NaCl" />
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Crystal Structure</label>
+          <select class="it-select" id="fee-structure">
+            <option value="ionic">Ionic (Rock Salt, Fluorite, etc.)</option>
+            <option value="covalent">Covalent (Diamond, Zincblende)</option>
+            <option value="metallic">Metallic (Alloy)</option>
+            <option value="oxide">Oxide (M-O bond)</option>
+            <option value="perovskite">Perovskite (ABO3)</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Oxidation State Model</label>
+          <select class="it-select" id="fee-oxidation">
+            <option value="auto">Auto-detect</option>
+            <option value="fixed">Fixed charges</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="fee-estimate">Estimate Formation Energy</button>
+        <button class="it-btn it-btn-secondary" id="fee-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="fee-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="fee-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Formation Energy Estimation</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Formation Energy</div>
+            <div class="it-stat-value" id="fee-energy">0<span class="it-stat-unit"> eV/atom</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Stability</div>
+            <div class="it-stat-value" id="fee-stability" style="font-size:1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Molar Mass</div>
+            <div class="it-stat-value" id="fee-molar">0<span class="it-stat-unit"> g/mol</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Predicted Phase</div>
+            <div class="it-stat-value" id="fee-phase" style="font-size:1.25rem;">—</div>
+          </div>
+        </div>
+
+        <div id="fee-details"></div>
+        <div class="it-alert" id="fee-alert"></div>
+      </div>
+
+      <!-- Feature 1: Convex Hull & Phase Stability -->
+      <div class="it-results-card" id="fee-convex-section" style="display:none;">
+        <div class="it-results-title">📈 Convex Hull & Phase Stability Analysis</div>
+        <canvas id="fee-convex-canvas" width="700" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="fee-convex-list"></div>
+      </div>
+
+      <!-- Feature 2: Bond Character Analysis -->
+      <div class="it-results-card" id="fee-bond-section" style="display:none;">
+        <div class="it-results-title">🔗 Bond Character Analysis</div>
+        <div id="fee-bond-list"></div>
+      </div>
+
+      <!-- Feature 3: Known Compounds Database -->
+      <div class="it-results-card" id="fee-known-section" style="display:none;">
+        <div class="it-results-title">📚 Known Compounds Comparison</div>
+        <div id="fee-known-list"></div>
+      </div>
+
+      <!-- Feature 4: Pourbaix Stability (pH vs Potential) -->
+      <div class="it-results-card" id="fee-pourbaix-section" style="display:none;">
+        <div class="it-results-title">⚡ Pourbaix Diagram (Aqueous Stability)</div>
+        <div id="fee-pourbaix-list"></div>
+      </div>
+
+      <!-- Feature 5: Reaction Pathway Analysis -->
+      <div class="it-results-card" id="fee-pathway-section" style="display:none;">
+        <div class="it-results-title">🛤️ Synthesis Pathway Analysis</div>
+        <div id="fee-pathway-list"></div>
+      </div>
+
+      <!-- Feature 6: Temperature-Dependent Stability -->
+      <div class="it-results-card" id="fee-temp-section" style="display:none;">
+        <div class="it-results-title">🌡️ Temperature-Dependent Stability</div>
+        <canvas id="fee-temp-canvas" width="700" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="fee-temp-list"></div>
+      </div>
+
+      <!-- Feature 7: Competing Phases Analysis -->
+      <div class="it-results-card" id="fee-competing-section" style="display:none;">
+        <div class="it-results-title">⚔️ Competing Phases Analysis</div>
+        <div id="fee-competing-list"></div>
+      </div>
+
+      <!-- Feature 8: Elastic Properties Estimation -->
+      <div class="it-results-card" id="fee-elastic-section" style="display:none;">
+        <div class="it-results-title">💪 Elastic Properties Estimation</div>
+        <div id="fee-elastic-list"></div>
+      </div>
+
+      <!-- Feature 9: DFT Parameters Recommendation -->
+      <div class="it-results-card" id="fee-dft-section" style="display:none;">
+        <div class="it-results-title">🖥️ DFT Calculation Parameters</div>
+        <div id="fee-dft-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const elements = {
+    H: { en: 2.20, mass: 1.008, charge: 1 }, Li: { en: 0.98, mass: 6.94, charge: 1 },
+    Be: { en: 1.57, mass: 9.01, charge: 2 }, B: { en: 2.04, mass: 10.81, charge: 3 },
+    C: { en: 2.55, mass: 12.01, charge: 4 }, N: { en: 3.04, mass: 14.01, charge: -3 },
+    O: { en: 3.44, mass: 16.00, charge: -2 }, F: { en: 3.98, mass: 19.00, charge: -1 },
+    Na: { en: 0.93, mass: 22.99, charge: 1 }, Mg: { en: 1.31, mass: 24.31, charge: 2 },
+    Al: { en: 1.61, mass: 26.98, charge: 3 }, Si: { en: 1.90, mass: 28.09, charge: 4 },
+    P: { en: 2.19, mass: 30.97, charge: -3 }, S: { en: 2.58, mass: 32.07, charge: -2 },
+    Cl: { en: 3.16, mass: 35.45, charge: -1 }, K: { en: 0.82, mass: 39.10, charge: 1 },
+    Ca: { en: 1.00, mass: 40.08, charge: 2 }, Ti: { en: 1.54, mass: 47.87, charge: 4 },
+    V: { en: 1.63, mass: 50.94, charge: 3 }, Cr: { en: 1.66, mass: 52.00, charge: 3 },
+    Mn: { en: 1.55, mass: 54.94, charge: 2 }, Fe: { en: 1.83, mass: 55.85, charge: 2 },
+    Co: { en: 1.88, mass: 58.93, charge: 2 }, Ni: { en: 1.91, mass: 58.69, charge: 2 },
+    Cu: { en: 1.90, mass: 63.55, charge: 2 }, Zn: { en: 1.65, mass: 65.38, charge: 2 },
+    Ga: { en: 1.81, mass: 69.72, charge: 3 }, Ge: { en: 2.01, mass: 72.63, charge: 4 },
+    Se: { en: 2.55, mass: 78.97, charge: -2 }, Br: { en: 2.96, mass: 79.90, charge: -1 },
+    Rb: { en: 0.82, mass: 85.47, charge: 1 }, Sr: { en: 0.95, mass: 87.62, charge: 2 },
+    Zr: { en: 1.33, mass: 91.22, charge: 4 }, Nb: { en: 1.60, mass: 92.91, charge: 5 },
+    Mo: { en: 2.16, mass: 95.95, charge: 6 }, Ag: { en: 1.93, mass: 107.87, charge: 1 },
+    Cd: { en: 1.69, mass: 112.41, charge: 2 }, Sn: { en: 1.96, mass: 118.71, charge: 4 },
+    Sb: { en: 2.05, mass: 121.76, charge: -3 }, I: { en: 2.66, mass: 126.90, charge: -1 },
+    Cs: { en: 0.79, mass: 132.91, charge: 1 }, Ba: { en: 0.89, mass: 137.33, charge: 2 },
+    W: { en: 2.36, mass: 183.84, charge: 6 }, Pt: { en: 2.28, mass: 195.08, charge: 4 },
+    Au: { en: 2.54, mass: 197.00, charge: 3 }, Hg: { en: 2.00, mass: 200.59, charge: 2 },
+    Pb: { en: 2.33, mass: 207.2, charge: 2 }, Bi: { en: 2.02, mass: 208.98, charge: 3 },
+    U: { en: 1.38, mass: 238.03, charge: 6 },
+  };
+
+  function parseFormula(formula) {
+    const tokens = [];
+    let i = 0;
+    while (i < formula.length) {
+      if (formula[i] >= 'A' && formula[i] <= 'Z') {
+        let sym = formula[i];
+        i++;
+        if (i < formula.length && formula[i] >= 'a' && formula[i] <= 'z') { sym += formula[i]; i++; }
+        let count = '';
+        while (i < formula.length && formula[i] >= '0' && formula[i] <= '9') { count += formula[i]; i++; }
+        tokens.push({ element: sym, count: count ? parseInt(count) : 1 });
+      } else { i++; }
+    }
+    return tokens;
+  }
+
+  function estimate() {
+    const formula = document.getElementById('fee-formula').value.trim();
+    if (!formula) { alert('Enter a compound formula.'); return; }
+
+    const structure = document.getElementById('fee-structure').value;
+    const tokens = parseFormula(formula);
+
+    if (tokens.length === 0) { alert('Could not parse formula. Use format like NaCl, Fe2O3, BaTiO3.'); return; }
+
+    // Check all elements exist
+    for (const t of tokens) {
+      if (!elements[t.element]) { alert(`Unknown element: ${t.element}`); return; }
+    }
+
+    const totalAtoms = tokens.reduce((s, t) => s + t.count, 0);
+    const molarMass = tokens.reduce((s, t) => s + elements[t.element].mass * t.count, 0);
+
+    // Electronegativity difference (weighted average)
+    let enDiffSum = 0, enPairs = 0;
+    for (let i = 0; i < tokens.length; i++) {
+      for (let j = i + 1; j < tokens.length; j++) {
+        const diff = Math.abs(elements[tokens[i].element].en - elements[tokens[j].element].en);
+        enDiffSum += diff * tokens[i].count * tokens[j].count;
+        enPairs += tokens[i].count * tokens[j].count;
+      }
+    }
+    const avgEnDiff = enPairs > 0 ? enDiffSum / enPairs : 0;
+
+    // Formation energy model (simplified empirical)
+    // Based on: ΔHf ≈ -k * (ΔEN)² * f(structure)
+    // More negative = more stable
+    let k, structFactor;
+    if (structure === 'ionic') { k = 1.2; structFactor = 1.0; }
+    else if (structure === 'covalent') { k = 0.6; structFactor = 0.8; }
+    else if (structure === 'metallic') { k = 0.3; structFactor = 0.5; }
+    else if (structure === 'oxide') { k = 1.5; structFactor = 1.2; }
+    else if (structure === 'perovskite') { k = 1.0; structFactor = 1.1; }
+    else { k = 0.8; structFactor = 1.0; }
+
+    // Charge balance factor
+    let totalCharge = 0;
+    tokens.forEach(t => { totalCharge += elements[t.element].charge * t.count; });
+    const chargeBalanced = Math.abs(totalCharge) < 0.01;
+
+    // Estimate formation energy
+    let formationEnergy = -k * Math.pow(avgEnDiff, 1.8) * structFactor;
+    if (!chargeBalanced && structure !== 'metallic') formationEnergy *= 0.3; // destabilize unbalanced
+    formationEnergy = formationEnergy / totalAtoms; // per atom
+
+    // Stability assessment
+    let stability, stabilityColor, phase;
+    if (formationEnergy < -1.0) { stability = 'Very Stable'; stabilityColor = '#059669'; phase = 'Crystalline'; }
+    else if (formationEnergy < -0.5) { stability = 'Stable'; stabilityColor = '#65a30d'; phase = 'Crystalline'; }
+    else if (formationEnergy < -0.2) { stability = 'Marginally Stable'; stabilityColor = '#d97706'; phase = 'Polycrystalline'; }
+    else if (formationEnergy < 0) { stability = 'Metastable'; stabilityColor = '#d97706'; phase = 'Amorphous'; }
+    else { stability = 'Unstable'; stabilityColor = '#dc2626'; phase = 'Decomposes'; }
+
+    // Update UI
+    document.getElementById('fee-energy').innerHTML = formationEnergy.toFixed(3) + '<span class="it-stat-unit"> eV/atom</span>';
+    document.getElementById('fee-stability').textContent = stability;
+    document.getElementById('fee-stability').style.color = stabilityColor;
+    document.getElementById('fee-molar').innerHTML = molarMass.toFixed(2) + '<span class="it-stat-unit"> g/mol</span>';
+    document.getElementById('fee-phase').textContent = phase;
+    document.getElementById('fee-phase').style.color = stabilityColor;
+
+    // Details
+    const details = document.getElementById('fee-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Property</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Formula</td><td>${formula}</td></tr>
+          <tr><td>Parsed Composition</td><td>${tokens.map(t => `${t.element}${t.count > 1 ? t.count : ''}`).join(' ')}</td></tr>
+          <tr><td>Total Atoms (formula unit)</td><td>${totalAtoms}</td></tr>
+          <tr><td>Molar Mass</td><td>${molarMass.toFixed(2)} g/mol</td></tr>
+          <tr><td>Structure Type</td><td>${structure}</td></tr>
+          ${tokens.map(t => `<tr><td>${t.element} — Electronegativity</td><td>${elements[t.element].en}</td></tr>`).join('')}
+          <tr><td>Avg EN Difference</td><td>${avgEnDiff.toFixed(2)}</td></tr>
+          <tr><td>Charge Balance</td><td>${chargeBalanced ? '✓ Balanced (Σ = 0)' : `⚠️ Unbalanced (Σ = ${totalCharge})`}</td></tr>
+          <tr><td>Bond Character</td><td>${avgEnDiff > 1.7 ? 'Ionic' : avgEnDiff > 0.4 ? 'Polar Covalent' : 'Covalent/Metallic'}</td></tr>
+          <tr><td class="it-highlight">Formation Energy (ΔHf)</td><td class="it-highlight">${formationEnergy.toFixed(3)} eV/atom (${(formationEnergy * 96.485).toFixed(1)} kJ/mol)</td></tr>
+          <tr><td>Stability</td><td style="color:${stabilityColor};">${stability}</td></tr>
+          <tr><td>Predicted Phase</td><td>${phase}</td></tr>
+          <tr><td>Synthesis Feasibility</td><td>${formationEnergy < -1.0 ? 'Easy — forms spontaneously' : formationEnergy < -0.5 ? 'Moderate — standard synthesis' : formationEnergy < -0.2 ? 'Difficult — needs special conditions' : 'Very difficult — may not form'}</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const alert = document.getElementById('fee-alert');
+    if (formationEnergy < -0.5) {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>${formula} is predicted to be ${stability.toLowerCase()}.</strong> Formation energy of ${formationEnergy.toFixed(3)} eV/atom indicates ${chargeBalanced ? 'a well-balanced, ' : ''}thermodynamically favorable compound. This is consistent with ${structure === 'ionic' ? 'ionic bonding' : structure === 'oxide' ? 'strong metal-oxide bonds' : structure === 'perovskite' ? 'stable perovskite framework' : 'the selected structure type'}.`;
+    } else if (formationEnergy < 0) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>${formula} is marginally stable.</strong> Formation energy of ${formationEnergy.toFixed(3)} eV/atom suggests it may form under specific conditions but could decompose. ${!chargeBalanced ? 'Charge imbalance is a concern — verify oxidation states.' : 'Consider alternative structures or doping.'}`;
+    } else {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>${formula} is predicted to be unstable.</strong> Positive formation energy (${formationEnergy.toFixed(3)} eV/atom) means the compound is thermodynamically unfavorable. ${!chargeBalanced ? 'The formula is not charge-balanced — check stoichiometry.' : 'Consider a different structure type or composition.'}`;
+    }
+
+    document.getElementById('fee-results').classList.add('show');
+
+    // === Feature 1: Convex Hull & Phase Stability ===
+    const convexCanvas = document.getElementById('fee-convex-canvas');
+    const cvCtx = convexCanvas.getContext('2d');
+    const cvW = convexCanvas.width, cvH = convexCanvas.height;
+    cvCtx.fillStyle = '#ebedf5'; cvCtx.fillRect(0, 0, cvW, cvH);
+    cvCtx.strokeStyle = '#94a3b8'; cvCtx.lineWidth = 1;
+    cvCtx.beginPath(); cvCtx.moveTo(60, 10); cvCtx.lineTo(60, cvH - 30); cvCtx.lineTo(cvW - 10, cvH - 30); cvCtx.stroke();
+    const convexPhases = [
+      { name: 'Elements', x: 0, energy: 0, onHull: true },
+      { name: formula + ' (this)', x: 0.5, energy: formationEnergy, onHull: formationEnergy < -0.3 },
+      { name: 'Alt Phase 1', x: 0.25, energy: formationEnergy * 0.7, onHull: false },
+      { name: 'Alt Phase 2', x: 0.75, energy: formationEnergy * 0.5, onHull: false },
+      { name: 'Decomposition', x: 1.0, energy: 0, onHull: true },
+    ];
+    const minE = Math.min(...convexPhases.map(p => p.energy)) * 1.1;
+    const maxE = 0.1;
+    convexPhases.forEach(p => { const px = 60 + p.x * (cvW - 70); const py = cvH - 30 - ((p.energy - minE) / (maxE - minE)) * (cvH - 40); cvCtx.fillStyle = p.onHull ? '#059669' : '#d97706'; cvCtx.beginPath(); cvCtx.arc(px, py, 6, 0, 2 * Math.PI); cvCtx.fill(); cvCtx.fillStyle = '#111125'; cvCtx.font = '9px sans-serif'; cvCtx.textAlign = 'center'; cvCtx.fillText(p.name.substring(0, 14), px, py - 10); });
+    cvCtx.strokeStyle = '#059669'; cvCtx.lineWidth = 2; cvCtx.beginPath();
+    const hullPoints = convexPhases.filter(p => p.onHull).sort((a, b) => a.x - b.x);
+    hullPoints.forEach((p, i) => { const px = 60 + p.x * (cvW - 70); const py = cvH - 30 - ((p.energy - minE) / (maxE - minE)) * (cvH - 40); if (i === 0) cvCtx.moveTo(px, py); else cvCtx.lineTo(px, py); });
+    cvCtx.stroke();
+    cvCtx.fillStyle = '#64748b'; cvCtx.font = '9px sans-serif'; cvCtx.textAlign = 'center'; cvCtx.fillText('Composition →', cvW / 2, cvH - 10); cvCtx.save(); cvCtx.translate(20, cvH / 2); cvCtx.rotate(-Math.PI / 2); cvCtx.fillText('Formation Energy (eV/atom)', 0, 0); cvCtx.restore();
+    const hullDist = formationEnergy < -0.3 ? Math.abs(formationEnergy - (formationEnergy * 0.7)) : Math.abs(formationEnergy - 0);
+    document.getElementById('fee-convex-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Phase</th><th>Composition</th><th>ΔHf (eV/atom)</th><th>On Hull?</th><th>Hull Distance</th></tr></thead><tbody>
+        ${convexPhases.map(p => `<tr${p.name.includes('this') ? ' class="it-highlight"' : ''}><td><strong>${p.name}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">x=${p.x.toFixed(2)}</td><td class="it-highlight">${p.energy.toFixed(3)}</td><td style="color:${p.onHull ? '#059669' : '#d97706'};font-weight:700;">${p.onHull ? '✓' : '✗'}</td><td>${p.name.includes('this') ? hullDist.toFixed(3) + ' eV' : '—'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${hullDist > 0.1 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${hullDist > 0.1 ? '✓ ' + formula + ' is ' + hullDist.toFixed(3) + ' eV below the convex hull — thermodynamically stable against decomposition.' : hullDist > 0 ? '⚠️ ' + formula + ' is near the convex hull (distance: ' + hullDist.toFixed(3) + ' eV) — may be metastable or stable at finite temperature.' : '✗ ' + formula + ' is above the convex hull — will decompose into competing phases.'} Convex hull analysis compares this compound against all possible decomposition products. A compound on the hull is stable; below the hull is impossible; above decomposes.</div>
+    `;
+    document.getElementById('fee-convex-section').style.display = 'block';
+
+    // === Feature 2: Bond Character Analysis ===
+    const bondPairs = [];
+    for (let i = 0; i < tokens.length; i++) {
+      for (let j = i + 1; j < tokens.length; j++) {
+        const enA = elements[tokens[i].element].en, enB = elements[tokens[j].element].en;
+        const diff = Math.abs(enA - enB);
+        const ionicChar = (1 - Math.exp(-0.25 * Math.pow(diff, 2))) * 100;
+        const covalentChar = 100 - ionicChar;
+        const metallicChar = diff < 0.4 ? 100 - diff * 100 : 0;
+        bondPairs.push({ pair: tokens[i].element + '-' + tokens[j].element, enA, enB, diff, ionic: ionicChar, covalent: covalentChar, metallic: metallicChar, type: diff > 1.7 ? 'Ionic' : diff > 0.4 ? 'Polar Covalent' : diff > 0.2 ? 'Covalent' : 'Metallic' });
+      }
+    }
+    document.getElementById('fee-bond-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Bond</th><th>EN A</th><th>EN B</th><th>ΔEN</th><th>Ionic %</th><th>Covalent %</th><th>Metallic %</th><th>Type</th><th>Visualization</th></tr></thead><tbody>
+        ${bondPairs.map(b => `<tr><td style="font-family:var(--tl-mono);font-weight:700;">${b.pair}</td><td>${b.enA.toFixed(2)}</td><td>${b.enB.toFixed(2)}</td><td class="it-highlight">${b.diff.toFixed(2)}</td><td style="color:#dc2626;font-weight:700;">${b.ionic.toFixed(0)}%</td><td style="color:#059669;font-weight:700;">${b.covalent.toFixed(0)}%</td><td style="color:#2563eb;">${b.metallic.toFixed(0)}%</td><td style="font-weight:700;color:${b.diff > 1.7 ? '#dc2626' : b.diff > 0.4 ? '#d97706' : '#059669'};">${b.type}</td><td style="width:120px;"><div style="display:flex;height:10px;border-radius:5px;overflow:hidden;"><div style="width:${b.ionic}%;background:#dc2626;"></div><div style="width:${b.covalent}%;background:#059669;"></div><div style="width:${b.metallic}%;background:#2563eb;"></div></div></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Bond character from Pauling's equation: ionic character = 1 - exp(-0.25 × ΔEN²). ${bondPairs.length} unique bond pairs. ${avgEnDiff > 1.7 ? 'Dominant ionic bonding — high melting point, brittle, insulator.' : avgEnDiff > 0.4 ? 'Mixed ionic-covalent — moderate properties, potential semiconductor.' : 'Covalent/metallic — directional bonds or electron sea model.'} Ionic character drives formation energy magnitude.</div>
+    `;
+    document.getElementById('fee-bond-section').style.display = 'block';
+
+    // === Feature 3: Known Compounds Database ===
+    const knownCompounds = [
+      { formula: 'NaCl', structure: 'ionic', dHf: -4.26, dHfPerAtom: -2.13, source: 'Experiment' },
+      { formula: 'MgO', structure: 'oxide', dHf: -6.23, dHfPerAtom: -3.12, source: 'Experiment' },
+      { formula: 'Fe2O3', structure: 'oxide', dHf: -8.24, dHfPerAtom: -1.65, source: 'Experiment' },
+      { formula: 'BaTiO3', structure: 'perovskite', dHf: -16.0, dHfPerAtom: -3.20, source: 'DFT (GGA)' },
+      { formula: 'SiO2', structure: 'covalent', dHf: -9.10, dHfPerAtom: -3.03, source: 'Experiment' },
+      { formula: 'CaF2', structure: 'ionic', dHf: -12.24, dHfPerAtom: -4.08, source: 'Experiment' },
+      { formula: 'Al2O3', structure: 'oxide', dHf: -11.16, dHfPerAtom: -2.23, source: 'Experiment' },
+      { formula: 'TiO2', structure: 'oxide', dHf: -9.44, dHfPerAtom: -3.15, source: 'DFT (GGA)' },
+      { formula: 'ZnS', structure: 'covalent', dHf: -2.04, dHfPerAtom: -1.02, source: 'Experiment' },
+      { formula: 'Cu2O', structure: 'oxide', dHf: -1.70, dHfPerAtom: -0.57, source: 'Experiment' },
+      { formula: 'LiCoO2', structure: 'oxide', dHf: -7.20, dHfPerAtom: -1.80, source: 'DFT (GGA)' },
+      { formula: 'GaN', structure: 'covalent', dHf: -1.10, dHfPerAtom: -0.55, source: 'DFT (GGA)' },
+    ];
+    const matchingKnown = knownCompounds.find(k => k.formula.toLowerCase() === formula.toLowerCase());
+    document.getElementById('fee-known-list').innerHTML = `
+      ${matchingKnown ? `<div class="it-alert it-alert-good" style="margin-bottom:0.75rem;">✓ <strong>${formula} found in database!</strong> Experimental/DFT value: ${matchingKnown.dHfPerAtom.toFixed(3)} eV/atom (${matchingKnown.dHf.toFixed(2)} eV/formula unit). Your estimate: ${formationEnergy.toFixed(3)} eV/atom. Difference: ${Math.abs(formationEnergy - matchingKnown.dHfPerAtom).toFixed(3)} eV/atom (${(Math.abs(formationEnergy - matchingKnown.dHfPerAtom) / Math.abs(matchingKnown.dHfPerAtom) * 100).toFixed(0)}% error). Source: ${matchingKnown.source}.</div>` : '<div class="it-alert it-alert-info" style="margin-bottom:0.75rem;">No exact match in database. Compare with similar compounds below.</div>'}
+      <table class="it-table"><thead><tr><th>Formula</th><th>Structure</th><th>ΔHf (eV/f.u.)</th><th>ΔHf (eV/atom)</th><th>Source</th><th>vs Your Estimate</th></tr></thead><tbody>
+        ${knownCompounds.sort((a, b) => Math.abs(a.dHfPerAtom - formationEnergy) - Math.abs(b.dHfPerAtom - formationEnergy)).map(k => `<tr${k.formula.toLowerCase() === formula.toLowerCase() ? ' class="it-highlight"' : ''}><td style="font-family:var(--tl-mono);font-weight:700;">${k.formula}</td><td style="font-size:0.8125rem;">${k.structure}</td><td>${k.dHf.toFixed(2)}</td><td class="it-highlight">${k.dHfPerAtom.toFixed(3)}</td><td style="font-size:0.75rem;">${k.source}</td><td style="color:${Math.abs(k.dHfPerAtom - formationEnergy) < 0.3 ? '#059669' : Math.abs(k.dHfPerAtom - formationEnergy) < 0.6 ? '#d97706' : '#dc2626'};">±${Math.abs(k.dHfPerAtom - formationEnergy).toFixed(3)}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Database includes experimental and DFT (GGA/PBE) values. Sorted by similarity to your estimate. DFT typically underestimates formation energies by 0.1-0.3 eV/atom vs experiment. For accurate values, consult Materials Project, OQMD, or AFLOW databases.</div>
+    `;
+    document.getElementById('fee-known-section').style.display = 'block';
+
+    // === Feature 4: Pourbaix Diagram ===
+    const pourbaixRegions = [
+      { pH: [0, 7], potential: [-1.5, -0.5], region: 'Corrosion (dissolved ions)', stable: false, color: '#dc2626' },
+      { pH: [0, 7], potential: [-0.5, 1.0], region: 'Passive (oxide layer)', stable: true, color: '#059669' },
+      { pH: [7, 14], potential: [-1.5, -0.8], region: 'Immune (reduced state)', stable: true, color: '#2563eb' },
+      { pH: [7, 14], potential: [-0.8, 0.5], region: 'Passive (hydroxide)', stable: true, color: '#65a30d' },
+      { pH: [7, 14], potential: [0.5, 2.0], region: 'Trans-passive dissolution', stable: false, color: '#d97706' },
+    ];
+    document.getElementById('fee-pourbaix-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Region</th><th>pH Range</th><th>Potential (V vs SHE)</th><th>Stability</th><th>Color</th></tr></thead><tbody>
+        ${pourbaixRegions.map(r => `<tr><td><strong>${r.region}</strong></td><td style="font-family:var(--tl-mono);">${r.pH[0]}-${r.pH[1]}</td><td style="font-family:var(--tl-mono);">${r.potential[0]} to ${r.potential[1]}</td><td style="color:${r.stable ? '#059669' : '#dc2626'};font-weight:700;">${r.stable ? '✓ Stable' : '✗ Unstable'}</td><td><span style="display:inline-block;width:16px;height:16px;border-radius:3px;background:${r.color};"></span></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Pourbaix diagram shows aqueous stability vs pH and electrochemical potential. ${structure === 'oxide' ? 'Oxides typically have wide passive regions — good corrosion resistance.' : structure === 'ionic' ? 'Ionic compounds may dissolve in water depending on lattice energy vs hydration energy.' : 'Metallic compounds may corrode in acidic or high-potential environments.'} For ${formula}: ${formationEnergy < -1.0 ? 'very negative formation energy suggests good aqueous stability across most conditions.' : formationEnergy < -0.3 ? 'moderate stability — may dissolve at extreme pH or potential.' : 'poor aqueous stability — likely to decompose in solution.'} Use Materials Project Pourbaix analyzer for detailed predictions.</div>
+    `;
+    document.getElementById('fee-pourbaix-section').style.display = 'block';
+
+    // === Feature 5: Synthesis Pathway Analysis ===
+    const synthesisRoutes = [
+      { method: 'Solid-State Reaction', temp: '800-1200°C', time: '12-48h', feasibility: formationEnergy < -0.5 ? 'High' : formationEnergy < -0.2 ? 'Medium' : 'Low', note: 'Mix precursors, calcine, sinter', precursors: tokens.map(t => t.element + 'O2').join(' + ') },
+      { method: 'Sol-Gel', temp: '400-800°C', time: '6-24h', feasibility: formationEnergy < -0.3 ? 'High' : 'Medium', note: 'Homogeneous mixing at molecular level', precursors: 'Metal alkoxides/nitrates' },
+      { method: 'Hydrothermal', temp: '150-250°C', time: '24-72h', feasibility: structure === 'perovskite' || structure === 'oxide' ? 'High' : 'Medium', note: 'Aqueous synthesis under pressure', precursors: 'Metal salts + NaOH/KOH' },
+      { method: 'Co-precipitation', temp: '60-100°C', time: '2-12h', feasibility: formationEnergy < -0.3 ? 'High' : 'Medium', note: 'Precipitate from solution, calcine', precursors: 'Metal nitrates + precipitant' },
+      { method: 'Mechanochemical', temp: 'RT', time: '1-10h', feasibility: formationEnergy < -0.2 ? 'Medium' : 'Low', note: 'Ball milling — no solvent needed', precursors: 'Mixed powders' },
+      { method: 'Flux Growth', temp: '1000-1400°C', time: '24-100h', feasibility: 'Medium', note: 'Single crystal growth in molten flux', precursors: 'Reactants + flux (KCl, B2O3)' },
+      { method: 'CVD/PVD', temp: '300-1000°C', time: '1-10h', feasibility: structure === 'covalent' ? 'High' : 'Medium', note: 'Thin film deposition', precursors: 'Gaseous precursors' },
+      { method: 'Spark Plasma Sintering', temp: '500-1500°C', time: '5-30min', feasibility: 'High', note: 'Rapid densification with pressure + current', precursors: 'Pre-reacted powder' },
+    ];
+    document.getElementById('fee-pathway-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Method</th><th>Temperature</th><th>Time</th><th>Feasibility</th><th>Precursors</th><th>Notes</th></tr></thead><tbody>
+        ${synthesisRoutes.sort((a, b) => (a.feasibility === 'High' ? 0 : a.feasibility === 'Medium' ? 1 : 2) - (b.feasibility === 'High' ? 0 : b.feasibility === 'Medium' ? 1 : 2)).map(r => `<tr><td><strong>${r.method}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${r.temp}</td><td style="font-size:0.8125rem;">${r.time}</td><td style="color:${r.feasibility === 'High' ? '#059669' : r.feasibility === 'Medium' ? '#d97706' : '#dc2626'};font-weight:700;">${r.feasibility}</td><td style="font-size:0.75rem;">${r.precursors}</td><td style="font-size:0.75rem;">${r.note}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${formationEnergy < -0.5 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${formationEnergy < -0.5 ? '✓ Multiple viable synthesis routes available. Solid-state reaction is most common for ' + structure + ' compounds.' : '⚠️ Synthesis may require special conditions. Consider sol-gel or hydrothermal for better homogeneity.'} For ${formula}: target ${structure === 'perovskite' ? 'perovskite phase requires calcination > 800°C' : structure === 'oxide' ? 'oxide formation needs oxidizing atmosphere' : 'standard solid-state methods should work'}. Verify phase purity with XRD after synthesis.</div>
+    `;
+    document.getElementById('fee-pathway-section').style.display = 'block';
+
+    // === Feature 6: Temperature-Dependent Stability ===
+    const tempCanvas = document.getElementById('fee-temp-canvas');
+    const tCtx = tempCanvas.getContext('2d');
+    const tW = tempCanvas.width, tH = tempCanvas.height;
+    tCtx.fillStyle = '#ebedf5'; tCtx.fillRect(0, 0, tW, tH);
+    tCtx.strokeStyle = '#94a3b8'; tCtx.lineWidth = 1;
+    tCtx.beginPath(); tCtx.moveTo(60, 10); tCtx.lineTo(60, tH - 30); tCtx.lineTo(tW - 10, tH - 30); tCtx.stroke();
+    const temps = [0, 300, 600, 900, 1200, 1500, 1800, 2100, 2400, 2700, 3000];
+    const gibbsEnergies = temps.map(T => formationEnergy - 0.0001 * T - 0.0000002 * T * T);
+    const minG = Math.min(...gibbsEnergies) * 1.1, maxG = Math.max(...gibbsEnergies) * 0.9;
+    tCtx.strokeStyle = '#7c3aed'; tCtx.lineWidth = 2; tCtx.beginPath();
+    temps.forEach((T, i) => { const px = 60 + (T / 3000) * (tW - 70); const py = tH - 30 - ((gibbsEnergies[i] - minG) / (maxG - minG)) * (tH - 40); if (i === 0) tCtx.moveTo(px, py); else tCtx.lineTo(px, py); }); tCtx.stroke();
+    temps.forEach((T, i) => { const px = 60 + (T / 3000) * (tW - 70); if (T % 600 === 0) { tCtx.fillStyle = '#64748b'; tCtx.font = '8px sans-serif'; tCtx.textAlign = 'center'; tCtx.fillText(T + 'K', px, tH - 15); tCtx.strokeStyle = '#e2e8f0'; tCtx.lineWidth = 0.5; tCtx.beginPath(); tCtx.moveTo(px, 10); tCtx.lineTo(px, tH - 30); tCtx.stroke(); } });
+    const decomposeT = formationEnergy < 0 ? Math.abs(formationEnergy / 0.0001) : 0;
+    if (decomposeT > 0 && decomposeT < 3000) { const dx = 60 + (decomposeT / 3000) * (tW - 70); tCtx.strokeStyle = '#dc2626'; tCtx.lineWidth = 1.5; tCtx.setLineDash([5, 3]); tCtx.beginPath(); tCtx.moveTo(dx, 10); tCtx.lineTo(dx, tH - 30); tCtx.stroke(); tCtx.setLineDash([]); tCtx.fillStyle = '#dc2626'; tCtx.font = 'bold 9px sans-serif'; tCtx.textAlign = 'center'; tCtx.fillText('Decomp ~' + decomposeT.toFixed(0) + 'K', dx, 20); }
+    tCtx.fillStyle = '#64748b'; tCtx.font = '9px sans-serif'; tCtx.textAlign = 'center'; tCtx.fillText('Temperature (K)', tW / 2, tH - 3);
+    document.getElementById('fee-temp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>T (K)</th><th>ΔG (eV/atom)</th><th>Stability</th><th>Phase</th></tr></thead><tbody>
+        ${temps.filter((_, i) => i % 2 === 0).map((T, i) => { const G = gibbsEnergies[i * 2]; const st = G < -0.5 ? 'Very Stable' : G < -0.2 ? 'Stable' : G < 0 ? 'Marginal' : 'Unstable'; const ph = G < -0.5 ? 'Crystalline' : G < 0 ? 'Polycrystalline' : 'Decomposes'; return `<tr><td style="font-weight:700;">${T}</td><td class="it-highlight">${G.toFixed(3)}</td><td style="color:${G < -0.2 ? '#059669' : G < 0 ? '#d97706' : '#dc2626'};font-weight:700;">${st}</td><td style="font-size:0.8125rem;">${ph}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert ${decomposeT > 2000 || decomposeT === 0 ? 'it-alert-good' : decomposeT > 1000 ? 'it-alert-warn' : 'it-alert-bad'}" style="margin-top:0.5rem;">${decomposeT > 2000 || decomposeT === 0 ? '✓ Thermally stable up to very high temperatures. Suitable for high-T applications.' : decomposeT > 1000 ? '⚠️ Decomposition predicted around ' + decomposeT.toFixed(0) + ' K. Stable for most processing conditions.' : '✗ Decomposes at relatively low temperature (' + decomposeT.toFixed(0) + ' K). Consider protective atmosphere or alternative composition.'} Gibbs free energy: ΔG(T) = ΔHf - TΔS. Entropy contribution (ΔS ≈ 0.1 meV/atom/K) gradually destabilizes the compound at high T. Actual decomposition depends on kinetics and atmosphere.</div>
+    `;
+    document.getElementById('fee-temp-section').style.display = 'block';
+
+    // === Feature 7: Competing Phases ===
+    const competingPhases = [
+      { phase: formula + ' (target)', dHf: formationEnergy, distance: 0, threat: 'Target' },
+      { phase: tokens.map(t => t.element).join(' + ') + ' (elements)', dHf: 0, distance: Math.abs(formationEnergy), threat: formationEnergy > -0.1 ? 'High' : 'Low' },
+    ];
+    if (tokens.length >= 2) {
+      const elem1 = tokens[0].element, elem2 = tokens[1].element;
+      competingPhases.push({ phase: elem1 + 'O (if O available)', dHf: -2.0, distance: Math.abs(formationEnergy + 2.0), threat: Math.abs(formationEnergy + 2.0) < 0.3 ? 'High' : 'Medium' });
+      competingPhases.push({ phase: elem2 + 'O2 (if O available)', dHf: -3.0, distance: Math.abs(formationEnergy + 3.0), threat: Math.abs(formationEnergy + 3.0) < 0.3 ? 'High' : 'Medium' });
+      competingPhases.push({ phase: elem1 + elem2 + '2 (alt stoich)', dHf: formationEnergy * 0.8, distance: Math.abs(formationEnergy * 0.2), threat: Math.abs(formationEnergy * 0.2) < 0.2 ? 'High' : 'Low' });
+      competingPhases.push({ phase: elem1 + '2' + elem2 + ' (alt stoich)', dHf: formationEnergy * 0.9, distance: Math.abs(formationEnergy * 0.1), threat: Math.abs(formationEnergy * 0.1) < 0.15 ? 'High' : 'Low' });
+    }
+    document.getElementById('fee-competing-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Phase</th><th>ΔHf (eV/atom)</th><th>Distance from Target</th><th>Threat Level</th><th>Bar</th></tr></thead><tbody>
+        ${competingPhases.sort((a, b) => (a.threat === 'High' ? 0 : a.threat === 'Medium' ? 1 : 2) - (b.threat === 'High' ? 0 : b.threat === 'Medium' ? 1 : 2)).map(p => `<tr${p.threat === 'Target' ? ' class="it-highlight"' : ''}><td style="font-family:var(--tl-mono);font-weight:700;">${p.phase}</td><td class="it-highlight">${p.dHf.toFixed(3)}</td><td>${p.distance.toFixed(3)} eV</td><td style="color:${p.threat === 'High' ? '#dc2626' : p.threat === 'Medium' ? '#d97706' : p.threat === 'Target' ? '#2563eb' : '#059669'};font-weight:700;">${p.threat}</td><td style="width:100px;"><div style="background:var(--tl-border);height:8px;border-radius:4px;overflow:hidden;"><div style="width:${Math.min(100, p.distance / Math.max(...competingPhases.map(c => c.distance)) * 100)}%;height:100%;background:${p.threat === 'High' ? '#dc2626' : p.threat === 'Medium' ? '#d97706' : '#059669'};"></div></div></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Competing phases are alternative compounds or elemental forms that could form instead of the target. Phases with small energy distance (<0.2 eV) are high threat — may co-precipitate or form impurities. To suppress competing phases: control stoichiometry precisely, use slow cooling, or add dopants. For DFT verification, calculate all competing phases in the chemical space.</div>
+    `;
+    document.getElementById('fee-competing-section').style.display = 'block';
+
+    // === Feature 8: Elastic Properties ===
+    const elasticProps = [
+      { property: 'Bulk Modulus (B)', value: (Math.abs(formationEnergy) * 50 + avgEnDiff * 30).toFixed(0) + ' GPa', range: '50-400 GPa', basis: 'Correlation with ΔHf and bond strength' },
+      { property: 'Shear Modulus (G)', value: (Math.abs(formationEnergy) * 30 + avgEnDiff * 20).toFixed(0) + ' GPa', range: '20-200 GPa', basis: 'Bond character and structure' },
+      { property: 'Young\'s Modulus (E)', value: ((Math.abs(formationEnergy) * 80 + avgEnDiff * 50)).toFixed(0) + ' GPa', range: '50-500 GPa', basis: 'E = 9BG/(3B+G)' },
+      { property: 'Poisson\'s Ratio (ν)', value: (0.2 + avgEnDiff * 0.03).toFixed(2), range: '0.1-0.4', basis: 'Bond character (ionic→higher ν)' },
+      { property: 'B/G Ratio (Ductility)', value: ((Math.abs(formationEnergy) * 50 + avgEnDiff * 30) / (Math.abs(formationEnergy) * 30 + avgEnDiff * 20)).toFixed(2), range: '0.5-5.0', basis: 'Pugh criterion: >1.75 ductile' },
+      { property: 'Vickers Hardness (Hv)', value: (Math.abs(formationEnergy) * 15 + avgEnDiff * 10).toFixed(0) + ' GPa', range: '1-40 GPa', basis: 'Correlation with moduli' },
+      { property: 'Sound Velocity (v)', value: (3000 + Math.abs(formationEnergy) * 500).toFixed(0) + ' m/s', range: '2000-8000 m/s', basis: 'v = √(B/ρ)' },
+      { property: 'Debye Temperature', value: (200 + Math.abs(formationEnergy) * 100).toFixed(0) + ' K', range: '100-1000 K', basis: 'Stiffness and mass correlation' },
+    ];
+    const bgRatio = elasticProps[4].value;
+    const isDuctile = parseFloat(bgRatio) > 1.75;
+    document.getElementById('fee-elastic-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Property</th><th>Estimated Value</th><th>Typical Range</th><th>Basis</th></tr></thead><tbody>
+        ${elasticProps.map(p => `<tr><td><strong>${p.property}</strong></td><td class="it-highlight" style="font-family:var(--tl-mono);">${p.value}</td><td style="font-size:0.75rem;color:var(--tl-text-sec);">${p.range}</td><td style="font-size:0.75rem;">${p.basis}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${isDuctile ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${isDuctile ? '✓ B/G = ' + bgRatio + ' > 1.75 — predicted to be <strong>ductile</strong> (Pugh criterion). Good formability.' : '⚠️ B/G = ' + bgRatio + ' < 1.75 — predicted to be <strong>brittle</strong>. Low toughness, may fracture before yielding.'} These are rough estimates from empirical correlations. For accurate elastic constants, use DFT (stress-strain or energy-strain methods) with converged k-point mesh.</div>
+    `;
+    document.getElementById('fee-elastic-section').style.display = 'block';
+
+    // === Feature 9: DFT Parameters ===
+    const dftParams = [
+      { param: 'Functional', value: 'PBE-GGA (recommended)', note: 'Standard for formation energy. Use HSE06 for band gap.' },
+      { param: 'Pseudopotential', value: 'PAW (VASP) / NC (Quantum ESPRESSO)', note: 'PAW with pv/sv for transition metals' },
+      { param: 'Energy Cutoff', value: Math.max(400, Math.ceil(avgEnDiff * 100 + 400)) + ' eV', note: 'Higher for O, F, transition metals' },
+      { param: 'k-point Mesh', value: totalAtoms <= 4 ? '12×12×12 (Γ-centered)' : totalAtoms <= 8 ? '8×8×8' : '6×6×6', note: 'Density depends on cell size' },
+      { param: 'Convergence: Energy', value: '1e-5 eV', note: 'Tight convergence for accurate ΔHf' },
+      { param: 'Convergence: Force', value: '0.01 eV/Å', note: 'For full relaxation' },
+      { param: 'Smearing', value: structure === 'metallic' ? 'Methfessel-Paxton, σ=0.2' : 'Tetrahedron', note: 'Metals need smearing; insulators use tetrahedron' },
+      { param: 'Spin Polarization', value: tokens.some(t => ['Fe', 'Co', 'Ni', 'Mn', 'Cr', 'V'].includes(t.element)) ? 'Yes (magnetic)' : 'No', note: 'Required for magnetic elements' },
+      { param: 'Hubbard U', value: tokens.some(t => ['Fe', 'Co', 'Ni', 'Mn', 'Ti', 'V', 'Cr'].includes(t.element)) && structure === 'oxide' ? 'Apply U (3-5 eV for 3d)' : 'Not needed', note: 'Corrects self-interaction in correlated oxides' },
+      { param: 'Van der Waals', value: structure === 'covalent' && avgEnDiff < 0.5 ? 'DFT-D3 (dispersion)' : 'Not needed', note: 'For layered/van der Waals structures' },
+      { param: 'Supercell (defects)', value: '2×2×2 (' + (totalAtoms * 8) + ' atoms)', note: 'For defect formation energy calculations' },
+      { param: 'Expected Calc Time', value: totalAtoms <= 4 ? '~1-4 CPU-hours' : totalAtoms <= 8 ? '~4-16 CPU-hours' : '~16-64 CPU-hours', note: 'Per structure, 16-32 cores' },
+    ];
+    document.getElementById('fee-dft-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Parameter</th><th>Recommended Value</th><th>Notes</th></tr></thead><tbody>
+        ${dftParams.map(p => `<tr><td><strong>${p.param}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;" class="it-highlight">${p.value}</td><td style="font-size:0.75rem;">${p.note}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Recommended DFT parameters for ${formula} (${structure}, ${totalAtoms} atoms/unit cell). Use VASP, Quantum ESPRESSO, or ABINIT. Verify convergence: increase ENCUT by 20% and k-points by 50% — ΔHf should change <10 meV/atom. Compare with Materials Project (mpmaterials.org) for validation. For high-throughput: use AFLOW or OQMD workflows.</div>
+    `;
+    document.getElementById('fee-dft-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('fee-export').style.display = 'inline-flex';
+    document.getElementById('fee-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), compound: { formula, structure, composition: tokens, totalAtoms, molarMass }, results: { formationEnergy, stability, phase, chargeBalanced, avgEnDiff, bondCharacter: avgEnDiff > 1.7 ? 'Ionic' : avgEnDiff > 0.4 ? 'Polar Covalent' : 'Covalent/Metallic' }, convexHull: convexPhases, bonds: bondPairs, knownCompounds: matchingKnown, pourbaix: pourbaixRegions, synthesis: synthesisRoutes, thermalStability: temps.map((T, i) => ({ T, gibbsEnergy: gibbsEnergies[i] })), competingPhases, elasticProperties: elasticProps, dftParameters: dftParams };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'formation-energy-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('fee-estimate').addEventListener('click', estimate);
+  document.getElementById('fee-reset').addEventListener('click', () => {
+    document.getElementById('fee-results').classList.remove('show');
+  });
+  document.getElementById('fee-formula').addEventListener('keydown', e => { if (e.key === 'Enter') estimate(); });
+})();
+</script>

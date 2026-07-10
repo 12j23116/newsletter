@@ -1,0 +1,479 @@
+---
+/**
+ * AV Scenario Test Generator — Interactive tool
+ * Generate edge-case driving scenarios for autonomous vehicle testing
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="av-scenario-gen">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🚦</div>
+      <div>
+        <h2>AV Scenario Test Generator</h2>
+        <p>Generate complex driving scenarios for autonomous vehicle testing and simulation</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Road Type</label>
+          <select class="it-select" id="asg-road">
+            <option value="highway">Highway</option>
+            <option value="urban">Urban Street</option>
+            <option value="intersection">Intersection</option>
+            <option value="roundabout">Roundabout</option>
+            <option value="parking">Parking Lot</option>
+            <option value="rural">Rural Road</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Weather Condition</label>
+          <select class="it-select" id="asg-weather">
+            <option value="clear">Clear</option>
+            <option value="rain">Rain</option>
+            <option value="heavy_rain">Heavy Rain</option>
+            <option value="fog">Fog</option>
+            <option value="snow">Snow</option>
+            <option value="night">Night</option>
+            <option value="glare">Sun Glare</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Traffic Density</label>
+          <select class="it-select" id="asg-traffic">
+            <option value="empty">Empty</option>
+            <option value="light">Light</option>
+            <option value="moderate">Moderate</option>
+            <option value="heavy">Heavy</option>
+            <option value="congested">Congested</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Number of Scenarios</label>
+          <input type="number" class="it-input" id="asg-count" value="5" min="1" max="20" />
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Edge Case Types</label>
+        <div class="it-checkbox-group" id="asg-edgecases">
+          <label class="it-checkbox-item" data-ec="pedestrian"><input type="checkbox" />Pedestrian</label>
+          <label class="it-checkbox-item" data-ec="cyclist"><input type="checkbox" />Cyclist</label>
+          <label class="it-checkbox-item" data-ec="cutin"><input type="checkbox" />Lane Cut-in</label>
+          <label class="it-checkbox-item" data-ec="jaywalk"><input type="checkbox" />Jaywalking</label>
+          <label class="it-checkbox-item" data-ec="emergency"><input type="checkbox" />Emergency Vehicle</label>
+          <label class="it-checkbox-item" data-ec="construction"><input type="checkbox" />Construction Zone</label>
+          <label class="it-checkbox-item" data-ec="occlusion"><input type="checkbox" />Occlusion</label>
+          <label class="it-checkbox-item" data-ec="violation"><input type="checkbox" />Traffic Violation</label>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="asg-generate">Generate Scenarios</button>
+        <button class="it-btn it-btn-secondary" id="asg-export">Export OpenSCENARIO</button>
+        <button class="it-btn it-btn-secondary" id="asg-json-export" style="display:none;">📄 Export JSON</button>
+        <button class="it-btn it-btn-secondary" id="asg-reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="asg-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Generated Test Scenarios</div>
+        <div id="asg-scenarios"></div>
+        <div class="it-alert it-alert-info" id="asg-insight"></div>
+      </div>
+
+      <!-- Feature 1: Risk Distribution Chart -->
+      <div class="it-results-card" id="asg-risk-section" style="display:none;">
+        <div class="it-results-title">📊 Scenario Risk Distribution</div>
+        <canvas id="asg-risk-canvas" width="800" height="200" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="asg-risk-list"></div>
+      </div>
+
+      <!-- Feature 2: Sensor Coverage Analysis -->
+      <div class="it-results-card" id="asg-sensor-section" style="display:none;">
+        <div class="it-results-title">📡 Sensor Coverage & Stress Analysis</div>
+        <div id="asg-sensor-list"></div>
+      </div>
+
+      <!-- Feature 3: KPI & Pass/Fail Criteria -->
+      <div class="it-results-card" id="asg-kpi-section" style="display:none;">
+        <div class="it-results-title">✅ KPI & Pass/Fail Criteria Generator</div>
+        <div id="asg-kpi-list"></div>
+      </div>
+
+      <!-- Feature 4: Complexity Scoring -->
+      <div class="it-results-card" id="asg-complexity-section" style="display:none;">
+        <div class="it-results-title">🧩 Scenario Complexity Scoring</div>
+        <div id="asg-complexity-list"></div>
+      </div>
+
+      <!-- Feature 5: Enhanced OpenSCENARIO Export (already exists, enhance) -->
+
+      <!-- Feature 6: Falsification Suggestions -->
+      <div class="it-results-card" id="asg-falsify-section" style="display:none;">
+        <div class="it-results-title">🔬 Falsification & Adversarial Perturbation</div>
+        <div id="asg-falsify-list"></div>
+      </div>
+
+      <!-- Feature 7: Coverage Matrix -->
+      <div class="it-results-card" id="asg-coverage-section" style="display:none;">
+        <div class="it-results-title">🗺️ Coverage Matrix (Edge Case × Environment)</div>
+        <div id="asg-coverage-list"></div>
+      </div>
+
+      <!-- Feature 8: Regulatory Mapping -->
+      <div class="it-results-card" id="asg-reg-section" style="display:none;">
+        <div class="it-results-title">📋 Regulatory Test Mapping</div>
+        <div id="asg-reg-list"></div>
+      </div>
+
+      <!-- Feature 9: Replay Timeline -->
+      <div class="it-results-card" id="asg-timeline-section" style="display:none;">
+        <div class="it-results-title">⏱️ Scenario Replay Timeline</div>
+        <canvas id="asg-timeline-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="asg-timeline-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  function toggle(el) { el.classList.toggle('active'); el.querySelector('input').checked = el.classList.contains('active'); }
+  document.querySelectorAll('#asg-edgecases .it-checkbox-item').forEach(el => el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); }));
+  ['pedestrian', 'cutin', 'jaywalk', 'occlusion'].forEach(id => { const el = document.querySelector(`[data-ec="${id}"]`); if (el) toggle(el); });
+
+  const scenarioTemplates = {
+    pedestrian: [
+      { name: 'Pedestrian crossing at marked crosswalk', desc: 'A pedestrian crosses at a marked crosswalk while the EGO vehicle approaches at 50 km/h. Pedestrian starts crossing when EGO is 30m away.', risk: 'Medium', actors: ['EGO vehicle', 'Pedestrian (adult, walking)'] },
+      { name: 'Child running into street from behind parked car', desc: 'A child runs into the roadway from behind a parked vehicle. EGO has limited visibility due to occlusion. Reaction time is critical.', risk: 'Critical', actors: ['EGO vehicle', 'Pedestrian (child, running)', 'Parked vehicle (occlusion)'] },
+      { name: 'Pedestrian with mobility device at intersection', desc: 'A pedestrian using a wheelchair crosses at an intersection during a yellow light phase. EGO must yield despite signal change.', risk: 'High', actors: ['EGO vehicle', 'Pedestrian (wheelchair)'] },
+    ],
+    cyclist: [
+      { name: 'Cyclist making sudden left turn', desc: 'A cyclist in the bike lane suddenly turns left across EGO vehicle path. EGO traveling at 40 km/h in adjacent lane.', risk: 'High', actors: ['EGO vehicle', 'Cyclist (bicycle)'] },
+      { name: 'E-bike approaching from blind spot', desc: 'An electric bike approaches at 35 km/h from a blind spot on the right. EGO is preparing to turn right.', risk: 'High', actors: ['EGO vehicle', 'Cyclist (e-bike, high speed)'] },
+    ],
+    cutin: [
+      { name: 'Aggressive lane change from adjacent vehicle', desc: 'A vehicle in the left lane cuts in front of EGO with only 5m gap. EGO cruising at 100 km/h on highway.', risk: 'High', actors: ['EGO vehicle', 'Cut-in vehicle (sedan)'] },
+      { name: 'Multiple vehicle lane changes in sequence', desc: 'Three vehicles change lanes in rapid succession, creating a accordion effect. EGO must brake progressively.', risk: 'Medium', actors: ['EGO vehicle', 'Vehicle A', 'Vehicle B', 'Vehicle C'] },
+    ],
+    jaywalk: [
+      { name: 'Night jaywalking with low visibility', desc: 'A pedestrian wearing dark clothing jaywalks at night on an unlit road. EGO headlights at low beam. Detection range severely limited.', risk: 'Critical', actors: ['EGO vehicle', 'Pedestrian (dark clothing, night)'] },
+      { name: 'Group jaywalking on highway', desc: 'A group of 3 pedestrians attempts to cross a highway at an undesignated point. EGO at 120 km/h.', risk: 'Critical', actors: ['EGO vehicle', 'Pedestrian 1', 'Pedestrian 2', 'Pedestrian 3'] },
+    ],
+    emergency: [
+      { name: 'Ambulance running red light', desc: 'An ambulance with lights and sirens approaches an intersection against a red light. EGO has green light but must yield.', risk: 'High', actors: ['EGO vehicle', 'Ambulance (emergency)'] },
+      { name: 'Police pursuit from behind', desc: 'A police vehicle in high-speed pursuit approaches from behind at 140 km/h. EGO at 90 km/h must move to right lane.', risk: 'Medium', actors: ['EGO vehicle', 'Police vehicle', 'Pursued vehicle'] },
+    ],
+    construction: [
+      { name: 'Sudden lane closure with workers', desc: 'A construction zone closes the right lane with cones and workers present. EGO must merge left at 60 km/h.', risk: 'Medium', actors: ['EGO vehicle', 'Construction workers', 'Traffic cones'] },
+      { name: 'Night construction with flashing lights', desc: 'Construction at night with strobe lights causing sensor interference. EGO cameras may be affected by glare.', risk: 'High', actors: ['EGO vehicle', 'Construction equipment', 'Flashing lights'] },
+    ],
+    occlusion: [
+      { name: 'Bus occlusion at bus stop', desc: 'A stopped bus occludes a pedestrian about to cross. EGO in adjacent lane cannot see around the bus.', risk: 'Critical', actors: ['EGO vehicle', 'Bus (occlusion)', 'Pedestrian (hidden)'] },
+      { name: 'Truck occlusion at intersection', desc: 'A large truck in the opposite left-turn lane occludes oncoming traffic. EGO cannot see vehicles behind the truck.', risk: 'High', actors: ['EGO vehicle', 'Truck (occlusion)', 'Oncoming vehicle (hidden)'] },
+    ],
+    violation: [
+      { name: 'Red light runner at intersection', desc: 'A vehicle runs a red light at 70 km/h as EGO enters the intersection on green. T-bone collision risk.', risk: 'Critical', actors: ['EGO vehicle', 'Red light runner'] },
+      { name: 'Wrong-way driver on highway', desc: 'A vehicle travels the wrong way in EGO lane on a highway. EGO at 100 km/h, oncoming at 80 km/h.', risk: 'Critical', actors: ['EGO vehicle', 'Wrong-way vehicle'] },
+    ],
+  };
+
+  let generatedScenarios = [];
+
+  function generate() {
+    const road = document.getElementById('asg-road').value;
+    const weather = document.getElementById('asg-weather').value;
+    const traffic = document.getElementById('asg-traffic').value;
+    const count = parseInt(document.getElementById('asg-count').value) || 5;
+    const selectedECs = [...document.querySelectorAll('#asg-edgecases .it-checkbox-item.active')].map(el => el.getAttribute('data-ec'));
+
+    if (selectedECs.length === 0) { alert('Select at least one edge case type.'); return; }
+
+    // Build scenario pool
+    let pool = [];
+    selectedECs.forEach(ec => {
+      scenarioTemplates[ec].forEach(s => pool.push({ ...s, ec }));
+    });
+
+    // Shuffle and pick
+    pool.sort(() => Math.random() - 0.5);
+    generatedScenarios = pool.slice(0, Math.min(count, pool.length));
+
+    // Add environment metadata
+    generatedScenarios.forEach((s, i) => {
+      s.id = `SCN-${String(i + 1).padStart(3, '0')}`;
+      s.road = road;
+      s.weather = weather;
+      s.traffic = traffic;
+    });
+
+    const riskColors = { Critical: '#dc2626', High: '#d97706', Medium: '#65a30d', Low: '#059669' };
+
+    const html = generatedScenarios.map(s => `
+      <div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:1rem 1.25rem;margin-bottom:0.75rem;border-left:4px solid ${riskColors[s.risk]};">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem;">
+          <div>
+            <span style="font-size:0.75rem;color:var(--tl-text-muted);font-family:var(--tl-mono);">${s.id}</span>
+            <strong style="font-size:0.9375rem;display:block;margin-top:0.25rem;">${s.name}</strong>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="it-badge" style="background:${riskColors[s.risk]}22;color:${riskColors[s.risk]};">${s.risk} Risk</span>
+            <span class="it-badge it-badge-neutral">${s.road}</span>
+            <span class="it-badge it-badge-neutral">${s.weather}</span>
+            <span class="it-badge it-badge-neutral">${s.traffic} traffic</span>
+          </div>
+        </div>
+        <p style="font-size:0.8125rem;color:var(--tl-text-sec);margin:0.5rem 0;">${s.desc}</p>
+        <div style="font-size:0.75rem;color:var(--tl-text-muted);margin-top:0.5rem;">
+          <strong>Actors:</strong> ${s.actors.join(', ')}
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('asg-scenarios').innerHTML = html;
+
+    const critical = generatedScenarios.filter(s => s.risk === 'Critical').length;
+    const high = generatedScenarios.filter(s => s.risk === 'High').length;
+    document.getElementById('asg-insight').innerHTML = `<strong>💡 Generated ${generatedScenarios.length} scenarios:</strong> ${critical} critical, ${high} high risk, ${generatedScenarios.length - critical - high} medium/low. ${critical > 0 ? `${critical} critical scenarios require immediate braking or evasive maneuver — prioritize these in safety validation.` : 'Focus on perception and planning edge cases in these scenarios.'} Export to OpenSCENARIO format for simulator integration.`;
+
+    document.getElementById('asg-results').classList.add('show');
+
+    // === Feature 1: Risk Distribution Chart ===
+    const riskCounts = { Critical: 0, High: 0, Medium: 0, Low: 0 };
+    generatedScenarios.forEach(s => riskCounts[s.risk]++);
+    const riskCanvas = document.getElementById('asg-risk-canvas');
+    const rctx = riskCanvas.getContext('2d');
+    const rw = riskCanvas.width, rh = riskCanvas.height;
+    rctx.fillStyle = '#ebedf5'; rctx.fillRect(0, 0, rw, rh);
+    const riskColorsMap = { Critical: '#dc2626', High: '#d97706', Medium: '#65a30d', Low: '#059669' };
+    const riskLabels = ['Critical', 'High', 'Medium', 'Low'];
+    const maxCount = Math.max(...Object.values(riskCounts), 1);
+    const barW = rw / 4 - 20;
+    riskLabels.forEach((label, i) => {
+      const x = i * (rw / 4) + 10;
+      const barH = (riskCounts[label] / maxCount) * (rh - 50);
+      rctx.fillStyle = riskColorsMap[label];
+      rctx.fillRect(x + 10, rh - 30 - barH, barW, barH);
+      rctx.fillStyle = '#1e293b'; rctx.font = '12px sans-serif'; rctx.textAlign = 'center';
+      rctx.fillText(label, x + 10 + barW / 2, rh - 10);
+      rctx.fillText(riskCounts[label], x + 10 + barW / 2, rh - 30 - barH - 5);
+    });
+    document.getElementById('asg-risk-list').innerHTML = `<div class="it-alert it-alert-info">Risk distribution: ${riskCounts.Critical} critical, ${riskCounts.High} high, ${riskCounts.Medium} medium, ${riskCounts.Low} low. ${riskCounts.Critical > generatedScenarios.length / 2 ? '⚠️ High proportion of critical scenarios — ensure safety stack can handle worst cases.' : 'Balanced risk distribution for comprehensive testing.'}</div>`;
+    document.getElementById('asg-risk-section').style.display = 'block';
+
+    // === Feature 2: Sensor Coverage & Stress Analysis ===
+    const sensorMap = {
+      pedestrian: { camera: 'High', lidar: 'Medium', radar: 'Low', ultrasonic: 'Low' },
+      cyclist: { camera: 'High', lidar: 'High', radar: 'Medium', ultrasonic: 'Low' },
+      cutin: { camera: 'Medium', lidar: 'Low', radar: 'High', ultrasonic: 'Low' },
+      jaywalk: { camera: 'Critical', lidar: 'High', radar: 'Low', ultrasonic: 'Low' },
+      emergency: { camera: 'High', lidar: 'Medium', radar: 'High', ultrasonic: 'Low' },
+      construction: { camera: 'High', lidar: 'High', radar: 'Medium', ultrasonic: 'Medium' },
+      occlusion: { camera: 'Critical', lidar: 'Critical', radar: 'Medium', ultrasonic: 'Low' },
+      violation: { camera: 'High', lidar: 'Medium', radar: 'High', ultrasonic: 'Low' },
+    };
+    const sensorStress = { camera: { Critical: 0, High: 0, Medium: 0, Low: 0 }, lidar: { Critical: 0, High: 0, Medium: 0, Low: 0 }, radar: { Critical: 0, High: 0, Medium: 0, Low: 0 }, ultrasonic: { Critical: 0, High: 0, Medium: 0, Low: 0 } };
+    generatedScenarios.forEach(s => {
+      const stress = sensorMap[s.ec] || sensorMap.pedestrian;
+      Object.entries(stress).forEach(([sensor, level]) => sensorStress[sensor][level]++);
+    });
+    const sensorColors2 = { Critical: '#dc2626', High: '#d97706', Medium: '#65a30d', Low: '#059669' };
+    document.getElementById('asg-sensor-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Sensor</th><th>Critical Stress</th><th>High Stress</th><th>Medium Stress</th><th>Low Stress</th><th>Top Risk</th></tr></thead><tbody>
+        ${Object.entries(sensorStress).map(([sensor, levels]) => {
+          const top = Object.entries(levels).reduce((max, [k, v]) => v > max.v ? { k, v } : max, { k: 'Low', v: 0 });
+          return `<tr><td><strong>${sensor.charAt(0).toUpperCase() + sensor.slice(1)}</strong></td><td style="color:#dc2626;">${levels.Critical}</td><td style="color:#d97706;">${levels.High}</td><td style="color:#65a30d;">${levels.Medium}</td><td style="color:#059669;">${levels.Low}</td><td style="color:${sensorColors2[top.k]};font-weight:700;">${top.k}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Camera and LiDAR face highest stress in occlusion/pedestrian scenarios. Radar excels at cut-in/emergency detection. Weather impact: fog degrades camera+LiDAR, rain affects radar, snow blocks all sensors. Ensure sensor fusion handles degradation gracefully.</div>
+    `;
+    document.getElementById('asg-sensor-section').style.display = 'block';
+
+    // === Feature 3: KPI & Pass/Fail Criteria ===
+    const kpiTemplates = {
+      Critical: [
+        { kpi: 'Time-to-Collision (TTC)', threshold: '> 2.0s', pass: 'TTC > 2.0s at all times' },
+        { kpi: 'Brake Application Time', threshold: '< 300ms', pass: 'Brakes applied within 300ms of detection' },
+        { kpi: 'Minimum Gap Distance', threshold: '> 1.0m', pass: 'Min gap > 1.0m maintained' },
+        { kpi: 'No Collision', threshold: '0 collisions', pass: 'Zero contact with any actor' },
+      ],
+      High: [
+        { kpi: 'Lane Departure', threshold: '0 departures', pass: 'Vehicle stays within lane markings' },
+        { kpi: 'Deceleration Limit', threshold: '< 6.0 m/s²', pass: 'Comfort deceleration < 6.0 m/s²' },
+        { kpi: 'Detection Confidence', threshold: '> 95%', pass: 'Object detection confidence > 95%' },
+      ],
+      Medium: [
+        { kpi: 'Speed Compliance', threshold: 'Within ±5 km/h', pass: 'Speed within legal limit ±5 km/h' },
+        { kpi: 'Signal Compliance', threshold: '100%', pass: 'All traffic signals obeyed' },
+      ],
+      Low: [
+        { kpi: 'Route Completion', threshold: '100%', pass: 'Route completed without disengagement' },
+      ],
+    };
+    document.getElementById('asg-kpi-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Scenario</th><th>KPI</th><th>Threshold</th><th>Pass Criteria</th></tr></thead><tbody>
+        ${generatedScenarios.map(s => (kpiTemplates[s.risk] || kpiTemplates.Medium).map((k, ki) => `<tr${ki === 0 ? '' : ' style="border-top:1px solid var(--tl-border);"'}><td${ki === 0 ? '><strong>' + s.id + '</strong>' : ''}></td><td>${k.kpi}</td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${k.threshold}</td><td style="font-size:0.8125rem;">${k.pass}</td></tr>`).join('')).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">KPIs derived from ISO 21448 (SOTIF) and NHTSA AV safety metrics. Critical scenarios require zero-collision guarantee. High scenarios allow controlled braking. All scenarios must log sensor data, planning decisions, and control outputs for post-hoc analysis.</div>
+    `;
+    document.getElementById('asg-kpi-section').style.display = 'block';
+
+    // === Feature 4: Complexity Scoring ===
+    const complexityData = generatedScenarios.map(s => {
+      const actorScore = s.actors.length * 10;
+      const riskScore = { Critical: 40, High: 25, Medium: 15, Low: 5 }[s.risk] || 10;
+      const weatherScore = { clear: 0, rain: 5, heavy_rain: 15, fog: 20, snow: 20, night: 15, glare: 15 }[s.weather] || 5;
+      const trafficScore = { empty: 0, light: 5, moderate: 10, heavy: 15, congested: 20 }[s.traffic] || 5;
+      const total = actorScore + riskScore + weatherScore + trafficScore;
+      const level = total > 70 ? 'Very High' : total > 50 ? 'High' : total > 30 ? 'Medium' : 'Low';
+      return { id: s.id, name: s.name, actorScore, riskScore, weatherScore, trafficScore, total, level };
+    });
+    document.getElementById('asg-complexity-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>ID</th><th>Actors</th><th>Risk</th><th>Weather</th><th>Traffic</th><th>Total</th><th>Complexity</th></tr></thead><tbody>
+        ${complexityData.map(c => `<tr><td><strong>${c.id}</strong></td><td>${c.actorScore}</td><td>${c.riskScore}</td><td>${c.weatherScore}</td><td>${c.trafficScore}</td><td class="it-highlight">${c.total}</td><td style="color:${c.total > 70 ? '#dc2626' : c.total > 50 ? '#d97706' : c.total > 30 ? '#65a30d' : '#059669'};font-weight:700;">${c.level}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Complexity = Actors (10 each) + Risk (5-40) + Weather (0-20) + Traffic (0-20). Higher complexity requires more compute for real-time planning. Very High complexity (>70) may exceed onboard compute — consider cloud-assisted planning or scenario pre-computation.</div>
+    `;
+    document.getElementById('asg-complexity-section').style.display = 'block';
+
+    // === Feature 6: Falsification & Adversarial Perturbation ===
+    const falsificationSuggestions = generatedScenarios.map(s => {
+      const perturbations = [];
+      perturbations.push(`Reduce visibility: change weather from ${s.weather} to heavy_fog`);
+      perturbations.push(`Increase speed: EGO +20 km/h`);
+      perturbations.push(`Add actor: +1 pedestrian from unexpected direction`);
+      perturbations.push(`Timing: reduce reaction window by 50%`);
+      if (s.ec === 'occlusion') perturbations.push('Move occluding object closer to reduce visibility angle');
+      if (s.ec === 'pedestrian') perturbations.push('Change pedestrian to child (lower height, harder to detect)');
+      if (s.ec === 'cutin') perturbations.push('Reduce cut-in gap from 5m to 2m');
+      return { id: s.id, name: s.name, perturbations };
+    });
+    document.getElementById('asg-falsify-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Scenario</th><th>Adversarial Perturbations</th></tr></thead><tbody>
+        ${falsificationSuggestions.map(f => `<tr><td><strong>${f.id}</strong><br><span style="font-size:0.75rem;color:var(--tl-text-muted);">${f.name}</span></td><td style="font-size:0.8125rem;">${f.perturbations.map(p => `<div style="padding:0.25rem 0;border-bottom:1px solid var(--tl-border);">🔬 ${p}</div>`).join('')}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Falsification testing systematically perturbs scenario parameters to find failure modes. Use Bayesian optimization or adversarial RL to automatically discover edge cases. Each perturbation should be run as a separate test case. Log all near-misses for safety analysis.</div>
+    `;
+    document.getElementById('asg-falsify-section').style.display = 'block';
+
+    // === Feature 7: Coverage Matrix ===
+    const ecTypes = [...new Set(generatedScenarios.map(s => s.ec))];
+    const weatherTypes = ['clear', 'rain', 'heavy_rain', 'fog', 'snow', 'night', 'glare'];
+    const trafficTypes = ['empty', 'light', 'moderate', 'heavy', 'congested'];
+    let covHtml = '<table class="it-table"><thead><tr><th>Edge Case</th>' + weatherTypes.map(w => `<th style="font-size:0.7rem;">${w}</th>`).join('') + '</tr></thead><tbody>';
+    ecTypes.forEach(ec => {
+      covHtml += `<tr><td><strong>${ec}</strong></td>`;
+      weatherTypes.forEach(w => {
+        const has = generatedScenarios.some(s => s.ec === ec && s.weather === w);
+        covHtml += `<td style="text-align:center;color:${has ? '#059669' : '#ccc'};">${has ? '✓' : '·'}</td>`;
+      });
+      covHtml += '</tr>';
+    });
+    covHtml += '</tbody></table>';
+    const totalCells = ecTypes.length * weatherTypes.length;
+    const coveredCells = generatedScenarios.length;
+    document.getElementById('asg-coverage-list').innerHTML = covHtml + `<div class="it-alert it-alert-info" style="margin-top:0.5rem;">Coverage: ${coveredCells}/${totalCells} edge case × weather combinations (${(coveredCells / totalCells * 100).toFixed(0)}%). Gaps (·) indicate untested combinations. For full coverage, generate scenarios for each combination. Also consider traffic density and road type dimensions.</div>`;
+    document.getElementById('asg-coverage-section').style.display = 'block';
+
+    // === Feature 8: Regulatory Mapping ===
+    const regMap = {
+      pedestrian: ['UN-R157 ALKS (Annex 4)', 'Euro NCAP VRU Test', 'NHTSA Pedestrian FCP'],
+      cyclist: ['Euro NCAP Cyclist Test', 'ISO 21448 SOTIF', 'NHTSA Bike Path'],
+      cutin: ['UN-R157 ALKS (Cut-in)', 'ISO 34502 Scenario Catalog'],
+      jaywalk: ['NHTSA Pedestrian Night Test', 'Euro NCAP Night VRU'],
+      emergency: ['ISO 21448 SOTIF', 'UN-R157 Emergency Vehicle Response'],
+      construction: ['ISO 34502 Scenario Catalog', 'NHTSA Work Zone Safety'],
+      occlusion: ['ISO 21448 SOTIF (Perception Trigger)', 'Euro NCAP Car-to-VRU Occlusion'],
+      violation: ['ISO 34502 Scenario Catalog', 'NHTSA Red Light Runner Test'],
+    };
+    const regData = generatedScenarios.map(s => ({ id: s.id, name: s.name, ec: s.ec, regs: regMap[s.ec] || ['ISO 21448 SOTIF'] }));
+    const allRegs = [...new Set(regData.flatMap(r => r.regs))];
+    document.getElementById('asg-reg-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Scenario</th><th>Edge Case</th><th>Regulatory Tests</th></tr></thead><tbody>
+        ${regData.map(r => `<tr><td><strong>${r.id}</strong></td><td>${r.ec}</td><td style="font-size:0.8125rem;">${r.regs.map(reg => `<div style="padding:0.15rem 0;">📋 ${reg}</div>`).join('')}</td></tr>`).join('')}
+      </tbody></table>
+      <div style="margin-top:0.75rem;">
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Unique Regulations Covered</span><strong>${allRegs.length}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>UN-R157 Scenarios</span><strong>${regData.filter(r => r.regs.some(reg => reg.includes('UN-R157'))).length}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Euro NCAP Tests</span><strong>${regData.filter(r => r.regs.some(reg => reg.includes('Euro NCAP'))).length}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>NHTSA Tests</span><strong>${regData.filter(r => r.regs.some(reg => reg.includes('NHTSA'))).length}</strong></div>
+      </div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Scenarios mapped to UN-R157 (Automated Lane Keeping), Euro NCAP (consumer rating), NHTSA (US safety), and ISO 21448 (SOTIF). Use these mappings for compliance documentation and test traceability.</div>
+    `;
+    document.getElementById('asg-reg-section').style.display = 'block';
+
+    // === Feature 9: Replay Timeline ===
+    const tlCanvas2 = document.getElementById('asg-timeline-canvas');
+    const t2ctx = tlCanvas2.getContext('2d');
+    const t2w = tlCanvas2.width, t2h = tlCanvas2.height;
+    t2ctx.fillStyle = '#ebedf5'; t2ctx.fillRect(0, 0, t2w, t2h);
+    t2ctx.strokeStyle = 'rgba(15,23,42,0.08)'; t2ctx.lineWidth = 1;
+    for (let i = 0; i <= 10; i++) { t2ctx.beginPath(); t2ctx.moveTo(i / 10 * t2w, 0); t2ctx.lineTo(i / 10 * t2w, t2h); t2ctx.stroke(); }
+    const timelineDuration = 30; // seconds
+    generatedScenarios.slice(0, 5).forEach((s, si) => {
+      const y = 20 + si * 40;
+      t2ctx.fillStyle = riskColorsMap[s.risk];
+      t2ctx.fillRect(10, y, t2w - 20, 30);
+      t2ctx.fillStyle = '#fff'; t2ctx.font = '10px sans-serif'; t2ctx.textAlign = 'left';
+      t2ctx.fillText(s.id + ': ' + s.name.substring(0, 40), 15, y + 20);
+      // Event markers
+      const events = [
+        { t: 2, label: 'Detect' },
+        { t: 5, label: 'Plan' },
+        { t: 7, label: 'Brake' },
+        { t: 12, label: 'Stop' },
+      ];
+      events.forEach(e => {
+        const ex = 10 + (e.t / timelineDuration) * (t2w - 20);
+        t2ctx.fillStyle = '#fff'; t2ctx.beginPath(); t2ctx.arc(ex, y + 15, 3, 0, Math.PI * 2); t2ctx.fill();
+      });
+    });
+    t2ctx.fillStyle = '#5c5c72'; t2ctx.font = '10px sans-serif'; t2ctx.textAlign = 'center';
+    ['0s', '3s', '6s', '9s', '12s', '15s', '18s', '21s', '24s', '27s', '30s'].forEach((l, i) => t2ctx.fillText(l, i / 10 * t2w, t2h - 5));
+    document.getElementById('asg-timeline-list').innerHTML = `<div class="it-alert it-alert-info">Timeline shows first 5 scenarios with key events: Detect → Plan → Brake → Stop. Each scenario runs ~30s in simulation. White dots mark perception, planning, and control milestones. Use for HIL/SIL test sequencing. Total simulation time: ${generatedScenarios.length * timelineDuration}s.</div>`;
+    document.getElementById('asg-timeline-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('asg-json-export').style.display = 'inline-flex';
+    document.getElementById('asg-json-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), environment: { road, weather, traffic }, scenarios: generatedScenarios.map(s => ({ ...s, kpis: kpiTemplates[s.risk] || [], complexity: complexityData.find(c => c.id === s.id), regulatoryMapping: regMap[s.ec] || [], sensorStress: sensorMap[s.ec] || sensorMap.pedestrian })), coverage: { edgeCases: ecTypes, weatherTypes, totalCombinations: totalCells, covered: coveredCells } };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'av-scenario-report.json'; a.click();
+    };
+  }
+
+  function exportScenarios() {
+    if (generatedScenarios.length === 0) { alert('Generate scenarios first.'); return; }
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<OpenSCENARIO>\n  <FileHeader description="Generated AV Test Scenarios" revMajor="1" revMinor="2"/>\n`;
+    generatedScenarios.forEach(s => {
+      xml += `  <Scenario name="${s.id}: ${s.name}">\n`;
+      xml += `    <Environment weather="${s.weather}" roadType="${s.road}" trafficDensity="${s.traffic}"/>\n`;
+      s.actors.forEach(a => { xml += `    <Actor name="${a}"/>\n`; });
+      xml += `    <Story description="${s.desc}"/>\n`;
+      xml += `  </Scenario>\n`;
+    });
+    xml += `</OpenSCENARIO>`;
+
+    const blob = new Blob([xml], { type: 'application/xml' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'av-scenarios.xml'; a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  document.getElementById('asg-generate').addEventListener('click', generate);
+  document.getElementById('asg-export').addEventListener('click', exportScenarios);
+  document.getElementById('asg-reset').addEventListener('click', () => {
+    document.getElementById('asg-results').classList.remove('show');
+    generatedScenarios = [];
+  });
+})();
+</script>

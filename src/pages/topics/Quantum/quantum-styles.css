@@ -1,0 +1,303 @@
+/* ============================================
+   QUANTUM topic STYLES — Premium Redesign
+   Unique layout: circuit-style hero, glow-effect
+   cards, quantum-themed borders, circuit connectors.
+   ============================================ */
+
+/* ── Quantum Page Tokens ─────────────────────────────────── */
+.qm-page {
+  --qm-purple: #8b5cf6;
+  --qm-pink: #a855f7;
+  --qm-magenta: #ec4899;
+  --qm-cyan: #06b6d4;
+  --qm-grad: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #ec4899 100%);
+  --qm-grad-soft: linear-gradient(135deg, rgba(139,92,246,0.12) 0%, rgba(168,85,247,0.12) 50%, rgba(236,72,153,0.12) 100%);
+  --qm-bg: #0a0a0f;
+  --qm-bg-alt: #0d0d18;
+  --qm-surface: #11111e;
+  --qm-surface-2: #161628;
+  --qm-surface-hover: #1a1a30;
+  --qm-border: rgba(255,255,255,0.08);
+  --qm-border-strong: rgba(255,255,255,0.14);
+  --qm-text: #e2e8f0;
+  --qm-text-muted: #94a3b8;
+  --qm-text-dim: #64748b;
+  --qm-radius: 12px;
+  --qm-radius-lg: 20px;
+  --qm-radius-xl: 28px;
+  --qm-transition: 250ms ease;
+  --qm-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* ── Section Base ────────────────────────────────────────── */
+.qm-section { padding: 5rem 0; position: relative; overflow: hidden; }
+.qm-section-alt { background: var(--qm-bg-alt); }
+.qm-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; position: relative; z-index: 1; }
+.qm-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--qm-purple); margin-bottom: 0.75rem; }
+.qm-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--qm-purple); }
+.qm-section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+.qm-section-sub { font-size: 1.0625rem; color: var(--qm-text-muted); max-width: 640px; line-height: 1.7; margin-bottom: 2.5rem; }
+.qm-grad-text { background: var(--qm-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── Scroll Reveal ───────────────────────────────────────── */
+.qm-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.qm-reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ── Grid Overlay ────────────────────────────────────────── */
+.qm-grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); z-index: 0; pointer-events: none; }
+
+/* ── Orb ─────────────────────────────────────────────────── */
+.qm-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; z-index: 0; animation: qm-orb-float 20s ease-in-out infinite; pointer-events: none; }
+@keyframes qm-orb-float { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(30px,-30px) scale(1.1);} 66%{transform:translate(-20px,20px) scale(.95);} }
+
+/* ── Circuit Dots (Quantum unique element) ───────────────── */
+.qm-circuit-dot { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: var(--qm-purple); box-shadow: 0 0 12px var(--qm-purple), 0 0 24px var(--qm-purple); z-index: 0; animation: qm-circuit-pulse 2s ease-in-out infinite; pointer-events: none; }
+@keyframes qm-circuit-pulse { 0%,100%{opacity:0.4;transform:scale(1);} 50%{opacity:1;transform:scale(1.5);} }
+.qm-circuit-line { position: absolute; height: 1px; background: linear-gradient(90deg, transparent, var(--qm-purple), transparent); z-index: 0; opacity: 0.3; pointer-events: none; }
+
+/* ════════════════════════════════════════════════════════════
+   1. HERO — Circuit-style with glow effects (unique)
+   ════════════════════════════════════════════════════════════ */
+.qm-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 80px; }
+.qm-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.qm-hero-bg-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.12; }
+.qm-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, transparent 0%, var(--qm-bg) 80%); }
+.qm-hero-orb-1 { width: 400px; height: 400px; background: var(--qm-purple); top: 10%; right: -100px; }
+.qm-hero-orb-2 { width: 350px; height: 350px; background: var(--qm-pink); bottom: 20%; left: -80px; animation-delay: -5s; }
+.qm-hero-orb-3 { width: 300px; height: 300px; background: var(--qm-magenta); top: 50%; right: 30%; animation-delay: -10s; }
+
+.qm-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.qm-hero-left { max-width: 540px; }
+.qm-hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--qm-border); font-size: 0.8125rem; color: var(--qm-text-muted); margin-bottom: 1.5rem; }
+.qm-hero-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--qm-purple); box-shadow: 0 0 8px var(--qm-purple); animation: qm-dot-blink 1.5s ease-in-out infinite; }
+@keyframes qm-dot-blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.qm-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #fff; margin-bottom: 1.25rem; }
+.qm-hero-tagline { font-size: 1.125rem; color: var(--qm-purple); font-weight: 600; margin-bottom: 0.75rem; }
+.qm-hero-desc { font-size: 1rem; color: var(--qm-text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 2rem; }
+.qm-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.qm-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; font-size: 0.9375rem; transition: all var(--qm-transition); white-space: nowrap; cursor: pointer; }
+.qm-btn-primary { background: var(--qm-grad); color: #fff; box-shadow: 0 4px 20px rgba(139,92,246,0.3); }
+.qm-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(139,92,246,0.45); }
+.qm-btn-secondary { background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: var(--qm-text); border: 1px solid var(--qm-border); }
+.qm-btn-secondary:hover { background: var(--qm-surface-hover); border-color: var(--qm-border-strong); transform: translateY(-2px); }
+
+/* Hero stats — 2x2 grid with glow borders */
+.qm-hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+.qm-hero-stat { padding: 1rem; border-radius: var(--qm-radius); background: rgba(17,17,30,0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--qm-border); transition: transform var(--qm-transition), border-color var(--qm-transition), box-shadow var(--qm-transition); }
+.qm-hero-stat:hover { transform: translateY(-4px); border-color: var(--qm-purple); box-shadow: 0 4px 20px rgba(139,92,246,0.2); }
+.qm-hero-stat-value { font-size: 1.5rem; font-weight: 800; background: var(--qm-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: block; margin-bottom: 0.125rem; }
+.qm-hero-stat-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--qm-text-dim); }
+
+/* Hero right — circuit visualization */
+.qm-hero-right { position: relative; height: 400px; display: flex; align-items: center; justify-content: center; }
+.qm-hero-img-wrap { border-radius: var(--qm-radius-xl); overflow: hidden; border: 1px solid var(--qm-border); box-shadow: var(--qm-shadow), 0 0 60px rgba(139,92,246,0.2); position: relative; }
+.qm-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.qm-hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(0,0,0,0.3)); border-radius: var(--qm-radius-xl); pointer-events: none; }
+.qm-circuit-dot-1 { top: 20%; left: 10%; }
+.qm-circuit-dot-2 { top: 50%; right: 15%; animation-delay: -0.5s; }
+.qm-circuit-dot-3 { bottom: 25%; left: 20%; animation-delay: -1s; }
+.qm-circuit-dot-4 { top: 30%; right: 30%; animation-delay: -1.5s; }
+.qm-circuit-line-1 { top: 24%; left: 14%; width: 100px; transform: rotate(25deg); }
+.qm-circuit-line-2 { top: 50%; left: 50%; width: 80px; transform: rotate(-15deg); }
+
+/* ════════════════════════════════════════════════════════════
+   2. MARQUEE
+   ════════════════════════════════════════════════════════════ */
+.qm-marquee { overflow: hidden; padding: 0.75rem 0; border-block: 1px solid var(--qm-border); background: var(--qm-bg-alt); }
+.qm-marquee-track { display: flex; gap: 0; animation: qm-marquee 30s linear infinite; width: max-content; }
+@keyframes qm-marquee { to { transform: translateX(-33.333%); } }
+.qm-marquee-group { display: flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem; }
+.qm-marquee-group span { font-size: 0.875rem; color: var(--qm-text-dim); white-space: nowrap; font-weight: 500; }
+.qm-marquee-sep { color: var(--qm-purple) !important; }
+
+/* ════════════════════════════════════════════════════════════
+   3. SECTION CARDS — Image header with glow border
+   ════════════════════════════════════════════════════════════ */
+.qm-section-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.qm-section-card { border-radius: var(--qm-radius-lg); background: var(--qm-surface); border: 1px solid var(--qm-border); overflow: hidden; transition: transform var(--qm-transition), border-color var(--qm-transition), box-shadow var(--qm-transition); }
+.qm-section-card:hover { transform: translateY(-6px); border-color: var(--qm-purple); box-shadow: var(--qm-shadow), 0 0 40px rgba(139,92,246,0.15); }
+.qm-section-img-wrap { position: relative; height: 160px; overflow: hidden; }
+.qm-section-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.qm-section-card:hover .qm-section-img { transform: scale(1.05); }
+.qm-section-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(0,0,0,0.4)); }
+.qm-section-body { padding: 1.25rem; }
+.qm-section-eyebrow { font-size: 0.6875rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; color: var(--qm-purple); margin-bottom: 0.5rem; }
+.qm-section-title { font-size: 1.125rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.qm-section-desc { font-size: 0.8125rem; color: var(--qm-text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.qm-section-points { display: flex; flex-direction: column; gap: 0.5rem; }
+.qm-section-point { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--qm-text-muted); }
+.qm-section-point::before { content: '◆'; color: var(--qm-purple); font-size: 0.625rem; }
+
+/* ════════════════════════════════════════════════════════════
+   4. TRENDS — Cards with gradient backgrounds
+   ════════════════════════════════════════════════════════════ */
+.qm-trends-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.qm-trend-card { padding: 1.5rem; border-radius: var(--qm-radius-lg); background: var(--qm-surface); border: 1px solid var(--qm-border); transition: transform var(--qm-transition), border-color var(--qm-transition); position: relative; overflow: hidden; }
+.qm-trend-card::before { content: ''; position: absolute; inset: 0; opacity: 0.08; transition: opacity var(--qm-transition); }
+.qm-trend-card:hover { transform: translateY(-6px); border-color: var(--qm-border-strong); }
+.qm-trend-card:hover::before { opacity: 1; }
+.qm-trend-tag { font-size: 0.625rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.625rem; border-radius: 999px; display: inline-block; margin-bottom: 0.75rem; }
+.qm-trend-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; position: relative; }
+.qm-trend-desc { font-size: 0.8125rem; color: var(--qm-text-muted); line-height: 1.6; position: relative; }
+
+/* ════════════════════════════════════════════════════════════
+   5. COMPANIES — Cards with metrics
+   ════════════════════════════════════════════════════════════ */
+.qm-companies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.qm-company-card { padding: 1.25rem; border-radius: var(--qm-radius-lg); background: var(--qm-surface); border: 1px solid var(--qm-border); transition: transform var(--qm-transition), border-color var(--qm-transition); }
+.qm-company-card:hover { transform: translateY(-6px); border-color: var(--qm-purple); box-shadow: var(--qm-shadow), 0 0 30px rgba(139,92,246,0.15); }
+.qm-company-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.qm-company-icon { width: 40px; height: 40px; border-radius: var(--qm-radius); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; background: var(--qm-grad-soft); }
+.qm-company-name { font-size: 1rem; font-weight: 700; color: #fff; }
+.qm-company-desc { font-size: 0.8125rem; color: var(--qm-text-muted); line-height: 1.6; margin-bottom: 0.75rem; }
+.qm-company-metric { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.625rem; border-radius: 999px; background: rgba(139,92,246,0.12); color: var(--qm-purple); display: inline-block; }
+
+/* ════════════════════════════════════════════════════════════
+   6. FAQ
+   ════════════════════════════════════════════════════════════ */
+.qm-faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.qm-faq-item { border-radius: var(--qm-radius); background: var(--qm-surface); border: 1px solid var(--qm-border); overflow: hidden; transition: border-color var(--qm-transition); }
+.qm-faq-item:hover { border-color: var(--qm-border-strong); }
+.qm-faq-item summary { padding: 1rem 1.25rem; font-size: 0.9375rem; font-weight: 600; color: #fff; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: background var(--qm-transition); }
+.qm-faq-item summary::-webkit-details-marker { display: none; }
+.qm-faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--qm-purple); flex-shrink: 0; transition: transform var(--qm-transition); }
+.qm-faq-item[open] summary::after { transform: rotate(45deg); }
+.qm-faq-item summary:hover { background: rgba(139,92,246,0.04); }
+.qm-faq-answer { padding: 0 1.25rem 1.25rem; font-size: 0.875rem; color: var(--qm-text-muted); line-height: 1.7; }
+
+/* ════════════════════════════════════════════════════════════
+   7. CTA
+   ════════════════════════════════════════════════════════════ */
+.qm-cta { position: relative; text-align: center; padding: 5rem 0; overflow: hidden; }
+.qm-cta-bg { position: absolute; inset: 0; z-index: 0; }
+.qm-cta-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.12; }
+.qm-cta-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(236,72,153,0.15)); }
+.qm-cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
+.qm-cta h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+.qm-cta p { font-size: 0.9375rem; color: var(--qm-text-muted); margin-bottom: 1.5rem; }
+.qm-cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; border-radius: 999px; background: var(--qm-grad); color: #fff; font-weight: 600; font-size: 0.9375rem; transition: transform var(--qm-transition), box-shadow var(--qm-transition); box-shadow: 0 4px 20px rgba(139,92,246,0.3); }
+.qm-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(139,92,246,0.45); }
+.qm-cta-pills { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
+.qm-cta-pill { display: flex; align-items: center; gap: 0.375rem; padding: 0.5rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--qm-border); font-size: 0.8125rem; color: var(--qm-text-muted); }
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .qm-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .qm-hero-right { height: 320px; }
+  .qm-section-grid { grid-template-columns: 1fr; }
+  .qm-trends-grid { grid-template-columns: repeat(2, 1fr); }
+  .qm-companies-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .qm-section { padding: 3.5rem 0; }
+  .qm-trends-grid { grid-template-columns: 1fr; }
+  .qm-companies-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .qm-section { padding: 2.75rem 0; }
+  .qm-container { padding: 0 1rem; }
+  .qm-hero { min-height: auto; padding: 5rem 0 2.5rem; }
+  .qm-hero h1 { font-size: 1.75rem; }
+  .qm-hero-tagline { font-size: 0.9375rem; }
+  .qm-hero-desc { font-size: 0.875rem; }
+  .qm-hero-ctas { flex-direction: column; width: 100%; }
+  .qm-hero-ctas .qm-btn { width: 100%; }
+  .qm-hero-stats { grid-template-columns: 1fr 1fr; }
+  .qm-hero-stat { padding: 0.875rem 0.625rem; }
+  .qm-hero-stat-value { font-size: 1.25rem; }
+  .qm-hero-stat-label { font-size: 0.625rem; }
+  .qm-section-title { font-size: 1.5rem; }
+  .qm-section-sub { font-size: 0.875rem; margin-bottom: 1.5rem; }
+  .qm-section-img-wrap { height: 140px; }
+  .qm-cta { padding: 3rem 0; }
+  .qm-cta h3 { font-size: 1.375rem; }
+  .qm-cta p { font-size: 0.8125rem; }
+}
+
+@media (max-width: 358px) {
+  .qm-section { padding: 2.25rem 0; }
+  .qm-container { padding: 0 0.75rem; }
+  .qm-hero { padding: 4rem 0 2rem; }
+  .qm-hero h1 { font-size: 1.5rem; line-height: 1.15; }
+  .qm-hero-pill { font-size: 0.625rem; padding: 0.25rem 0.75rem; }
+  .qm-hero-tagline { font-size: 0.8125rem; }
+  .qm-hero-desc { font-size: 0.8125rem; line-height: 1.6; }
+  .qm-hero-ctas { gap: 0.5rem; }
+  .qm-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .qm-hero-stats { gap: 0.5rem; }
+  .qm-hero-stat { padding: 0.625rem 0.5rem; }
+  .qm-hero-stat-value { font-size: 1rem; }
+  .qm-hero-stat-label { font-size: 0.5625rem; }
+  .qm-eyebrow { font-size: 0.5625rem; }
+  .qm-eyebrow::before { width: 16px; }
+  .qm-section-title { font-size: 1.25rem; }
+  .qm-section-sub { font-size: 0.8125rem; margin-bottom: 1.25rem; }
+  .qm-section-img-wrap { height: 120px; }
+  .qm-section-body { padding: 1rem; }
+  .qm-section-title { font-size: 1rem; }
+  .qm-section-desc { font-size: 0.75rem; }
+  .qm-section-point { font-size: 0.6875rem; }
+  .qm-trend-card { padding: 1rem; }
+  .qm-trend-title { font-size: 0.875rem; }
+  .qm-trend-desc { font-size: 0.75rem; }
+  .qm-company-card { padding: 1rem; }
+  .qm-company-name { font-size: 0.875rem; }
+  .qm-company-desc { font-size: 0.75rem; }
+  .qm-company-metric { font-size: 0.625rem; }
+  .qm-faq-item summary { padding: 0.75rem 1rem; font-size: 0.8125rem; }
+  .qm-faq-answer { padding: 0 1rem 1rem; font-size: 0.75rem; }
+  .qm-cta { padding: 2.5rem 0; }
+  .qm-cta h3 { font-size: 1.125rem; }
+  .qm-cta p { font-size: 0.75rem; }
+  .qm-cta-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .qm-cta-pills { gap: 0.375rem; }
+  .qm-cta-pill { font-size: 0.6875rem; padding: 0.375rem 0.625rem; }
+  .qm-marquee-group span { font-size: 0.6875rem; }
+}
+
+/* ── Market Stats Grid ───────────────────────────────────── */
+.qm-market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.qm-market-card { background: var(--qm-surface); border: 1px solid var(--qm-border); border-radius: var(--qm-radius-lg); padding: 1.75rem 1.5rem; text-align: center; transition: var(--qm-transition); }
+.qm-market-card:hover { border-color: var(--qm-purple); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(139,92,246,0.15); }
+.qm-market-value { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; background: var(--qm-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+.qm-market-label { font-size: 0.875rem; color: var(--qm-text); font-weight: 600; margin-bottom: 0.25rem; }
+.qm-market-source { font-size: 0.6875rem; color: var(--qm-text-dim); font-family: 'JetBrains Mono', monospace; }
+
+/* ── Future Timeline ─────────────────────────────────────── */
+.qm-future-timeline { position: relative; margin-top: 2rem; padding-left: 2rem; }
+.qm-future-timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--qm-purple), var(--qm-magenta), transparent); }
+.qm-future-item { position: relative; padding-bottom: 2.5rem; }
+.qm-future-item:last-child { padding-bottom: 0; }
+.qm-future-item::before { content: ''; position: absolute; left: -2rem; top: 0.375rem; width: 12px; height: 12px; border-radius: 50%; background: var(--qm-purple); box-shadow: 0 0 0 4px rgba(139,92,246,0.2); }
+.qm-future-year { font-size: 0.875rem; font-weight: 700; color: var(--qm-purple); font-family: 'JetBrains Mono', monospace; margin-bottom: 0.25rem; }
+.qm-future-prediction { font-size: 1.125rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.qm-future-detail { font-size: 0.875rem; color: var(--qm-text-muted); line-height: 1.6; }
+
+/* ── Trending Searches Table ─────────────────────────────── */
+.qm-trending-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.qm-trending-table th { text-align: left; padding: 0.875rem 1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--qm-text-dim); border-bottom: 1px solid var(--qm-border-strong); font-family: 'JetBrains Mono', monospace; }
+.qm-trending-table td { padding: 0.875rem 1rem; border-bottom: 1px solid var(--qm-border); color: var(--qm-text); font-size: 0.875rem; }
+.qm-trending-table tr:hover td { background: var(--qm-surface); }
+.qm-trending-term { font-weight: 600; color: #fff; }
+.qm-trending-growth { color: var(--qm-purple); font-weight: 600; }
+.qm-trending-type { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 99px; font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.qm-trending-type.hot { background: rgba(239,68,68,0.15); color: #ef4444; }
+.qm-trending-type.rising { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.qm-trending-type.breakout { background: rgba(16,185,129,0.15); color: #10b981; }
+.qm-trending-type.steady { background: rgba(59,130,246,0.15); color: #3b82f6; }
+.qm-trending-type.stable { background: rgba(100,116,139,0.15); color: #94a3b8; }
+
+@media (max-width: 768px) {
+  .qm-market-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .qm-market-card { padding: 1.25rem 1rem; }
+  .qm-market-value { font-size: 1.25rem; }
+  .qm-market-label { font-size: 0.75rem; }
+  .qm-future-prediction { font-size: 0.9375rem; }
+  .qm-future-detail { font-size: 0.8125rem; }
+  .qm-trending-table { font-size: 0.75rem; }
+  .qm-trending-table th, .qm-trending-table td { padding: 0.5rem 0.625rem; }
+}

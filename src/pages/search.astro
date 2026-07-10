@@ -1,0 +1,1458 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { allPosts } from '../data/blog/blog-content.ts';
+import { allGuides } from '../data/guides/guides-listing.ts';
+import { allTools } from '../data/tools/tools-content.ts';
+const title = 'Search';
+const description = 'Search across all emerging technology topics — AI, Robotics, Fusion, Biotech, BCI, Autonomous Vehicles, Space, Materials, Quantum, Nuclear, Energy Storage, and Cybersecurity.';
+
+interface SearchEntry {
+  title: string;
+  desc: string;
+  href: string;
+  type: 'topic' | 'blog' | 'guide' | 'tool' | 'page';
+  topic: string;
+  color: string;
+  tags: string[];
+}
+
+const searchData: SearchEntry[] = [
+  // ── Topics ──
+  { title: 'Artificial Intelligence', desc: 'LLMs, agents & the race to AGI', href: '/topics/AI', type: 'topic', topic: 'Topic', color: '#3b82f6', tags: ['AI', 'ML', 'LLM', 'GPT', 'AGI'] },
+  { title: 'Cybersecurity', desc: 'Post-quantum crypto & AI defense', href: '/topics/Cybersecurity', type: 'topic', topic: 'Topic', color: '#ef4444', tags: ['Security', 'Crypto', 'Zero Trust', 'PQC'] },
+  { title: 'Space Exploration', desc: 'Launch vehicles & lunar economy', href: '/topics/Space', type: 'topic', topic: 'Topic', color: '#06b6d4', tags: ['Space', 'Rockets', 'Satellites', 'NASA'] },
+  { title: 'Biotechnology', desc: 'CRISPR, mRNA & lab-grown organs', href: '/topics/Biotech', type: 'topic', topic: 'Topic', color: '#10b981', tags: ['Biotech', 'CRISPR', 'mRNA', 'Genetics'] },
+  { title: 'Nuclear Energy', desc: 'SMRs & next-gen fission reactors', href: '/topics/Nuclear', type: 'topic', topic: 'Topic', color: '#f59e0b', tags: ['Nuclear', 'SMR', 'Fission', 'Reactor'] },
+  { title: 'Energy Storage', desc: 'Solid-state batteries & grid storage', href: '/topics/Energy-Storage', type: 'topic', topic: 'Topic', color: '#f97316', tags: ['Battery', 'Storage', 'Grid', 'Solid-state'] },
+  { title: 'Robotics', desc: 'Humanoids, drones & automation', href: '/topics/Robotics', type: 'topic', topic: 'Topic', color: '#ec4899', tags: ['Robotics', 'Humanoid', 'ROS', 'Automation'] },
+  { title: 'Autonomous Vehicles', desc: 'Robotaxis & Level 4 autonomy', href: '/topics/AV', type: 'topic', topic: 'Topic', color: '#8b5cf6', tags: ['AV', 'Self-driving', 'Robotaxi', 'LiDAR'] },
+  { title: 'Quantum Computing', desc: 'Qubits & quantum advantage', href: '/topics/Quantum', type: 'topic', topic: 'Topic', color: '#a78bfa', tags: ['Quantum', 'Qubit', 'Computing', 'Shor'] },
+  { title: 'Advanced Materials', desc: 'Graphene & superconductors', href: '/topics/Materials', type: 'topic', topic: 'Topic', color: '#f43f5e', tags: ['Materials', 'Graphene', 'Superconductor', 'Metamaterial'] },
+  { title: 'Brain-Computer Interfaces', desc: 'Neural implants & EEG control', href: '/topics/BCI', type: 'topic', topic: 'Topic', color: '#0ea5e9', tags: ['BCI', 'Neuralink', 'EEG', 'Brain'] },
+  { title: 'Nuclear Fusion', desc: 'Tokamaks & path to net power', href: '/topics/Fusion', type: 'topic', topic: 'Topic', color: '#fb923c', tags: ['Fusion', 'Tokamak', 'Plasma', 'ITER'] },
+
+  // ── Blog Posts ──
+  ...allPosts.map((p) => ({
+    title: p.title,
+    desc: p.excerpt,
+    href: `/blog/${p.slug}`,
+    type: 'blog' as const,
+    topic: p.topic,
+    color: p.topicColor,
+    tags: p.tags || [],
+  })),
+
+  // ── Guides ──
+  ...allGuides.map((g) => ({
+    title: g.title,
+    desc: g.description,
+    href: `/guides/${g.slug}`,
+    type: 'guide' as const,
+    topic: g.topic,
+    color: g.topicColor,
+    tags: [g.difficulty, `${g.steps} steps`, g.readTime],
+  })),
+
+  // ── Tools ──
+  ...allTools.map((t) => ({
+    title: t.name,
+    desc: t.description,
+    href: `/tools/${t.slug}`,
+    type: 'tool' as const,
+    topic: t.topic,
+    color: t.topicColor,
+    tags: t.tags || [],
+  })),
+
+  // ── Pages ──
+  { title: 'Blog', desc: 'Latest articles & analysis across all tech frontiers', href: '/blog', type: 'page', topic: 'Resources', color: '#3380ff', tags: ['Blog', 'Articles', 'News'] },
+  { title: 'Guides', desc: 'Step-by-step implementation guides & tutorials', href: '/guides', type: 'page', topic: 'Resources', color: '#3380ff', tags: ['Guides', 'Tutorials', 'How-to'] },
+  { title: 'Podcast', desc: 'Expert interviews & discussions', href: '/podcast', type: 'page', topic: 'Resources', color: '#3380ff', tags: ['Podcast', 'Interviews'] },
+  { title: 'Tools', desc: 'Interactive tools & calculators for emerging tech', href: '/tools', type: 'page', topic: 'Resources', color: '#3380ff', tags: ['Tools', 'Calculators'] },
+  { title: 'Trending', desc: 'Hot topics & trending technologies', href: '/trending', type: 'page', topic: 'Content', color: '#ec4899', tags: ['Trending', 'Popular'] },
+  { title: 'Resources', desc: 'Tools, templates & downloads', href: '/resources', type: 'page', topic: 'Hub', color: '#7c3aed', tags: ['Resources', 'Templates'] },
+  { title: 'Comparisons', desc: 'Side-by-side technology comparisons', href: '/comparisons', type: 'page', topic: 'Hub', color: '#7c3aed', tags: ['Comparisons', 'Versus'] },
+  { title: 'Glossary', desc: 'Key terms & definitions for emerging tech', href: '/glossary', type: 'page', topic: 'Hub', color: '#7c3aed', tags: ['Glossary', 'Definitions'] },
+  { title: 'About Us', desc: 'Our mission & team', href: '/about', type: 'page', topic: 'About', color: '#06b6d4', tags: ['About', 'Team'] },
+  { title: 'Community', desc: 'Join the discussion', href: '/community', type: 'page', topic: 'About', color: '#06b6d4', tags: ['Community', 'Forum'] },
+  { title: 'Contact Us', desc: 'Get in touch', href: '/contact', type: 'page', topic: 'About', color: '#06b6d4', tags: ['Contact', 'Support'] },
+  { title: 'Recommendations', desc: 'Our top picks & tools', href: '/recommendations', type: 'page', topic: 'About', color: '#06b6d4', tags: ['Recommendations', 'Picks'] },
+  { title: 'FAQ', desc: 'Frequently asked questions', href: '/faq', type: 'page', topic: 'About', color: '#06b6d4', tags: ['FAQ', 'Questions'] },
+  { title: 'Newsletter', desc: 'Subscribe for weekly updates', href: '/newsletter', type: 'page', topic: 'About', color: '#06b6d4', tags: ['Newsletter', 'Subscribe'] },
+];
+---
+
+<BaseLayout title={title} description={description} noindex={true}>
+<style>
+  .search-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .search-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .search-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-header p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+  }
+
+  .search-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .search-stat {
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+  }
+
+  .search-stat strong {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  /* ── Search Box ── */
+  .search-box {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .search-box svg.search-icon {
+    position: absolute;
+    left: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-dim);
+    pointer-events: none;
+  }
+
+  .search-input-wrap {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 1rem 2.75rem 1rem 3rem;
+    font-size: 1.1rem;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .search-input::placeholder { color: var(--color-text-dim); }
+
+  .search-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(51, 128, 255, 0.15);
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 3.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-dim);
+    padding: 0.35rem;
+    border-radius: var(--radius-full);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: color var(--transition-fast), background var(--transition-fast);
+  }
+
+  .search-clear.visible { display: flex; }
+
+  .search-clear:hover {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .search-shortcut {
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    color: var(--color-text-dim);
+    border: 1px solid var(--color-border);
+    padding: 0.15rem 0.4rem;
+    border-radius: var(--radius-sm);
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+  }
+
+  .search-shortcut.hidden { opacity: 0; }
+
+  .search-share-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.82rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .search-share-btn:hover {
+    color: var(--color-text);
+    border-color: var(--color-primary);
+  }
+
+  .search-share-btn.copied {
+    color: var(--color-emerald);
+    border-color: var(--color-emerald);
+  }
+
+  /* ── Did You Mean ── */
+  .did-you-mean {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.75rem;
+    background: rgba(51, 128, 255, 0.08);
+    border: 1px solid rgba(51, 128, 255, 0.2);
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+  }
+
+  .did-you-mean.visible { display: flex; }
+
+  .did-you-mean button {
+    font-weight: 600;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.88rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── Type Filters ── */
+  .search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .search-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.82rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .search-filter:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+  }
+
+  .search-filter.active {
+    color: #fff;
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .search-filter-count {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  /* ── Topic Filters ── */
+  .topic-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease;
+  }
+
+  .topic-filters.expanded {
+    max-height: 200px;
+  }
+
+  .topic-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.78rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .topic-filter:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+  }
+
+  .topic-filter.active {
+    color: #fff;
+    border-color: transparent;
+  }
+
+  .topic-filter-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .topic-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.78rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-text-dim);
+    background: none;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .topic-toggle:hover {
+    color: var(--color-text-muted);
+    border-color: var(--color-border-strong);
+  }
+
+  /* ── Meta Bar ── */
+  .search-meta {
+    color: var(--color-text-dim);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    min-height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .search-meta-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .search-meta-text strong { color: var(--color-text); }
+
+  .search-timer {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--color-text-dim);
+    opacity: 0.6;
+  }
+
+  .search-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .search-sort select {
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .view-toggle {
+    display: flex;
+    gap: 0.2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.15rem;
+  }
+
+  .view-btn {
+    padding: 0.2rem 0.45rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-dim);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .view-btn.active {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  /* ── Results ── */
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-results.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .result-group {
+    margin-bottom: 1rem;
+  }
+
+  .result-group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-dim);
+    padding: 0.5rem 0.25rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .result-group-header:hover { color: var(--color-text-muted); }
+
+  .result-group-chevron {
+    transition: transform 200ms ease;
+  }
+
+  .result-group.collapsed .result-group-chevron { transform: rotate(-90deg); }
+  .result-group.collapsed .result-group-items { display: none; }
+
+  .result-group-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-results.grid .result-group-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .search-result {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .search-results.grid .search-result {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .search-result:hover,
+  .search-result.active {
+    border-color: var(--color-primary);
+    background: var(--color-surface-hover);
+    transform: translateX(4px);
+  }
+
+  .search-results.grid .search-result:hover,
+  .search-results.grid .search-result.active {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .search-result-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .search-results.grid .search-result-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .search-result-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search-result-title {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.2rem;
+    line-height: 1.35;
+  }
+
+  .search-result-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .search-result-tags {
+    display: flex;
+    gap: 0.35rem;
+    margin-top: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .search-result-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-text-dim);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .search-result-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-dim);
+    margin-left: 0.5rem;
+    opacity: 0.6;
+  }
+
+  .search-result-type {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dim);
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.05);
+    margin-top: 0.15rem;
+    white-space: nowrap;
+  }
+
+  .search-results.grid .search-result-type {
+    align-self: flex-start;
+    margin-top: 0;
+  }
+
+  .search-result-type.topic { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+  .search-result-type.blog { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+  .search-result-type.guide { color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
+  .search-result-type.tool { color: #8b5cf6; background: rgba(139, 92, 246, 0.1); }
+  .search-result-type.page { color: #06b6d4; background: rgba(6, 182, 212, 0.1); }
+
+  .search-result mark {
+    background: rgba(51, 128, 255, 0.2);
+    color: var(--color-primary);
+    border-radius: 2px;
+    padding: 0 1px;
+  }
+
+  /* ── Empty State ── */
+  .search-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-text-dim);
+  }
+
+  .search-empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.5;
+  }
+
+  .search-empty p {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .search-empty-hint {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  /* ── Recent + Popular Searches ── */
+  .search-suggestions {
+    margin-top: 2rem;
+  }
+
+  .suggestions-row {
+    margin-bottom: 1.5rem;
+  }
+
+  .suggestions-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-dim);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .suggestions-label .clear-history {
+    margin-left: auto;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--color-text-dim);
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+  }
+
+  .suggestions-label .clear-history:hover { opacity: 1; }
+
+  .suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .search-chip {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .search-chip:hover {
+    color: var(--color-text);
+    border-color: var(--color-primary);
+    background: rgba(51, 128, 255, 0.08);
+  }
+
+  .search-chip .chip-remove {
+    margin-left: 0.15rem;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+  }
+
+  .search-chip .chip-remove:hover { opacity: 1; }
+
+  .chip-hot {
+    font-size: 0.65rem;
+    color: var(--color-pink);
+    font-weight: 700;
+  }
+
+  /* ── Footer ── */
+  .search-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--color-text-dim);
+  }
+
+  .search-footer kbd {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.1rem 0.35rem;
+    margin: 0 0.1rem;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    .search-page { padding: 2rem 1rem 4rem; }
+    .search-header h1 { font-size: 1.75rem; }
+    .search-result { flex-wrap: wrap; }
+    .search-result-type { order: -1; }
+    .search-shortcut { display: none; }
+    .search-meta { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+    .search-results.grid { grid-template-columns: 1fr; }
+    .search-results.grid .result-group-items { grid-template-columns: 1fr; }
+    .search-input-wrap { flex-direction: column; }
+    .search-share-btn { width: 100%; justify-content: center; }
+    .search-clear { right: 0.75rem; }
+  }
+</style>
+
+<div class="search-page">
+  <div class="search-header">
+    <h1>Search TechNanoAI</h1>
+    <p>Find topics, guides, tools, and articles across 12 emerging technology frontiers</p>
+    <div class="search-stats">
+      <span class="search-stat"><strong id="stat-total">0</strong> indexed items</span>
+      <span class="search-stat"><strong>12</strong> topics</span>
+      <span class="search-stat"><strong>Blog</strong> · <strong>Guides</strong> · <strong>Tools</strong></span>
+    </div>
+  </div>
+
+  <div class="search-box">
+    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <div class="search-input-wrap">
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        placeholder="Search topics, articles, guides, tools..."
+        autocomplete="off"
+        autofocus
+        aria-label="Search"
+        role="searchbox"
+      />
+      <button class="search-share-btn" id="search-share" aria-label="Share search link" title="Copy search link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        <span id="share-label">Share</span>
+      </button>
+    </div>
+    <button class="search-clear" id="search-clear" aria-label="Clear search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <span class="search-shortcut" id="search-shortcut">/</span>
+  </div>
+
+  <div class="did-you-mean" id="did-you-mean">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <span>Did you mean <button id="dym-btn"></button>?</span>
+  </div>
+
+  <div class="search-filters" id="search-filters">
+    <button class="search-filter active" data-type="all">All <span class="search-filter-count" id="count-all">0</span></button>
+    <button class="search-filter" data-type="topic">Topics <span class="search-filter-count" id="count-topic">0</span></button>
+    <button class="search-filter" data-type="blog">Blog <span class="search-filter-count" id="count-blog">0</span></button>
+    <button class="search-filter" data-type="guide">Guides <span class="search-filter-count" id="count-guide">0</span></button>
+    <button class="search-filter" data-type="tool">Tools <span class="search-filter-count" id="count-tool">0</span></button>
+    <button class="search-filter" data-type="page">Pages <span class="search-filter-count" id="count-page">0</span></button>
+    <button class="topic-toggle" id="topic-toggle">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      Filter by topic
+    </button>
+  </div>
+
+  <div class="topic-filters" id="topic-filters"></div>
+
+  <div class="search-meta" id="search-meta">
+    <div class="search-meta-left">
+      <span class="search-meta-text" id="search-meta-text"></span>
+      <span class="search-timer" id="search-timer"></span>
+    </div>
+    <div class="search-controls" id="search-controls" style="display:none;">
+      <div class="search-sort">
+        <select id="sort-select">
+          <option value="relevance">Sort: Relevance</option>
+          <option value="title">Sort: A–Z</option>
+          <option value="type">Sort: Type</option>
+        </select>
+      </div>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="list" aria-label="List view">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </button>
+        <button class="view-btn" data-view="grid" aria-label="Grid view">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-results" id="search-results" role="listbox"></div>
+
+  <div class="search-suggestions" id="search-suggestions">
+    <div class="suggestions-row" id="recent-row" style="display:none;">
+      <div class="suggestions-label">
+        Recent searches
+        <button class="clear-history" id="clear-history">Clear all</button>
+      </div>
+      <div class="suggestion-chips" id="recent-chips"></div>
+    </div>
+    <div class="suggestions-row">
+      <div class="suggestions-label">Popular searches</div>
+      <div class="suggestion-chips">
+        <button class="search-chip" data-query="AI">AI <span class="chip-hot">HOT</span></button>
+        <button class="search-chip" data-query="Fusion">Fusion</button>
+        <button class="search-chip" data-query="Quantum">Quantum</button>
+        <button class="search-chip" data-query="Cybersecurity">Cybersecurity</button>
+        <button class="search-chip" data-query="Robotics">Robotics</button>
+        <button class="search-chip" data-query="Biotech">Biotech</button>
+        <button class="search-chip" data-query="Nuclear">Nuclear</button>
+        <button class="search-chip" data-query="Space">Space</button>
+        <button class="search-chip" data-query="battery">Battery</button>
+        <button class="search-chip" data-query="CRISPR">CRISPR</button>
+        <button class="search-chip" data-query="RAG">RAG</button>
+        <button class="search-chip" data-query="Zero Trust">Zero Trust</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-footer" id="search-footer" style="display:none;">
+    Use <kbd>↑</kbd><kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to open · <kbd>Esc</kbd> to clear · <kbd>/</kbd> to focus
+  </div>
+</div>
+
+<script is:inline define:vars={{ searchData }}>
+  const data = searchData;
+  const input = document.getElementById('search-input');
+  const resultsEl = document.getElementById('search-results');
+  const metaTextEl = document.getElementById('search-meta-text');
+  const suggestionsEl = document.getElementById('search-suggestions');
+  const clearBtn = document.getElementById('search-clear');
+  const shortcutEl = document.getElementById('search-shortcut');
+  const sortSelect = document.getElementById('sort-select');
+  const footerEl = document.getElementById('search-footer');
+  const controlsEl = document.getElementById('search-controls');
+  const timerEl = document.getElementById('search-timer');
+  const dymEl = document.getElementById('did-you-mean');
+  const dymBtn = document.getElementById('dym-btn');
+  const topicToggle = document.getElementById('topic-toggle');
+  const topicFiltersEl = document.getElementById('topic-filters');
+  const shareBtn = document.getElementById('search-share');
+  const shareLabel = document.getElementById('share-label');
+  const recentRow = document.getElementById('recent-row');
+  const recentChipsEl = document.getElementById('recent-chips');
+  const clearHistoryBtn = document.getElementById('clear-history');
+
+  let activeFilter = 'all';
+  let activeTopic = 'all';
+  let currentResults = [];
+  let selectedIdx = -1;
+  let sortBy = 'relevance';
+  let viewMode = 'list';
+  let debounceTimer = null;
+  let collapsedGroups = new Set();
+
+  // ── Topic list ──
+  const topics = [
+    { name: 'AI', color: '#3b82f6' },
+    { name: 'Cybersecurity', color: '#ef4444' },
+    { name: 'Space', color: '#06b6d4' },
+    { name: 'Biotech', color: '#10b981' },
+    { name: 'Nuclear', color: '#f59e0b' },
+    { name: 'Energy Storage', color: '#f97316' },
+    { name: 'Robotics', color: '#ec4899' },
+    { name: 'AV', color: '#8b5cf6' },
+    { name: 'Quantum', color: '#a78bfa' },
+    { name: 'Materials', color: '#f43f5e' },
+    { name: 'BCI', color: '#0ea5e9' },
+    { name: 'Fusion', color: '#fb923c' },
+  ];
+
+  // ── Init stats ──
+  document.getElementById('stat-total').textContent = data.length;
+  const typeCounts = { all: data.length, topic: 0, blog: 0, guide: 0, tool: 0, page: 0 };
+  data.forEach((item) => { typeCounts[item.type] = (typeCounts[item.type] || 0) + 1; });
+  Object.keys(typeCounts).forEach((t) => {
+    const el = document.getElementById('count-' + t);
+    if (el) el.textContent = typeCounts[t];
+  });
+
+  // ── Build topic filter chips ──
+  topics.forEach((t) => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-filter';
+    btn.dataset.topic = t.name;
+    btn.innerHTML = `<span class="topic-filter-dot" style="background:${t.color}"></span>${t.name}`;
+    btn.addEventListener('click', () => {
+      if (activeTopic === t.name) {
+        activeTopic = 'all';
+        btn.classList.remove('active');
+        btn.style.background = '';
+        btn.style.borderColor = '';
+      } else {
+        document.querySelectorAll('.topic-filter').forEach((b) => {
+          b.classList.remove('active');
+          b.style.background = '';
+          b.style.borderColor = '';
+        });
+        activeTopic = t.name;
+        btn.classList.add('active');
+        btn.style.background = t.color;
+        btn.style.borderColor = t.color;
+      }
+      if (input.value.trim()) renderResults(input.value);
+    });
+    topicFiltersEl.appendChild(btn);
+  });
+
+  // ── Levenshtein distance for "Did you mean?" ──
+  function levenshtein(a, b) {
+    const m = a.length, n = b.length;
+    if (m === 0) return n;
+    if (n === 0) return m;
+    const dp = Array(n + 1).fill(0).map((_, i) => i);
+    for (let i = 1; i <= m; i++) {
+      let prev = dp[0];
+      dp[0] = i;
+      for (let j = 1; j <= n; j++) {
+        const tmp = dp[j];
+        dp[j] = Math.min(dp[j] + 1, dp[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+        prev = tmp;
+      }
+    }
+    return dp[n];
+  }
+
+  function findSuggestion(q) {
+    const allWords = new Set();
+    data.forEach((item) => {
+      item.title.toLowerCase().split(/\s+/).forEach((w) => { if (w.length > 2) allWords.add(w); });
+      (item.tags || []).forEach((t) => allWords.add(t.toLowerCase()));
+    });
+    let best = null, bestDist = Infinity;
+    allWords.forEach((word) => {
+      const d = levenshtein(q, word);
+      if (d < bestDist && d <= 2 && d > 0) { bestDist = d; best = word; }
+    });
+    return best;
+  }
+
+  // ── Fuzzy search with scoring + match-type tracking ──
+  function scoreItem(item, q) {
+    const title = item.title.toLowerCase();
+    const desc = item.desc.toLowerCase();
+    const topic = item.topic.toLowerCase();
+    const tags = (item.tags || []).join(' ').toLowerCase();
+    let score = 0;
+    let matchTypes = [];
+
+    if (title === q) { score += 100; matchTypes.push('title'); }
+    else if (title.startsWith(q)) { score += 60; matchTypes.push('title'); }
+    else if (title.includes(q)) { score += 40; matchTypes.push('title'); }
+
+    const qTokens = q.split(/\s+/);
+    qTokens.forEach((tok) => {
+      if (title.includes(tok)) { score += 15; matchTypes.push('title'); }
+      if (title.startsWith(tok)) score += 10;
+    });
+
+    if (desc.includes(q)) { score += 20; matchTypes.push('desc'); }
+    qTokens.forEach((tok) => { if (desc.includes(tok)) score += 5; });
+
+    if (topic.includes(q)) { score += 15; matchTypes.push('topic'); }
+    qTokens.forEach((tok) => { if (topic.includes(tok)) score += 5; });
+
+    if (tags.includes(q)) { score += 25; matchTypes.push('tag'); }
+    qTokens.forEach((tok) => { if (tags.includes(tok)) score += 8; });
+
+    if (item.type === 'topic') score += 5;
+    if (item.type === 'page') score -= 5;
+
+    return { score, matchTypes: [...new Set(matchTypes)] };
+  }
+
+  // ── Highlight ──
+  function highlight(text, q) {
+    if (!q) return text;
+    const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp('\\b(' + escaped + ')', 'gi');
+    return text.replace(re, '<mark>$1</mark>');
+  }
+
+  function esc(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  // ── Search history (localStorage) ──
+  function getHistory() {
+    try { return JSON.parse(localStorage.getItem('search-history') || '[]'); } catch { return []; }
+  }
+
+  function saveHistory(query) {
+    const q = query.trim();
+    if (!q) return;
+    let hist = getHistory().filter((h) => h.toLowerCase() !== q.toLowerCase());
+    hist.unshift(q);
+    hist = hist.slice(0, 8);
+    try { localStorage.setItem('search-history', JSON.stringify(hist)); } catch {}
+    renderHistory();
+  }
+
+  function clearHistory() {
+    try { localStorage.removeItem('search-history'); } catch {}
+    renderHistory();
+  }
+
+  function renderHistory() {
+    const hist = getHistory();
+    if (hist.length === 0) {
+      recentRow.style.display = 'none';
+      return;
+    }
+    recentRow.style.display = '';
+    recentChipsEl.innerHTML = hist.map((q) =>
+      `<button class="search-chip" data-query="${esc(q)}">${esc(q)}<span class="chip-remove" data-remove="${esc(q)}">×</span></button>`
+    ).join('');
+    recentChipsEl.querySelectorAll('.search-chip').forEach((chip) => {
+      chip.addEventListener('click', (e) => {
+        if (e.target.dataset.remove) {
+          e.stopPropagation();
+          e.preventDefault();
+          const remove = e.target.dataset.remove;
+          let h = getHistory().filter((x) => x !== remove);
+          try { localStorage.setItem('search-history', JSON.stringify(h)); } catch {}
+          renderHistory();
+          return;
+        }
+        input.value = chip.dataset.query;
+        renderResults(chip.dataset.query);
+        input.focus();
+      });
+    });
+  }
+
+  clearHistoryBtn.addEventListener('click', clearHistory);
+  renderHistory();
+
+  // ── Render results ──
+  function renderResults(query) {
+    const q = query.trim().toLowerCase();
+    selectedIdx = -1;
+
+    if (!q) {
+      resultsEl.innerHTML = '';
+      resultsEl.classList.remove('grid');
+      metaTextEl.textContent = '';
+      timerEl.textContent = '';
+      controlsEl.style.display = 'none';
+      footerEl.style.display = 'none';
+      suggestionsEl.style.display = '';
+      dymEl.classList.remove('visible');
+      clearBtn.classList.remove('visible');
+      shortcutEl.classList.remove('hidden');
+      return;
+    }
+
+    suggestionsEl.style.display = 'none';
+    clearBtn.classList.add('visible');
+    shortcutEl.classList.add('hidden');
+    controlsEl.style.display = '';
+    footerEl.style.display = '';
+
+    const t0 = performance.now();
+
+    // Score & filter
+    let scored = data
+      .map((item) => {
+        const r = scoreItem(item, q);
+        return { item, score: r.score, matchTypes: r.matchTypes };
+      })
+      .filter((x) => x.score > 0);
+
+    // Apply type filter
+    if (activeFilter !== 'all') {
+      scored = scored.filter((x) => x.item.type === activeFilter);
+    }
+
+    // Apply topic filter
+    if (activeTopic !== 'all') {
+      scored = scored.filter((x) =>
+        x.item.topic.toLowerCase().includes(activeTopic.toLowerCase())
+      );
+    }
+
+    // Sort
+    if (sortBy === 'relevance') {
+      scored.sort((a, b) => b.score - a.score);
+    } else if (sortBy === 'title') {
+      scored.sort((a, b) => a.item.title.localeCompare(b.item.title));
+    } else if (sortBy === 'type') {
+      scored.sort((a, b) => a.item.type.localeCompare(b.item.type) || b.score - a.score);
+    }
+
+    currentResults = scored.map((x) => ({ ...x.item, matchTypes: x.matchTypes }));
+    const count = currentResults.length;
+    const elapsed = (performance.now() - t0).toFixed(1);
+
+    // Did you mean?
+    if (count === 0) {
+      const suggestion = findSuggestion(q);
+      if (suggestion && suggestion !== q) {
+        dymBtn.textContent = suggestion;
+        dymEl.classList.add('visible');
+      } else {
+        dymEl.classList.remove('visible');
+      }
+    } else {
+      dymEl.classList.remove('visible');
+    }
+
+    // Update view mode class
+    resultsEl.classList.toggle('grid', viewMode === 'grid');
+
+    metaTextEl.innerHTML = count === 0
+      ? `No results for "<strong>${esc(query.trim())}</strong>"`
+      : `<strong>${count}</strong> result${count !== 1 ? 's' : ''} for "<strong>${esc(query.trim())}</strong>"`;
+    timerEl.textContent = `${elapsed}ms`;
+
+    if (count === 0) {
+      resultsEl.innerHTML = `
+        <div class="search-empty">
+          <div class="search-empty-icon">🔍</div>
+          <p>No results found for "${esc(query.trim())}"</p>
+          <p class="search-empty-hint">Try a different keyword or browse popular searches below</p>
+        </div>
+      `;
+      footerEl.style.display = 'none';
+      return;
+    }
+
+    // Group by type
+    const typeOrder = ['topic', 'blog', 'guide', 'tool', 'page'];
+    const typeLabels = { topic: 'Topics', blog: 'Blog Posts', guide: 'Guides', tool: 'Tools', page: 'Pages' };
+    const groups = {};
+    currentResults.forEach((item) => {
+      if (!groups[item.type]) groups[item.type] = [];
+      groups[item.type].push(item);
+    });
+
+    let html = '';
+    typeOrder.forEach((type) => {
+      if (!groups[type]) return;
+      const items = groups[type];
+      const isCollapsed = collapsedGroups.has(type);
+
+      html += `<div class="result-group${isCollapsed ? ' collapsed' : ''}" data-type="${type}">`;
+      html += `<div class="result-group-header" data-toggle="${type}">
+        <svg class="result-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        ${typeLabels[type]} <span style="opacity:0.5;font-weight:400">(${items.length})</span>
+      </div>`;
+      html += `<div class="result-group-items">`;
+
+      items.slice(0, 50).forEach((item, i) => {
+        const titleH = highlight(esc(item.title), q);
+        const descH = highlight(esc(item.desc), q);
+        const tagsHtml = (item.tags || []).slice(0, 3)
+          .map((t) => `<span class="search-result-tag">${esc(t)}</span>`)
+          .join('');
+        const badge = item.matchTypes && item.matchTypes.length > 0
+          ? `<span class="search-result-badge">${item.matchTypes.join(' · ')}</span>`
+          : '';
+        html += `
+        <a href="${item.href}" class="search-result" data-idx="${i}" role="option">
+          <div class="search-result-icon" style="background:${item.color}">
+            ${esc(item.title.charAt(0).toUpperCase())}
+          </div>
+          <div class="search-result-body">
+            <div class="search-result-title">${titleH}${badge}</div>
+            <div class="search-result-desc">${descH}</div>
+            ${tagsHtml ? `<div class="search-result-tags">${tagsHtml}</div>` : ''}
+          </div>
+          <span class="search-result-type ${item.type}">${item.type}</span>
+        </a>`;
+      });
+
+      html += `</div></div>`;
+    });
+
+    resultsEl.innerHTML = html;
+
+    // Collapsible group headers
+    resultsEl.querySelectorAll('.result-group-header').forEach((header) => {
+      header.addEventListener('click', () => {
+        const type = header.dataset.toggle;
+        const group = header.closest('.result-group');
+        if (collapsedGroups.has(type)) {
+          collapsedGroups.delete(type);
+          group.classList.remove('collapsed');
+        } else {
+          collapsedGroups.add(type);
+          group.classList.add('collapsed');
+        }
+      });
+    });
+
+    if (count > 50) {
+      resultsEl.innerHTML += `<div class="search-empty" style="padding:1rem;font-size:0.85rem;">Showing top 50 of ${count} results. Refine your search for more specific results.</div>`;
+    }
+  }
+
+  // ── Debounced input ──
+  function debouncedSearch(query) {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      renderResults(query);
+      updateURL(query);
+      if (query.trim()) saveHistory(query.trim());
+    }, 120);
+  }
+
+  // ── URL state sync ──
+  function updateURL(query) {
+    const params = new URLSearchParams();
+    if (query.trim()) params.set('q', query.trim());
+    if (activeFilter !== 'all') params.set('filter', activeFilter);
+    if (activeTopic !== 'all') params.set('topic', activeTopic);
+    if (sortBy !== 'relevance') params.set('sort', sortBy);
+    if (viewMode !== 'list') params.set('view', viewMode);
+    const qs = params.toString();
+    window.history.replaceState(null, '', qs ? '?' + qs : window.location.pathname);
+  }
+
+  // ── Keyboard navigation ──
+  function updateSelection() {
+    const els = resultsEl.querySelectorAll('.search-result');
+    els.forEach((el, i) => {
+      el.classList.toggle('active', i === selectedIdx);
+      if (i === selectedIdx) {
+        el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    });
+  }
+
+  input.addEventListener('input', (e) => debouncedSearch(e.target.value));
+
+  input.addEventListener('keydown', (e) => {
+    const els = resultsEl.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      selectedIdx = Math.min(selectedIdx + 1, els.length - 1);
+      updateSelection();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      selectedIdx = Math.max(selectedIdx - 1, 0);
+      updateSelection();
+    } else if (e.key === 'Enter') {
+      if (selectedIdx >= 0 && els[selectedIdx]) {
+        e.preventDefault();
+        els[selectedIdx].click();
+      }
+    } else if (e.key === 'Escape') {
+      input.value = '';
+      renderResults('');
+      updateURL('');
+      input.focus();
+    }
+  });
+
+  // ── Global "/" shortcut ──
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== input) {
+      e.preventDefault();
+      input.focus();
+    }
+  });
+
+  // ── Clear button ──
+  clearBtn.addEventListener('click', () => {
+    input.value = '';
+    renderResults('');
+    updateURL('');
+    input.focus();
+  });
+
+  // ── Filter buttons ──
+  document.querySelectorAll('.search-filter').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.search-filter').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.type;
+      if (input.value.trim()) { renderResults(input.value); updateURL(input.value); }
+    });
+  });
+
+  // ── Topic toggle expand/collapse ──
+  topicToggle.addEventListener('click', () => {
+    topicFiltersEl.classList.toggle('expanded');
+  });
+
+  // ── Sort dropdown ──
+  sortSelect.addEventListener('change', (e) => {
+    sortBy = e.target.value;
+    if (input.value.trim()) { renderResults(input.value); updateURL(input.value); }
+  });
+
+  // ── View toggle ──
+  document.querySelectorAll('.view-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.view-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      viewMode = btn.dataset.view;
+      if (input.value.trim()) renderResults(input.value);
+      updateURL(input.value);
+    });
+  });
+
+  // ── Suggestion chips ──
+  document.querySelectorAll('.search-suggestions .search-chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const query = chip.dataset.query;
+      input.value = query;
+      renderResults(query);
+      updateURL(query);
+      saveHistory(query);
+      input.focus();
+    });
+  });
+
+  // ── Did you mean click ──
+  dymBtn.addEventListener('click', () => {
+    const suggestion = dymBtn.textContent;
+    input.value = suggestion;
+    renderResults(suggestion);
+    updateURL(suggestion);
+    saveHistory(suggestion);
+    input.focus();
+  });
+
+  // ── Share button ──
+  shareBtn.addEventListener('click', () => {
+    const url = window.location.href;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        shareLabel.textContent = 'Copied!';
+        shareBtn.classList.add('copied');
+        setTimeout(() => {
+          shareLabel.textContent = 'Share';
+          shareBtn.classList.remove('copied');
+        }, 2000);
+      });
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      shareLabel.textContent = 'Copied!';
+      shareBtn.classList.add('copied');
+      setTimeout(() => {
+        shareLabel.textContent = 'Share';
+        shareBtn.classList.remove('copied');
+      }, 2000);
+    }
+  });
+
+  // ── URL query param restore ──
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialQuery = urlParams.get('q');
+  const initialFilter = urlParams.get('filter');
+  const initialTopic = urlParams.get('topic');
+  const initialSort = urlParams.get('sort');
+  const initialView = urlParams.get('view');
+
+  if (initialFilter && initialFilter !== 'all') {
+    const filterBtn = document.querySelector(`.search-filter[data-type="${initialFilter}"]`);
+    if (filterBtn) {
+      document.querySelectorAll('.search-filter').forEach((b) => b.classList.remove('active'));
+      filterBtn.classList.add('active');
+      activeFilter = initialFilter;
+    }
+  }
+  if (initialTopic && initialTopic !== 'all') {
+    const topicBtn = document.querySelector(`.topic-filter[data-topic="${initialTopic}"]`);
+    if (topicBtn) {
+      topicFiltersEl.classList.add('expanded');
+      topicBtn.classList.add('active');
+      const t = topics.find((tp) => tp.name === initialTopic);
+      if (t) { topicBtn.style.background = t.color; topicBtn.style.borderColor = t.color; }
+      activeTopic = initialTopic;
+    }
+  }
+  if (initialSort) {
+    sortSelect.value = initialSort;
+    sortBy = initialSort;
+  }
+  if (initialView === 'grid') {
+    document.querySelectorAll('.view-btn').forEach((b) => b.classList.remove('active'));
+    document.querySelector('.view-btn[data-view="grid"]').classList.add('active');
+    viewMode = 'grid';
+  }
+  if (initialQuery) {
+    input.value = initialQuery;
+    renderResults(initialQuery);
+  }
+</script>
+
+</BaseLayout>

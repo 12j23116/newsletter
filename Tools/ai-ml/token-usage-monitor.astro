@@ -1,0 +1,27 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-coming-soon">
+    <div class="tool-coming-soon-icon">🎯</div>
+    <h3 class="tool-coming-soon-title">Token Usage Monitor</h3>
+    <p class="tool-coming-soon-desc">Dashboard for monitoring LLM API token usage — per-project, per-model, per-team-member breakdowns with cost allocation, budget alerts, and usage trend visualization.</p>
+    <form class="tool-coming-soon-form" id="tum-notify">
+      <input type="email" placeholder="you@example.com" required />
+      <button type="submit" class="tool-btn">Notify Me</button>
+    </form>
+    <div class="tool-coming-soon-success" id="tum-success">✓ Thanks! We'll email you when this tool is ready.</div>
+  </div>
+</div>
+
+<script is:inline>
+document.getElementById('tum-notify')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.querySelector('input').value = '';
+  document.getElementById('tum-success')?.classList.add('show');
+  setTimeout(() => document.getElementById('tum-success')?.classList.remove('show'), 4000);
+});
+</script>

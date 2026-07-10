@@ -1,0 +1,487 @@
+---
+/**
+ * Fusion Glossary Decoder — Interactive tool
+ * Search and decode fusion energy terminology with plain-language explanations
+ */
+import './interactive-tools.css';
+
+const glossary = [
+  { term: 'Lawson Criterion', category: 'Physics', def: 'The minimum condition for fusion ignition: the product of plasma density, temperature, and confinement time must exceed a threshold value. For D-T fusion, nTτ ≥ 3×10²¹ keV·s/m³.', related: ['Triple Product', 'Ignition', 'Confinement'] },
+  { term: 'Triple Product', category: 'Physics', def: 'The product n×T×τ (density × temperature × confinement time). The key figure of merit for fusion reactor performance. Higher is better.', related: ['Lawson Criterion', 'Confinement Time'] },
+  { term: 'Ignition', category: 'Physics', def: 'The point where alpha particle heating from fusion reactions is sufficient to sustain the plasma temperature without external heating. Q = ∞.', related: ['Lawson Criterion', 'Alpha Heating', 'Q Factor'] },
+  { term: 'Q Factor', category: 'Physics', def: 'The ratio of fusion power produced to external heating power input. Q=1 is break-even, Q>10 is burning plasma, Q=∞ is ignition.', related: ['Ignition', 'Alpha Heating'] },
+  { term: 'Beta (β)', category: 'Physics', def: 'The ratio of plasma pressure to magnetic pressure. β = nkT / (B²/2μ₀). Higher beta means more efficient use of magnetic field. Typical limit: ~5% for tokamaks.', related: ['Magnetic Confinement', 'Plasma Pressure'] },
+  { term: 'Tokamak', category: 'Device', def: 'Toroidal magnetic confinement device using external coils plus a central solenoid to create helical magnetic fields. The most studied fusion concept. ITER is a tokamak.', related: ['Stellarator', 'Magnetic Confinement', 'ITER'] },
+  { term: 'Stellarator', category: 'Device', def: 'Toroidal magnetic confinement device using only external coils with complex 3D shapes to create the confining field. No plasma current needed — inherently steady-state. Wendelstein 7-X is the largest.', related: ['Tokamak', 'Magnetic Confinement'] },
+  { term: 'ICF', category: 'Device', def: 'Inertial Confinement Fusion — uses high-power lasers or particle beams to compress and heat a small fuel pellet to fusion conditions in nanoseconds. NIF uses this approach.', related: ['NIF', 'Inertial Confinement'] },
+  { term: 'Magnetic Confinement', category: 'Physics', def: 'Using strong magnetic fields to confine hot plasma, since material containers would melt. Fields create a "magnetic bottle" that traps charged particles.', related: ['Tokamak', 'Stellarator', 'Beta'] },
+  { term: 'Bremsstrahlung', category: 'Physics', def: 'Electromagnetic radiation emitted when electrons are decelerated by the electric field of ions in plasma. A major energy loss mechanism, especially for high-Z fuels.', related: ['Radiation Loss', 'Synchrotron'] },
+  { term: 'Alpha Heating', category: 'Physics', def: 'Energy deposited in the plasma by alpha particles (He-4 nuclei) produced in D-T fusion. Each D-T reaction releases a 3.5 MeV alpha particle that heats the plasma.', related: ['Ignition', 'Q Factor', 'D-T Fusion'] },
+  { term: 'D-T Fusion', category: 'Reaction', def: 'Deuterium + Tritium → Helium-4 (3.5 MeV) + neutron (14.1 MeV). The easiest fusion reaction — lowest temperature threshold (~4 keV). Tritium must be bred from lithium.', related: ['Tritium Breeding', 'Lawson Criterion'] },
+  { term: 'Tritium Breeding', category: 'Engineering', def: 'Producing tritium by neutron irradiation of lithium-6 in a blanket surrounding the reactor: ⁶Li + n → T + ⁴He. Essential for D-T fusion since tritium is rare.', related: ['D-T Fusion', 'Blanket', 'Lithium'] },
+  { term: 'Blanket', category: 'Engineering', def: 'The region surrounding the plasma that captures fusion neutrons, breeds tritium from lithium, and converts neutron kinetic energy to heat. A critical engineering component.', related: ['Tritium Breeding', 'Neutron Shielding'] },
+  { term: 'Divertor', category: 'Engineering', def: 'A magnetic field configuration at the edge of the plasma that directs exhaust particles and impurities to a target plate. Handles heat loads and removes helium ash.', related: ['Plasma Edge', 'Scrape-Off Layer'] },
+  { term: 'Larmor Radius', category: 'Physics', def: 'The radius of the circular motion of a charged particle in a magnetic field. r = mv/(qB). Must be much smaller than the device size for good confinement.', related: ['Magnetic Confinement', 'Gyrofrequency'] },
+  { term: 'Synchrotron Radiation', category: 'Physics', def: 'Electromagnetic radiation from relativistic electrons spiraling in magnetic fields. An energy loss mechanism in high-field, high-temperature plasmas.', related: ['Bremsstrahlung', 'Radiation Loss'] },
+  { term: 'Cryostat', category: 'Engineering', def: 'The vacuum vessel that maintains cryogenic temperatures for superconducting magnets. Largest single component of a tokamak.', related: ['Superconducting Magnets', 'ITER'] },
+  { term: 'Superconducting Magnets', category: 'Engineering', def: 'Electromagnets using superconducting materials (NbSn, NbTi, or REBCO) that carry current with zero resistance, enabling very high magnetic fields with no ohmic losses.', related: ['Cryostat', 'Magnetic Confinement'] },
+  { term: 'ITER', category: 'Project', def: 'International Thermonuclear Experimental Reactor under construction in France. Designed to achieve Q=10 and demonstrate fusion at power-plant scale. First plasma expected ~2025-2026.', related: ['Tokamak', 'DEMO', 'Q Factor'] },
+  { term: 'DEMO', category: 'Project', def: 'Demonstration fusion power plant — the step after ITER. Designed to produce net electricity and demonstrate fusion energy viability. Target: 2030s-2040s.', related: ['ITER', 'Tokamak'] },
+  { term: 'NIF', category: 'Project', def: 'National Ignition Facility at Lawrence Livermore. 192-beam laser ICF system that achieved Q>1 in December 2022 — first fusion ignition in lab.', related: ['ICF', 'Inertial Confinement', 'Ignition'] },
+  { term: 'Plasma Edge', category: 'Physics', def: 'The outer region of magnetically confined plasma where field lines intersect material surfaces. Key region for heat exhaust, impurity control, and stability.', related: ['Divertor', 'Scrape-Off Layer'] },
+  { term: 'ELM', category: 'Physics', def: 'Edge-Localized Mode — periodic instability in H-mode plasma edge that releases bursts of particles and energy. Can damage reactor walls. Mitigation is a major research topic.', related: ['Plasma Edge', 'H-mode', 'Divertor'] },
+  { term: 'H-mode', category: 'Physics', def: 'High-confinement mode — plasma operating regime with an edge transport barrier that improves confinement by ~2x over L-mode (low confinement).', related: ['ELM', 'Plasma Edge', 'Confinement'] },
+  { term: 'Disruption', category: 'Physics', def: 'Sudden loss of plasma confinement in a tokamak, dumping thermal and magnetic energy to walls in milliseconds. A major challenge for tokamak operation.', related: ['Tokamak', 'Vertical Displacement Event'] },
+  { term: 'Aneutronic Fusion', category: 'Reaction', def: 'Fusion reactions that produce few or no neutrons, such as p-B11 or D-He3. Advantages: direct energy conversion, no neutron damage, no tritium needed. Requires much higher temperatures.', related: ['D-He3', 'p-B11', 'Direct Conversion'] },
+  { term: 'Direct Conversion', category: 'Engineering', def: 'Converting charged fusion products directly to electricity without a thermal cycle. Possible with aneutronic fuels. Theoretical efficiency: 80-90%.', related: ['Aneutronic Fusion', 'p-B11'] },
+  { term: 'Gyrofrequency', category: 'Physics', def: 'The frequency at which a charged particle gyrates in a magnetic field. ω = qB/m. Important for heating methods like ECRH and ICRH.', related: ['Larmor Radius', 'ECRH', 'ICRH'] },
+  { term: 'ECRH', category: 'Heating', def: 'Electron Cyclotron Resonance Heating — uses microwave radiation at the gyrofrequency of electrons to heat the plasma. A key auxiliary heating method.', related: ['Gyrofrequency', 'ICRH', 'NBI'] },
+  { term: 'ICRH', category: 'Heating', def: 'Ion Cyclotron Resonance Heating — uses radio waves at ion gyrofrequency to heat ions. Another auxiliary heating method for tokamaks.', related: ['Gyrofrequency', 'ECRH', 'NBI'] },
+  { term: 'NBI', category: 'Heating', def: 'Neutral Beam Injection — injects high-energy neutral atoms into the plasma to heat it and drive current. A primary heating and current drive method.', related: ['ECRH', 'ICRH', 'Current Drive'] },
+];
+---
+
+<div class="it-container" id="fusion-glossary">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">📖</div>
+      <div>
+        <h2>Fusion Glossary Decoder</h2>
+        <p>Search and decode fusion energy terminology with plain-language explanations</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Search Term</label>
+        <input type="text" class="it-input" id="fgd-search" placeholder="e.g. tokamak, Lawson, tritium..." />
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Filter by Category</label>
+        <select class="it-select" id="fgd-category">
+          <option value="all">All Categories</option>
+          <option value="Physics">Physics</option>
+          <option value="Device">Device Types</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Reaction">Reactions</option>
+          <option value="Heating">Heating Methods</option>
+          <option value="Project">Projects</option>
+        </select>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="fgd-search-btn">Search Glossary</button>
+        <button class="it-btn it-btn-secondary" id="fgd-browse">Browse All Terms</button>
+        <button class="it-btn it-btn-secondary" id="fgd-quiz">Take Quiz</button>
+        <button class="it-btn it-btn-secondary" id="fgd-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="fgd-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="fgd-results">
+      <div class="it-results-card">
+        <div class="it-results-title" id="fgd-title">Glossary Results</div>
+        <div id="fgd-terms"></div>
+      </div>
+
+      <!-- Feature 1: Category Statistics Dashboard -->
+      <div class="it-results-card" id="fgd-stats-section" style="display:none;">
+        <div class="it-results-title">📊 Glossary Statistics</div>
+        <div id="fgd-stats-list"></div>
+      </div>
+
+      <!-- Feature 2: Term Relationship Graph -->
+      <div class="it-results-card" id="fgd-graph-section" style="display:none;">
+        <div class="it-results-title">🔗 Term Relationship Graph</div>
+        <canvas id="fgd-graph-canvas" width="700" height="450" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="fgd-graph-list"></div>
+      </div>
+
+      <!-- Feature 3: Difficulty Level Explanations -->
+      <div class="it-results-card" id="fgd-difficulty-section" style="display:none;">
+        <div class="it-results-title">🎓 Multi-Level Explanations</div>
+        <div id="fgd-difficulty-list"></div>
+      </div>
+
+      <!-- Feature 4: Formula Reference Table -->
+      <div class="it-results-card" id="fgd-formula-section" style="display:none;">
+        <div class="it-results-title">📐 Fusion Physics Formula Reference</div>
+        <div id="fgd-formula-list"></div>
+      </div>
+
+      <!-- Feature 5: Fusion Timeline -->
+      <div class="it-results-card" id="fgd-timeline-section" style="display:none;">
+        <div class="it-results-title">📅 Fusion Energy Development Timeline</div>
+        <div id="fgd-timeline-list"></div>
+      </div>
+
+      <!-- Feature 6: Concept Comparison Table -->
+      <div class="it-results-card" id="fgd-compare-section" style="display:none;">
+        <div class="it-results-title">⚖️ Concept Comparison Table</div>
+        <div id="fgd-compare-list"></div>
+      </div>
+
+      <!-- Feature 7: Fusion Reactions Reference -->
+      <div class="it-results-card" id="fgd-reactions-section" style="display:none;">
+        <div class="it-results-title">⚛️ Fusion Reactions Reference</div>
+        <div id="fgd-reactions-list"></div>
+      </div>
+
+      <!-- Feature 8: Key Parameters Quick Reference -->
+      <div class="it-results-card" id="fgd-params-section" style="display:none;">
+        <div class="it-results-title">📋 Key Parameters Quick Reference</div>
+        <div id="fgd-params-list"></div>
+      </div>
+
+      <!-- Feature 9: Quiz Section -->
+      <div class="it-results-card" id="fgd-quiz-section" style="display:none;">
+        <div class="it-results-title">🧠 Fusion Knowledge Quiz</div>
+        <div id="fgd-quiz-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const glossary = [
+    { term: 'Lawson Criterion', category: 'Physics', def: 'The minimum condition for fusion ignition: the product of plasma density, temperature, and confinement time must exceed a threshold value. For D-T fusion, nTτ ≥ 3×10²¹ keV·s/m³.', related: ['Triple Product', 'Ignition', 'Confinement'] },
+    { term: 'Triple Product', category: 'Physics', def: 'The product n×T×τ (density × temperature × confinement time). The key figure of merit for fusion reactor performance.', related: ['Lawson Criterion', 'Confinement Time'] },
+    { term: 'Ignition', category: 'Physics', def: 'The point where alpha particle heating from fusion reactions is sufficient to sustain the plasma temperature without external heating. Q = ∞.', related: ['Lawson Criterion', 'Alpha Heating', 'Q Factor'] },
+    { term: 'Q Factor', category: 'Physics', def: 'The ratio of fusion power produced to external heating power input. Q=1 is break-even, Q>10 is burning plasma, Q=∞ is ignition.', related: ['Ignition', 'Alpha Heating'] },
+    { term: 'Beta (β)', category: 'Physics', def: 'The ratio of plasma pressure to magnetic pressure. β = nkT / (B²/2μ₀). Higher beta means more efficient use of magnetic field. Typical limit: ~5% for tokamaks.', related: ['Magnetic Confinement', 'Plasma Pressure'] },
+    { term: 'Tokamak', category: 'Device', def: 'Toroidal magnetic confinement device using external coils plus a central solenoid to create helical magnetic fields. The most studied fusion concept. ITER is a tokamak.', related: ['Stellarator', 'Magnetic Confinement', 'ITER'] },
+    { term: 'Stellarator', category: 'Device', def: 'Toroidal magnetic confinement device using only external coils with complex 3D shapes. No plasma current needed — inherently steady-state. Wendelstein 7-X is the largest.', related: ['Tokamak', 'Magnetic Confinement'] },
+    { term: 'ICF', category: 'Device', def: 'Inertial Confinement Fusion — uses high-power lasers or particle beams to compress and heat a small fuel pellet to fusion conditions in nanoseconds. NIF uses this approach.', related: ['NIF', 'Inertial Confinement'] },
+    { term: 'Magnetic Confinement', category: 'Physics', def: 'Using strong magnetic fields to confine hot plasma, since material containers would melt. Fields create a "magnetic bottle" that traps charged particles.', related: ['Tokamak', 'Stellarator', 'Beta'] },
+    { term: 'Bremsstrahlung', category: 'Physics', def: 'Electromagnetic radiation emitted when electrons are decelerated by the electric field of ions in plasma. A major energy loss mechanism.', related: ['Radiation Loss', 'Synchrotron'] },
+    { term: 'Alpha Heating', category: 'Physics', def: 'Energy deposited in the plasma by alpha particles (He-4 nuclei) produced in D-T fusion. Each D-T reaction releases a 3.5 MeV alpha particle that heats the plasma.', related: ['Ignition', 'Q Factor', 'D-T Fusion'] },
+    { term: 'D-T Fusion', category: 'Reaction', def: 'Deuterium + Tritium → Helium-4 (3.5 MeV) + neutron (14.1 MeV). The easiest fusion reaction — lowest temperature threshold (~4 keV). Tritium must be bred from lithium.', related: ['Tritium Breeding', 'Lawson Criterion'] },
+    { term: 'Tritium Breeding', category: 'Engineering', def: 'Producing tritium by neutron irradiation of lithium-6 in a blanket: ⁶Li + n → T + ⁴He. Essential for D-T fusion since tritium is rare.', related: ['D-T Fusion', 'Blanket', 'Lithium'] },
+    { term: 'Blanket', category: 'Engineering', def: 'The region surrounding the plasma that captures fusion neutrons, breeds tritium from lithium, and converts neutron kinetic energy to heat.', related: ['Tritium Breeding', 'Neutron Shielding'] },
+    { term: 'Divertor', category: 'Engineering', def: 'A magnetic field configuration at the edge of the plasma that directs exhaust particles and impurities to a target plate. Handles heat loads and removes helium ash.', related: ['Plasma Edge', 'Scrape-Off Layer'] },
+    { term: 'Larmor Radius', category: 'Physics', def: 'The radius of the circular motion of a charged particle in a magnetic field. r = mv/(qB). Must be much smaller than the device size for good confinement.', related: ['Magnetic Confinement', 'Gyrofrequency'] },
+    { term: 'Synchrotron Radiation', category: 'Physics', def: 'Electromagnetic radiation from relativistic electrons spiraling in magnetic fields. An energy loss mechanism in high-field, high-temperature plasmas.', related: ['Bremsstrahlung', 'Radiation Loss'] },
+    { term: 'Cryostat', category: 'Engineering', def: 'The vacuum vessel that maintains cryogenic temperatures for superconducting magnets. Largest single component of a tokamak.', related: ['Superconducting Magnets', 'ITER'] },
+    { term: 'Superconducting Magnets', category: 'Engineering', def: 'Electromagnets using superconducting materials (NbSn, NbTi, or REBCO) that carry current with zero resistance, enabling very high magnetic fields with no ohmic losses.', related: ['Cryostat', 'Magnetic Confinement'] },
+    { term: 'ITER', category: 'Project', def: 'International Thermonuclear Experimental Reactor under construction in France. Designed to achieve Q=10 and demonstrate fusion at power-plant scale.', related: ['Tokamak', 'DEMO', 'Q Factor'] },
+    { term: 'DEMO', category: 'Project', def: 'Demonstration fusion power plant — the step after ITER. Designed to produce net electricity and demonstrate fusion energy viability. Target: 2030s-2040s.', related: ['ITER', 'Tokamak'] },
+    { term: 'NIF', category: 'Project', def: 'National Ignition Facility at Lawrence Livermore. 192-beam laser ICF system that achieved Q>1 in December 2022 — first fusion ignition in lab.', related: ['ICF', 'Inertial Confinement', 'Ignition'] },
+    { term: 'Plasma Edge', category: 'Physics', def: 'The outer region of magnetically confined plasma where field lines intersect material surfaces. Key region for heat exhaust, impurity control, and stability.', related: ['Divertor', 'Scrape-Off Layer'] },
+    { term: 'ELM', category: 'Physics', def: 'Edge-Localized Mode — periodic instability in H-mode plasma edge that releases bursts of particles and energy. Can damage reactor walls.', related: ['Plasma Edge', 'H-mode', 'Divertor'] },
+    { term: 'H-mode', category: 'Physics', def: 'High-confinement mode — plasma operating regime with an edge transport barrier that improves confinement by ~2x over L-mode.', related: ['ELM', 'Plasma Edge', 'Confinement'] },
+    { term: 'Disruption', category: 'Physics', def: 'Sudden loss of plasma confinement in a tokamak, dumping thermal and magnetic energy to walls in milliseconds. A major challenge for tokamak operation.', related: ['Tokamak', 'Vertical Displacement Event'] },
+    { term: 'Aneutronic Fusion', category: 'Reaction', def: 'Fusion reactions that produce few or no neutrons, such as p-B11 or D-He3. Advantages: direct energy conversion, no neutron damage, no tritium needed.', related: ['D-He3', 'p-B11', 'Direct Conversion'] },
+    { term: 'Direct Conversion', category: 'Engineering', def: 'Converting charged fusion products directly to electricity without a thermal cycle. Possible with aneutronic fuels. Theoretical efficiency: 80-90%.', related: ['Aneutronic Fusion', 'p-B11'] },
+    { term: 'Gyrofrequency', category: 'Physics', def: 'The frequency at which a charged particle gyrates in a magnetic field. ω = qB/m. Important for heating methods like ECRH and ICRH.', related: ['Larmor Radius', 'ECRH', 'ICRH'] },
+    { term: 'ECRH', category: 'Heating', def: 'Electron Cyclotron Resonance Heating — uses microwave radiation at the gyrofrequency of electrons to heat the plasma.', related: ['Gyrofrequency', 'ICRH', 'NBI'] },
+    { term: 'ICRH', category: 'Heating', def: 'Ion Cyclotron Resonance Heating — uses radio waves at ion gyrofrequency to heat ions. Another auxiliary heating method for tokamaks.', related: ['Gyrofrequency', 'ECRH', 'NBI'] },
+    { term: 'NBI', category: 'Heating', def: 'Neutral Beam Injection — injects high-energy neutral atoms into the plasma to heat it and drive current. A primary heating and current drive method.', related: ['ECRH', 'ICRH', 'Current Drive'] },
+  ];
+
+  const categoryColors = { Physics: '#7c3aed', Device: '#059669', Engineering: '#d97706', Reaction: '#dc2626', Heating: '#2563eb', Project: '#0891b2' };
+
+  function renderTerms(terms) {
+    const container = document.getElementById('fgd-terms');
+    if (terms.length === 0) {
+      container.innerHTML = '<div class="it-alert it-alert-warn">No matching terms found. Try a different search.</div>';
+      return;
+    }
+    container.innerHTML = terms.map(t => {
+      const color = categoryColors[t.category] || '#5c5c72';
+      return `<div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:1rem 1.25rem;margin-bottom:0.75rem;border-left:4px solid ${color};">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem;">
+          <strong style="font-size:0.9375rem;">${t.term}</strong>
+          <span class="it-badge" style="background:${color}22;color:${color};">${t.category}</span>
+        </div>
+        <p style="font-size:0.8125rem;color:var(--tl-text-sec);margin:0.5rem 0;line-height:1.5;">${t.def}</p>
+        ${t.related.length > 0 ? `<div style="font-size:0.75rem;color:var(--tl-text-muted);margin-top:0.5rem;">
+          <strong>Related:</strong> ${t.related.map(r => `<span class="it-badge it-badge-neutral" style="cursor:pointer;" onclick="document.getElementById('fgd-search').value='${r}';document.getElementById('fgd-search-btn').click();">${r}</span>`).join(' ')}
+        </div>` : ''}
+      </div>`;
+    }).join('');
+  }
+
+  function search() {
+    const query = document.getElementById('fgd-search').value.trim().toLowerCase();
+    const category = document.getElementById('fgd-category').value;
+
+    let results = glossary;
+    if (category !== 'all') results = results.filter(t => t.category === category);
+    if (query) {
+      results = results.filter(t =>
+        t.term.toLowerCase().includes(query) ||
+        t.def.toLowerCase().includes(query) ||
+        t.related.some(r => r.toLowerCase().includes(query))
+      );
+    }
+
+    document.getElementById('fgd-title').textContent = query ? `Results for "${query}" (${results.length})` : `All Terms${category !== 'all' ? ' — ' + category : ''} (${results.length})`;
+    renderTerms(results);
+    document.getElementById('fgd-results').classList.add('show');
+
+    // === Feature 1: Category Statistics ===
+    const catCounts = {};
+    glossary.forEach(t => { catCounts[t.category] = (catCounts[t.category] || 0) + 1; });
+    const totalTerms = glossary.length;
+    const allRelated = new Set();
+    glossary.forEach(t => t.related.forEach(r => allRelated.add(r)));
+    document.getElementById('fgd-stats-list').innerHTML = `
+      <div class="it-results-grid" style="margin-bottom:1rem;">
+        <div class="it-stat"><div class="it-stat-label">Total Terms</div><div class="it-stat-value">${totalTerms}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Categories</div><div class="it-stat-value">${Object.keys(catCounts).length}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Related Links</div><div class="it-stat-value">${allRelated.size}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Avg Related</div><div class="it-stat-value">${(glossary.reduce((s, t) => s + t.related.length, 0) / totalTerms).toFixed(1)}</div></div>
+      </div>
+      <table class="it-table"><thead><tr><th>Category</th><th>Count</th><th>% of Total</th><th>Distribution</th></tr></thead><tbody>
+        ${Object.entries(catCounts).sort((a, b) => b[1] - a[1]).map(([cat, count]) => `<tr><td><span class="it-badge" style="background:${categoryColors[cat] || '#5c5c72'}22;color:${categoryColors[cat] || '#5c5c72'};">${cat}</span></td><td class="it-highlight">${count}</td><td>${(count / totalTerms * 100).toFixed(0)}%</td><td style="width:200px;"><div style="background:var(--tl-border);height:10px;border-radius:5px;overflow:hidden;"><div style="width:${count / totalTerms * 100}%;height:100%;background:${categoryColors[cat] || '#5c5c72'};"></div></div></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Glossary covers ${totalTerms} terms across ${Object.keys(catCounts).length} categories. Physics terms dominate (${catCounts.Physics || 0}), reflecting the complexity of plasma physics. ${allRelated.size} unique related terms show the interconnected nature of fusion science.</div>
+    `;
+    document.getElementById('fgd-stats-section').style.display = 'block';
+
+    // === Feature 2: Term Relationship Graph ===
+    const graphCanvas = document.getElementById('fgd-graph-canvas');
+    const gCtx = graphCanvas.getContext('2d');
+    const gW = graphCanvas.width, gH = graphCanvas.height;
+    gCtx.fillStyle = '#ebedf5'; gCtx.fillRect(0, 0, gW, gH);
+    const nodePositions = {};
+    const categories = Object.keys(catCounts);
+    const catAngles = {};
+    categories.forEach((cat, i) => { catAngles[cat] = (i / categories.length) * 2 * Math.PI; });
+    glossary.forEach((t, i) => {
+      const angle = catAngles[t.category] + (i / glossary.length) * 0.5;
+      const r = 120 + (i % 3) * 50;
+      nodePositions[t.term] = { x: gW / 2 + r * Math.cos(angle), y: gH / 2 + r * Math.sin(angle), cat: t.category };
+    });
+    gCtx.strokeStyle = '#94a3b8'; gCtx.lineWidth = 0.5; gCtx.globalAlpha = 0.3;
+    glossary.forEach(t => {
+      t.related.forEach(r => {
+        if (nodePositions[r]) {
+          gCtx.beginPath(); gCtx.moveTo(nodePositions[t.term].x, nodePositions[t.term].y);
+          gCtx.lineTo(nodePositions[r].x, nodePositions[r].y); gCtx.stroke();
+        }
+      });
+    });
+    gCtx.globalAlpha = 1;
+    Object.entries(nodePositions).forEach(([term, pos]) => {
+      const color = categoryColors[pos.cat] || '#5c5c72';
+      gCtx.fillStyle = color + '44'; gCtx.beginPath(); gCtx.arc(pos.x, pos.y, 8, 0, 2 * Math.PI); gCtx.fill();
+      gCtx.strokeStyle = color; gCtx.lineWidth = 1.5; gCtx.stroke();
+      gCtx.fillStyle = '#111125'; gCtx.font = '8px sans-serif'; gCtx.textAlign = 'center'; gCtx.fillText(term.substring(0, 12), pos.x, pos.y - 12);
+    });
+    categories.forEach(cat => {
+      const angle = catAngles[cat];
+      const x = gW / 2 + 180 * Math.cos(angle); const y = gH / 2 + 180 * Math.sin(angle);
+      gCtx.fillStyle = categoryColors[cat] || '#5c5c72'; gCtx.font = 'bold 10px sans-serif'; gCtx.textAlign = 'center'; gCtx.fillText(cat, x, y);
+    });
+    document.getElementById('fgd-graph-list').innerHTML = `<div class="it-alert it-alert-info">Graph shows term relationships — nodes are terms colored by category, lines connect related concepts. ${categories.length} categories arranged radially. Most connected terms act as hubs connecting multiple concepts. Click related term badges in glossary entries to navigate.</div>`;
+    document.getElementById('fgd-graph-section').style.display = 'block';
+
+    // === Feature 3: Multi-Level Explanations ===
+    const difficultyLevels = [
+      { term: 'Lawson Criterion', beginner: 'You need enough heat, enough fuel, and enough time for fusion to work — all at once.', intermediate: 'The product of density, temperature, and confinement time must exceed a threshold for ignition. For D-T: nTτ ≥ 3×10²¹.', advanced: 'Derived by John Lawson in 1957. The criterion balances fusion power against bremsstrahlung and conduction losses. Temperature-dependent via <σv>(T). For D-T, optimal T≈15 keV. Generalized form includes η_E (energy confinement) and accounts for alpha heating efficiency.' },
+      { term: 'Tokamak', beginner: 'A donut-shaped machine that uses magnets to trap super-hot gas for fusion.', intermediate: 'Toroidal device with poloidal field from plasma current + toroidal field from external coils. Creates helical field lines for confinement.', advanced: 'Invented by Tamm and Sakharov (1950s). Safety factor q = mB_t/(nB_p) must be > 1 (Kruskal-Shafranov). Plasma current driven by central solenoid (OH), NBI, RF. Major radius R, minor radius a, aspect ratio A=R/a. ITER: R=6.2m, a=2.0m, B=5.3T, I_p=15MA.' },
+      { term: 'Ignition', beginner: 'When the fusion fire keeps itself burning without any outside help.', intermediate: 'Alpha particle heating (3.5 MeV per D-T reaction) fully replaces external heating. Q = ∞. Self-sustaining burn.', advanced: 'Ignition requires P_alpha ≥ P_loss, where P_loss includes radiation, conduction, and convection. The alpha heating fraction is f_alpha = E_alpha/E_fusion = 0.2 for D-T. Burn control via fueling rate and impurity injection. Thermal instability risk at high T (T4 scaling of <σv>).' },
+      { term: 'Beta (β)', beginner: 'How much the plasma pushes back against the magnetic field holding it.', intermediate: 'Ratio of plasma pressure to magnetic pressure: β = nkT / (B²/2μ₀). Higher β = more efficient but less stable. Limit ~5% for tokamaks.', advanced: 'Troyon limit: β_N = β(%)aB(mT)/I(MA) < 2.5-3.5. Normalized beta determines MHD stability margin. Spherical tokamaks (NSTX) achieve β~40%. First-wall stability, ballooning modes, and kink modes all scale with β. Advanced scenarios target β_N > 3 with active feedback.' },
+      { term: 'Tritium Breeding', beginner: 'Making fuel (tritium) inside the reactor by catching fusion neutrons in lithium.', intermediate: '⁶Li + n → T + ⁴He + 4.8 MeV. Blanket with lithium captures 14.1 MeV neutrons. TBR > 1.05 needed for self-sufficiency.', advanced: 'TBR accounts for losses: double-stranded blanket, neutron multiplication via (n,2n) in Be/Pb. Lead-lithium (Pb-17Li) or ceramic (Li₄SiO₄) breeders. ITER TBM (Test Blanket Module) program tests 6 concepts. Global T inventory: ~25 kg from CANDU, decays at 5.5%/yr.' },
+    ];
+    document.getElementById('fgd-difficulty-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Term</th><th>Beginner</th><th>Intermediate</th><th>Advanced</th></tr></thead><tbody>
+        ${difficultyLevels.map(d => `<tr><td><strong>${d.term}</strong></td><td style="font-size:0.8125rem;">${d.beginner}</td><td style="font-size:0.8125rem;">${d.intermediate}</td><td style="font-size:0.75rem;color:var(--tl-text-sec);">${d.advanced}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Multi-level explanations help readers at different expertise levels. Beginner: plain language analogy. Intermediate: key physics with formulas. Advanced: detailed theory, parameters, and research context. Use these to communicate fusion concepts to diverse audiences.</div>
+    `;
+    document.getElementById('fgd-difficulty-section').style.display = 'block';
+
+    // === Feature 4: Formula Reference ===
+    const formulas = [
+      { name: 'Lawson Triple Product', formula: 'nTτ ≥ 3×10²¹ keV·s/m³', variables: 'n=density, T=temperature, τ=confinement time', useCase: 'Ignition condition for D-T' },
+      { name: 'Fusion Power Density', formula: 'P_f = n²⟨σv⟩E / 4', variables: 'n=density, ⟨σv⟩=reaction rate, E=energy per reaction', useCase: 'Power output per unit volume' },
+      { name: 'Bremsstrahlung Loss', formula: 'P_b = C_b n² Z² √T', variables: 'C_b=5.35×10⁻³⁷, Z=ion charge', useCase: 'Radiation loss calculation' },
+      { name: 'Beta', formula: 'β = nkT / (B²/2μ₀)', variables: 'n=density, kT=energy, B=field, μ₀=4π×10⁻⁷', useCase: 'Plasma stability parameter' },
+      { name: 'Larmor Radius', formula: 'r_L = mv⊥ / (qB)', variables: 'm=mass, v⊥=perp velocity, q=charge, B=field', useCase: 'Particle orbit size' },
+      { name: 'Gyrofrequency', formula: 'ω_c = qB / m', variables: 'q=charge, B=field, m=mass', useCase: 'Cyclotron heating resonance' },
+      { name: 'Magnetic Pressure', formula: 'p_B = B² / (2μ₀)', variables: 'B=field strength, μ₀=permeability', useCase: 'Confinement capacity' },
+      { name: 'Q Factor', formula: 'Q = P_fusion / P_heating', variables: 'P_fusion=output, P_heating=input', useCase: 'Reactor gain metric' },
+      { name: 'ITR (Information Transfer Rate)', formula: 'ITR = log₂(N) × accuracy × 60 / T', variables: 'N=choices, T=trial time', useCase: 'BCI communication speed' },
+      { name: 'Alfvén Speed', formula: 'v_A = B / √(μ₀ρ)', variables: 'B=field, ρ=mass density', useCase: 'MHD wave speed' },
+      { name: 'Coulomb Logarithm', formula: 'ln Λ ≈ 17 (typical)', variables: 'Λ=Debye length/impact parameter', useCase: 'Collision frequency' },
+      { name: 'Energy Confinement', formula: 'τ_E = W / P_loss', variables: 'W=stored energy, P_loss=loss power', useCase: 'Confinement quality' },
+    ];
+    document.getElementById('fgd-formula-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Formula Name</th><th>Expression</th><th>Variables</th><th>Use Case</th></tr></thead><tbody>
+        ${formulas.map(f => `<tr><td><strong>${f.name}</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;" class="it-highlight">${f.formula}</td><td style="font-size:0.75rem;">${f.variables}</td><td style="font-size:0.8125rem;">${f.useCase}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Key fusion physics formulas for quick reference. All use SI units unless noted. ⟨σv⟩ is the Maxwellian-averaged reaction rate, strongly temperature-dependent. For D-T at 10 keV: ⟨σv⟩ ≈ 1.1×10⁻²² m³/s.</div>
+    `;
+    document.getElementById('fgd-formula-section').style.display = 'block';
+
+    // === Feature 5: Fusion Timeline ===
+    const timeline = [
+      { year: 1920, event: 'Eddington proposes stellar energy from fusion', significance: 'First theoretical basis' },
+      { year: 1932, event: 'Mark Oliphant discovers D-D and D-T fusion', significance: 'First lab fusion' },
+      { year: 1951, event: 'Lyman Spitzer proposes Stellarator', significance: 'First MCF concept' },
+      { year: 1952, event: 'Ivy Mike — first thermonuclear weapon', significance: 'Proves fusion at scale' },
+      { year: 1958, event: 'Atoms for Peace — fusion declassified', significance: 'International collaboration begins' },
+      { year: 1968, event: 'T-3 tokamak results (Kurchatov)', significance: 'Tokamak becomes leading concept' },
+      { year: 1974, event: 'DT fusion demonstrated at Princeton (PLT)', significance: 'First D-T in lab' },
+      { year: 1982, event: 'TFTR begins operation at PPPL', significance: 'Major US tokamak' },
+      { year: 1991, event: 'JET first D-T experiments — 1.7 MW', significance: 'First significant fusion power' },
+      { year: 1997, event: 'JET achieves 16 MW (Q=0.67)', significance: 'Record fusion power (still standing)' },
+      { year: 2006, event: 'ITER Agreement signed', significance: 'Largest fusion project begins' },
+      { year: 2015, event: 'Wendelstein 7-X first plasma', significance: 'Largest stellarator operational' },
+      { year: 2021, event: 'JET D-T campaign — 59 MJ over 5s', significance: 'World record sustained fusion' },
+      { year: 2022, event: 'NIF achieves Q>1 (1.5 MJ)', significance: 'First ignition in laboratory' },
+      { year: 2025, event: 'ITER first plasma (target)', significance: 'Largest tokamak begins operation' },
+      { year: 2035, event: 'ITER D-T operation (target)', significance: 'Q=10 demonstration' },
+      { year: 2050, event: 'DEMO operation (target)', significance: 'First fusion electricity to grid' },
+    ];
+    document.getElementById('fgd-timeline-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Year</th><th>Event</th><th>Significance</th><th>Era</th></tr></thead><tbody>
+        ${timeline.map(t => `<tr${t.year <= 2022 ? '' : ' class="it-highlight"'}><td style="font-weight:700;color:${t.year > 2022 ? '#1e40af' : '#111125'};">${t.year}</td><td style="font-size:0.8125rem;"><strong>${t.event}</strong></td><td style="font-size:0.75rem;color:var(--tl-text-sec);">${t.significance}</td><td style="font-size:0.75rem;">${t.year < 1960 ? 'Pioneering' : t.year < 1990 ? 'Development' : t.year < 2022 ? 'Major Experiments' : t.year <= 2022 ? 'Breakthrough' : 'Future'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Fusion research spans 100+ years. Key milestones: 1932 (first lab fusion), 1997 (JET 16 MW record), 2022 (NIF ignition). ITER (2025-2035) aims for Q=10. DEMO (2050) targets commercial electricity. Private companies (Commonwealth Fusion, TAE, Helion) aim to accelerate timeline.</div>
+    `;
+    document.getElementById('fgd-timeline-section').style.display = 'block';
+
+    // === Feature 6: Concept Comparison ===
+    const comparisons = [
+      { concept1: 'Tokamak', concept2: 'Stellarator', dims: [{ label: 'Symmetry', v1: 'Axisymmetric', v2: '3D asymmetric' }, { label: 'Plasma Current', v1: 'Required (solenoid)', v2: 'Not needed' }, { label: 'Steady State', v1: 'Pulsed (limit)', v2: 'Inherently steady' }, { label: 'Complexity', v1: 'Simpler coils', v2: 'Complex 3D coils' }, { label: 'Disruption Risk', v1: 'High (current)', v2: 'Low (no current)' }, { label: 'Confinement', v1: 'Better (H-mode)', v2: 'Approaching tokamak' }, { label: 'Leading Example', v1: 'ITER', v2: 'Wendelstein 7-X' }] },
+      { concept1: 'Magnetic (MCF)', concept2: 'Inertial (ICF)', dims: [{ label: 'Confinement', v1: 'Magnetic fields', v2: 'Inertia of fuel' }, { label: 'Timescale', v1: 'Seconds', v2: 'Nanoseconds' }, { label: 'Density', v1: '10²⁰ m⁻³', v2: '10³¹ m⁻³' }, { label: 'Driver', v1: 'Magnets + heating', v2: 'Lasers / beams' }, { label: 'Repetition', v1: 'Continuous', v2: 'Pulsed (shots)' }, { label: 'Leading Example', v1: 'ITER', v2: 'NIF' }] },
+      { concept1: 'D-T Fusion', concept2: 'Aneutronic (p-B11)', dims: [{ label: 'Temperature', v1: '15 keV (170M K)', v2: '300 keV (3.5B K)' }, { label: 'Neutrons', v1: '80% energy', v2: '~0% (aneutronic)' }, { label: 'Fuel', v1: 'D + T (bred)', v2: 'H + B-11 (abundant)' }, { label: 'Energy Conversion', v1: 'Thermal cycle', v2: 'Direct conversion' }, { label: 'Efficiency', v1: '~40%', v2: '~80-90%' }, { label: 'Maturity', v1: 'TRL 7 (ITER)', v2: 'TRL 2 (early)' }] },
+    ];
+    document.getElementById('fgd-compare-list').innerHTML = `
+      ${comparisons.map(c => `
+        <div style="margin-bottom:1.5rem;"><strong style="font-size:1rem;">${c.concept1} vs ${c.concept2}</strong>
+        <table class="it-table" style="margin-top:0.5rem;"><thead><tr><th>Dimension</th><th>${c.concept1}</th><th>${c.concept2}</th></tr></thead><tbody>
+          ${c.dims.map(d => `<tr><td><strong>${d.label}</strong></td><td style="font-size:0.8125rem;">${d.v1}</td><td style="font-size:0.8125rem;">${d.v2}</td></tr>`).join('')}
+        </tbody></table></div>
+      `).join('')}
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Side-by-side comparisons of key fusion concepts. Tokamak vs stellarator is the primary MCF debate. MCF vs ICF represents two fundamentally different approaches. D-T vs aneutronic represents near-term vs long-term fuel cycles.</div>
+    `;
+    document.getElementById('fgd-compare-section').style.display = 'block';
+
+    // === Feature 7: Fusion Reactions Reference ===
+    const fusionReactions = [
+      { reaction: 'D + T → ⁴He + n', energy: '17.6 MeV', alpha: '3.5 MeV', neutron: '14.1 MeV', threshold: '4 keV', optimal: '15 keV', crossSection: '5 barns', difficulty: 'Easiest', neutronicity: '80% neutron', note: 'Primary reaction for first-gen reactors' },
+      { reaction: 'D + D → T + p', energy: '4.0 MeV', alpha: '—', neutron: '—', threshold: '50 keV', optimal: '50 keV', crossSection: '0.03 barns', difficulty: 'Moderate', neutronicity: 'No neutron', note: 'Half of D-D branch' },
+      { reaction: 'D + D → ³He + n', energy: '3.3 MeV', alpha: '—', neutron: '2.5 MeV', threshold: '50 keV', optimal: '50 keV', crossSection: '0.03 barns', difficulty: 'Moderate', neutronicity: '50% neutron', note: 'Other D-D branch' },
+      { reaction: 'D + ³He → ⁴He + p', energy: '18.3 MeV', alpha: '—', neutron: '—', threshold: '100 keV', optimal: '100 keV', crossSection: '0.005 barns', difficulty: 'Hard', neutronicity: '~5% neutron', note: 'Aneutronic, needs He-3' },
+      { reaction: 'p + ¹¹B → 3α', energy: '8.7 MeV', alpha: '8.7 MeV', neutron: '~0', threshold: '300 keV', optimal: '300 keV', crossSection: '0.0003 barns', difficulty: 'Very Hard', neutronicity: '~0.1%', note: 'Aneutronic, abundant fuel' },
+      { reaction: 'p + ⁶Li → ⁴He + ³He', energy: '4.0 MeV', alpha: '—', neutron: '—', threshold: '500 keV', optimal: '500 keV', crossSection: '<0.0001 barns', difficulty: 'Extreme', neutronicity: 'Aneutronic', note: 'Very high temperature needed' },
+    ];
+    document.getElementById('fgd-reactions-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Reaction</th><th>Energy</th><th>Alpha Energy</th><th>Neutron Energy</th><th>Threshold</th><th>Optimal T</th><th>⟨σv⟩ Peak</th><th>Difficulty</th><th>Neutronicity</th><th>Notes</th></tr></thead><tbody>
+        ${fusionReactions.map(r => `<tr${r.reaction.startsWith('D + T') ? ' class="it-highlight"' : ''}><td style="font-family:var(--tl-mono);font-size:0.8125rem;"><strong>${r.reaction}</strong></td><td>${r.energy}</td><td>${r.alpha}</td><td style="color:${r.neutron === '14.1 MeV' ? '#dc2626' : '#059669'};">${r.neutron}</td><td>${r.threshold}</td><td>${r.optimal}</td><td style="font-size:0.75rem;">${r.crossSection}</td><td style="color:${r.difficulty.includes('Easiest') ? '#059669' : r.difficulty.includes('Very') || r.difficulty.includes('Extreme') ? '#dc2626' : '#d97706'};font-weight:700;">${r.difficulty}</td><td style="font-size:0.75rem;">${r.neutronicity}</td><td style="font-size:0.75rem;">${r.note}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">D-T is the easiest fusion reaction (lowest temperature, highest cross-section) but produces 80% energy as neutrons. Aneutronic reactions (p-B11, D-He3) avoid neutron damage but require 10-20× higher temperatures. D-D is catalyzed — produces T and He-3 from deuterium alone.</div>
+    `;
+    document.getElementById('fgd-reactions-section').style.display = 'block';
+
+    // === Feature 8: Key Parameters Quick Reference ===
+    const keyParams = [
+      { param: 'Temperature', symbol: 'T', unit: 'keV', typical: '10-20 (D-T), 100-300 (aneutronic)', range: '1-500', note: '1 keV = 11.6M K' },
+      { param: 'Density', symbol: 'n', unit: 'm⁻³', typical: '10²⁰ (MCF), 10³¹ (ICF)', range: '10¹⁸-10³¹', note: 'MCF: diffuse, ICF: solid density×1000' },
+      { param: 'Confinement Time', symbol: 'τ_E', unit: 's', typical: '0.1-5 (MCF), 10⁻⁹ (ICF)', range: '10⁻⁹-10', note: 'Energy confinement time' },
+      { param: 'Magnetic Field', symbol: 'B', unit: 'T', typical: '3-13 (tokamak), 0 (ICF)', range: '0-20', note: 'ITER: 5.3T, SPARC: 12T (REBCO)' },
+      { param: 'Beta', symbol: 'β', unit: '%', typical: '2-5 (tokamak), 40 (ST)', range: '0-50', note: 'Troyon limit: βN < 2.5' },
+      { param: 'Q Factor', symbol: 'Q', unit: '—', typical: '0.1-10 (current), ∞ (ignition)', range: '0-∞', note: 'Q=1: break-even, Q=10: ITER target' },
+      { param: 'Larmor Radius', symbol: 'r_L', unit: 'mm', typical: '0.1-5', range: '0.01-10', note: 'Must be << device size' },
+      { param: 'Collisionality', symbol: 'ν*', unit: '—', typical: '0.01-10', range: '0.001-100', note: '<0.1: collisionless, >1: fluid' },
+      { param: 'Safety Factor', symbol: 'q', unit: '—', typical: '1-5 (edge)', range: '0.5-10', note: 'q<1: kink instability' },
+      { param: 'Tritium Breeding Ratio', symbol: 'TBR', unit: '—', typical: '1.05-1.15', range: '0-1.5', note: '>1.05 for self-sufficiency' },
+      { param: 'Wall Load', symbol: 'P_w', unit: 'MW/m²', typical: '0.5-5', range: '0.1-10', note: 'ITER: 0.57, DEMO: 1-2' },
+      { param: 'Availability', symbol: '—', unit: '%', typical: '30-70 (current), 80+ (target)', range: '10-95', note: 'Commercial target: >85%' },
+    ];
+    document.getElementById('fgd-params-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Typical Range</th><th>Full Range</th><th>Notes</th></tr></thead><tbody>
+        ${keyParams.map(p => `<tr><td><strong>${p.param}</strong></td><td style="font-family:var(--tl-mono);" class="it-highlight">${p.symbol}</td><td style="font-size:0.8125rem;">${p.unit}</td><td style="font-size:0.8125rem;">${p.typical}</td><td style="font-size:0.75rem;color:var(--tl-text-sec);">${p.range}</td><td style="font-size:0.75rem;">${p.note}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Quick reference for key fusion parameters. MCF (magnetic confinement) and ICF (inertial confinement) operate at vastly different density/time regimes but similar nTτ products. ITER targets: T=10 keV, n=10²⁰, τ=3.7s, B=5.3T, Q=10.</div>
+    `;
+    document.getElementById('fgd-params-section').style.display = 'block';
+
+    // === Feature 9: Quiz ===
+    const quizQuestions = [
+      { q: 'What is the Lawson criterion for D-T fusion?', options: ['nTτ ≥ 3×10²¹ keV·s/m³', 'nTτ ≥ 10²⁰ keV·s/m³', 'nTτ ≥ 10²³ keV·s/m³', 'nTτ ≥ 10¹⁹ keV·s/m³'], answer: 0, explanation: 'D-T requires nTτ ≥ 3×10²¹. This is the lowest threshold of any fusion reaction.' },
+      { q: 'What percentage of D-T fusion energy goes to the neutron?', options: ['20%', '50%', '80%', '100%'], answer: 2, explanation: '14.1 MeV out of 17.6 MeV (80%) goes to the 14.1 MeV neutron. Only 3.5 MeV (20%) goes to the alpha particle.' },
+      { q: 'Which fusion concept does NOT require plasma current?', options: ['Tokamak', 'Stellarator', 'Spherical Tokamak', 'Reversed Field Pinch'], answer: 1, explanation: 'Stellarators use only external 3D-shaped coils — no plasma current needed, making them inherently steady-state.' },
+      { q: 'What is the typical beta limit for a tokamak?', options: ['1%', '5%', '20%', '50%'], answer: 1, explanation: 'The Troyon limit gives βN < 2.5-3.5, which typically corresponds to β ~ 5% in standard tokamaks.' },
+      { q: 'Which facility first achieved fusion ignition (Q>1)?', options: ['JET (UK)', 'ITER (France)', 'NIF (USA)', 'TFTR (USA)'], answer: 2, explanation: 'NIF (National Ignition Facility) achieved Q>1 in December 2022 — the first controlled fusion ignition in laboratory history.' },
+      { q: 'What is tritium bred from?', options: ['Uranium-238', 'Lithium-6', 'Helium-3', 'Boron-11'], answer: 1, explanation: 'Tritium is bred via ⁶Li + n → T + ⁴He + 4.8 MeV in the blanket surrounding the plasma.' },
+      { q: 'What temperature is optimal for D-T fusion?', options: ['1 keV', '5 keV', '15 keV', '100 keV'], answer: 2, explanation: 'D-T fusion cross-section peaks around 15 keV (170 million K). Higher temperatures reduce cross-section due to decreasing ⟨σv⟩.' },
+      { q: 'What is the main advantage of aneutronic fusion?', options: ['Lower temperature', 'Higher cross-section', 'No neutron damage', 'Easier confinement'], answer: 2, explanation: 'Aneutronic fusion (p-B11, D-He3) produces minimal neutrons, enabling direct energy conversion and avoiding material damage.' },
+      { q: 'What does H-mode stand for?', options: ['High-temperature mode', 'High-confinement mode', 'High-density mode', 'High-beta mode'], answer: 1, explanation: 'H-mode (High-confinement mode) features an edge transport barrier that improves confinement by ~2× over L-mode.' },
+      { q: 'What is the Q factor at ignition?', options: ['Q=1', 'Q=10', 'Q=100', 'Q=∞'], answer: 3, explanation: 'At ignition, alpha heating fully sustains the plasma with no external heating — Q=∞ (infinite gain).' },
+    ];
+    let quizIdx = 0, quizScore = 0, quizAnswered = false;
+    function renderQuiz() {
+      if (quizIdx >= quizQuestions.length) {
+        const pct = (quizScore / quizQuestions.length * 100).toFixed(0);
+        document.getElementById('fgd-quiz-list').innerHTML = `
+          <div style="text-align:center;padding:2rem 1rem;"><div style="font-size:2rem;font-weight:700;color:${pct > 70 ? '#059669' : pct > 50 ? '#d97706' : '#dc2626'};">${quizScore}/${quizQuestions.length} (${pct}%)</div><div style="font-size:1rem;margin-top:0.5rem;">${pct > 80 ? 'Excellent! You know your fusion physics.' : pct > 60 ? 'Good knowledge — review missed topics.' : 'Keep studying — fusion is complex!'}</div><button class="it-btn it-btn-primary" style="margin-top:1rem;" id="fgd-quiz-restart">Restart Quiz</button></div>
+        `;
+        document.getElementById('fgd-quiz-restart').addEventListener('click', () => { quizIdx = 0; quizScore = 0; renderQuiz(); });
+        return;
+      }
+      const q = quizQuestions[quizIdx];
+      quizAnswered = false;
+      document.getElementById('fgd-quiz-list').innerHTML = `
+        <div style="margin-bottom:0.5rem;font-size:0.8125rem;color:var(--tl-text-muted);">Question ${quizIdx + 1} of ${quizQuestions.length} | Score: ${quizScore}</div>
+        <div style="font-size:1rem;font-weight:600;margin-bottom:1rem;">${q.q}</div>
+        <div id="fgd-quiz-options">${q.options.map((opt, i) => `<div class="it-checkbox-item" data-idx="${i}" style="display:block;padding:0.75rem 1rem;margin-bottom:0.5rem;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);cursor:pointer;transition:all 0.2s;">${opt}</div>`).join('')}</div>
+        <div id="fgd-quiz-feedback" style="display:none;"></div>
+      `;
+      document.querySelectorAll('#fgd-quiz-options .it-checkbox-item').forEach(el => {
+        el.addEventListener('click', () => {
+          if (quizAnswered) return; quizAnswered = true;
+          const idx = parseInt(el.getAttribute('data-idx'));
+          const correct = idx === q.answer;
+          if (correct) quizScore++;
+          document.querySelectorAll('#fgd-quiz-options .it-checkbox-item').forEach((opt, i) => {
+            opt.style.cursor = 'default';
+            if (i === q.answer) { opt.style.background = '#05966922'; opt.style.borderColor = '#059669'; }
+            else if (i === idx) { opt.style.background = '#dc262622'; opt.style.borderColor = '#dc2626'; }
+          });
+          const fb = document.getElementById('fgd-quiz-feedback');
+          fb.style.display = 'block'; fb.className = `it-alert ${correct ? 'it-alert-good' : 'it-alert-bad'}`;
+          fb.innerHTML = `${correct ? '✓ Correct!' : '✗ Incorrect.'} ${q.explanation} <button class="it-btn it-btn-primary" style="margin-top:0.5rem;" id="fgd-quiz-next">${quizIdx < quizQuestions.length - 1 ? 'Next Question' : 'See Results'}</button>`;
+          document.getElementById('fgd-quiz-next').addEventListener('click', () => { quizIdx++; renderQuiz(); });
+        });
+      });
+    }
+    document.getElementById('fgd-quiz').addEventListener('click', () => {
+      quizIdx = 0; quizScore = 0; renderQuiz();
+      document.getElementById('fgd-results').classList.add('show');
+      document.querySelectorAll('#fgd-results .it-results-card').forEach(c => c.style.display = 'none');
+      document.getElementById('fgd-quiz-section').style.display = 'block';
+    });
+    document.getElementById('fgd-quiz-section').style.display = 'none';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('fgd-export').style.display = 'inline-flex';
+    document.getElementById('fgd-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), glossary, statistics: { totalTerms, categories: catCounts, relatedTerms: allRelated.size }, formulas, timeline, reactions: fusionReactions, parameters: keyParams, comparisons };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'fusion-glossary-report.json'; a.click();
+    };
+  }
+
+  function browseAll() {
+    document.getElementById('fgd-search').value = '';
+    document.getElementById('fgd-category').value = 'all';
+    search();
+  }
+
+  document.getElementById('fgd-search-btn').addEventListener('click', search);
+  document.getElementById('fgd-browse').addEventListener('click', browseAll);
+  document.getElementById('fgd-reset').addEventListener('click', () => {
+    document.getElementById('fgd-search').value = '';
+    document.getElementById('fgd-category').value = 'all';
+    document.getElementById('fgd-results').classList.remove('show');
+  });
+  document.getElementById('fgd-search').addEventListener('keydown', e => { if (e.key === 'Enter') search(); });
+})();
+</script>

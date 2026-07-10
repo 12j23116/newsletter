@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './newsletter-styles.css';
+---
+<BaseLayout title="Newsletter" description="Subscribe to the TechScope newsletter — weekly briefings on AI, space, biotech, nuclear, quantum, and more.">
+  <div class="container newsletter-page">
+    <div class="landing-section-eyebrow" style="margin-bottom: 1rem;">Stay Ahead</div>
+    <h1 class="newsletter-page-title">Get the frontier delivered to your inbox</h1>
+    <p class="newsletter-page-subtitle">
+      Weekly briefings on AI, space, biotech, nuclear, quantum, and more.
+      No fluff — just the breakthroughs that matter.
+    </p>
+
+    <form class="newsletter-page-form" action="/api/subscribe" method="POST">
+      <input class="newsletter-page-input" type="email" name="email" placeholder="you@example.com" required />
+      <button class="newsletter-page-btn" type="submit">Subscribe</button>
+    </form>
+
+    <div class="newsletter-page-trust">
+      <span class="newsletter-page-trust-item">Weekly digest</span>
+      <span class="newsletter-page-trust-item">No spam, ever</span>
+      <span class="newsletter-page-trust-item">Unsubscribe anytime</span>
+    </div>
+
+    <div class="newsletter-perks">
+      <div class="newsletter-perk">
+        <h3>📰 Weekly Digest</h3>
+        <p>The week most important tech developments, summarized in a 5-minute read every Monday.</p>
+      </div>
+      <div class="newsletter-perk">
+        <h3>🔬 Deep Dives</h3>
+        <p>Exclusive in-depth analysis of breakthroughs before they appear on the website.</p>
+      </div>
+      <div class="newsletter-perk">
+        <h3>📊 Trend Reports</h3>
+        <p>Monthly trend reports tracking search interest, funding, and market movements across all 12 categories.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

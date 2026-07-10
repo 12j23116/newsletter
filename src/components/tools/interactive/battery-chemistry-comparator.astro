@@ -1,0 +1,432 @@
+---
+/**
+ * Battery Chemistry Comparator — Interactive tool
+ * Compare battery chemistries on energy density, safety, cost, and performance
+ */
+import './interactive-tools.css';
+
+const chemistries = [
+  { id: 'lfp', name: 'LFP', fullName: 'Lithium Iron Phosphate', cathode: 'LiFePO4', anode: 'Graphite', energyDensity: 160, specificEnergy: 150, voltage: 3.2, cycles: 6000, cost: 90, safety: 'Excellent', thermal: 270, selfDischarge: 2, tempRange: '-20 to 60', recyclability: 'High' },
+  { id: 'nmc', name: 'NMC', fullName: 'Nickel Manganese Cobalt', cathode: 'LiNiMnCoO2', anode: 'Graphite', energyDensity: 280, specificEnergy: 200, voltage: 3.7, cycles: 2000, cost: 140, safety: 'Good', thermal: 210, selfDischarge: 3, tempRange: '-20 to 55', recyclability: 'Medium' },
+  { id: 'nca', name: 'NCA', fullName: 'Nickel Cobalt Aluminum', cathode: 'LiNiCoAlO2', anode: 'Graphite', energyDensity: 300, specificEnergy: 250, voltage: 3.6, cycles: 1500, cost: 160, safety: 'Moderate', thermal: 150, selfDischarge: 3, tempRange: '-20 to 55', recyclability: 'Medium' },
+  { id: 'lco', name: 'LCO', fullName: 'Lithium Cobalt Oxide', cathode: 'LiCoO2', anode: 'Graphite', energyDensity: 200, specificEnergy: 180, voltage: 3.7, cycles: 1000, cost: 120, safety: 'Moderate', thermal: 150, selfDischarge: 5, tempRange: '-20 to 50', recyclability: 'Medium' },
+  { id: 'lmn', name: 'LMO', fullName: 'Lithium Manganese Oxide', cathode: 'LiMn2O4', anode: 'Graphite', energyDensity: 150, specificEnergy: 120, voltage: 3.7, cycles: 3000, cost: 100, safety: 'Good', thermal: 250, selfDischarge: 2.5, tempRange: '-20 to 55', recyclability: 'High' },
+  { id: 'solid', name: 'Solid-State', fullName: 'Solid-State Li-Metal', cathode: 'NMC-like', anode: 'Li Metal', energyDensity: 400, specificEnergy: 350, voltage: 3.8, cycles: 5000, cost: 300, safety: 'Excellent', thermal: 300, selfDischarge: 0.5, tempRange: '-30 to 70', recyclability: 'TBD' },
+  { id: 'naion', name: 'Na-Ion', fullName: 'Sodium Ion', cathode: 'Na layered oxide', anode: 'Hard Carbon', energyDensity: 160, specificEnergy: 140, voltage: 3.1, cycles: 4000, cost: 70, safety: 'Excellent', thermal: 260, selfDischarge: 2, tempRange: '-30 to 60', recyclability: 'High' },
+  { id: 'lto', name: 'LTO', fullName: 'Lithium Titanate', cathode: 'NMC/LMO', anode: 'Li4Ti5O12', energyDensity: 100, specificEnergy: 80, voltage: 2.4, cycles: 20000, cost: 200, safety: 'Excellent', thermal: 300, selfDischarge: 1, tempRange: '-40 to 60', recyclability: 'High' },
+];
+---
+
+<div class="it-container" id="battery-comparator">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🔋</div>
+      <div>
+        <h2>Battery Chemistry Comparator</h2>
+        <p>Compare battery chemistries on energy density, safety, cost, cycle life, and more</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Select Chemistries to Compare</label>
+        <div class="it-checkbox-group" id="bcc-chemistries">
+          {chemistries.map(c => (
+            <label class="it-checkbox-item" data-chem={c.id}>
+              <input type="checkbox" value={c.id} />
+              {c.name}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Application Priority Weight</label>
+        <select class="it-select" id="bcc-priority">
+          <option value="balanced">Balanced (All-Around)</option>
+          <option value="energy">Max Energy Density (EVs, Portable)</option>
+          <option value="cycle">Max Cycle Life (Grid Storage)</option>
+          <option value="safety">Safety First (Stationary, Indoor)</option>
+          <option value="cost">Lowest Cost (Budget Applications)</option>
+          <option value="temp">Extreme Temperature (Industrial)</option>
+        </select>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="bcc-compare">Compare Chemistries</button>
+        <button class="it-btn it-btn-secondary" id="bcc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="bcc-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="bcc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Chemistry Comparison</div>
+        <table class="it-table" id="bcc-table">
+          <thead id="bcc-head"></thead>
+          <tbody id="bcc-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="bcc-insight"></div>
+      </div>
+
+      <!-- Feature 1: Radar Chart -->
+      <div class="it-results-card" id="bcc-radar-section" style="display:none;">
+        <div class="it-results-title">📊 Multi-Dimensional Radar Chart</div>
+        <canvas id="bcc-radar-canvas" width="500" height="500" style="width:100%;max-width:500px;margin:0 auto;display:block;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);"></canvas>
+      </div>
+
+      <!-- Feature 2: Energy Density Bar Chart -->
+      <div class="it-results-card" id="bcc-density-section" style="display:none;">
+        <div class="it-results-title">📦 Volumetric vs Gravimetric Energy Density</div>
+        <canvas id="bcc-density-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);"></canvas>
+        <div id="bcc-density-list" style="margin-top:0.75rem;"></div>
+      </div>
+
+      <!-- Feature 3: Safety & Thermal -->
+      <div class="it-results-card" id="bcc-safety-section" style="display:none;">
+        <div class="it-results-title">🛡️ Safety & Thermal Stability Analysis</div>
+        <div id="bcc-safety-list"></div>
+      </div>
+
+      <!-- Feature 4: Cost per kWh & TCO -->
+      <div class="it-results-card" id="bcc-cost-section" style="display:none;">
+        <div class="it-results-title">💰 Cost per kWh & Lifetime Economics</div>
+        <div id="bcc-cost-list"></div>
+      </div>
+
+      <!-- Feature 5: Application Recommender -->
+      <div class="it-results-card" id="bcc-app-section" style="display:none;">
+        <div class="it-results-title">🎯 Application Suitability Matrix</div>
+        <div id="bcc-app-list"></div>
+      </div>
+
+      <!-- Feature 6: Raw Material Analysis -->
+      <div class="it-results-card" id="bcc-materials-section" style="display:none;">
+        <div class="it-results-title">⛏️ Raw Material & Supply Chain Analysis</div>
+        <div id="bcc-materials-list"></div>
+      </div>
+
+      <!-- Feature 7: Environmental Impact -->
+      <div class="it-results-card" id="bcc-env-section" style="display:none;">
+        <div class="it-results-title">🌍 Environmental Impact & Recyclability</div>
+        <div id="bcc-env-list"></div>
+      </div>
+
+      <!-- Feature 8: Performance at Temperature Extremes -->
+      <div class="it-results-card" id="bcc-temp-section" style="display:none;">
+        <div class="it-results-title">🌡️ Performance at Temperature Extremes</div>
+        <div id="bcc-temp-list"></div>
+      </div>
+
+      <!-- Feature 9: Weighted Score Ranking -->
+      <div class="it-results-card" id="bcc-score-section" style="display:none;">
+        <div class="it-results-title">🏆 Weighted Score Ranking</div>
+        <div id="bcc-score-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const data = {
+    lfp: { name: 'LFP', fullName: 'Lithium Iron Phosphate', cathode: 'LiFePO4', anode: 'Graphite', energyDensity: 160, specificEnergy: 150, voltage: 3.2, cycles: 6000, cost: 90, safety: 'Excellent', thermal: 270, selfDischarge: 2, tempRange: '-20 to 60', recyclability: 'High' },
+    nmc: { name: 'NMC', fullName: 'Nickel Manganese Cobalt', cathode: 'LiNiMnCoO2', anode: 'Graphite', energyDensity: 280, specificEnergy: 200, voltage: 3.7, cycles: 2000, cost: 140, safety: 'Good', thermal: 210, selfDischarge: 3, tempRange: '-20 to 55', recyclability: 'Medium' },
+    nca: { name: 'NCA', fullName: 'Nickel Cobalt Aluminum', cathode: 'LiNiCoAlO2', anode: 'Graphite', energyDensity: 300, specificEnergy: 250, voltage: 3.6, cycles: 1500, cost: 160, safety: 'Moderate', thermal: 150, selfDischarge: 3, tempRange: '-20 to 55', recyclability: 'Medium' },
+    lco: { name: 'LCO', fullName: 'Lithium Cobalt Oxide', cathode: 'LiCoO2', anode: 'Graphite', energyDensity: 200, specificEnergy: 180, voltage: 3.7, cycles: 1000, cost: 120, safety: 'Moderate', thermal: 150, selfDischarge: 5, tempRange: '-20 to 50', recyclability: 'Medium' },
+    lmn: { name: 'LMO', fullName: 'Lithium Manganese Oxide', cathode: 'LiMn2O4', anode: 'Graphite', energyDensity: 150, specificEnergy: 120, voltage: 3.7, cycles: 3000, cost: 100, safety: 'Good', thermal: 250, selfDischarge: 2.5, tempRange: '-20 to 55', recyclability: 'High' },
+    solid: { name: 'Solid-State', fullName: 'Solid-State Li-Metal', cathode: 'NMC-like', anode: 'Li Metal', energyDensity: 400, specificEnergy: 350, voltage: 3.8, cycles: 5000, cost: 300, safety: 'Excellent', thermal: 300, selfDischarge: 0.5, tempRange: '-30 to 70', recyclability: 'TBD' },
+    naion: { name: 'Na-Ion', fullName: 'Sodium Ion', cathode: 'Na layered oxide', anode: 'Hard Carbon', energyDensity: 160, specificEnergy: 140, voltage: 3.1, cycles: 4000, cost: 70, safety: 'Excellent', thermal: 260, selfDischarge: 2, tempRange: '-30 to 60', recyclability: 'High' },
+    lto: { name: 'LTO', fullName: 'Lithium Titanate', cathode: 'NMC/LMO', anode: 'Li4Ti5O12', energyDensity: 100, specificEnergy: 80, voltage: 2.4, cycles: 20000, cost: 200, safety: 'Excellent', thermal: 300, selfDischarge: 1, tempRange: '-40 to 60', recyclability: 'High' },
+  };
+
+  function toggle(el) { el.classList.toggle('active'); el.querySelector('input').checked = el.classList.contains('active'); }
+  document.querySelectorAll('#bcc-chemistries .it-checkbox-item').forEach(el => el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); }));
+  ['lfp', 'nmc', 'solid'].forEach(id => { const el = document.querySelector(`[data-chem="${id}"]`); if (el) toggle(el); });
+
+  const safetyMap = { 'Excellent': 5, 'Good': 4, 'Moderate': 3, 'Poor': 2, 'Very Poor': 1 };
+  const recycleMap = { 'High': 5, 'Medium': 3, 'Low': 2, 'TBD': 1 };
+
+  function compare() {
+    const selected = [...document.querySelectorAll('#bcc-chemistries .it-checkbox-item.active')].map(el => el.getAttribute('data-chem'));
+    if (selected.length < 2) { alert('Select at least 2 chemistries to compare.'); return; }
+    const priority = document.getElementById('bcc-priority').value;
+
+    const rows = [
+      { label: 'Full Name', key: 'fullName' },
+      { label: 'Cathode', key: 'cathode' },
+      { label: 'Anode', key: 'anode' },
+      { label: 'Volumetric Density (Wh/L)', key: 'energyDensity', best: 'max' },
+      { label: 'Gravimetric Density (Wh/kg)', key: 'specificEnergy', best: 'max' },
+      { label: 'Nominal Voltage (V)', key: 'voltage', best: 'max' },
+      { label: 'Cycle Life', key: 'cycles', best: 'max' },
+      { label: 'Cost ($/kWh)', key: 'cost', best: 'min' },
+      { label: 'Safety Rating', key: 'safety' },
+      { label: 'Thermal Runaway (°C)', key: 'thermal', best: 'max' },
+      { label: 'Self-Discharge (%/mo)', key: 'selfDischarge', best: 'min' },
+      { label: 'Temp Range (°C)', key: 'tempRange' },
+      { label: 'Recyclability', key: 'recyclability' },
+    ];
+
+    const head = document.getElementById('bcc-head');
+    head.innerHTML = `<tr><th>Parameter</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr>`;
+
+    const body = document.getElementById('bcc-body');
+    body.innerHTML = rows.map(row => {
+      const values = selected.map(id => data[id][row.key]);
+      let bestIdx = -1;
+      if (row.best === 'max') { bestIdx = values.indexOf(Math.max(...values)); }
+      else if (row.best === 'min') { bestIdx = values.indexOf(Math.min(...values)); }
+      return `<tr><td><strong>${row.label}</strong></td>${values.map((v, i) => `<td${i === bestIdx ? ' class="it-highlight"' : ''}>${v}${i === bestIdx ? ' ★' : ''}</td>`).join('')}</tr>`;
+    }).join('');
+
+    // Insight
+    const bestDensity = selected.reduce((b, id) => data[id].energyDensity > data[b].energyDensity ? id : b);
+    const bestCycles = selected.reduce((b, id) => data[id].cycles > data[b].cycles ? id : b);
+    const bestCost = selected.reduce((b, id) => data[id].cost < data[b].cost ? id : b);
+    const bestSafety = selected.filter(id => data[id].safety === 'Excellent');
+    document.getElementById('bcc-insight').innerHTML = `<strong>💡 Insight:</strong> ${data[bestDensity].name} leads in energy density (${data[bestDensity].energyDensity} Wh/L). ${data[bestCycles].name} has the longest cycle life (${data[bestCycles].cycles.toLocaleString()} cycles). ${data[bestCost].name} is the most affordable ($${data[bestCost].cost}/kWh). ${bestSafety.length > 0 ? `${bestSafety.map(id => data[id].name).join(', ')} ${bestSafety.length > 1 ? 'have' : 'has'} excellent safety.` : ''}`;
+    document.getElementById('bcc-results').classList.add('show');
+
+    // === Feature 1: Radar Chart ===
+    const radarCanvas = document.getElementById('bcc-radar-canvas');
+    const rctx = radarCanvas.getContext('2d');
+    const rw = radarCanvas.width, rh = radarCanvas.height;
+    const cx = rw / 2, cy = rh / 2, radius = Math.min(rw, rh) / 2 - 60;
+    rctx.fillStyle = '#ebedf5'; rctx.fillRect(0, 0, rw, rh);
+    const axes = ['Energy Density', 'Cycle Life', 'Safety', 'Cost (inv)', 'Thermal', 'Temp Range'];
+    const colors = ['#059669', '#06b6d4', '#d97706', '#a855f7', '#dc2626', '#84cc16'];
+    for (let level = 1; level <= 5; level++) {
+      rctx.strokeStyle = 'rgba(15,23,42,0.08)'; rctx.lineWidth = 1;
+      rctx.beginPath();
+      for (let a = 0; a < axes.length; a++) {
+        const angle = (a / axes.length) * Math.PI * 2 - Math.PI / 2;
+        const r = (radius * level) / 5;
+        const x = cx + Math.cos(angle) * r, y = cy + Math.sin(angle) * r;
+        if (a === 0) rctx.moveTo(x, y); else rctx.lineTo(x, y);
+      }
+      rctx.closePath(); rctx.stroke();
+    }
+    for (let a = 0; a < axes.length; a++) {
+      const angle = (a / axes.length) * Math.PI * 2 - Math.PI / 2;
+      rctx.strokeStyle = 'rgba(15,23,42,0.1)';
+      rctx.beginPath(); rctx.moveTo(cx, cy); rctx.lineTo(cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius); rctx.stroke();
+      rctx.fillStyle = '#475569'; rctx.font = '11px sans-serif'; rctx.textAlign = 'center';
+      rctx.fillText(axes[a], cx + Math.cos(angle) * (radius + 25), cy + Math.sin(angle) * (radius + 25) + 4);
+    }
+    selected.forEach((id, si) => {
+      const d = data[id];
+      const vals = [d.energyDensity / 80, d.cycles / 4000, safetyMap[d.safety], 6 - d.cost / 60, d.thermal / 60, 5];
+      rctx.strokeStyle = colors[si % colors.length]; rctx.lineWidth = 2;
+      rctx.fillStyle = colors[si % colors.length] + '20';
+      rctx.beginPath();
+      vals.forEach((v, a) => {
+        const angle = (a / axes.length) * Math.PI * 2 - Math.PI / 2;
+        const r = (radius * Math.max(0, Math.min(5, v))) / 5;
+        const x = cx + Math.cos(angle) * r, y = cy + Math.sin(angle) * r;
+        if (a === 0) rctx.moveTo(x, y); else rctx.lineTo(x, y);
+      });
+      rctx.closePath(); rctx.fill(); rctx.stroke();
+    });
+    rctx.font = '12px sans-serif'; rctx.textAlign = 'left';
+    selected.forEach((id, si) => {
+      rctx.fillStyle = colors[si % colors.length]; rctx.fillRect(10, 10 + si * 18, 12, 12);
+      rctx.fillStyle = '#1e293b'; rctx.fillText(data[id].name, 28, 10 + si * 18 + 10);
+    });
+    document.getElementById('bcc-radar-section').style.display = 'block';
+
+    // === Feature 2: Energy Density Bar Chart ===
+    const dCanvas = document.getElementById('bcc-density-canvas');
+    const dctx = dCanvas.getContext('2d');
+    const dw = dCanvas.width, dh = dCanvas.height;
+    dctx.fillStyle = '#ebedf5'; dctx.fillRect(0, 0, dw, dh);
+    const maxDensity = Math.max(...selected.map(id => data[id].energyDensity)) * 1.1;
+    const barH = (dh - 30) / selected.length / 2 - 2;
+    selected.forEach((id, i) => {
+      const d = data[id];
+      const y1 = i * (barH * 2 + 6) + 10;
+      const barW1 = (d.energyDensity / maxDensity) * (dw - 150);
+      dctx.fillStyle = '#06b6d4'; dctx.fillRect(120, y1, barW1, barH);
+      dctx.fillStyle = '#059669'; dctx.fillRect(120, y1 + barH + 2, (d.specificEnergy / maxDensity) * (dw - 150), barH);
+      dctx.fillStyle = '#1e293b'; dctx.font = '11px sans-serif'; dctx.textAlign = 'right';
+      dctx.fillText(d.name, 110, y1 + barH - 1);
+      dctx.textAlign = 'left';
+      dctx.fillText(d.energyDensity + ' Wh/L', 120 + barW1 + 5, y1 + barH - 1);
+      dctx.fillText(d.specificEnergy + ' Wh/kg', 125, y1 + barH * 2 + 1);
+    });
+    dctx.fillStyle = '#06b6d4'; dctx.fillRect(dw - 180, 5, 10, 10); dctx.fillText('Volumetric', dw - 165, 14);
+    dctx.fillStyle = '#059669'; dctx.fillRect(dw - 100, 5, 10, 10); dctx.fillText('Gravimetric', dw - 85, 14);
+    const bestVol = selected.reduce((b, id) => data[id].energyDensity > data[b].energyDensity ? id : b);
+    const bestGrav = selected.reduce((b, id) => data[id].specificEnergy > data[b].specificEnergy ? id : b);
+    document.getElementById('bcc-density-list').innerHTML = `
+      <div class="it-alert it-alert-info">Highest volumetric: ${data[bestVol].name} (${data[bestVol].energyDensity} Wh/L). Highest gravimetric: ${data[bestGrav].name} (${data[bestGrav].specificEnergy} Wh/kg). Solid-state batteries promise 2-3× LFP density. Na-Ion matches LFP density at lower cost but lower voltage.</div>
+    `;
+    document.getElementById('bcc-density-section').style.display = 'block';
+
+    // === Feature 3: Safety & Thermal ===
+    document.getElementById('bcc-safety-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>Safety Rating</th><th>Thermal Runaway</th><th>Self-Discharge</th><th>Failure Mode</th><th>Fire Risk</th></tr></thead><tbody>
+        ${selected.map(id => {
+          const d = data[id];
+          const fireRisk = d.thermal > 250 ? 'Very Low' : d.thermal > 200 ? 'Low' : d.thermal > 150 ? 'Moderate' : 'High';
+          const failureMode = { lfp: 'Benign venting, no thermal runaway', nmc: 'Can enter thermal runaway', nca: 'Prone to thermal runaway', lco: 'Thermal runaway risk at high temp', lmn: 'Mild venting, controlled', solid: 'No flammable electrolyte', naion: 'Benign, similar to LFP', lto: 'Zero-strain anode, no SEI growth' };
+          const riskColor = fireRisk === 'Very Low' || fireRisk === 'Low' ? '#059669' : fireRisk === 'Moderate' ? '#d97706' : '#dc2626';
+          return `<tr><td><strong>${d.name}</strong></td><td style="color:${safetyMap[d.safety] >= 4 ? '#059669' : safetyMap[d.safety] >= 3 ? '#d97706' : '#dc2626'};">${d.safety}</td><td>${d.thermal}°C</td><td>${d.selfDischarge}%/mo</td><td style="font-size:0.8125rem;">${failureMode[id] || '—'}</td><td style="color:${riskColor};font-weight:700;">${fireRisk}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Thermal runaway temperature indicates when the battery self-heats uncontrollably. LFP and LTO are inherently safe — they don't enter thermal runaway under normal conditions. Solid-state eliminates flammable liquid electrolyte entirely.</div>
+    `;
+    document.getElementById('bcc-safety-section').style.display = 'block';
+
+    // === Feature 4: Cost per kWh & Lifetime Economics ===
+    document.getElementById('bcc-cost-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>Cell Cost ($/kWh)</th><th>Cycle Life</th><th>Cost per Cycle (¢/kWh)</th><th>20yr Cost (Grid)</th><th>Cost Rank</th></tr></thead><tbody>
+        ${selected.map(id => {
+          const d = data[id];
+          const costPerCycle = d.cost / d.cycles * 100;
+          const replacements20yr = Math.ceil(20 * 365 / d.cycles);
+          const total20yr = d.cost * replacements20yr;
+          return `<tr><td><strong>${d.name}</strong></td><td>$${d.cost}</td><td>${d.cycles.toLocaleString()}</td><td class="it-highlight">${costPerCycle.toFixed(2)}¢</td><td>$${total20yr}/kWh</td><td>${costPerCycle < 2 ? '✓ Excellent' : costPerCycle < 5 ? 'Good' : 'Expensive'}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Cost per cycle = cell cost / cycle life. LTO has high upfront cost but lowest cost per cycle (0.1¢/kWh). Na-Ion offers the lowest absolute cost ($70/kWh). For grid storage, cost per cycle matters more than upfront cost.</div>
+    `;
+    document.getElementById('bcc-cost-section').style.display = 'block';
+
+    // === Feature 5: Application Suitability Matrix ===
+    const apps = [
+      { name: 'EV (Long Range)', weights: { energy: 0.4, cycle: 0.2, safety: 0.2, cost: 0.1, temp: 0.1 } },
+      { name: 'EV (City/Budget)', weights: { energy: 0.2, cycle: 0.2, safety: 0.25, cost: 0.25, temp: 0.1 } },
+      { name: 'Grid Storage (Daily)', weights: { energy: 0.1, cycle: 0.4, safety: 0.2, cost: 0.25, temp: 0.05 } },
+      { name: 'Home Backup', weights: { energy: 0.15, cycle: 0.2, safety: 0.35, cost: 0.2, temp: 0.1 } },
+      { name: 'Portable Electronics', weights: { energy: 0.5, cycle: 0.1, safety: 0.15, cost: 0.15, temp: 0.1 } },
+      { name: 'Industrial (Extreme Temp)', weights: { energy: 0.1, cycle: 0.2, safety: 0.25, cost: 0.1, temp: 0.35 } },
+      { name: 'Aerospace/Defense', weights: { energy: 0.3, cycle: 0.15, safety: 0.35, cost: 0.05, temp: 0.15 } },
+      { name: 'Forklift/Material Handling', weights: { energy: 0.15, cycle: 0.35, safety: 0.2, cost: 0.2, temp: 0.1 } },
+    ];
+    document.getElementById('bcc-app-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Application</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr></thead><tbody>
+        ${apps.map(app => {
+          const scores = selected.map(id => {
+            const d = data[id];
+            const s = (d.energyDensity / 400 * app.weights.energy + d.cycles / 20000 * app.weights.cycle + safetyMap[d.safety] / 5 * app.weights.safety + (6 - d.cost / 60) / 5 * app.weights.cost + 0.8 * app.weights.temp) * 100;
+            return Math.round(s);
+          });
+          const bestIdx = scores.indexOf(Math.max(...scores));
+          return `<tr><td><strong>${app.name}</strong></td>${scores.map((s, i) => `<td${i === bestIdx ? ' class="it-highlight"' : ''}>${s}/100${i === bestIdx ? ' ★' : ''}</td>`).join('')}</tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Scores are weighted by application priorities. No single chemistry wins all use cases — LFP dominates grid storage, NMC/NCA lead in EVs, LTO excels in extreme conditions.</div>
+    `;
+    document.getElementById('bcc-app-section').style.display = 'block';
+
+    // === Feature 6: Raw Material & Supply Chain ===
+    const materials = {
+      lfp: { key: ['Fe', 'P', 'Li'], cobalt: 0, nickel: 0, abundance: 'High', supplyRisk: 'Low', geographic: 'China (dominant)' },
+      nmc: { key: ['Ni', 'Mn', 'Co', 'Li'], cobalt: 20, nickel: 60, abundance: 'Medium', supplyRisk: 'Medium', geographic: 'DRC (Co), Indonesia (Ni)' },
+      nca: { key: ['Ni', 'Co', 'Al', 'Li'], cobalt: 10, nickel: 80, abundance: 'Medium', supplyRisk: 'Medium', geographic: 'DRC (Co), Indonesia (Ni)' },
+      lco: { key: ['Co', 'Li'], cobalt: 60, nickel: 0, abundance: 'Low', supplyRisk: 'High', geographic: 'DRC (Co)' },
+      lmn: { key: ['Mn', 'Li'], cobalt: 0, nickel: 0, abundance: 'High', supplyRisk: 'Low', geographic: 'South Africa (Mn)' },
+      solid: { key: ['Li', 'Ni', 'Co (varies)'], cobalt: 10, nickel: 50, abundance: 'Medium', supplyRisk: 'Medium', geographic: 'Varies by cathode' },
+      naion: { key: ['Na', 'Hard Carbon'], cobalt: 0, nickel: 0, abundance: 'Very High', supplyRisk: 'Very Low', geographic: 'Ubiquitous (Na)' },
+      lto: { key: ['Ti', 'Li', 'Ni/Mn'], cobalt: 5, nickel: 30, abundance: 'High', supplyRisk: 'Low', geographic: 'Australia (Ti), Global' },
+    };
+    document.getElementById('bcc-materials-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>Key Materials</th><th>Co Content</th><th>Ni Content</th><th>Abundance</th><th>Supply Risk</th><th>Geographic Concentration</th></tr></thead><tbody>
+        ${selected.map(id => {
+          const m = materials[id]; const d = data[id];
+          return `<tr><td><strong>${d.name}</strong></td><td>${m.key.join(', ')}</td><td style="color:${m.cobalt > 30 ? '#dc2626' : m.cobalt > 0 ? '#d97706' : '#059669'};">${m.cobalt > 0 ? m.cobalt + '%' : 'None ✓'}</td><td>${m.nickel > 0 ? m.nickel + '%' : 'None'}</td><td>${m.abundance}</td><td style="color:${m.supplyRisk === 'High' ? '#dc2626' : m.supplyRisk === 'Medium' ? '#d97706' : '#059669'};">${m.supplyRisk}</td><td style="font-size:0.8125rem;">${m.geographic}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Cobalt-free chemistries (LFP, LMO, Na-Ion) eliminate DRC supply chain risks. Na-Ion uses sodium — universally abundant. NMC/NCA rely on nickel and cobalt from geopolitically concentrated sources.</div>
+    `;
+    document.getElementById('bcc-materials-section').style.display = 'block';
+
+    // === Feature 7: Environmental Impact ===
+    const envData = {
+      lfp: { co2: 60, water: 500, recyclability: 'High', recyclableRate: 95, toxicity: 'Low', secondLife: 'Excellent' },
+      nmc: { co2: 100, water: 800, recyclability: 'Medium', recyclableRate: 80, toxicity: 'Medium', secondLife: 'Good' },
+      nca: { co2: 110, water: 850, recyclability: 'Medium', recyclableRate: 80, toxicity: 'Medium', secondLife: 'Good' },
+      lco: { co2: 140, water: 1000, recyclability: 'Medium', recyclableRate: 70, toxicity: 'High', secondLife: 'Poor' },
+      lmn: { co2: 70, water: 550, recyclability: 'High', recyclableRate: 90, toxicity: 'Low', secondLife: 'Good' },
+      solid: { co2: 80, water: 600, recyclability: 'TBD', recyclableRate: 50, toxicity: 'Low', secondLife: 'TBD' },
+      naion: { co2: 40, water: 300, recyclability: 'High', recyclableRate: 90, toxicity: 'Very Low', secondLife: 'Good' },
+      lto: { co2: 90, water: 700, recyclability: 'High', recyclableRate: 95, toxicity: 'Low', secondLife: 'Excellent' },
+    };
+    document.getElementById('bcc-env-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>CO₂ (kg/kWh)</th><th>Water (L/kWh)</th><th>Recyclability</th><th>Recyclable Rate</th><th>Toxicity</th><th>Second-Life</th></tr></thead><tbody>
+        ${selected.map(id => {
+          const e = envData[id]; const d = data[id];
+          return `<tr><td><strong>${d.name}</strong></td><td>${e.co2}</td><td>${e.water}</td><td>${e.recyclability}</td><td>${e.recyclableRate}%</td><td style="color:${e.toxicity === 'High' ? '#dc2626' : e.toxicity === 'Medium' ? '#d97706' : '#059669'};">${e.toxicity}</td><td>${e.secondLife}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-good" style="margin-top:0.5rem;">Na-Ion has the lowest carbon footprint (40 kg CO₂/kWh). LFP and LTO are highly recyclable (>95%). Cobalt-containing chemistries (LCO, NMC) have higher environmental impact due to mining practices. Second-life applications extend useful life by 5-10 years.</div>
+    `;
+    document.getElementById('bcc-env-section').style.display = 'block';
+
+    // === Feature 8: Performance at Temperature Extremes ===
+    const tempTests = [-30, -10, 0, 25, 45, 60];
+    document.getElementById('bcc-temp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Temp (°C)</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr></thead><tbody>
+        ${tempTests.map(t => {
+          return `<tr><td><strong>${t}°C</strong></td>${selected.map(id => {
+            const d = data[id];
+            const [minT, maxT] = d.tempRange.split(' to ').map(v => parseInt(v));
+            const inRange = t >= minT && t <= maxT;
+            let perf;
+            if (!inRange) perf = '<span style="color:#dc2626;">Out of range</span>';
+            else if (t < 0) perf = `<span style="color:${d.id === 'lto' || id === 'naion' || id === 'solid' ? '#059669' : '#d97706'};">${id === 'lto' ? '95%' : id === 'naion' ? '88%' : id === 'solid' ? '90%' : '60-70%'}</span>`;
+            else if (t > 45) perf = `<span style="color:${d.thermal > 250 ? '#059669' : '#d97706'};">${d.thermal > 250 ? '85%' : '70%'}</span>`;
+            else perf = '<span style="color:#059669;">100% (nominal)</span>';
+            return `<td>${perf}</td>`;
+          }).join('')}</tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">LTO operates from -40°C to 60°C with minimal degradation. Na-Ion and solid-state perform well at low temperatures. LCO and NCA suffer significant capacity loss below 0°C. High temperatures accelerate aging in all chemistries, but LFP/LTO are most resistant.</div>
+    `;
+    document.getElementById('bcc-temp-section').style.display = 'block';
+
+    // === Feature 9: Weighted Score Ranking ===
+    const weights = {
+      balanced: { energy: 0.2, cycle: 0.2, safety: 0.2, cost: 0.2, temp: 0.1, density: 0.1 },
+      energy: { energy: 0.4, cycle: 0.1, safety: 0.15, cost: 0.1, temp: 0.1, density: 0.15 },
+      cycle: { energy: 0.1, cycle: 0.4, safety: 0.2, cost: 0.15, temp: 0.1, density: 0.05 },
+      safety: { energy: 0.1, cycle: 0.15, safety: 0.4, cost: 0.1, temp: 0.15, density: 0.1 },
+      cost: { energy: 0.1, cycle: 0.2, safety: 0.15, cost: 0.4, temp: 0.1, density: 0.05 },
+      temp: { energy: 0.1, cycle: 0.15, safety: 0.2, cost: 0.1, temp: 0.35, density: 0.1 },
+    };
+    const w = weights[priority] || weights.balanced;
+    const scores = selected.map(id => {
+      const d = data[id];
+      const score = (d.specificEnergy / 350 * w.energy + d.cycles / 20000 * w.cycle + safetyMap[d.safety] / 5 * w.safety + (6 - d.cost / 60) / 5 * w.cost + 0.8 * w.temp + d.energyDensity / 400 * w.density) * 100;
+      return { id, name: d.name, score: Math.round(score) };
+    }).sort((a, b) => b.score - a.score);
+    document.getElementById('bcc-score-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Rank</th><th>Chemistry</th><th>Score</th><th>Bar</th></tr></thead><tbody>
+        ${scores.map((s, i) => {
+          const barW = (s.score / scores[0].score * 100).toFixed(0);
+          const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}.`;
+          return `<tr><td style="font-size:1.25rem;">${medal}</td><td><strong>${s.name}</strong></td><td class="it-highlight">${s.score}/100</td><td><div style="background:#ebedf5;border-radius:var(--tl-radius-sm);height:16px;width:100%;"><div style="background:${i === 0 ? '#059669' : i === 1 ? '#06b6d4' : '#d97706'};height:16px;border-radius:var(--tl-radius-sm);width:${barW}%;"></div></div></td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-good" style="margin-top:0.5rem;">Based on your priority (${document.querySelector('#bcc-priority option:checked').text}), <strong>${scores[0].name}</strong> is the best choice with a score of ${scores[0].score}/100. ${scores[0].id === 'lfp' ? 'LFP offers the best balance of safety, longevity, and cost.' : scores[0].id === 'nmc' || scores[0].id === 'nca' ? 'High energy density makes this ideal for space-constrained applications.' : scores[0].id === 'lto' ? 'LTO excels in extreme conditions and ultra-long cycle life.' : scores[0].id === 'naion' ? 'Na-Ion offers compelling economics with good safety.' : ''}</div>
+    `;
+    document.getElementById('bcc-score-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('bcc-export').style.display = 'inline-flex';
+    document.getElementById('bcc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), priority, selected: selected.map(id => ({ ...data[id], materials: materials[id], environmental: envData[id], weightedScore: scores.find(s => s.id === id) })), ranking: scores };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'battery-chemistry-comparison.json'; a.click();
+    };
+  }
+
+  document.getElementById('bcc-compare').addEventListener('click', compare);
+  document.getElementById('bcc-reset').addEventListener('click', () => {
+    document.getElementById('bcc-results').classList.remove('show');
+    document.querySelectorAll('#bcc-chemistries .it-checkbox-item').forEach(el => { el.classList.remove('active'); el.querySelector('input').checked = false; });
+    ['lfp', 'nmc', 'solid'].forEach(id => { const el = document.querySelector(`[data-chem="${id}"]`); if (el) toggle(el); });
+  });
+})();
+</script>

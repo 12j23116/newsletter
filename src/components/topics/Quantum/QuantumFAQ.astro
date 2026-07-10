@@ -1,0 +1,20 @@
+---
+import { quantumContent as c } from '../../../data/topics/Quantum/quantum-content';
+---
+<section class="qm-section qm-section-alt">
+  <div class="qm-container">
+    <div class="qm-section-head">
+      <span class="qm-eyebrow">FAQ</span>
+      <h2 class="qm-section-title">Quantum Computing — Frequently Asked Questions</h2>
+      <p class="qm-section-sub">Answers to the most searched questions about quantum computing, error correction, and post-quantum cryptography.</p>
+    </div>
+    <div class="qm-faq-list">
+      {c.faqs.map((faq) => (
+        <details class="qm-faq-item">
+          <summary>{faq.q}</summary>
+          <div class="qm-faq-answer">{faq.a}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

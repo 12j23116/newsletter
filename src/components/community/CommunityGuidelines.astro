@@ -1,0 +1,41 @@
+---
+/**
+ * CommunityGuidelines — Community rules and guidelines section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const guidelines = [
+  { icon: 'M9 12l2 2 4-4', title: 'Be Respectful', desc: 'Disagree with ideas, not people. Personal attacks, harassment, and hate speech are not tolerated. We ban offenders.' },
+  { icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z', title: 'Cite Your Sources', desc: 'If you make a factual claim, link to a credible source. Peer-reviewed papers, official docs, and reputable news only.' },
+  { icon: 'M12 3v18M3 12h18', title: 'Stay On-Topic', desc: 'Posts should relate to the 12 technology topics we cover. Off-topic posts belong in the general channel.' },
+  { icon: 'M2 12h20M12 2v20', title: 'No Self-Promotion Spam', desc: 'Sharing your own work is welcome if it adds value. Repeated low-effort self-promotion will be removed.' },
+  { icon: 'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 108 0 4 4 0 00-8 0z', title: 'Help Others Learn', desc: 'Answer questions patiently. Everyone starts somewhere. If you know something, share it.' },
+  { icon: 'M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Keep It Fresh', desc: 'Check if a topic has been discussed before posting. Bump existing threads instead of creating duplicates.' },
+];
+---
+
+<section class="community-guidelines-section">
+  <div class="community-container">
+    <div class="community-section-head">
+      <span class="community-eyebrow">House Rules</span>
+      <h2 class="community-section-title">Community Guidelines</h2>
+      <p class="community-section-sub">
+        Six simple rules that keep our community healthy, productive, and welcoming for
+        everyone — from first-time visitors to seasoned researchers.
+      </p>
+    </div>
+
+    <div class="community-guidelines-grid">
+      {guidelines.map((g) => (
+        <div class="community-guideline-card">
+          <div class="community-guideline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d={g.icon} />
+            </svg>
+          </div>
+          <h3 class="community-guideline-title">{g.title}</h3>
+          <p class="community-guideline-desc">{g.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

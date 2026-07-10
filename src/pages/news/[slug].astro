@@ -1,0 +1,378 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './news-page.css';
+import { allNewsItems as newsItems, newsTopics, type NewsItem, type NewsSection } from '../../data/news/news-content';
+
+export function getStaticPaths() {
+  return newsItems.map((item: NewsItem) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props { item: NewsItem; }
+const { item } = Astro.props as Props;
+const topicMeta = newsTopics.find((t) => t.id === item.topic);
+
+const formatDate = (dateStr: string) => {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+};
+const formattedDate = formatDate(item.date);
+const daysSince = Math.floor((Date.now() - new Date(item.date).getTime()) / 86400000);
+const isBreaking = daysSince <= 3;
+
+const relatedNews = newsItems.filter((n) => n.slug !== item.slug && n.topic === item.topic).slice(0, 3);
+const crossTopicNews = newsItems.filter((n) => n.slug !== item.slug && n.topic !== item.topic).slice(0, 4);
+const pollTotal = item.poll?.options.reduce((sum, o) => sum + o.votes, 0) || 0;
+
+const bodySections: NewsSection[] = item.body ?? [
+  { type: 'h2', text: 'The Development' },
+  { type: 'p', text: `${item.excerpt} This news marks an important moment in the ${topicMeta?.label || item.topicLabel} field, where rapid innovation continues to reshape what's possible.` },
+  { type: 'p', text: `${topicMeta?.desc || ''} The breakthrough highlighted in this report underscores the pace of progress and the growing investment flowing into emerging technology sectors.` },
+  { type: 'h2', text: 'Why It Matters' },
+  { type: 'p', text: `For professionals, investors, and enthusiasts tracking ${item.topicLabel}, this development signals where the field is heading next. The implications extend beyond the immediate announcement.` },
+];
+---
+
+<BaseLayout title={item.metaTitle || item.title} description={item.metaDescription || item.excerpt} type="news" image={item.img} keywords={item.keywords || `${item.topicLabel}, emerging tech news`} publishedDate={item.date} section={item.topicLabel}>
+  <article class="na-news na-article" data-topic={item.topic} style={`--cat-color: ${item.topicColor};`}>
+    <div class="na-progress-track"><div class="na-progress-bar" id="na-progress-bar" style={`background: ${item.topicColor};`}></div></div>
+
+    <header class="na-hero">
+      <div class="na-hero-bg">
+        <img src={item.img} alt={item.title} loading="eager" class="na-hero-img" />
+        <div class="na-hero-overlay"></div>
+      </div>
+      <div class="na-hero-content">
+        <a href="/news" class="na-back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to News
+        </a>
+        <div class="na-hero-meta">
+          {isBreaking && <span class="na-breaking-badge">⚡ Breaking</span>}
+          <span class="na-topic-badge" style={`background: ${item.topicColor};`}>{item.topicLabel}</span>
+          <span class="na-read-time">{item.readTime} read</span>
+        </div>
+        <h1 class="na-hero-title">{item.title}</h1>
+        <p class="na-hero-subtitle">{item.excerpt}</p>
+        <div class="na-hero-info">
+          <span class="na-hero-info-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            {formattedDate}
+          </span>
+          <span class="na-hero-info-item">By {item.source}</span>
+        </div>
+      </div>
+    </header>
+
+    {item.stats && item.stats.length > 0 && (
+      <div class="na-stats-bar">
+        {item.stats.map((stat) => (
+          <div class="na-stat-card" data-reveal>
+            <span class="na-stat-value" style={`color: ${item.topicColor};`}>{stat.value}</span>
+            <span class="na-stat-label">{stat.label}</span>
+            {stat.change && <span class="na-stat-label" style="color: var(--na-text-dim); margin-top: 2px;">{stat.change}</span>}
+          </div>
+        ))}
+      </div>
+    )}
+
+    <div class="na-body">
+      <div class="na-content">
+        {item.takeaways && item.takeaways.length > 0 && (
+          <div class="na-takeaways" data-reveal>
+            <h2 class="na-takeaways-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Key Takeaways
+            </h2>
+            <ul class="na-takeaways-list">
+              {item.takeaways.map((t) => <li class="na-takeaway-item">{t}</li>)}
+            </ul>
+          </div>
+        )}
+
+        {bodySections.map((s) => (
+          s.type === 'h2' ? <h2 class="na-section-h2" data-reveal>{s.text}</h2> :
+          s.type === 'h3' ? <h3 class="na-section-h3" data-reveal>{s.text}</h3> :
+          s.type === 'p' ? <p class="na-section-p" data-reveal>{s.text}</p> :
+          s.type === 'ul' ? <ul class="na-section-ul" data-reveal>{s.items?.map((li) => <li>{li}</li>)}</ul> :
+          s.type === 'ol' ? <ol class="na-section-ol" data-reveal>{s.items?.map((li) => <li>{li}</li>)}</ol> :
+          s.type === 'callout' ? (
+            <div class={`na-callout na-callout-${s.variant || 'info'}`} data-reveal>
+              {s.title && <div class="na-callout-title">{s.title}</div>}
+              <div class="na-callout-text">{s.text}</div>
+            </div>
+          ) :
+          s.type === 'quote' ? (
+            <blockquote class="na-pullquote" data-reveal>
+              <p>{s.text}</p>
+              {s.author && <div class="na-pullquote-attr"><span class="na-pullquote-author">{s.author}</span></div>}
+            </blockquote>
+          ) :
+          s.type === 'image' ? (
+            <figure class="na-section-figure" data-reveal>
+              {s.src && <img src={s.src} alt={s.caption || ''} loading="lazy" />}
+              {s.caption && <figcaption>{s.caption}</figcaption>}
+            </figure>
+          ) : null
+        ))}
+
+        {item.pullQuote && (
+          <blockquote class="na-pullquote" data-reveal>
+            <p>"{item.pullQuote.text}"</p>
+            <div class="na-pullquote-attr">
+              <span class="na-pullquote-author">{item.pullQuote.author}</span>
+              <span class="na-pullquote-role">{item.pullQuote.role}</span>
+            </div>
+          </blockquote>
+        )}
+
+        {item.impactCards && item.impactCards.length > 0 && (
+          <div class="na-impact-grid" data-reveal>
+            {item.impactCards.map((c) => (
+              <div class="na-impact-card">
+                <div class="na-impact-icon">{c.icon}</div>
+                <h3 class="na-impact-title">{c.title}</h3>
+                <p class="na-impact-text">{c.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {item.timeline && item.timeline.length > 0 && (
+          <div data-reveal>
+            <h2 class="na-section-h2">Development Timeline</h2>
+            <div class="na-timeline">
+              {item.timeline.map((tl) => (
+                <div class={`na-timeline-item ${tl.current ? 'na-timeline-current' : ''}`}>
+                  <div class="na-timeline-dot" style={tl.current ? `background: ${item.topicColor}; box-shadow: 0 0 12px ${item.topicColor};` : ''}></div>
+                  <div class="na-timeline-content">
+                    <span class="na-timeline-date">{tl.date}</span>
+                    <span class="na-timeline-event">{tl.event}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {item.faqs && item.faqs.length > 0 && (
+          <div class="na-faq-section" data-reveal>
+            <h2 class="na-section-h2">Frequently Asked Questions</h2>
+            <div class="na-faq-list">
+              {item.faqs.map((f) => (
+                <details class="na-faq-item">
+                  <summary class="na-faq-q">{f.q}</summary>
+                  <div class="na-faq-a">{f.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {item.tags && item.tags.length > 0 && (
+          <div class="na-tags" data-reveal>
+            {item.tags.map((t) => <span class="na-tag">#{t}</span>)}
+          </div>
+        )}
+
+        <div class="na-font-toggle" data-reveal>
+          <span class="na-font-toggle-label">Text Size</span>
+          <div class="na-font-btns">
+            <button class="na-font-btn" data-size="small">A</button>
+            <button class="na-font-btn na-font-active" data-size="medium">A</button>
+            <button class="na-font-btn" data-size="large">A</button>
+          </div>
+        </div>
+
+        <div class="na-share" data-reveal>
+          <span class="na-share-label">Share this article</span>
+          <div class="na-share-buttons">
+            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(item.title)}&url=${encodeURIComponent(Astro.url.href)}`} class="na-share-btn na-share-twitter" target="_blank" rel="noopener" aria-label="Share on Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`} class="na-share-btn na-share-linkedin" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+            <a href={`https://www.reddit.com/submit?url=${encodeURIComponent(Astro.url.href)}&title=${encodeURIComponent(item.title)}`} class="na-share-btn na-share-reddit" target="_blank" rel="noopener" aria-label="Share on Reddit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 01-2.498.056l-2.607-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.749.781 1.749 1.75 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 01.042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 014.028 12c0-.968.781-1.75 1.75-1.75.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-3.963a.337.337 0 01.37-.261l2.81.595a1.25 1.25 0 011.216-.93z"/></svg>
+            </a>
+            <button class="na-share-btn" id="na-copy-link" aria-label="Copy link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="na-feedback" data-reveal>
+          <span class="na-feedback-label">Was this article helpful?</span>
+          <div class="na-feedback-btns">
+            <button class="na-feedback-btn" data-feedback="yes">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H7"/></svg>
+              Yes
+            </button>
+            <button class="na-feedback-btn" data-feedback="no">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V2"/><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H17"/></svg>
+              No
+            </button>
+          </div>
+          <span class="na-feedback-result" id="na-feedback-result">Thanks for your feedback!</span>
+        </div>
+
+        {item.poll && (
+          <div class="na-poll-section" data-reveal>
+            <h2 class="na-section-h2">Quick Poll</h2>
+            <div class="na-poll" id="na-poll">
+              <p class="na-poll-question">{item.poll.question}</p>
+              <div class="na-poll-options">
+                {item.poll.options.map((opt, idx) => {
+                  const pct = pollTotal > 0 ? Math.round((opt.votes / pollTotal) * 100) : 0;
+                  return (
+                    <button class="na-poll-option" data-poll-idx={idx}>
+                      <span class="na-poll-text">{opt.text}</span>
+                      <span class="na-poll-bar"><span class="na-poll-bar-fill" style={`background: ${item.topicColor}; width: 0%;`}></span></span>
+                      <span class="na-poll-pct">{pct}%</span>
+                    </button>
+                  );
+                })}
+              </div>
+              <span class="na-poll-total" style="display:none;">{pollTotal.toLocaleString()} total votes</span>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+
+    {crossTopicNews.length > 0 && (
+      <div class="na-trending-cross">
+        <h2 class="na-section-h2" style="text-align: center; margin-bottom: 20px;">Trending Across Other Frontiers</h2>
+        <div class="na-trending-cross-grid">
+          {crossTopicNews.map((n) => (
+            <a href={`/news/${n.slug}`} class="na-trending-cross-card">
+              <div class="na-trending-cross-img">
+                <img src={n.img} alt={n.title} loading="lazy" />
+                <div class="na-related-image-overlay"></div>
+              </div>
+              <div class="na-trending-cross-body">
+                <span class="na-trending-cross-badge" style={`color: ${n.topicColor};`}>{n.topicLabel}</span>
+                <h3 class="na-trending-cross-title">{n.title}</h3>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {relatedNews.length > 0 && (
+      <div class="na-related">
+        <h2 class="na-related-title">More in {item.topicLabel}</h2>
+        <div class="na-related-grid">
+          {relatedNews.map((n) => (
+            <a href={`/news/${n.slug}`} class="na-related-card">
+              <div class="na-related-image">
+                <img src={n.img} alt={n.title} loading="lazy" />
+              </div>
+              <div class="na-related-body">
+                <span class="na-related-badge" style={`background: ${n.topicColor};`}>{n.topicLabel}</span>
+                <h3 class="na-related-card-title">{n.title}</h3>
+                <p class="na-related-card-excerpt">{n.excerpt}</p>
+                <div class="na-related-card-meta">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  {formatDate(n.date)} · {n.readTime}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="na-newsletter">
+      <div class="na-newsletter-inner">
+        <div class="na-newsletter-glow" style={`background: radial-gradient(ellipse, ${item.topicColor}20, transparent 70%);`}></div>
+        <h2 class="na-newsletter-title">Stay on the Frontier</h2>
+        <p class="na-newsletter-text">Get the latest breakthroughs in {item.topicLabel} and 11 other emerging tech fields delivered to your inbox weekly.</p>
+        <form class="na-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('.na-newsletter-btn').textContent='Subscribed ✓';">
+          <input type="email" placeholder="your@email.com" class="na-newsletter-input" required />
+          <button type="submit" class="na-newsletter-btn" style={`background: ${item.topicColor};`}>Subscribe</button>
+        </form>
+        <div class="na-newsletter-pills">
+          <span class="na-newsletter-pill">No spam</span>
+          <span class="na-newsletter-pill">Weekly digest</span>
+          <span class="na-newsletter-pill">Unsubscribe anytime</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="na-progress-pct" id="na-progress-pct" style={`color: ${item.topicColor};`}>0%</div>
+  </article>
+
+  <script>
+    // Scroll progress + back-to-top
+    const progressBar = document.getElementById('na-progress-bar');
+    const progressPct = document.getElementById('na-progress-pct');
+    function updateProgress() {
+      const st = window.scrollY, dh = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = Math.min(100, Math.max(0, (st / dh) * 100));
+      if (progressBar) progressBar.style.width = pct + '%';
+      if (progressPct) progressPct.textContent = Math.round(pct) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('na-revealed'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach((el) => obs.observe(el));
+    setTimeout(() => document.querySelectorAll('[data-reveal]:not(.na-revealed)').forEach((el) => el.classList.add('na-revealed')), 3000);
+
+    // Font size toggle
+    const fontBtns = document.querySelectorAll('.na-font-btn');
+    const contentEl = document.querySelector('.na-content');
+    fontBtns.forEach((btn) => btn.addEventListener('click', () => {
+      fontBtns.forEach((b) => b.classList.remove('na-font-active'));
+      btn.classList.add('na-font-active');
+      const sz = btn.dataset.size;
+      if (contentEl) contentEl.style.setProperty('--na-p-size', sz === 'small' ? '0.9375rem' : sz === 'large' ? '1.1875rem' : '1.0625rem');
+    }));
+
+    // Copy link
+    const copyBtn = document.getElementById('na-copy-link');
+    if (copyBtn) copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        const orig = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        setTimeout(() => copyBtn.innerHTML = orig, 2000);
+      } catch (e) {}
+    });
+
+    // Feedback
+    const fbBtns = document.querySelectorAll('.na-feedback-btn');
+    const fbResult = document.getElementById('na-feedback-result');
+    fbBtns.forEach((btn) => btn.addEventListener('click', () => {
+      fbBtns.forEach((b) => b.disabled = true);
+      if (fbResult) fbResult.classList.add('na-feedback-show');
+    }));
+
+    // Poll
+    const poll = document.getElementById('na-poll');
+    if (poll) {
+      const pollOpts = poll.querySelectorAll('.na-poll-option');
+      const pollTotalEl = poll.querySelector('.na-poll-total');
+      pollOpts.forEach((opt) => opt.addEventListener('click', () => {
+        if (poll.classList.contains('na-poll-answered')) return;
+        poll.classList.add('na-poll-answered');
+        pollOpts.forEach((o) => {
+          o.classList.add('na-poll-selected');
+          o.disabled = true;
+          const fill = o.querySelector('.na-poll-bar-fill');
+          const pct = o.querySelector('.na-poll-pct');
+          if (fill) fill.style.width = pct?.textContent || '0%';
+        });
+        if (pollTotalEl) pollTotalEl.style.display = 'block';
+      }));
+    }
+  </script>
+</BaseLayout>

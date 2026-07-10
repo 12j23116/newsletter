@@ -1,0 +1,24 @@
+---
+import { spaceContent as c } from '../../../data/topics/Space/space-content';
+---
+<section class="sp-section sp-section-alt">
+  <div class="container">
+    <div class="sp-section-head sp-section-head-center">
+      <span class="sp-eyebrow">Emerging Trends</span>
+      <h2 class="sp-section-title">Space Technology Trends to Watch</h2>
+      <p class="sp-section-subtitle">From AI-powered satellites to orbital data centers, these are the trends shaping the next decade of space exploration and commercialization.</p>
+    </div>
+    <div class="sp-trends-grid">
+      {c.trends.map((t) => (
+        <div class="sp-trend-card" style={`--trend-color: ${t.color}`}>
+          <div class="sp-trend-body">
+            <span class="sp-trend-tag">{t.tag}</span>
+            <h3 class="sp-trend-title">{t.title}</h3>
+            <p class="sp-trend-desc">{t.description}</p>
+            <span class="sp-trend-arrow">Learn more →</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

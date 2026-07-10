@@ -1,0 +1,139 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-header">
+    <div class="tool-header-icon">🗃️</div>
+    <div>
+      <h3 class="tool-header-title">Vector DB Selector</h3>
+      <p class="tool-header-desc">Find the best vector database for your RAG workload</p>
+    </div>
+  </div>
+
+  <div class="tool-grid">
+    <div class="tool-card">
+      <p class="tool-card-title">Your Requirements</p>
+      <div class="tool-field">
+        <label class="tool-label">Total vectors</label>
+        <select class="tool-select" id="vd-vectors">
+          <option value="small">&lt; 1M vectors</option>
+          <option value="medium" selected>1M – 100M vectors</option>
+          <option value="large">100M – 1B vectors</option>
+          <option value="xl">1B+ vectors</option>
+        </select>
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Queries per second</label>
+        <select class="tool-select" id="vd-qps">
+          <option value="low">&lt; 100 QPS</option>
+          <option value="medium" selected>100 – 1K QPS</option>
+          <option value="high">1K – 10K QPS</option>
+          <option value="very-high">10K+ QPS</option>
+        </select>
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Latency requirement</label>
+        <select class="tool-select" id="vd-latency">
+          <option value="relaxed">&lt; 100ms (relaxed)</option>
+          <option value="standard" selected>&lt; 50ms (standard)</option>
+          <option value="strict">&lt; 20ms (strict)</option>
+          <option value="ultra">&lt; 10ms (ultra-low)</option>
+        </select>
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Budget</label>
+        <select class="tool-select" id="vd-budget">
+          <option value="free">Free / self-hosted only</option>
+          <option value="low" selected>Low ($0–500/mo)</option>
+          <option value="medium">Medium ($500–5K/mo)</option>
+          <option value="enterprise">Enterprise ($5K+/mo)</option>
+        </select>
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Hosting preference</label>
+        <select class="tool-select" id="vd-hosting">
+          <option value="any" selected>Any</option>
+          <option value="managed">Managed cloud only</option>
+          <option value="self">Self-hosted only</option>
+        </select>
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Hybrid search (keyword + vector)?</label>
+        <select class="tool-select" id="vd-hybrid">
+          <option value="yes">Yes, needed</option>
+          <option value="no" selected>No, vector only</option>
+        </select>
+      </div>
+      <button class="tool-btn" id="vd-calc-btn" style="width:100%">Get Recommendations</button>
+    </div>
+
+    <div class="tool-output" id="vd-results"></div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const dbs = [
+    { name: 'Pinecone', scores: { small: 3, medium: 3, large: 3, xl: 2 }, qps: { low: 3, medium: 3, high: 3, 'very-high': 2 }, latency: { relaxed: 3, standard: 3, strict: 3, ultra: 2 }, budget: { free: 0, low: 1, medium: 2, enterprise: 3 }, hosting: { any: 3, managed: 3, self: 0 }, hybrid: { yes: 3, no: 3 }, managed: true, selfHost: false, note: 'Fully managed, serverless option, good for fast deployment' },
+    { name: 'Weaviate', scores: { small: 3, medium: 3, large: 2, xl: 1 }, qps: { low: 3, medium: 3, high: 2, 'very-high': 1 }, latency: { relaxed: 3, standard: 2, strict: 2, ultra: 1 }, budget: { free: 2, low: 2, medium: 3, enterprise: 3 }, hosting: { any: 3, managed: 3, self: 3 }, hybrid: { yes: 3, no: 3 }, managed: true, selfHost: true, note: 'Open-source, hybrid search, GraphQL API' },
+    { name: 'Qdrant', scores: { small: 3, medium: 3, large: 3, xl: 2 }, qps: { low: 3, medium: 3, high: 3, 'very-high': 2 }, latency: { relaxed: 3, standard: 3, strict: 3, ultra: 2 }, budget: { free: 3, low: 3, medium: 3, enterprise: 2 }, hosting: { any: 3, managed: 2, self: 3 }, hybrid: { yes: 2, no: 3 }, managed: true, selfHost: true, note: 'Rust-based, fast filtering, generous free tier' },
+    { name: 'Milvus', scores: { small: 2, medium: 3, large: 3, xl: 3 }, qps: { low: 2, medium: 3, high: 3, 'very-high': 3 }, latency: { relaxed: 3, standard: 2, strict: 2, ultra: 1 }, budget: { free: 3, low: 3, medium: 2, enterprise: 3 }, hosting: { any: 3, managed: 1, self: 3 }, hybrid: { yes: 2, no: 3 }, managed: false, selfHost: true, note: 'Scales to billions, best for large deployments' },
+    { name: 'Chroma', scores: { small: 3, medium: 2, large: 1, xl: 0 }, qps: { low: 3, medium: 2, high: 1, 'very-high': 0 }, latency: { relaxed: 3, standard: 3, strict: 2, ultra: 1 }, budget: { free: 3, low: 3, medium: 1, enterprise: 0 }, hosting: { any: 3, managed: 0, self: 3 }, hybrid: { yes: 2, no: 3 }, managed: false, selfHost: true, note: 'Lightweight, great for prototyping and small projects' },
+    { name: 'pgvector', scores: { small: 3, medium: 3, large: 2, xl: 1 }, qps: { low: 3, medium: 2, high: 2, 'very-high': 1 }, latency: { relaxed: 3, standard: 2, strict: 2, ultra: 1 }, budget: { free: 3, low: 3, medium: 2, enterprise: 2 }, hosting: { any: 3, managed: 2, self: 3 }, hybrid: { yes: 3, no: 3 }, managed: false, selfHost: true, note: 'PostgreSQL extension, leverages existing DB infrastructure' },
+    { name: 'Elasticsearch', scores: { small: 2, medium: 3, large: 3, xl: 3 }, qps: { low: 3, medium: 3, high: 3, 'very-high': 3 }, latency: { relaxed: 3, standard: 3, strict: 2, ultra: 1 }, budget: { free: 2, low: 1, medium: 2, enterprise: 3 }, hosting: { any: 3, managed: 2, self: 3 }, hybrid: { yes: 3, no: 2 }, managed: true, selfHost: true, note: 'Enterprise-grade, excellent hybrid search, complex setup' },
+  ];
+
+  function calc() {
+    const vectors = document.getElementById('vd-vectors')?.value || 'medium';
+    const qps = document.getElementById('vd-qps')?.value || 'medium';
+    const latency = document.getElementById('vd-latency')?.value || 'standard';
+    const budget = document.getElementById('vd-budget')?.value || 'low';
+    const hosting = document.getElementById('vd-hosting')?.value || 'any';
+    const hybrid = document.getElementById('vd-hybrid')?.value || 'no';
+
+    const results = dbs.map(db => {
+      let score = 0;
+      score += db.scores[vectors] || 0;
+      score += db.qps[qps] || 0;
+      score += db.latency[latency] || 0;
+      score += db.budget[budget] || 0;
+      score += db.hosting[hosting] || 0;
+      score += db.hybrid[hybrid] || 0;
+      return { ...db, totalScore: score, maxScore: 18 };
+    }).filter(r => r.totalScore > 0).sort((a, b) => b.totalScore - a.totalScore);
+
+    const container = document.getElementById('vd-results');
+    if (!container) return;
+
+    let html = '<div class="tool-comparison">';
+    results.slice(0, 4).forEach((r, i) => {
+      const pct = Math.round((r.totalScore / r.maxScore) * 100);
+      const badge = pct >= 80 ? 'good' : pct >= 60 ? 'info' : 'warn';
+      html += `<div class="tool-comparison-card ${i === 0 ? 'best' : ''}">
+        <div class="tool-comparison-name">${r.name}</div>
+        <div class="tool-comparison-value">${pct}%</div>
+        <div class="tool-comparison-unit">match score</div>
+        <span class="tool-badge tool-badge-${badge}" style="margin-top:0.5rem">${i === 0 ? 'BEST MATCH' : '#' + (i + 1)}</span>
+        <div class="tool-comparison-meta">${r.note}</div>
+      </div>`;
+    });
+    html += '</div>';
+
+    if (results.length > 0) {
+      html += `<div class="tool-section-title">Top Recommendation: ${results[0].name}</div>`;
+      html += `<div class="tool-result-row"><span class="tool-result-label">Match score</span><span class="tool-result-value tool-result-value-accent">${Math.round(results[0].totalScore / results[0].maxScore * 100)}%</span></div>`;
+      html += `<div class="tool-result-row"><span class="tool-result-label">Managed cloud</span><span class="tool-result-value">${results[0].managed ? '✅ Yes' : '❌ No'}</span></div>`;
+      html += `<div class="tool-result-row"><span class="tool-result-label">Self-hosted</span><span class="tool-result-value">${results[0].selfHost ? '✅ Yes' : '❌ No'}</span></div>`;
+      html += `<div class="tool-result-row"><span class="tool-result-label">Hybrid search</span><span class="tool-result-value">${results[0].hybrid[hybrid] >= 2 ? '✅ Supported' : '⚠️ Limited'}</span></div>`;
+    }
+
+    container.innerHTML = html;
+  }
+
+  document.getElementById('vd-calc-btn')?.addEventListener('click', calc);
+  calc();
+})();
+</script>

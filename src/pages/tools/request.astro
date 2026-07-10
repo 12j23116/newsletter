@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './tools-styles.css';
+import { tooltopics } from '../../data/tools/tools-content';
+
+const title = 'Request a Tool — TechNanoAI';
+const description = 'Recommend a tool to be added to our emerging technology tools catalog. Suggest frameworks, platforms, simulators, SDKs, and more across 12 technology frontiers.';
+---
+
+<BaseLayout title={title} description={description} keywords="request a tool, suggest tool, tech tool recommendation, AI tool request, cybersecurity tool request, quantum tool request, emerging technology tools, tool suggestion form">
+  <div class="tl-page">
+    <section class="tl-request-hero">
+      <div class="tl-hero-bg">
+        <div class="tl-hero-grid"></div>
+        <div class="tl-hero-beam tl-hero-beam-1"></div>
+        <div class="tl-hero-beam tl-hero-beam-2"></div>
+        <div class="tl-hero-orb tl-hero-orb-1"></div>
+        <div class="tl-hero-orb tl-hero-orb-2"></div>
+      </div>
+      <div class="tl-hero-inner">
+        <span class="tl-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+          Tool Recommendation
+        </span>
+        <h1 class="tl-hero-title">
+          Request a <span class="tl-grad">Tool</span>
+        </h1>
+        <p class="tl-hero-sub">
+          Know a tool that should be in our catalog? Suggest it here. We review every submission
+          and add the best tools for emerging technology to our collection.
+        </p>
+        <div class="tl-hero-actions">
+          <a href="/tools" class="tl-btn tl-btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Tools
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tl-request-form-section">
+      <div class="tl-request-form-wrap">
+        <form id="tl-request-form" class="tl-request-form" novalidate>
+          <div class="tl-form-group">
+            <label for="tool-name" class="tl-form-label">Tool Name <span class="tl-req">*</span></label>
+            <input type="text" id="tool-name" name="tool-name" class="tl-form-input" placeholder="e.g. TensorFlow, Burp Suite, GMAT..." required />
+          </div>
+
+          <div class="tl-form-row">
+            <div class="tl-form-group">
+              <label for="tool-url" class="tl-form-label">Official URL <span class="tl-req">*</span></label>
+              <input type="url" id="tool-url" name="tool-url" class="tl-form-input" placeholder="https://..." required />
+            </div>
+            <div class="tl-form-group">
+              <label for="tool-topic" class="tl-form-label">Topic <span class="tl-req">*</span></label>
+              <select id="tool-topic" name="tool-topic" class="tl-form-select" required>
+                <option value="">Select a topic...</option>
+                {tooltopics.map((t) => (
+                  <option value={t.name}>{t.name}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div class="tl-form-row">
+            <div class="tl-form-group">
+              <label for="tool-type" class="tl-form-label">Tool Type</label>
+              <select id="tool-type" name="tool-type" class="tl-form-select">
+                <option value="">Select type (optional)...</option>
+                <option value="Framework">Framework</option>
+                <option value="Platform">Platform</option>
+                <option value="Simulator">Simulator</option>
+                <option value="Analyzer">Analyzer</option>
+                <option value="Toolkit">Toolkit</option>
+                <option value="SDK">SDK</option>
+                <option value="Dashboard">Dashboard</option>
+              </select>
+            </div>
+            <div class="tl-form-group">
+              <label for="tool-license" class="tl-form-label">License</label>
+              <select id="tool-license" name="tool-license" class="tl-form-select">
+                <option value="">Select license (optional)...</option>
+                <option value="Open Source">Open Source</option>
+                <option value="Free">Free</option>
+                <option value="Freemium">Freemium</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Enterprise">Enterprise</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="tl-form-group">
+            <label for="tool-description" class="tl-form-label">Description <span class="tl-req">*</span></label>
+            <textarea id="tool-description" name="tool-description" class="tl-form-textarea" rows="4" placeholder="Briefly describe what the tool does and why it's useful..." required></textarea>
+          </div>
+
+          <div class="tl-form-group">
+            <label for="tool-reason" class="tl-form-label">Why should we add it? <span class="tl-req">*</span></label>
+            <textarea id="tool-reason" name="tool-reason" class="tl-form-textarea" rows="3" placeholder="Explain why this tool belongs in our catalog..." required></textarea>
+          </div>
+
+          <div class="tl-form-group">
+            <label for="requester-email" class="tl-form-label">Your Email <span class="tl-req">*</span></label>
+            <input type="email" id="requester-email" name="requester-email" class="tl-form-input" placeholder="you@example.com" required />
+            <span class="tl-form-hint">We'll notify you when your suggested tool is added.</span>
+          </div>
+
+          <button type="submit" class="tl-btn tl-btn-primary tl-form-submit">
+            Submit Recommendation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="tl-form-success" id="tl-form-success">
+          <div class="tl-form-success-icon">✓</div>
+          <h3>Thank you for your recommendation!</h3>
+          <p>We've received your tool suggestion. Our team will review it and add it to the catalog if it meets our criteria. You'll be notified at the email you provided.</p>
+          <a href="/tools" class="tl-btn tl-btn-outline">Back to Tools</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .tl-request-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    background: var(--tl-grad-mesh);
+    border-bottom: 1px solid var(--tl-border);
+  }
+
+  .tl-request-form-section {
+    padding: 0 1.5rem 4rem;
+  }
+
+  .tl-request-form-wrap {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .tl-request-form {
+    background: var(--tl-card);
+    border: 1px solid var(--tl-border);
+    border-radius: var(--tl-radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: var(--tl-shadow-card);
+  }
+
+  .tl-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .tl-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .tl-form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--tl-text);
+  }
+
+  .tl-req {
+    color: #ef4444;
+  }
+
+  .tl-form-input,
+  .tl-form-select,
+  .tl-form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--tl-bg);
+    border: 1px solid var(--tl-border);
+    border-radius: var(--tl-radius-sm);
+    color: var(--tl-text);
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .tl-form-textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .tl-form-input:focus,
+  .tl-form-select:focus,
+  .tl-form-textarea:focus {
+    outline: none;
+    border-color: rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  .tl-form-input::placeholder,
+  .tl-form-textarea::placeholder {
+    color: var(--tl-text-muted);
+  }
+
+  .tl-form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235c5c72' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .tl-form-select option {
+    background: #ffffff;
+    color: var(--tl-text);
+  }
+
+  .tl-form-hint {
+    font-size: 0.75rem;
+    color: var(--tl-text-sec);
+  }
+
+  .tl-form-submit {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .tl-form-success {
+    display: none;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--tl-card);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: var(--tl-radius);
+    box-shadow: var(--tl-shadow-card);
+  }
+
+  .tl-form-success.active {
+    display: block;
+  }
+
+  .tl-form-success-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #10b981, #059669);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .tl-form-success h3 {
+    font-size: 1.25rem;
+    color: var(--tl-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .tl-form-success p {
+    color: var(--tl-text-sec);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 600px) {
+    .tl-form-row {
+      grid-template-columns: 1fr;
+    }
+    .tl-request-form {
+      padding: 1.25rem;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('tl-request-form') as HTMLFormElement | null;
+  const success = document.getElementById('tl-form-success');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (form.checkValidity()) {
+        form.style.display = 'none';
+        success?.classList.add('active');
+      } else {
+        form.reportValidity();
+      }
+    });
+  }
+</script>

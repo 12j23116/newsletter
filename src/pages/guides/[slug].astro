@@ -1,0 +1,519 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { allGuides } from '../../data/guides/guides-listing';
+import { guideContent } from '../../data/guides/guides-content';
+import { guideSEO } from '../../data/guides/guide-seo';
+import './guide-post.css';
+
+export function getStaticPaths() {
+  return allGuides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+interface Props {
+  guide: (typeof allGuides)[number];
+}
+
+const { guide } = Astro.props;
+const content = guideContent[guide.slug];
+const seo = guideSEO[guide.slug];
+
+const hasContent = !!content;
+
+const title = seo ? seo.metaTitle : guide.title;
+const description = seo ? seo.metaDescription : (hasContent ? content.intro.slice(0, 160) : guide.description.slice(0, 160));
+const guideImage = hasContent ? content.heroImage : undefined;
+const guideKeywords = seo ? seo.keywords : (hasContent
+  ? [...content.keyConcepts.map((c) => c.term), guide.topic].join(', ')
+  : guide.topic);
+const guideUrl = `https://technanoai.com/guides/${guide.slug}`;
+
+// Structured data for SEO — TechArticle
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: seo ? seo.metaTitle : guide.title,
+  description: seo ? seo.metaDescription : (hasContent ? content.intro : guide.description),
+  author: { '@type': 'Organization', name: 'TechNanoAI' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'TechNanoAI',
+    logo: { '@type': 'ImageObject', url: 'https://technanoai.com/images/logo/technanoai-icon-32.png' },
+  },
+  articleSection: guide.topic,
+  keywords: guideKeywords,
+  about: hasContent ? content.keyConcepts.map((c) => c.term) : [guide.topic],
+  url: guideUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': guideUrl },
+  ...(guideImage ? { image: `https://technanoai.com${guideImage}` } : {}),
+};
+
+// Structured data for SEO — BreadcrumbList
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://technanoai.com/guides' },
+    { '@type': 'ListItem', position: 3, name: guide.title, item: guideUrl },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={guideImage}
+  type="article"
+  keywords={guideKeywords}
+  section={guide.topic}
+>
+  <article class="gp-page" style={`--cat-color: ${guide.topicColor}`}>
+    <!-- Hero -->
+    <header class="gp-hero">
+      <div class="gp-hero-bg"></div>
+      <div class="gp-hero-content">
+        <a href="/guides" class="gp-back-btn gp-back-btn-hero">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          Back to Guides
+        </a>
+        <div class="gp-hero-meta">
+          <span class="gp-cat-badge" style={`--cat-color: ${guide.topicColor}`}>
+            {guide.icon} {guide.topic}
+          </span>
+          <span class="gp-diff-badge" data-level={guide.difficulty}>{guide.difficulty}</span>
+          <span class="gp-read-time">⏱ {guide.readTime}</span>
+        </div>
+        <h1 class="gp-hero-title">{guide.title}</h1>
+        <p class="gp-hero-intro">{hasContent ? content.intro : guide.description}</p>
+      </div>
+      <div class="gp-hero-image-wrap">
+        {hasContent && (
+          <img src={content.heroImage} alt={guide.title} class="gp-hero-image" loading="eager" width="1200" height="600" />
+        )}
+      </div>
+    </header>
+
+    <!-- Progress bar (sticky) -->
+    <div class="gp-progress-bar" id="gp-progress">
+      <div class="gp-progress-fill" id="gp-progress-fill"></div>
+    </div>
+
+    <!-- Breadcrumbs (moved below hero) -->
+    <nav class="gp-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="gp-bc-sep">/</span>
+      <a href="/guides">Guides</a>
+      <span class="gp-bc-sep">/</span>
+      <span class="gp-bc-current">{guide.title}</span>
+    </nav>
+
+
+    <!-- Main content -->
+    {hasContent ? (
+      <div class="gp-layout">
+        <!-- Table of Contents (sidebar) -->
+        <aside class="gp-toc" id="gp-toc">
+          <div class="gp-toc-inner">
+            <h3 class="gp-toc-title">Contents</h3>
+            <ol class="gp-toc-list">
+              <li><a href="#gp-intro" class="gp-toc-link active" data-tab="guide">Introduction</a></li>
+              <li><a href="#gp-prereqs" class="gp-toc-link" data-tab="guide">Prerequisites</a></li>
+              <li><a href="#gp-concepts" class="gp-toc-link" data-tab="guide">Key Concepts</a></li>
+              {content.steps.map((step, i) => (
+                <li><a href={`#gp-step-${i + 1}`} class="gp-toc-link" data-tab="guide">{i + 1}. {step.title}</a></li>
+              ))}
+              <li><a href="#gp-summary" class="gp-toc-link" data-tab="guide">Summary</a></li>
+              <li><a href="#gp-faqs" class="gp-toc-link" data-tab="faqs">FAQs</a></li>
+              <li><a href="#gp-quiz" class="gp-toc-link" data-tab="quiz">Quiz</a></li>
+              <li><a href="#gp-next" class="gp-toc-link" data-tab="next">Next Steps</a></li>
+            </ol>
+          </div>
+        </aside>
+
+        <!-- Article body with tabs -->
+        <div class="gp-body">
+          <!-- Tab bar -->
+          <div class="gp-tabs-bar" role="tablist">
+            <button class="gp-tab active" data-tab="guide" role="tab" aria-selected="true">Guide</button>
+            <button class="gp-tab" data-tab="faqs" role="tab" aria-selected="false">FAQs</button>
+            <button class="gp-tab" data-tab="quiz" role="tab" aria-selected="false">Quiz</button>
+            <button class="gp-tab" data-tab="next" role="tab" aria-selected="false">Next Steps</button>
+          </div>
+
+          <!-- Tab Panel: Guide -->
+          <div class="gp-tab-panel active" data-panel="guide" role="tabpanel">
+            <!-- Introduction -->
+            <section class="gp-section" id="gp-intro">
+              <h2 class="gp-section-heading">Introduction</h2>
+              <p class="gp-intro-text">{content.intro}</p>
+            </section>
+
+            <!-- Prerequisites -->
+            <section class="gp-section" id="gp-prereqs">
+              <h2 class="gp-section-heading">Prerequisites</h2>
+              <ul class="gp-prereq-list">
+                {content.prerequisites.map((p) => (
+                  <li class="gp-prereq-item">
+                    <span class="gp-prereq-check">✓</span>
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <!-- Key Concepts -->
+            <section class="gp-section" id="gp-concepts">
+              <h2 class="gp-section-heading">Key Concepts</h2>
+              <div class="gp-concepts-grid">
+                {content.keyConcepts.map((concept) => (
+                  <div class="gp-concept-card">
+                    <dt class="gp-concept-term">{concept.term}</dt>
+                    <dd class="gp-concept-def">{concept.definition}</dd>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <!-- Steps -->
+            <section class="gp-section gp-steps-section" id="gp-steps">
+              <h2 class="gp-section-heading">Step-by-Step Guide</h2>
+              <ol class="gp-steps-list">
+                {content.steps.map((step, i) => (
+                  <li class="gp-step" id={`gp-step-${i + 1}`}>
+                    <div class="gp-step-header">
+                      <span class="gp-step-num">{i + 1}</span>
+                      <h3 class="gp-step-title">{step.title}</h3>
+                    </div>
+                    <div class="gp-step-body">
+                      <p class="gp-step-content">{step.content}</p>
+
+                      {step.code && (
+                        <div class="gp-code-block">
+                          <div class="gp-code-head">
+                            <span class="gp-code-lang">{step.code.language}</span>
+                            <button class="gp-code-copy" data-code={step.code.snippet} aria-label="Copy code">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                              </svg>
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                          <pre class="gp-code-pre"><code>{step.code.snippet}</code></pre>
+                        </div>
+                      )}
+
+                      {step.image && (
+                        <figure class="gp-step-figure">
+                          <img src={step.image.src} alt={step.image.caption} loading="lazy" width="1000" height="500" />
+                          <figcaption>{step.image.caption}</figcaption>
+                        </figure>
+                      )}
+
+                      {step.tip && (
+                        <div class="gp-callout gp-callout-tip">
+                          <span class="gp-callout-icon">💡</span>
+                          <div>
+                            <strong>Tip:</strong> {step.tip}
+                          </div>
+                        </div>
+                      )}
+
+                      {step.warning && (
+                        <div class="gp-callout gp-callout-warning">
+                          <span class="gp-callout-icon">⚠️</span>
+                          <div>
+                            <strong>Warning:</strong> {step.warning}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            <!-- Summary -->
+            <section class="gp-section" id="gp-summary">
+              <h2 class="gp-section-heading">Summary</h2>
+              <div class="gp-summary-box">
+                <p>{content.summary}</p>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tab Panel: FAQs -->
+          <div class="gp-tab-panel" data-panel="faqs" role="tabpanel">
+            <section class="gp-section" id="gp-faqs">
+              <h2 class="gp-section-heading">Frequently Asked Questions</h2>
+              <div class="gp-faq-list">
+                {content.faqs.map((faq, i) => (
+                  <div class="gp-faq-item" data-faq={i}>
+                    <button class="gp-faq-q" aria-expanded="false">
+                      <span>{faq.question}</span>
+                      <span class="gp-faq-icon">+</span>
+                    </button>
+                    <div class="gp-faq-a">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <!-- Tab Panel: Quiz -->
+          <div class="gp-tab-panel" data-panel="quiz" role="tabpanel">
+            <section class="gp-section" id="gp-quiz">
+              <h2 class="gp-section-heading">Test Your Knowledge</h2>
+              <div class="gp-quiz-container">
+                {content.quiz.map((q, qi) => (
+                  <div class="gp-quiz-q" data-quiz={qi}>
+                    <p class="gp-quiz-question">{qi + 1}. {q.question}</p>
+                    <div class="gp-quiz-options">
+                      {q.options.map((opt, oi) => (
+                        <button
+                          class="gp-quiz-opt"
+                          data-quiz={qi}
+                          data-opt={oi}
+                          data-correct={q.correctIndex}
+                        >
+                          <span class="gp-quiz-letter">{String.fromCharCode(65 + oi)}</span>
+                          <span>{opt}</span>
+                        </button>
+                      ))}
+                    </div>
+                    <div class="gp-quiz-explain" data-quiz={qi}>
+                      <p>{q.explanation}</p>
+                    </div>
+                  </div>
+                ))}
+                <div class="gp-quiz-score" id="gp-quiz-score">
+                  <span class="gp-quiz-score-label">Score: </span>
+                  <span class="gp-quiz-score-value" id="gp-quiz-score-value">0 / {content.quiz.length}</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tab Panel: Next Steps -->
+          <div class="gp-tab-panel" data-panel="next" role="tabpanel">
+            <section class="gp-section" id="gp-next">
+              <h2 class="gp-section-heading">Next Steps</h2>
+              <div class="gp-next-grid">
+                {content.nextSteps.map((next) => {
+                  const nextGuide = allGuides.find((g) => g.title === next.title);
+                  const href = nextGuide ? `/guides/${nextGuide.slug}` : '/guides';
+                  return (
+                    <a href={href} class="gp-next-card">
+                      <h3 class="gp-next-title">{next.title}</h3>
+                      <p class="gp-next-desc">{next.description}</p>
+                      <span class="gp-next-arrow">→</span>
+                    </a>
+                  );
+                })}
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div class="gp-layout">
+        <div class="gp-body">
+          <section class="gp-section" id="gp-intro">
+            <h2 class="gp-section-heading">Coming Soon</h2>
+            <p class="gp-intro-text">{guide.description}</p>
+            <p style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+              This guide is being written. In the meantime, explore our other {guide.topic} guides or check back soon.
+            </p>
+            <div style="margin-top: 2rem;">
+              <a href="/guides" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--cat-color); color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                ← Back to All Guides
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    )}
+
+    <!-- Back to guides -->
+    <div class="gp-back-link">
+      <a href="/guides" class="gp-back-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Back to Guides
+      </a>
+    </div>
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  </article>
+
+  <!-- Interactive scripts -->
+  <script>
+    // ── FAQ Accordion ──────────────────────────────
+    document.querySelectorAll<HTMLButtonElement>('.gp-faq-q').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const item = btn.closest('.gp-faq-item');
+        item?.classList.toggle('open');
+        btn.querySelector('.gp-faq-icon')!.textContent = expanded ? '+' : '−';
+      });
+    });
+
+    // ── Quiz Interactivity ─────────────────────────
+    const quizState: Record<number, boolean> = {};
+    const totalQuiz = document.querySelectorAll('.gp-quiz-q').length;
+
+    document.querySelectorAll<HTMLButtonElement>('.gp-quiz-opt').forEach((opt) => {
+      opt.addEventListener('click', () => {
+        const qi = Number(opt.dataset.quiz);
+        const oi = Number(opt.dataset.opt);
+        const correct = Number(opt.dataset.correct);
+        const container = opt.closest('.gp-quiz-q');
+        if (!container) return;
+
+        // Disable all options for this question
+        const allOpts = container.querySelectorAll<HTMLButtonElement>('.gp-quiz-opt');
+        allOpts.forEach((o) => {
+          o.style.pointerEvents = 'none';
+          const oOi = Number(o.dataset.opt);
+          if (oOi === correct) {
+            o.classList.add('correct');
+          } else if (oOi === oi && oi !== correct) {
+            o.classList.add('wrong');
+          }
+        });
+
+        // Show explanation
+        const explain = container.querySelector<HTMLElement>('.gp-quiz-explain');
+        explain?.classList.add('show');
+
+        // Track score
+        if (quizState[qi] === undefined) {
+          quizState[qi] = oi === correct;
+          const score = Object.values(quizState).filter(Boolean).length;
+          const scoreEl = document.getElementById('gp-quiz-score-value');
+          if (scoreEl) scoreEl.textContent = `${score} / ${totalQuiz}`;
+          const scoreContainer = document.getElementById('gp-quiz-score');
+          if (scoreContainer) scoreContainer.classList.add('show');
+        }
+      });
+    });
+
+    // ── Code Copy ──────────────────────────────────
+    document.querySelectorAll<HTMLButtonElement>('.gp-code-copy').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const code = btn.dataset.code || '';
+        try {
+          await navigator.clipboard.writeText(code);
+          const label = btn.querySelector('span');
+          if (label) {
+            const original = label.textContent;
+            label.textContent = 'Copied!';
+            setTimeout(() => { if (label) label.textContent = original; }, 2000);
+          }
+        } catch {
+          // Fallback
+          const textarea = document.createElement('textarea');
+          textarea.value = code;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          const label = btn.querySelector('span');
+          if (label) {
+            const original = label.textContent;
+            label.textContent = 'Copied!';
+            setTimeout(() => { if (label) label.textContent = original; }, 2000);
+          }
+        }
+      });
+    });
+
+    // ── Reading Progress Bar ───────────────────────
+    const progressFill = document.getElementById('gp-progress-fill');
+    const progressBar = document.getElementById('gp-progress');
+
+    function updateProgress() {
+      if (!progressFill || !progressBar) return;
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = Math.max(0, Math.min(100, (scrollTop / docHeight) * 100));
+      progressFill.style.width = `${pct}%`;
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // ── TOC Active Link Tracking ───────────────────
+    const tocLinks = document.querySelectorAll<HTMLAnchorElement>('.gp-toc-link');
+    const sections = document.querySelectorAll<HTMLElement>('.gp-section, .gp-step');
+
+    function updateActiveTOC() {
+      let current = '';
+      sections.forEach((sec) => {
+        const panel = sec.closest('.gp-tab-panel');
+        if (panel && !panel.classList.contains('active')) return;
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 120) {
+          current = sec.id;
+        }
+      });
+      tocLinks.forEach((link) => {
+        const href = link.getAttribute('href');
+        link.classList.toggle('active', href === `#${current}`);
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveTOC, { passive: true });
+    updateActiveTOC();
+
+    // ── Tab Switching ─────────────────────────────
+    const tabButtons = document.querySelectorAll<HTMLButtonElement>('.gp-tab');
+    const tabPanels = document.querySelectorAll<HTMLElement>('.gp-tab-panel');
+
+    function switchTab(tabName: string) {
+      tabButtons.forEach((btn) => {
+        const isActive = btn.dataset.tab === tabName;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', String(isActive));
+      });
+      tabPanels.forEach((panel) => {
+        panel.classList.toggle('active', panel.dataset.panel === tabName);
+      });
+    }
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const tabName = btn.dataset.tab;
+        if (tabName) switchTab(tabName);
+      });
+    });
+
+    // ── TOC smooth scroll + tab switch ──────────────
+    tocLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetTab = link.dataset.tab;
+        if (targetTab) switchTab(targetTab);
+        const target = document.querySelector(link.getAttribute('href') || '');
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 50);
+        }
+      });
+    });
+  </script>
+</BaseLayout>

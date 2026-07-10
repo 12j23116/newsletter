@@ -1,0 +1,261 @@
+---
+/**
+ * Quantum topic Page — Premium Redesign
+ * Unique layout: circuit-style hero, glow-effect cards,
+ * quantum-themed borders, circuit connectors.
+ * 7 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { quantumContent } from '../../../data/topics/Quantum/quantum-content';
+import './quantum-styles.css';
+const c = quantumContent;
+
+const marqueeItems = ['$20.2B Market', '41.8% CAGR', '296K+ Patents', '360+ Startups', 'Error Correction', 'Post-Quantum Crypto', 'Quantum AI', 'QaaS Cloud', 'Drug Discovery', 'Hybrid Workflows', 'Quantum Advantage', 'Room-Temp Qubits'];
+---
+
+<BaseLayout title={`${c.name} — Market, Error Correction & Applications 2026-2030`} description={c.description} keywords="quantum computing, quantum computers, qubits, quantum error correction, post-quantum cryptography, quantum advantage, quantum algorithms, QaaS, quantum cloud, quantum sensing, quantum networking, Shor's algorithm, quantum simulation, quantum startups, quantum investment">
+  <div class="qm-page">
+
+    {/* ══ 1. HERO — Circuit-style with glow effects ══ */}
+    <section class="qm-hero">
+      <div class="qm-hero-bg">
+        <img src="/images/009-quantum-computing.webp" alt="Quantum computing" loading="eager" />
+      </div>
+      <div class="qm-grid-overlay"></div>
+      <div class="qm-orb qm-hero-orb-1"></div>
+      <div class="qm-orb qm-hero-orb-2"></div>
+      <div class="qm-orb qm-hero-orb-3"></div>
+      <div class="qm-circuit-dot qm-circuit-dot-1"></div>
+      <div class="qm-circuit-dot qm-circuit-dot-2"></div>
+      <div class="qm-circuit-dot qm-circuit-dot-3"></div>
+      <div class="qm-circuit-dot qm-circuit-dot-4"></div>
+      <div class="qm-circuit-line qm-circuit-line-1"></div>
+      <div class="qm-circuit-line qm-circuit-line-2"></div>
+      <div class="qm-hero-inner">
+        <div class="qm-hero-left">
+          <span class="qm-hero-pill"><span class="qm-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="qm-grad-text">Quantum Computing</span></h1>
+          <p class="qm-hero-tagline">{c.tagline}</p>
+          <p class="qm-hero-desc">{c.description}</p>
+          <div class="qm-hero-ctas">
+            <a href="#sections" class="qm-btn qm-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="qm-btn qm-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="qm-hero-stats">
+            {c.stats.map((s) => (
+              <div class="qm-hero-stat">
+                <span class="qm-hero-stat-value">{s.value}</span>
+                <span class="qm-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="qm-hero-right">
+          <div class="qm-hero-img-wrap">
+            <img class="qm-hero-img" src="/images/quantum-01-cryogenic-fridge.webp" alt="Quantum processor" loading="eager" />
+            <div class="qm-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="qm-marquee">
+      <div class="qm-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'qm-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="qm-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. SECTION CARDS — Image header with glow border ══ */}
+    <section class="qm-section" id="sections">
+      <div class="qm-container">
+        <span class="qm-eyebrow qm-reveal">Market Overview</span>
+        <h2 class="qm-section-title qm-reveal">The <span class="qm-grad-text">$20 Billion</span> Quantum Market</h2>
+        <p class="qm-section-sub qm-reveal">From error correction breakthroughs to post-quantum cryptography — the technologies and applications defining the quantum era.</p>
+        <div class="qm-section-grid">
+          {c.sections.map((s) => (
+            <div class="qm-section-card qm-reveal">
+              <div class="qm-section-img-wrap">
+                <img class="qm-section-img" src={s.image} alt={s.title} loading="lazy" />
+                <div class="qm-section-img-overlay"></div>
+              </div>
+              <div class="qm-section-body">
+                <div class="qm-section-eyebrow">{s.eyebrow}</div>
+                <h3 class="qm-section-title">{s.title}</h3>
+                <p class="qm-section-desc">{s.subtitle}</p>
+                <div class="qm-section-points">
+                  {s.points.map((p) => (
+                    <div class="qm-section-point"><strong>{p.value}</strong> — {p.label}: {p.desc}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. TRENDS — Cards with gradient backgrounds ══ */}
+    <section class="qm-section qm-section-alt">
+      <div class="qm-container">
+        <span class="qm-eyebrow qm-reveal">Emerging Trends</span>
+        <h2 class="qm-section-title qm-reveal">What's <span class="qm-grad-text">Trending</span> in Quantum</h2>
+        <p class="qm-section-sub qm-reveal">Six trends shaping the future of quantum computing and its applications.</p>
+        <div class="qm-trends-grid">
+          {c.trends.map((t) => (
+            <div class="qm-trend-card qm-reveal" style={`--qm-grad:linear-gradient(135deg, ${t.color}, ${t.color}44)`}>
+              <div class="qm-trend-tag" style={`background:${t.color}22;color:${t.color}`}>{t.tag}</div>
+              <h3 class="qm-trend-title">{t.title}</h3>
+              <p class="qm-trend-desc">{t.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. COMPANIES — Cards with metrics ══ */}
+    <section class="qm-section">
+      <div class="qm-container">
+        <span class="qm-eyebrow qm-reveal">Key Players</span>
+        <h2 class="qm-section-title qm-reveal">Leading <span class="qm-grad-text">Quantum Companies</span></h2>
+        <p class="qm-section-sub qm-reveal">The companies driving innovation and growth in quantum computing.</p>
+        <div class="qm-companies-grid">
+          {c.companies.map((co) => (
+            <div class="qm-company-card qm-reveal">
+              <div class="qm-company-header">
+                <div class="qm-company-icon" style={`background:${co.color}22;color:${co.color}`}>🔮</div>
+                <h3 class="qm-company-name">{co.name}</h3>
+              </div>
+              <p class="qm-company-desc">{co.desc}</p>
+              <span class="qm-company-metric">{co.metric}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. Market Stats ══ */}
+    <section class="qm-section" id="market-stats">
+      <div class="qm-container">
+        <div class="qm-section-head qm-section-head-center">
+          <span class="qm-eyebrow qm-reveal">By the Numbers</span>
+          <h2 class="qm-section-title qm-reveal">Quantum <span class="qm-grad-text">Economy</span> at a Glance</h2>
+          <p class="qm-section-sub qm-reveal">Key metrics defining the quantum computing sector in 2025.</p>
+        </div>
+        <div class="qm-market-grid">
+          {c.marketStats.map((s) => (
+            <div class="qm-market-card qm-reveal">
+              <div class="qm-market-value">{s.value}</div>
+              <div class="qm-market-label">{s.label}</div>
+              <div class="qm-market-source">{s.source}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. Future Timeline ══ */}
+    <section class="qm-section qm-section-alt" id="future">
+      <div class="qm-container">
+        <span class="qm-eyebrow qm-reveal">2026 → 2030</span>
+        <h2 class="qm-section-title qm-reveal">The <span class="qm-grad-text">Quantum</span> Road Ahead</h2>
+        <p class="qm-section-sub qm-reveal">Five predictions for the future of quantum computing and applications.</p>
+        <div class="qm-future-timeline qm-reveal">
+          {c.futurePredictions.map((p) => (
+            <div class="qm-future-item">
+              <div class="qm-future-year">{p.year}</div>
+              <div class="qm-future-prediction">{p.prediction}</div>
+              <div class="qm-future-detail">{p.detail}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. Trending Searches ══ */}
+    <section class="qm-section" id="trending">
+      <div class="qm-container">
+        <span class="qm-eyebrow qm-reveal">Search Trends</span>
+        <h2 class="qm-section-title qm-reveal">Trending <span class="qm-grad-text">Quantum</span> Searches</h2>
+        <p class="qm-section-sub qm-reveal">What people are searching for in quantum computing — monthly volumes and growth rates.</p>
+        <table class="qm-trending-table qm-reveal">
+          <thead>
+            <tr>
+              <th>Search Term</th>
+              <th>Monthly Volume</th>
+              <th>Growth</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.trendingSearches.map((t) => (
+              <tr>
+                <td class="qm-trending-term">{t.term}</td>
+                <td>{t.volume}</td>
+                <td class="qm-trending-growth">{t.growth}</td>
+                <td><span class={`qm-trending-type ${t.type.toLowerCase()}`}>{t.type}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="qm-section qm-section-alt" id="faq">
+      <div class="qm-container">
+        <span class="qm-eyebrow qm-reveal">FAQ</span>
+        <h2 class="qm-section-title qm-reveal">Frequently Asked <span class="qm-grad-text">Questions</span></h2>
+        <p class="qm-section-sub qm-reveal">Structured answers to the most common quantum questions — optimized for AI search citation.</p>
+        <div class="qm-faq-list">
+          {c.faqs.map((f) => (
+            <details class="qm-faq-item">
+              <summary>{f.q}</summary>
+              <div class="qm-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. CTA ══ */}
+    <section class="qm-cta">
+      <div class="qm-cta-bg">
+        <img src="/images/021-quantum-character-ice-blue.webp" alt="Quantum character" loading="lazy" />
+      </div>
+      <div class="qm-cta-inner">
+        <h3>Master Quantum Computing</h3>
+        <p>Get the latest quantum breakthroughs, error correction updates, and application insights delivered weekly.</p>
+        <a href="/blog?category=Quantum" class="qm-cta-btn">Explore Quantum Articles →</a>
+        <div class="qm-cta-pills">
+          <span class="qm-cta-pill">🔮 QEC breakthroughs</span>
+          <span class="qm-cta-pill">🔐 Post-quantum crypto</span>
+          <span class="qm-cta-pill">🧠 Quantum AI</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.qm-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Quantum' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Quantum', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

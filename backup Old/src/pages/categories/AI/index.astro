@@ -1,0 +1,57 @@
+---
+/**
+ * AI Category Page
+ * Independent — edit ai-content.ts and ai-styles.css without affecting other pages.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { aiContent } from './ai-content';
+import './ai-styles.css';
+---
+
+<BaseLayout title={aiContent.name} description={aiContent.description}>
+  <section class="cat-hero">
+    <div class="container cat-hero-inner">
+      <span class="cat-hero-icon">{aiContent.icon}</span>
+      <h1 class="cat-hero-name">{aiContent.name}</h1>
+      <p class="cat-hero-tagline">{aiContent.tagline}</p>
+      <p class="cat-hero-desc">{aiContent.description}</p>
+      <div class="cat-hero-stats">
+        {aiContent.stats.map((stat) => (
+          <div>
+            <span class="cat-hero-stat-value">{stat.value}</span>
+            <span class="cat-hero-stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-topics">
+    <div class="container">
+      <h2 class="landing-section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Key Topics</h2>
+      <div class="cat-topics-grid">
+        {aiContent.topics.map((topic) => (
+          <div class="cat-topic-card">
+            <h3 class="cat-topic-title">{topic.title}</h3>
+            <p class="cat-topic-desc">{topic.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-articles">
+    <div class="container">
+      <h2 class="landing-section-title" style="font-size: 2rem;">Latest Articles</h2>
+      <div class="cat-articles-list">
+        {aiContent.articles.map((article) => (
+          <a href={article.href} class="cat-article-item">
+            <h3 class="cat-article-title">{article.title}</h3>
+            <p class="cat-article-excerpt">{article.excerpt}</p>
+            <span class="cat-article-date">{article.date}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

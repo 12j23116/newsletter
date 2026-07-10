@@ -1,0 +1,46 @@
+---
+/**
+ * AboutCoverage — 12 technology topics coverage section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const topics = [
+  { name: 'Artificial Intelligence', desc: 'LLMs, agents & the race to AGI', icon: '🧠', color: '#3b82f6', href: '/topics/AI', articles: '25' },
+  { name: 'Cybersecurity', desc: 'Post-quantum crypto & AI defense', icon: '🛡️', color: '#ef4444', href: '/topics/Cybersecurity', articles: '13' },
+  { name: 'Space Exploration', desc: 'Launch vehicles & lunar economy', icon: '🚀', color: '#06b6d4', href: '/topics/Space', articles: '14' },
+  { name: 'Biotechnology', desc: 'CRISPR, mRNA & lab-grown organs', icon: '🧬', color: '#10b981', href: '/topics/Biotech', articles: '15' },
+  { name: 'Nuclear Energy', desc: 'SMRs & next-gen fission reactors', icon: '☢️', color: '#f59e0b', href: '/topics/Nuclear', articles: '9' },
+  { name: 'Energy Storage', desc: 'Solid-state batteries & grid storage', icon: '🔋', color: '#f97316', href: '/topics/Energy-Storage', articles: '8' },
+  { name: 'Robotics', desc: 'Humanoids, drones & automation', icon: '🤖', color: '#ec4899', href: '/topics/Robotics', articles: '12' },
+  { name: 'Autonomous Vehicles', desc: 'Robotaxis & Level 4 autonomy', icon: '🚗', color: '#8b5cf6', href: '/topics/AV', articles: '10' },
+  { name: 'Quantum Computing', desc: 'Qubits & quantum advantage', icon: '🔮', color: '#a78bfa', href: '/topics/Quantum', articles: '11' },
+  { name: 'Advanced Materials', desc: 'Graphene & superconductors', icon: '🔬', color: '#f43f5e', href: '/topics/Materials', articles: '6' },
+  { name: 'Brain-Computer Interfaces', desc: 'Neural implants & EEG control', icon: '🔌', color: '#0ea5e9', href: '/topics/BCI', articles: '7' },
+  { name: 'Nuclear Fusion', desc: 'Tokamaks & path to net power', icon: '⚛️', color: '#fb923c', href: '/topics/Fusion', articles: '8' },
+];
+---
+
+<section class="about-coverage-section">
+  <div class="about-container">
+    <div class="about-section-head about-section-head-center">
+      <span class="about-eyebrow">What We Cover</span>
+      <h2 class="about-section-title">12 Technology Frontiers, One Platform</h2>
+      <p class="about-section-sub">
+        Each topic has its own hub with pillar guides, supporting articles, tools, and a
+        glossary. Click any topic to dive in.
+      </p>
+    </div>
+
+    <div class="about-coverage-grid">
+      {topics.map((cat) => (
+        <a href={cat.href} class="about-coverage-card" style={`--card-color:${cat.color}`}>
+          <span class="about-coverage-icon">{cat.icon}</span>
+          <div class="about-coverage-body">
+            <h3 class="about-coverage-name">{cat.name}</h3>
+            <p class="about-coverage-desc">{cat.desc}</p>
+          </div>
+          <span class="about-coverage-articles">{cat.articles} guides</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

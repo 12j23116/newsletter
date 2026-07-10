@@ -1,0 +1,324 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './trending-styles.css';
+import TrendingHero from '../../components/trending/TrendingHero.astro';
+import TrendingSidebar from '../../components/trending/TrendingSidebar.astro';
+import TrendingFilters from '../../components/trending/TrendingFilters.astro';
+import TrendingTop from '../../components/trending/TrendingTop.astro';
+import TrendingGrid from '../../components/trending/TrendingGrid.astro';
+import TrendingCTA from '../../components/trending/TrendingCTA.astro';
+
+const title = 'Trending — Most-Read Emerging Tech Articles This Week';
+const description = 'The most-read articles across 12 emerging technology frontiers — AI breakthroughs, fusion milestones, quantum advances, cybersecurity threats, and more. Ranked by real-time engagement data.';
+---
+
+<BaseLayout title={title} description={description} keywords="trending technology, popular tech articles, AI breakthroughs, fusion milestones, quantum advances, cybersecurity threats, emerging tech trends, trending science news">
+  <div class="tr-page">
+    <TrendingHero />
+    <TrendingSidebar />
+    <TrendingFilters />
+    <TrendingTop />
+    <TrendingGrid />
+    <TrendingCTA />
+  </div>
+</BaseLayout>
+
+<script>
+  const filterPills = document.querySelectorAll<HTMLElement>('.tr-filter-pill');
+  const cards = document.querySelectorAll<HTMLElement>('.tr-card');
+  const noResults = document.getElementById('tr-no-results');
+  const countEl = document.getElementById('tr-main-count');
+  const timeframePills = document.querySelectorAll<HTMLElement>('.tr-timeframe-pill');
+
+  filterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const topic = pill.dataset.topic;
+      filterPills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      let visible = 0;
+      cards.forEach((card) => {
+        const cardtopic = card.dataset.topic;
+        if (topic === 'all' || topic === cardtopic) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (countEl) countEl.textContent = `Showing ${visible} article${visible !== 1 ? 's' : ''}`;
+      if (noResults) noResults.classList.toggle('active', visible === 0);
+    });
+  });
+
+  timeframePills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      timeframePills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+
+  // ── Sidebar Card Modals ───────────────────────
+  const modalOverlay = document.getElementById('tr-modal-overlay');
+  const modalBody = document.getElementById('tr-modal-body');
+  const modalClose = document.getElementById('tr-modal-close');
+  const stripPills = document.querySelectorAll<HTMLElement>('.tr-strip-pill');
+  const articleCards = document.querySelectorAll<HTMLElement>('.tr-card-clickable');
+  const articlesDataEl = document.getElementById('tr-articles-data');
+  const articlesData: Record<string, any>[] = articlesDataEl ? JSON.parse(articlesDataEl.textContent || '[]') : [];
+
+  const modalContent: Record<string, () => string> = {
+    topics: () => {
+      const topics = [
+        { tag: '#GPT5', count: '142K posts', trend: 'hot', growth: '+312%', volume: 142 },
+        { tag: '#QuantumAdvantage', count: '89K posts', trend: 'up', growth: '+156%', volume: 89 },
+        { tag: '#FusionBreakthrough', count: '67K posts', trend: 'up', growth: '+98%', volume: 67 },
+        { tag: '#CRISPR3', count: '54K posts', trend: 'new', growth: 'New', volume: 54 },
+        { tag: '#PostQuantumCrypto', count: '48K posts', trend: 'up', growth: '+72%', volume: 48 },
+        { tag: '#StarshipRefuel', count: '41K posts', trend: 'hot', growth: '+85%', volume: 41 },
+        { tag: '#SMRDeployment', count: '35K posts', trend: 'up', growth: '+44%', volume: 35 },
+        { tag: '#SolidStateBatteries', count: '29K posts', trend: 'new', growth: 'New', volume: 29 },
+        { tag: '#HumanoidRobots', count: '26K posts', trend: 'up', growth: '+61%', volume: 26 },
+        { tag: '#BCIClinicalTrials', count: '18K posts', trend: 'new', growth: 'New', volume: 18 },
+      ];
+      const maxVol = Math.max(...topics.map(t => t.volume));
+      const rows = topics.map((t, i) => {
+        const pct = Math.round((t.volume / maxVol) * 100);
+        const growthClass = t.trend === 'hot' ? 'hot' : t.trend === 'up' ? 'up' : 'new';
+        const growthLabel = t.trend === 'hot' ? `🔥 ${t.growth}` : t.trend === 'up' ? `📈 ${t.growth}` : `✨ ${t.growth}`;
+        return `<div class="tr-modal-topic-row">
+          <span class="tr-modal-topic-rank">${String(i + 1).padStart(2, '0')}</span>
+          <div class="tr-modal-topic-info">
+            <span class="tr-modal-topic-tag">${t.tag}</span>
+            <div class="tr-modal-topic-bar"><div class="tr-modal-topic-bar-fill" style="width:0" data-width="${pct}%"></div></div>
+          </div>
+          <div class="tr-modal-topic-meta">
+            <span class="tr-modal-topic-count">${t.count}</span>
+            <span class="tr-modal-topic-growth tr-modal-topic-growth--${growthClass}">${growthLabel}</span>
+          </div>
+        </div>`;
+      }).join('');
+      return `<div class="tr-modal-header">
+        <span class="tr-modal-eyebrow">Live Social Buzz</span>
+        <h2 class="tr-modal-title">🔥 Trending Topics</h2>
+        <p class="tr-modal-sub">Real-time hashtag momentum across X, Reddit, LinkedIn, and Hacker News — ranked by post volume and growth velocity.</p>
+      </div>
+      <div class="tr-modal-topics-list">${rows}</div>
+      <div class="tr-modal-topics-footer">
+        <div class="tr-modal-topics-footer-stat"><strong>549K</strong><span>Total Posts</span></div>
+        <div class="tr-modal-topics-footer-stat"><strong>10</strong><span>Trending Hashtags</span></div>
+        <div class="tr-modal-topics-footer-stat"><strong>+112%</strong><span>Avg Growth</span></div>
+        <div class="tr-modal-topics-footer-stat"><strong>3</strong><span>New This Week</span></div>
+      </div>`;
+    },
+
+    numbers: () => {
+      const stats = [
+        { label: 'Total Reads', value: '2.4M', delta: '+18%', dir: 'up', spark: [40, 55, 48, 62, 70, 85, 95] },
+        { label: 'New Articles', value: '47', delta: '+12%', dir: 'up', spark: [30, 35, 42, 38, 45, 50, 47] },
+        { label: 'Tech Topics', value: '12', delta: '0%', dir: 'up', spark: [12, 12, 12, 12, 12, 12, 12] },
+        { label: 'Avg Read Time', value: '9 min', delta: '-3%', dir: 'down', spark: [11, 10, 10, 9, 9, 9, 9] },
+      ];
+      const cards = stats.map(s => {
+        const sparkBars = s.spark.map(v => `<div class="tr-modal-stat-card-spark-bar" style="height:0" data-height="${v}%"></div>`).join('');
+        const deltaIcon = s.dir === 'up' ? '↑' : '↓';
+        return `<div class="tr-modal-stat-card">
+          <div class="tr-modal-stat-card-label">${s.label}</div>
+          <div class="tr-modal-stat-card-value">${s.value}</div>
+          <div class="tr-modal-stat-card-delta tr-modal-stat-card-delta--${s.dir}">${deltaIcon} ${s.delta} vs last week</div>
+          <div class="tr-modal-stat-card-spark">${sparkBars}</div>
+        </div>`;
+      }).join('');
+
+      const categories = [
+        { name: 'AI', pct: 32, color: '#3b82f6', reads: '768K' },
+        { name: 'Cybersecurity', pct: 18, color: '#ef4444', reads: '432K' },
+        { name: 'Space', pct: 14, color: '#06b6d4', reads: '336K' },
+        { name: 'Biotech', pct: 12, color: '#10b981', reads: '288K' },
+        { name: 'Quantum', pct: 9, color: '#a78bfa', reads: '216K' },
+        { name: 'Nuclear', pct: 6, color: '#f59e0b', reads: '144K' },
+        { name: 'Robotics', pct: 5, color: '#ec4899', reads: '120K' },
+        { name: 'Other', pct: 4, color: '#8b5cf6', reads: '96K' },
+      ];
+      const catRows = categories.map(c => {
+        return `<div class="tr-modal-category-row">
+          <span class="tr-modal-category-name">${c.name}</span>
+          <div class="tr-modal-category-bar"><div class="tr-modal-category-bar-fill" style="width:0; background:${c.color}" data-width="${c.pct}%"></div></div>
+          <span class="tr-modal-category-val">${c.reads}</span>
+        </div>`;
+      }).join('');
+
+      return `<div class="tr-modal-header">
+        <span class="tr-modal-eyebrow">Weekly Analytics</span>
+        <h2 class="tr-modal-title">📊 By the Numbers</h2>
+        <p class="tr-modal-sub">Engagement metrics across all 12 technology frontiers — updated hourly with rolling 7-day windows.</p>
+      </div>
+      <div class="tr-modal-stats-grid">${cards}</div>
+      <div class="tr-modal-category-breakdown">
+        <div class="tr-modal-category-breakdown-title">Reads by Category</div>
+        ${catRows}
+      </div>`;
+    },
+
+    newsletter: () => {
+      const preview = [
+        { rank: '01', title: "GPT-5 Architecture Leak: What We Know", topic: 'AI', color: '#3b82f6', time: '8 min' },
+        { rank: '02', title: "IBM's 1,000-Qubit Processor: Milestone?", topic: 'Quantum', color: '#a78bfa', time: '12 min' },
+        { rank: '03', title: "CRISPR 3.0: Prime Editing to Clinic", topic: 'Biotech', color: '#10b981', time: '7 min' },
+        { rank: '04', title: "ITER Timeline Slips: Fusion Impact", topic: 'Fusion', color: '#fb923c', time: '10 min' },
+        { rank: '05', title: "Post-Quantum Crypto Migration Deadline", topic: 'Security', color: '#ef4444', time: '11 min' },
+      ];
+      const items = preview.map(p => {
+        return `<div class="tr-modal-newsletter-item">
+          <span class="tr-modal-newsletter-item-rank">${p.rank}</span>
+          <div class="tr-modal-newsletter-item-info">
+            <div class="tr-modal-newsletter-item-title">${p.title}</div>
+            <div class="tr-modal-newsletter-item-meta">
+              <span class="tr-modal-newsletter-item-tag" style="background:${p.color}22; color:${p.color}">${p.topic}</span>
+              <span>${p.time} read</span>
+            </div>
+          </div>
+        </div>`;
+      }).join('');
+
+      return `<div class="tr-modal-header">
+        <span class="tr-modal-eyebrow">Weekly Digest</span>
+        <h2 class="tr-modal-title">📬 Never Miss a Trend</h2>
+        <p class="tr-modal-sub">Every Monday morning — the top 5 most-read articles across all 12 frontiers, delivered to your inbox. No fluff, no spam.</p>
+      </div>
+      <div class="tr-modal-newsletter-preview">
+        <div class="tr-modal-newsletter-preview-title">📋 This Week's Preview</div>
+        ${items}
+      </div>
+      <form class="tr-modal-newsletter-form" onsubmit="return false">
+        <input type="email" class="tr-modal-newsletter-input" placeholder="you@company.com" required />
+        <button type="submit" class="tr-modal-newsletter-btn">Subscribe Free →</button>
+      </form>
+      <div class="tr-modal-newsletter-perks">
+        <div class="tr-modal-newsletter-perk"><span class="tr-modal-newsletter-perk-icon">⚡</span> 5 min skim</div>
+        <div class="tr-modal-newsletter-perk"><span class="tr-modal-newsletter-perk-icon">📅</span> Every Monday</div>
+        <div class="tr-modal-newsletter-perk"><span class="tr-modal-newsletter-perk-icon">🚫</span> No spam, ever</div>
+        <div class="tr-modal-newsletter-perk"><span class="tr-modal-newsletter-perk-icon">📊</span> Data-backed</div>
+      </div>`;
+    },
+  };
+
+  function openModal(type: string) {
+    if (!modalOverlay || !modalBody) return;
+    const html = modalContent[type]?.();
+    if (!html) return;
+    modalBody.innerHTML = html;
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Animate bars and sparks after render
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        modalBody.querySelectorAll<HTMLElement>('[data-width]').forEach(el => {
+          el.style.width = el.dataset.width || '';
+        });
+        modalBody.querySelectorAll<HTMLElement>('[data-height]').forEach(el => {
+          el.style.height = el.dataset.height || '';
+        });
+      }, 50);
+    });
+  }
+
+  function openArticleModal(slug: string) {
+    const article = articlesData.find(a => a.slug === slug);
+    if (!article || !modalOverlay || !modalBody) return;
+
+    const tagsHtml = article.tags.map((t: string) => 
+      `<span class="tr-modal-article-tag">#${t.replace(/\s+/g, '')}</span>`
+    ).join('');
+
+    const html = `<div class="tr-modal-article">
+      <div class="tr-modal-article-cover" style="background:${article.gradient}">
+        <img src="${article.img}" alt="${article.title}" class="tr-modal-article-img" />
+        <div class="tr-modal-article-overlay"></div>
+        <span class="tr-modal-article-topic" style="--tag-color:${article.topicColor}">${article.topic}</span>
+        <span class="tr-modal-article-rank">#${article.rank}</span>
+      </div>
+      <div class="tr-modal-article-content">
+        <div class="tr-modal-article-score">
+          <span class="tr-modal-article-score-label">Trending Score</span>
+          <div class="tr-modal-article-score-bar">
+            <div class="tr-modal-article-score-fill" style="width:0" data-width="${article.trendingScore}%"></div>
+          </div>
+          <span class="tr-modal-article-score-val">${article.trendingScore}</span>
+        </div>
+        <h2 class="tr-modal-article-title">${article.title}</h2>
+        <p class="tr-modal-article-excerpt">${article.excerpt}</p>
+        <div class="tr-modal-article-tags">${tagsHtml}</div>
+        <div class="tr-modal-article-meta">
+          <div class="tr-modal-article-author">
+            <div class="tr-modal-article-avatar" style="background:${article.gradient}">${article.author}</div>
+            <div class="tr-modal-article-author-info">
+              <strong>${article.authorName}</strong>
+              <span>Author</span>
+            </div>
+          </div>
+          <div class="tr-modal-article-stats">
+            <div class="tr-modal-article-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>${article.views} reads</span>
+            </div>
+            <div class="tr-modal-article-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>${article.readTime}</span>
+            </div>
+            <div class="tr-modal-article-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>${article.date}</span>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/${article.slug}" class="tr-modal-article-btn">
+          Read Full Article
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>`;
+
+    modalBody.innerHTML = html;
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        modalBody.querySelectorAll<HTMLElement>('[data-width]').forEach(el => {
+          el.style.width = el.dataset.width || '';
+        });
+      }, 50);
+    });
+  }
+
+  function closeModal() {
+    if (!modalOverlay) return;
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  stripPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const type = pill.dataset.modal;
+      if (type) openModal(type);
+    });
+  });
+
+  articleCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const slug = card.dataset.slug;
+      if (slug) openArticleModal(slug);
+    });
+  });
+
+  modalClose?.addEventListener('click', closeModal);
+  modalOverlay?.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay?.classList.contains('active')) closeModal();
+  });
+</script>

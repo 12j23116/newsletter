@@ -1,0 +1,25 @@
+---
+import { spaceContent as c } from '../../../data/topics/Space/space-content';
+---
+<section class="sp-section sp-section-alt">
+  <div class="container">
+    <div class="sp-section-head sp-section-head-center">
+      <span class="sp-eyebrow">FAQ</span>
+      <h2 class="sp-section-title">Space Exploration — Frequently Asked Questions</h2>
+      <p class="sp-section-subtitle">Answers to the most searched questions about the space economy, launch industry, and future exploration.</p>
+    </div>
+    <div class="sp-faq-list">
+      {c.faqs.map((faq) => (
+        <div class="sp-faq-item">
+          <div class="sp-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>{faq.q}</span>
+            <span class="sp-faq-toggle">+</span>
+          </div>
+          <div class="sp-faq-answer">
+            <div class="sp-faq-answer-inner">{faq.a}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

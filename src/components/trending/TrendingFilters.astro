@@ -1,0 +1,22 @@
+---
+import { trendingtopics } from '../../data/trending/trending-content';
+---
+
+<section class="tr-filters" id="tr-filters">
+  <div class="tr-filters-inner">
+    <div class="tr-filters-label">Filter by topic:</div>
+    <div class="tr-filter-pills">
+      {trendingtopics.map((cat) => (
+        <button
+          class="tr-filter-pill"
+          data-topic={cat.id}
+          style={`--pill-color:${cat.color}`}
+        >
+          <span class="tr-filter-pill-icon">{cat.icon}</span>
+          <span>{cat.name}</span>
+          <span class="tr-filter-pill-count">{cat.articleCount}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>

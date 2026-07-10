@@ -1,0 +1,113 @@
+---
+/**
+ * RecommendationsTools — Recommended tools by topic
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const tooltopics = [
+  {
+    topic: 'Artificial Intelligence',
+    color: '#3b82f6',
+    icon: '🧠',
+    tools: [
+      { name: 'LangChain', desc: 'Framework for building LLM-powered applications and agents.', rating: 4.5, tag: 'Framework', href: '#' },
+      { name: 'Hugging Face', desc: 'Model hub with 500K+ open-source models, datasets, and demos.', rating: 5, tag: 'Platform', href: '#' },
+      { name: 'Pinecone', desc: 'Vector database for RAG pipelines and semantic search at scale.', rating: 4.5, tag: 'Database', href: '#' },
+      { name: 'Ollama', desc: 'Run open-source LLMs locally with one command. No GPU required.', rating: 4.5, tag: 'Local LLM', href: '#' },
+    ],
+  },
+  {
+    topic: 'Cybersecurity',
+    color: '#ef4444',
+    icon: '🛡️',
+    tools: [
+      { name: 'Burp Suite', desc: 'Industry-standard web vulnerability scanner and penetration testing tool.', rating: 4.5, tag: 'Pentest', href: '#' },
+      { name: 'Wireshark', desc: 'Network protocol analyzer for troubleshooting and security analysis.', rating: 5, tag: 'Network', href: '#' },
+      { name: 'HashiCorp Vault', desc: 'Secrets management, encryption, and identity-based access control.', rating: 4.5, tag: 'DevSecOps', href: '#' },
+      { name: 'Tails OS', desc: 'Portable OS that routes all traffic through Tor for maximum privacy.', rating: 4, tag: 'Privacy', href: '#' },
+    ],
+  },
+  {
+    topic: 'Quantum Computing',
+    color: '#a78bfa',
+    icon: '🔮',
+    tools: [
+      { name: 'Qiskit', desc: 'IBM\'s open-source SDK for writing quantum circuits and running on real hardware.', rating: 4.5, tag: 'SDK', href: '#' },
+      { name: 'Cirq', desc: 'Google\'s framework for designing and simulating quantum circuits.', rating: 4, tag: 'Framework', href: '#' },
+      { name: 'PennyLane', desc: 'Cross-platform quantum ML library for hybrid quantum-classical models.', rating: 4.5, tag: 'QML', href: '#' },
+      { name: 'Quantum Lab', desc: 'IBM\'s free cloud environment for running quantum experiments in-browser.', rating: 4, tag: 'Cloud', href: '#' },
+    ],
+  },
+  {
+    topic: 'Biotechnology',
+    color: '#10b981',
+    icon: '🧬',
+    tools: [
+      { name: 'Benchling', desc: 'Cloud platform for designing DNA, tracking experiments, and managing lab data.', rating: 4.5, tag: 'Lab Platform', href: '#' },
+      { name: 'SnapGene', desc: 'Molecular cloning software for DNA sequence visualization and analysis.', rating: 4.5, tag: 'Cloning', href: '#' },
+      { name: 'AlphaFold Server', desc: 'Google DeepMind\'s protein structure prediction — free for academic use.', rating: 5, tag: 'AI', href: '#' },
+      { name: 'BIOVIA', desc: 'Computational biology and molecular modeling suite for drug discovery.', rating: 4, tag: 'Modeling', href: '#' },
+    ],
+  },
+  {
+    topic: 'Space Exploration',
+    color: '#06b6d4',
+    icon: '🚀',
+    tools: [
+      { name: 'NASA Open Data', desc: 'Free APIs for satellite imagery, Mars rover data, and space weather.', rating: 5, tag: 'Data API', href: '#' },
+      { name: 'CelesTrak', desc: 'Satellite tracking and orbital element data for space situational awareness.', rating: 4.5, tag: 'Tracking', href: '#' },
+      { name: 'GMAT', desc: 'NASA\'s General Mission Analysis Tool for trajectory design and optimization.', rating: 4, tag: 'Mission Design', href: '#' },
+      { name: 'Stellarium', desc: 'Open-source planetarium software for sky observation and education.', rating: 4.5, tag: 'Education', href: '#' },
+    ],
+  },
+  {
+    topic: 'Energy Storage',
+    color: '#f97316',
+    icon: '🔋',
+    tools: [
+      { name: 'NREL SAM', desc: 'System Advisor Model for renewable energy system modeling and economic analysis.', rating: 4.5, tag: 'Modeling', href: '#' },
+      { name: 'BatterySim', desc: 'Battery pack simulation tool for capacity, thermal, and lifecycle analysis.', rating: 4, tag: 'Simulation', href: '#' },
+      { name: 'HOMER Energy', desc: 'Microgrid and distributed energy system optimization software.', rating: 4.5, tag: 'Grid Design', href: '#' },
+      { name: 'OpenEnergyMonitor', desc: 'Open-source energy monitoring and analysis platform for grid storage.', rating: 4, tag: 'Monitoring', href: '#' },
+    ],
+  },
+];
+---
+
+<section class="rec-tools-section" id="tools">
+  <div class="rec-container">
+    <div class="rec-section-head">
+      <span class="rec-eyebrow">Tested and Recommended</span>
+      <h2 class="rec-section-title">Top Tools by Technology topic</h2>
+      <p class="rec-section-sub">
+        We test dozens of tools in each topic and recommend only the ones we would use
+        ourselves. Filter by topic to find the right tool for your project.
+      </p>
+    </div>
+
+    <div class="rec-tools-topics">
+      {tooltopics.map((cat) => (
+        <div class="rec-tool-topic" style={`--cat-color:${cat.color}`}>
+          <div class="rec-tool-topic-header">
+            <span class="rec-tool-topic-icon">{cat.icon}</span>
+            <h3 class="rec-tool-topic-title">{cat.topic}</h3>
+          </div>
+          <div class="rec-tool-grid">
+            {cat.tools.map((tool) => (
+              <a href={tool.href} class="rec-tool-card">
+                <div class="rec-tool-card-header">
+                  <h4 class="rec-tool-name">{tool.name}</h4>
+                  <span class="rec-tool-rating">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    {tool.rating}
+                  </span>
+                </div>
+                <p class="rec-tool-desc">{tool.desc}</p>
+                <span class="rec-tool-tag">{tool.tag}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

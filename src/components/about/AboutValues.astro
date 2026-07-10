@@ -1,0 +1,71 @@
+---
+/**
+ * AboutValues — Core values cards section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const values = [
+  {
+    icon: 'M9 12l2 2 4-4M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
+    title: 'Accuracy First',
+    desc: 'Every claim is sourced. Every stat is verified. We update articles when the technology evolves — not when it is convenient.',
+    color: '#3b82f6',
+  },
+  {
+    icon: 'M12 3v18M3 12h18',
+    title: 'Accessibility',
+    desc: 'Complex topics explained simply. No jargon without explanation. No assumptions about prior knowledge. If you cannot understand it, we have not done our job.',
+    color: '#06b6d4',
+  },
+  {
+    icon: 'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5',
+    title: 'Independence',
+    desc: 'We are not sponsored by any company. Our guides are objective, unbiased, and free of native advertising or paid placements.',
+    color: '#10b981',
+  },
+  {
+    icon: 'M2 12h20M12 2v20',
+    title: 'Depth Over Hype',
+    desc: 'We go deep when others go wide. 3,000–5,000 word pillar guides. Not listicles. Not clickbait. Substance that earns trust.',
+    color: '#8b5cf6',
+  },
+  {
+    icon: 'M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    title: 'Timeliness',
+    desc: 'Emerging tech moves fast. We publish weekly, update constantly, and track trends so you always have the latest picture.',
+    color: '#ec4899',
+  },
+  {
+    icon: 'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 108 0 4 4 0 00-8 0z',
+    title: 'Reader-Driven',
+    desc: 'Our community shapes what we cover. Reader questions, topic requests, and contributor guides directly influence our editorial calendar.',
+    color: '#f59e0b',
+  },
+];
+---
+
+<section class="about-values-section">
+  <div class="about-container">
+    <div class="about-section-head">
+      <span class="about-eyebrow">What We Stand For</span>
+      <h2 class="about-section-title">Six Values That Guide Every Guide</h2>
+      <p class="about-section-sub">
+        These are not marketing buzzwords. They are the editorial principles that determine what we
+        publish, how we research, and how we decide what is worth your time.
+      </p>
+    </div>
+
+    <div class="about-values-grid">
+      {values.map((v) => (
+        <div class="about-value-card" style={`--card-color:${v.color}`}>
+          <div class="about-value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d={v.icon} />
+            </svg>
+          </div>
+          <h3 class="about-value-title">{v.title}</h3>
+          <p class="about-value-desc">{v.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

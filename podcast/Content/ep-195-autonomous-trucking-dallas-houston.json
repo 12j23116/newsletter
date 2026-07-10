@@ -1,0 +1,192 @@
+{
+  "id": 195,
+  "title": "Autonomous Trucking: Dallas to Houston Without a Driver",
+  "slug": "autonomous-trucking-dallas-houston",
+  "topic": "AV",
+  "topicColor": "#8b5cf6",
+  "duration": "46:08",
+  "date": "2026-02-18",
+  "season": 4,
+  "episode": 43,
+  "featured": false,
+  "guest": {
+    "name": "Raquel Urtasun",
+    "role": "CEO & Founder",
+    "company": "Waabi"
+  },
+  "hosts": [
+    {
+      "name": "Dr. Sarah Chen",
+      "role": "Host & AI Research Lead"
+    },
+    {
+      "name": "Dr. James Park",
+      "role": "Co-host & Space Editor"
+    }
+  ],
+  "topics": [
+    "Autonomous Trucking",
+    "Freight",
+    "Waabi"
+  ],
+  "script": [
+    {
+      "segment": "COLD OPEN",
+      "lines": [
+        {
+          "speaker": "Dr. James Park",
+          "text": "Raquel, there's a narrative going around about autonomous trucking that I think misses the mark. People either think it's overhyped or they think it's going to change everything overnight. Where does the truth actually lie?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "(laughs) That's the perfect framing, because the truth is always in between. What's happening with dallas to houston without a driver is real — it's not hype. But it's also not overnight. We've been working on this for years, and what people are seeing now is the result of a lot of unglamorous engineering and science that happened behind the scenes."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Welcome to TechNova. I'm Dr. Sarah Chen."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "And I'm Dr. James Park. Today we're joined by Raquel Urtasun, CEO & Founder at Waabi. Raquel, welcome to the show."
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "Thanks for having me. Really glad to be here."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 1: Where Things Stand Today",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Raquel, give us the honest state of autonomous trucking in AV as of mid-2026. Not the hype version — the real version."
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "The honest version is that we're at an inflection point. The breakthroughs in sensor technology and AI driving models over the past eighteen months have been genuine — not just press releases, but real technical progress that you can measure. The key thing that's changed is regulatory framework has gone from theoretical to practical. We're no longer asking 'can this work?' — we're asking 'how do we scale it?'"
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "What does that scaling look like in concrete terms?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "It means we're moving from bench-scale demonstrations to real-world deployment. The numbers I can share: we're seeing improvements in safety data that are orders of magnitude better than where we were two years ago. And critically, the cost curve is bending in the right direction. When you combine better performance with lower cost, you get adoption, and that's what's happening now."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What surprised you most in the last year?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "The speed. I expected progress, but the pace has been remarkable. unit economics advanced faster than I predicted, and scaling strategy turned out to be more tractable than we thought. When you have multiple breakthroughs happening simultaneously, they compound on each other, and that's when you get these nonlinear jumps."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 2: The Hard Problems",
+      "lines": [
+        {
+          "speaker": "Dr. James Park",
+          "text": "Raquel, let's talk about what's still hard. What are the problems that keep you up at night?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "The biggest one is edge cases. It's the difference between something that works in the lab and something that works in production, every day, under real conditions. We've solved the science. What we haven't fully solved is the engineering — competing approaches, public acceptance, and the integration of all these components into a reliable system. That's the 80 percent of the work that nobody sees."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Can you give us a specific example of a problem you had to solve?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "Sure. Take freight and delivery — six months ago, we were hitting a wall there. The conventional approach wasn't working, and we had to rethink the problem from scratch. What we ended up doing was freight-centric — we restructured the entire approach around that, and it unlocked everything else. Sometimes the breakthrough isn't a new technique — it's a new framing of the problem."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "How many people are working on these problems at your level?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "Globally? Maybe a few hundred people who truly understand the cutting edge. It's a small field, and the expertise is concentrated in a handful of teams. That's both a challenge and an opportunity — it means progress is bottlenecked by talent, but it also means that a single breakthrough from one team can advance the entire field."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 3: The Competitive Landscape",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Raquel, who else is working in this space, and how does your approach differ?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "There are several serious players. Some are taking the sensor technology route, which is well-established but has limitations. Others are betting on AI driving models, which is newer and riskier but potentially more powerful. Our approach is different because we prioritize regulatory framework — most teams optimize for peak performance, but we optimize for reliability and cost at scale. That's what matters for real-world deployment."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "Is this a winner-take-all market?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "I don't think so. The market is large and diverse enough that different approaches will win in different segments. The real competition isn't between the companies in this space — it's between autonomous trucking and the incumbent technology. We're all fighting to prove this is better than what exists today, and there's room for multiple winners once we do that."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What about the investment environment? Is there enough capital flowing in?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "The capital is there — maybe too much, in some ways. The risk isn't lack of funding. It's that funding without focus leads to wasted effort. The companies that will succeed are the ones that can turn capital into concrete milestones — not more press releases, but real technical progress that moves the needle."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 4: What Comes Next",
+      "lines": [
+        {
+          "speaker": "Dr. James Park",
+          "text": "Raquel, what should people be watching for in the next twelve to eighteen months?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "Three things. First, safety data — we'll see meaningful progress there, and it'll be measurable. Second, unit economics — there are developments coming that the public doesn't know about yet, and they'll change the conversation. Third, the policy and regulatory side — scaling strategy is going to become a much bigger topic as the technology matures."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "If you could give one piece of advice to someone listening who's trying to understand where AV is heading, what would it be?"
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "Don't trust the extremes — neither the hype that says everything changes tomorrow, nor the skepticism that says nothing will ever work. The truth is in the middle, and it's moving faster than most people realize. The best thing you can do is engage with the actual data — read the papers, look at the numbers, talk to the practitioners. The signal is there if you know where to look."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "Raquel Urtasun, CEO & Founder at Waabi. Thank you so much for joining us today."
+        },
+        {
+          "speaker": "Raquel Urtasun",
+          "text": "Thank you both. This was a really enjoyable conversation."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And thanks to all of you for listening. This is TechNova — see you next time."
+        }
+      ]
+    }
+  ],
+  "showNotes": {
+    "keyTopics": [
+      "sensor technology",
+      "AI driving models",
+      "regulatory framework",
+      "safety data",
+      "unit economics",
+      "scaling strategy",
+      "edge cases",
+      "competing approaches"
+    ],
+    "estimatedDuration": "10-12 minutes"
+  }
+}

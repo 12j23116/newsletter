@@ -1,0 +1,192 @@
+{
+  "id": 156,
+  "title": "Organoids and NAMs: Replacing Animal Testing in Drug Discovery",
+  "slug": "organoids-nams-replacing-animal-testing",
+  "topic": "Biotech",
+  "topicColor": "#10b981",
+  "duration": "42:15",
+  "date": "2026-03-11",
+  "season": 4,
+  "episode": 81,
+  "featured": false,
+  "guest": {
+    "name": "Dr. Thomas Hartung",
+    "role": "Director, CAAT",
+    "company": "Johns Hopkins University"
+  },
+  "hosts": [
+    {
+      "name": "Dr. Sarah Chen",
+      "role": "Host & AI Research Lead"
+    },
+    {
+      "name": "Marcus Webb",
+      "role": "Co-host & Security Analyst"
+    }
+  ],
+  "topics": [
+    "Organoids",
+    "NAMs",
+    "Drug Discovery"
+  ],
+  "script": [
+    {
+      "segment": "COLD OPEN",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Dr., there's a narrative going around about organoids that I think misses the mark. People either think it's overhyped or they think it's going to change everything overnight. Where does the truth actually lie?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "(laughs) That's the perfect framing, because the truth is always in between. What's happening with replacing animal testing in drug discovery is real — it's not hype. But it's also not overnight. We've been working on this for years, and what people are seeing now is the result of a lot of unglamorous engineering and science that happened behind the scenes."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Welcome to TechNova. I'm Dr. Sarah Chen."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "And I'm Marcus Webb. Today we're joined by Dr. Thomas Hartung, Director, CAAT at Johns Hopkins University. Dr., welcome to the show."
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "Thanks for having me. Really glad to be here."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 1: Where Things Stand Today",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Dr., give us the honest state of organoids in Biotech as of mid-2026. Not the hype version — the real version."
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "The honest version is that we're at an inflection point. The breakthroughs in clinical trial data and regulatory pathway over the past eighteen months have been genuine — not just press releases, but real technical progress that you can measure. The key thing that's changed is manufacturing scale has gone from theoretical to practical. We're no longer asking 'can this work?' — we're asking 'how do we scale it?'"
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "What does that scaling look like in concrete terms?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "It means we're moving from bench-scale demonstrations to real-world deployment. The numbers I can share: we're seeing improvements in CRISPR and gene editing that are orders of magnitude better than where we were two years ago. And critically, the cost curve is bending in the right direction. When you combine better performance with lower cost, you get adoption, and that's what's happening now."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What surprised you most in the last year?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "The speed. I expected progress, but the pace has been remarkable. AI in drug discovery advanced faster than I predicted, and market dynamics turned out to be more tractable than we thought. When you have multiple breakthroughs happening simultaneously, they compound on each other, and that's when you get these nonlinear jumps."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 2: The Hard Problems",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Dr., let's talk about what's still hard. What are the problems that keep you up at night?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "The biggest one is patient access. It's the difference between something that works in the lab and something that works in production, every day, under real conditions. We've solved the science. What we haven't fully solved is the engineering — pricing and reimbursement, pipeline innovation, and the integration of all these components into a reliable system. That's the 80 percent of the work that nobody sees."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Can you give us a specific example of a problem you had to solve?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "Sure. Take competitive landscape — six months ago, we were hitting a wall there. The conventional approach wasn't working, and we had to rethink the problem from scratch. What we ended up doing was nams-centric — we restructured the entire approach around that, and it unlocked everything else. Sometimes the breakthrough isn't a new technique — it's a new framing of the problem."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "How many people are working on these problems at your level?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "Globally? Maybe a few hundred people who truly understand the cutting edge. It's a small field, and the expertise is concentrated in a handful of teams. That's both a challenge and an opportunity — it means progress is bottlenecked by talent, but it also means that a single breakthrough from one team can advance the entire field."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 3: The Competitive Landscape",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Dr., who else is working in this space, and how does your approach differ?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "There are several serious players. Some are taking the clinical trial data route, which is well-established but has limitations. Others are betting on regulatory pathway, which is newer and riskier but potentially more powerful. Our approach is different because we prioritize manufacturing scale — most teams optimize for peak performance, but we optimize for reliability and cost at scale. That's what matters for real-world deployment."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "Is this a winner-take-all market?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "I don't think so. The market is large and diverse enough that different approaches will win in different segments. The real competition isn't between the companies in this space — it's between organoids and the incumbent technology. We're all fighting to prove this is better than what exists today, and there's room for multiple winners once we do that."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What about the investment environment? Is there enough capital flowing in?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "The capital is there — maybe too much, in some ways. The risk isn't lack of funding. It's that funding without focus leads to wasted effort. The companies that will succeed are the ones that can turn capital into concrete milestones — not more press releases, but real technical progress that moves the needle."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 4: What Comes Next",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Dr., what should people be watching for in the next twelve to eighteen months?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "Three things. First, CRISPR and gene editing — we'll see meaningful progress there, and it'll be measurable. Second, AI in drug discovery — there are developments coming that the public doesn't know about yet, and they'll change the conversation. Third, the policy and regulatory side — market dynamics is going to become a much bigger topic as the technology matures."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "If you could give one piece of advice to someone listening who's trying to understand where Biotech is heading, what would it be?"
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "Don't trust the extremes — neither the hype that says everything changes tomorrow, nor the skepticism that says nothing will ever work. The truth is in the middle, and it's moving faster than most people realize. The best thing you can do is engage with the actual data — read the papers, look at the numbers, talk to the practitioners. The signal is there if you know where to look."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "Dr. Thomas Hartung, Director, CAAT at Johns Hopkins University. Thank you so much for joining us today."
+        },
+        {
+          "speaker": "Dr. Thomas Hartung",
+          "text": "Thank you both. This was a really enjoyable conversation."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And thanks to all of you for listening. This is TechNova — see you next time."
+        }
+      ]
+    }
+  ],
+  "showNotes": {
+    "keyTopics": [
+      "clinical trial data",
+      "regulatory pathway",
+      "manufacturing scale",
+      "CRISPR and gene editing",
+      "AI in drug discovery",
+      "market dynamics",
+      "patient access",
+      "pricing and reimbursement"
+    ],
+    "estimatedDuration": "10-12 minutes"
+  }
+}

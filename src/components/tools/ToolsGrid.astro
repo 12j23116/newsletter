@@ -1,0 +1,105 @@
+---
+import { allToolsWithOurs, ourTools, toolTypes, tooltopics } from '../../data/tools/tools-content';
+---
+
+<section class="tl-grid-section" id="tl-all">
+  <div class="tl-tabs-wrapper">
+    <div class="tl-tabs" id="tl-tabs">
+      <button class="tl-tab active" data-source="external">
+        <span class="tl-tab-icon">🌍</span>
+        <span>External Tools</span>
+        <span class="tl-tab-count" id="tl-tab-count-external">{allToolsWithOurs.filter(t => t.source !== 'ours').length}</span>
+      </button>
+      <button class="tl-tab" data-source="ours">
+        <span class="tl-tab-icon">⚡</span>
+        <span>Our Tools</span>
+        <span class="tl-tab-count" id="tl-tab-count-ours">{ourTools.length}</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="tl-controls">
+    <div class="tl-search-wrap">
+      <svg class="tl-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+      </svg>
+      <input type="text" id="tl-search" class="tl-search" placeholder="Search tools by name, tag, or topic..." autocomplete="off" />
+    </div>
+    <select id="tl-topic-filter" class="tl-topic-select">
+      <option value="All">All Topics</option>
+      {tooltopics.map((t) => (
+        <option value={t.name}>{t.name}</option>
+      ))}
+    </select>
+  </div>
+
+  <div class="tl-filter-bar" id="tl-filter-bar">
+    {toolTypes.map((t) => (
+      <button class="tl-filter-pill" data-type={t.type}>
+        <span class="tl-filter-pill-icon">{t.icon}</span>
+        <span>{t.type}</span>
+      </button>
+    ))}
+  </div>
+
+  <div class="tl-result-bar">
+    <span class="tl-result-text">Showing <strong id="tl-result-count">{allToolsWithOurs.length}</strong> tools</span>
+  </div>
+
+  <div class="tl-grid" id="tl-grid">
+    {allToolsWithOurs.map((tool) => (
+      <a
+        href={tool.url}
+        target={tool.source === 'ours' ? undefined : '_blank'}
+        rel={tool.source === 'ours' ? undefined : 'noopener noreferrer'}
+        class="tl-card"
+        data-type={tool.type}
+        data-source={tool.source || 'external'}
+        data-topic={tool.topic}
+        data-name={tool.name.toLowerCase()}
+        data-tags={tool.tags.join(',').toLowerCase()}
+        style={`--card-color:${tool.topicColor}`}
+      >
+        <div class="tl-card-top">
+          <span class="tl-card-icon">{tool.icon}</span>
+          <div class="tl-card-badges">
+            {tool.source === 'ours' && <span class="tl-card-tag-ours">Our Tool</span>}
+            {tool.featured && <span class="tl-card-tag-feat">Featured</span>}
+            {tool.status !== 'Live' && <span class="tl-card-tag-status" data-status={tool.status}>{tool.status}</span>}
+          </div>
+        </div>
+        <h3 class="tl-card-name">{tool.name}</h3>
+        <p class="tl-card-desc">{tool.description}</p>
+        <div class="tl-card-tags">
+          {tool.tags.slice(0, 3).map((tag) => (
+            <span class="tl-card-tag">{tag}</span>
+          ))}
+        </div>
+        <div class="tl-card-foot">
+          <span class="tl-card-cat" style={`--cat-color:${tool.topicColor}`}>{tool.topic}</span>
+          <div class="tl-card-foot-right">
+            <span class="tl-card-rating">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              {tool.rating}
+            </span>
+            <span class="tl-card-users">{tool.users}</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="tl-no-results" id="tl-no-results-external">
+    <div class="tl-no-results-icon">🔧</div>
+    <h3>No tools found</h3>
+    <p>Try a different tool type filter.</p>
+  </div>
+
+  <div class="tl-no-results tl-ours-empty" id="tl-no-results-ours">
+    <div class="tl-no-results-icon">⚡</div>
+    <h3>Our tools are coming soon</h3>
+    <p>We're building custom tools for emerging tech. Check back later!</p>
+  </div>
+</section>

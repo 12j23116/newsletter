@@ -1,0 +1,17 @@
+---
+import { resourceTypes } from '../../data/resources/resources-data';
+---
+
+<div class="res-filter-bar">
+  <div class="res-filter-scroll" id="res-filter-scroll">
+    {resourceTypes.map((type, i) => (
+      <button
+        class={`res-filter-pill${i === 0 ? ' active' : ''}`}
+        data-type={type.id}
+      >
+        <span>{type.icon}</span>
+        {type.name}
+      </button>
+    ))}
+  </div>
+</div>

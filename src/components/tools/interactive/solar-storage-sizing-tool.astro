@@ -1,0 +1,523 @@
+---
+/**
+ * Solar+Storage Sizing Tool — Interactive tool
+ * Size solar PV and battery storage systems
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="solar-storage">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">☀️</div>
+      <div>
+        <h2>Solar+Storage Sizing Tool</h2>
+        <p>Size solar PV and battery storage for self-consumption, backup, and off-grid applications</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Daily Load <span class="it-label-hint">(kWh/day)</span></label>
+          <input type="number" class="it-input" id="sss-load" value="30" min="1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Solar Resource <span class="it-label-hint">(peak sun hours/day)</span></label>
+          <input type="number" class="it-input" id="sss-psh" value="5" min="1" max="12" step="0.5" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">System Type</label>
+          <select class="it-select" id="sss-type">
+            <option value="self">Self-Consumption</option>
+            <option value="backup">Backup Power</option>
+            <option value="offgrid">Off-Grid</option>
+            <option value="grid">Grid-Tie (no battery)</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Backup Days <span class="it-label-hint">(for off-grid/backup)</span></label>
+          <input type="number" class="it-input" id="sss-backup-days" value="2" min="1" max="7" />
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">Panel Efficiency <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="sss-efficiency" value="22" min="15" max="30" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">System Losses <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="sss-losses" value="14" min="5" max="30" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">DoD Limit <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="sss-dod" value="90" min="50" max="100" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Solar Cost <span class="it-label-hint">($/W)</span></label>
+          <input type="number" class="it-input" id="sss-solar-cost" value="2.5" min="0.5" max="10" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Battery Cost <span class="it-label-hint">($/kWh)</span></label>
+          <input type="number" class="it-input" id="sss-batt-cost" value="400" min="100" max="2000" step="50" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="sss-calculate">Size System</button>
+        <button class="it-btn it-btn-secondary" id="sss-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="sss-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="sss-results">
+      <div class="it-results-card">
+        <div class="it-results-title">System Sizing Results</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">PV Array Size</div>
+            <div class="it-stat-value" id="sss-pv-size">0<span class="it-stat-unit"> kW</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Battery Capacity</div>
+            <div class="it-stat-value" id="sss-batt-size">0<span class="it-stat-unit"> kWh</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Total Cost</div>
+            <div class="it-stat-value" id="sss-cost">$0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Self-Sufficiency</div>
+            <div class="it-stat-value" id="sss-sufficiency">0<span class="it-stat-unit">%</span></div>
+          </div>
+        </div>
+
+        <div id="sss-breakdown"></div>
+        <div class="it-alert it-alert-info" id="sss-insight"></div>
+      </div>
+
+      <!-- Feature 1: Load Profile -->
+      <div class="it-results-card" id="sss-load-section" style="display:none;">
+        <div class="it-results-title">📊 Daily Load Profile & Solar Production Curve</div>
+        <canvas id="sss-load-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="sss-load-list"></div>
+      </div>
+
+      <!-- Feature 2: Self-Consumption Matching -->
+      <div class="it-results-card" id="sss-match-section" style="display:none;">
+        <div class="it-results-title">🎯 Self-Consumption Matching Analysis</div>
+        <div id="sss-match-list"></div>
+      </div>
+
+      <!-- Feature 3: Battery Cycle Simulation -->
+      <div class="it-results-card" id="sss-battcycle-section" style="display:none;">
+        <div class="it-results-title">🔋 Battery Charge/Discharge Cycle Simulation</div>
+        <canvas id="sss-battcycle-canvas" width="800" height="200" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="sss-battcycle-list"></div>
+      </div>
+
+      <!-- Feature 4: Grid Import/Export -->
+      <div class="it-results-card" id="sss-grid-section" style="display:none;">
+        <div class="it-results-title">⚡ Grid Import/Export Analysis</div>
+        <div id="sss-grid-list"></div>
+      </div>
+
+      <!-- Feature 5: Seasonal Variation -->
+      <div class="it-results-card" id="sss-season-section" style="display:none;">
+        <div class="it-results-title">📅 Seasonal Production vs Consumption</div>
+        <canvas id="sss-season-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="sss-season-list"></div>
+      </div>
+
+      <!-- Feature 6: ROI & NPV -->
+      <div class="it-results-card" id="sss-roi-section" style="display:none;">
+        <div class="it-results-title">💰 25-Year ROI & NPV Financial Model</div>
+        <div id="sss-roi-list"></div>
+      </div>
+
+      <!-- Feature 7: Carbon Offset -->
+      <div class="it-results-card" id="sss-carbon-section" style="display:none;">
+        <div class="it-results-title">🌍 Carbon Offset & Environmental Impact</div>
+        <div id="sss-carbon-list"></div>
+      </div>
+
+      <!-- Feature 8: Inverter & BOS -->
+      <div class="it-results-card" id="sss-inverter-section" style="display:none;">
+        <div class="it-results-title">🔌 Inverter & BOS Component Sizing</div>
+        <div id="sss-inverter-list"></div>
+      </div>
+
+      <!-- Feature 9: System Optimization -->
+      <div class="it-results-card" id="sss-opt-section" style="display:none;">
+        <div class="it-results-title">⚙️ System Optimization Recommendations</div>
+        <div id="sss-opt-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  function calculate() {
+    const load = parseFloat(document.getElementById('sss-load').value) || 30;
+    const psh = parseFloat(document.getElementById('sss-psh').value) || 5;
+    const type = document.getElementById('sss-type').value;
+    const backupDays = parseFloat(document.getElementById('sss-backup-days').value) || 2;
+    const efficiency = parseFloat(document.getElementById('sss-efficiency').value) / 100 || 0.22;
+    const losses = parseFloat(document.getElementById('sss-losses').value) / 100 || 0.14;
+    const dod = parseFloat(document.getElementById('sss-dod').value) / 100 || 0.90;
+    const solarCost = parseFloat(document.getElementById('sss-solar-cost').value) || 2.5;
+    const battCost = parseFloat(document.getElementById('sss-batt-cost').value) || 400;
+
+    // PV array sizing
+    // Daily energy needed / (PSH × system efficiency after losses)
+    const systemEff = efficiency * (1 - losses);
+    let pvMultiplier = 1.3; // 30% oversize for self-consumption
+    if (type === 'offgrid') pvMultiplier = 1.5;
+    else if (type === 'backup') pvMultiplier = 1.2;
+    else if (type === 'grid') pvMultiplier = 1.1;
+
+    const pvSize = (load * pvMultiplier) / (psh * systemEff); // kW
+
+    // Battery sizing
+    let battSize = 0;
+    if (type === 'self') {
+      // Store excess daytime production for evening use (~50% of daily load)
+      battSize = load * 0.5 / dod;
+    } else if (type === 'backup') {
+      battSize = load * backupDays / dod;
+    } else if (type === 'offgrid') {
+      battSize = load * (backupDays + 1) / dod; // Extra day for autonomy
+    }
+
+    // Costs
+    const pvCost = pvSize * 1000 * solarCost;
+    const batteryCost = battSize * battCost;
+    const inverterCost = pvSize * 300; // ~$300/kW for inverter
+    const installCost = (pvCost + batteryCost + inverterCost) * 0.15;
+    const totalCost = pvCost + batteryCost + inverterCost + installCost;
+
+    // Self-sufficiency estimate
+    const dailyPV = pvSize * psh * systemEff;
+    const selfConsumption = Math.min(dailyPV, load * 0.4) + Math.min(battSize * dod, load * 0.6);
+    const selfSufficiency = Math.min(100, (selfConsumption / load) * 100);
+
+    // Payback (assume grid rate $0.15/kWh)
+    const gridRate = 0.15;
+    const annualSavings = load * 365 * gridRate * (selfSufficiency / 100);
+    const payback = annualSavings > 0 ? totalCost / annualSavings : 0;
+
+    // Update UI
+    document.getElementById('sss-pv-size').innerHTML = pvSize.toFixed(1) + '<span class="it-stat-unit"> kW</span>';
+    document.getElementById('sss-batt-size').innerHTML = battSize.toFixed(1) + '<span class="it-stat-unit"> kWh</span>';
+    document.getElementById('sss-cost').innerHTML = '$' + totalCost.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    document.getElementById('sss-sufficiency').innerHTML = selfSufficiency.toFixed(0) + '<span class="it-stat-unit">%</span>';
+
+    const breakdown = document.getElementById('sss-breakdown');
+    breakdown.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>System Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>System Type</td><td>${type === 'self' ? 'Self-Consumption' : type === 'backup' ? 'Backup Power' : type === 'offgrid' ? 'Off-Grid' : 'Grid-Tie'}</td></tr>
+          <tr><td>Daily Load</td><td>${load} kWh/day</td></tr>
+          <tr><td>Peak Sun Hours</td><td>${psh} hours/day</td></tr>
+          <tr><td>Panel Efficiency</td><td>${(efficiency * 100).toFixed(0)}%</td></tr>
+          <tr><td>System Losses</td><td>${(losses * 100).toFixed(0)}%</td></tr>
+          <tr><td>Effective System Efficiency</td><td>${(systemEff * 100).toFixed(1)}%</td></tr>
+          <tr><td>Oversizing Factor</td><td>${pvMultiplier}x</td></tr>
+          <tr><td class="it-highlight">PV Array Size</td><td class="it-highlight">${pvSize.toFixed(1)} kW (${Math.round(pvSize * 1000 / 400)} panels @ 400W)</td></tr>
+          <tr><td>Daily PV Production</td><td>${dailyPV.toFixed(1)} kWh/day</td></tr>
+          <tr><td class="it-highlight">Battery Capacity</td><td class="it-highlight">${battSize.toFixed(1)} kWh (${(battSize * dod).toFixed(1)} kWh usable)</td></tr>
+          <tr><td>DoD Limit</td><td>${(dod * 100).toFixed(0)}%</td></tr>
+          ${type === 'backup' || type === 'offgrid' ? `<tr><td>Autonomy</td><td>${backupDays} days</td></tr>` : ''}
+          <tr><td>PV Cost</td><td>$${pvCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td></tr>
+          <tr><td>Battery Cost</td><td>$${batteryCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td></tr>
+          <tr><td>Inverter Cost</td><td>$${inverterCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td></tr>
+          <tr><td>Installation (15%)</td><td>$${installCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td></tr>
+          <tr><td class="it-highlight">Total System Cost</td><td class="it-highlight">$${totalCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td></tr>
+          <tr><td>Estimated Self-Sufficiency</td><td>${selfSufficiency.toFixed(0)}%</td></tr>
+          <tr><td>Annual Savings (@$${gridRate}/kWh)</td><td>$${annualSavings.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td></tr>
+          <tr><td>Simple Payback</td><td>${payback > 0 ? payback.toFixed(1) + ' years' : 'N/A'}</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const insight = document.getElementById('sss-insight');
+    insight.innerHTML = `<strong>💡 Recommended System:</strong> ${pvSize.toFixed(1)} kW solar array with ${battSize.toFixed(1)} kWh battery storage. Total cost: $${totalCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}. ${selfSufficiency >= 80 ? 'This system achieves high self-sufficiency.' : selfSufficiency >= 50 ? 'Moderate self-sufficiency — consider adding more panels or battery capacity.' : 'Low self-sufficiency — increase PV size or battery for better coverage.'} ${payback > 0 && payback < 10 ? `Payback in ${payback.toFixed(1)} years is excellent.` : payback > 0 && payback < 15 ? `Payback in ${payback.toFixed(1)} years is reasonable.` : payback > 0 ? `Payback in ${payback.toFixed(1)} years — consider incentives or lower-cost options.` : ''}`;
+
+    document.getElementById('sss-results').classList.add('show');
+
+    // === Feature 1: Daily Load Profile & Solar Production Curve ===
+    const hours = [...Array(24).keys()];
+    // Typical residential load profile (normalized)
+    const loadProfile = [0.02, 0.015, 0.015, 0.015, 0.02, 0.03, 0.05, 0.07, 0.05, 0.04, 0.035, 0.04, 0.045, 0.04, 0.035, 0.04, 0.05, 0.07, 0.09, 0.08, 0.06, 0.04, 0.03, 0.025];
+    // Solar production curve (bell curve centered at noon)
+    const solarCurve = hours.map(h => { const x = (h - 6) / 6; return h >= 6 && h <= 18 ? Math.max(0, Math.sin(x * Math.PI) * 1.0) : 0; });
+    const solarTotal = solarCurve.reduce((s, v) => s + v, 0);
+    const hourlyLoad = loadProfile.map(v => v * load);
+    const hourlySolar = solarCurve.map(v => v / solarTotal * dailyPV);
+
+    const lCanvas = document.getElementById('sss-load-canvas');
+    const lctx = lCanvas.getContext('2d');
+    const lw = lCanvas.width, lh = lCanvas.height;
+    lctx.fillStyle = '#ebedf5'; lctx.fillRect(0, 0, lw, lh);
+    const maxVal = Math.max(...hourlyLoad, ...hourlySolar) * 1.1;
+    // Grid
+    lctx.strokeStyle = 'rgba(15,23,42,0.08)'; lctx.lineWidth = 1;
+    for (let i = 0; i <= 24; i += 4) { lctx.beginPath(); lctx.moveTo(i / 24 * lw, 0); lctx.lineTo(i / 24 * lw, lh); lctx.stroke(); }
+    for (let i = 0; i <= 4; i++) { lctx.beginPath(); lctx.moveTo(0, i / 4 * lh); lctx.lineTo(lw, i / 4 * lh); lctx.stroke(); }
+    // Load bars
+    hourlyLoad.forEach((v, h) => { const bw = lw / 24 - 2; lctx.fillStyle = '#06b6d4'; lctx.fillRect(h / 24 * lw + 1, lh - (v / maxVal) * (lh - 20) - 10, bw, (v / maxVal) * (lh - 20)); });
+    // Solar curve
+    lctx.strokeStyle = '#f59e0b'; lctx.lineWidth = 2; lctx.beginPath();
+    hourlySolar.forEach((v, h) => { const x = (h + 0.5) / 24 * lw; const y = lh - (v / maxVal) * (lh - 20) - 10; if (h === 0) lctx.moveTo(x, y); else lctx.lineTo(x, y); });
+    lctx.stroke();
+    // Labels
+    lctx.fillStyle = '#5c5c72'; lctx.font = '10px sans-serif'; lctx.textAlign = 'center';
+    ['12am', '6am', '12pm', '6pm', '12am'].forEach((label, i) => lctx.fillText(label, i / 4 * lw, lh - 2));
+    lctx.fillStyle = '#06b6d4'; lctx.fillRect(10, 5, 10, 10); lctx.fillStyle = '#1e293b'; lctx.fillText('Load', 28, 14);
+    lctx.fillStyle = '#f59e0b'; lctx.fillRect(70, 5, 10, 10); lctx.fillStyle = '#1e293b'; lctx.fillText('Solar', 88, 14);
+
+    const peakLoadHour = hourlyLoad.indexOf(Math.max(...hourlyLoad));
+    const peakSolarHour = hourlySolar.indexOf(Math.max(...hourlySolar));
+    document.getElementById('sss-load-list').innerHTML = `
+      <div class="it-alert it-alert-info">Peak load at ${peakLoadHour}:00 (${hourlyLoad[peakLoadHour].toFixed(1)} kWh). Peak solar at ${peakSolarHour}:00 (${hourlySolar[peakSolarHour].toFixed(1)} kWh). ${peakLoadHour >= 17 || peakLoadHour <= 8 ? 'Evening/morning peak — battery storage is essential to shift solar production.' : 'Midday peak — good alignment with solar production.'}</div>
+    `;
+    document.getElementById('sss-load-section').style.display = 'block';
+
+    // === Feature 2: Self-Consumption Matching ===
+    let directConsumption = 0, excessSolar = 0, unmetLoad = 0, batteryCharged = 0, batteryDischarged = 0;
+    let battSoC = battSize * dod * 0.5; // Start at 50%
+    const hourlyData = [];
+    for (let h = 0; h < 24; h++) {
+      const solar = hourlySolar[h];
+      const demand = hourlyLoad[h];
+      let toBattery = 0, fromBattery = 0, toGrid = 0, fromGrid = 0;
+      if (solar > demand) {
+        directConsumption += demand;
+        let excess = solar - demand;
+        const chargeSpace = battSize * dod - battSoC;
+        toBattery = Math.min(excess, chargeSpace);
+        battSoC += toBattery; excess -= toBattery;
+        toGrid = excess; excessSolar += excess;
+      } else {
+        directConsumption += solar;
+        const deficit = demand - solar;
+        const availableBatt = battSoC;
+        fromBattery = Math.min(deficit, availableBatt);
+        battSoC -= fromBattery; batteryDischarged += fromBattery;
+        fromGrid = deficit - fromBattery; unmetLoad += fromGrid;
+      }
+      batteryCharged += toBattery;
+      hourlyData.push({ h, solar, demand, toBattery, fromBattery, toGrid, fromGrid, soc: battSoC });
+    }
+    const selfConsumptionRate = (directConsumption + batteryDischarged) / (dailyPV) * 100;
+    const selfSufficiencyRate = (directConsumption + batteryDischarged) / load * 100;
+    document.getElementById('sss-match-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Metric</th><th>Value</th><th>Share</th></tr></thead><tbody>
+        <tr><td>Direct Solar Consumption</td><td>${directConsumption.toFixed(1)} kWh</td><td>${(directConsumption / load * 100).toFixed(1)}% of load</td></tr>
+        <tr><td>Battery Discharge to Load</td><td>${batteryDischarged.toFixed(1)} kWh</td><td>${(batteryDischarged / load * 100).toFixed(1)}% of load</td></tr>
+        <tr><td>Grid Import (unmet)</td><td>${unmetLoad.toFixed(1)} kWh</td><td>${(unmetLoad / load * 100).toFixed(1)}% of load</td></tr>
+        <tr class="it-highlight"><td>Self-Sufficiency</td><td class="it-highlight">${selfSufficiencyRate.toFixed(1)}%</td><td>of total load</td></tr>
+        <tr><td>Excess Solar to Grid</td><td>${excessSolar.toFixed(1)} kWh</td><td>${(excessSolar / dailyPV * 100).toFixed(1)}% of production</td></tr>
+        <tr><td>Battery Charge from Solar</td><td>${batteryCharged.toFixed(1)} kWh</td><td>${(batteryCharged / dailyPV * 100).toFixed(1)}% of production</td></tr>
+        <tr class="it-highlight"><td>Self-Consumption Rate</td><td class="it-highlight">${selfConsumptionRate.toFixed(1)}%</td><td>of solar used on-site</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Self-consumption rate = solar used on-site / total solar produced. Self-sufficiency = solar+battery supply / total load. ${excessSolar > unmetLoad ? 'Net energy exporter — produces more than consumed.' : 'Net energy importer — needs grid supplement.'} ${selfConsumptionRate < 50 ? 'Low self-consumption — consider increasing battery size or load shifting.' : 'Good self-consumption — system is well-matched to load.'}</div>
+    `;
+    document.getElementById('sss-match-section').style.display = 'block';
+
+    // === Feature 3: Battery Cycle Simulation ===
+    const bcCanvas = document.getElementById('sss-battcycle-canvas');
+    const bcctx = bcCanvas.getContext('2d');
+    const bcw = bcCanvas.width, bch = bcCanvas.height;
+    bcctx.fillStyle = '#ebedf5'; bcctx.fillRect(0, 0, bcw, bch);
+    bcctx.strokeStyle = 'rgba(15,23,42,0.08)'; bcctx.lineWidth = 1;
+    for (let i = 0; i <= 24; i += 4) { bcctx.beginPath(); bcctx.moveTo(i / 24 * bcw, 0); bcctx.lineTo(i / 24 * bcw, bch); bcctx.stroke(); }
+    for (let i = 0; i <= 4; i++) { bcctx.beginPath(); bcctx.moveTo(0, i / 4 * bch); bcctx.lineTo(bcw, i / 4 * bch); bcctx.stroke(); }
+    // SoC line
+    bcctx.strokeStyle = '#059669'; bcctx.lineWidth = 2; bcctx.beginPath();
+    hourlyData.forEach((d, i) => { const x = (d.h + 0.5) / 24 * bcw; const y = bch - (d.soc / (battSize * dod)) * (bch - 20) - 10; if (i === 0) bcctx.moveTo(x, y); else bcctx.lineTo(x, y); });
+    bcctx.stroke();
+    // Charge/discharge bars
+    hourlyData.forEach(d => { const x = d.h / 24 * bcw; if (d.toBattery > 0) { bcctx.fillStyle = '#06b6d4'; bcctx.fillRect(x, bch - 15, bcw / 24 - 2, 5); } if (d.fromBattery > 0) { bcctx.fillStyle = '#d97706'; bcctx.fillRect(x, bch - 8, bcw / 24 - 2, 5); } });
+    bcctx.fillStyle = '#5c5c72'; bcctx.font = '10px sans-serif'; bcctx.textAlign = 'center';
+    ['12am', '6am', '12pm', '6pm', '12am'].forEach((label, i) => bcctx.fillText(label, i / 4 * bcw, bch - 2));
+    const minSoC = Math.min(...hourlyData.map(d => d.soc));
+    const maxSoC = Math.max(...hourlyData.map(d => d.soc));
+    document.getElementById('sss-battcycle-list').innerHTML = `
+      <div class="it-alert it-alert-info">Battery SoC ranges from ${(minSoC / (battSize * dod) * 100).toFixed(0)}% to ${(maxSoC / (battSize * dod) * 100).toFixed(0)}% over 24h. ${minSoC / (battSize * dod) < 0.1 ? '⚠️ Battery nearly depleted — consider increasing capacity.' : maxSoC / (battSize * dod) > 0.95 ? 'Battery nearly full — excess solar exported to grid.' : 'Battery cycling within healthy range.'} Daily throughput: ${batteryCharged.toFixed(1)} kWh charged, ${batteryDischarged.toFixed(1)} kWh discharged.</div>
+    `;
+    document.getElementById('sss-battcycle-section').style.display = 'block';
+
+    // === Feature 4: Grid Import/Export ===
+    const gridRate = 0.15; const feedInRate = 0.08;
+    const dailyGridImport = unmetLoad; const dailyGridExport = excessSolar;
+    const annualGridImport = dailyGridImport * 365; const annualGridExport = dailyGridExport * 365;
+    const annualImportCost = annualGridImport * gridRate;
+    const annualExportRevenue = annualGridExport * feedInRate;
+    const netGridCost = annualImportCost - annualExportRevenue;
+    document.getElementById('sss-grid-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Grid Interaction</th><th>Daily</th><th>Annual</th><th>Cost/Revenue</th></tr></thead><tbody>
+        <tr><td>Grid Import</td><td>${dailyGridImport.toFixed(1)} kWh</td><td>${annualGridImport.toFixed(0)} kWh</td><td style="color:#dc2626;">-$${annualImportCost.toFixed(0)}/yr</td></tr>
+        <tr><td>Grid Export</td><td>${dailyGridExport.toFixed(1)} kWh</td><td>${annualGridExport.toFixed(0)} kWh</td><td style="color:#059669;">+$${annualExportRevenue.toFixed(0)}/yr</td></tr>
+        <tr class="it-highlight"><td>Net Grid Cost</td><td>${(dailyGridImport - dailyGridExport).toFixed(1)} kWh</td><td>${(annualGridImport - annualGridExport).toFixed(0)} kWh</td><td class="it-highlight">${netGridCost > 0 ? '-$' + netGridCost.toFixed(0) + '/yr' : '+$' + Math.abs(netGridCost).toFixed(0) + '/yr'}</td></tr>
+      </tbody></table>
+      <div style="margin-top:0.75rem;">
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Grid Rate (import)</span><strong>$${gridRate}/kWh</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Feed-in Tariff (export)</span><strong>$${feedInRate}/kWh</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Net Metering?</span><strong>${gridRate === feedInRate ? 'Yes (1:1)' : 'No (' + (feedInRate / gridRate * 100).toFixed(0) + '% of import)'}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Effective $/kWh (with solar)</span><strong>$${(netGridCost / (load * 365)).toFixed(3)}/kWh</strong></div>
+      </div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${netGridCost < 0 ? '✓ System is net-positive — exports more value than imports. ' : ''}Feed-in tariff at $${feedInRate}/kWh is ${(feedInRate / gridRate * 100).toFixed(0)}% of import rate. ${feedInRate / gridRate < 0.5 ? 'Low feed-in tariff favors self-consumption — maximize battery size.' : 'Good feed-in tariff — exporting excess is economically viable.'}</div>
+    `;
+    document.getElementById('sss-grid-section').style.display = 'block';
+
+    // === Feature 5: Seasonal Variation ===
+    const monthlyPSH = [3.5, 4.2, 5.0, 5.5, 5.8, 6.0, 5.8, 5.5, 5.0, 4.3, 3.5, 3.0]; // Adjusted for season
+    const monthlyLoadAdj = [1.15, 1.10, 1.0, 0.95, 0.90, 0.95, 1.05, 1.05, 0.95, 0.90, 1.0, 1.15]; // Winter heating, summer cooling
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const monthlyProd = monthlyPSH.map(psh => pvSize * psh * systemEff * 30);
+    const monthlyCons = monthlyLoadAdj.map(adj => load * adj * 30);
+    const sCanvas = document.getElementById('sss-season-canvas');
+    const sctx = sCanvas.getContext('2d');
+    const sw = sCanvas.width, sh = sCanvas.height;
+    sctx.fillStyle = '#ebedf5'; sctx.fillRect(0, 0, sw, sh);
+    const sMax = Math.max(...monthlyProd, ...monthlyCons) * 1.1;
+    sctx.strokeStyle = 'rgba(15,23,42,0.08)'; sctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) { sctx.beginPath(); sctx.moveTo(0, i / 4 * sh); sctx.lineTo(sw, i / 4 * sh); sctx.stroke(); }
+    const barW = sw / 12 - 4;
+    months.forEach((m, i) => {
+      const x = i / 12 * sw + 2;
+      sctx.fillStyle = '#f59e0b'; sctx.fillRect(x, sh - (monthlyProd[i] / sMax) * (sh - 20) - 10, barW / 2 - 1, (monthlyProd[i] / sMax) * (sh - 20));
+      sctx.fillStyle = '#06b6d4'; sctx.fillRect(x + barW / 2, sh - (monthlyCons[i] / sMax) * (sh - 20) - 10, barW / 2 - 1, (monthlyCons[i] / sMax) * (sh - 20));
+      sctx.fillStyle = '#5c5c72'; sctx.font = '9px sans-serif'; sctx.textAlign = 'center'; sctx.fillText(m, x + barW / 2, sh - 2);
+    });
+    sctx.fillStyle = '#f59e0b'; sctx.fillRect(10, 5, 10, 10); sctx.fillStyle = '#1e293b'; sctx.fillText('Production', 28, 14);
+    sctx.fillStyle = '#06b6d4'; sctx.fillRect(90, 5, 10, 10); sctx.fillStyle = '#1e293b'; sctx.fillText('Consumption', 108, 14);
+    const annualProd = monthlyProd.reduce((s, v) => s + v, 0);
+    const annualCons = monthlyCons.reduce((s, v) => s + v, 0);
+    const surplusMonths = months.filter((m, i) => monthlyProd[i] > monthlyCons[i]);
+    const deficitMonths = months.filter((m, i) => monthlyProd[i] < monthlyCons[i]);
+    document.getElementById('sss-season-list').innerHTML = `
+      <div class="it-alert it-alert-info">Annual production: ${annualProd.toFixed(0)} kWh. Annual consumption: ${annualCons.toFixed(0)} kWh. ${(annualProd / annualCons * 100).toFixed(0)}% annual coverage. Surplus months: ${surplusMonths.join(', ')}. Deficit months: ${deficitMonths.join(', ')}. ${deficitMonths.length > 6 ? 'Significant seasonal mismatch — consider oversized array or winter backup generation.' : 'Reasonable seasonal balance — battery covers short-term deficits.'}</div>
+    `;
+    document.getElementById('sss-season-section').style.display = 'block';
+
+    // === Feature 6: ROI & NPV ===
+    const discountRate = 0.05; const systemLife = 25; const panelDegradation = 0.005;
+    let npv = -totalCost; let cumulativeCash = -totalCost;
+    const yearlyData = [];
+    for (let yr = 1; yr <= systemLife; yr++) {
+      const prodFactor = Math.pow(1 - panelDegradation, yr - 1);
+      const yrSavings = annualSavings * prodFactor;
+      const yrNetGrid = netGridCost * prodFactor;
+      const yrNet = yrSavings - yrNetGrid;
+      // Battery replacement at year 12
+      const battReplacement = yr === 12 ? batteryCost * 0.7 : 0;
+      const netCash = yrNet - battReplacement;
+      npv += netCash / Math.pow(1 + discountRate, yr);
+      cumulativeCash += netCash;
+      yearlyData.push({ yr, savings: yrSavings, netGrid: yrNetGrid, battReplacement, netCash, cumulative: cumulativeCash });
+    }
+    const irr = npv > 0 ? 'Positive' : 'Negative';
+    document.getElementById('sss-roi-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Year</th><th>Energy Savings</th><th>Net Grid Cost</th><th>Battery Repl.</th><th>Net Cash Flow</th><th>Cumulative</th></tr></thead><tbody>
+        ${yearlyData.filter((_, i) => i % 5 === 0 || i === 0).map(d => `<tr><td><strong>Yr ${d.yr}</strong></td><td style="color:#059669;">+$${d.savings.toFixed(0)}</td><td style="color:${d.netGrid > 0 ? '#dc2626' : '#059669'};">${d.netGrid > 0 ? '-' : '+'}$${Math.abs(d.netGrid).toFixed(0)}</td><td>${d.battReplacement > 0 ? '-$' + d.battReplacement.toFixed(0) : '—'}</td><td class="it-highlight">${d.netCash > 0 ? '+' : ''}$${d.netCash.toFixed(0)}</td><td style="color:${d.cumulative > 0 ? '#059669' : '#dc2626'};">$${d.cumulative.toFixed(0)}</td></tr>`).join('')}
+        <tr class="it-highlight"><td><strong>Yr 25</strong></td><td>+$${yearlyData[24].savings.toFixed(0)}</td><td>—</td><td>—</td><td>+$${yearlyData[24].netCash.toFixed(0)}</td><td class="it-highlight">$${yearlyData[24].cumulative.toFixed(0)}</td></tr>
+      </tbody></table>
+      <div style="margin-top:0.75rem;">
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>System Cost</span><strong>$${totalCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>25-Year Savings (undiscounted)</span><strong>$${yearlyData.reduce((s, d) => s + d.netCash, 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>NPV (@ 5% discount)</span><strong style="color:${npv > 0 ? '#059669' : '#dc2626'};">$${npv.toLocaleString(undefined, { maximumFractionDigits: 0 })}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>IRR</span><strong style="color:${npv > 0 ? '#059669' : '#dc2626'};">${irr}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Payback Period</span><strong>${payback.toFixed(1)} years</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>LCOE ($/kWh)</span><strong>$${(totalCost / annualProd / systemLife).toFixed(3)}/kWh</strong></div>
+      </div>
+      <div class="it-alert ${npv > 0 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${npv > 0 ? `✓ Positive NPV — investment is profitable over 25 years. ` : '⚠️ Negative NPV — consider incentives, higher grid rates, or lower system cost. '}Battery replacement at year 12 ($${(batteryCost * 0.7).toFixed(0)}). Panel degradation: 0.5%/yr. LCOE: $${(totalCost / annualProd / systemLife).toFixed(3)}/kWh vs grid at $${gridRate}/kWh.</div>
+    `;
+    document.getElementById('sss-roi-section').style.display = 'block';
+
+    // === Feature 7: Carbon Offset ===
+    const gridCO2 = 0.4; // kg CO2/kWh (US average)
+    const annualCO2Offset = annualProd * gridCO2;
+    const lifetimeCO2 = annualCO2Offset * systemLife;
+    const treesEquivalent = lifetimeCO2 / 21; // 1 tree absorbs ~21 kg CO2/yr
+    const coalEquivalent = lifetimeCO2 / 2000; // tons of coal
+    document.getElementById('sss-carbon-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Energy Production</span><strong>${annualProd.toFixed(0)} kWh/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Grid CO₂ Factor</span><strong>${gridCO2} kg CO₂/kWh</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span class="it-highlight">Annual CO₂ Offset</span><strong class="it-highlight">${annualCO2Offset.toFixed(0)} kg/yr (${(annualCO2Offset / 1000).toFixed(1)} tonnes)</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>25-Year CO₂ Offset</span><strong>${lifetimeCO2.toFixed(0)} kg (${(lifetimeCO2 / 1000).toFixed(1)} tonnes)</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Equivalent Trees Planted</span><strong>${treesEquivalent.toFixed(0)} trees</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Coal Avoided</span><strong>${coalEquivalent.toFixed(1)} tons</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Car Miles Avoided</span><strong>${(lifetimeCO2 / 0.25).toFixed(0)} miles</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>System Embodied CO₂</span><strong>~${(pvSize * 1500 + battSize * 100).toFixed(0)} kg (payback in ~${((pvSize * 1500 + battSize * 100) / annualCO2Offset).toFixed(1)} yrs)</strong></div>
+      <div class="it-alert it-alert-good" style="margin-top:0.5rem;">Over 25 years, this system offsets ${(lifetimeCO2 / 1000).toFixed(1)} tonnes of CO₂ — equivalent to planting ${treesEquivalent.toFixed(0)} trees. The system's embodied carbon (manufacturing) is paid back in ~${((pvSize * 1500 + battSize * 100) / annualCO2Offset).toFixed(1)} years of operation.</div>
+    `;
+    document.getElementById('sss-carbon-section').style.display = 'block';
+
+    // === Feature 8: Inverter & BOS ===
+    const inverterSize = pvSize * 0.9; // DC/AC ratio ~1.1
+    const numStrings = Math.ceil(pvSize * 1000 / 400 / 12); // 12 panels per string
+    const stringVoltage = 12 * 40; // ~40V per panel
+    const wireGauge = pvSize < 5 ? '10 AWG' : pvSize < 10 ? '8 AWG' : '6 AWG';
+    const breakerSize = Math.ceil(inverterSize * 1.25 / 5) * 5;
+    document.getElementById('sss-inverter-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Component</th><th>Specification</th><th>Est. Cost</th></tr></thead><tbody>
+        <tr><td><strong>Inverter</strong></td><td>${inverterSize.toFixed(1)} kW ${type === 'offgrid' ? 'off-grid' : type === 'self' || type === 'backup' ? 'hybrid' : 'string'} inverter</td><td>$${(inverterSize * (type === 'offgrid' ? 500 : type === 'self' || type === 'backup' ? 400 : 250)).toFixed(0)}</td></tr>
+        <tr><td><strong>String Configuration</strong></td><td>${numStrings} string(s) × 12 panels (${stringVoltage}V DC max)</td><td>—</td></tr>
+        <tr><td><strong>DC Wiring</strong></td><td>${wireGauge} copper, PV-rated (UV resistant)</td><td>$${(pvSize * 50).toFixed(0)}</td></tr>
+        <tr><td><strong>AC Breaker</strong></td><td>${breakerSize}A double-pole breaker</td><td>$50</td></tr>
+        <tr><td><strong>Mounting System</strong></td><td>${pvSize < 5 ? 'Roof-mount rail system' : 'Roof or ground mount'}</td><td>$${(pvSize * 150).toFixed(0)}</td></tr>
+        <tr><td><strong>Battery BMS</strong></td><td>${battSize > 0 ? battSize.toFixed(0) + ' kWh BMS + disconnect' : 'N/A'}</td><td>${battSize > 0 ? '$' + (battSize * 20).toFixed(0) : '—'}</td></tr>
+        <tr><td><strong>Charge Controller</strong></td><td>${type === 'offgrid' ? 'MPPT ' + (pvSize * 1.2).toFixed(1) + ' kW' : 'Integrated in inverter'}</td><td>${type === 'offgrid' ? '$' + (pvSize * 80).toFixed(0) : '—'}</td></tr>
+        <tr><td><strong>Monitoring</strong></td><td>Wi-Fi monitoring + app</td><td>$200</td></tr>
+        <tr><td><strong>Permits & Inspection</strong></td><td>Electrical + building permit</td><td>$500</td></tr>
+        <tr class="it-highlight"><td><strong>Total BOS</strong></td><td>Balance of system components</td><td class="it-highlight">$${(inverterSize * (type === 'offgrid' ? 500 : type === 'self' || type === 'backup' ? 400 : 250) + pvSize * 200 + 750).toFixed(0)}</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">DC/AC ratio: ${(pvSize / inverterSize).toFixed(2)} (optimal 1.1-1.3). ${type === 'self' || type === 'backup' ? 'Hybrid inverter required for battery integration. ' : type === 'offgrid' ? 'Off-grid requires MPPT charge controller and battery-based inverter. ' : 'String inverter is most cost-effective for grid-tie. '} Consider microinverters (${pvSize * 1000 / 400} × $150) if shading is a concern.</div>
+    `;
+    document.getElementById('sss-inverter-section').style.display = 'block';
+
+    // === Feature 9: System Optimization ===
+    const recommendations = [];
+    if (selfSufficiencyRate < 70) recommendations.push({ priority: 'High', text: `Increase PV size by ${((load * 0.3) / (psh * systemEff)).toFixed(1)} kW or battery by ${(load * 0.2 / dod).toFixed(1)} kWh to reach 80%+ self-sufficiency.` });
+    if (excessSolar > unmetLoad * 1.5) recommendations.push({ priority: 'Medium', text: `Significant excess export (${excessSolar.toFixed(1)} kWh/day). Consider load shifting to midday or increasing battery capacity to capture more solar.` });
+    if (payback > 12) recommendations.push({ priority: 'High', text: `Payback exceeds 12 years. Explore federal tax credit (30%), state rebates, or SREC programs to improve economics.` });
+    if (type === 'grid' && selfSufficiencyRate < 30) recommendations.push({ priority: 'Medium', text: `Grid-tie without battery limits self-sufficiency to ${selfSufficiencyRate.toFixed(0)}%. Adding a ${load * 0.5 / dod} kWh battery would double self-consumption.` });
+    if (psh < 4) recommendations.push({ priority: 'Medium', text: `Low solar resource (${psh} PSH). Consider tracking mounts (+25% yield) or east-west panel orientation for broader production curve.` });
+    if (efficiency < 0.20) recommendations.push({ priority: 'Low', text: `Panel efficiency at ${(efficiency * 100).toFixed(0)}% is below current market average (~22%). Premium panels (24%+) reduce roof area needed.` });
+    if (battSize > 0 && dod < 0.85) recommendations.push({ priority: 'Low', text: `DoD limit at ${(dod * 100).toFixed(0)}% is conservative. LFP batteries safely support 90% DoD, allowing ${((battSize * 0.9 - battSize * dod)).toFixed(1)} kWh more usable capacity.` });
+    if (recommendations.length === 0) recommendations.push({ priority: 'Info', text: 'System is well-optimized for the given parameters. No major improvements needed.' });
+    document.getElementById('sss-opt-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Priority</th><th>Recommendation</th></tr></thead><tbody>
+        ${recommendations.map(r => `<tr><td style="color:${r.priority === 'High' ? '#dc2626' : r.priority === 'Medium' ? '#d97706' : r.priority === 'Low' ? '#06b6d4' : '#059669'};font-weight:700;">${r.priority}</td><td>${r.text}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Optimization suggestions are based on system performance metrics. Federal ITC (30%) can reduce net cost by $${(totalCost * 0.3).toLocaleString(undefined, { maximumFractionDigits: 0 })}. Additional state/local incentives may further improve ROI.</div>
+    `;
+    document.getElementById('sss-opt-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('sss-export').style.display = 'inline-flex';
+    document.getElementById('sss-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), systemType: type, load, psh, pvSize, battSize, totalCost, selfSufficiency: selfSufficiencyRate, selfConsumption: selfConsumptionRate, dailyProduction: dailyPV, hourlyProfile: hourlyData, gridInteraction: { dailyImport: unmetLoad, dailyExport: excessSolar, annualNetCost: netGridCost }, seasonal: { annualProduction: annualProd, annualConsumption: annualCons }, financial: { npv, payback, lcoe: totalCost / annualProd / systemLife, annualSavings }, carbon: { annualOffset: annualCO2Offset, lifetimeOffset: lifetimeCO2, treesEquivalent }, recommendations };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'solar-storage-sizing-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('sss-calculate').addEventListener('click', calculate);
+  document.getElementById('sss-reset').addEventListener('click', () => {
+    document.getElementById('sss-results').classList.remove('show');
+  });
+})();
+</script>

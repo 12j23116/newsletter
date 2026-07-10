@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './comparisons-styles.css';
+import ComparisonsHero from '../../components/comparisons/ComparisonsHero.astro';
+import ComparisonsFilter from '../../components/comparisons/ComparisonsFilter.astro';
+import ComparisonsGrid from '../../components/comparisons/ComparisonsGrid.astro';
+import ComparisonsCTA from '../../components/comparisons/ComparisonsCTA.astro';
+import { comparisons } from '../../data/comparisons/comparisons-content';
+
+const title = 'Comparisons — Head-to-Head Technology Analysis';
+const description = 'Side-by-side comparison of 120+ emerging technologies across 12 frontiers — AI models, humanoid robots, fusion approaches, battery technologies, SMR designs, quantum platforms, and more.';
+const keywords = 'technology comparison, AI model comparison, humanoid robots comparison, fusion approaches, battery technology comparison, SMR designs, quantum platforms, head-to-head tech analysis';
+
+const cmpLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'TechNanoAI Comparisons',
+  description: description,
+  url: 'https://technanoai.com/comparisons',
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+};
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="cmp-page">
+    <ComparisonsHero />
+    <ComparisonsFilter />
+    <ComparisonsGrid />
+    <ComparisonsCTA />
+  </div>
+  <script type="application/json" id="cmp-data" set:html={JSON.stringify(comparisons)} />
+  <script type="application/ld+json" set:html={JSON.stringify(cmpLd)} />
+</BaseLayout>
+
+<script>
+  // ===== Scroll reveal =====
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+  document.querySelectorAll('.cmp-reveal').forEach((el) => revealObserver.observe(el));
+
+  // ===== Search & Filter =====
+  const searchInput = document.getElementById('cmp-search') as HTMLInputElement | null;
+  const searchClear = document.getElementById('cmp-search-clear');
+  const cards = document.querySelectorAll<HTMLElement>('.cmp-card');
+  const noResults = document.getElementById('cmp-no-results');
+  const filterPills = document.querySelectorAll<HTMLElement>('.cmp-filter-pill');
+  const clearBtn = document.getElementById('cmp-clear-filters');
+
+  let activeFilter = 'all';
+  let searchTerm = '';
+
+  const updateResults = () => {
+    let visible = 0;
+    cards.forEach((card) => {
+      const cat = (card.dataset.cat || '').toLowerCase();
+      const title = card.dataset.title || '';
+      const subtitle = card.dataset.subtitle || '';
+
+      const matchesFilter = activeFilter === 'all' || cat === activeFilter;
+      const matchesSearch = !searchTerm || title.includes(searchTerm) || subtitle.includes(searchTerm);
+
+      if (matchesFilter && matchesSearch) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (noResults) noResults.classList.toggle('active', visible === 0);
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      searchTerm = searchInput.value.trim().toLowerCase();
+      if (searchClear) searchClear.classList.toggle('visible', searchTerm.length > 0);
+      updateResults();
+    });
+  }
+
+  if (searchClear && searchInput) {
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      searchTerm = '';
+      searchClear.classList.remove('visible');
+      updateResults();
+    });
+  }
+
+  filterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      activeFilter = pill.dataset.cat || 'all';
+      updateResults();
+    });
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      searchTerm = '';
+      activeFilter = 'all';
+      if (searchClear) searchClear.classList.remove('visible');
+      filterPills.forEach((p) => p.classList.remove('active'));
+      filterPills[0]?.classList.add('active');
+      updateResults();
+    });
+  }
+
+  // ===== Quick View Popup =====
+  const comparisonsData = JSON.parse(document.getElementById('cmp-data')?.textContent || '[]');
+  const modalOverlay = document.getElementById('cmp-modal-overlay');
+  const modalContent = document.getElementById('cmp-modal-content');
+  const modalClose = document.getElementById('cmp-modal-close');
+
+  function openModal(id: string) {
+    const item = comparisonsData.find((c: any) => c.id === id);
+    if (!item) return;
+
+    const rowsHtml = item.rows.map((row: any) => `
+      <tr>
+        <td>${row.label}</td>
+        ${row.values.map((v: string, i: number) => `<td class="${row.highlight === i ? 'cmp-highlight' : ''}">${v}</td>`).join('')}
+      </tr>
+    `).join('');
+
+    const subjectsHtml = item.subjects.map((s: string) => `<span class="cmp-subject-pill">${s}</span>`).join('');
+
+    modalContent.innerHTML = `
+      <div class="cmp-modal-header">
+        <div class="cmp-modal-icon-wrap">
+          <span class="cmp-modal-icon">${item.icon}</span>
+          <span class="cmp-modal-cat" style="color: ${item.topicColor}">${item.topic}</span>
+          ${item.trending ? '<span class="cmp-card-trending">🔥 Trending</span>' : ''}
+        </div>
+        <h2>${item.title}</h2>
+        <div class="cmp-modal-sub">${item.subtitle}</div>
+        <p class="cmp-modal-desc">${item.description}</p>
+        <div class="cmp-subjects">${subjectsHtml}</div>
+      </div>
+      <div class="cmp-modal-table-wrap">
+        <table class="cmp-modal-table">
+          <thead>
+            <tr>
+              <th>Spec</th>
+              ${item.subjects.map((s: string) => `<th>${s}</th>`).join('')}
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>
+      <div class="cmp-modal-verdict">
+        <strong>Expert Verdict:</strong> ${item.verdict}
+      </div>
+      <div class="cmp-modal-footer">
+        <div class="cmp-popularity">
+          <span class="cmp-popularity-label">Search Interest</span>
+          <div class="cmp-popularity-bar"><div class="cmp-popularity-fill" style="width: ${item.popularity}%"></div></div>
+          <span class="cmp-popularity-value">${item.popularity}%</span>
+        </div>
+        <a href="/comparisons/${item.id}" class="cmp-btn cmp-btn-primary">View Full Page →</a>
+      </div>
+    `;
+
+    modalOverlay?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modalOverlay?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('.cmp-btn-popup').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.dataset.popup;
+      if (id) openModal(id);
+    });
+  });
+
+  modalClose?.addEventListener('click', closeModal);
+  modalOverlay?.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>

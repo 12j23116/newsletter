@@ -1,0 +1,133 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-header">
+    <div class="tool-header-icon">📊</div>
+    <div>
+      <h3 class="tool-header-title">Model Benchmark Comparer</h3>
+      <p class="tool-header-desc">Side-by-side LLM benchmark comparison</p>
+    </div>
+  </div>
+
+  <div class="tool-card" style="margin-bottom:1rem">
+    <p class="tool-card-title">Select Benchmarks & Models</p>
+    <div class="tool-field">
+      <label class="tool-label">Benchmarks to compare</label>
+      <div class="tool-toggle-group" id="mb-benchmarks">
+        <button class="tool-toggle active" data-bench="mmlu">MMLU</button>
+        <button class="tool-toggle active" data-bench="humaneval">HumanEval</button>
+        <button class="tool-toggle active" data-bench="gsm8k">GSM8K</button>
+        <button class="tool-toggle" data-bench="mtbench">MT-Bench</button>
+        <button class="tool-toggle" data-bench="arena">Arena ELO</button>
+        <button class="tool-toggle" data-bench="mmmu">MMMU</button>
+      </div>
+    </div>
+    <div class="tool-field">
+      <label class="tool-label">Models to compare</label>
+      <div class="tool-toggle-group" id="mb-models">
+        <button class="tool-toggle active" data-model="gpt4o">GPT-4o</button>
+        <button class="tool-toggle active" data-model="claude35">Claude 3.5</button>
+        <button class="tool-toggle active" data-model="gemini15">Gemini 1.5</button>
+        <button class="tool-toggle" data-model="llama405">Llama 3.1 405B</button>
+        <button class="tool-toggle" data-model="llama70">Llama 3.1 70B</button>
+        <button class="tool-toggle" data-model="deepseek">DeepSeek V3</button>
+        <button class="tool-toggle" data-model="mistral">Mistral Large</button>
+        <button class="tool-toggle" data-model="qwen">Qwen 2.5</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-output" id="mb-results"></div>
+</div>
+
+<script is:inline>
+(function() {
+  const data = {
+    gpt4o:    { name: 'GPT-4o',         mmlu: 88.7, humaneval: 90.2, gsm8k: 95.8, mtbench: 9.3, arena: 1287, mmmu: 69.1 },
+    claude35: { name: 'Claude 3.5',     mmlu: 88.3, humaneval: 92.0, gsm8k: 96.4, mtbench: 9.0, arena: 1271, mmmu: 68.3 },
+    gemini15: { name: 'Gemini 1.5 Pro', mmlu: 85.9, humaneval: 84.1, gsm8k: 91.1, mtbench: 8.7, arena: 1260, mmmu: 62.2 },
+    llama405: { name: 'Llama 3.1 405B', mmlu: 88.6, humaneval: 89.0, gsm8k: 96.8, mtbench: 8.9, arena: 1267, mmmu: 64.5 },
+    llama70:  { name: 'Llama 3.1 70B',  mmlu: 82.0, humaneval: 80.5, gsm8k: 89.8, mtbench: 8.4, arena: 1205, mmmu: 57.0 },
+    deepseek: { name: 'DeepSeek V3',    mmlu: 88.5, humaneval: 89.2, gsm8k: 96.7, mtbench: 9.0, arena: 1258, mmmu: 65.0 },
+    mistral:  { name: 'Mistral Large',  mmlu: 81.0, humaneval: 81.0, gsm8k: 90.0, mtbench: 8.5, arena: 1200, mmmu: 55.0 },
+    qwen:     { name: 'Qwen 2.5 72B',   mmlu: 84.0, humaneval: 86.6, gsm8k: 95.8, mtbench: 8.8, arena: 1245, mmmu: 60.1 },
+  };
+
+  const benchLabels = { mmlu: 'MMLU (%)', humaneval: 'HumanEval (%)', gsm8k: 'GSM8K (%)', mtbench: 'MT-Bench (/10)', arena: 'Arena ELO', mmmu: 'MMMU (%)' };
+  const benchMax = { mmlu: 100, humaneval: 100, gsm8k: 100, mtbench: 10, arena: 1400, mmmu: 100 };
+
+  let activeBenchs = ['mmlu', 'humaneval', 'gsm8k'];
+  let activeModels = ['gpt4o', 'claude35', 'gemini15'];
+
+  function toggle(arr, val) {
+    const idx = arr.indexOf(val);
+    if (idx >= 0) arr.splice(idx, 1);
+    else arr.push(val);
+  }
+
+  document.querySelectorAll('#mb-benchmarks .tool-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggle(activeBenchs, btn.dataset.bench);
+      btn.classList.toggle('active');
+      render();
+    });
+  });
+
+  document.querySelectorAll('#mb-models .tool-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggle(activeModels, btn.dataset.model);
+      btn.classList.toggle('active');
+      render();
+    });
+  });
+
+  function render() {
+    const container = document.getElementById('mb-results');
+    if (!container) return;
+    if (activeBenchs.length === 0 || activeModels.length === 0) {
+      container.innerHTML = '<p class="tool-note">Select at least one benchmark and one model.</p>';
+      return;
+    }
+
+    let html = '<table class="tool-table"><thead><tr><th>Model</th>';
+    activeBenchs.forEach(b => html += `<th>${benchLabels[b]}</th>`);
+    html += '</tr></thead><tbody>';
+
+    activeModels.forEach(mk => {
+      const m = data[mk];
+      if (!m) return;
+      html += `<tr><td><strong>${m.name}</strong></td>`;
+      activeBenchs.forEach(b => {
+        const val = m[b];
+        const max = benchMax[b];
+        const pct = (val / max) * 100;
+        const isBest = activeModels.every(other => (data[other]?.[b] || 0) <= val);
+        html += `<td style="color:${isBest ? 'var(--tool-accent)' : 'inherit'}; font-weight:${isBest ? 700 : 400}">${val}${b === 'mtbench' ? '/10' : b === 'arena' ? '' : '%'}</td>`;
+      });
+      html += '</tr>';
+    });
+    html += '</tbody></table>';
+
+    const winners = activeBenchs.map(b => {
+      let best = null, bestVal = -1;
+      activeModels.forEach(mk => {
+        if (data[mk]?.[b] > bestVal) { best = data[mk]; bestVal = data[mk][b]; }
+      });
+      return { bench: b, model: best?.name, val: bestVal };
+    });
+
+    html += '<div class="tool-section-title">Benchmark Leaders</div>';
+    winners.forEach(w => {
+      html += `<div class="tool-result-row"><span class="tool-result-label">${benchLabels[w.bench]} leader</span><span class="tool-result-value tool-result-value-accent">${w.model} (${w.val}${w.bench === 'mtbench' ? '/10' : w.bench === 'arena' ? '' : '%'})</span></div>`;
+    });
+
+    container.innerHTML = html;
+  }
+
+  render();
+})();
+</script>

@@ -1,0 +1,25 @@
+---
+import { materialsContent as c } from '../../../data/topics/Materials/materials-content';
+---
+<section class="mat-section">
+  <div class="container">
+    <div class="mat-section-head mat-section-head-center">
+      <span class="mat-eyebrow">Industry Leaders</span>
+      <h2 class="mat-section-title">Companies Driving Materials Innovation</h2>
+      <p class="mat-section-subtitle">From AI-driven discovery platforms to nanostructured alloys and bio-based materials — the startups and companies reshaping the materials landscape.</p>
+    </div>
+    <div class="mat-companies-list">
+      {c.companies.map((company) => (
+        <div class="mat-company-card" style={`--company-color: ${company.color}`}>
+          <div class="mat-company-info">
+            <div class="mat-company-header">
+              <span class="mat-company-name">{company.name}</span>
+              <span class="mat-company-metric">{company.metric}</span>
+            </div>
+            <p class="mat-company-desc">{company.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

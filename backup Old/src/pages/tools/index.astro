@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { toolsContent } from './tools-content';
+import './tools-styles.css';
+---
+<BaseLayout title="Tools" description={toolsContent.subtitle}>
+  <section class="tools-header">
+    <div class="container">
+      <h1 class="tools-title">Interactive Tools</h1>
+      <p class="tools-subtitle">{toolsContent.subtitle}</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="tools-grid">
+      {toolsContent.tools.map((tool) => (
+        <a href={tool.href} class="tool-card">
+          <span class="tool-card-icon">{tool.icon}</span>
+          <h2 class="tool-card-name">{tool.name}</h2>
+          <p class="tool-card-desc">{tool.description}</p>
+          <span class="tool-card-category">{tool.category}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

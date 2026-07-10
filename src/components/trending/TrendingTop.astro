@@ -1,0 +1,51 @@
+---
+import { topTrending } from '../../data/trending/trending-content';
+---
+
+<section class="tr-top" id="tr-top">
+  <div class="tr-section-head">
+    <span class="tr-section-label">Top 3 This Week</span>
+    <h2 class="tr-section-title">Most <span class="tr-grad">Read</span></h2>
+    <p class="tr-section-desc">The three articles dominating the conversation across all technology frontiers.</p>
+  </div>
+  <div class="tr-top-grid">
+    {topTrending.map((article, i) => (
+      <article class="tr-top-card tr-card-clickable" data-slug={article.slug} style={`--card-gradient:${article.gradient}; --card-color:${article.topicColor}; --card-delay:${i * 0.1}s`}>
+        <div class="tr-top-card-cover">
+          <img src={article.img} alt={article.title} class="tr-top-card-img" loading="lazy" />
+          <div class="tr-top-card-overlay"></div>
+          <span class="tr-top-card-rank">{article.rank}</span>
+          <span class="tr-top-card-tag" style={`--tag-color:${article.topicColor}`}>{article.topic}</span>
+        </div>
+        <div class="tr-top-card-body">
+          <h3 class="tr-top-card-title">{article.title}</h3>
+          <div class="tr-top-card-meta">
+            <div class="tr-top-card-author">
+              <div class="tr-top-card-avatar" style={`background:${article.gradient}`}>{article.author}</div>
+              <span>{article.authorName}</span>
+            </div>
+            <span class="tr-top-card-dot">·</span>
+            <span>{article.readTime}</span>
+            <span class="tr-top-card-dot">·</span>
+            <span>{article.date}</span>
+          </div>
+          <div class="tr-top-card-foot">
+            <div class="tr-top-card-views">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span>{article.views} reads</span>
+            </div>
+            <div class="tr-top-card-score">
+              <div class="tr-top-card-score-bar">
+                <div class="tr-top-card-score-fill" style={`width:${article.trendingScore}%`}></div>
+              </div>
+              <span>{article.trendingScore}</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

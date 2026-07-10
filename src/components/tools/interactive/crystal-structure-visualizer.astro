@@ -1,0 +1,507 @@
+---
+/**
+ * Crystal Structure Visualizer — Interactive tool
+ * Visualize crystal lattices in 3D and calculate structural properties
+ */
+import './interactive-tools.css';
+
+const structures = [
+  { id: 'sc', name: 'Simple Cubic (SC)', atoms: 1, a: 1, b: 1, c: 1, angles: [90, 90, 90], packing: 0.52, examples: 'Po (Polonium)' },
+  { id: 'bcc', name: 'Body-Centered Cubic (BCC)', atoms: 2, a: 1, b: 1, c: 1, angles: [90, 90, 90], packing: 0.68, examples: 'Fe, Cr, W, Mo' },
+  { id: 'fcc', name: 'Face-Centered Cubic (FCC)', atoms: 4, a: 1, b: 1, c: 1, angles: [90, 90, 90], packing: 0.74, examples: 'Cu, Al, Au, Ag, Ni' },
+  { id: 'hcp', name: 'Hexagonal Close-Packed (HCP)', atoms: 2, a: 1, b: 1, c: 1.633, angles: [90, 90, 120], packing: 0.74, examples: 'Mg, Ti, Zn, Co' },
+  { id: 'diamond', name: 'Diamond Cubic', atoms: 8, a: 1, b: 1, c: 1, angles: [90, 90, 90], packing: 0.34, examples: 'Si, Ge, C (diamond)' },
+  { id: 'fluorite', name: 'Fluorite (CaF2)', atoms: 12, a: 1, b: 1, c: 1, angles: [90, 90, 90], packing: 0.56, examples: 'CaF2, UO2, ZrO2' },
+  { id: 'perovskite', name: 'Perovskite (ABO3)', atoms: 5, a: 1, b: 1, c: 1, angles: [90, 90, 90], packing: 0.62, examples: 'BaTiO3, SrTiO3' },
+  { id: 'rocksalt', name: 'Rock Salt (NaCl)', atoms: 8, a: 1, b: 1, c: 1, angles: [90, 90, 90], packing: 0.64, examples: 'NaCl, KCl, MgO' },
+];
+---
+
+<div class="it-container" id="crystal-viz">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">💎</div>
+      <div>
+        <h2>Crystal Structure Visualizer</h2>
+        <p>Visualize 3D crystal lattices and calculate structural properties</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Crystal Structure</label>
+          <select class="it-select" id="csv-structure">
+            {structures.map(s => <option value={s.id}>{s.name}</option>)}
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Lattice Parameter a <span class="it-label-hint">(Å)</span></label>
+          <input type="number" class="it-input" id="csv-a" value="4.05" min="1" max="20" step="0.01" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Atomic Radius <span class="it-label-hint">(Å)</span></label>
+          <input type="number" class="it-input" id="csv-radius" value="1.43" min="0.3" max="5" step="0.01" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Element Symbol</label>
+          <input type="text" class="it-input" id="csv-element" value="Al" maxlength="2" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="csv-visualize">Visualize & Calculate</button>
+        <button class="it-btn it-btn-secondary" id="csv-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="csv-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="csv-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Crystal Structure Analysis</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Atoms/Unit Cell</div>
+            <div class="it-stat-value" id="csv-atoms">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Packing Factor</div>
+            <div class="it-stat-value" id="csv-packing">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Density</div>
+            <div class="it-stat-value" id="csv-density">0<span class="it-stat-unit"> g/cm³</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Coordination #</div>
+            <div class="it-stat-value" id="csv-coord">0</div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Unit Cell Projection (2D view)</div>
+        <canvas id="csv-canvas" width="800" height="350" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="csv-details"></div>
+        <div class="it-alert it-alert-info" id="csv-insight"></div>
+      </div>
+
+      <!-- Feature 1: Miller Indices & Planes -->
+      <div class="it-results-card" id="csv-miller-section" style="display:none;">
+        <div class="it-results-title">📐 Miller Indices & Crystal Planes</div>
+        <canvas id="csv-miller-canvas" width="700" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="csv-miller-list"></div>
+      </div>
+
+      <!-- Feature 2: Symmetry Operations -->
+      <div class="it-results-card" id="csv-symmetry-section" style="display:none;">
+        <div class="it-results-title">🔄 Point Group & Symmetry Operations</div>
+        <div id="csv-symmetry-list"></div>
+      </div>
+
+      <!-- Feature 3: Interplanar Spacing & d-spacings -->
+      <div class="it-results-card" id="csv-dspacing-section" style="display:none;">
+        <div class="it-results-title">📏 d-Spacings & XRD Reflections</div>
+        <div id="csv-dspacing-list"></div>
+      </div>
+
+      <!-- Feature 4: Brillouin Zone Visualization -->
+      <div class="it-results-card" id="csv-brillouin-section" style="display:none;">
+        <div class="it-results-title">🌐 Reciprocal Space & Brillouin Zone</div>
+        <div id="csv-brillouin-list"></div>
+      </div>
+
+      <!-- Feature 5: Structure Comparison Table -->
+      <div class="it-results-card" id="csv-structure-comp-section" style="display:none;">
+        <div class="it-results-title">⚖️ Crystal Structure Comparison</div>
+        <div id="csv-structure-comp-list"></div>
+      </div>
+
+      <!-- Feature 6: Material Properties Prediction -->
+      <div class="it-results-card" id="csv-properties-section" style="display:none;">
+        <div class="it-results-title">🔬 Predicted Material Properties</div>
+        <div id="csv-properties-list"></div>
+      </div>
+
+      <!-- Feature 7: Defect Analysis -->
+      <div class="it-results-card" id="csv-defects-section" style="display:none;">
+        <div class="it-results-title">⚠️ Crystal Defects & Imperfections</div>
+        <div id="csv-defects-list"></div>
+      </div>
+
+      <!-- Feature 8: Slip Systems & Mechanical Properties -->
+      <div class="it-results-card" id="csv-slip-section" style="display:none;">
+        <div class="it-results-title">🔩 Slip Systems & Deformation Analysis</div>
+        <div id="csv-slip-list"></div>
+      </div>
+
+      <!-- Feature 9: CIF Format Export -->
+      <div class="it-results-card" id="csv-cif-section" style="display:none;">
+        <div class="it-results-title">📄 CIF Format Output</div>
+        <div id="csv-cif-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const structureData = {
+    sc: { name: 'Simple Cubic', atoms: 1, packing: 0.52, coord: 6, positions: [[0,0,0]] },
+    bcc: { name: 'Body-Centered Cubic', atoms: 2, packing: 0.68, coord: 8, positions: [[0,0,0],[0.5,0.5,0.5]] },
+    fcc: { name: 'Face-Centered Cubic', atoms: 4, packing: 0.74, coord: 12, positions: [[0,0,0],[0.5,0.5,0],[0.5,0,0.5],[0,0.5,0.5]] },
+    hcp: { name: 'Hexagonal Close-Packed', atoms: 2, packing: 0.74, coord: 12, positions: [[0,0,0],[0.333,0.667,0.5]] },
+    diamond: { name: 'Diamond Cubic', atoms: 8, packing: 0.34, coord: 4, positions: [[0,0,0],[0.25,0.25,0.25],[0.5,0.5,0],[0.5,0,0.5],[0,0.5,0.5],[0.75,0.75,0.5],[0.75,0.5,0.75],[0.5,0.75,0.75]] },
+    fluorite: { name: 'Fluorite (CaF2)', atoms: 12, packing: 0.56, coord: 8, positions: [[0,0,0],[0.25,0.25,0.25],[0.75,0.75,0.25],[0.75,0.25,0.75],[0.25,0.75,0.75],[0.5,0.5,0.5],[0,0.5,0.5],[0.5,0,0.5],[0.5,0.5,0],[0.25,0.25,0.75],[0.75,0.75,0.75],[0.25,0.75,0.25]] },
+    perovskite: { name: 'Perovskite (ABO3)', atoms: 5, packing: 0.62, coord: 6, positions: [[0,0,0],[0.5,0.5,0.5],[0.5,0.5,0],[0.5,0,0.5],[0,0.5,0.5]] },
+    rocksalt: { name: 'Rock Salt (NaCl)', atoms: 8, packing: 0.64, coord: 6, positions: [[0,0,0],[0.5,0.5,0],[0.5,0,0.5],[0,0.5,0.5],[0.5,0,0],[0,0.5,0],[0,0,0.5],[0.5,0.5,0.5]] },
+  };
+
+  const atomicMasses = { Al: 26.98, Fe: 55.85, Cu: 63.55, Au: 197.0, Ag: 107.87, Ni: 58.69, Mg: 24.31, Ti: 47.87, Zn: 65.38, Co: 58.93, Si: 28.09, Ge: 72.63, C: 12.01, W: 183.84, Mo: 95.96, Cr: 52.0, Po: 209.0, Ca: 40.08, F: 19.0, U: 238.03, Zr: 91.22, O: 16.0, Ba: 137.33, Ti: 47.87, Sr: 87.62, Na: 22.99, K: 39.10, Cl: 35.45, Mg: 24.31 };
+
+  function visualize() {
+    const structId = document.getElementById('csv-structure').value;
+    const s = structureData[structId];
+    const a = parseFloat(document.getElementById('csv-a').value) || 4.05;
+    const radius = parseFloat(document.getElementById('csv-radius').value) || 1.43;
+    const element = document.getElementById('csv-element').value || 'Al';
+    const mass = atomicMasses[element] || 50;
+
+    // Calculate density: ρ = (n × M) / (V × Nₐ)
+    const Na = 6.022e23;
+    const volume = a * a * a * 1e-24; // cm³
+    const density = (s.atoms * mass) / (volume * Na);
+
+    // Lattice parameter relationships
+    let relationText = '';
+    if (structId === 'sc') relationText = `a = 2r (a = ${(2 * radius).toFixed(2)} Å)`;
+    else if (structId === 'bcc') relationText = `a = 4r/√3 (a = ${(4 * radius / Math.sqrt(3)).toFixed(2)} Å)`;
+    else if (structId === 'fcc') relationText = `a = 2√2·r (a = ${(2 * Math.sqrt(2) * radius).toFixed(2)} Å)`;
+    else if (structId === 'hcp') relationText = `a = 2r, c = 1.633a (c = ${(1.633 * 2 * radius).toFixed(2)} Å)`;
+    else if (structId === 'diamond') relationText = `a = 8r/√3 (a = ${(8 * radius / Math.sqrt(3)).toFixed(2)} Å)`;
+    else relationText = 'Complex relationship (multi-element)';
+
+    // Update UI
+    document.getElementById('csv-atoms').textContent = s.atoms;
+    document.getElementById('csv-packing').textContent = s.packing.toFixed(2);
+    document.getElementById('csv-density').innerHTML = density.toFixed(2) + '<span class="it-stat-unit"> g/cm³</span>';
+    document.getElementById('csv-coord').textContent = s.coord;
+
+    // Draw projection (isometric-ish view)
+    const canvas = document.getElementById('csv-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+
+    // Grid
+    ctx.strokeStyle = 'rgba(15,23,42,0.06)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i < w; i += 40) { ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, h); ctx.stroke(); }
+    for (let i = 0; i < h; i += 40) { ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(w, i); ctx.stroke(); }
+
+    // Draw unit cell cube (isometric projection)
+    const cx = w / 2, cy = h / 2;
+    const scale = Math.min(w, h) * 0.3;
+    const dx = scale * 0.5, dy = scale * 0.3, dz = scale * 0.5;
+
+    // Cube vertices
+    const cube = [
+      [-dx, -dy, -dz], [dx, -dy, -dz], [dx, dy, -dz], [-dx, dy, -dz],
+      [-dx, -dy, dz], [dx, -dy, dz], [dx, dy, dz], [-dx, dy, dz]
+    ];
+
+    // Project 3D to 2D (simple isometric)
+    function project(p) {
+      return [cx + p[0] + p[2] * 0.5, cy + p[1] - p[2] * 0.5];
+    }
+
+    // Draw cube edges
+    const edges = [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+    ctx.strokeStyle = '#7c3aed';
+    ctx.lineWidth = 2;
+    edges.forEach(([a, b]) => {
+      const pa = project(cube[a]), pb = project(cube[b]);
+      ctx.beginPath();
+      ctx.moveTo(pa[0], pa[1]);
+      ctx.lineTo(pb[0], pb[1]);
+      ctx.stroke();
+    });
+
+    // Draw atoms
+    const atomRadius = Math.max(8, scale * 0.12);
+    s.positions.forEach(pos => {
+      // Map fractional coordinates to cube space
+      const px = (pos[0] - 0.5) * 2 * dx;
+      const py = (pos[1] - 0.5) * 2 * dy;
+      const pz = (pos[2] - 0.5) * 2 * dz;
+      const [sx, sy] = project([px, py, pz]);
+
+      // Draw atom with gradient
+      const grad = ctx.createRadialGradient(sx - atomRadius * 0.3, sy - atomRadius * 0.3, 0, sx, sy, atomRadius);
+      grad.addColorStop(0, '#a78bfa');
+      grad.addColorStop(1, '#5b21b6');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(sx, sy, atomRadius, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.strokeStyle = '#4c1d95';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Label
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 10px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(element, sx, sy + 3);
+    });
+
+    // Labels
+    ctx.fillStyle = '#5c5c72';
+    ctx.font = '10px sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText(s.name, 10, 20);
+    ctx.fillText(`a = ${a} Å`, 10, 35);
+
+    // Details
+    const details = document.getElementById('csv-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Property</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Structure Type</td><td>${s.name}</td></tr>
+          <tr><td>Element</td><td>${element} (M = ${mass} g/mol)</td></tr>
+          <tr><td>Lattice Parameter (a)</td><td>${a} Å</td></tr>
+          <tr><td>Atomic Radius (r)</td><td>${radius} Å</td></tr>
+          <tr><td>r/a Relationship</td><td>${relationText}</td></tr>
+          <tr><td>Atoms per Unit Cell</td><td>${s.atoms}</td></tr>
+          <tr><td>Coordination Number</td><td>${s.coord}</td></tr>
+          <tr><td class="it-highlight">Atomic Packing Factor</td><td class="it-highlight">${s.packing.toFixed(2)} (${(s.packing * 100).toFixed(0)}%)</td></tr>
+          <tr><td>Unit Cell Volume</td><td>${(a * a * a).toFixed(2)} ų</td></tr>
+          <tr><td class="it-highlight">Theoretical Density</td><td class="it-highlight">${density.toFixed(3)} g/cm³</td></tr>
+          <tr><td>Number Density</td><td>${(s.atoms / (a * a * a) * 1e24).toExponential(2)} atoms/cm³</td></tr>
+          <tr><td>Nearest Neighbor Distance</td><td>${structId === 'fcc' ? (a / Math.sqrt(2)).toFixed(3) : structId === 'bcc' ? (a * Math.sqrt(3) / 2).toFixed(3) : structId === 'sc' ? a.toFixed(3) : structId === 'diamond' ? (a * Math.sqrt(3) / 4).toFixed(3) : (a * 0.5).toFixed(3)} Å</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const insight = document.getElementById('csv-insight');
+    insight.innerHTML = `<strong>💡 Structure Analysis:</strong> ${s.name} has ${s.atoms} atoms per unit cell with a packing factor of ${(s.packing * 100).toFixed(0)}% and coordination number ${s.coord}. ${s.packing >= 0.74 ? 'This is a close-packed structure — maximum packing efficiency.' : s.packing <= 0.52 ? 'Low packing efficiency — significant void space.' : 'Moderate packing efficiency.'} The calculated density of ${density.toFixed(2)} g/cm³ ${density > 5 ? 'is typical for transition metals.' : density > 2 ? 'is typical for light metals and semiconductors.' : 'is typical for very light elements.'}`;
+
+    document.getElementById('csv-results').classList.add('show');
+
+    // === Feature 1: Miller Indices & Crystal Planes ===
+    const millerPlanes = [
+      { h: 1, k: 0, l: 0, name: '(100)', color: '#dc2626' },
+      { h: 1, k: 1, l: 0, name: '(110)', color: '#d97706' },
+      { h: 1, k: 1, l: 1, name: '(111)', color: '#059669' },
+      { h: 2, k: 0, l: 0, name: '(200)', color: '#2563eb' },
+      { h: 2, k: 1, l: 0, name: '(210)', color: '#7c3aed' },
+      { h: 2, k: 2, l: 0, name: '(220)', color: '#0891b2' },
+      { h: 3, k: 1, l: 1, name: '(311)', color: '#db2777' },
+      { h: 2, k: 2, l: 2, name: '(222)', color: '#65a30d' },
+    ];
+    const millerCanvas = document.getElementById('csv-miller-canvas');
+    const mCtx = millerCanvas.getContext('2d');
+    const mW = millerCanvas.width, mH = millerCanvas.height;
+    mCtx.fillStyle = '#ebedf5'; mCtx.fillRect(0, 0, mW, mH);
+    mCtx.strokeStyle = '#94a3b8'; mCtx.lineWidth = 1;
+    mCtx.beginPath(); mCtx.moveTo(50, 10); mCtx.lineTo(50, mH - 30); mCtx.lineTo(mW - 10, mH - 30); mCtx.stroke();
+    const dSpacingFormula = structId === 'hcp' ? (h, k, l) => 1 / Math.sqrt((4/3 * (h*h + h*k + k*k)) / (a*a) + l*l / (1.633*a*1.633*a)) : (h, k, l) => a / Math.sqrt(h*h + k*k + l*l);
+    const allDSpacings = millerPlanes.map(p => dSpacingFormula(p.h, p.k, p.l));
+    const maxD = Math.max(...allDSpacings);
+    millerPlanes.forEach((p, i) => {
+      const d = dSpacingFormula(p.h, p.k, p.l);
+      const x = 60 + i * (mW - 70) / millerPlanes.length;
+      const barH = (d / maxD) * (mH - 60);
+      mCtx.fillStyle = p.color + '33'; mCtx.fillRect(x, mH - 30 - barH, (mW - 70) / millerPlanes.length - 8, barH);
+      mCtx.strokeStyle = p.color; mCtx.lineWidth = 1.5; mCtx.strokeRect(x, mH - 30 - barH, (mW - 70) / millerPlanes.length - 8, barH);
+      mCtx.fillStyle = p.color; mCtx.font = 'bold 10px sans-serif'; mCtx.textAlign = 'center'; mCtx.fillText(p.name, x + (mW - 70) / millerPlanes.length / 2 - 4, mH - 15);
+      mCtx.fillStyle = '#111125'; mCtx.font = '8px sans-serif'; mCtx.fillText(d.toFixed(2) + ' Å', x + (mW - 70) / millerPlanes.length / 2 - 4, mH - 35 - barH);
+    });
+    mCtx.fillStyle = '#64748b'; mCtx.font = '10px sans-serif'; mCtx.textAlign = 'center'; mCtx.fillText('d-spacing (Å)', mW / 2, mH - 3);
+    const millerAllowed = { sc: 'All hkl allowed', bcc: 'h+k+l = even', fcc: 'h,k,l all even or all odd', hcp: 'h+2k = 3n, l even (or all)', diamond: 'h,k,l all odd, or all even with h+k+l=4n', fluorite: 'h,k,l all even or all odd', perovskite: 'All hkl allowed', rocksalt: 'h,k,l all even or all odd' };
+    document.getElementById('csv-miller-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Plane (hkl)</th><th>d-spacing (Å)</th><th>2θ (Cu Kα, λ=1.54Å)</th><th>Relative Intensity</th><th>Allowed?</th></tr></thead><tbody>
+        ${millerPlanes.map(p => { const d = dSpacingFormula(p.h, p.k, p.l); const twoTheta = 2 * Math.asin(1.54 / (2 * d)) * 180 / Math.PI; const allowed = structId === 'bcc' ? (p.h + p.k + p.l) % 2 === 0 : structId === 'fcc' ? (p.h % 2 === p.k % 2 && p.k % 2 === p.l % 2) : structId === 'diamond' ? ((p.h % 2 === 1 && p.k % 2 === 1 && p.l % 2 === 1) || (p.h % 2 === 0 && p.k % 2 === 0 && p.l % 2 === 0 && (p.h + p.k + p.l) % 4 === 0)) : true; const intensity = allowed ? (100 / (p.h*p.h + p.k*p.k + p.l*p.l)).toFixed(0) + '%' : '0% (forbidden)'; return `<tr${allowed ? '' : ' style="opacity:0.4;"'}><td style="font-family:var(--tl-mono);font-weight:700;">${p.name}</td><td class="it-highlight">${d.toFixed(3)}</td><td>${isNaN(twoTheta) ? '—' : twoTheta.toFixed(1) + '°'}</td><td style="color:${allowed ? '#059669' : '#94a3b8'};">${intensity}</td><td style="color:${allowed ? '#059669' : '#dc2626'};font-weight:700;">${allowed ? '✓' : '✗'}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Selection rules: ${millerAllowed[structId] || 'All hkl allowed'}. d-spacing formula: ${structId === 'hcp' ? '1/d² = (4/3)(h²+hk+k²)/a² + l²/c²' : '1/d² = (h²+k²+l²)/a²'}. XRD uses Cu Kα radiation (λ=1.54 Å) to measure 2θ angles. Forbidden reflections appear absent in diffraction patterns due to systematic extinction.</div>
+    `;
+    document.getElementById('csv-miller-section').style.display = 'block';
+
+    // === Feature 2: Symmetry Operations ===
+    const symmetryData = {
+      sc: { pointGroup: 'm3m', hermannMauguin: 'Pm-3m', spaceGroup: 221, class: 'Cubic', operations: ['E (identity)', '8C3 (body diagonals)', '6C4 (axes)', '3C2 (=C4²)', '6C2 (edge diagonals)', 'i (inversion)', '8S6', '6S4', '3σh', '6σd'], order: 48, laue: 'm3m' },
+      bcc: { pointGroup: 'm3m', hermannMauguin: 'Im-3m', spaceGroup: 229, class: 'Cubic', operations: ['E', '8C3', '6C4', '3C2', '6C2', 'i', '8S6', '6S4', '3σh', '6σd'], order: 48, laue: 'm3m' },
+      fcc: { pointGroup: 'm3m', hermannMauguin: 'Fm-3m', spaceGroup: 225, class: 'Cubic', operations: ['E', '8C3', '6C4', '3C2', '6C2', 'i', '8S6', '6S4', '3σh', '6σd'], order: 48, laue: 'm3m' },
+      hcp: { pointGroup: '6/mmm', hermannMauguin: 'P63/mmc', spaceGroup: 194, class: 'Hexagonal', operations: ['E', '2C6', '2C3', 'C2', '3C2\'', '3C2\"', 'i', '2S3', '2S6', 'σh', '3σd', '3σv'], order: 24, laue: '6/mmm' },
+      diamond: { pointGroup: 'm3m', hermannMauguin: 'Fd-3m', spaceGroup: 227, class: 'Cubic', operations: ['E', '8C3', '6C4', '3C2', '6C2', 'i', '8S6', '6S4', '3σh', '6σd'], order: 48, laue: 'm3m' },
+      fluorite: { pointGroup: 'm3m', hermannMauguin: 'Fm-3m', spaceGroup: 225, class: 'Cubic', operations: ['E', '8C3', '6C4', '3C2', '6C2', 'i', '8S6', '6S4', '3σh', '6σd'], order: 48, laue: 'm3m' },
+      perovskite: { pointGroup: 'm3m', hermannMauguin: 'Pm-3m', spaceGroup: 221, class: 'Cubic', operations: ['E', '8C3', '6C4', '3C2', '6C2', 'i', '8S6', '6S4', '3σh', '6σd'], order: 48, laue: 'm3m' },
+      rocksalt: { pointGroup: 'm3m', hermannMauguin: 'Fm-3m', spaceGroup: 225, class: 'Cubic', operations: ['E', '8C3', '6C4', '3C2', '6C2', 'i', '8S6', '6S4', '3σh', '6σd'], order: 48, laue: 'm3m' },
+    };
+    const sym = symmetryData[structId] || symmetryData.sc;
+    document.getElementById('csv-symmetry-list').innerHTML = `
+      <div class="it-results-grid" style="margin-bottom:1rem;">
+        <div class="it-stat"><div class="it-stat-label">Point Group</div><div class="it-stat-value" style="font-size:1rem;">${sym.pointGroup}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Space Group</div><div class="it-stat-value" style="font-size:1rem;">#${sym.spaceGroup}</div></div>
+        <div class="it-stat"><div class="it-stat-label">H-M Symbol</div><div class="it-stat-value" style="font-size:0.875rem;">${sym.hermannMauguin}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Order</div><div class="it-stat-value">${sym.order}</div></div>
+      </div>
+      <table class="it-table"><thead><tr><th>#</th><th>Symmetry Operation</th><th>Type</th><th>Description</th></tr></thead><tbody>
+        ${sym.operations.map((op, i) => { const type = op.includes('E') ? 'Identity' : op.includes('C') ? 'Rotation' : op.includes('i') ? 'Inversion' : op.includes('S') ? 'Improper rotation' : op.includes('σ') ? 'Reflection' : 'Other'; const desc = op.includes('C3') ? '120° rotation' : op.includes('C4') ? '90° rotation' : op.includes('C2') ? '180° rotation' : op.includes('C6') ? '60° rotation' : op.includes('i') ? 'Inversion through center' : op.includes('S') ? 'Rotation + reflection' : op.includes('σ') ? 'Mirror plane' : 'Identity'; return `<tr><td style="font-weight:700;">${i + 1}</td><td style="font-family:var(--tl-mono);" class="it-highlight">${op}</td><td style="font-size:0.8125rem;">${type}</td><td style="font-size:0.8125rem;">${desc}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Crystal system: ${sym.class}. Point group ${sym.pointGroup} has ${sym.order} symmetry operations. Laue class: ${sym.laue} (determines XRD symmetry). Space group #${sym.spaceGroup} (${sym.hermannMauguin}) fully describes the crystal symmetry including translational elements. Cubic structures have the highest symmetry (48 operations), making them isotropic in many properties.</div>
+    `;
+    document.getElementById('csv-symmetry-section').style.display = 'block';
+
+    // === Feature 3: d-Spacings & XRD Reflections ===
+    const xrdLines = millerPlanes.filter(p => { const allowed = structId === 'bcc' ? (p.h + p.k + p.l) % 2 === 0 : structId === 'fcc' ? (p.h % 2 === p.k % 2 && p.k % 2 === p.l % 2) : structId === 'diamond' ? ((p.h % 2 === 1 && p.k % 2 === 1 && p.l % 2 === 1) || (p.h % 2 === 0 && p.k % 2 === 0 && p.l % 2 === 0 && (p.h + p.k + p.l) % 4 === 0)) : true; return allowed && dSpacingFormula(p.h, p.k, p.l) >= 0.77; });
+    const xrdCanvas = document.createElement('canvas'); xrdCanvas.width = 700; xrdCanvas.height = 200;
+    const xCtx = xrdCanvas.getContext('2d');
+    xCtx.fillStyle = '#ebedf5'; xCtx.fillRect(0, 0, 700, 200);
+    xCtx.strokeStyle = '#94a3b8'; xCtx.lineWidth = 1; xCtx.beginPath(); xCtx.moveTo(40, 10); xCtx.lineTo(40, 180); xCtx.lineTo(690, 180); xCtx.stroke();
+    xCtx.fillStyle = '#64748b'; xCtx.font = '9px sans-serif'; xCtx.textAlign = 'center'; xCtx.fillText('2θ (degrees)', 350, 195);
+    xCtx.save(); xCtx.translate(15, 100); xCtx.rotate(-Math.PI / 2); xCtx.fillText('Intensity', 0, 0); xCtx.restore();
+    xrdLines.forEach((p, i) => { const d = dSpacingFormula(p.h, p.k, p.l); const twoTheta = 2 * Math.asin(1.54 / (2 * d)) * 180 / Math.PI; const x = 40 + (twoTheta / 90) * 650; const intensity = 100 / (p.h*p.h + p.k*p.k + p.l*p.l); const barH = intensity * 1.5; xCtx.strokeStyle = p.color; xCtx.lineWidth = 2; xCtx.beginPath(); xCtx.moveTo(x, 180); xCtx.lineTo(x, 180 - barH); xCtx.stroke(); xCtx.fillStyle = p.color; xCtx.font = '7px sans-serif'; xCtx.textAlign = 'center'; xCtx.fillText(p.name, x, 180 - barH - 3); xCtx.fillStyle = '#64748b'; xCtx.fillText(twoTheta.toFixed(0) + '°', x, 190); });
+    [10, 20, 30, 40, 50, 60, 70, 80, 90].forEach(t => { const x = 40 + (t / 90) * 650; xCtx.strokeStyle = '#e2e8f0'; xCtx.lineWidth = 0.5; xCtx.beginPath(); xCtx.moveTo(x, 10); xCtx.lineTo(x, 180); xCtx.stroke(); xCtx.fillStyle = '#94a3b8'; xCtx.font = '7px sans-serif'; xCtx.textAlign = 'center'; xCtx.fillText(t + '°', x, 175); });
+    const xrdImg = xrdCanvas.toDataURL();
+    document.getElementById('csv-dspacing-list').innerHTML = `
+      <img src="${xrdImg}" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);margin-bottom:0.75rem;" alt="Simulated XRD pattern" />
+      <table class="it-table"><thead><tr><th>(hkl)</th><th>d (Å)</th><th>2θ (°)</th><th>sin²θ/λ²</th><th>Structure Factor</th></tr></thead><tbody>
+        ${xrdLines.map(p => { const d = dSpacingFormula(p.h, p.k, p.l); const twoTheta = 2 * Math.asin(1.54 / (2 * d)) * 180 / Math.PI; const sin2 = Math.pow(Math.sin(twoTheta * Math.PI / 360), 2); const fFactor = structId === 'fcc' ? '4 atoms contribute' : structId === 'bcc' ? '2 atoms (body center)' : structId === 'diamond' ? '8 atoms (2 interpenetrating FCC)' : 'All atoms'; return `<tr><td style="font-family:var(--tl-mono);font-weight:700;">${p.name}</td><td class="it-highlight">${d.toFixed(3)}</td><td>${twoTheta.toFixed(2)}°</td><td>${sin2.toFixed(4)}</td><td style="font-size:0.75rem;">${fFactor}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Simulated XRD pattern using Cu Kα (λ=1.54 Å). Peak positions follow Bragg's law: nλ = 2d sinθ. Peak intensities depend on structure factor F(hkl), which accounts for atomic positions and scattering factors. ${structId === 'fcc' || structId === 'diamond' ? 'FCC selection rule: h,k,l all even or all odd.' : structId === 'bcc' ? 'BCC selection rule: h+k+l = even.' : 'All reflections allowed for this structure.'} Diamond structure has additional extinction (h+k+l=4n required for all-even).</div>
+    `;
+    document.getElementById('csv-dspacing-section').style.display = 'block';
+
+    // === Feature 4: Reciprocal Space & Brillouin Zone ===
+    const recipData = {
+      sc: { b1: '2π/a (1,0,0)', b2: '2π/a (0,1,0)', b3: '2π/a (0,0,1)', bzShape: 'Cube', highSym: ['Γ(0,0,0)', 'X(½,0,0)', 'M(½,½,0)', 'R(½,½,½)'], volume: '(2π/a)³' },
+      bcc: { b1: '2π/a (1,1,0)', b2: '2π/a (-1,1,0)', b3: '2π/a (0,0,2)', bzShape: 'Truncated octahedron', highSym: ['Γ(0,0,0)', 'H(½,0,0)', 'N(0,½,0)', 'P(½,½,½)'], volume: '2(2π/a)³' },
+      fcc: { b1: '2π/a (-1,1,1)', b2: '2π/a (1,-1,1)', b3: '2π/a (1,1,-1)', bzShape: 'Truncated octahedron (rhombic dodecahedron)', highSym: ['Γ(0,0,0)', 'X(0,1,0)', 'W(½,1,0)', 'L(½,½,½)', 'K(¾,¾,0)'], volume: '4(2π/a)³' },
+      hcp: { b1: '2π/a (1,1/√3,0)', b2: '2π/a (0,2/√3,0)', b3: '2π/c (0,0,1)', bzShape: 'Hexagonal prism', highSym: ['Γ(0,0,0)', 'M(½,0,0)', 'K(⅓,⅓,0)', 'A(0,0,½)', 'H(⅓,⅓,½)'], volume: '(2π)³/(a²c·√3/2)' },
+      diamond: { b1: '2π/a (-1,1,1)', b2: '2π/a (1,-1,1)', b3: '2π/a (1,1,-1)', bzShape: 'Truncated octahedron', highSym: ['Γ(0,0,0)', 'X(0,1,0)', 'W(½,1,0)', 'L(½,½,½)', 'K(¾,¾,0)'], volume: '4(2π/a)³' },
+      fluorite: { b1: '2π/a (-1,1,1)', b2: '2π/a (1,-1,1)', b3: '2π/a (1,1,-1)', bzShape: 'Truncated octahedron', highSym: ['Γ(0,0,0)', 'X(0,1,0)', 'W(½,1,0)', 'L(½,½,½)'], volume: '4(2π/a)³' },
+      perovskite: { b1: '2π/a (1,0,0)', b2: '2π/a (0,1,0)', b3: '2π/a (0,0,1)', bzShape: 'Cube', highSym: ['Γ(0,0,0)', 'X(½,0,0)', 'M(½,½,0)', 'R(½,½,½)'], volume: '(2π/a)³' },
+      rocksalt: { b1: '2π/a (-1,1,1)', b2: '2π/a (1,-1,1)', b3: '2π/a (1,1,-1)', bzShape: 'Truncated octahedron', highSym: ['Γ(0,0,0)', 'X(0,1,0)', 'W(½,1,0)', 'L(½,½,½)'], volume: '4(2π/a)³' },
+    };
+    const recip = recipData[structId] || recipData.sc;
+    document.getElementById('csv-brillouin-list').innerHTML = `
+      <div class="it-results-grid" style="margin-bottom:1rem;">
+        <div class="it-stat"><div class="it-stat-label">BZ Shape</div><div class="it-stat-value" style="font-size:0.875rem;">${recip.bzShape}</div></div>
+        <div class="it-stat"><div class="it-stat-label">Reciprocal Volume</div><div class="it-stat-value" style="font-size:0.875rem;">${recip.volume}</div></div>
+      </div>
+      <table class="it-table"><thead><tr><th>Reciprocal Lattice Vector</th><th>Expression</th></tr></thead><tbody>
+        <tr><td><strong>b₁</strong></td><td style="font-family:var(--tl-mono);" class="it-highlight">${recip.b1}</td></tr>
+        <tr><td><strong>b₂</strong></td><td style="font-family:var(--tl-mono);" class="it-highlight">${recip.b2}</td></tr>
+        <tr><td><strong>b₃</strong></td><td style="font-family:var(--tl-mono);" class="it-highlight">${recip.b3}</td></tr>
+      </tbody></table>
+      <div class="it-results-title" style="font-size:0.875rem;margin:1rem 0 0.5rem;">High-Symmetry Points</div>
+      <table class="it-table"><thead><tr><th>Point</th><th>Coordinates (fractional)</th><th>Significance</th></tr></thead><tbody>
+        ${recip.highSym.map((pt, i) => { const sig = i === 0 ? 'Brillouin zone center' : pt.startsWith('X') ? 'Zone face center' : pt.startsWith('L') ? 'Zone edge center (hexagonal face)' : pt.startsWith('W') ? 'Zone corner' : pt.startsWith('M') || pt.startsWith('N') ? 'Zone edge' : pt.startsWith('R') || pt.startsWith('P') || pt.startsWith('H') ? 'Zone corner' : pt.startsWith('K') ? 'Zone edge midpoint' : pt.startsWith('A') ? 'Top face center' : 'High-symmetry point'; return `<tr><td style="font-family:var(--tl-mono);font-weight:700;">${pt}</td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${pt.match(/\([^)]+\)/)?.[0] || ''}</td><td style="font-size:0.8125rem;">${sig}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Reciprocal lattice vectors are related to real lattice by bᵢ = 2π(aⱼ×aₖ)/(a·(aⱼ×aₖ)). The Brillouin zone (BZ) is the Wigner-Seitz cell of the reciprocal lattice. Band structure calculations sample high-symmetry paths (e.g., Γ→X→M→Γ for cubic). BZ shape determines electronic and phonon dispersion. ${structId === 'fcc' || structId === 'bcc' ? 'BCC↔FCC are reciprocal to each other.' : ''}</div>
+    `;
+    document.getElementById('csv-brillouin-section').style.display = 'block';
+
+    // === Feature 5: Structure Comparison ===
+    const allStructs = Object.entries(structureData).map(([id, sd]) => ({ id, ...sd, examples: { sc: 'Po', bcc: 'Fe, Cr, W', fcc: 'Cu, Al, Au', hcp: 'Mg, Ti, Zn', diamond: 'Si, Ge, C', fluorite: 'CaF₂, UO₂', perovskite: 'BaTiO₃', rocksalt: 'NaCl, MgO' }[id] || '' }));
+    document.getElementById('csv-structure-comp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Structure</th><th>Atoms/Cell</th><th>Packing</th><th>Coord. #</th><th>Space Group</th><th>Examples</th><th>Selected?</th></tr></thead><tbody>
+        ${allStructs.map(st => `<tr${st.id === structId ? ' class="it-highlight"' : ''}><td><strong>${st.name}</strong></td><td>${st.atoms}</td><td class="it-highlight">${st.packing.toFixed(2)}</td><td>${st.coord}</td><td style="font-size:0.8125rem;">${symmetryData[st.id]?.hermannMauguin || '—'}</td><td style="font-size:0.8125rem;">${st.examples}</td><td style="color:${st.id === structId ? '#059669' : '#94a3b8'};font-weight:700;">${st.id === structId ? '✓' : '—'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">FCC and HCP have the highest packing factor (0.74) — both are close-packed arrangements. BCC (0.68) is slightly less efficient but more common in transition metals. Diamond cubic (0.34) has low packing but enables covalent bonding with directional strength. Simple cubic (0.52) is rare — only Polonium at STP.</div>
+    `;
+    document.getElementById('csv-structure-comp-section').style.display = 'block';
+
+    // === Feature 6: Material Properties Prediction ===
+    const propPredictions = [
+      { property: 'Young\'s Modulus (E)', value: (density > 5 ? 200 + s.coord * 10 : 70 + s.coord * 5).toFixed(0) + ' GPa', basis: 'Correlation with density and coordination number', confidence: 'Medium' },
+      { property: 'Bulk Modulus (B)', value: (density * 10 + s.packing * 100).toFixed(0) + ' GPa', basis: 'Packing factor and atomic volume', confidence: 'Low' },
+      { property: 'Shear Modulus (G)', value: ((density > 5 ? 80 : 25) + s.coord * 3).toFixed(0) + ' GPa', basis: 'Coordination and bonding type', confidence: 'Low' },
+      { property: 'Poisson\'s Ratio (ν)', value: (0.25 + s.packing * 0.1).toFixed(2), basis: 'Packing factor correlation', confidence: 'Medium' },
+      { property: 'Melting Point (est.)', value: (density > 10 ? '3000-3600 K' : density > 5 ? '1500-2000 K' : '500-1000 K'), basis: 'Density and bonding strength', confidence: 'Low' },
+      { property: 'Electrical Conductivity', value: structId === 'diamond' ? 'Semiconductor (band gap ~' + (a < 5.5 ? '0.7 eV (Ge)' : '1.1 eV (Si)') + ')' : s.packing > 0.65 ? 'Metallic (good conductor)' : 'Metallic (moderate)', basis: 'Structure type and packing', confidence: 'High' },
+      { property: 'Thermal Conductivity', value: structId === 'diamond' ? 'High (~1000 W/m·K for diamond)' : density > 5 ? '50-150 W/m·K' : '20-50 W/m·K', basis: 'Structure and phonon transport', confidence: 'Medium' },
+      { property: 'Debye Temperature', value: (300 + density * 20 + s.coord * 10).toFixed(0) + ' K', basis: 'Stiffness and atomic mass', confidence: 'Low' },
+      { property: 'Thermal Expansion (α)', value: (structId === 'diamond' ? '2.6' : density > 5 ? '12' : '23') + ' ×10⁻⁶ /K', basis: 'Bonding strength and structure', confidence: 'Medium' },
+      { property: 'Hardness (Mohs)', value: structId === 'diamond' ? '10 (hardest)' : density > 10 ? '7-9' : density > 5 ? '4-6' : '2-3', basis: 'Bonding and packing', confidence: 'Medium' },
+    ];
+    document.getElementById('csv-properties-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Property</th><th>Predicted Value</th><th>Basis</th><th>Confidence</th></tr></thead><tbody>
+        ${propPredictions.map(p => `<tr><td><strong>${p.property}</strong></td><td class="it-highlight" style="font-family:var(--tl-mono);font-size:0.8125rem;">${p.value}</td><td style="font-size:0.75rem;">${p.basis}</td><td style="color:${p.confidence === 'High' ? '#059669' : p.confidence === 'Medium' ? '#d97706' : '#dc2626'};font-weight:700;">${p.confidence}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-warn" style="margin-top:0.5rem;">⚠️ These are rough estimates based on empirical correlations between crystal structure and material properties. Actual values require DFT calculations or experimental measurement. Confidence levels: High (structure-determined), Medium (strong correlation), Low (weak correlation). For accurate predictions, use VASP, Quantum ESPRESSO, or Materials Project database.</div>
+    `;
+    document.getElementById('csv-properties-section').style.display = 'block';
+
+    // === Feature 7: Crystal Defects ===
+    const defectTypes = [
+      { type: 'Vacancy', concentration: (Math.exp(-1.0 * s.coord / 2) * 1e4).toFixed(2) + ' ×10⁻⁴ at Tm', energy: (1 + s.coord * 0.1).toFixed(1) + ' eV', impact: 'Diffusion, creep, sintering', mitigation: 'Annealing, controlled cooling' },
+      { type: 'Interstitial', concentration: '~10⁻⁶ at Tm', energy: (3 + s.packing * 2).toFixed(1) + ' eV', impact: 'Strain hardening, radiation damage', mitigation: 'Avoid radiation, thermal treatment' },
+      { type: 'Substitutional', concentration: 'Depends on solute', energy: '0.5-2 eV (size-dependent)', impact: 'Solid solution strengthening, doping', mitigation: 'Control composition' },
+      { type: 'Frenkel Pair', concentration: '~10⁻⁸ (thermal)', energy: (5 + s.packing * 3).toFixed(1) + ' eV', impact: 'Ionic conductivity, radiation damage', mitigation: 'Minimize radiation exposure' },
+      { type: 'Schottky Pair', concentration: '~10⁻⁶ (ionic)', energy: (2 + s.coord * 0.3).toFixed(1) + ' eV', impact: 'Ionic conductivity in ceramics', mitigation: 'Control stoichiometry' },
+      { type: 'Edge Dislocation', density: '10⁶-10¹² /cm²', energy: '~1 eV per atom plane', impact: 'Plastic deformation, yield strength', mitigation: 'Work hardening, grain refinement' },
+      { type: 'Screw Dislocation', density: '10⁶-10¹² /cm²', energy: '~1 eV per atom plane', impact: 'Crystal growth, plastic flow', mitigation: 'Grain boundary engineering' },
+      { type: 'Grain Boundary', energy: '0.5-1 J/m²', angle: 'Low-angle (<15°) / High-angle', impact: 'Strength, corrosion, diffusion', mitigation: 'Thermomechanical processing' },
+      { type: 'Stacking Fault', energy: structId === 'fcc' ? '10-100 mJ/m²' : structId === 'hcp' ? '100-300 mJ/m²' : 'N/A', impact: 'Deformation mode (TWIP, TWIP steels)', mitigation: 'Alloy design (SFE control)' },
+      { type: 'Twin Boundary', energy: 'Low (10-50 mJ/m²)', impact: 'Strengthening (Hall-Petch), shape memory', mitigation: 'Controlled by composition' },
+    ];
+    document.getElementById('csv-defects-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Defect Type</th><th>Dimension</th><th>Concentration/Energy</th><th>Formation Energy</th><th>Impact</th><th>Mitigation</th></tr></thead><tbody>
+        ${defectTypes.map(d => { const dim = d.type.includes('Vacancy') || d.type.includes('Interstitial') || d.type.includes('Substitutional') || d.type.includes('Frenkel') || d.type.includes('Schottky') ? '0D (point)' : d.type.includes('Dislocation') ? '1D (line)' : d.type.includes('Grain') || d.type.includes('Stacking') || d.type.includes('Twin') ? '2D (planar)' : '3D (volume)'; return `<tr><td><strong>${d.type}</strong></td><td style="font-size:0.75rem;">${dim}</td><td style="font-family:var(--tl-mono);font-size:0.75rem;">${d.concentration}</td><td style="font-family:var(--tl-mono);font-size:0.75rem;">${d.energy}</td><td style="font-size:0.75rem;">${d.impact}</td><td style="font-size:0.75rem;">${d.mitigation}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Crystal defects control material properties. Point defects (0D) govern diffusion and conductivity. Line defects (1D, dislocations) control mechanical strength — Hall-Petch: σ_y = σ₀ + k/√d. Planar defects (2D) affect corrosion and fracture. For ${s.name}, stacking fault energy is ${structId === 'fcc' ? 'low, enabling twinning and good ductility' : structId === 'bcc' ? 'high, limiting twinning but enabling cross-slip' : 'structure-dependent'}. Radiation damage creates Frenkel pairs — critical for nuclear materials.</div>
+    `;
+    document.getElementById('csv-defects-section').style.display = 'block';
+
+    // === Feature 8: Slip Systems & Deformation ===
+    const slipSystems = {
+      fcc: [{ plane: '{111}', direction: '<110>', count: 12, type: 'Close-packed', critical: '0.5-1 MPa', ductility: 'Excellent (>50% elongation)' }],
+      bcc: [{ plane: '{110}', direction: '<111>', count: 12, type: 'Close-packed', critical: '10-50 MPa', ductility: 'Good (10-30%)' }, { plane: '{112}', direction: '<111>', count: 12, type: 'Secondary', critical: '20-100 MPa', ductility: 'Moderate' }, { plane: '{123}', direction: '<111>', count: 24, type: 'Tertiary', critical: '30-150 MPa', ductility: 'Moderate' }],
+      hcp: [{ plane: '{0001}', direction: '<11-20>', count: 3, type: 'Basal', critical: '0.5-1 MPa', ductility: 'Limited (few systems)' }, { plane: '{10-10}', direction: '<11-20>', count: 3, type: 'Prismatic', critical: '10-40 MPa', ductility: 'Limited' }, { plane: '{10-11}', direction: '<11-20>', count: 6, type: 'Pyramidal', critical: '20-60 MPa', ductility: 'Moderate' }],
+      sc: [{ plane: '{100}', direction: '<010>', count: 6, type: 'Cube', critical: 'High', ductility: 'Poor (brittle at low T)' }],
+      diamond: [{ plane: '{111}', direction: '<110>', count: 12, type: 'Close-packed', critical: '>1 GPa', ductility: 'Brittle (covalent bonds)' }],
+      fluorite: [{ plane: '{001}', direction: '<110>', count: 6, type: 'Cleavage', critical: 'High', ductility: 'Brittle (ionic)' }],
+      perovskite: [{ plane: '{100}', direction: '<010>', count: 6, type: 'Cube', critical: 'High', ductility: 'Brittle (ceramic)' }],
+      rocksalt: [{ plane: '{110}', direction: '<1-10>', count: 6, type: 'Cleavage', critical: 'High', ductility: 'Brittle (ionic)' }],
+    };
+    const slips = slipSystems[structId] || slipSystems.sc;
+    document.getElementById('csv-slip-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Slip Plane</th><th>Slip Direction</th><th># Systems</th><th>Type</th><th>CRSS</th><th>Ductility</th></tr></thead><tbody>
+        ${slips.map(sl => `<tr><td style="font-family:var(--tl-mono);font-weight:700;">${sl.plane}</td><td style="font-family:var(--tl-mono);">${sl.direction}</td><td class="it-highlight">${sl.count}</td><td style="font-size:0.8125rem;">${sl.type}</td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${sl.critical}</td><td style="font-size:0.75rem;">${sl.ductility}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${structId === 'fcc' ? 'FCC has 12 {111}<110> slip systems — highest ductility among metals. Close-packed planes + close-packed directions = easy dislocation motion. This is why Cu, Al, Au are highly formable.' : structId === 'bcc' ? 'BCC has 48 total slip systems ({110}, {112}, {123}) but no close-packed plane. Higher CRSS → stronger but less ductile than FCC. Ductile-to-brittle transition at low temperature.' : structId === 'hcp' ? 'HCP has only 3 basal slip systems — insufficient for von Mises criterion (5 needed). Limited ductility unless non-basal slip or twinning activates. Mg and Ti need alloy design for formability.' : structId === 'diamond' ? 'Diamond cubic is covalent — dislocations require breaking strong directional bonds. Brittle at room temperature. Si shows some plasticity at high T (>600°C).' : 'Ceramic/ionic structures are brittle — slip requires overcoming strong electrostatic barriers. Fracture before yield at room temperature.'} Von Mises criterion: ≥5 independent slip systems needed for general plasticity.</div>
+    `;
+    document.getElementById('csv-slip-section').style.display = 'block';
+
+    // === Feature 9: CIF Format Export ===
+    const cifContent = `data_${element}_${structId}\n# Generated by Crystal Structure Visualizer\n_cell_length_a ${a}\n_cell_length_b ${structId === 'hcp' ? a : a}\n_cell_length_c ${structId === 'hcp' ? (a * 1.633).toFixed(4) : a}\n_cell_angle_alpha 90\n_cell_angle_beta 90\n_cell_angle_gamma ${structId === 'hcp' ? 120 : 90}\n_symmetry_space_group_name_H-M '${sym.hermannMauguin}'\n_symmetry_Int_Tables_number ${sym.spaceGroup}\n\nloop_\n_symmetry_equiv_pos_site_id\n_symmetry_equiv_pos_as_xyz\n1 'x, y, z'\n\nloop_\n_atom_site_label\n_atom_site_fract_x\n_atom_site_fract_y\n_atom_site_fract_z\n${s.positions.map((pos, i) => `${element}${i + 1} ${pos[0].toFixed(4)} ${pos[1].toFixed(4)} ${pos[2].toFixed(4)}`).join('\\n')}\n`;
+    document.getElementById('csv-cif-list').innerHTML = `
+      <div style="background:var(--tl-bg);border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:1rem;overflow-x:auto;max-height:300px;overflow-y:auto;"><pre style="font-family:var(--tl-mono);font-size:0.75rem;white-space:pre-wrap;margin:0;">${cifContent}</pre></div>
+      <div style="margin-top:0.75rem;"><button class="it-btn it-btn-secondary" id="csv-download-cif">⬇ Download CIF File</button></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">CIF (Crystallographic Information File) is the standard format for crystal structure data. Compatible with VESTA, Mercury, OLEX2, GSAS, and most crystallography software. Contains unit cell parameters, space group, and atomic positions. Use for DFT input generation or structure visualization in external tools.</div>
+    `;
+    document.getElementById('csv-cif-section').style.display = 'block';
+    document.getElementById('csv-download-cif').addEventListener('click', () => { const blob = new Blob([cifContent], { type: 'chemical/x-cif' }); const dl = document.createElement('a'); dl.href = URL.createObjectURL(blob); dl.download = element + '_' + structId + '.cif'; dl.click(); });
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('csv-export').style.display = 'inline-flex';
+    document.getElementById('csv-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), structure: { id: structId, name: s.name, element, latticeParameter: a, atomicRadius: radius, atomicMass: mass }, results: { atomsPerCell: s.atoms, packingFactor: s.packing, density, coordinationNumber: s.coord, nearestNeighbor: structId === 'fcc' ? a / Math.sqrt(2) : structId === 'bcc' ? a * Math.sqrt(3) / 2 : structId === 'sc' ? a : structId === 'diamond' ? a * Math.sqrt(3) / 4 : a * 0.5 }, symmetry: sym, millerPlanes: millerPlanes.map(p => ({ ...p, dSpacing: dSpacingFormula(p.h, p.k, p.l), allowed: structId === 'bcc' ? (p.h + p.k + p.l) % 2 === 0 : structId === 'fcc' ? (p.h % 2 === p.k % 2 && p.k % 2 === p.l % 2) : true })), reciprocalSpace: recip, properties: propPredictions, defects: defectTypes, slipSystems: slips };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a2 = document.createElement('a'); a2.href = URL.createObjectURL(blob); a2.download = 'crystal-structure-report.json'; a2.click();
+    };
+  }
+
+  document.getElementById('csv-visualize').addEventListener('click', visualize);
+  document.getElementById('csv-reset').addEventListener('click', () => {
+    document.getElementById('csv-results').classList.remove('show');
+  });
+})();
+</script>

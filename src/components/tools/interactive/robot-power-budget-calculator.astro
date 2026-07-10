@@ -1,0 +1,435 @@
+---
+/**
+ * Robot Power Budget Calculator — Interactive tool
+ * Calculate power consumption and battery requirements for robot systems
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="robot-power">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🔋</div>
+      <div>
+        <h2>Robot Power Budget Calculator</h2>
+        <p>Calculate power consumption and battery requirements for robot missions</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Mission Duration <span class="it-label-hint">(hours)</span></label>
+        <input type="number" class="it-input" id="rpc-duration" value="4" min="0.5" step="0.5" />
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Components — Add each subsystem's power draw</label>
+        <div id="rpc-components" style="display:grid;gap:0.75rem;"></div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-secondary" id="rpc-add">+ Add Component</button>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Battery Voltage <span class="it-label-hint">(V)</span></label>
+          <input type="number" class="it-input" id="rpc-voltage" value="24" min="3" max="100" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Safety Margin <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="rpc-margin" value="20" min="0" max="100" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="rpc-calculate">Calculate Power Budget</button>
+        <button class="it-btn it-btn-secondary" id="rpc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="rpc-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="rpc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Power Budget Analysis</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Total Power Draw</div>
+            <div class="it-stat-value" id="rpc-power">0<span class="it-stat-unit"> W</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Total Energy</div>
+            <div class="it-stat-value" id="rpc-energy">0<span class="it-stat-unit"> Wh</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Required Battery</div>
+            <div class="it-stat-value" id="rpc-battery">0<span class="it-stat-unit"> Ah</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Est. Runtime</div>
+            <div class="it-stat-value" id="rpc-runtime">0<span class="it-stat-unit"> hrs</span></div>
+          </div>
+        </div>
+
+        <div id="rpc-breakdown"></div>
+        <div class="it-alert it-alert-info" id="rpc-insight"></div>
+      </div>
+
+      <!-- Feature 1: Power Pie Chart -->
+      <div class="it-results-card" id="rpc-pie-section" style="display:none;">
+        <div class="it-results-title">📊 Power Consumption Breakdown</div>
+        <canvas id="rpc-pie-canvas" width="400" height="300" style="width:100%;max-width:400px;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin:0 auto 0.75rem;display:block;"></canvas>
+        <div id="rpc-pie-list"></div>
+      </div>
+
+      <!-- Feature 2: Battery Chemistry Comparison -->
+      <div class="it-results-card" id="rpc-chem-section" style="display:none;">
+        <div class="it-results-title">🔋 Battery Chemistry Comparison</div>
+        <div id="rpc-chem-list"></div>
+      </div>
+
+      <!-- Feature 3: Duty Cycle Timeline -->
+      <div class="it-results-card" id="rpc-timeline-section" style="display:none;">
+        <div class="it-results-title">⏱️ Duty Cycle Timeline Simulation</div>
+        <canvas id="rpc-timeline-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="rpc-timeline-list"></div>
+      </div>
+
+      <!-- Feature 4: Peak vs Average Load -->
+      <div class="it-results-card" id="rpc-peak-section" style="display:none;">
+        <div class="it-results-title">⚡ Peak vs Average Load Analysis</div>
+        <div id="rpc-peak-list"></div>
+      </div>
+
+      <!-- Feature 5: Weight & Volume -->
+      <div class="it-results-card" id="rpc-weight-section" style="display:none;">
+        <div class="it-results-title">⚖️ Battery Weight & Volume Estimation</div>
+        <div id="rpc-weight-list"></div>
+      </div>
+
+      <!-- Feature 6: Solar Recharge -->
+      <div class="it-results-card" id="rpc-solar-section" style="display:none;">
+        <div class="it-results-title">☀️ Solar/Harvesting Recharge Calculator</div>
+        <div id="rpc-solar-list"></div>
+      </div>
+
+      <!-- Feature 7: Power Management -->
+      <div class="it-results-card" id="rpc-pm-section" style="display:none;">
+        <div class="it-results-title">🛌 Power Management Strategy Recommendations</div>
+        <div id="rpc-pm-list"></div>
+      </div>
+
+      <!-- Feature 8: Thermal Load -->
+      <div class="it-results-card" id="rpc-thermal-section" style="display:none;">
+        <div class="it-results-title">🌡️ Thermal Load & Cooling Requirements</div>
+        <div id="rpc-thermal-list"></div>
+      </div>
+
+      <!-- Feature 9: Cost Analysis -->
+      <div class="it-results-card" id="rpc-cost-section" style="display:none;">
+        <div class="it-results-title">💰 Battery System Cost Analysis</div>
+        <div id="rpc-cost-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  let compId = 0;
+  const defaultComponents = [
+    { name: 'Drive Motors', power: 60, duty: 80 },
+    { name: 'Compute (Jetson/PC)', power: 25, duty: 100 },
+    { name: 'Sensors (LiDAR+Cam)', power: 15, duty: 100 },
+    { name: 'Comms (WiFi/5G)', power: 5, duty: 50 },
+  ];
+
+  function addComponent(name = '', power = '', duty = '') {
+    const id = compId++;
+    const container = document.getElementById('rpc-components');
+    const div = document.createElement('div');
+    div.className = 'it-row';
+    div.style.gap = '0.5rem';
+    div.setAttribute('data-comp', id);
+    div.innerHTML = `
+      <input type="text" class="it-input rpc-name" placeholder="Component name" value="${name}" style="font-size:0.8125rem;" />
+      <input type="number" class="it-input rpc-power" placeholder="Power (W)" value="${power}" min="0" style="font-size:0.8125rem;" />
+      <input type="number" class="it-input rpc-duty" placeholder="Duty (%)" value="${duty}" min="0" max="100" style="font-size:0.8125rem;" />
+      <button class="it-btn it-btn-secondary rpc-remove" style="padding:0.5rem 0.75rem;font-size:0.75rem;">✕</button>
+    `;
+    container.appendChild(div);
+    div.querySelector('.rpc-remove').addEventListener('click', () => div.remove());
+  }
+
+  defaultComponents.forEach(c => addComponent(c.name, c.power, c.duty));
+
+  document.getElementById('rpc-add').addEventListener('click', () => addComponent());
+
+  function calculate() {
+    const duration = parseFloat(document.getElementById('rpc-duration').value) || 1;
+    const voltage = parseFloat(document.getElementById('rpc-voltage').value) || 24;
+    const margin = parseFloat(document.getElementById('rpc-margin').value) / 100 || 0.2;
+
+    const components = [];
+    document.querySelectorAll('#rpc-components [data-comp]').forEach(div => {
+      const name = div.querySelector('.rpc-name').value || 'Unnamed';
+      const power = parseFloat(div.querySelector('.rpc-power').value) || 0;
+      const duty = (parseFloat(div.querySelector('.rpc-duty').value) || 100) / 100;
+      if (power > 0) components.push({ name, power, duty, avgPower: power * duty });
+    });
+
+    if (components.length === 0) { alert('Add at least one component with power > 0.'); return; }
+
+    const totalPower = components.reduce((s, c) => s + c.avgPower, 0);
+    const totalEnergy = totalPower * duration;
+    const batteryAh = (totalEnergy * (1 + margin)) / voltage;
+    const batteryWh = totalEnergy * (1 + margin);
+
+    // Estimate runtime with common battery sizes
+    const runtimeWithBattery = (batteryWh / totalPower);
+
+    document.getElementById('rpc-power').innerHTML = totalPower.toFixed(1) + '<span class="it-stat-unit"> W</span>';
+    document.getElementById('rpc-energy').innerHTML = totalEnergy.toFixed(0) + '<span class="it-stat-unit"> Wh</span>';
+    document.getElementById('rpc-battery').innerHTML = batteryAh.toFixed(1) + '<span class="it-stat-unit"> Ah</span>';
+    document.getElementById('rpc-runtime').innerHTML = runtimeWithBattery.toFixed(1) + '<span class="it-stat-unit"> hrs</span>';
+
+    const breakdown = document.getElementById('rpc-breakdown');
+    breakdown.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Component</th><th>Rated Power (W)</th><th>Duty Cycle (%)</th><th>Avg Power (W)</th><th>Energy (Wh)</th><th>Share (%)</th></tr></thead>
+        <tbody>
+          ${components.map(c => `<tr>
+            <td><strong>${c.name}</strong></td>
+            <td>${c.power}</td>
+            <td>${(c.duty * 100).toFixed(0)}%</td>
+            <td>${c.avgPower.toFixed(1)}</td>
+            <td>${(c.avgPower * duration).toFixed(1)}</td>
+            <td>${((c.avgPower / totalPower) * 100).toFixed(1)}%</td>
+          </tr>`).join('')}
+          <tr style="background:color-mix(in srgb,#8b5cf6 5%,transparent);">
+            <td colspan="3"><strong>Total</strong></td>
+            <td class="it-highlight">${totalPower.toFixed(1)} W</td>
+            <td class="it-highlight">${totalEnergy.toFixed(0)} Wh</td>
+            <td>100%</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="it-table" style="margin-top:1rem;">
+        <thead><tr><th>Battery Specification</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Mission Duration</td><td>${duration} hours</td></tr>
+          <tr><td>Total Energy Required</td><td>${totalEnergy.toFixed(0)} Wh</td></tr>
+          <tr><td>Safety Margin</td><td>${(margin * 100).toFixed(0)}%</td></tr>
+          <tr><td>Energy with Margin</td><td>${batteryWh.toFixed(0)} Wh</td></tr>
+          <tr><td>Battery Voltage</td><td>${voltage} V</td></tr>
+          <tr><td class="it-highlight">Required Battery Capacity</td><td class="it-highlight">${batteryAh.toFixed(1)} Ah (${batteryWh.toFixed(0)} Wh)</td></tr>
+          <tr><td>Peak Current Draw</td><td>${(components.reduce((s, c) => s + c.power, 0) / voltage).toFixed(1)} A</td></tr>
+          <tr><td>Average Current Draw</td><td>${(totalPower / voltage).toFixed(1)} A</td></tr>
+          <tr><td>Recommended C-Rating</td><td>${Math.ceil((components.reduce((s, c) => s + c.power, 0) / voltage) / batteryAh * 2)}C minimum</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const insight = document.getElementById('rpc-insight');
+    const topConsumer = components.reduce((max, c) => c.avgPower > max.avgPower ? c : max);
+    insight.innerHTML = `<strong>💡 Power Budget:</strong> Total average power draw is ${totalPower.toFixed(1)} W. The largest consumer is "${topConsumer.name}" at ${topConsumer.avgPower.toFixed(1)} W (${((topConsumer.avgPower / totalPower) * 100).toFixed(0)}% of total). You need a ${voltage}V battery with at least ${batteryAh.toFixed(1)} Ah capacity. ${margin > 0 ? `Including ${margin * 100}% safety margin for battery degradation and peak loads.` : 'No safety margin — consider adding 20% for reliability.'}`;
+
+    document.getElementById('rpc-results').classList.add('show');
+
+    // === Feature 1: Power Pie Chart ===
+    const pieCanvas = document.getElementById('rpc-pie-canvas');
+    const pctx = pieCanvas.getContext('2d');
+    const pw = pieCanvas.width, ph = pieCanvas.height;
+    pctx.fillStyle = '#ebedf5'; pctx.fillRect(0, 0, pw, ph);
+    const colors = ['#8b5cf6', '#06b6d4', '#f59e0b', '#059669', '#dc2626', '#d97706', '#7c3aed', '#0891b2'];
+    const cx = pw / 2, cy = ph / 2, r = Math.min(pw, ph) / 2 - 30;
+    let startAngle = -Math.PI / 2;
+    components.forEach((c, i) => {
+      const angle = (c.avgPower / totalPower) * Math.PI * 2;
+      pctx.fillStyle = colors[i % colors.length];
+      pctx.beginPath(); pctx.moveTo(cx, cy); pctx.arc(cx, cy, r, startAngle, startAngle + angle); pctx.closePath(); pctx.fill();
+      startAngle += angle;
+    });
+    // Legend
+    pctx.font = '10px sans-serif'; pctx.textAlign = 'left';
+    components.forEach((c, i) => {
+      const ly = 15 + i * 16;
+      pctx.fillStyle = colors[i % colors.length]; pctx.fillRect(10, ly - 8, 10, 10);
+      pctx.fillStyle = '#1e293b';
+      pctx.fillText(`${c.name}: ${((c.avgPower / totalPower) * 100).toFixed(0)}% (${c.avgPower.toFixed(1)}W)`, 25, ly);
+    });
+    document.getElementById('rpc-pie-list').innerHTML = `<div class="it-alert it-alert-info">Largest consumer: <strong>${components.reduce((max, c) => c.avgPower > max.avgPower ? c : max).name}</strong> at ${((components.reduce((max, c) => c.avgPower > max.avgPower ? c : max).avgPower / totalPower) * 100).toFixed(0)}% of total power. Focus optimization efforts here for maximum runtime improvement.</div>`;
+    document.getElementById('rpc-pie-section').style.display = 'block';
+
+    // === Feature 2: Battery Chemistry Comparison ===
+    const chemistries = [
+      { name: 'LiPo', energyDensity: 200, costPerWh: 1.5, cycles: 300, tempRange: '-20 to 60°C', safety: 'Medium' },
+      { name: 'Li-ion (18650)', energyDensity: 250, costPerWh: 1.0, cycles: 500, tempRange: '-20 to 60°C', safety: 'Medium' },
+      { name: 'LFP (LiFePO4)', energyDensity: 160, costPerWh: 0.8, cycles: 2000, tempRange: '-20 to 70°C', safety: 'High' },
+      { name: 'NiMH', energyDensity: 100, costPerWh: 0.6, cycles: 500, tempRange: '-20 to 50°C', safety: 'High' },
+      { name: 'Solid State', energyDensity: 400, costPerWh: 5.0, cycles: 1000, tempRange: '-20 to 80°C', safety: 'Very High' },
+    ];
+    document.getElementById('rpc-chem-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>Energy Density (Wh/kg)</th><th>Weight (kg)</th><th>Cost ($)</th><th>Cycles</th><th>Temp Range</th><th>Safety</th><th>Recommend?</th></tr></thead><tbody>
+        ${chemistries.map(c => {
+          const weight = batteryWh / c.energyDensity;
+          const cost = batteryWh * c.costPerWh;
+          const rec = c.name === 'LFP (LiFePO4)' ? '✓ Best for robots' : c.name === 'Li-ion (18650)' ? '✓ Good general' : c.name === 'LiPo' ? '⚠️ High power, low cycles' : '';
+          return `<tr><td><strong>${c.name}</strong></td><td>${c.energyDensity}</td><td>${weight.toFixed(2)}</td><td>$${cost.toFixed(0)}</td><td>${c.cycles}</td><td style="font-size:0.8125rem;">${c.tempRange}</td><td>${c.safety}</td><td style="color:${rec.startsWith('✓') ? '#059669' : '#d97706'};font-weight:700;">${rec}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">For mobile robots, LFP offers best safety + cycle life at moderate weight. LiPo for high-power applications (drones). Li-ion 18650 for general purpose. Solid-state for future high-density needs. Weight = energy / energy density.</div>
+    `;
+    document.getElementById('rpc-chem-section').style.display = 'block';
+
+    // === Feature 3: Duty Cycle Timeline ===
+    const tlCanvas = document.getElementById('rpc-timeline-canvas');
+    const tlctx = tlCanvas.getContext('2d');
+    const tlw = tlCanvas.width, tlh = tlCanvas.height;
+    tlctx.fillStyle = '#ebedf5'; tlctx.fillRect(0, 0, tlw, tlh);
+    tlctx.strokeStyle = 'rgba(15,23,42,0.08)'; tlctx.lineWidth = 1;
+    for (let i = 0; i <= duration; i++) { tlctx.beginPath(); tlctx.moveTo(i / duration * tlw, 0); tlctx.lineTo(i / duration * tlw, tlh); tlctx.stroke(); }
+    for (let i = 0; i <= 4; i++) { tlctx.beginPath(); tlctx.moveTo(0, i / 4 * tlh); tlctx.lineTo(tlw, i / 4 * tlh); tlctx.stroke(); }
+    const peakPower = components.reduce((s, c) => s + c.power, 0);
+    const tlMax = peakPower * 1.1;
+    // Simulate: motors active 60% of time, sensors always on, comms bursty
+    const tlData = [];
+    for (let t = 0; t <= duration; t += 0.1) {
+      let power = 0;
+      components.forEach(c => {
+        let active = c.duty;
+        if (c.name.toLowerCase().includes('motor')) active = (Math.sin(t * 2) > 0.3) ? 1 : 0.1;
+        if (c.name.toLowerCase().includes('comm')) active = (t % 1 < 0.1) ? 1 : 0.1;
+        power += c.power * active;
+      });
+      tlData.push({ t, power });
+    }
+    tlctx.strokeStyle = '#8b5cf6'; tlctx.lineWidth = 1.5; tlctx.beginPath();
+    tlData.forEach((d, i) => { const x = d.t / duration * tlw; const y = tlh - (d.power / tlMax) * (tlh - 20) - 10; if (i === 0) tlctx.moveTo(x, y); else tlctx.lineTo(x, y); }); tlctx.stroke();
+    tlctx.strokeStyle = '#dc2626'; tlctx.setLineDash([4, 4]); tlctx.beginPath(); tlctx.moveTo(0, tlh - (totalPower / tlMax) * (tlh - 20) - 10); tlctx.lineTo(tlw, tlh - (totalPower / tlMax) * (tlh - 20) - 10); tlctx.stroke(); tlctx.setLineDash([]);
+    tlctx.fillStyle = '#5c5c72'; tlctx.font = '10px sans-serif'; tlctx.textAlign = 'center';
+    tlctx.fillText('0h', 10, tlh - 2); tlctx.fillText(duration + 'h', tlw - 15, tlh - 2);
+    tlctx.fillStyle = '#dc2626'; tlctx.fillText('Avg', tlw - 30, tlh - (totalPower / tlMax) * (tlh - 20) - 15);
+    const tlPeak = Math.max(...tlData.map(d => d.power));
+    document.getElementById('rpc-timeline-list').innerHTML = `<div class="it-alert it-alert-info">Simulated power profile over ${duration}h. Peak: ${tlPeak.toFixed(1)}W, Average: ${totalPower.toFixed(1)}W, Min: ${Math.min(...tlData.map(d => d.power)).toFixed(1)}W. Red dashed line = average. Motors create dynamic load — BMS must handle peak current of ${(tlPeak / voltage).toFixed(1)}A.</div>`;
+    document.getElementById('rpc-timeline-section').style.display = 'block';
+
+    // === Feature 4: Peak vs Average Load ===
+    const avgCurrent = totalPower / voltage;
+    const peakCurrent = peakPower / voltage;
+    const cRating = Math.ceil(peakCurrent / batteryAh * 2);
+    document.getElementById('rpc-peak-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Metric</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+        <tr><td>Average Power</td><td>${totalPower.toFixed(1)} W</td><td>Continuous draw for sizing</td></tr>
+        <tr><td>Peak Power (all active)</td><td>${peakPower.toFixed(1)} W</td><td>Worst case — all components at 100%</td></tr>
+        <tr><td>Peak/Avg Ratio</td><td>${(peakPower / totalPower).toFixed(2)}x</td><td>${peakPower / totalPower > 3 ? '⚠️ High burst — need high C-rate battery' : 'Manageable ratio'}</td></tr>
+        <tr><td>Average Current</td><td>${avgCurrent.toFixed(1)} A</td><td>Continuous @ ${voltage}V</td></tr>
+        <tr><td>Peak Current</td><td>${peakCurrent.toFixed(1)} A</td><td>Burst @ ${voltage}V</td></tr>
+        <tr class="it-highlight"><td>Required C-Rating</td><td class="it-highlight">${cRating}C</td><td>2x safety factor on peak</td></tr>
+        <tr><td>BMS Rating</td><td>${Math.ceil(peakCurrent * 1.3)}A</td><td>30% headroom</td></tr>
+        <tr><td>Wire Gauge (AWG)</td><td>${peakCurrent < 10 ? '16 AWG' : peakCurrent < 20 ? '14 AWG' : peakCurrent < 40 ? '12 AWG' : '10 AWG'}</td><td>For peak current</td></tr>
+        <tr><td>Fuse Rating</td><td>${Math.ceil(peakCurrent * 1.25 / 5) * 5}A</td><td>Slow-blo fuse</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">BMS must handle ${Math.ceil(peakCurrent * 1.3)}A continuous. Wire gauge sized for peak current to avoid voltage drop. C-rating of ${cRating}C ensures battery can deliver peak without sag. Use slow-blo fuse to handle motor inrush.</div>
+    `;
+    document.getElementById('rpc-peak-section').style.display = 'block';
+
+    // === Feature 5: Weight & Volume ===
+    const weightData = chemistries.map(c => ({ name: c.name, weight: batteryWh / c.energyDensity, volume: batteryWh / (c.energyDensity * 2.5) }));
+    document.getElementById('rpc-weight-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>Weight (kg)</th><th>Est. Volume (L)</th><th>Form Factor</th></tr></thead><tbody>
+        ${weightData.map(w => {
+          const ff = w.weight < 0.5 ? 'Small pack (drone)' : w.weight < 2 ? 'Medium pack (mobile robot)' : w.weight < 5 ? 'Large pack (AGV)' : 'Very large (heavy-duty)';
+          return `<tr><td><strong>${w.name}</strong></td><td class="it-highlight">${w.weight.toFixed(2)}</td><td>${w.volume.toFixed(2)}</td><td>${ff}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Battery weight impacts robot payload capacity. For mobile robots, battery should be <30% of total robot weight. Volume estimate assumes ~2.5× practical packaging factor vs theoretical energy density. LFP is heavier but safer and longer-lasting.</div>
+    `;
+    document.getElementById('rpc-weight-section').style.display = 'block';
+
+    // === Feature 6: Solar Recharge ===
+    const solarOptions = [
+      { type: 'Flexible thin-film', efficiency: 15, wPerM2: 150 },
+      { type: 'Mono-crystalline', efficiency: 22, wPerM2: 220 },
+      { type: 'Polycrystalline', efficiency: 18, wPerM2: 180 },
+    ];
+    const psh = 5; // peak sun hours
+    document.getElementById('rpc-solar-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Panel Type</th><th>Efficiency</th><th>Panel Area (m²)</th><th>Recharge Time (hrs)</th><th>Panel Weight (kg)</th></tr></thead><tbody>
+        ${solarOptions.map(s => {
+          const panelW = s.wPerM2 * 0.5; // 0.5m² panel
+          const chargeTime = batteryWh / (panelW * psh / s.efficiency * 100) * 100;
+          const area = batteryWh / (s.wPerM2 * psh) ;
+          return `<tr><td><strong>${s.type}</strong></td><td>${s.efficiency}%</td><td>${area.toFixed(2)} m²</td><td>${(batteryWh / (s.wPerM2 * 0.5 * psh / 100 * s.efficiency)).toFixed(1)} hrs</td><td>${(area * 2).toFixed(1)}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Assumes ${psh} peak sun hours/day. For outdoor robots, ${batteryWh.toFixed(0)}Wh requires ~${(batteryWh / (220 * psh)).toFixed(2)}m² of mono-crystalline panels for 1-day recharge. Consider energy harvesting for extended missions. Wind/hand-crank alternatives for emergency recharge.</div>
+    `;
+    document.getElementById('rpc-solar-section').style.display = 'block';
+
+    // === Feature 7: Power Management ===
+    const pmStrategies = [];
+    const motorComp = components.find(c => c.name.toLowerCase().includes('motor'));
+    const computeComp = components.find(c => c.name.toLowerCase().includes('compute') || c.name.toLowerCase().includes('jetson'));
+    const sensorComp = components.find(c => c.name.toLowerCase().includes('sensor'));
+    if (motorComp) pmStrategies.push({ strategy: 'Motor sleep between moves', saving: motorComp.avgPower * 0.3, desc: `Disable motor drivers when idle — saves ${(motorComp.avgPower * 0.3).toFixed(1)}W (30% of motor power).` });
+    if (computeComp) pmStrategies.push({ strategy: 'DVFS (Dynamic Voltage/Frequency)', saving: computeComp.avgPower * 0.4, desc: `Reduce CPU/GPU clock when idle — saves ${(computeComp.avgPower * 0.4).toFixed(1)}W (40% of compute power).` });
+    if (sensorComp) pmStrategies.push({ strategy: 'Sensor polling instead of continuous', saving: sensorComp.avgPower * 0.5, desc: `Poll sensors at 10Hz instead of 100Hz — saves ${(sensorComp.avgPower * 0.5).toFixed(1)}W (50% of sensor power).` });
+    pmStrategies.push({ strategy: 'Deep sleep mode (idle)', saving: totalPower * 0.7, desc: `Enter deep sleep between tasks — saves ${(totalPower * 0.7).toFixed(1)}W (70% of total when idle).` });
+    pmStrategies.push({ strategy: 'LED/indicator disable', saving: 2, desc: 'Turn off status LEDs — saves ~2W.' });
+    const totalSaving = pmStrategies.reduce((s, p) => s + p.saving, 0);
+    const extendedRuntime = (batteryWh / (totalPower - totalSaving * 0.3));
+    document.getElementById('rpc-pm-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Strategy</th><th>Power Saving (W)</th><th>Description</th></tr></thead><tbody>
+        ${pmStrategies.map(p => `<tr><td><strong>${p.strategy}</strong></td><td class="it-highlight">${p.saving.toFixed(1)}W</td><td>${p.desc}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-good" style="margin-top:0.5rem;">Combined savings: ${(totalSaving * 0.3).toFixed(1)}W (conservative 30% utilization). Extended runtime: ${extendedRuntime.toFixed(1)}h vs ${runtimeWithBattery.toFixed(1)}h (+${((extendedRuntime / runtimeWithBattery - 1) * 100).toFixed(0)}%). Implement sleep modes in firmware for automatic power management.</div>
+    `;
+    document.getElementById('rpc-pm-section').style.display = 'block';
+
+    // === Feature 8: Thermal Load ===
+    const heatGen = totalPower * 0.85; // 85% of power becomes heat
+    const ambientTemp = 25;
+    const tempRise = heatGen / 20; // rough estimate: 1°C per 20W without cooling
+    const robotTemp = ambientTemp + tempRise;
+    document.getElementById('rpc-thermal-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Total Power Dissipation</span><strong>${heatGen.toFixed(1)} W (heat)</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Ambient Temperature</span><strong>${ambientTemp}°C</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Est. Temp Rise (no cooling)</span><strong style="color:${tempRise > 20 ? '#dc2626' : '#d97706'};">+${tempRise.toFixed(1)}°C</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Est. Internal Temp</span><strong style="color:${robotTemp > 60 ? '#dc2626' : '#059669'};">${robotTemp.toFixed(1)}°C</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Recommended Cooling</span><strong>${tempRise > 30 ? 'Active fan + heatsink' : tempRise > 15 ? 'Passive heatsink' : 'No cooling needed'}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Fan Power (if needed)</span><strong>${tempRise > 30 ? '2-5W additional' : tempRise > 15 ? '1-2W additional' : '0W'}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Battery Heat (I²R)</span><strong>${(avgCurrent * avgCurrent * 0.05).toFixed(2)} W</strong></div>
+      <div class="it-alert ${tempRise > 20 ? 'it-alert-warn' : 'it-alert-info'}" style="margin-top:0.5rem;">${tempRise > 30 ? '⚠️ Significant heat generation — active cooling required. Add fan to power budget.' : tempRise > 15 ? 'Moderate heat — passive heatsink recommended.' : 'Heat dissipation manageable without additional cooling.'} Battery internal resistance adds ${(avgCurrent * avgCurrent * 0.05).toFixed(2)}W of I²R heating. Keep battery below 45°C for safety.</div>
+    `;
+    document.getElementById('rpc-thermal-section').style.display = 'block';
+
+    // === Feature 9: Cost Analysis ===
+    const costData = chemistries.map(c => ({ name: c.name, batteryCost: batteryWh * c.costPerWh, bmsCost: batteryWh * 0.15, chargerCost: 50 + voltage * 2, total: batteryWh * c.costPerWh + batteryWh * 0.15 + 50 + voltage * 2 }));
+    document.getElementById('rpc-cost-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>Battery ($)</th><th>BMS ($)</th><th>Charger ($)</th><th>Total ($)</th><th>$/Wh</th></tr></thead><tbody>
+        ${costData.map(c => `<tr><td><strong>${c.name}</strong></td><td>$${c.batteryCost.toFixed(0)}</td><td>$${c.bmsCost.toFixed(0)}</td><td>$${c.chargerCost.toFixed(0)}</td><td class="it-highlight">$${c.total.toFixed(0)}</td><td>$${(c.total / batteryWh).toFixed(2)}/Wh</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">BMS cost ~15% of battery cost. Charger: $${(50 + voltage * 2)} for ${voltage}V system. LFP has lowest total cost over lifetime (2000 cycles vs 300 for LiPo). For commercial robots, factor in battery replacement cost: LiPo replaced ~${Math.ceil(duration * 365 / 300)}x/yr, LFP ~${Math.ceil(duration * 365 / 2000)}x/yr.</div>
+    `;
+    document.getElementById('rpc-cost-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('rpc-export').style.display = 'inline-flex';
+    document.getElementById('rpc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), duration, voltage, margin, components, totalPower, totalEnergy, batteryAh, batteryWh, peakPower, peakCurrent, chemistryComparison: chemistries.map((c, i) => ({ ...c, weight: weightData[i].weight, cost: costData[i].total })), powerManagement: pmStrategies, thermal: { heatGen, tempRise, robotTemp } };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'robot-power-budget-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('rpc-calculate').addEventListener('click', calculate);
+  document.getElementById('rpc-reset').addEventListener('click', () => {
+    document.getElementById('rpc-results').classList.remove('show');
+    document.getElementById('rpc-components').innerHTML = '';
+    compId = 0;
+    defaultComponents.forEach(c => addComponent(c.name, c.power, c.duty));
+  });
+})();
+</script>

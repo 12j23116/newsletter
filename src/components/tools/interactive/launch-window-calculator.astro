@@ -1,0 +1,446 @@
+---
+/**
+ * Launch Window Calculator — Interactive tool
+ * Calculate launch windows for orbital and interplanetary missions
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="launch-window">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🚀</div>
+      <div>
+        <h2>Launch Window Calculator</h2>
+        <p>Calculate optimal launch windows for LEO, GTO, and interplanetary missions</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Mission Type</label>
+        <select class="it-select" id="lwc-mission-type">
+          <option value="leo">LEO — Low Earth Orbit</option>
+          <option value="gto">GTO — Geostationary Transfer</option>
+          <option value="mars">Mars Transfer (Hohmann)</option>
+          <option value="moon">Lunar Transfer</option>
+          <option value="venus">Venus Transfer</option>
+          <option value="asteroid">Near-Earth Asteroid</option>
+        </select>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Launch Site Latitude (°)</label>
+          <input type="number" class="it-input" id="lwc-latitude" value="28.5" min="-90" max="90" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Target Inclination (°)</label>
+          <input type="number" class="it-input" id="lwc-inclination" value="51.6" min="0" max="180" step="0.1" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Target Altitude (km)</label>
+          <input type="number" class="it-input" id="lwc-altitude" value="400" min="100" max="40000" step="10" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Launch Date</label>
+          <input type="date" class="it-input" id="lwc-date" />
+        </div>
+      </div>
+
+      <!-- Feature 6: Launch Vehicle Selection -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem;">
+        <label class="it-label">🛩️ Launch Vehicle</label>
+        <select class="it-select" id="lwc-vehicle">
+          <option value="falcon9">Falcon 9 (22.8t to LEO, $67M)</option>
+          <option value="falconheavy">Falcon Heavy (63.8t to LEO, $97M)</option>
+          <option value="starship">Starship (150t to LEO, est. $10M)</option>
+          <option value="atlasv">Atlas V (18.5t to LEO, $110M)</option>
+          <option value="ariane6">Ariane 6 (21.6t to LEO, $85M)</option>
+          <option value="sls">SLS (95t to LEO, $2.2B)</option>
+          <option value="electron">Electron (0.3t to LEO, $7.5M)</option>
+        </select>
+      </div>
+
+      <!-- Feature 4: Weather Constraints -->
+      <div class="it-field">
+        <label class="it-checkbox-item">
+          <input type="checkbox" id="lwc-weather-check" checked />
+          🌦️ Include Weather Constraints <span class="it-label-hint">(simulated conditions)</span>
+        </label>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="lwc-calculate">Calculate Launch Window</button>
+        <button class="it-btn it-btn-secondary" id="lwc-clear">Clear</button>
+        <button class="it-btn it-btn-secondary" id="lwc-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="lwc-results">
+      <!-- Main Results -->
+      <div class="it-results-card">
+        <div class="it-results-title">Launch Window Analysis</div>
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Window Duration</div>
+            <div class="it-stat-value" id="lwc-duration" style="font-size:1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Optimal Launch Time</div>
+            <div class="it-stat-value" id="lwc-optimal-time" style="font-size:1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Azimuth (°)</div>
+            <div class="it-stat-value" id="lwc-azimuth">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Window Quality</div>
+            <div class="it-stat-value" id="lwc-quality" style="font-size:1.25rem;">—</div>
+          </div>
+        </div>
+        <div class="it-progress" style="margin-bottom: 1.5rem;">
+          <div class="it-progress-fill" id="lwc-progress" style="width:0%;background:#059669;"></div>
+        </div>
+        <div id="lwc-summary"></div>
+      </div>
+
+      <!-- Feature 1: Planetary Alignment -->
+      <div class="it-results-card" id="lwc-alignment-section" style="display:none;">
+        <div class="it-results-title">🪐 Planetary Alignment (Hohmann Transfer)</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Transfer Angle</div><div class="it-stat-value" id="lwc-transfer-angle">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Transfer Time</div><div class="it-stat-value" id="lwc-transfer-time" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Next Window</div><div class="it-stat-value" id="lwc-next-window" style="font-size:0.875rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Synodic Period</div><div class="it-stat-value" id="lwc-synodic" style="font-size:0.875rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="lwc-alignment-insight"></div>
+      </div>
+
+      <!-- Feature 2: Delta-V Budget -->
+      <div class="it-results-card" id="lwc-deltav-section" style="display:none;">
+        <div class="it-results-title">⚡ Delta-V Budget Estimator</div>
+        <table class="it-table" id="lwc-deltav-table">
+          <thead><tr><th>Phase</th><th>Delta-V (m/s)</th><th>Cumulative</th></tr></thead>
+          <tbody id="lwc-deltav-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="lwc-deltav-insight"></div>
+      </div>
+
+      <!-- Feature 3: Launch Azimuth -->
+      <div class="it-results-card" id="lwc-azimuth-section" style="display:none;">
+        <div class="it-results-title">🧭 Launch Azimuth & Corridor</div>
+        <div id="lwc-azimuth-detail"></div>
+      </div>
+
+      <!-- Feature 4: Weather Constraints -->
+      <div class="it-results-card" id="lwc-weather-section" style="display:none;">
+        <div class="it-results-title">🌦️ Weather Constraint Analysis</div>
+        <div id="lwc-weather-list"></div>
+      </div>
+
+      <!-- Feature 5: Range Safety -->
+      <div class="it-results-card" id="lwc-range-section" style="display:none;">
+        <div class="it-results-title">🛡️ Range Safety & Drop Zone Analysis</div>
+        <div id="lwc-range-list"></div>
+      </div>
+
+      <!-- Feature 6: Vehicle Comparison -->
+      <div class="it-results-card" id="lwc-vehicle-section" style="display:none;">
+        <div class="it-results-title">🚀 Launch Vehicle Performance</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Payload to Orbit</div><div class="it-stat-value" id="lwc-payload">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Cost per kg</div><div class="it-stat-value" id="lwc-cost-kg" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Margin</div><div class="it-stat-value" id="lwc-margin" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Fairing Dia.</div><div class="it-stat-value" id="lwc-fairing" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="lwc-vehicle-insight"></div>
+      </div>
+
+      <!-- Feature 7: Orbital Insertion Accuracy -->
+      <div class="it-results-card" id="lwc-insertion-section" style="display:none;">
+        <div class="it-results-title">🎯 Orbital Insertion Accuracy</div>
+        <div id="lwc-insertion-list"></div>
+      </div>
+
+      <!-- Feature 8: Launch Site Selector -->
+      <div class="it-results-card" id="lwc-sites-section" style="display:none;">
+        <div class="it-results-title">📍 Launch Site Comparison</div>
+        <table class="it-table" id="lwc-sites-table">
+          <thead><tr><th>Site</th><th>Latitude</th><th>Boost Advantage</th><th>Best For</th></tr></thead>
+          <tbody id="lwc-sites-body"></tbody>
+        </table>
+      </div>
+
+      <!-- Feature 9: Mission Timeline -->
+      <div class="it-results-card" id="lwc-timeline-section" style="display:none;">
+        <div class="it-results-title">⏱️ Mission Timeline (T-Minus Events)</div>
+        <div id="lwc-timeline-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const vehicles = {
+    'falcon9': { name: 'Falcon 9', leoPayload: 22800, gtoPayload: 8300, cost: 67e6, fairing: 4.6 },
+    'falconheavy': { name: 'Falcon Heavy', leoPayload: 63800, gtoPayload: 26700, cost: 97e6, fairing: 4.6 },
+    'starship': { name: 'Starship', leoPayload: 150000, gtoPayload: 100000, cost: 10e6, fairing: 9 },
+    'atlasv': { name: 'Atlas V', leoPayload: 18500, gtoPayload: 7280, cost: 110e6, fairing: 4.2 },
+    'ariane6': { name: 'Ariane 6', leoPayload: 21600, gtoPayload: 11500, cost: 85e6, fairing: 5.4 },
+    'sls': { name: 'SLS', leoPayload: 95000, gtoPayload: 27000, cost: 2200e6, fairing: 5 },
+    'electron': { name: 'Electron', leoPayload: 300, gtoPayload: 0, cost: 7.5e6, fairing: 1.2 },
+  };
+
+  const launchSites = [
+    { name: 'Cape Canaveral, FL', lat: 28.5, country: 'USA', bestFor: 'GTO, ISS, Mars' },
+    { name: 'Kennedy Space Center', lat: 28.6, country: 'USA', bestFor: 'Heavy lift, Crewed' },
+    { name: 'Vandenberg SFB, CA', lat: 34.7, country: 'USA', bestFor: 'Polar, Sun-sync' },
+    { name: 'Baikonur, Kazakhstan', lat: 45.9, country: 'Kazakhstan', bestFor: 'ISS, GTO' },
+    { name: 'Kourou, French Guiana', lat: 5.2, country: 'ESA', bestFor: 'GTO (equatorial)' },
+    { name: 'Jiuquan, China', lat: 40.9, country: 'China', bestFor: 'LEO, Crewed' },
+    { name: 'Sriharikota, India', lat: 13.7, country: 'India', bestFor: 'LEO, GTO' },
+    { name: 'Wallops Island, VA', lat: 37.8, country: 'USA', bestFor: 'Small LEO, ISS' },
+  ];
+
+  const planetData = {
+    mars: { name: 'Mars', a: 1.524, synodic: 780, transferTime: 259 },
+    venus: { name: 'Venus', a: 0.723, synodic: 584, transferTime: 146 },
+    moon: { name: 'Moon', a: 0.00257, synodic: 29.5, transferTime: 3 },
+  };
+
+  function calculate() {
+    const missionType = document.getElementById('lwc-mission-type').value;
+    const lat = parseFloat(document.getElementById('lwc-latitude').value) || 28.5;
+    const inc = parseFloat(document.getElementById('lwc-inclination').value) || 51.6;
+    const alt = parseFloat(document.getElementById('lwc-altitude').value) || 400;
+    const dateStr = document.getElementById('lwc-date').value || new Date().toISOString().split('T')[0];
+    const vehicleKey = document.getElementById('lwc-vehicle').value;
+    const vehicle = vehicles[vehicleKey];
+
+    const earthRadius = 6371;
+    const mu = 398600; // km³/s²
+    const orbitRadius = earthRadius + alt;
+    const orbitalVel = Math.sqrt(mu / orbitRadius);
+    const launchAzimuth = Math.asin(Math.cos(inc * Math.PI / 180) / Math.cos(lat * Math.PI / 180)) * 180 / Math.PI;
+
+    // Window duration depends on mission type
+    let windowDuration, windowQuality, qualityColor;
+    if (missionType === 'leo') { windowDuration = 30 + Math.random() * 30; windowQuality = 'Excellent'; qualityColor = '#059669'; }
+    else if (missionType === 'gto') { windowDuration = 45 + Math.random() * 30; windowQuality = 'Good'; qualityColor = '#059669'; }
+    else if (missionType === 'mars') { windowDuration = 10 + Math.random() * 10; windowQuality = 'Narrow'; qualityColor = '#d97706'; }
+    else if (missionType === 'moon') { windowDuration = 20 + Math.random() * 15; windowQuality = 'Moderate'; qualityColor = '#84cc16'; }
+    else if (missionType === 'venus') { windowDuration = 8 + Math.random() * 8; windowQuality = 'Narrow'; qualityColor = '#d97706'; }
+    else { windowDuration = 5 + Math.random() * 10; windowQuality = 'Very Narrow'; qualityColor = '#dc2626'; }
+
+    const launchDate = new Date(dateStr);
+    const optimalHour = Math.floor(Math.random() * 24);
+    const optimalMin = Math.floor(Math.random() * 60);
+    const optimalTime = `${String(optimalHour).padStart(2,'0')}:${String(optimalMin).padStart(2,'0')} UTC`;
+
+    document.getElementById('lwc-duration').textContent = windowDuration.toFixed(0) + ' min';
+    document.getElementById('lwc-optimal-time').textContent = optimalTime;
+    document.getElementById('lwc-azimuth').textContent = launchAzimuth.toFixed(1) + '°';
+    document.getElementById('lwc-quality').textContent = windowQuality;
+    document.getElementById('lwc-quality').style.color = qualityColor;
+    document.getElementById('lwc-progress').style.width = (100 - windowDuration / 60 * 100) + '%';
+    document.getElementById('lwc-progress').style.background = qualityColor;
+
+    document.getElementById('lwc-summary').innerHTML = `<div class="it-alert it-alert-info">ℹ️ <strong>${missionType.toUpperCase()} mission</strong> from ${lat}°N latitude to ${alt}km altitude. Target inclination: ${inc}°. Launch azimuth: ${launchAzimuth.toFixed(1)}°. Window opens at ${optimalTime} for ${windowDuration.toFixed(0)} minutes.</div>`;
+
+    // === Feature 1: Planetary Alignment ===
+    const alignSection = document.getElementById('lwc-alignment-section');
+    if (planetData[missionType]) {
+      const p = planetData[missionType];
+      const transferAngle = 180 - (1 / (2 * p.a)) * 180 / Math.PI * 0; // simplified
+      const phaseAngle = missionType === 'mars' ? 44 : missionType === 'venus' ? 54 : 0;
+      const nextWindowDate = new Date(launchDate);
+      nextWindowDate.setDate(nextWindowDate.getDate() + Math.floor(p.synodic * (0.3 + Math.random() * 0.7)));
+      document.getElementById('lwc-transfer-angle').textContent = phaseAngle + '°';
+      document.getElementById('lwc-transfer-time').textContent = p.transferTime + ' days';
+      document.getElementById('lwc-next-window').textContent = nextWindowDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      document.getElementById('lwc-synodic').textContent = p.synodic + ' days';
+      document.getElementById('lwc-alignment-insight').innerHTML = `Hohmann transfer to <strong>${p.name}</strong> requires a <strong>${phaseAngle}° phase angle</strong> between Earth and ${p.name}. Transfer duration: ~${p.transferTime} days. Windows repeat every ${p.synodic} days. Next viable window after today: <strong>${nextWindowDate.toLocaleDateString()}</strong>.`;
+      alignSection.style.display = 'block';
+    } else {
+      alignSection.style.display = 'none';
+    }
+
+    // === Feature 2: Delta-V Budget ===
+    const dvBody = document.getElementById('lwc-deltav-body');
+    let dvPhases = [];
+    if (missionType === 'leo') {
+      const orbVel = orbitalVel * 1000;
+      const gravityLoss = 1500;
+      const dragLoss = 300;
+      const steeringLoss = 100;
+      dvPhases = [
+        { phase: 'Gravity losses', dv: gravityLoss },
+        { phase: 'Drag losses', dv: dragLoss },
+        { phase: 'Steering losses', dv: steeringLoss },
+        { phase: 'Orbital velocity', dv: Math.round(orbVel) },
+        { phase: 'Circularization burn', dv: 50 },
+      ];
+    } else if (missionType === 'gto') {
+      dvPhases = [
+        { phase: 'LEO insertion', dv: 9400 },
+        { phase: 'GTO apogee burn', dv: 2460 },
+        { phase: 'GEO circularization', dv: 1465 },
+        { phase: 'Station-keeping (annual)', dv: 50 },
+      ];
+    } else if (missionType === 'mars') {
+      dvPhases = [
+        { phase: 'LEO insertion', dv: 9400 },
+        { phase: 'TMI (Trans-Mars Injection)', dv: 3600 },
+        { phase: 'Mars orbit capture', dv: 2100 },
+        { phase: 'Mars landing (propulsive)', dv: 1500 },
+      ];
+    } else if (missionType === 'moon') {
+      dvPhases = [
+        { phase: 'LEO insertion', dv: 9400 },
+        { phase: 'TLI (Trans-Lunar Injection)', dv: 3100 },
+        { phase: 'Lunar orbit capture', dv: 820 },
+        { phase: 'Lunar landing', dv: 1700 },
+      ];
+    } else {
+      dvPhases = [
+        { phase: 'LEO insertion', dv: 9400 },
+        { phase: 'Transfer burn', dv: 3000 },
+        { phase: 'Target capture', dv: 1500 },
+      ];
+    }
+    let cumulative = 0;
+    dvBody.innerHTML = dvPhases.map(p => { cumulative += p.dv; return `<tr><td>${p.phase}</td><td>${p.dv.toLocaleString()}</td><td>${cumulative.toLocaleString()}</td></tr>`; }).join('') + `<tr style="font-weight:600;"><td>Total Delta-V</td><td></td><td class="it-highlight">${cumulative.toLocaleString()} m/s</td></tr>`;
+    document.getElementById('lwc-deltav-insight').innerHTML = `Total mission Delta-V: <strong>${cumulative.toLocaleString()} m/s</strong>. ${cumulative > 15000 ? '⚠️ Requires heavy-lift or on-orbit refueling.' : cumulative > 10000 ? 'Standard launch vehicle sufficient.' : '✓ Achievable with small-lift vehicle.'}`;
+    document.getElementById('lwc-deltav-section').style.display = 'block';
+
+    // === Feature 3: Launch Azimuth ===
+    const azDetail = document.getElementById('lwc-azimuth-detail');
+    const azCorridor = Math.abs(launchAzimuth - 90) < 5 ? 'Due East (equatorial)' : launchAzimuth < 90 ? 'Northeast' : 'Southeast';
+    const dogleg = Math.abs(lat - inc) > 5 ? Math.abs(lat - inc) * 100 : 0;
+    azDetail.innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Launch Azimuth</span><strong>${launchAzimuth.toFixed(2)}°</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Corridor Direction</span><strong>${azCorridor}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Plane Change Needed</span><strong>${Math.abs(lat - inc).toFixed(1)}°</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Dogleg Maneuver ΔV</span><strong>${dogleg > 0 ? dogleg + ' m/s' : 'None'}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Earth Rotation Boost</span><strong>${(465 * Math.cos(lat * Math.PI / 180)).toFixed(0)} m/s</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${Math.abs(lat - inc) < 2 ? '✓ Launch site latitude nearly matches inclination — minimal plane change needed.' : '⚠️ Latitude/inclination mismatch requires dogleg maneuver — reduces payload capacity.'}</div>
+    `;
+    document.getElementById('lwc-azimuth-section').style.display = 'block';
+
+    // === Feature 4: Weather Constraints ===
+    if (document.getElementById('lwc-weather-check').checked) {
+      const windSpeed = Math.floor(Math.random() * 30 + 5);
+      const windGusts = windSpeed + Math.floor(Math.random() * 15);
+      const cloudCeiling = Math.floor(Math.random() * 5000 + 2000);
+      const visibility = Math.floor(Math.random() * 15 + 5);
+      const precipitation = Math.random() > 0.7;
+      const lightning = Math.random() > 0.85;
+      const constraints = [
+        { name: 'Upper-level Winds', value: windSpeed + ' m/s (gusts ' + windGusts + ')', limit: '≤ 30 m/s', status: windSpeed > 25 ? 'WARN' : 'GO' },
+        { name: 'Cloud Ceiling', value: cloudCeiling + ' ft', limit: '≥ 8000 ft', status: cloudCeiling < 3000 ? 'NO-GO' : cloudCeiling < 6000 ? 'WARN' : 'GO' },
+        { name: 'Visibility', value: visibility + ' km', limit: '≥ 8 km', status: visibility < 8 ? 'WARN' : 'GO' },
+        { name: 'Precipitation', value: precipitation ? 'Detected' : 'None', limit: 'None within 10nm', status: precipitation ? 'NO-GO' : 'GO' },
+        { name: 'Lightning', value: lightning ? 'Detected' : 'None', limit: 'None within 10nm', status: lightning ? 'NO-GO' : 'GO' },
+      ];
+      const allGo = constraints.every(c => c.status === 'GO');
+      const anyNoGo = constraints.some(c => c.status === 'NO-GO');
+      document.getElementById('lwc-weather-list').innerHTML = constraints.map(c => {
+        const color = c.status === 'GO' ? '#059669' : c.status === 'WARN' ? '#d97706' : '#dc2626';
+        return `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${c.name}</strong> <span style="font-size:0.75rem;color:var(--tl-text-muted);">Limit: ${c.limit}</span></div><div style="color:${color};">${c.value} — ${c.status}</div></div>`;
+      }).join('') + `<div class="it-alert ${anyNoGo ? 'it-alert-bad' : allGo ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${anyNoGo ? '🚨 Weather NO-GO — launch scrub likely.' : allGo ? '✓ All weather constraints within limits — GO for launch.' : '⚠️ Marginal conditions — monitor closely.'}</div>`;
+      document.getElementById('lwc-weather-section').style.display = 'block';
+    } else {
+      document.getElementById('lwc-weather-section').style.display = 'none';
+    }
+
+    // === Feature 5: Range Safety ===
+    const rangeList = document.getElementById('lwc-range-list');
+    const downrangeDistance = missionType === 'leo' ? 2000 : missionType === 'gto' ? 5000 : 8000;
+    const dropZones = [
+      { zone: 'Stage 1 Impact', distance: downrangeDistance * 0.3, status: 'Clear' },
+      { zone: 'Fairing Recovery', distance: downrangeDistance * 0.15, status: 'Clear' },
+      { zone: 'Stage 2 Impact', distance: downrangeDistance * 0.7, status: 'Marine traffic detected' },
+      { zone: 'Abort Landing Zone', distance: 500, status: 'Clear' },
+    ];
+    rangeList.innerHTML = dropZones.map(z => {
+      const color = z.status === 'Clear' ? '#059669' : '#d97706';
+      return `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${z.zone}</strong></div><div><span style="color:var(--tl-text-muted);">${z.distance.toFixed(0)} km downrange</span> <span style="color:${color};"> — ${z.status}</span></div></div>`;
+    }).join('') + `<div class="it-alert it-alert-info" style="margin-top:0.5rem;">Total downrange clearance: <strong>${downrangeDistance} km</strong>. ${dropZones.some(z => z.status !== 'Clear') ? '⚠️ Some zones require clearance before launch.' : '✓ All drop zones clear.'}</div>`;
+    document.getElementById('lwc-range-section').style.display = 'block';
+
+    // === Feature 6: Vehicle Performance ===
+    const payloadCap = missionType === 'gto' ? vehicle.gtoPayload : vehicle.leoPayload;
+    const payloadMass = Math.min(payloadCap * 0.7, payloadCap); // assume 70% utilization
+    const costPerKg = vehicle.cost / payloadCap;
+    const margin = ((payloadCap - payloadMass) / payloadCap * 100).toFixed(0);
+    document.getElementById('lwc-payload').textContent = payloadCap.toLocaleString() + ' kg';
+    document.getElementById('lwc-cost-kg').textContent = '$' + (costPerKg).toFixed(0) + '/kg';
+    document.getElementById('lwc-margin').textContent = margin + '%';
+    document.getElementById('lwc-fairing').textContent = vehicle.fairing + ' m';
+    document.getElementById('lwc-vehicle-insight').innerHTML = `<strong>${vehicle.name}</strong> can deliver ${payloadCap.toLocaleString()} kg to ${missionType.toUpperCase()}. At $${(vehicle.cost/1e6).toFixed(1)}M per launch, cost is $${costPerKg.toFixed(0)}/kg. ${margin > 30 ? '✓ Good payload margin.' : '⚠️ Tight margin — consider heavier vehicle.'}`;
+    document.getElementById('lwc-vehicle-section').style.display = 'block';
+
+    // === Feature 7: Orbital Insertion Accuracy ===
+    const insertionList = document.getElementById('lwc-insertion-list');
+    const accuracyParams = [
+      { param: 'Perigee Accuracy', expected: '±2 km', actual: (Math.random() * 4 - 2).toFixed(2) + ' km' },
+      { param: 'Apogee Accuracy', expected: '±5 km', actual: (Math.random() * 10 - 5).toFixed(2) + ' km' },
+      { param: 'Inclination Accuracy', expected: '±0.1°', actual: (Math.random() * 0.2 - 0.1).toFixed(3) + '°' },
+      { param: 'RAAN Accuracy', expected: '±0.5°', actual: (Math.random() * 1.0 - 0.5).toFixed(3) + '°' },
+      { param: 'Eccentricity', expected: '< 0.01', actual: (Math.random() * 0.01).toFixed(5) },
+    ];
+    insertionList.innerHTML = accuracyParams.map(a => `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${a.param}</strong> <span style="font-size:0.75rem;color:var(--tl-text-muted);">Expected: ${a.expected}</span></div><strong>${a.actual}</strong></div>`).join('') + `<div class="it-alert it-alert-good" style="margin-top:0.5rem;">✓ Insertion parameters within acceptable tolerances for ${alt}km ${missionType.toUpperCase()} orbit.</div>`;
+    document.getElementById('lwc-insertion-section').style.display = 'block';
+
+    // === Feature 8: Launch Site Comparison ===
+    const sitesBody = document.getElementById('lwc-sites-body');
+    sitesBody.innerHTML = launchSites.map(s => {
+      const boost = (465 * Math.cos(s.lat * Math.PI / 180)).toFixed(0);
+      const match = Math.abs(s.lat - inc) < 2 ? '✓ Good' : Math.abs(s.lat - inc) < 10 ? '⚠️ Fair' : '✗ Poor';
+      const matchColor = Math.abs(s.lat - inc) < 2 ? '#059669' : Math.abs(s.lat - inc) < 10 ? '#d97706' : '#dc2626';
+      return `<tr><td><strong>${s.name}</strong></td><td>${s.lat}°</td><td>${boost} m/s</td><td style="color:${matchColor};">${match} — ${s.bestFor}</td></tr>`;
+    }).join('');
+    document.getElementById('lwc-sites-section').style.display = 'block';
+
+    // === Feature 9: Mission Timeline ===
+    const timeline = [
+      { time: 'T-2:00:00', event: 'Final go/no-go poll for fueling' },
+      { time: 'T-1:30:00', event: `RP-1 loading begins (${vehicle.name})` },
+      { time: 'T-1:00:00', event: 'LOX loading begins' },
+      { time: 'T-0:45:00', event: 'Strongback retract' },
+      { time: 'T-0:30:00', event: 'Final range safety check' },
+      { time: 'T-0:10:00', event: 'Auto-sequencer starts' },
+      { time: 'T-0:05:00', event: 'Final weather briefing' },
+      { time: 'T-0:01:00', event: 'Flight computer armed' },
+      { time: 'T-0:00:10', event: 'Engine ignition sequence' },
+      { time: 'T-0:00:00', event: '🚀 LIFTOFF' },
+      { time: 'T+0:01:00', event: 'Max-Q (maximum dynamic pressure)' },
+      { time: 'T+0:02:30', event: 'Stage 1 separation' },
+      { time: 'T+0:08:00', event: 'Stage 2 cutoff / orbital insertion' },
+    ];
+    document.getElementById('lwc-timeline-list').innerHTML = timeline.map(t => `<div style="display:flex;gap:1rem;padding:0.4rem 0;border-bottom:1px solid var(--tl-border);"><span style="font-family:monospace;font-size:0.8125rem;color:${t.time === 'T-0:00:00' ? '#059669' : 'var(--tl-text-muted)'};font-weight:${t.time === 'T-0:00:00' ? '700' : '400'};min-width:100px;">${t.time}</span><span style="font-size:0.8125rem;">${t.event}</span></div>`).join('');
+    document.getElementById('lwc-timeline-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('lwc-export').style.display = 'inline-flex';
+    document.getElementById('lwc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), missionType, launchDate: dateStr, latitude: lat, inclination: inc, altitude: alt, vehicle: vehicle.name, azimuth: launchAzimuth, windowDuration, optimalTime, deltaV: cumulative, payloadCapacity: payloadCap, costPerKg, timeline };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'launch-window-report.json'; a.click();
+    };
+
+    document.getElementById('lwc-results').classList.add('show');
+  }
+
+  document.getElementById('lwc-calculate').addEventListener('click', calculate);
+  document.getElementById('lwc-clear').addEventListener('click', () => {
+    document.getElementById('lwc-results').classList.remove('show');
+    document.getElementById('lwc-export').style.display = 'none';
+  });
+})();
+</script>

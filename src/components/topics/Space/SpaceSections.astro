@@ -1,0 +1,32 @@
+---
+import { spaceContent as c } from '../../../data/topics/Space/space-content';
+---
+{c.sections.map((section, i) => (
+  <section id={section.id} class={`sp-section ${i % 2 === 1 ? 'sp-section-alt' : ''}`}>
+    <div class="container">
+      <div class={`sp-split ${i % 2 === 1 ? 'sp-split-reverse' : ''}`}>
+        <div class="sp-split-content">
+          <span class="sp-eyebrow">{section.eyebrow}</span>
+          <h2 class="sp-section-title">{section.title}</h2>
+          <p class="sp-section-subtitle">{section.subtitle}</p>
+          <div class="sp-points-grid">
+            {section.points.map((p) => (
+              <div class="sp-point-card">
+                <div class="sp-point-value">{p.value}</div>
+                <div class="sp-point-label">{p.label}</div>
+                <div class="sp-point-desc">{p.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="sp-split-visual">
+          <div class="sp-split-img-wrap">
+            <img src={section.image} alt={section.title} class="sp-split-img" loading="lazy" />
+            <div class="sp-split-img-overlay"></div>
+            <span class="sp-split-img-badge">{section.eyebrow}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+))}

@@ -1,0 +1,491 @@
+---
+/**
+ * Hallucination Detector — Interactive tool
+ * Check AI-generated text for factual hallucinations using heuristic analysis
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="hallucination-detector">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🔍</div>
+      <div>
+        <h2>Hallucination Detector</h2>
+        <p>Paste AI-generated text to scan for potential hallucination indicators</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">AI-Generated Text</label>
+        <textarea class="it-textarea" id="hd-text" placeholder="Paste AI-generated text here..." style="min-height: 180px;"></textarea>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Reference Text (Optional) <span class="it-label-hint">— ground truth to compare against</span></label>
+        <textarea class="it-textarea" id="hd-reference" placeholder="Paste reference/source text for comparison..." style="min-height: 120px;"></textarea>
+      </div>
+
+      <!-- Feature 1: Citation Checker -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem;">
+        <label class="it-label">📚 Citation Detection Mode</label>
+        <select class="it-select" id="hd-citation-mode">
+          <option value="strict">Strict — flag all uncited claims</option>
+          <option value="moderate">Moderate — flag key claims without citations</option>
+          <option value="off">Off — skip citation analysis</option>
+        </select>
+      </div>
+
+      <!-- Feature 6: Temporal Consistency -->
+      <div class="it-field">
+        <label class="it-checkbox-item">
+          <input type="checkbox" id="hd-temporal-check" checked />
+          📅 Temporal Consistency Checker <span class="it-label-hint">(detect date contradictions)</span>
+        </label>
+      </div>
+
+      <!-- Feature 7: Confidence Calibration -->
+      <div class="it-field">
+        <label class="it-label">🎯 Confidence Calibration <span class="it-label-hint">(model's stated confidence vs actual risk)</span></label>
+        <select class="it-select" id="hd-model-confidence">
+          <option value="high">Model claims high confidence</option>
+          <option value="medium">Model claims medium confidence</option>
+          <option value="low">Model claims low confidence</option>
+          <option value="auto">Auto-detect from text</option>
+        </select>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="hd-analyze">Analyze Text</button>
+        <button class="it-btn it-btn-secondary" id="hd-clear">Clear</button>
+        <button class="it-btn it-btn-secondary" id="hd-export" style="display:none;">📄 Export Report</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="hd-results">
+      <!-- Main Analysis -->
+      <div class="it-results-card">
+        <div class="it-results-title">Hallucination Analysis Report</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Hallucination Score</div>
+            <div class="it-stat-value" id="hd-score">0<span class="it-stat-unit">/100</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Risk Level</div>
+            <div class="it-stat-value" id="hd-risk" style="font-size: 1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Words Analyzed</div>
+            <div class="it-stat-value" id="hd-words">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Claims Detected</div>
+            <div class="it-stat-value" id="hd-claims">0</div>
+          </div>
+        </div>
+
+        <div class="it-progress" style="margin-bottom: 1.5rem;">
+          <div class="it-progress-fill" id="hd-progress" style="width: 0%; background: #059669;"></div>
+        </div>
+
+        <div id="hd-findings"></div>
+      </div>
+
+      <!-- Feature 2: Claim Extraction -->
+      <div class="it-results-card" id="hd-claims-section" style="display:none;">
+        <div class="it-results-title">🔎 Extracted Claims (Sentence-Level)</div>
+        <div id="hd-claims-list"></div>
+      </div>
+
+      <!-- Feature 3: Fact Density -->
+      <div class="it-results-card" id="hd-density-section" style="display:none;">
+        <div class="it-results-title">📊 Fact Density Analysis</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Facts per 100 words</div><div class="it-stat-value" id="hd-fact-density">0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Cited Facts</div><div class="it-stat-value" id="hd-cited-facts">0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Uncited Facts</div><div class="it-stat-value" id="hd-uncited-facts">0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Citation Rate</div><div class="it-stat-value" id="hd-citation-rate">0%</div></div>
+        </div>
+        <div id="hd-density-chart" class="it-chart" style="height:100px;margin-bottom:0.5rem;"></div>
+        <div class="it-alert it-alert-info" id="hd-density-insight"></div>
+      </div>
+
+      <!-- Feature 4: Source Diversity -->
+      <div class="it-results-card" id="hd-source-section" style="display:none;">
+        <div class="it-results-title">🌐 Source Diversity Analysis</div>
+        <div id="hd-source-list"></div>
+        <div class="it-alert it-alert-info" id="hd-source-insight"></div>
+      </div>
+
+      <!-- Feature 5: Contradiction Detector -->
+      <div class="it-results-card" id="hd-contradiction-section" style="display:none;">
+        <div class="it-results-title">⚡ Contradiction Detection</div>
+        <div id="hd-contradiction-list"></div>
+      </div>
+
+      <!-- Feature 6: Temporal Consistency -->
+      <div class="it-results-card" id="hd-temporal-section" style="display:none;">
+        <div class="it-results-title">📅 Temporal Consistency Report</div>
+        <div id="hd-temporal-list"></div>
+      </div>
+
+      <!-- Feature 7: Confidence Calibration -->
+      <div class="it-results-card" id="hd-calibration-section" style="display:none;">
+        <div class="it-results-title">🎯 Confidence Calibration Meter</div>
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+          <div style="flex:1;">
+            <div style="font-size:0.75rem;color:var(--tl-text-muted);margin-bottom:0.25rem;">Model Confidence</div>
+            <div class="it-progress"><div class="it-progress-fill" id="hd-model-conf-bar" style="width:0%;background:#3b82f6;"></div></div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:0.75rem;color:var(--tl-text-muted);margin-bottom:0.25rem;">Actual Risk</div>
+            <div class="it-progress"><div class="it-progress-fill" id="hd-actual-risk-bar" style="width:0%;background:#dc2626;"></div></div>
+          </div>
+        </div>
+        <div class="it-alert" id="hd-calibration-alert"></div>
+      </div>
+
+      <!-- Feature 8: Entity Verification -->
+      <div class="it-results-card" id="hd-entity-section" style="display:none;">
+        <div class="it-results-title">🏷️ Entity Verification Checklist</div>
+        <div id="hd-entity-list"></div>
+        <div class="it-alert it-alert-info" id="hd-entity-insight"></div>
+      </div>
+
+      <!-- Feature 9: Readability vs Accuracy -->
+      <div class="it-results-card" id="hd-readability-section" style="display:none;">
+        <div class="it-results-title">📖 Readability vs Accuracy Correlation</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Flesch Reading Ease</div><div class="it-stat-value" id="hd-flesch">0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Grade Level</div><div class="it-stat-value" id="hd-grade">0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Complexity</div><div class="it-stat-value" id="hd-complexity" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Hallucination Risk</div><div class="it-stat-value" id="hd-read-risk" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="hd-readability-insight"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const hedgingWords = ['might', 'could', 'possibly', 'perhaps', 'allegedly', 'reportedly', 'supposedly', 'presumably', 'it is said', 'some say', 'many believe', 'widely considered', 'generally thought', 'often claimed'];
+  const certaintyWords = ['definitely', 'absolutely', 'certainly', 'undoubtedly', 'without question', 'factually', 'proven', 'guaranteed', '100%', 'always', 'never'];
+  const vaguePhrases = ['studies show', 'research indicates', 'experts say', 'scientists believe', 'according to sources', 'it is known', 'common knowledge', 'widely accepted'];
+  const numberPatterns = [/(\d{4})\s*(?:BC|BCE|AD|CE)/g, /(\d+\.?\d*)\s*(?:percent|%)/g, /\$(\d[\d,]*(?:\.\d+)?(?:\s*(?:billion|million|trillion))?)/g, /(\d{1,3}(?:,\d{3})+)\s*(?:people|deaths|cases|users)/g];
+
+  function analyze() {
+    const text = document.getElementById('hd-text').value.trim();
+    if (!text) { alert('Please paste some text to analyze.'); return; }
+
+    const reference = document.getElementById('hd-reference').value.trim().toLowerCase();
+    const lowerText = text.toLowerCase();
+    const words = text.split(/\s+/).filter(w => w.length > 0);
+    const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+
+    const findings = [];
+    let score = 0;
+
+    // Check hedging language
+    let hedgeCount = 0;
+    hedgingWords.forEach(w => {
+      const matches = lowerText.match(new RegExp('\\b' + w + '\\b', 'g'));
+      if (matches) { hedgeCount += matches.length; findings.push({ type: 'warn', text: `Hedging language detected: "${w}" (${matches.length}x) — indicates uncertain claims.` }); }
+    });
+    score += hedgeCount * 5;
+
+    // Check certainty overstatements
+    let certaintyCount = 0;
+    certaintyWords.forEach(w => {
+      const matches = lowerText.match(new RegExp('\\b' + w + '\\b', 'g'));
+      if (matches) { certaintyCount += matches.length; findings.push({ type: 'bad', text: `Overconfident language: "${w}" (${matches.length}x) — may indicate fabricated certainty.` }); }
+    });
+    score += certaintyCount * 7;
+
+    // Check vague source attributions
+    vaguePhrases.forEach(p => {
+      if (lowerText.includes(p)) {
+        findings.push({ type: 'warn', text: `Vague attribution: "${p}" — no specific source cited.` });
+        score += 6;
+      }
+    });
+
+    // Check for specific numbers without context
+    let numberClaims = 0;
+    numberPatterns.forEach(p => {
+      const matches = text.match(p);
+      if (matches) { numberClaims += matches.length; }
+    });
+    if (numberClaims > 3) {
+      findings.push({ type: 'warn', text: `${numberClaims} specific numeric claims detected — verify each against reliable sources.` });
+      score += numberClaims * 3;
+    }
+
+    // Check for proper nouns (potential fabricated entities)
+    const properNouns = text.match(/\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b/g) || [];
+    const uniqueNouns = [...new Set(properNouns)];
+    if (uniqueNouns.length > 5) {
+      findings.push({ type: 'info', text: `${uniqueNouns.length} proper nouns detected — verify names of people, organizations, and places.` });
+      score += 4;
+    }
+
+    // Reference comparison
+    if (reference) {
+      const refWords = new Set(reference.split(/\s+/).filter(w => w.length > 3));
+      const textWords = lowerText.split(/\s+/).filter(w => w.length > 3);
+      const unmatched = textWords.filter(w => !refWords.has(w) && !refWords.has(w.replace(/s$/, '')));
+      const unmatchedRatio = textWords.length > 0 ? unmatched.length / textWords.length : 0;
+      if (unmatchedRatio > 0.4) {
+        findings.push({ type: 'bad', text: `${Math.round(unmatchedRatio * 100)}% of content not found in reference text — potential fabrication.` });
+        score += Math.round(unmatchedRatio * 25);
+      } else if (unmatchedRatio > 0.2) {
+        findings.push({ type: 'warn', text: `${Math.round(unmatchedRatio * 100)}% of content not found in reference text — some claims may be unsupported.` });
+        score += Math.round(unmatchedRatio * 15);
+      } else {
+        findings.push({ type: 'good', text: `High overlap with reference text (${Math.round((1 - unmatchedRatio) * 100)}%) — claims appear well-sourced.` });
+        score -= 10;
+      }
+    }
+
+    // Check sentence length consistency (hallucinations often produce run-on sentences)
+    const avgSentLen = words.length / sentences.length;
+    if (avgSentLen > 35) {
+      findings.push({ type: 'info', text: `Average sentence length is ${Math.round(avgSentLen)} words — very long sentences may contain unsupported claims.` });
+      score += 5;
+    }
+
+    // Check for self-contradiction (simplified)
+    if (lowerText.includes('not') && lowerText.includes('is')) {
+      const notSentences = sentences.filter(s => s.toLowerCase().includes(' not '));
+      if (notSentences.length > 2) {
+        findings.push({ type: 'info', text: `${notSentences.length} negation statements detected — check for internal contradictions.` });
+        score += 3;
+      }
+    }
+
+    score = Math.max(0, Math.min(100, score));
+
+    // Determine risk level
+    let risk, riskColor;
+    if (score < 20) { risk = 'Low Risk'; riskColor = '#059669'; }
+    else if (score < 40) { risk = 'Moderate Risk'; riskColor = '#d97706'; }
+    else if (score < 60) { risk = 'High Risk'; riskColor = '#dc2626'; }
+    else { risk = 'Critical Risk'; riskColor = '#dc2626'; }
+
+    // Update UI
+    document.getElementById('hd-score').innerHTML = `${score}<span class="it-stat-unit">/100</span>`;
+    document.getElementById('hd-risk').textContent = risk;
+    document.getElementById('hd-risk').style.color = riskColor;
+    document.getElementById('hd-words').textContent = words.length;
+    document.getElementById('hd-claims').textContent = numberClaims + uniqueNouns.length;
+    document.getElementById('hd-progress').style.width = score + '%';
+    document.getElementById('hd-progress').style.background = riskColor;
+
+    const findingsHtml = findings.length > 0
+      ? findings.map(f => {
+          const cls = f.type === 'good' ? 'it-alert-good' : f.type === 'warn' ? 'it-alert-warn' : f.type === 'bad' ? 'it-alert-bad' : 'it-alert-info';
+          const icon = f.type === 'good' ? '✓' : f.type === 'warn' ? '⚠️' : f.type === 'bad' ? '✗' : 'ℹ️';
+          return `<div class="it-alert ${cls}">${icon} ${f.text}</div>`;
+        }).join('')
+      : '<div class="it-alert it-alert-good">✓ No significant hallucination indicators detected. Text appears well-grounded.</div>';
+
+    document.getElementById('hd-findings').innerHTML = findingsHtml;
+
+    // === Feature 1: Citation Checker ===
+    const citationMode = document.getElementById('hd-citation-mode').value;
+    let citedCount = 0, uncitedClaims = [];
+    if (citationMode !== 'off') {
+      const citationPattern = /\[(?:\d+|\w+)\]|\([^)]*\d{4}\)|according to|cited in|source:|reference:/gi;
+      const citedSentences = sentences.filter(s => citationPattern.test(s));
+      citedCount = citedSentences.length;
+      const uncited = sentences.filter(s => !citationPattern.test(s) && /\d|is|are|was|were|has|have/.test(s));
+      if (citationMode === 'strict') {
+        uncitedClaims = uncited;
+      } else {
+        uncitedClaims = uncited.filter(s => /\d+|%|\$|percent|million|billion/.test(s));
+      }
+    }
+
+    // === Feature 2: Claim Extraction ===
+    const claimsList = document.getElementById('hd-claims-list');
+    const claimSentences = sentences.filter(s => /\d|is|are|was|were|has|have|will|can|cannot|must|should/.test(s));
+    claimsList.innerHTML = claimSentences.map((s, i) => {
+      const hasNum = /\d|\$|%|million|billion|percent/.test(s);
+      const hasCite = /\[|\(.*\d{4}\)|according to|source:|reference:/i.test(s);
+      const risk = hasNum && !hasCite ? 'high' : hasNum ? 'medium' : 'low';
+      const color = risk === 'high' ? '#dc2626' : risk === 'medium' ? '#d97706' : '#059669';
+      return `<div style="border-left:3px solid ${color};padding:0.5rem 0.75rem;margin-bottom:0.5rem;background:var(--tl-card);border-radius:0 var(--tl-radius-sm) var(--tl-radius-sm) 0;">
+        <div style="font-size:0.75rem;color:${color};margin-bottom:0.25rem;">Claim #${i+1} — ${risk.toUpperCase()} risk${hasCite ? ' ✓ cited' : ' ⚠️ uncited'}</div>
+        <div style="font-size:0.875rem;">${s.trim()}</div>
+      </div>`;
+    }).join('');
+    document.getElementById('hd-claims-section').style.display = claimSentences.length > 0 ? 'block' : 'none';
+
+    // === Feature 3: Fact Density ===
+    const factCount = numberClaims + uniqueNouns.length;
+    const factDensity = words.length > 0 ? (factCount / words.length * 100).toFixed(1) : 0;
+    const citationRate = factCount > 0 ? Math.round(citedCount / factCount * 100) : 0;
+    document.getElementById('hd-fact-density').textContent = factDensity;
+    document.getElementById('hd-cited-facts').textContent = citedCount;
+    document.getElementById('hd-uncited-facts').textContent = factCount - citedCount;
+    document.getElementById('hd-citation-rate').textContent = citationRate + '%';
+    const densityChart = document.getElementById('hd-density-chart');
+    const maxFact = Math.max(citedCount, factCount - citedCount, 1);
+    densityChart.innerHTML = `<div class="it-chart-bar" style="height:${(citedCount/maxFact*100)}%;background:#059669;"><div class="it-chart-bar-label">Cited (${citedCount})</div></div><div class="it-chart-bar" style="height:${((factCount-citedCount)/maxFact*100)}%;background:#dc2626;"><div class="it-chart-bar-label">Uncited (${factCount-citedCount})</div></div>`;
+    document.getElementById('hd-density-insight').innerHTML = `Fact density: <strong>${factDensity} facts per 100 words</strong>. Citation rate: <strong>${citationRate}%</strong>. ${citationRate < 30 ? '⚠️ Low citation rate — most claims lack sources.' : citationRate < 60 ? 'Moderate citation rate — some claims need sourcing.' : '✓ Good citation coverage.'}`;
+    document.getElementById('hd-density-section').style.display = 'block';
+
+    // === Feature 4: Source Diversity ===
+    const sourcePatterns = [
+      { type: 'Academic', regex: /\b(?:study|studies|research|paper|journal|university|institute|doi|arxiv|nature|science)\b/gi },
+      { type: 'News', regex: /\b(?:reported|news|press|media|journalist|article|BBC|CNN|Reuters|AP)\b/gi },
+      { type: 'Government', regex: /\b(?:government|federal|agency|department|official|ministry|bureau|census)\b/gi },
+      { type: 'Industry', regex: /\b(?:company|corporate|industry|market|report|survey|statistic|Gartner|McKinsey)\b/gi },
+      { type: 'Expert Quote', regex: /\b(?:said|stated|according to|noted|explained|Dr\.|Professor)\b/gi },
+    ];
+    const sourceCounts = sourcePatterns.map(s => ({ ...s, count: (text.match(s.regex) || []).length })).filter(s => s.count > 0);
+    const totalSources = sourceCounts.reduce((a, b) => a + b.count, 0);
+    document.getElementById('hd-source-list').innerHTML = sourceCounts.length > 0 ? sourceCounts.map(s => `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>${s.type}</span><strong>${s.count} mentions</strong></div>`).join('') : '<div class="it-alert it-alert-warn">No identifiable source types detected.</div>';
+    const diversity = sourceCounts.length;
+    document.getElementById('hd-source-insight').innerHTML = `Source diversity: <strong>${diversity}/5 types</strong> (${totalSources} total source references). ${diversity >= 3 ? '✓ Good source diversity.' : diversity >= 1 ? '⚠️ Limited source diversity — text relies on few source types.' : '✗ No identifiable sources — high hallucination risk.'}`;
+    document.getElementById('hd-source-section').style.display = 'block';
+
+    // === Feature 5: Contradiction Detector ===
+    const contradictions = [];
+    const negationPairs = [['increase', 'decrease'], ['rise', 'fall'], ['grow', 'shrink'], ['positive', 'negative'], ['true', 'false'], ['yes', 'no'], ['high', 'low'], ['more', 'less'], ['large', 'small'], ['up', 'down']];
+    negationPairs.forEach(([a, b]) => {
+      if (lowerText.includes(a) && lowerText.includes(b)) {
+        const aSent = sentences.find(s => s.toLowerCase().includes(a));
+        const bSent = sentences.find(s => s.toLowerCase().includes(b));
+        if (aSent && bSent && aSent !== bSent) {
+          contradictions.push({ pair: `${a} ↔ ${b}`, s1: aSent.trim(), s2: bSent.trim() });
+        }
+      }
+    });
+    document.getElementById('hd-contradiction-list').innerHTML = contradictions.length > 0 ? contradictions.map(c => `<div class="it-alert it-alert-bad">✗ Potential contradiction ("${c.pair}"):<br>• ${c.s1}<br>• ${c.s2}</div>`).join('') : '<div class="it-alert it-alert-good">✓ No obvious contradictions detected.</div>';
+    document.getElementById('hd-contradiction-section').style.display = 'block';
+
+    // === Feature 6: Temporal Consistency ===
+    const temporalSection = document.getElementById('hd-temporal-section');
+    if (document.getElementById('hd-temporal-check').checked) {
+      const dates = text.match(/\b(?:18|19|20)\d{2}\b/g) || [];
+      const temporalIssues = [];
+      if (dates.length > 1) {
+        const maxDate = Math.max(...dates.map(d => parseInt(d)));
+        const minDate = Math.min(...dates.map(d => parseInt(d)));
+        if (maxDate - minDate > 50) {
+          temporalIssues.push(`Large date span: ${minDate}–${maxDate} (${maxDate - minDate} years) — verify timeline accuracy.`);
+        }
+        dates.forEach(d => {
+          const yr = parseInt(d);
+          if (yr > new Date().getFullYear()) {
+            temporalIssues.push(`Future date detected: ${d} — may be fabricated or predicted.`);
+          }
+        });
+      }
+      const beforeAfter = text.match(/\b(?:before|after|since|until|during|prior to)\b[^.!?]*(?:18|19|20)\d{2}/gi) || [];
+      if (beforeAfter.length > 2) {
+        temporalIssues.push(`${beforeAfter.length} temporal references — check chronological consistency.`);
+      }
+      document.getElementById('hd-temporal-list').innerHTML = temporalIssues.length > 0 ? temporalIssues.map(t => `<div class="it-alert it-alert-warn">⚠️ ${t}</div>`).join('') : '<div class="it-alert it-alert-good">✓ No temporal inconsistencies detected.</div>';
+      temporalSection.style.display = 'block';
+    } else {
+      temporalSection.style.display = 'none';
+    }
+
+    // === Feature 7: Confidence Calibration ===
+    const calSection = document.getElementById('hd-calibration-section');
+    const modelConfSelect = document.getElementById('hd-model-confidence').value;
+    let modelConf = modelConfSelect === 'high' ? 90 : modelConfSelect === 'medium' ? 60 : modelConfSelect === 'low' ? 30 : null;
+    if (modelConfSelect === 'auto') {
+      const certWords = certaintyWords.reduce((acc, w) => acc + (lowerText.match(new RegExp('\\b' + w + '\\b', 'g')) || []).length, 0);
+      const hedgeWords = hedgingWords.reduce((acc, w) => acc + (lowerText.match(new RegExp('\\b' + w + '\\b', 'g')) || []).length, 0);
+      modelConf = Math.max(10, Math.min(95, 50 + certWords * 10 - hedgeWords * 8));
+    }
+    const actualRisk = score;
+    const modelConfPct = modelConf || 50;
+    document.getElementById('hd-model-conf-bar').style.width = modelConfPct + '%';
+    document.getElementById('hd-actual-risk-bar').style.width = actualRisk + '%';
+    const calibrationGap = modelConfPct - (100 - actualRisk);
+    const calAlert = document.getElementById('hd-calibration-alert');
+    if (calibrationGap > 30) {
+      calAlert.className = 'it-alert it-alert-bad';
+      calAlert.innerHTML = `✗ <strong>Miscalibrated:</strong> Model claims ${modelConfPct}% confidence but hallucination risk is ${actualRisk}/100. Gap of ${calibrationGap} points — model is overconfident.`;
+    } else if (calibrationGap > 10) {
+      calAlert.className = 'it-alert it-alert-warn';
+      calAlert.innerHTML = `⚠️ <strong>Slightly overconfident:</strong> Model confidence (${modelConfPct}%) exceeds warranted confidence by ${calibrationGap} points.`;
+    } else {
+      calAlert.className = 'it-alert it-alert-good';
+      calAlert.innerHTML = `✓ <strong>Well-calibrated:</strong> Model confidence (${modelConfPct}%) aligns with actual risk (${actualRisk}/100).`;
+    }
+    calSection.style.display = 'block';
+
+    // === Feature 8: Entity Verification ===
+    const entities = uniqueNouns.map(n => {
+      const inRef = reference && reference.includes(n.toLowerCase());
+      const isWellKnown = /^(United States|United Kingdom|New York|San Francisco|Los Angeles|European Union|World Health|United Nations|Stanford|Harvard|MIT|Oxford|Cambridge|Google|Microsoft|Apple|Amazon|Meta|OpenAI|Tesla|NVIDIA)$/.test(n);
+      return { name: n, inRef, wellKnown: isWellKnown };
+    });
+    document.getElementById('hd-entity-list').innerHTML = entities.length > 0 ? entities.slice(0, 15).map(e => `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0;border-bottom:1px solid var(--tl-border);"><span style="flex:1;">${e.name}</span>${e.wellKnown ? '<span class="it-badge it-badge-good">Known</span>' : e.inRef ? '<span class="it-badge it-badge-good">In Ref</span>' : '<span class="it-badge it-badge-warn">Verify</span>'}</div>`).join('') : '<div class="it-alert it-alert-info">No proper noun entities detected.</div>';
+    const unverified = entities.filter(e => !e.wellKnown && !e.inRef).length;
+    document.getElementById('hd-entity-insight').innerHTML = `${entities.length} entities detected. ${unverified} need verification${reference ? ' against reference text' : ''}. ${unverified > 5 ? '⚠️ Many unverified entities — high fabrication risk.' : '✓ Most entities are recognized or sourced.'}`;
+    document.getElementById('hd-entity-section').style.display = 'block';
+
+    // === Feature 9: Readability vs Accuracy ===
+    const syllableCount = (word) => { word = word.toLowerCase(); if (word.length <= 3) return 1; word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, ''); word = word.replace(/^y/, ''); const m = word.match(/[aeiouy]{1,2}/g); return m ? m.length : 1; };
+    const totalSyllables = words.reduce((a, w) => a + syllableCount(w), 0);
+    const flesch = 206.835 - 1.015 * (words.length / sentences.length) - 84.6 * (totalSyllables / words.length);
+    const grade = 0.39 * (words.length / sentences.length) + 11.8 * (totalSyllables / words.length) - 15.59;
+    document.getElementById('hd-flesch').textContent = Math.round(flesch);
+    document.getElementById('hd-grade').textContent = Math.max(1, Math.round(grade));
+    const complexity = flesch < 30 ? 'Very Complex' : flesch < 50 ? 'Complex' : flesch < 70 ? 'Moderate' : 'Readable';
+    const readRisk = score < 20 ? 'Low' : score < 40 ? 'Moderate' : 'High';
+    document.getElementById('hd-complexity').textContent = complexity;
+    document.getElementById('hd-read-risk').textContent = readRisk;
+    document.getElementById('hd-read-risk').style.color = readRisk === 'Low' ? '#059669' : readRisk === 'Moderate' ? '#d97706' : '#dc2626';
+    document.getElementById('hd-readability-insight').innerHTML = `Flesch score: ${Math.round(flesch)} (${complexity}), Grade level: ${Math.max(1, Math.round(grade))}. ${complexity === 'Very Complex' && score > 40 ? '⚠️ Complex text with high hallucination risk — dense claims may hide fabricated details.' : complexity === 'Readable' && score < 20 ? '✓ Readable text with low hallucination risk — claims are clear and grounded.' : 'Readability and accuracy appear uncorrelated for this text.'}`;
+    document.getElementById('hd-readability-section').style.display = 'block';
+
+    // === Feature 10: Export Report ===
+    document.getElementById('hd-export').style.display = 'inline-flex';
+    const exportData = {
+      timestamp: new Date().toISOString(),
+      textPreview: text.substring(0, 200),
+      wordCount: words.length,
+      hallucinationScore: score,
+      riskLevel: risk,
+      claimsDetected: numberClaims + uniqueNouns.length,
+      findings: findings,
+      factDensity: parseFloat(factDensity),
+      citationRate: citationRate,
+      sourceDiversity: diversity,
+      contradictions: contradictions.length,
+      entities: entities.length,
+      unverifiedEntities: unverified,
+      fleschScore: Math.round(flesch),
+      gradeLevel: Math.max(1, Math.round(grade)),
+      calibrationGap: calibrationGap,
+    };
+    document.getElementById('hd-export').onclick = () => {
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'hallucination-report.json'; a.click();
+      URL.revokeObjectURL(url);
+    };
+
+    document.getElementById('hd-results').classList.add('show');
+  }
+
+  document.getElementById('hd-analyze').addEventListener('click', analyze);
+  document.getElementById('hd-clear').addEventListener('click', () => {
+    document.getElementById('hd-text').value = '';
+    document.getElementById('hd-reference').value = '';
+    document.getElementById('hd-results').classList.remove('show');
+    document.getElementById('hd-export').style.display = 'none';
+  });
+})();
+</script>

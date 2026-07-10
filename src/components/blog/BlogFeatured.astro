@@ -1,0 +1,42 @@
+---
+import { featuredPosts } from '../../data/blog/blog-content';
+---
+
+<section class="bl-featured">
+  <div class="bl-featured-head">
+    <span class="bl-section-label">Editor's Picks</span>
+    <h2 class="bl-section-title">Featured <span class="bl-grad">Stories</span></h2>
+  </div>
+  <div class="bl-featured-grid">
+    {featuredPosts.map((post, i) => (
+      <a
+        href={`/blog/${post.slug}`}
+        class={`bl-feat-card ${i === 0 ? 'bl-feat-card-lg' : ''}`}
+        style={`--card-color:${post.topicColor}`}
+      >
+        <div class="bl-feat-card-glow"></div>
+        <div class="bl-feat-card-body">
+          <div class="bl-feat-card-top">
+            <span class="bl-feat-card-cat" style={`--cat-color:${post.topicColor}`}>
+              <span class="bl-cat-dot"></span>
+              {post.topic}
+            </span>
+            <span class="bl-feat-card-date">{post.date}</span>
+          </div>
+          <h3 class="bl-feat-card-title">{post.title}</h3>
+          <p class="bl-feat-card-excerpt">{post.excerpt}</p>
+          <div class="bl-feat-card-foot">
+            <div class="bl-feat-card-author">
+              <span class="bl-author-avatar" style={`background:${post.topicColor}`}></span>
+              <div class="bl-author-info">
+                <span class="bl-author-name">{post.author}</span>
+                <span class="bl-author-role">{post.authorRole}</span>
+              </div>
+            </div>
+            <span class="bl-feat-card-time">{post.readTime}</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

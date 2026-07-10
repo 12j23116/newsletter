@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './about-styles.css';
+import AboutHero from '../../components/about/AboutHero.astro';
+import AboutStory from '../../components/about/AboutStory.astro';
+import AboutValues from '../../components/about/AboutValues.astro';
+import AboutStats from '../../components/about/AboutStats.astro';
+import AboutTeam from '../../components/about/AboutTeam.astro';
+import AboutCoverage from '../../components/about/AboutCoverage.astro';
+import PageCTA from '../../components/shared/PageCTA.astro';
+---
+<BaseLayout
+  title="About Us"
+  description="About TechNanoAI — our mission, our values, the team behind the platform, and the 12 emerging technology frontiers we cover. Independent, research-backed tech guides."
+  keywords="about TechNanoAI, emerging technology platform, tech analysis, independent tech research, AI guides, frontier technology coverage"
+>
+  <AboutHero />
+  <AboutStory />
+  <AboutValues />
+  <AboutStats />
+  <AboutTeam />
+  <AboutCoverage />
+  <PageCTA
+    eyebrow="Join the Community"
+    title="Be part of the"
+    highlight="TechNanoAI journey"
+    description="Join 50,000+ builders, investors, and curious minds who rely on TechNanoAI for emerging technology intelligence. Deep dives, weekly digests, and expert analysis across 12 frontiers."
+    primaryLabel="Subscribe to Newsletter"
+    primaryHref="/newsletter"
+    secondaryLabel="Explore Topics"
+    secondaryHref="/#cat-group-1"
+  />
+
+  <script>
+    const counters = document.querySelectorAll<HTMLElement>('[data-count]');
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          const target = parseFloat(el.dataset.count || '0');
+          const suffix = el.dataset.suffix || '';
+          const duration = 2000;
+          const start = performance.now();
+          const animate = (now: number) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = target * eased;
+            el.textContent =
+              target >= 1000
+                ? Math.floor(value).toLocaleString() + suffix
+                : value.toFixed(target % 1 === 0 ? 0 : 1) + suffix;
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+          counterObserver.unobserve(el);
+        });
+      },
+      { threshold: 0.5 }
+    );
+    counters.forEach((el) => counterObserver.observe(el));
+  </script>
+</BaseLayout>

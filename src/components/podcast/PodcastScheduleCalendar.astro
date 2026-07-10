@@ -1,0 +1,79 @@
+---
+import { upcomingEpisodes } from '../../data/podcast/podcast-content';
+
+const months = [
+  { key: '2026-07', label: 'July 2026', year: 2026, month: 6 },
+  { key: '2026-08', label: 'August 2026', year: 2026, month: 7 },
+  { key: '2026-09', label: 'September 2026', year: 2026, month: 8 },
+];
+
+const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+function getEpisodesForMonth(year: number, month: number) {
+  return upcomingEpisodes.filter((ep) => {
+    const d = new Date(ep.publishDate);
+    return d.getFullYear() === year && d.getMonth() === month;
+  });
+}
+
+function getEpisodeForDate(year: number, month: number, day: number) {
+  return upcomingEpisodes.find((ep) => {
+    const d = new Date(ep.publishDate);
+    return d.getFullYear() === year && d.getMonth() === month && d.getDate() === day;
+  });
+}
+
+function getCalendarDays(year: number, month: number) {
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const days: (number | null)[] = [];
+  for (let i = 0; i < firstDay; i++) days.push(null);
+  for (let d = 1; d <= daysInMonth; d++) days.push(d);
+  return days;
+}
+---
+
+<section class="pc-sched-cal">
+  <div class="pc-sched-cal-head">
+    <span class="pc-section-label">Calendar View</span>
+    <h2 class="pc-section-title">Episode <span class="pc-grad">Calendar</span></h2>
+  </div>
+  <div class="pc-sched-cal-grid">
+    {months.map((m) => {
+      const days = getCalendarDays(m.year, m.month);
+      const eps = getEpisodesForMonth(m.year, m.month);
+      return (
+        <div class="pc-sched-cal-month">
+          <div class="pc-sched-cal-month-head">
+            <h3 class="pc-sched-cal-month-title">{m.label}</h3>
+            <span class="pc-sched-cal-month-count">{eps.length} episodes</span>
+          </div>
+          <div class="pc-sched-cal-weekdays">
+            {weekDays.map((wd) => (
+              <span class="pc-sched-cal-wd">{wd}</span>
+            ))}
+          </div>
+          <div class="pc-sched-cal-days">
+            {days.map((day, i) => {
+              if (day === null) {
+                return <div class="pc-sched-cal-day pc-sched-cal-day-empty" key={i}></div>;
+              }
+              const ep = getEpisodeForDate(m.year, m.month, day);
+              return (
+                <div class={`pc-sched-cal-day ${ep ? 'pc-sched-cal-day-has' : ''}`} key={i} style={ep ? `--card-color:${ep.topicColor}` : ''}>
+                  <span class="pc-sched-cal-day-num">{day}</span>
+                  {ep && (
+                    <a href={`/podcast/${ep.slug}`} class="pc-sched-cal-day-ep" title={ep.title}>
+                      <span class="pc-sched-cal-day-icon">{ep.topicIcon}</span>
+                      <span class="pc-sched-cal-day-topic">{ep.topic}</span>
+                    </a>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>

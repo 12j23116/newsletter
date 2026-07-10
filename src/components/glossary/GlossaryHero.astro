@@ -1,0 +1,28 @@
+---
+import { glossaryStats } from '../../data/glossary/glossary-content';
+---
+
+<section class="gl-hero">
+  <div class="gl-hero-orb gl-hero-orb-1"></div>
+  <div class="gl-hero-orb gl-hero-orb-2"></div>
+  <div class="gl-hero-orb gl-hero-orb-3"></div>
+  <div class="gl-hero-inner">
+    <span class="gl-eyebrow">
+      <span class="gl-eyebrow-dot"></span>
+      Knowledge Hub · Updated 2026
+    </span>
+    <h1>Technology <span class="gl-grad">Glossary</span></h1>
+    <p class="gl-hero-sub">
+      216+ terms across 12 emerging technology frontiers — from AGI to Zero Trust,
+      explained simply for builders, investors, and the endlessly curious.
+    </p>
+    <div class="gl-hero-stats">
+      {glossaryStats.map((stat) => (
+        <div class="gl-hero-stat">
+          <strong>{stat.value}{stat.suffix}</strong>
+          <span>{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

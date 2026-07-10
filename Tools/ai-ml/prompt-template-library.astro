@@ -1,0 +1,27 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-coming-soon">
+    <div class="tool-coming-soon-icon">📝</div>
+    <h3 class="tool-coming-soon-title">Prompt Template Library</h3>
+    <p class="tool-coming-soon-desc">Browse hundreds of community-tested prompt templates organized by use case — coding, data analysis, content writing, research, and agent orchestration. Includes version history and model-specific optimizations.</p>
+    <form class="tool-coming-soon-form" id="ptl-notify">
+      <input type="email" placeholder="you@example.com" required />
+      <button type="submit" class="tool-btn">Notify Me</button>
+    </form>
+    <div class="tool-coming-soon-success" id="ptl-success">✓ Thanks! We'll email you when this tool is ready.</div>
+  </div>
+</div>
+
+<script is:inline>
+document.getElementById('ptl-notify')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.querySelector('input').value = '';
+  document.getElementById('ptl-success')?.classList.add('show');
+  setTimeout(() => document.getElementById('ptl-success')?.classList.remove('show'), 4000);
+});
+</script>

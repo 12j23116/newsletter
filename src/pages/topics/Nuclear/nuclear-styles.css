@@ -1,0 +1,294 @@
+/* ============================================
+   NUCLEAR topic STYLES — Premium Redesign
+   Unique layout: atomic-themed hero, reactor patterns,
+   nuclear-styled cards, radiation visualization.
+   ============================================ */
+
+/* ── Nuclear Page Tokens ─────────────────────────────── */
+.nu-page {
+  --nu-orange: #f59e0b;
+  --nu-red: #ef4444;
+  --nu-amber: #f97316;
+  --nu-yellow: #eab308;
+  --nu-grad: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  --nu-grad-soft: linear-gradient(135deg, rgba(245,158,11,0.12) 0%, rgba(239,68,68,0.12) 100%);
+  --nu-bg: #0a0a0f;
+  --nu-bg-alt: #0d0d18;
+  --nu-surface: #11111e;
+  --nu-surface-2: #161628;
+  --nu-surface-hover: #1a1a30;
+  --nu-border: rgba(255,255,255,0.08);
+  --nu-border-strong: rgba(255,255,255,0.14);
+  --nu-text: #e2e8f0;
+  --nu-text-muted: #94a3b8;
+  --nu-text-dim: #64748b;
+  --nu-radius: 12px;
+  --nu-radius-lg: 20px;
+  --nu-radius-xl: 28px;
+  --nu-transition: 250ms ease;
+  --nu-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* ── Section Base ────────────────────────────────────────── */
+.nu-section { padding: 5rem 0; position: relative; overflow: hidden; }
+.nu-section-alt { background: var(--nu-bg-alt); }
+.nu-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; position: relative; z-index: 1; }
+.nu-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--nu-orange); margin-bottom: 0.75rem; }
+.nu-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--nu-orange); }
+.nu-section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+.nu-section-sub { font-size: 1.0625rem; color: var(--nu-text-muted); max-width: 640px; line-height: 1.7; margin-bottom: 2.5rem; }
+.nu-grad-text { background: var(--nu-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── Scroll Reveal ───────────────────────────────────────── */
+.nu-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.nu-reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ── Grid Overlay ────────────────────────────────────────── */
+.nu-grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); z-index: 0; pointer-events: none; }
+
+/* ── Orb ─────────────────────────────────────────────────── */
+.nu-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; z-index: 0; animation: nu-orb-float 20s ease-in-out infinite; pointer-events: none; }
+@keyframes nu-orb-float { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(30px,-30px) scale(1.1);} 66%{transform:translate(-20px,20px) scale(.95);} }
+
+/* ── Atomic Pattern (Nuclear unique element) ─────────────── */
+.nu-atomic-pattern { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='8' fill='rgba(245,158,11,0.1)'/%3E%3Cellipse cx='50' cy='50' rx='35' ry='12' fill='none' stroke='rgba(245,158,11,0.06)' stroke-width='1.5' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='50' rx='35' ry='12' fill='none' stroke='rgba(239,68,68,0.06)' stroke-width='1.5' transform='rotate(60 50 50)'/%3E%3Cellipse cx='50' cy='50' rx='35' ry='12' fill='none' stroke='rgba(245,158,11,0.06)' stroke-width='1.5' transform='rotate(120 50 50)'/%3E%3C/svg%3E"); background-size: 100px 100px; z-index: 0; pointer-events: none; }
+
+/* ════════════════════════════════════════════════════════════
+   1. HERO — Atomic themed (unique)
+   ════════════════════════════════════════════════════════════ */
+.nu-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 80px; }
+.nu-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.nu-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.15; }
+.nu-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 0%, var(--nu-bg) 80%); }
+.nu-atomic-pattern { position: absolute; inset: 0; opacity: 0.6; }
+.nu-hero-orb-1 { width: 400px; height: 400px; background: var(--nu-orange); top: 10%; right: -100px; }
+.nu-hero-orb-2 { width: 350px; height: 350px; background: var(--nu-red); bottom: 20%; left: -80px; animation-delay: -5s; }
+.nu-hero-orb-3 { width: 300px; height: 300px; background: var(--nu-amber); top: 50%; right: 30%; animation-delay: -10s; }
+
+.nu-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.nu-hero-left { max-width: 540px; }
+.nu-hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--nu-border); font-size: 0.8125rem; color: var(--nu-text-muted); margin-bottom: 1.5rem; }
+.nu-hero-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--nu-orange); box-shadow: 0 0 8px var(--nu-orange); animation: nu-dot-blink 1.5s ease-in-out infinite; }
+@keyframes nu-dot-blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.nu-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #fff; margin-bottom: 1.25rem; }
+.nu-hero-tagline { font-size: 1.125rem; color: var(--nu-orange); font-weight: 600; margin-bottom: 0.75rem; }
+.nu-hero-desc { font-size: 1rem; color: var(--nu-text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 2rem; }
+.nu-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.nu-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; font-size: 0.9375rem; transition: all var(--nu-transition); white-space: nowrap; cursor: pointer; }
+.nu-btn-primary { background: var(--nu-grad); color: #fff; box-shadow: 0 4px 20px rgba(245,158,11,0.3); }
+.nu-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(245,158,11,0.45); }
+.nu-btn-secondary { background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: var(--nu-text); border: 1px solid var(--nu-border); }
+.nu-btn-secondary:hover { background: var(--nu-surface-hover); border-color: var(--nu-border-strong); transform: translateY(-2px); }
+
+/* Hero stats — 2x2 grid with atomic-style borders */
+.nu-hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+.nu-hero-stat { padding: 1rem; border-radius: var(--nu-radius); background: rgba(17,17,30,0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--nu-border); border-radius: 50% 8px 50% 8px; transition: transform var(--nu-transition), border-color var(--nu-transition); }
+.nu-hero-stat:hover { transform: translateY(-4px); border-color: var(--nu-border-strong); }
+.nu-hero-stat-value { font-size: 1.5rem; font-weight: 800; background: var(--nu-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: block; margin-bottom: 0.125rem; }
+.nu-hero-stat-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--nu-text-dim); }
+
+/* Hero right — Reactor visualization */
+.nu-hero-right { position: relative; height: 400px; display: flex; align-items: center; justify-content: center; }
+.nu-hero-img-wrap { border-radius: var(--nu-radius-xl); overflow: hidden; border: 1px solid var(--nu-border); box-shadow: var(--nu-shadow); position: relative; }
+.nu-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.nu-hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(0,0,0,0.3)); border-radius: var(--nu-radius-xl); pointer-events: none; }
+
+/* ════════════════════════════════════════════════════════════
+   2. MARQUEE
+   ════════════════════════════════════════════════════════════ */
+.nu-marquee { overflow: hidden; padding: 0.75rem 0; border-block: 1px solid var(--nu-border); background: var(--nu-bg-alt); }
+.nu-marquee-track { display: flex; gap: 0; animation: nu-marquee 30s linear infinite; width: max-content; }
+@keyframes nu-marquee { to { transform: translateX(-33.333%); } }
+.nu-marquee-group { display: flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem; }
+.nu-marquee-group span { font-size: 0.875rem; color: var(--nu-text-dim); white-space: nowrap; font-weight: 500; }
+.nu-marquee-sep { color: var(--nu-orange) !important; }
+
+/* ════════════════════════════════════════════════════════════
+   3. SECTION CARDS — Nuclear-styled cards
+   ════════════════════════════════════════════════════════════ */
+.nu-section-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.nu-section-card { border-radius: var(--nu-radius-lg); background: var(--nu-surface); border: 1px solid var(--nu-border); overflow: hidden; transition: transform var(--nu-transition), border-color var(--nu-transition); }
+.nu-section-card:hover { transform: translateY(-6px); border-color: var(--nu-orange); box-shadow: var(--nu-shadow), 0 0 30px rgba(245,158,11,0.15); }
+.nu-section-img-wrap { position: relative; height: 160px; overflow: hidden; }
+.nu-section-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.nu-section-card:hover .nu-section-img { transform: scale(1.05); }
+.nu-section-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(0,0,0,0.4)); }
+.nu-section-header { padding: 1.25rem; background: var(--nu-surface-2); border-bottom: 1px solid var(--nu-border); }
+.nu-section-eyebrow { font-size: 0.6875rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; color: var(--nu-orange); margin-bottom: 0.5rem; }
+.nu-section-title { font-size: 1.125rem; font-weight: 700; color: #fff; }
+.nu-section-body { padding: 1.25rem; }
+.nu-section-desc { font-size: 0.8125rem; color: var(--nu-text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.nu-section-points { display: flex; flex-direction: column; gap: 0.5rem; }
+.nu-section-point { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--nu-text-muted); }
+.nu-section-point::before { content: '⚛️'; font-size: 0.625rem; }
+
+/* ════════════════════════════════════════════════════════════
+   4. SMR — SMR company cards
+   ════════════════════════════════════════════════════════════ */
+.nu-smr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.nu-smr-card { padding: 1.25rem; border-radius: var(--nu-radius-lg); background: var(--nu-surface); border: 1px solid var(--nu-border); transition: transform var(--nu-transition), border-color var(--nu-transition); }
+.nu-smr-card:hover { transform: translateY(-6px); border-color: var(--nu-orange); }
+.nu-smr-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.nu-smr-design { font-size: 0.75rem; color: var(--nu-orange); margin-bottom: 0.5rem; }
+.nu-smr-desc { font-size: 0.8125rem; color: var(--nu-text-muted); line-height: 1.6; margin-bottom: 0.75rem; }
+.nu-smr-status { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.625rem; border-radius: 999px; background: rgba(245,158,11,0.12); color: var(--nu-orange); display: inline-block; }
+
+/* ════════════════════════════════════════════════════════════
+   5. AI NEXUS — Deal cards
+   ════════════════════════════════════════════════════════════ */
+.nu-nexus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.nu-nexus-card { padding: 0; border-radius: var(--nu-radius-lg); background: var(--nu-surface); border: 1px solid var(--nu-border); overflow: hidden; transition: transform var(--nu-transition), border-color var(--nu-transition); }
+.nu-nexus-card:hover { transform: translateY(-6px); border-color: var(--nu-orange); }
+.nu-nexus-img-wrap { position: relative; height: 140px; overflow: hidden; }
+.nu-nexus-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.nu-nexus-card:hover .nu-nexus-img { transform: scale(1.05); }
+.nu-nexus-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(0,0,0,0.4)); }
+.nu-nexus-company { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; padding: 1.25rem 1.25rem 0; }
+.nu-nexus-partner { font-size: 0.75rem; color: var(--nu-red); margin-bottom: 0.5rem; padding: 0 1.25rem; }
+.nu-nexus-desc { font-size: 0.8125rem; color: var(--nu-text-muted); line-height: 1.6; margin-bottom: 0.75rem; padding: 0 1.25rem; }
+.nu-nexus-type { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.625rem; border-radius: 999px; background: rgba(239,68,68,0.12); color: var(--nu-red); display: inline-block; }
+
+/* ════════════════════════════════════════════════════════════
+   6. GEN IV — Reactor type cards
+   ════════════════════════════════════════════════════════════ */
+.nu-gen-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.nu-gen-card { padding: 0; border-radius: var(--nu-radius-lg); background: var(--nu-surface); border: 1px solid var(--nu-border); overflow: hidden; transition: transform var(--nu-transition), border-color var(--nu-transition); }
+.nu-gen-card:hover { transform: translateY(-6px); border-color: var(--nu-orange); }
+.nu-gen-img-wrap { position: relative; height: 140px; overflow: hidden; }
+.nu-gen-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.nu-gen-card:hover .nu-gen-img { transform: scale(1.05); }
+.nu-gen-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(0,0,0,0.4)); }
+.nu-gen-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; padding: 1.25rem 1.25rem 0; }
+.nu-gen-coolant { font-size: 0.75rem; color: var(--nu-amber); margin-bottom: 0.5rem; padding: 0 1.25rem; }
+.nu-gen-desc { font-size: 0.8125rem; color: var(--nu-text-muted); line-height: 1.6; margin-bottom: 0.75rem; padding: 0 1.25rem; }
+.nu-gen-temp { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.625rem; border-radius: 999px; background: rgba(245,158,11,0.12); color: var(--nu-orange); display: inline-block; }
+
+/* ════════════════════════════════════════════════════════════
+   7. FUTURE — Nuclear timeline
+   ════════════════════════════════════════════════════════════ */
+.nu-future-timeline { position: relative; display: flex; flex-direction: column; gap: 1rem; }
+.nu-future-timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--nu-grad); opacity: 0.3; }
+.nu-future-item { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; align-items: start; }
+.nu-future-year-marker { width: 40px; height: 40px; border-radius: 50%; background: var(--nu-grad); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; color: #fff; flex-shrink: 0; position: relative; z-index: 1; }
+.nu-future-content { padding: 1rem; border-radius: var(--nu-radius); background: var(--nu-surface); border: 1px solid var(--nu-border); transition: border-color var(--nu-transition); }
+.nu-future-content:hover { border-color: var(--nu-border-strong); }
+.nu-future-year { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; font-weight: 700; color: var(--nu-orange); margin-bottom: 0.25rem; }
+.nu-future-prediction { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.375rem; }
+.nu-future-detail { font-size: 0.8125rem; color: var(--nu-text-muted); line-height: 1.6; }
+
+/* ════════════════════════════════════════════════════════════
+   8. FAQ
+   ════════════════════════════════════════════════════════════ */
+.nu-faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.nu-faq-item { border-radius: var(--nu-radius); background: var(--nu-surface); border: 1px solid var(--nu-border); overflow: hidden; transition: border-color var(--nu-transition); }
+.nu-faq-item:hover { border-color: var(--nu-border-strong); }
+.nu-faq-item summary { padding: 1rem 1.25rem; font-size: 0.9375rem; font-weight: 600; color: #fff; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: background var(--nu-transition); }
+.nu-faq-item summary::-webkit-details-marker { display: none; }
+.nu-faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--nu-orange); flex-shrink: 0; transition: transform var(--nu-transition); }
+.nu-faq-item[open] summary::after { transform: rotate(45deg); }
+.nu-faq-item summary:hover { background: rgba(245,158,11,0.04); }
+.nu-faq-answer { padding: 0 1.25rem 1.25rem; font-size: 0.875rem; color: var(--nu-text-muted); line-height: 1.7; }
+
+/* ════════════════════════════════════════════════════════════
+   9. CTA
+   ════════════════════════════════════════════════════════════ */
+.nu-cta { position: relative; text-align: center; padding: 5rem 0; overflow: hidden; }
+.nu-cta-bg { position: absolute; inset: 0; z-index: 0; }
+.nu-cta-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.12; }
+.nu-cta-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.15)); }
+.nu-cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
+.nu-cta h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+.nu-cta p { font-size: 0.9375rem; color: var(--nu-text-muted); margin-bottom: 1.5rem; }
+.nu-cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; border-radius: 999px; background: var(--nu-grad); color: #fff; font-weight: 600; font-size: 0.9375rem; transition: transform var(--nu-transition), box-shadow var(--nu-transition); box-shadow: 0 4px 20px rgba(245,158,11,0.3); }
+.nu-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(245,158,11,0.45); }
+.nu-cta-pills { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
+.nu-cta-pill { display: flex; align-items: center; gap: 0.375rem; padding: 0.5rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--nu-border); font-size: 0.8125rem; color: var(--nu-text-muted); }
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .nu-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .nu-hero-right { height: 320px; }
+  .nu-section-grid { grid-template-columns: 1fr; }
+  .nu-smr-grid { grid-template-columns: 1fr; }
+  .nu-nexus-grid { grid-template-columns: 1fr; }
+  .nu-gen-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nu-section { padding: 3.5rem 0; }
+}
+
+@media (max-width: 480px) {
+  .nu-section { padding: 2.75rem 0; }
+  .nu-container { padding: 0 1rem; }
+  .nu-hero { min-height: auto; padding: 5rem 0 2.5rem; }
+  .nu-hero h1 { font-size: 1.75rem; }
+  .nu-hero-tagline { font-size: 0.9375rem; }
+  .nu-hero-desc { font-size: 0.875rem; }
+  .nu-hero-ctas { flex-direction: column; width: 100%; }
+  .nu-hero-ctas .nu-btn { width: 100%; }
+  .nu-hero-stats { grid-template-columns: 1fr 1fr; }
+  .nu-hero-stat { padding: 0.875rem 0.625rem; }
+  .nu-hero-stat-value { font-size: 1.25rem; }
+  .nu-hero-stat-label { font-size: 0.625rem; }
+  .nu-section-title { font-size: 1.5rem; }
+  .nu-section-sub { font-size: 0.875rem; margin-bottom: 1.5rem; }
+  .nu-cta { padding: 3rem 0; }
+  .nu-cta h3 { font-size: 1.375rem; }
+  .nu-cta p { font-size: 0.8125rem; }
+}
+
+@media (max-width: 358px) {
+  .nu-section { padding: 2.25rem 0; }
+  .nu-container { padding: 0 0.75rem; }
+  .nu-hero { padding: 4rem 0 2rem; }
+  .nu-hero h1 { font-size: 1.5rem; line-height: 1.15; }
+  .nu-hero-pill { font-size: 0.625rem; padding: 0.25rem 0.75rem; }
+  .nu-hero-tagline { font-size: 0.8125rem; }
+  .nu-hero-desc { font-size: 0.8125rem; line-height: 1.6; }
+  .nu-hero-ctas { gap: 0.5rem; }
+  .nu-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .nu-hero-stats { gap: 0.5rem; }
+  .nu-hero-stat { padding: 0.625rem 0.5rem; }
+  .nu-hero-stat-value { font-size: 1rem; }
+  .nu-hero-stat-label { font-size: 0.5625rem; }
+  .nu-eyebrow { font-size: 0.5625rem; }
+  .nu-eyebrow::before { width: 16px; }
+  .nu-section-title { font-size: 1.25rem; }
+  .nu-section-sub { font-size: 0.8125rem; margin-bottom: 1.25rem; }
+  .nu-section-header { padding: 1rem; }
+  .nu-section-body { padding: 1rem; }
+  .nu-section-title { font-size: 1rem; }
+  .nu-section-desc { font-size: 0.75rem; }
+  .nu-section-point { font-size: 0.6875rem; }
+  .nu-smr-card { padding: 1rem; }
+  .nu-smr-name { font-size: 0.875rem; }
+  .nu-smr-desc { font-size: 0.75rem; }
+  .nu-smr-status { font-size: 0.625rem; }
+  .nu-nexus-card { padding: 0; }
+  .nu-nexus-company { font-size: 0.875rem; padding: 1rem 1rem 0; }
+  .nu-nexus-desc { font-size: 0.75rem; padding: 0 1rem; }
+  .nu-nexus-img-wrap { height: 110px; }
+  .nu-gen-card { padding: 0; }
+  .nu-gen-name { font-size: 0.875rem; padding: 1rem 1rem 0; }
+  .nu-gen-desc { font-size: 0.75rem; padding: 0 1rem; }
+  .nu-gen-img-wrap { height: 110px; }
+  .nu-section-img-wrap { height: 120px; }
+  .nu-future-item { grid-template-columns: 32px 1fr; }
+  .nu-future-year-marker { width: 32px; height: 32px; font-size: 0.625rem; }
+  .nu-future-content { padding: 0.75rem; }
+  .nu-future-year { font-size: 0.75rem; }
+  .nu-future-prediction { font-size: 0.875rem; }
+  .nu-future-detail { font-size: 0.6875rem; }
+  .nu-faq-item summary { padding: 0.75rem 1rem; font-size: 0.8125rem; }
+  .nu-faq-answer { padding: 0 1rem 1rem; font-size: 0.75rem; }
+  .nu-cta { padding: 2.5rem 0; }
+  .nu-cta h3 { font-size: 1.125rem; }
+  .nu-cta p { font-size: 0.75rem; }
+  .nu-cta-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .nu-cta-pills { gap: 0.375rem; }
+  .nu-cta-pill { font-size: 0.6875rem; padding: 0.375rem 0.625rem; }
+  .nu-marquee-group span { font-size: 0.6875rem; }
+}

@@ -1,0 +1,23 @@
+---
+import { spaceContent as c } from '../../../data/topics/Space/space-content';
+---
+<section class="sp-section">
+  <div class="container">
+    <div class="sp-section-head sp-section-head-center">
+      <span class="sp-eyebrow">Industry Leaders</span>
+      <h2 class="sp-section-title">Companies Defining the Space Economy</h2>
+      <p class="sp-section-subtitle">The players driving launch dominance, satellite innovation, in-space manufacturing, and commercial station development.</p>
+    </div>
+    <div class="sp-companies-grid">
+      {c.companies.map((company) => (
+        <div class="sp-company-card" style={`--company-color: ${company.color}`}>
+          <div class="sp-company-header">
+            <span class="sp-company-name">{company.name}</span>
+            <span class="sp-company-metric">{company.metric}</span>
+          </div>
+          <p class="sp-company-desc">{company.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

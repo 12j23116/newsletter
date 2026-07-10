@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './community-styles.css';
+import CommunityHero from '../../components/community/CommunityHero.astro';
+import CommunityPlatforms from '../../components/community/CommunityPlatforms.astro';
+import CommunityDiscussions from '../../components/community/CommunityDiscussions.astro';
+import CommunityContributors from '../../components/community/CommunityContributors.astro';
+import CommunityGuidelines from '../../components/community/CommunityGuidelines.astro';
+import CommunityJoin from '../../components/community/CommunityJoin.astro';
+---
+<BaseLayout
+  title="Community"
+  description="Join the TechNanoAI community — 50,000+ technology enthusiasts across Discord, Reddit, LinkedIn, GitHub, YouTube, and our weekly newsletter. Connect, learn, and contribute."
+  keywords="TechNanoAI community, technology community, Discord, Reddit, LinkedIn, GitHub, tech enthusiasts, emerging tech community"
+>
+  <CommunityHero />
+  <CommunityPlatforms />
+  <CommunityDiscussions />
+  <CommunityContributors />
+  <CommunityGuidelines />
+  <CommunityJoin />
+</BaseLayout>

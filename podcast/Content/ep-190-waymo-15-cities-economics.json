@@ -1,0 +1,192 @@
+{
+  "id": 190,
+  "title": "Waymo's 15-City Expansion: Robotaxi Unit Economics",
+  "slug": "waymo-15-cities-economics",
+  "topic": "AV",
+  "topicColor": "#8b5cf6",
+  "duration": "41:25",
+  "date": "2026-04-29",
+  "season": 4,
+  "episode": 48,
+  "featured": false,
+  "guest": {
+    "name": "Tekedra Mawakana",
+    "role": "Co-CEO",
+    "company": "Waymo"
+  },
+  "hosts": [
+    {
+      "name": "Dr. Sarah Chen",
+      "role": "Host & AI Research Lead"
+    },
+    {
+      "name": "Dr. James Park",
+      "role": "Co-host & Space Editor"
+    }
+  ],
+  "topics": [
+    "Robotaxi",
+    "Autonomy",
+    "Waymo"
+  ],
+  "script": [
+    {
+      "segment": "COLD OPEN",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Tekedra, I want to start with something blunt. When I tell people outside the field about what's happening in robotaxi, they look at me like I'm exaggerating. Am I?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "(laughs) No, you're probably understating it, honestly. The gap between what the public knows about robotaxi unit economics and what's actually happening in the labs and in production right now is enormous. We're at a point where the progress is outpacing the public's ability to track it."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "Welcome to TechNova. I'm Dr. James Park."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And I'm Dr. Sarah Chen. Today we're joined by Tekedra Mawakana, Co-CEO at Waymo. Tekedra, welcome."
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "Thanks for having me. Happy to be here."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 1: The Big Picture",
+      "lines": [
+        {
+          "speaker": "Dr. James Park",
+          "text": "Tekedra, set the stage for us. Why does robotaxi matter, and why now?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "It matters because sensor technology has reached a level of maturity where the applications are real, not theoretical. And it matters now because three things have converged: AI driving models has improved dramatically, regulatory framework has become economically viable, and the demand side — driven by safety data — has exploded. When supply, capability, and demand all align, you get rapid adoption."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Where were we a year ago versus today?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "A year ago, we were still proving the concept. Today, we're optimizing it. That's a fundamentally different phase. Proof of concept is about 'can it work?' Optimization is about 'can it work at scale, at the right cost, with the right reliability?' That's where the real value gets created."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "And what does 'at scale' mean in your context?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "It means unit economics that can be deployed across hundreds or thousands of use cases. It means scaling strategy that doesn't require a PhD to operate. It means unit economics that make sense without subsidies. When all three of those are true, you've crossed from innovation to industry."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 2: Getting Technical",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Let's go deeper. What's the specific technical breakthrough that got us here?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "The core breakthrough was in edge cases. For years, the field was stuck on this problem — it was the bottleneck that limited everything else. What happened is that we found a new approach to competing approaches that sidestepped the traditional limitation. Instead of trying to solve the problem head-on, we reframed it, and that opened up a completely different solution path."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "Was that a moment of insight, or was it gradual?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "Both, actually. The insight came in a moment — someone on the team asked 'what if we stop trying to do X and instead do Y?' But validating that insight took months of work. You have an idea, and then you have to prove it works, and then you have to engineer it into something reliable. The idea is five percent of the work. The engineering is ninety-five percent."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What's the next technical frontier?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "public acceptance. We've solved the core problem, but freight and delivery is the next bottleneck. It's less glamorous — nobody writes headlines about it — but it's what stands between where we are today and full-scale deployment. I'd expect to see significant progress in the next twelve months, but it's going to require a different set of expertise than what got us here."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 3: Who's Winning and Why",
+      "lines": [
+        {
+          "speaker": "Dr. James Park",
+          "text": "Tekedra, let's talk about the competitive landscape. How do you compare to others working on similar problems?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "There are maybe four or five serious teams globally. Each has a different thesis. Some believe the answer is sensor technology — throw more resources at the problem. Others think it's about AI driving models — finding a fundamentally better approach. We're in the second camp. We believe that regulatory framework is the key differentiator, and that the team that solves the engineering challenges first will have a durable advantage."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What about international competition? China, Europe, others?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "It's a global race, and different regions have different strengths. China has incredible scale and speed of deployment. Europe has strong regulatory frameworks and deep scientific talent. The US has the best capital markets and the strongest startup ecosystem. Each region's approach reflects its strengths, and I think we'll see different solutions winning in different markets."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "Is there a risk of over-investment? Too many companies chasing the same thing?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "There's always that risk in a hot field. But I'd rather have too many smart people working on this than too few. The problems we're solving are hard enough that we need multiple approaches, multiple teams, and multiple iterations. The companies that fail will fail because of execution, not because the market is too crowded."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 4: The Road Ahead",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Tekedra, what are the milestones you're tracking for the next year?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "First, safety data — we need to demonstrate this works outside the lab, in real conditions. Second, unit economics — the cost has to come down by at least 50 percent from current levels. Third, scaling strategy — we need regulatory clarity, because without it, deployment is bottlenecked. If we hit all three, 2027 will be the year this goes mainstream."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "What's the biggest risk to that timeline?"
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "Regulation, honestly. The technology is on track. The capital is available. But regulatory processes are unpredictable, and they can add years to deployment timelines. The best thing policymakers could do is create clear, science-based frameworks that allow innovation while protecting public safety. The worst thing they could do is regulate based on fear rather than evidence."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Tekedra, this has been a fantastic conversation. Thank you for joining us."
+        },
+        {
+          "speaker": "Tekedra Mawakana",
+          "text": "Thank you both. I really enjoyed this."
+        },
+        {
+          "speaker": "Dr. James Park",
+          "text": "And thanks to all of you for listening. This is TechNova — see you next time."
+        }
+      ]
+    }
+  ],
+  "showNotes": {
+    "keyTopics": [
+      "sensor technology",
+      "AI driving models",
+      "regulatory framework",
+      "safety data",
+      "unit economics",
+      "scaling strategy",
+      "edge cases",
+      "competing approaches"
+    ],
+    "estimatedDuration": "10-12 minutes"
+  }
+}

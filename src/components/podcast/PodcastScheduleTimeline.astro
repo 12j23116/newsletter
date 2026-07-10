@@ -1,0 +1,79 @@
+---
+import { upcomingEpisodes } from '../../data/podcast/podcast-content';
+
+const statusLabels: Record<string, string> = {
+  scheduled: 'Scheduled',
+  recording: 'Recording',
+  editing: 'Editing',
+  ready: 'Ready',
+};
+
+function formatDate(dateStr: string): string {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function formatFullDate(dateStr: string): string {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+}
+---
+
+<section class="pc-sched-timeline">
+  <div class="pc-sched-timeline-head">
+    <span class="pc-section-label">Upcoming Episodes</span>
+    <h2 class="pc-section-title">Recording <span class="pc-grad">Schedule</span></h2>
+    <p class="pc-sched-timeline-sub">12 episodes planned through September 2026 · New episodes every Tuesday</p>
+  </div>
+  <div class="pc-sched-timeline-list">
+    {upcomingEpisodes.map((ep, i) => (
+      <div class="pc-sched-item" style={`--card-color:${ep.topicColor}`}>
+        <div class="pc-sched-item-rail">
+          <div class={`pc-sched-item-dot pc-status-${ep.status}`}></div>
+          {i < upcomingEpisodes.length - 1 && <div class="pc-sched-item-line"></div>}
+        </div>
+        <div class="pc-sched-item-card">
+          <div class="pc-sched-item-header">
+            <div class="pc-sched-item-date-block">
+              <span class="pc-sched-item-day">{ep.publishDay}</span>
+              <span class="pc-sched-item-date">{formatDate(ep.publishDate)}</span>
+            </div>
+            <span class="pc-sched-item-topic" style={`--cat-color:${ep.topicColor}`}>
+              {ep.topicIcon} {ep.topic}
+            </span>
+            <span class={`pc-sched-item-status pc-status-badge-${ep.status}`}>
+              <span class={`pc-status-dot pc-status-${ep.status}`}></span>
+              {statusLabels[ep.status]}
+            </span>
+          </div>
+          <h3 class="pc-sched-item-title">{ep.title}</h3>
+          <p class="pc-sched-item-desc">{ep.description}</p>
+          <div class="pc-sched-item-foot">
+            <div class="pc-sched-item-guest">
+              <span class="pc-sched-item-guest-avatar" style={`background:${ep.topicColor}`}>
+                {ep.guest.split(' ').map(w => w[0]).slice(0, 2).join('')}
+              </span>
+              <div class="pc-sched-item-guest-info">
+                <span class="pc-sched-item-guest-name">{ep.guest}</span>
+                <span class="pc-sched-item-guest-role">{ep.guestRole} · {ep.guestCompany}</span>
+              </div>
+            </div>
+            <div class="pc-sched-item-meta">
+              <span class="pc-sched-item-host">🎙️ {ep.host}</span>
+              <span class="pc-sched-item-duration">⏱ {ep.estDuration}</span>
+            </div>
+          </div>
+          <div class="pc-sched-item-topics">
+            {ep.topics.map((t) => (
+              <span class="pc-topic-tag">#{t}</span>
+            ))}
+          </div>
+          <div class="pc-sched-item-dates">
+            <span class="pc-sched-item-rec">📅 Recording: {formatFullDate(ep.recordingDate)}</span>
+            <span class="pc-sched-item-pub">🎧 Publish: {formatFullDate(ep.publishDate)}</span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

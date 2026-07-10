@@ -1,0 +1,59 @@
+---
+import { scheduleStats } from '../../data/podcast/podcast-content';
+---
+
+<section class="pc-sched-hero">
+  <div class="pc-hero-bg">
+    <div class="pc-hero-wave"></div>
+    <div class="pc-hero-orb pc-hero-orb-1"></div>
+    <div class="pc-hero-orb pc-hero-orb-2"></div>
+  </div>
+  <div class="pc-sched-hero-inner">
+    <div class="pc-sched-hero-left">
+      <a href="/podcast" class="pc-sched-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Podcast
+      </a>
+      <span class="pc-eyebrow">
+        <span class="pc-live-dot"></span>
+        Season 4 · Recording Now
+      </span>
+      <h1 class="pc-hero-title">
+        Episode <span class="pc-grad">Schedule</span>
+      </h1>
+      <p class="pc-hero-sub">
+        See what's coming next on The Frontier Podcast. Upcoming guests, recording dates,
+        and publish dates for the next 12 episodes — covering AI, fusion, quantum, biotech, and more.
+      </p>
+      <div class="pc-hero-stats">
+        {scheduleStats.map((stat) => (
+          <div class="pc-hero-stat">
+            <strong>{stat.value}{stat.suffix}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="pc-sched-hero-right">
+      <div class="pc-sched-next-card">
+        <div class="pc-sched-next-label">Next Recording</div>
+        <div class="pc-sched-next-date">
+          <span class="pc-sched-next-day">11</span>
+          <span class="pc-sched-next-month">Jul</span>
+        </div>
+        <div class="pc-sched-next-body">
+          <span class="pc-sched-next-topic">AI</span>
+          <h3 class="pc-sched-next-title">The 100K GPU Cluster: Inside xAI's Memphis Supercomputer</h3>
+          <div class="pc-sched-next-guest">
+            <span class="pc-sched-next-guest-name">Greg Yang</span>
+            <span class="pc-sched-next-guest-role">Co-founder & SVP Engineering · xAI</span>
+          </div>
+          <div class="pc-sched-next-status">
+            <span class="pc-status-dot pc-status-recording"></span>
+            Recording in progress
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

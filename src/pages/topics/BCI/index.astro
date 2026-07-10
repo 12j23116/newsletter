@@ -1,0 +1,280 @@
+---
+/**
+ * BCI topic Page — Premium Redesign
+ * Unique layout: neural-network hero, brain-wave patterns,
+ * synapse-style cards, neural pathway timeline.
+ * 8 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { bciContent } from '../../../data/topics/BCI/bci-content';
+import './bci-styles.css';
+const c = bciContent;
+
+const marqueeItems = ['$3.2B Market', '21 Neuralink Implants', '62 WPM Speech', 'Neuralink Blindsight', 'Synchron Stentrode', 'Non-Invasive EEG', 'AI + BCI', 'Speech Decoding', 'Neural Rights', 'China NEO Approval', 'Clinical Trials', 'Consumer Neurotech'];
+
+const overviewImages = ['/images/bci-01-neural-implant-surgery.webp', '/images/bci-02-eeg-meditation.webp'];
+const convergenceImages = ['/images/bci-05-brain-to-text.webp', '/images/bci-06-fmri-mapping.webp', '/images/bci-04-vr-neurofeedback.webp'];
+const deviceImages = ['/images/bci-01-neural-implant-surgery.webp', '/images/bci-07-cochlear-implant.webp', '/images/bci-08-mind-wheelchair.webp', '/images/bci-05-brain-to-text.webp', '/images/bci-09-sleep-lab.webp', '/images/bci-10-neural-dust.webp'];
+const comparisonImages = ['/images/bci-01-neural-implant-surgery.webp', '/images/bci-02-eeg-meditation.webp'];
+---
+
+<BaseLayout title={`${c.name} — Neuralink, Speech Decoding & Neural Rights 2026-2030`} description={c.description} keywords={[...c.seoKeywords.primary, ...c.seoKeywords.secondary].join(', ')}>
+  <div class="bi-page">
+
+    {/* ══ 1. HERO — Neural network themed ══ */}
+    <section class="bi-hero">
+      <div class="bi-hero-bg">
+        <img src="/images/005-bci-neural-link.webp" alt="Brain-computer interface" loading="eager" />
+      </div>
+      <div class="bi-grid-overlay"></div>
+      <div class="bi-neural-wave"></div>
+      <div class="bi-orb bi-hero-orb-1"></div>
+      <div class="bi-orb bi-hero-orb-2"></div>
+      <div class="bi-orb bi-hero-orb-3"></div>
+      <div class="bi-hero-inner">
+        <div class="bi-hero-left">
+          <span class="bi-hero-pill"><span class="bi-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="bi-grad-text">Brain-Computer Interfaces</span></h1>
+          <p class="bi-hero-tagline">{c.tagline}</p>
+          <p class="bi-hero-desc">{c.description}</p>
+          <div class="bi-hero-ctas">
+            <a href="#sections" class="bi-btn bi-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="bi-btn bi-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="bi-hero-stats">
+            {c.stats.map((s) => (
+              <div class="bi-hero-stat">
+                <span class="bi-hero-stat-value">{s.value}</span>
+                <span class="bi-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="bi-hero-right">
+          <div class="bi-hero-img-wrap">
+            <img class="bi-hero-img" src="/images/bci-01-neural-implant-surgery.webp" alt="Neural implant surgery" loading="eager" />
+            <div class="bi-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="bi-marquee">
+      <div class="bi-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'bi-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="bi-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. MARKET OVERVIEW ══ */}
+    <section class="bi-section" id="sections">
+      <div class="bi-container">
+        <span class="bi-eyebrow bi-reveal">Market Overview</span>
+        <h2 class="bi-section-title bi-reveal">The <span class="bi-grad-text">$3.2 Billion</span> BCI Market</h2>
+        <p class="bi-section-sub bi-reveal">Clinical invasive BCIs and consumer non-invasive neurotechnology — the two paths of brain-computer interfaces.</p>
+        <div class="bi-section-grid bi-reveal">
+          <div class="bi-section-card">
+            <div class="bi-section-img-wrap">
+              <img class="bi-section-img" src={overviewImages[0]} alt={c.marketOverview.title} loading="lazy" />
+              <div class="bi-section-img-overlay"></div>
+            </div>
+            <div class="bi-section-header">
+              <div class="bi-section-eyebrow">Market Overview</div>
+              <h3 class="bi-section-title">{c.marketOverview.title}</h3>
+            </div>
+            <div class="bi-section-body">
+              <p class="bi-section-desc">{c.marketOverview.subtitle}</p>
+              <div class="bi-section-points">
+                {c.marketOverview.keyDrivers.map((d) => (
+                  <div class="bi-section-point">{d.title}: {d.desc}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="bi-section-card">
+            <div class="bi-section-img-wrap">
+              <img class="bi-section-img" src={overviewImages[1]} alt={c.keyPlayers.title} loading="lazy" />
+              <div class="bi-section-img-overlay"></div>
+            </div>
+            <div class="bi-section-header">
+              <div class="bi-section-eyebrow">Key Players</div>
+              <h3 class="bi-section-title">{c.keyPlayers.title}</h3>
+            </div>
+            <div class="bi-section-body">
+              <p class="bi-section-desc">{c.keyPlayers.subtitle}</p>
+              <div class="bi-section-points">
+                {c.keyPlayers.devices.slice(0, 4).map((d) => (
+                  <div class="bi-section-point"><strong>{d.name}</strong>: {d.status}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. INVASIVE VS NON-INVASIVE ══ */}
+    <section class="bi-section bi-section-alt">
+      <div class="bi-container">
+        <span class="bi-eyebrow bi-reveal">Technology Comparison</span>
+        <h2 class="bi-section-title bi-reveal">Invasive vs <span class="bi-grad-text">Non-Invasive</span></h2>
+        <p class="bi-section-sub bi-reveal">The trade-offs between surgical precision and accessibility in brain-computer interfaces.</p>
+        <div class="bi-comparison-grid bi-reveal">
+          <div class="bi-comparison-card">
+            <div class="bi-comparison-img-wrap">
+              <img class="bi-comparison-img" src={comparisonImages[0]} alt="Invasive BCI" loading="lazy" />
+              <div class="bi-comparison-img-overlay"></div>
+            </div>
+            <h3 class="bi-comparison-title">Invasive BCI</h3>
+            {c.invasiveVsNon.comparison.slice(0, 4).map((c) => (
+              <div class="bi-comparison-row">
+                <span class="bi-comparison-label">{c.feature}</span>
+                <span class="bi-comparison-value">{c.invasive}</span>
+              </div>
+            ))}
+          </div>
+          <div class="bi-comparison-card">
+            <div class="bi-comparison-img-wrap">
+              <img class="bi-comparison-img" src={comparisonImages[1]} alt="Non-Invasive BCI" loading="lazy" />
+              <div class="bi-comparison-img-overlay"></div>
+            </div>
+            <h3 class="bi-comparison-title">Non-Invasive BCI</h3>
+            {c.invasiveVsNon.comparison.slice(0, 4).map((c) => (
+              <div class="bi-comparison-row">
+                <span class="bi-comparison-label">{c.feature}</span>
+                <span class="bi-comparison-value">{c.nonInvasive}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. AI + BCI CONVERGENCE ══ */}
+    <section class="bi-section">
+      <div class="bi-container">
+        <span class="bi-eyebrow bi-reveal">AI Convergence</span>
+        <h2 class="bi-section-title bi-reveal">AI + <span class="bi-grad-text">BCI</span> Revolution</h2>
+        <p class="bi-section-sub bi-reveal">Transformer-based neural decoders and LLM integration transforming brain signals into fluent speech.</p>
+        <div class="bi-section-grid bi-reveal">
+          {c.aiConvergence.breakthroughs.map((b, i) => (
+            <div class="bi-section-card">
+              <div class="bi-section-img-wrap">
+                <img class="bi-section-img" src={convergenceImages[i]} alt={b.title} loading="lazy" />
+                <div class="bi-section-img-overlay"></div>
+              </div>
+              <div class="bi-section-header">
+                <div class="bi-section-eyebrow">Breakthrough</div>
+                <h3 class="bi-section-title">{b.title}</h3>
+              </div>
+              <div class="bi-section-body">
+                <p class="bi-section-desc">{b.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. DEVICES ══ */}
+    <section class="bi-section bi-section-alt">
+      <div class="bi-container">
+        <span class="bi-eyebrow bi-reveal">Key Devices</span>
+        <h2 class="bi-section-title bi-reveal">Leading <span class="bi-grad-text">BCI Devices</span></h2>
+        <p class="bi-section-sub bi-reveal">The devices shaping the future of brain-computer interfaces.</p>
+        <div class="bi-devices-grid bi-reveal">
+          {c.keyPlayers.devices.map((d, i) => (
+            <div class="bi-device-card">
+              <div class="bi-device-img-wrap">
+                <img class="bi-device-img" src={deviceImages[i % deviceImages.length]} alt={d.name} loading="lazy" />
+                <div class="bi-device-img-overlay"></div>
+              </div>
+              <h3 class="bi-device-name">{d.name}</h3>
+              <div class="bi-device-company">{d.company}</div>
+              <p class="bi-device-desc">{d.desc}</p>
+              <span class="bi-device-metric">{d.electrodes} electrodes</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. FUTURE — Neural pathway timeline ══ */}
+    <section class="bi-section">
+      <div class="bi-container">
+        <span class="bi-eyebrow bi-reveal">2026 → 2030</span>
+        <h2 class="bi-section-title bi-reveal">The <span class="bi-grad-text">Neural</span> Path Ahead</h2>
+        <p class="bi-section-sub bi-reveal">Five predictions for the future of brain-computer interfaces.</p>
+        <div class="bi-future-timeline bi-reveal">
+          {c.futureOutlook.predictions.map((p) => (
+            <div class="bi-future-item">
+              <div class="bi-future-year-marker">{p.year}</div>
+              <div class="bi-future-content">
+                <div class="bi-future-year">{p.year}</div>
+                <div class="bi-future-prediction">{p.prediction}</div>
+                <div class="bi-future-detail">{p.detail}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="bi-section bi-section-alt" id="faq">
+      <div class="bi-container">
+        <span class="bi-eyebrow bi-reveal">FAQ</span>
+        <h2 class="bi-section-title bi-reveal">Frequently Asked <span class="bi-grad-text">Questions</span></h2>
+        <p class="bi-section-sub bi-reveal">Structured answers to the most common BCI questions — optimized for AI search citation.</p>
+        <div class="bi-faq-list">
+          {c.faq.items.map((f) => (
+            <details class="bi-faq-item">
+              <summary>{f.q}</summary>
+              <div class="bi-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. CTA ══ */}
+    <section class="bi-cta">
+      <div class="bi-cta-bg">
+        <img src="/images/017-bci-character-cobalt.webp" alt="BCI character" loading="lazy" />
+      </div>
+      <div class="bi-cta-inner">
+        <h3>Connect Your Mind</h3>
+        <p>Get the latest BCI breakthroughs, Neuralink updates, and neurotechnology insights delivered weekly.</p>
+        <a href="/blog?category=BCI" class="bi-cta-btn">Explore BCI Articles →</a>
+        <div class="bi-cta-pills">
+          <span class="bi-cta-pill">🧠 Neuralink updates</span>
+          <span class="bi-cta-pill">🗣️ Speech decoding</span>
+          <span class="bi-cta-pill">⚡ Neural rights</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.bi-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/BCI' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/BCI', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

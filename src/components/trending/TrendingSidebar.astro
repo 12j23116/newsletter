@@ -1,0 +1,35 @@
+---
+import { trendingTopics, allTrending } from '../../data/trending/trending-content';
+---
+
+<section class="tr-sidebar-top">
+  <div class="tr-strip">
+    <button class="tr-strip-pill" data-modal="topics">
+      <span class="tr-strip-icon">🔥</span>
+      <span class="tr-strip-text">#GPT5 <strong>142K</strong> · #QuantumAdvantage <strong>89K</strong> · +8 more</span>
+    </button>
+    <button class="tr-strip-pill" data-modal="numbers">
+      <span class="tr-strip-icon">📊</span>
+      <span class="tr-strip-text"><strong>2.4M</strong> reads · <strong>47</strong> articles · <strong>12</strong> topics</span>
+    </button>
+    <button class="tr-strip-pill tr-strip-pill--cta" data-modal="newsletter">
+      <span class="tr-strip-icon">📬</span>
+      <span class="tr-strip-text">Weekly Digest · Mon mornings</span>
+    </button>
+  </div>
+</section>
+
+<script type="application/json" id="tr-articles-data" set:html={JSON.stringify(allTrending)} />
+
+<!-- Modal Overlay -->
+<div class="tr-modal-overlay" id="tr-modal-overlay">
+  <div class="tr-modal" id="tr-modal">
+    <button class="tr-modal-close" id="tr-modal-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="tr-modal-body" id="tr-modal-body"></div>
+  </div>
+</div>

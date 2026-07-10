@@ -1,0 +1,24 @@
+---
+import { podcastHosts } from '../../data/podcast/podcast-content';
+---
+
+<section class="pc-hosts">
+  <div class="pc-hosts-head">
+    <span class="pc-section-label">Your Hosts</span>
+    <h2 class="pc-section-title">Meet the <span class="pc-grad">Team</span></h2>
+  </div>
+  <div class="pc-hosts-grid">
+    {podcastHosts.map((host) => (
+      <div class="pc-host-card" style={`--host-color:${host.avatarColor}`}>
+        <div class="pc-host-avatar" style={`background:${host.avatarColor}`}>
+          {host.initials}
+        </div>
+        <div class="pc-host-body">
+          <h3 class="pc-host-name">{host.name}</h3>
+          <span class="pc-host-role">{host.role}</span>
+          <p class="pc-host-bio">{host.bio}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

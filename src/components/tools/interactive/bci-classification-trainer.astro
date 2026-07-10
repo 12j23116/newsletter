@@ -1,0 +1,546 @@
+---
+/**
+ * BCI Classification Trainer — Interactive tool
+ * Train and evaluate BCI classifiers (LDA, SVM, Neural Net) on simulated EEG data
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="bci-trainer">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🎯</div>
+      <div>
+        <h2>BCI Classification Trainer</h2>
+        <p>Train and evaluate BCI classifiers on simulated EEG motor imagery data</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">BCI Paradigm</label>
+          <select class="it-select" id="bct-paradigm">
+            <option value="mi">Motor Imagery (Left/Right Hand)</option>
+            <option value="p300">P300 Speller</option>
+            <option value="ssvep">SSVEP</option>
+            <option value="erp">ERP (N200/P300)</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Classifier</label>
+          <select class="it-select" id="bct-classifier">
+            <option value="lda">LDA (Linear Discriminant Analysis)</option>
+            <option value="svm">SVM (RBF Kernel)</option>
+            <option value="cnn">CNN (Convolutional Neural Net)</option>
+            <option value="rf">Random Forest</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">Training Trials</label>
+          <input type="number" class="it-input" id="bct-train" value="200" min="50" max="1000" step="50" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Test Trials</label>
+          <input type="number" class="it-input" id="bct-test" value="80" min="20" max="500" step="10" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">SNR <span class="it-label-hint">(dB)</span></label>
+          <input type="number" class="it-input" id="bct-snr" value="5" min="-5" max="20" step="1" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Feature Extraction</label>
+          <select class="it-select" id="bct-features">
+            <option value="csp">CSP (Common Spatial Patterns)</option>
+            <option value="psd">PSD Band Power</option>
+            <option value="wavelet">Wavelet Coefficients</option>
+            <option value="raw">Raw Time Series</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Cross-Validation</label>
+          <select class="it-select" id="bct-cv">
+            <option value="5">5-Fold</option>
+            <option value="10">10-Fold</option>
+            <option value="loo">Leave-One-Out</option>
+            <option value="none">None</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="bct-train-btn">Train Classifier</button>
+        <button class="it-btn it-btn-secondary" id="bct-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="bct-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="bct-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Training Results</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Training Accuracy</div>
+            <div class="it-stat-value" id="bct-train-acc">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Test Accuracy</div>
+            <div class="it-stat-value" id="bct-test-acc" style="color:#059669;">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Cohen's Kappa</div>
+            <div class="it-stat-value" id="bct-kappa">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">ITR</div>
+            <div class="it-stat-value" id="bct-itr">0<span class="it-stat-unit"> bpm</span></div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Confusion Matrix</div>
+        <canvas id="bct-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="bct-details"></div>
+        <div class="it-alert" id="bct-alert"></div>
+      </div>
+
+      <!-- Feature 1: Learning Curve -->
+      <div class="it-results-card" id="bct-learning-section" style="display:none;">
+        <div class="it-results-title">📈 Learning Curve (Accuracy vs Training Size)</div>
+        <canvas id="bct-learning-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="bct-learning-list"></div>
+      </div>
+
+      <!-- Feature 2: ROC Curve -->
+      <div class="it-results-card" id="bct-roc-section" style="display:none;">
+        <div class="it-results-title">📉 ROC Curve & AUC</div>
+        <canvas id="bct-roc-canvas" width="400" height="400" style="width:100%;max-width:400px;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin:0 auto 0.75rem;display:block;"></canvas>
+        <div id="bct-roc-list"></div>
+      </div>
+
+      <!-- Feature 3: Classifier Comparison -->
+      <div class="it-results-card" id="bct-compare-section" style="display:none;">
+        <div class="it-results-title">⚖️ Classifier Comparison</div>
+        <div id="bct-compare-list"></div>
+      </div>
+
+      <!-- Feature 4: Feature Importance -->
+      <div class="it-results-card" id="bct-importance-section" style="display:none;">
+        <div class="it-results-title">🔍 Feature Importance & Selection</div>
+        <div id="bct-importance-list"></div>
+      </div>
+
+      <!-- Feature 5: Cross-Validation Results -->
+      <div class="it-results-card" id="bct-cv-section" style="display:none;">
+        <div class="it-results-title">🔀 Cross-Validation Results</div>
+        <div id="bct-cv-list"></div>
+      </div>
+
+      <!-- Feature 6: Hyperparameter Recommendations -->
+      <div class="it-results-card" id="bct-hyper-section" style="display:none;">
+        <div class="it-results-title">⚙️ Hyperparameter Recommendations</div>
+        <div id="bct-hyper-list"></div>
+      </div>
+
+      <!-- Feature 7: Real-Time Simulation -->
+      <div class="it-results-card" id="bct-rt-section" style="display:none;">
+        <div class="it-results-title">⚡ Real-Time BCI Simulation</div>
+        <div id="bct-rt-list"></div>
+      </div>
+
+      <!-- Feature 8: Deployment Checklist -->
+      <div class="it-results-card" id="bct-deploy-section" style="display:none;">
+        <div class="it-results-title">🚀 Deployment Readiness Checklist</div>
+        <div id="bct-deploy-list"></div>
+      </div>
+
+      <!-- Feature 9: BCI Paradigm Guide -->
+      <div class="it-results-card" id="bct-guide-section" style="display:none;">
+        <div class="it-results-title">📖 BCI Paradigm & Feature Guide</div>
+        <div id="bct-guide-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const classifierBase = {
+    lda: { baseAcc: 78, overfit: 2, trainTime: 0.1 },
+    svm: { baseAcc: 82, overfit: 5, trainTime: 1.2 },
+    cnn: { baseAcc: 88, overfit: 12, trainTime: 45 },
+    rf: { baseAcc: 80, overfit: 8, trainTime: 2.5 },
+  };
+
+  const featureBoost = { csp: 8, psd: 5, wavelet: 6, raw: 0 };
+  const paradigmDifficulty = { mi: 0, p300: 5, ssvep: 8, erp: 3 };
+
+  function train() {
+    const paradigm = document.getElementById('bct-paradigm').value;
+    const classifier = document.getElementById('bct-classifier').value;
+    const trainSize = parseInt(document.getElementById('bct-train').value) || 200;
+    const testSize = parseInt(document.getElementById('bct-test').value) || 80;
+    const snr = parseFloat(document.getElementById('bct-snr').value) || 5;
+    const features = document.getElementById('bct-features').value;
+    const cv = document.getElementById('bct-cv').value;
+
+    const cls = classifierBase[classifier];
+    const featBoost = featureBoost[features];
+    const paradigmBoost = paradigmDifficulty[paradigm];
+
+    // Accuracy model
+    let baseAcc = cls.baseAcc + featBoost + paradigmBoost;
+    // SNR effect
+    baseAcc += (snr - 5) * 1.5;
+    // Training size effect (diminishing returns)
+    baseAcc += Math.log(trainSize / 100) * 3;
+    // Clamp
+    baseAcc = Math.max(50, Math.min(98, baseAcc));
+
+    // Training accuracy (slightly higher due to overfitting)
+    const trainAcc = Math.min(99, baseAcc + cls.overfit + Math.random() * 3);
+    // Test accuracy (with some variance)
+    const testAcc = Math.max(50, baseAcc - Math.random() * 4);
+    // Cohen's Kappa
+    const kappa = (testAcc / 100 - 0.5) / 0.5;
+    // ITR (Information Transfer Rate) — bits per minute
+    const trialDuration = paradigm === 'p300' ? 2.5 : paradigm === 'ssvep' ? 2 : 4;
+    const itr = (Math.log2(2) + (testAcc / 100) * Math.log2(testAcc / 100) + (1 - testAcc / 100) * Math.log2((1 - testAcc / 100) / 1)) * 60 / trialDuration;
+
+    // Confusion matrix (binary: Left vs Right)
+    const tp = Math.round(testSize / 2 * testAcc / 100);
+    const fn = Math.round(testSize / 2) - tp;
+    const tn = Math.round(testSize / 2 * testAcc / 100);
+    const fp = Math.round(testSize / 2) - tn;
+
+    // Update UI
+    document.getElementById('bct-train-acc').innerHTML = trainAcc.toFixed(1) + '<span class="it-stat-unit">%</span>';
+    document.getElementById('bct-test-acc').innerHTML = testAcc.toFixed(1) + '<span class="it-stat-unit">%</span>';
+    document.getElementById('bct-kappa').textContent = kappa.toFixed(3);
+    document.getElementById('bct-itr').innerHTML = Math.max(0, itr).toFixed(1) + '<span class="it-stat-unit"> bpm</span>';
+
+    // Draw confusion matrix
+    const canvas = document.getElementById('bct-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+
+    const cellW = 150, cellH = 80;
+    const ox = (w - cellW * 2 - 60) / 2;
+    const oy = 40;
+
+    // Labels
+    ctx.fillStyle = '#111125';
+    ctx.font = 'bold 12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('Predicted', ox + cellW, 20);
+    ctx.save();
+    ctx.translate(15, oy + cellH);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText('Actual', 0, 0);
+    ctx.restore();
+
+    ctx.font = '11px sans-serif';
+    ctx.fillText('Left', ox + cellW / 2, oy - 5);
+    ctx.fillText('Right', ox + cellW + cellW / 2, oy - 5);
+    ctx.textAlign = 'right';
+    ctx.fillText('Left', ox - 5, oy + cellH / 2 + 4);
+    ctx.fillText('Right', ox - 5, oy + cellH + cellH / 2 + 4);
+
+    // Cells
+    const cells = [
+      { label: 'TP', val: tp, color: '#059669', x: ox, y: oy },
+      { label: 'FP', val: fp, color: '#dc2626', x: ox + cellW, y: oy },
+      { label: 'FN', val: fn, color: '#dc2626', x: ox, y: oy + cellH },
+      { label: 'TN', val: tn, color: '#059669', x: ox + cellW, y: oy + cellH },
+    ];
+    cells.forEach(c => {
+      ctx.fillStyle = c.color + '22';
+      ctx.fillRect(c.x, c.y, cellW, cellH);
+      ctx.strokeStyle = c.color;
+      ctx.lineWidth = 2;
+      ctx.strokeRect(c.x, c.y, cellW, cellH);
+      ctx.fillStyle = '#111125';
+      ctx.font = 'bold 24px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(c.val, c.x + cellW / 2, c.y + cellH / 2 + 8);
+      ctx.font = '10px sans-serif';
+      ctx.fillStyle = '#5c5c72';
+      ctx.fillText(c.label, c.x + cellW / 2, c.y + cellH - 8);
+    });
+
+    // Details
+    const sensitivity = tp / (tp + fn) * 100;
+    const specificity = tn / (tn + fp) * 100;
+    const precision = tp / (tp + fp) * 100;
+    const f1 = 2 * (precision * sensitivity) / (precision + sensitivity);
+
+    const details = document.getElementById('bct-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Metric</th><th>Value</th><th>Interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>Paradigm</td><td>${paradigm.toUpperCase()}</td><td>${paradigm === 'mi' ? 'Motor imagery — imagined movement' : paradigm === 'p300' ? 'P300 event-related potential' : paradigm === 'ssvep' ? 'Steady-state visual evoked potential' : 'ERP classification'}</td></tr>
+          <tr><td>Classifier</td><td>${classifier.toUpperCase()}</td><td>${classifier === 'lda' ? 'Fast, linear, low overfitting' : classifier === 'svm' ? 'Non-linear, good generalization' : classifier === 'cnn' ? 'Deep learning, high capacity' : 'Ensemble, robust'}</td></tr>
+          <tr><td>Feature Extraction</td><td>${features.toUpperCase()}</td><td>${features === 'csp' ? 'Spatial filtering — gold standard for MI' : features === 'psd' ? 'Frequency band power' : features === 'wavelet' ? 'Time-frequency decomposition' : 'No feature extraction'}</td></tr>
+          <tr><td>Training Set Size</td><td>${trainSize} trials</td><td>—</td></tr>
+          <tr><td>Test Set Size</td><td>${testSize} trials</td><td>—</td></tr>
+          <tr><td>SNR</td><td>${snr} dB</td><td>${snr < 0 ? 'Very noisy' : snr < 5 ? 'Low quality' : snr < 10 ? 'Moderate' : 'Good quality'}</td></tr>
+          <tr><td class="it-highlight">Training Accuracy</td><td class="it-highlight">${trainAcc.toFixed(1)}%</td><td>${trainAcc - testAcc > 10 ? '⚠️ Overfitting detected' : 'Good fit'}</td></tr>
+          <tr><td class="it-highlight">Test Accuracy</td><td class="it-highlight">${testAcc.toFixed(1)}%</td><td>${testAcc > 80 ? 'Excellent' : testAcc > 70 ? 'Good' : testAcc > 60 ? 'Moderate' : 'Poor — needs improvement'}</td></tr>
+          <tr><td>Sensitivity (Recall)</td><td>${sensitivity.toFixed(1)}%</td><td>True positive rate</td></tr>
+          <tr><td>Specificity</td><td>${specificity.toFixed(1)}%</td><td>True negative rate</td></tr>
+          <tr><td>Precision</td><td>${precision.toFixed(1)}%</td><td>Positive predictive value</td></tr>
+          <tr><td>F1 Score</td><td>${f1.toFixed(3)}</td><td>Harmonic mean of precision and recall</td></tr>
+          <tr><td>Cohen's Kappa</td><td>${kappa.toFixed(3)}</td><td>${kappa > 0.8 ? 'Almost perfect agreement' : kappa > 0.6 ? 'Substantial agreement' : kappa > 0.4 ? 'Moderate agreement' : 'Fair agreement'}</td></tr>
+          <tr><td class="it-highlight">ITR (bits/min)</td><td class="it-highlight">${Math.max(0, itr).toFixed(1)} bpm</td><td>Communication speed</td></tr>
+          <tr><td>Est. Training Time</td><td>${cls.trainTime.toFixed(1)}s</td><td>—</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const alert = document.getElementById('bct-alert');
+    if (testAcc > 80) {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>Excellent performance (${testAcc.toFixed(1)}% test accuracy).</strong> This classifier is ready for online BCI deployment. ITR of ${Math.max(0, itr).toFixed(1)} bpm is ${itr > 10 ? 'above' : 'near'} the typical BCI communication range (5-25 bpm).`;
+    } else if (testAcc > 70) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>Good performance (${testAcc.toFixed(1)}%).</strong> Consider improving SNR, increasing training data, or using CSP features for better accuracy. Current ITR: ${Math.max(0, itr).toFixed(1)} bpm.`;
+    } else {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>Below-threshold performance (${testAcc.toFixed(1)}%).</strong> Recommendations: 1) Use CSP feature extraction, 2) Increase training trials to 300+, 3) Improve electrode impedance/SNR, 4) Try SVM or CNN classifier.`;
+    }
+
+    document.getElementById('bct-results').classList.add('show');
+
+    // === Feature 1: Learning Curve ===
+    const lcCanvas = document.getElementById('bct-learning-canvas');
+    const lcCtx = lcCanvas.getContext('2d');
+    const lcW = lcCanvas.width, lcH = lcCanvas.height;
+    lcCtx.fillStyle = '#ebedf5'; lcCtx.fillRect(0, 0, lcW, lcH);
+    lcCtx.strokeStyle = '#94a3b8'; lcCtx.lineWidth = 1;
+    lcCtx.beginPath(); lcCtx.moveTo(50, 10); lcCtx.lineTo(50, lcH - 30); lcCtx.lineTo(lcW - 10, lcH - 30); lcCtx.stroke();
+    const lcPoints = [50, 100, 150, 200, 300, 400, 500, 750, 1000];
+    const trainCurve = lcPoints.map(n => Math.min(99, baseAcc + cls.overfit + Math.log(n / 100) * 3 + Math.random() * 2));
+    const testCurve = lcPoints.map(n => Math.max(50, baseAcc + Math.log(n / 100) * 3 - Math.random() * 3));
+    const lcMaxAcc = 100, lcMinAcc = 50;
+    lcCtx.strokeStyle = '#dc2626'; lcCtx.lineWidth = 2; lcCtx.beginPath();
+    trainCurve.forEach((acc, i) => { const x = 50 + (i / (lcPoints.length - 1)) * (lcW - 60); const y = lcH - 30 - ((acc - lcMinAcc) / (lcMaxAcc - lcMinAcc)) * (lcH - 40); if (i === 0) lcCtx.moveTo(x, y); else lcCtx.lineTo(x, y); });
+    lcCtx.stroke();
+    lcCtx.strokeStyle = '#059669'; lcCtx.beginPath();
+    testCurve.forEach((acc, i) => { const x = 50 + (i / (lcPoints.length - 1)) * (lcW - 60); const y = lcH - 30 - ((acc - lcMinAcc) / (lcMaxAcc - lcMinAcc)) * (lcH - 40); if (i === 0) lcCtx.moveTo(x, y); else lcCtx.lineTo(x, y); });
+    lcCtx.stroke();
+    lcCtx.fillStyle = '#dc2626'; lcCtx.font = '10px sans-serif'; lcCtx.textAlign = 'left'; lcCtx.fillText('● Train (red)', lcW - 120, 15); lcCtx.fillStyle = '#059669'; lcCtx.fillText('● Test (green)', lcW - 120, 28);
+    lcCtx.fillStyle = '#64748b'; lcCtx.textAlign = 'center'; lcCtx.fillText('Training Set Size', lcW / 2, lcH - 10);
+    lcCtx.save(); lcCtx.translate(15, lcH / 2); lcCtx.rotate(-Math.PI / 2); lcCtx.textAlign = 'center'; lcCtx.fillText('Accuracy (%)', 0, 0); lcCtx.restore();
+    lcCtx.textAlign = 'right'; lcCtx.fillText('100%', 48, 15); lcCtx.fillText('50%', 48, lcH - 32);
+    document.getElementById('bct-learning-list').innerHTML = `<div class="it-alert it-alert-info">Learning curve shows accuracy vs training set size. Train accuracy (red) stays high while test accuracy (green) improves with more data. ${trainAcc - testAcc > 10 ? '⚠️ Gap between train/test indicates overfitting — collect more data or add regularization.' : '✓ Small gap indicates good generalization.'} At ${trainSize} trials, test accuracy is ${testAcc.toFixed(1)}%. Diminishing returns typically begin after 300-500 trials for BCI.</div>`;
+    document.getElementById('bct-learning-section').style.display = 'block';
+
+    // === Feature 2: ROC Curve ===
+    const rocCanvas = document.getElementById('bct-roc-canvas');
+    const rocCtx = rocCanvas.getContext('2d');
+    const rocW = rocCanvas.width, rocH = rocCanvas.height;
+    rocCtx.fillStyle = '#ebedf5'; rocCtx.fillRect(0, 0, rocW, rocH);
+    rocCtx.strokeStyle = '#94a3b8'; rocCtx.lineWidth = 1;
+    rocCtx.beginPath(); rocCtx.moveTo(40, rocH - 30); rocCtx.lineTo(rocW - 10, rocH - 30); rocCtx.lineTo(40, 10); rocCtx.stroke();
+    rocCtx.strokeStyle = '#94a3b8'; rocCtx.setLineDash([5, 5]); rocCtx.beginPath(); rocCtx.moveTo(40, rocH - 30); rocCtx.lineTo(rocW - 10, 10); rocCtx.stroke(); rocCtx.setLineDash([]);
+    const aucValue = 0.5 + (testAcc - 50) / 100 * 0.5;
+    rocCtx.strokeStyle = '#059669'; rocCtx.lineWidth = 2; rocCtx.beginPath();
+    for (let i = 0; i <= 100; i++) { const fpr = i / 100; const tpr = Math.min(1, Math.pow(fpr, 1 - aucValue * 1.5) * (0.5 + aucValue * 0.5)); const x = 40 + fpr * (rocW - 50); const y = rocH - 30 - tpr * (rocH - 40); if (i === 0) rocCtx.moveTo(x, y); else rocCtx.lineTo(x, y); }
+    rocCtx.stroke();
+    rocCtx.fillStyle = '#059669'; rocCtx.font = 'bold 14px sans-serif'; rocCtx.textAlign = 'center'; rocCtx.fillText(`AUC = ${aucValue.toFixed(3)}`, rocW / 2, rocH / 2);
+    rocCtx.fillStyle = '#64748b'; rocCtx.font = '10px sans-serif'; rocCtx.textAlign = 'center'; rocCtx.fillText('False Positive Rate', rocW / 2, rocH - 10);
+    rocCtx.save(); rocCtx.translate(15, rocH / 2); rocCtx.rotate(-Math.PI / 2); rocCtx.textAlign = 'center'; rocCtx.fillText('True Positive Rate', 0, 0); rocCtx.restore();
+    document.getElementById('bct-roc-list').innerHTML = `<div class="it-alert it-alert-info">ROC curve shows the trade-off between sensitivity and specificity at different thresholds. AUC = ${aucValue.toFixed(3)} indicates ${aucValue > 0.9 ? 'excellent' : aucValue > 0.8 ? 'good' : aucValue > 0.7 ? 'fair' : 'poor'} discriminative ability. ${aucValue > 0.85 ? 'Suitable for real-time BCI deployment.' : 'AUC < 0.85 may cause unacceptable false positive rates in online use.'} Diagonal line represents chance (AUC=0.5).</div>`;
+    document.getElementById('bct-roc-section').style.display = 'block';
+
+    // === Feature 3: Classifier Comparison ===
+    const allClassifiers = [
+      { id: 'lda', name: 'LDA', accuracy: classifierBase.lda.baseAcc + featBoost + paradigmBoost + (snr - 5) * 1.5 + Math.log(trainSize / 100) * 3, speed: 'Fast (<0.1s)', memory: 'Low', overfit: 'Low', online: true },
+      { id: 'svm', name: 'SVM', accuracy: classifierBase.svm.baseAcc + featBoost + paradigmBoost + (snr - 5) * 1.5 + Math.log(trainSize / 100) * 3, speed: 'Medium (1-2s)', memory: 'Medium', overfit: 'Medium', online: false },
+      { id: 'cnn', name: 'CNN', accuracy: classifierBase.cnn.baseAcc + featBoost + paradigmBoost + (snr - 5) * 1.5 + Math.log(trainSize / 100) * 3, speed: 'Slow (30-60s)', memory: 'High', overfit: 'High', online: false },
+      { id: 'rf', name: 'Random Forest', accuracy: classifierBase.rf.baseAcc + featBoost + paradigmBoost + (snr - 5) * 1.5 + Math.log(trainSize / 100) * 3, speed: 'Medium (2-3s)', memory: 'Medium', overfit: 'Medium', online: false },
+    ];
+    allClassifiers.forEach(c => { c.accuracy = Math.max(50, Math.min(98, c.accuracy)); });
+    document.getElementById('bct-compare-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Classifier</th><th>Est. Accuracy</th><th>Training Speed</th><th>Memory</th><th>Overfit Risk</th><th>Online Capable</th><th>Selected</th></tr></thead><tbody>
+        ${allClassifiers.map(c => `<tr${c.id === classifier ? ' class="it-highlight"' : ''}><td><strong>${c.name}</strong></td><td style="color:${c.accuracy > 80 ? '#059669' : c.accuracy > 70 ? '#d97706' : '#dc2626'};font-weight:700;">${c.accuracy.toFixed(1)}%</td><td style="font-size:0.8125rem;">${c.speed}</td><td>${c.memory}</td><td>${c.overfit}</td><td style="color:${c.online ? '#059669' : '#94a3b8'};">${c.online ? '✓ Yes' : '✗ No'}</td><td style="text-align:center;">${c.id === classifier ? '✓' : ''}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${classifier === 'lda' ? 'LDA is recommended for real-time BCI due to fast inference and low overfitting. ' : classifier === 'cnn' ? 'CNN achieves highest accuracy but requires GPU and large datasets. ' : ''}For online BCI systems, LDA is preferred (sub-millisecond inference). For offline analysis, CNN or SVM may yield 2-8% higher accuracy. Consider ensemble methods combining LDA + SVM for robust performance.</div>
+    `;
+    document.getElementById('bct-compare-section').style.display = 'block';
+
+    // === Feature 4: Feature Importance ===
+    const featureList = features === 'csp' ? [
+      { name: 'CSP Filter 1 (α-band)', importance: 28, band: 'Alpha (8-13 Hz)' },
+      { name: 'CSP Filter 2 (β-band)', importance: 22, band: 'Beta (13-30 Hz)' },
+      { name: 'CSP Filter 3 (μ-band)', importance: 18, band: 'Mu (8-12 Hz)' },
+      { name: 'CSP Filter 4 (γ-band)', importance: 12, band: 'Gamma (30-45 Hz)' },
+      { name: 'CSP Filter 5 (θ-band)', importance: 8, band: 'Theta (4-8 Hz)' },
+      { name: 'CSP Filter 6 (δ-band)', importance: 5, band: 'Delta (0.5-4 Hz)' },
+      { name: 'Variance Log', importance: 7, band: 'Spatial' },
+    ] : features === 'psd' ? [
+      { name: 'Alpha Power (C3)', importance: 25, band: 'Alpha (8-13 Hz)' },
+      { name: 'Beta Power (C4)', importance: 22, band: 'Beta (13-30 Hz)' },
+      { name: 'Mu Power (Cz)', importance: 20, band: 'Mu (8-12 Hz)' },
+      { name: 'Theta Power (Fz)', importance: 12, band: 'Theta (4-8 Hz)' },
+      { name: 'Gamma Power (Pz)', importance: 10, band: 'Gamma (30-45 Hz)' },
+      { name: 'Delta Power (O1)', importance: 6, band: 'Delta (0.5-4 Hz)' },
+      { name: 'Alpha/Beta Ratio', importance: 5, band: 'Ratio' },
+    ] : features === 'wavelet' ? [
+      { name: 'CWT cA5 (δ)', importance: 15, band: 'Delta' },
+      { name: 'CWT cD5 (θ)', importance: 18, band: 'Theta' },
+      { name: 'CWT cD4 (α)', importance: 25, band: 'Alpha' },
+      { name: 'CWT cD3 (β)', importance: 22, band: 'Beta' },
+      { name: 'CWT cD2 (γ)', importance: 12, band: 'Gamma' },
+      { name: 'CWT cD1 (HF)', importance: 5, band: 'Noise' },
+      { name: 'Wavelet Entropy', importance: 3, band: 'Complexity' },
+    ] : [
+      { name: 'Sample 50 (C3)', importance: 8, band: 'Raw' },
+      { name: 'Sample 100 (C4)', importance: 7, band: 'Raw' },
+      { name: 'Sample 150 (Cz)', importance: 6, band: 'Raw' },
+      { name: 'Sample 200 (Pz)', importance: 5, band: 'Raw' },
+      { name: 'Variance', importance: 15, band: 'Statistical' },
+      { name: 'Skewness', importance: 4, band: 'Statistical' },
+      { name: 'Kurtosis', importance: 3, band: 'Statistical' },
+    ];
+    const totalImportance = featureList.reduce((s, f) => s + f.importance, 0);
+    document.getElementById('bct-importance-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Feature</th><th>Band</th><th>Importance</th><th>Bar</th><th>Keep?</th></tr></thead><tbody>
+        ${featureList.map(f => { const pct = (f.importance / totalImportance * 100); return `<tr><td><strong>${f.name}</strong></td><td style="font-size:0.8125rem;">${f.band}</td><td class="it-highlight">${f.importance}%</td><td style="width:150px;"><div style="background:var(--tl-border);height:8px;border-radius:4px;overflow:hidden;"><div style="width:${pct}%;height:100%;background:#8b5cf6;"></div></div></td><td style="color:${f.importance > 10 ? '#059669' : '#94a3b8'};">${f.importance > 10 ? '✓ Yes' : 'Consider dropping'}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Feature importance shows relative contribution of each feature to classification. ${features === 'csp' ? 'CSP filters are ordered by discriminability — Filter 1 captures the most class-discriminative spatial pattern. ' : features === 'psd' ? 'Alpha and Beta band powers from sensorimotor channels (C3/C4) are most discriminative for motor imagery. ' : ''}Features with <10% importance can be dropped to reduce dimensionality and speed up inference. Recursive Feature Elimination (RFE) can optimize feature subset selection.</div>
+    `;
+    document.getElementById('bct-importance-section').style.display = 'block';
+
+    // === Feature 5: Cross-Validation Results ===
+    const cvFolds = cv === 'loo' ? Math.min(trainSize, 20) : cv === 'none' ? 1 : parseInt(cv);
+    const cvResults = Array.from({ length: cvFolds }, (_, i) => ({ fold: i + 1, accuracy: testAcc + (Math.random() - 0.5) * 8, loss: 0 }));
+    cvResults.forEach(r => { r.accuracy = Math.max(50, Math.min(99, r.accuracy)); r.loss = 100 - r.accuracy; });
+    const cvMean = cvResults.reduce((s, r) => s + r.accuracy, 0) / cvFolds;
+    const cvStd = Math.sqrt(cvResults.reduce((s, r) => s + Math.pow(r.accuracy - cvMean, 2), 0) / cvFolds);
+    document.getElementById('bct-cv-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Fold</th><th>Accuracy</th><th>Loss</th><th>Deviation</th></tr></thead><tbody>
+        ${cvResults.map(r => `<tr><td>Fold ${r.fold}</td><td class="it-highlight">${r.accuracy.toFixed(1)}%</td><td style="color:#dc2626;">${r.loss.toFixed(1)}%</td><td style="color:${Math.abs(r.accuracy - cvMean) < cvStd ? '#059669' : '#d97706'};">${(r.accuracy - cvMean > 0 ? '+' : '') + (r.accuracy - cvMean).toFixed(1)}%</td></tr>`).join('')}
+        <tr class="it-highlight"><td><strong>Mean ± Std</strong></td><td class="it-highlight" style="font-weight:700;color:#059669;">${cvMean.toFixed(1)}% ± ${cvStd.toFixed(1)}%</td><td>—</td><td>—</td></tr>
+      </tbody></table>
+      <div class="it-alert ${cvStd < 5 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">${cv === 'none' ? 'No cross-validation performed — results may not generalize. Enable CV for reliable estimates.' : `${cvFolds}-fold CV accuracy: ${cvMean.toFixed(1)}% ± ${cvStd.toFixed(1)}%. ${cvStd < 3 ? 'Low variance — model is stable across folds.' : cvStd < 6 ? 'Moderate variance — consider more training data.' : 'High variance — model is sensitive to data split. Increase training data or reduce model complexity.'}`} ${cv === 'loo' ? 'Leave-One-Out provides maximum data usage but is computationally expensive.' : ''}</div>
+    `;
+    document.getElementById('bct-cv-section').style.display = 'block';
+
+    // === Feature 6: Hyperparameter Recommendations ===
+    const hyperRecs = classifier === 'lda' ? [
+      { param: 'Solver', recommended: 'lsqr (least squares)', default: 'svd', reason: 'lsqr is faster for well-conditioned data' },
+      { param: 'Shrinkage', recommended: 'auto (Ledoit-Wolf)', default: 'none', reason: 'Auto shrinkage improves generalization with small samples' },
+      { param: 'Priors', recommended: 'uniform [0.5, 0.5]', default: 'empirical', reason: 'Balanced priors prevent class bias' },
+      { param: 'Tolerance', recommended: '1e-4', default: '1e-4', reason: 'Standard tolerance for convergence' },
+    ] : classifier === 'svm' ? [
+      { param: 'C (regularization)', recommended: trainSize > 300 ? '1.0' : '0.1', default: '1.0', reason: 'Lower C for small datasets prevents overfitting' },
+      { param: 'Kernel', recommended: 'RBF', default: 'RBF', reason: 'RBF handles non-linear EEG feature boundaries' },
+      { param: 'Gamma', recommended: 'scale', default: 'scale', reason: 'Auto-scales with feature variance' },
+      { param: 'Class weight', recommended: 'balanced', default: 'none', reason: 'Handles class imbalance automatically' },
+    ] : classifier === 'cnn' ? [
+      { param: 'Learning rate', recommended: '0.001', default: '0.01', reason: 'Lower LR for stable EEG training' },
+      { param: 'Batch size', recommended: '32', default: '32', reason: 'Small batches for small BCI datasets' },
+      { param: 'Epochs', recommended: '50-100', default: '100', reason: 'Use early stopping to prevent overfitting' },
+      { param: 'Dropout', recommended: '0.5', default: '0.25', reason: 'High dropout for small datasets' },
+      { param: 'Architecture', recommended: 'EEGNet (depthwise+separable conv)', default: 'Standard CNN', reason: 'EEGNet is designed for EEG, fewer parameters' },
+    ] : [
+      { param: 'n_estimators', recommended: '100', default: '100', reason: '100-200 trees sufficient for BCI' },
+      { param: 'max_depth', recommended: '10', default: 'none', reason: 'Limit depth to prevent overfitting' },
+      { param: 'min_samples_leaf', recommended: '5', default: '1', reason: 'Prevents fitting noise' },
+      { param: 'max_features', recommended: 'sqrt', default: 'auto', reason: 'sqrt works well for BCI features' },
+    ];
+    document.getElementById('bct-hyper-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Hyperparameter</th><th>Recommended</th><th>Default</th><th>Rationale</th></tr></thead><tbody>
+        ${hyperRecs.map(h => `<tr><td><strong>${h.param}</strong></td><td class="it-highlight" style="color:#059669;">${h.recommended}</td><td style="font-size:0.8125rem;color:#94a3b8;">${h.default}</td><td style="font-size:0.8125rem;">${h.reason}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Hyperparameters significantly affect BCI performance. Use GridSearchCV or Bayesian optimization (Optuna) for systematic tuning. ${classifier === 'cnn' ? 'EEGNet architecture is recommended — it achieves 90%+ accuracy with only 2,560 parameters, designed specifically for EEG.' : 'For ' + classifier.toUpperCase() + ', the recommended settings should achieve near-optimal performance without extensive tuning.'}</div>
+    `;
+    document.getElementById('bct-hyper-section').style.display = 'block';
+
+    // === Feature 7: Real-Time Simulation ===
+    const rtTrials = 10;
+    const rtResults = Array.from({ length: rtTrials }, (_, i) => ({ trial: i + 1, actual: Math.random() > 0.5 ? 'Left' : 'Right', predicted: '', correct: false, latency: 0 }));
+    rtResults.forEach(r => { const correct = Math.random() < testAcc / 100; r.predicted = correct ? r.actual : (r.actual === 'Left' ? 'Right' : 'Left'); r.correct = correct; r.latency = 50 + Math.random() * 150; });
+    const rtCorrect = rtResults.filter(r => r.correct).length;
+    const avgLatency = rtResults.reduce((s, r) => s + r.latency, 0) / rtTrials;
+    document.getElementById('bct-rt-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Trial</th><th>Actual</th><th>Predicted</th><th>Correct?</th><th>Latency (ms)</th></tr></thead><tbody>
+        ${rtResults.map(r => `<tr><td>${r.trial}</td><td>${r.actual}</td><td style="color:${r.correct ? '#059669' : '#dc2626'};font-weight:700;">${r.predicted}</td><td style="color:${r.correct ? '#059669' : '#dc2626'};">${r.correct ? '✓' : '✗'}</td><td>${r.latency.toFixed(0)} ms</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${rtCorrect / rtTrials > 0.7 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">Real-time simulation: ${rtCorrect}/${rtTrials} correct (${(rtCorrect / rtTrials * 100).toFixed(0)}%) with avg latency ${avgLatency.toFixed(0)} ms. ${avgLatency < 100 ? '✓ Latency <100ms — suitable for real-time BCI.' : avgLatency < 200 ? '⚠️ Latency 100-200ms — acceptable for most BCI applications.' : '⚠️ Latency >200ms — may cause noticeable delay in feedback. Optimize inference pipeline.'} Real-time BCI requires <500ms end-to-end latency for responsive feedback. ${classifier === 'lda' ? 'LDA inference is <1ms — ideal for real-time.' : classifier === 'cnn' ? 'CNN may require GPU for real-time inference.' : ''}</div>
+    `;
+    document.getElementById('bct-rt-section').style.display = 'block';
+
+    // === Feature 8: Deployment Readiness ===
+    const deployChecks = [
+      { item: 'Test accuracy > 70%', passed: testAcc > 70, critical: true },
+      { item: 'Test accuracy > 80% (production)', passed: testAcc > 80, critical: false },
+      { item: 'No significant overfitting (gap < 10%)', passed: (trainAcc - testAcc) < 10, critical: true },
+      { item: 'Cohen\'s Kappa > 0.6', passed: kappa > 0.6, critical: true },
+      { item: 'AUC > 0.85', passed: aucValue > 0.85, critical: false },
+      { item: 'ITR > 5 bits/min', passed: itr > 5, critical: false },
+      { item: 'Cross-validated (CV std < 5%)', passed: cv !== 'none' && cvStd < 5, critical: true },
+      { item: 'Sufficient training data (≥200 trials)', passed: trainSize >= 200, critical: true },
+      { item: 'SNR ≥ 5 dB', passed: snr >= 5, critical: false },
+      { item: 'Real-time capable (inference < 100ms)', passed: classifier === 'lda' || classifier === 'rf', critical: false },
+      { item: 'Feature extraction pipeline defined', passed: features !== 'raw', critical: true },
+      { item: 'Class balance verified', passed: true, critical: false },
+    ];
+    const criticalPassed = deployChecks.filter(c => c.critical && c.passed).length;
+    const criticalTotal = deployChecks.filter(c => c.critical).length;
+    const allPassed = deployChecks.filter(c => c.passed).length;
+    document.getElementById('bct-deploy-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Check</th><th>Status</th><th>Critical</th></tr></thead><tbody>
+        ${deployChecks.map(c => `<tr><td>${c.item}</td><td style="color:${c.passed ? '#059669' : '#dc2626'};font-weight:700;">${c.passed ? '✓ Pass' : '✗ Fail'}</td><td style="text-align:center;">${c.critical ? '🔴' : '⚪'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${criticalPassed === criticalTotal ? 'it-alert-good' : criticalPassed >= criticalTotal * 0.7 ? 'it-alert-warn' : 'it-alert-bad'}" style="margin-top:0.5rem;">Deployment readiness: ${allPassed}/${deployChecks.length} checks passed (${criticalPassed}/${criticalTotal} critical). ${criticalPassed === criticalTotal ? '✓ All critical checks passed — ready for deployment.' : criticalPassed >= criticalTotal * 0.7 ? '⚠️ Some critical checks failed — address before deployment.' : '✗ Multiple critical failures — not ready for deployment. Improve model before proceeding.'}</div>
+    `;
+    document.getElementById('bct-deploy-section').style.display = 'block';
+
+    // === Feature 9: BCI Paradigm & Feature Guide ===
+    const paradigmGuides = {
+      mi: { title: 'Motor Imagery', description: 'User imagines left/right hand movement. ERD/ERS in mu (8-12 Hz) and beta (13-30 Hz) bands over sensorimotor cortex (C3, C4, Cz).', bestFeatures: 'CSP + LDA (gold standard, BCI Competition winner)', channels: 'C3, C4, Cz (minimum 3)', typicalAcc: '70-85%', tips: '1) Use 4-8 Hz bandpass for CSP, 2) Trial length 3-4s, 3) Rest period 1-2s between trials, 4) Adaptive calibration improves accuracy 5-10%' },
+      p300: { title: 'P300 Speller', description: 'Oddball paradigm — user attends to target letter flashing. P300 peak at 300ms post-stimulus over Pz, Cz.', bestFeatures: 'xdawn + LDA or CNN', channels: 'Fz, Cz, Pz, Oz, P3, P4 (minimum 6)', typicalAcc: '70-95%', tips: '1) Average 4-12 repetitions per character, 2) Use 0.5-20 Hz bandpass, 3) Epoch -200 to 800ms, 4) xDAWN spatial filtering improves SNR 3-5 dB' },
+      ssvep: { title: 'SSVEP', description: 'User focuses on flickering LED at different frequencies. SSVEP response at same frequency over occipital cortex.', bestFeatures: 'CCA (Canonical Correlation Analysis) or PSD', channels: 'O1, O2, Oz, P3, P4 (minimum 3)', typicalAcc: '80-95%', tips: '1) Use 8-15 Hz stimulation frequencies, 2) CCA is fast and accurate, 3) 2-4s window length, 4) Higher harmonics (2nd, 3rd) improve accuracy' },
+      erp: { title: 'ERP (N200/P300)', description: 'Event-related potentials for target detection. N200 at 200ms, P300 at 300ms post-stimulus.', bestFeatures: 'Wavelet + SVM or CNN', channels: 'Fz, Cz, Pz (minimum 3)', typicalAcc: '75-90%', tips: '1) Use 0.1-30 Hz bandpass, 2) Epoch -100 to 1000ms, 3) Baseline correction at -100 to 0ms, 4) Artifact rejection threshold at ±100 μV' },
+    };
+    const guide = paradigmGuides[paradigm];
+    document.getElementById('bct-guide-list').innerHTML = `
+      <div style="margin-bottom:1rem;"><strong style="font-size:1.1rem;color:#8b5cf6;">${guide.title}</strong></div>
+      <table class="it-table"><thead><tr><th>Aspect</th><th>Details</th></tr></thead><tbody>
+        <tr><td><strong>Description</strong></td><td style="font-size:0.8125rem;">${guide.description}</td></tr>
+        <tr><td><strong>Best Feature+Classifier</strong></td><td class="it-highlight">${guide.bestFeatures}</td></tr>
+        <tr><td><strong>Recommended Channels</strong></td><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${guide.channels}</td></tr>
+        <tr><td><strong>Typical Accuracy</strong></td><td style="color:#059669;font-weight:700;">${guide.typicalAcc}</td></tr>
+        <tr><td><strong>Optimization Tips</strong></td><td style="font-size:0.8125rem;">${guide.tips}</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Your current setup: ${classifier.toUpperCase()} + ${features.toUpperCase()} on ${paradigm.toUpperCase()} paradigm. ${features === 'csp' && paradigm === 'mi' ? '✓ CSP is the gold standard for Motor Imagery — excellent choice.' : features !== 'csp' && paradigm === 'mi' ? 'Consider switching to CSP features for Motor Imagery — typically 5-10% accuracy improvement.' : ''} ${classifier === 'lda' ? 'LDA is fast and reliable for online BCI.' : classifier === 'cnn' && trainSize < 300 ? 'CNN may overfit with <300 trials — consider data augmentation or transfer learning.' : ''}</div>
+    `;
+    document.getElementById('bct-guide-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('bct-export').style.display = 'inline-flex';
+    document.getElementById('bct-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), parameters: { paradigm, classifier, trainSize, testSize, snr, features, cv }, results: { trainAcc, testAcc, kappa, itr, sensitivity, specificity, precision, f1, auc: aucValue, confusionMatrix: { tp, fp, fn, tn } }, crossValidation: { folds: cvFolds, mean: cvMean, std: cvStd, results: cvResults }, classifierComparison: allClassifiers, featureImportance: featureList, hyperparameterRecs: hyperRecs, realTimeSimulation: { trials: rtResults, avgLatency, accuracy: rtCorrect / rtTrials }, deploymentChecks, paradigmGuide: guide };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'bci-classification-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('bct-train-btn').addEventListener('click', train);
+  document.getElementById('bct-reset').addEventListener('click', () => {
+    document.getElementById('bct-results').classList.remove('show');
+  });
+})();
+</script>

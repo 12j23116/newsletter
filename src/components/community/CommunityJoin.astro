@@ -1,0 +1,52 @@
+---
+/**
+ * CommunityJoin — CTA / join section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const benefits = [
+  'Access to all community discussions and channels',
+  'Weekly newsletter with curated tech developments',
+  'Submit and vote on guide topics you want to see',
+  'Earn points and climb the contributor leaderboard',
+  'Early access to new tools and interactive features',
+  'Network with researchers, engineers, and investors',
+];
+---
+
+<section class="community-join-section" id="join">
+  <div class="community-container">
+    <div class="community-join-card">
+      <div class="community-join-bg"></div>
+      <div class="community-join-content">
+        <span class="community-eyebrow community-eyebrow-center">Get Started — It Is Free</span>
+        <h2 class="community-join-title">Join 50,000+ Technology Enthusiasts</h2>
+        <p class="community-join-sub">
+          Create a free account in 30 seconds. No credit card. No spam. Just access to the
+          best emerging technology community on the internet.
+        </p>
+
+        <div class="community-join-benefits">
+          {benefits.map((b) => (
+            <div class="community-join-benefit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>{b}</span>
+            </div>
+          ))}
+        </div>
+
+        <form class="community-join-form" onsubmit="return false">
+          <input type="email" class="community-join-input" placeholder="Enter your email address" required />
+          <button type="submit" class="community-btn community-btn-primary community-join-submit">
+            Create Free Account
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p class="community-join-fineprint">
+          By joining, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

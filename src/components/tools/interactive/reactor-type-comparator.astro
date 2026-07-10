@@ -1,0 +1,408 @@
+---
+/**
+ * Reactor Type Comparator — Interactive tool
+ * Compare reactor designs on safety, cost, and efficiency
+ */
+import './interactive-tools.css';
+
+const reactors = [
+  { id: 'pwr', name: 'PWR', fullName: 'Pressurized Water Reactor', coolant: 'Light Water', fuel: 'LEU 3-5%', temp: 325, efficiency: 33, power: 1000, capex: 4000, om: 120, fuelCost: 7, safety: 'High', proliferation: 'Low', waste: 'High', maturity: 'Mature', deploy: 60 },
+  { id: 'bwr', name: 'BWR', fullName: 'Boiling Water Reactor', coolant: 'Light Water', fuel: 'LEU 3-5%', temp: 285, efficiency: 32, power: 1000, capex: 3800, om: 110, fuelCost: 7, safety: 'High', proliferation: 'Low', waste: 'High', maturity: 'Mature', deploy: 60 },
+  { id: 'smr', name: 'SMR', fullName: 'Small Modular Reactor', coolant: 'Light Water', fuel: 'LEU 5-20%', temp: 320, efficiency: 30, power: 77, capex: 6000, om: 150, fuelCost: 8, safety: 'Very High', proliferation: 'Low', waste: 'Medium', maturity: 'Demonstration', deploy: 36 },
+  { id: 'htgr', name: 'HTGR', fullName: 'High-Temp Gas Reactor', coolant: 'Helium', fuel: 'TRISO Particles', temp: 750, efficiency: 42, power: 165, capex: 5500, om: 130, fuelCost: 12, safety: 'Very High', proliferation: 'Very Low', waste: 'Low', maturity: 'Demonstration', deploy: 48 },
+  { id: 'sfr', name: 'SFR', fullName: 'Sodium Fast Reactor', coolant: 'Sodium', fuel: 'MOX/Metal', temp: 500, efficiency: 40, power: 150, capex: 6000, om: 140, fuelCost: 15, safety: 'High', proliferation: 'Medium', waste: 'Very Low', maturity: 'Prototype', deploy: 48 },
+  { id: 'msr', name: 'MSR', fullName: 'Molten Salt Reactor', coolant: 'Molten Salt', fuel: 'Dissolved in Salt', temp: 700, efficiency: 45, power: 100, capex: 6500, om: 160, fuelCost: 10, safety: 'Very High', proliferation: 'Low', waste: 'Very Low', maturity: 'Concept', deploy: 60 },
+];
+---
+
+<div class="it-container" id="reactor-comparator">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">⚖️</div>
+      <div>
+        <h2>Reactor Type Comparator</h2>
+        <p>Side-by-side comparison of reactor technologies on safety, cost, and efficiency</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Select Reactors to Compare</label>
+        <div class="it-checkbox-group" id="rtc-reactors">
+          {reactors.map(r => (
+            <label class="it-checkbox-item" data-reactor={r.id}>
+              <input type="checkbox" value={r.id} />
+              {r.name}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="rtc-compare">Compare Reactors</button>
+        <button class="it-btn it-btn-secondary" id="rtc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="rtc-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="rtc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Reactor Comparison</div>
+        <table class="it-table" id="rtc-table">
+          <thead id="rtc-head"></thead>
+          <tbody id="rtc-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="rtc-insight"></div>
+      </div>
+
+      <!-- Feature 1: Radar Chart -->
+      <div class="it-results-card" id="rtc-radar-section" style="display:none;">
+        <div class="it-results-title">📊 Multi-Dimensional Radar Chart</div>
+        <canvas id="rtc-radar-canvas" width="500" height="500" style="width:100%;max-width:500px;margin:0 auto;display:block;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);"></canvas>
+      </div>
+
+      <!-- Feature 2: Fuel Cycle Analysis -->
+      <div class="it-results-card" id="rtc-fuel-section" style="display:none;">
+        <div class="it-results-title">⚛️ Fuel Cycle Analysis</div>
+        <div id="rtc-fuel-list"></div>
+      </div>
+
+      <!-- Feature 3: Waste Profile -->
+      <div class="it-results-card" id="rtc-waste-section" style="display:none;">
+        <div class="it-results-title">☢️ Waste Profile Comparison</div>
+        <div id="rtc-waste-list"></div>
+      </div>
+
+      <!-- Feature 4: Passive Safety -->
+      <div class="it-results-card" id="rtc-safety-section" style="display:none;">
+        <div class="it-results-title">🛡️ Passive Safety Systems Comparison</div>
+        <div id="rtc-safety-list"></div>
+      </div>
+
+      <!-- Feature 5: Industrial Heat -->
+      <div class="it-results-card" id="rtc-heat-section" style="display:none;">
+        <div class="it-results-title">🏭 Industrial Heat Applications</div>
+        <div id="rtc-heat-list"></div>
+      </div>
+
+      <!-- Feature 6: Proliferation Resistance -->
+      <div class="it-results-card" id="rtc-prolif-section" style="display:none;">
+        <div class="it-results-title">🔒 Proliferation Resistance Deep-Dive</div>
+        <div id="rtc-prolif-list"></div>
+      </div>
+
+      <!-- Feature 7: LCOE Calculator -->
+      <div class="it-results-card" id="rtc-lcoe-section" style="display:none;">
+        <div class="it-results-title">💰 LCOE Comparison Calculator</div>
+        <div id="rtc-lcoe-list"></div>
+      </div>
+
+      <!-- Feature 8: Construction Timeline -->
+      <div class="it-results-card" id="rtc-gantt-section" style="display:none;">
+        <div class="it-results-title">📅 Construction Timeline Comparison</div>
+        <div id="rtc-gantt-list"></div>
+      </div>
+
+      <!-- Feature 9: Use Case Recommender -->
+      <div class="it-results-card" id="rtc-usecase-section" style="display:none;">
+        <div class="it-results-title">🎯 Best Use Case Recommender</div>
+        <div id="rtc-usecase-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const data = {
+    pwr: { name: 'PWR', fullName: 'Pressurized Water Reactor', coolant: 'Light Water', fuel: 'LEU 3-5%', temp: 325, efficiency: 33, power: 1000, capex: 4000, om: 120, fuelCost: 7, safety: 'High', proliferation: 'Low', waste: 'High', maturity: 'Mature', deploy: 60 },
+    bwr: { name: 'BWR', fullName: 'Boiling Water Reactor', coolant: 'Light Water', fuel: 'LEU 3-5%', temp: 285, efficiency: 32, power: 1000, capex: 3800, om: 110, fuelCost: 7, safety: 'High', proliferation: 'Low', waste: 'High', maturity: 'Mature', deploy: 60 },
+    smr: { name: 'SMR', fullName: 'Small Modular Reactor', coolant: 'Light Water', fuel: 'LEU 5-20%', temp: 320, efficiency: 30, power: 77, capex: 6000, om: 150, fuelCost: 8, safety: 'Very High', proliferation: 'Low', waste: 'Medium', maturity: 'Demo', deploy: 36 },
+    htgr: { name: 'HTGR', fullName: 'High-Temp Gas Reactor', coolant: 'Helium', fuel: 'TRISO', temp: 750, efficiency: 42, power: 165, capex: 5500, om: 130, fuelCost: 12, safety: 'Very High', proliferation: 'Very Low', waste: 'Low', maturity: 'Demo', deploy: 48 },
+    sfr: { name: 'SFR', fullName: 'Sodium Fast Reactor', coolant: 'Sodium', fuel: 'MOX/Metal', temp: 500, efficiency: 40, power: 150, capex: 6000, om: 140, fuelCost: 15, safety: 'High', proliferation: 'Medium', waste: 'Very Low', maturity: 'Prototype', deploy: 48 },
+    msr: { name: 'MSR', fullName: 'Molten Salt Reactor', coolant: 'Molten Salt', fuel: 'In Salt', temp: 700, efficiency: 45, power: 100, capex: 6500, om: 160, fuelCost: 10, safety: 'Very High', proliferation: 'Low', waste: 'Very Low', maturity: 'Concept', deploy: 60 },
+  };
+
+  function toggle(el) { el.classList.toggle('active'); el.querySelector('input').checked = el.classList.contains('active'); }
+  document.querySelectorAll('#rtc-reactors .it-checkbox-item').forEach(el => el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); }));
+  ['pwr', 'smr', 'msr'].forEach(id => { const el = document.querySelector(`[data-reactor="${id}"]`); if (el) toggle(el); });
+
+  function compare() {
+    const selected = [...document.querySelectorAll('#rtc-reactors .it-checkbox-item.active')].map(el => el.getAttribute('data-reactor'));
+    if (selected.length < 2) { alert('Select at least 2 reactors to compare.'); return; }
+
+    const rows = [
+      { label: 'Full Name', key: 'fullName' },
+      { label: 'Coolant', key: 'coolant' },
+      { label: 'Fuel Type', key: 'fuel' },
+      { label: 'Outlet Temp (°C)', key: 'temp', best: 'max' },
+      { label: 'Thermal Efficiency (%)', key: 'efficiency', best: 'max' },
+      { label: 'Typical Power (MWe)', key: 'power' },
+      { label: 'Overnight Capex ($/kW)', key: 'capex', best: 'min' },
+      { label: 'O&M Cost ($/kW-yr)', key: 'om', best: 'min' },
+      { label: 'Fuel Cost ($/MWh)', key: 'fuelCost', best: 'min' },
+      { label: 'Safety Rating', key: 'safety' },
+      { label: 'Proliferation Risk', key: 'proliferation', best: 'min' },
+      { label: 'Waste Profile', key: 'waste', best: 'min' },
+      { label: 'Maturity', key: 'maturity' },
+      { label: 'Deployment Time (months)', key: 'deploy', best: 'min' },
+    ];
+
+    const head = document.getElementById('rtc-head');
+    head.innerHTML = `<tr><th>Parameter</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr>`;
+
+    const body = document.getElementById('rtc-body');
+    body.innerHTML = rows.map(row => {
+      const values = selected.map(id => data[id][row.key]);
+      let bestIdx = -1;
+      if (row.best === 'max') { bestIdx = values.indexOf(Math.max(...values)); }
+      else if (row.best === 'min') { bestIdx = values.indexOf(Math.min(...values)); }
+      return `<tr><td><strong>${row.label}</strong></td>${values.map((v, i) => `<td${i === bestIdx ? ' class="it-highlight"' : ''}>${typeof v === 'number' ? v : v}${i === bestIdx ? ' ★' : ''}</td>`).join('')}</tr>`;
+    }).join('');
+
+    // Insight
+    const bestEff = selected.reduce((best, id) => data[id].efficiency > data[best].efficiency ? id : best);
+    const bestCost = selected.reduce((best, id) => data[id].capex < data[best].capex ? id : best);
+    const bestSafety = selected.filter(id => data[id].safety === 'Very High');
+
+    document.getElementById('rtc-insight').innerHTML = `<strong>💡 Insight:</strong> ${data[bestEff].name} has the highest efficiency (${data[bestEff].efficiency}%). ${data[bestCost].name} has the lowest capital cost ($${data[bestCost].capex}/kW). ${bestSafety.length > 0 ? `${bestSafety.map(id => data[id].name).join(' and ')} ${bestSafety.length > 1 ? 'have' : 'has'} the highest safety rating. ` : ''}For 2027-2030 deployment, ${selected.includes('smr') ? 'SMRs offer the fastest deployment path' : 'mature designs like PWR/BWR have proven track records'}.`;
+
+    document.getElementById('rtc-results').classList.add('show');
+
+    // === Feature 1: Radar Chart ===
+    const radarCanvas = document.getElementById('rtc-radar-canvas');
+    const rctx = radarCanvas.getContext('2d');
+    const rw = radarCanvas.width, rh = radarCanvas.height;
+    const cx = rw / 2, cy = rh / 2, radius = Math.min(rw, rh) / 2 - 60;
+    rctx.fillStyle = '#ebedf5'; rctx.fillRect(0, 0, rw, rh);
+    const axes = ['Safety', 'Efficiency', 'Cost (inv)', 'Waste (inv)', 'Maturity', 'Deploy (inv)'];
+    const colors = ['#059669', '#06b6d4', '#d97706', '#a855f7', '#dc2626', '#84cc16'];
+    const safetyMap = { 'Very High': 5, 'High': 4, 'Medium': 3, 'Low': 2, 'Very Low': 1 };
+    const wasteMap = { 'Very Low': 5, 'Low': 4, 'Medium': 3, 'High': 2, 'Very High': 1 };
+    const maturityMap = { 'Mature': 5, 'Demo': 4, 'Prototype': 3, 'Concept': 2 };
+    // Draw grid
+    for (let level = 1; level <= 5; level++) {
+      rctx.strokeStyle = 'rgba(15,23,42,0.08)';
+      rctx.lineWidth = 1;
+      rctx.beginPath();
+      for (let a = 0; a < axes.length; a++) {
+        const angle = (a / axes.length) * Math.PI * 2 - Math.PI / 2;
+        const r = (radius * level) / 5;
+        const x = cx + Math.cos(angle) * r, y = cy + Math.sin(angle) * r;
+        if (a === 0) rctx.moveTo(x, y); else rctx.lineTo(x, y);
+      }
+      rctx.closePath(); rctx.stroke();
+    }
+    // Draw axes & labels
+    for (let a = 0; a < axes.length; a++) {
+      const angle = (a / axes.length) * Math.PI * 2 - Math.PI / 2;
+      rctx.strokeStyle = 'rgba(15,23,42,0.1)';
+      rctx.beginPath(); rctx.moveTo(cx, cy); rctx.lineTo(cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius); rctx.stroke();
+      rctx.fillStyle = '#475569'; rctx.font = '11px sans-serif'; rctx.textAlign = 'center';
+      rctx.fillText(axes[a], cx + Math.cos(angle) * (radius + 20), cy + Math.sin(angle) * (radius + 20) + 4);
+    }
+    // Draw each reactor
+    selected.forEach((id, si) => {
+      const d = data[id];
+      const vals = [safetyMap[d.safety], d.efficiency / 10, 6 - d.capex / 1500, wasteMap[d.waste], maturityMap[d.maturity], 7 - d.deploy / 12];
+      rctx.strokeStyle = colors[si % colors.length]; rctx.lineWidth = 2;
+      rctx.fillStyle = colors[si % colors.length] + '20';
+      rctx.beginPath();
+      vals.forEach((v, a) => {
+        const angle = (a / axes.length) * Math.PI * 2 - Math.PI / 2;
+        const r = (radius * Math.max(0, Math.min(5, v))) / 5;
+        const x = cx + Math.cos(angle) * r, y = cy + Math.sin(angle) * r;
+        if (a === 0) rctx.moveTo(x, y); else rctx.lineTo(x, y);
+      });
+      rctx.closePath(); rctx.fill(); rctx.stroke();
+    });
+    // Legend
+    rctx.font = '12px sans-serif'; rctx.textAlign = 'left';
+    selected.forEach((id, si) => {
+      rctx.fillStyle = colors[si % colors.length];
+      rctx.fillRect(10, 10 + si * 18, 12, 12);
+      rctx.fillStyle = '#1e293b'; rctx.fillText(data[id].name, 28, 10 + si * 18 + 10);
+    });
+    document.getElementById('rtc-radar-section').style.display = 'block';
+
+    // === Feature 2: Fuel Cycle Analysis ===
+    const fuelData = {
+      pwr: { burnup: 50, breeding: 0, utilization: 1, refuel: 18, enrichment: 5 },
+      bwr: { burnup: 45, breeding: 0, utilization: 0.9, refuel: 18, enrichment: 4 },
+      smr: { burnup: 60, breeding: 0, utilization: 1.2, refuel: 36, enrichment: 10 },
+      htgr: { burnup: 100, breeding: 0, utilization: 2, refuel: 18, enrichment: 15 },
+      sfr: { burnup: 120, breeding: 0.6, utilization: 60, refuel: 12, enrichment: 20 },
+      msr: { burnup: 150, breeding: 1.0, utilization: 95, refuel: 0, enrichment: 0 },
+    };
+    document.getElementById('rtc-fuel-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Parameter</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr></thead><tbody>
+        <tr><td>Burnup (GWd/t)</td>${selected.map(id => `<td>${fuelData[id].burnup}</td>`).join('')}</tr>
+        <tr><td>Breeding Ratio</td>${selected.map(id => `<td>${fuelData[id].breeding > 0 ? fuelData[id].breeding.toFixed(1) : 'None'}</td>`).join('')}</tr>
+        <tr><td>Fuel Utilization (%)</td>${selected.map(id => `<td class="it-highlight">${fuelData[id].utilization}${fuelData[id].utilization > 10 ? '' : '%'}</td>`).join('')}</tr>
+        <tr><td>Refueling Cycle (months)</td>${selected.map(id => `<td>${fuelData[id].refuel === 0 ? 'Online' : fuelData[id].refuel + ' mo'}</td>`).join('')}</tr>
+        <tr><td>Enrichment Level (%)</td>${selected.map(id => `<td>${fuelData[id].enrichment || 'N/A'}</td>`).join('')}</tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Fast reactors (SFR, MSR) achieve 60-95% fuel utilization vs ~1% for LWRs. MSRs enable online refueling without shutdown. High burnup reduces waste volume per MWh.</div>
+    `;
+    document.getElementById('rtc-fuel-section').style.display = 'block';
+
+    // === Feature 3: Waste Profile ===
+    const wasteData = {
+      pwr: { volume: 25, halflife: '10⁵ yr', radiotoxicity: 'High', heat: 2.0, fissionProducts: 95 },
+      bwr: { volume: 23, halflife: '10⁵ yr', radiotoxicity: 'High', heat: 1.8, fissionProducts: 95 },
+      smr: { volume: 20, halflife: '10⁵ yr', radiotoxicity: 'Medium', heat: 1.5, fissionProducts: 95 },
+      htgr: { volume: 10, halflife: '10⁴ yr', radiotoxicity: 'Low', heat: 1.0, fissionProducts: 90 },
+      sfr: { volume: 5, halflife: '10³ yr', radiotoxicity: 'Very Low', heat: 0.5, fissionProducts: 50 },
+      msr: { volume: 3, halflife: '10² yr', radiotoxicity: 'Very Low', heat: 0.3, fissionProducts: 30 },
+    };
+    document.getElementById('rtc-waste-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Waste Metric</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr></thead><tbody>
+        <tr><td>Spent Fuel Volume (m³/GWh-yr)</td>${selected.map(id => `<td>${wasteData[id].volume}</td>`).join('')}</tr>
+        <tr><td>Dominant Half-Life</td>${selected.map(id => `<td>${wasteData[id].halflife}</td>`).join('')}</tr>
+        <tr><td>Radiotoxicity</td>${selected.map(id => `<td>${wasteData[id].radiotoxicity}</td>`).join('')}</tr>
+        <tr><td>Decay Heat (kW/assembly)</td>${selected.map(id => `<td>${wasteData[id].heat}</td>`).join('')}</tr>
+        <tr><td>Fission Products (%)</td>${selected.map(id => `<td>${wasteData[id].fissionProducts}</td>`).join('')}</tr>
+        <tr><td>Actinide Content (%)</td>${selected.map(id => `<td>${100 - wasteData[id].fissionProducts}</td>`).join('')}</tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Fast reactors and MSRs can fission actinides, reducing long-lived waste. MSR waste decays to background in ~300 years vs 100,000+ for LWRs. TRISO fuel in HTGRs provides inherent containment.</div>
+    `;
+    document.getElementById('rtc-waste-section').style.display = 'block';
+
+    // === Feature 4: Passive Safety ===
+    const safetyFeatures = {
+      pwr: { passive: 'Partial', grace: 24, coreCatch: false, passiveCool: 'Limited', containment: 'Large Dry', injection: 'Active' },
+      bwr: { passive: 'Partial', grace: 72, coreCatch: false, passiveCool: 'Limited', containment: 'Pressure Suppression', injection: 'Active' },
+      smr: { passive: 'Full', grace: 168, coreCatch: true, passiveCool: 'Natural Circulation', containment: 'Integral', injection: 'Passive' },
+      htgr: { passive: 'Full', grace: 720, coreCatch: false, passiveCool: 'Conduction + Radiation', containment: 'TRISO + RCCS', injection: 'N/A' },
+      sfr: { passive: 'Full', grace: 24, coreCatch: true, passiveCool: 'Natural Circulation', containment: 'Double Boundary', injection: 'Passive' },
+      msr: { passive: 'Full', grace: 0, coreCatch: false, passiveCool: 'Freeze Plug (drain tank)', containment: 'Salt Solidification', injection: 'N/A' },
+    };
+    document.getElementById('rtc-safety-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Safety Feature</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr></thead><tbody>
+        <tr><td>Passive Safety</td>${selected.map(id => `<td style="color:${safetyFeatures[id].passive === 'Full' ? '#059669' : '#d97706'};">${safetyFeatures[id].passive}</td>`).join('')}</tr>
+        <tr><td>Grace Period (no intervention)</td>${selected.map(id => `<td>${safetyFeatures[id].grace === 0 ? 'Inherent' : safetyFeatures[id].grace + 'h'}</td>`).join('')}</tr>
+        <tr><td>Core Catcher</td>${selected.map(id => `<td>${safetyFeatures[id].coreCatch ? '✓' : '✗'}</td>`).join('')}</tr>
+        <tr><td>Passive Cooling</td>${selected.map(id => `<td>${safetyFeatures[id].passiveCool}</td>`).join('')}</tr>
+        <tr><td>Containment Type</td>${selected.map(id => `<td>${safetyFeatures[id].containment}</td>`).join('')}</tr>
+        <tr><td>Emergency Injection</td>${selected.map(id => `<td>${safetyFeatures[id].injection}</td>`).join('')}</tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Grace period = time without operator action before core damage. HTGRs lead with 720h (30 days) due to TRISO fuel integrity. MSRs have inherent safety — fuel drains and solidifies on loss of power.</div>
+    `;
+    document.getElementById('rtc-safety-section').style.display = 'block';
+
+    // === Feature 5: Industrial Heat ===
+    const heatApps = [
+      { name: 'District Heating', minTemp: 100, maxTemp: 150 },
+      { name: 'Desalination', minTemp: 120, maxTemp: 200 },
+      { name: 'Hydrogen (HTSE)', minTemp: 700, maxTemp: 850 },
+      { name: 'Hydrogen (S-I Cycle)', minTemp: 850, maxTemp: 1000 },
+      { name: 'Steel Making', minTemp: 1000, maxTemp: 1600 },
+      { name: 'Cement Production', minTemp: 1400, maxTemp: 1500 },
+      { name: 'Pulp & Paper', minTemp: 150, maxTemp: 300 },
+      { name: 'Petrochemical', minTemp: 300, maxTemp: 600 },
+    ];
+    document.getElementById('rtc-heat-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Application</th><th>Temp Range (°C)</th>${selected.map(id => `<th>${data[id].name}</th>`).join('')}</tr></thead><tbody>
+        ${heatApps.map(app => `<tr><td><strong>${app.name}</strong></td><td>${app.minTemp}-${app.maxTemp}</td>${selected.map(id => {
+          const suitable = data[id].temp >= app.minTemp;
+          return `<td style="color:${suitable ? '#059669' : '#dc2626'};">${suitable ? '✓' : '✗'}</td>`;
+        }).join('')}</tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Outlet temperature determines industrial applications. LWRs (285-325°C) are limited to desalination and district heating. HTGRs (750°C) can produce hydrogen via HTSE. Only MSRs and very-high-temperature reactors can approach steel/cement process heat.</div>
+    `;
+    document.getElementById('rtc-heat-section').style.display = 'block';
+
+    // === Feature 6: Proliferation Resistance ===
+    const prolifData = {
+      pwr: { score: 3, factors: ['LEU fuel', 'Spent fuel Pu-239 content', 'Regular IAEA safeguards'], risk: 'Low' },
+      bwr: { score: 3, factors: ['LEU fuel', 'Spent fuel Pu-239 content', 'Regular IAEA safeguards'], risk: 'Low' },
+      smr: { score: 4, factors: ['Sealed module (20yr)', 'Higher enrichment but sealed', 'Factory fuel return'], risk: 'Very Low' },
+      htgr: { score: 5, factors: ['TRISO particles (hard to reprocess)', 'High burnup degrades Pu', 'No Pu separation needed'], risk: 'Very Low' },
+      sfr: { score: 2, factors: ['Pu in fuel cycle', 'Separation required', 'Metal fuel accessible'], risk: 'Medium' },
+      msr: { score: 4, factors: ['Fuel dissolved in salt', 'No separate Pu stream', 'Online fission product retention'], risk: 'Low' },
+    };
+    document.getElementById('rtc-prolif-list').innerHTML = `
+      ${selected.map(id => {
+        const p = prolifData[id];
+        const color = p.score >= 4 ? '#059669' : p.score >= 3 ? '#d97706' : '#dc2626';
+        return `<div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:0.625rem;margin-bottom:0.5rem;"><div style="display:flex;justify-content:space-between;margin-bottom:0.375rem;"><strong>${data[id].name}</strong><span style="color:${color};font-weight:700;">${p.risk} (${p.score}/5)</span></div><div style="font-size:0.8125rem;">${p.factors.map(f => `• ${f}`).join('<br>')}</div></div>`;
+      }).join('')}
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">TRISO fuel in HTGRs is inherently proliferation-resistant — fuel particles are extremely difficult to reprocess. SFRs face higher risk due to accessible plutonium in the fuel cycle. MSRs retain fission products online, degrading weapons-usable material.</div>
+    `;
+    document.getElementById('rtc-prolif-section').style.display = 'block';
+
+    // === Feature 7: LCOE Calculator ===
+    const lcoeDiscount = 0.07, lcoeLifetime = 60, lcoeCF = 0.9;
+    const lcoeResults = selected.map(id => {
+      const d = data[id];
+      const crf = (lcoeDiscount * Math.pow(1 + lcoeDiscount, lcoeLifetime)) / (Math.pow(1 + lcoeDiscount, lcoeLifetime) - 1);
+      const annualMWh = d.power * 1000 * lcoeCF * 8760;
+      const annualCapex = d.capex * d.power * crf;
+      const annualOM = d.om * d.power;
+      const annualFuel = d.fuelCost * annualMWh / 1e6;
+      const lcoe = ((annualCapex + annualOM + annualFuel) * 1e6) / annualMWh;
+      return { id, name: d.name, lcoe, capexShare: annualCapex / (annualCapex + annualOM + annualFuel) * 100, omShare: annualOM / (annualCapex + annualOM + annualFuel) * 100, fuelShare: annualFuel / (annualCapex + annualOM + annualFuel) * 100 };
+    });
+    const minLcoe = Math.min(...lcoeResults.map(r => r.lcoe));
+    document.getElementById('rtc-lcoe-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Reactor</th><th>LCOE ($/MWh)</th><th>Capex Share</th><th>O&M Share</th><th>Fuel Share</th></tr></thead><tbody>
+        ${lcoeResults.map(r => `<tr${r.lcoe === minLcoe ? ' style="background:color-mix(in srgb,#059669 5%,transparent);"' : ''}><td><strong>${r.name}</strong></td><td class="it-highlight">$${r.lcoe.toFixed(1)}</td><td>${r.capexShare.toFixed(0)}%</td><td>${r.omShare.toFixed(0)}%</td><td>${r.fuelShare.toFixed(0)}%</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Assumptions: 7% discount rate, 60yr lifetime, 90% capacity factor. ${lcoeResults.find(r => r.lcoe === minLcoe).name} has the lowest LCOE at $${minLcoe.toFixed(1)}/MWh. Capital costs dominate nuclear LCOE (60-80%).</div>
+    `;
+    document.getElementById('rtc-lcoe-section').style.display = 'block';
+
+    // === Feature 8: Construction Timeline ===
+    const ganttPhases = ['Licensing', 'Site Prep', 'Construction', 'Commissioning', 'Operation'];
+    document.getElementById('rtc-gantt-list').innerHTML = `
+      ${selected.map(id => {
+        const d = data[id];
+        const lic = 12, sitePrep = 6, constr = d.deploy, comm = 6;
+        const total = lic + sitePrep + constr + comm;
+        const maxTotal = Math.max(...selected.map(sid => 12 + 6 + data[sid].deploy + 6));
+        const pct = v => (v / maxTotal * 100).toFixed(1);
+        return `<div style="margin-bottom:0.75rem;"><div style="font-size:0.8125rem;font-weight:700;margin-bottom:0.25rem;">${d.name} (${total} months total)</div><div style="display:flex;height:24px;border-radius:var(--tl-radius-sm);overflow:hidden;border:1px solid var(--tl-border);">
+          <div style="width:${pct(lic)}%;background:#475569;display:flex;align-items:center;justify-content:center;font-size:0.625rem;color:white;">Lic</div>
+          <div style="width:${pct(sitePrep)}%;background:#06b6d4;display:flex;align-items:center;justify-content:center;font-size:0.625rem;color:white;">Prep</div>
+          <div style="width:${pct(constr)}%;background:#059669;display:flex;align-items:center;justify-content:center;font-size:0.625rem;color:white;">Build (${constr}mo)</div>
+          <div style="width:${pct(comm)}%;background:#d97706;display:flex;align-items:center;justify-content:center;font-size:0.625rem;color:white;">Comm</div>
+        </div></div>`;
+      }).join('')}
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">SMRs offer the shortest construction timeline (${data['smr'].deploy} months) due to factory fabrication. FOAK (first-of-a-kind) reactors typically take 20-30% longer than NOAK (nth-of-a-kind).</div>
+    `;
+    document.getElementById('rtc-gantt-section').style.display = 'block';
+
+    // === Feature 9: Use Case Recommender ===
+    const useCases = [
+      { scenario: 'Large Grid Baseload (>1GW)', best: selected.filter(id => data[id].power >= 500).map(id => data[id].name), reason: 'High power output suitable for large grid baseload' },
+      { scenario: 'Remote/Off-grid Communities', best: selected.filter(id => data[id].power <= 200).map(id => data[id].name), reason: 'Small size, transportable, reduced EPZ' },
+      { scenario: 'Hydrogen Production', best: selected.filter(id => data[id].temp >= 700).map(id => data[id].name), reason: 'High outlet temperature enables thermochemical H₂ production' },
+      { scenario: 'Desalination', best: selected.filter(id => data[id].temp >= 120).map(id => data[id].name), reason: 'Sufficient temperature for multi-effect distillation' },
+      { scenario: 'Actinide Burning (waste reduction)', best: selected.filter(id => ['sfr', 'msr'].includes(id)).map(id => data[id].name), reason: 'Fast spectrum can fission actinides from LWR spent fuel' },
+      { scenario: 'Breeder (fuel sustainability)', best: selected.filter(id => fuelData[id].breeding > 0).map(id => data[id].name), reason: 'Breeding ratio > 0 produces more fuel than consumed' },
+      { scenario: 'Industrial Process Heat (>600°C)', best: selected.filter(id => data[id].temp >= 600).map(id => data[id].name), reason: 'High temperature for petrochemical, steel, cement' },
+      { scenario: 'Proliferation-Sensitive Regions', best: selected.filter(id => prolifData[id].score >= 4).map(id => data[id].name), reason: 'High proliferation resistance score' },
+    ];
+    document.getElementById('rtc-usecase-list').innerHTML = `
+      ${useCases.map(uc => `<div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:0.625rem;margin-bottom:0.5rem;"><div style="display:flex;justify-content:space-between;margin-bottom:0.25rem;"><strong>${uc.scenario}</strong></div><div style="font-size:0.8125rem;">${uc.best.length > 0 ? `<span style="color:#059669;">✓ ${uc.best.join(', ')}</span> — ${uc.reason}` : '<span style="color:#dc2626;">No suitable option among selected reactors</span>'}</div></div>`).join('')}
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Recommendations are based on selected reactors only. Different scenarios favor different technologies — no single reactor type is optimal for all applications.</div>
+    `;
+    document.getElementById('rtc-usecase-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('rtc-export').style.display = 'inline-flex';
+    document.getElementById('rtc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), reactors: selected.map(id => ({ ...data[id], fuelCycle: fuelData[id], waste: wasteData[id], safety: safetyFeatures[id], proliferation: prolifData[id], lcoe: lcoeResults.find(r => r.id === id) })), useCases };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'reactor-comparison-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('rtc-compare').addEventListener('click', compare);
+  document.getElementById('rtc-reset').addEventListener('click', () => {
+    document.getElementById('rtc-results').classList.remove('show');
+    document.querySelectorAll('#rtc-reactors .it-checkbox-item').forEach(el => { el.classList.remove('active'); el.querySelector('input').checked = false; });
+    ['pwr', 'smr', 'msr'].forEach(id => { const el = document.querySelector(`[data-reactor="${id}"]`); if (el) toggle(el); });
+  });
+})();
+</script>

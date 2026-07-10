@@ -1,0 +1,50 @@
+---
+/**
+ * CommunityContributors — Top contributors section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const contributors = [
+  { name: 'QuantumExplorer', role: 'Quantum Computing', guides: 18, points: '12.4K', initials: 'QE', color: '#a78bfa', gradient: 'linear-gradient(135deg,#a78bfa,#8b5cf6)' },
+  { name: 'FusionFanatic', role: 'Nuclear Fusion', guides: 14, points: '9.8K', initials: 'FF', color: '#fb923c', gradient: 'linear-gradient(135deg,#fb923c,#f59e0b)' },
+  { name: 'BioHacker2025', role: 'Biotech', guides: 21, points: '11.2K', initials: 'BH', color: '#10b981', gradient: 'linear-gradient(135deg,#10b981,#06b6d4)' },
+  { name: 'CyberSentinel', role: 'Cybersecurity', guides: 16, points: '8.6K', initials: 'CS', color: '#ef4444', gradient: 'linear-gradient(135deg,#ef4444,#ec4899)' },
+  { name: 'SpacePioneer', role: 'Space Tech', guides: 19, points: '10.1K', initials: 'SP', color: '#06b6d4', gradient: 'linear-gradient(135deg,#06b6d4,#3b82f6)' },
+  { name: 'NeuroNerd', role: 'BCI', guides: 11, points: '7.3K', initials: 'NN', color: '#0ea5e9', gradient: 'linear-gradient(135deg,#0ea5e9,#06b6d4)' },
+];
+---
+
+<section class="community-contributors-section">
+  <div class="community-container">
+    <div class="community-section-head">
+      <span class="community-eyebrow">Community Stars</span>
+      <h2 class="community-section-title">Top Contributors This Month</h2>
+      <p class="community-section-sub">
+        These community members have published guides, answered questions, and helped others
+        learn. Earn points by contributing — climb the leaderboard.
+      </p>
+    </div>
+
+    <div class="community-contributors-grid">
+      {contributors.map((c, i) => (
+        <div class="community-contributor-card">
+          <span class="community-contributor-rank">#{i + 1}</span>
+          <div class="community-contributor-avatar" style={`background:${c.gradient}`}>
+            <span>{c.initials}</span>
+          </div>
+          <div class="community-contributor-info">
+            <h3 class="community-contributor-name">{c.name}</h3>
+            <span class="community-contributor-role" style={`color:${c.color}`}>{c.role}</span>
+            <div class="community-contributor-stats">
+              <span class="community-contributor-stat">
+                <strong>{c.guides}</strong> guides
+              </span>
+              <span class="community-contributor-stat">
+                <strong>{c.points}</strong> points
+              </span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-coming-soon">
+    <div class="tool-coming-soon-icon">📈</div>
+    <h3 class="tool-coming-soon-title">Fine-Tuning ROI Estimator</h3>
+    <p class="tool-coming-soon-desc">Input your use case parameters (query volume, context size, accuracy requirements) and get a detailed cost-benefit analysis comparing fine-tuning vs. RAG vs. prompt engineering with break-even analysis.</p>
+    <form class="tool-coming-soon-form" id="ftre-notify">
+      <input type="email" placeholder="you@example.com" required />
+      <button type="submit" class="tool-btn">Notify Me</button>
+    </form>
+    <div class="tool-coming-soon-success" id="ftre-success">✓ Thanks! We'll email you when this tool is ready.</div>
+  </div>
+</div>
+
+<script is:inline>
+document.getElementById('ftre-notify')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.querySelector('input').value = '';
+  document.getElementById('ftre-success')?.classList.add('show');
+  setTimeout(() => document.getElementById('ftre-success')?.classList.remove('show'), 4000);
+});
+</script>

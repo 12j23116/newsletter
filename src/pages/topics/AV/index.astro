@@ -1,0 +1,273 @@
+---
+/**
+ * AV topic Page — Premium Redesign
+ * Unique layout: road-themed hero, lane markers,
+ * transportation cards, journey timeline.
+ * 7 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { avContent } from '../../../data/topics/AV/av-content';
+import './av-styles.css';
+const c = avContent;
+
+const marqueeItems = ['5M+ Waymo Trips', '$400B Market', 'Tesla FSD', 'Robotaxi', 'Autonomous Trucking', 'L4 Autonomy', 'LiDAR vs Camera', 'Waymo One', 'Apollo Go', 'Tesla Cybercab', 'Aurora Trucking', 'China AV Scale'];
+
+const overviewImages = ['/images/av-02-robotaxi-urban.webp', '/images/av-04-truck-platoon.webp'];
+const debateImages = ['/images/av-03-lidar-pointcloud.webp', '/images/av-08-hands-free-commute.webp', '/images/av-07-smart-intersection.webp'];
+const robotaxiImages = ['/images/av-02-robotaxi-urban.webp', '/images/av-05-valet-parking.webp', '/images/av-06-delivery-van.webp', '/images/av-09-evtol-vertiport.webp'];
+const playerImages = ['/images/av-02-robotaxi-urban.webp', '/images/av-08-hands-free-commute.webp', '/images/av-05-valet-parking.webp', '/images/av-04-truck-platoon.webp', '/images/av-06-delivery-van.webp', '/images/av-07-smart-intersection.webp'];
+---
+
+<BaseLayout title={`${c.name} — Robotaxis, Tesla FSD & Autonomous Driving 2026-2035`} description={c.description} keywords={[...c.seoKeywords.primary, ...c.seoKeywords.secondary].join(', ')}>
+  <div class="av-page">
+
+    {/* ══ 1. HERO — Road-themed with lane markers ══ */}
+    <section class="av-hero">
+      <div class="av-hero-bg">
+        <img src="/images/006-av-autonomous-vehicle.webp" alt="Autonomous vehicle" loading="eager" />
+      </div>
+      <div class="av-grid-overlay"></div>
+      <div class="av-road-lanes"></div>
+      <div class="av-orb av-hero-orb-1"></div>
+      <div class="av-orb av-hero-orb-2"></div>
+      <div class="av-orb av-hero-orb-3"></div>
+      <div class="av-hero-inner">
+        <div class="av-hero-left">
+          <span class="av-hero-pill"><span class="av-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="av-grad-text">Autonomous Vehicles</span></h1>
+          <p class="av-hero-tagline">{c.tagline}</p>
+          <p class="av-hero-desc">{c.description}</p>
+          <div class="av-hero-ctas">
+            <a href="#sections" class="av-btn av-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="av-btn av-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="av-hero-stats">
+            {c.stats.map((s) => (
+              <div class="av-hero-stat">
+                <span class="av-hero-stat-value">{s.value}</span>
+                <span class="av-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="av-hero-right">
+          <div class="av-hero-img-wrap">
+            <img class="av-hero-img" src="/images/av-01-self-driving-sedan.webp" alt="Self-driving sedan" loading="eager" />
+            <div class="av-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="av-marquee">
+      <div class="av-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'av-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="av-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. MARKET OVERVIEW ══ */}
+    <section class="av-section" id="sections">
+      <div class="av-container">
+        <span class="av-eyebrow av-reveal">Market Overview</span>
+        <h2 class="av-section-title av-reveal">The <span class="av-grad-text">$400 Billion</span> AV Market</h2>
+        <p class="av-section-sub av-reveal">Robotaxis, autonomous trucking, and ADAS — the technologies reshaping transportation.</p>
+        <div class="av-section-grid av-reveal">
+          <div class="av-section-card">
+            <div class="av-section-img-wrap">
+              <img class="av-section-img" src={overviewImages[0]} alt={c.marketOverview.title} loading="lazy" />
+              <div class="av-section-img-overlay"></div>
+            </div>
+            <div class="av-section-header">
+              <div class="av-section-eyebrow">Market Overview</div>
+              <h3 class="av-section-title">{c.marketOverview.title}</h3>
+            </div>
+            <div class="av-section-body">
+              <p class="av-section-desc">{c.marketOverview.subtitle}</p>
+              <div class="av-section-points">
+                {c.marketOverview.keyDrivers.map((d) => (
+                  <div class="av-section-point">{d.title}: {d.desc}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="av-section-card">
+            <div class="av-section-img-wrap">
+              <img class="av-section-img" src={overviewImages[1]} alt={c.keyPlayers.title} loading="lazy" />
+              <div class="av-section-img-overlay"></div>
+            </div>
+            <div class="av-section-header">
+              <div class="av-section-eyebrow">Key Players</div>
+              <h3 class="av-section-title">{c.keyPlayers.title}</h3>
+            </div>
+            <div class="av-section-body">
+              <p class="av-section-desc">{c.keyPlayers.subtitle}</p>
+              <div class="av-section-points">
+                {c.keyPlayers.players.slice(0, 4).map((p) => (
+                  <div class="av-section-point"><strong>{p.name}</strong>: {p.rides} rides</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. PERCEPTION DEBATE ══ */}
+    <section class="av-section av-section-alt">
+      <div class="av-container">
+        <span class="av-eyebrow av-reveal">Technology Debate</span>
+        <h2 class="av-section-title av-reveal">LiDAR vs <span class="av-grad-text">Cameras</span></h2>
+        <p class="av-section-sub av-reveal">The perception debate shaping billions in investment and determining who reaches full autonomy first.</p>
+        <div class="av-section-grid av-reveal">
+          {c.perceptionDebate.approaches.map((a, i) => (
+            <div class="av-section-card">
+              <div class="av-section-img-wrap">
+                <img class="av-section-img" src={debateImages[i]} alt={a.name} loading="lazy" />
+                <div class="av-section-img-overlay"></div>
+              </div>
+              <div class="av-section-header">
+                <div class="av-section-eyebrow">Approach</div>
+                <h3 class="av-section-title">{a.name}</h3>
+              </div>
+              <div class="av-section-body">
+                <p class="av-section-desc"><strong>Companies:</strong> {a.companies}</p>
+                <p class="av-section-desc"><strong>Cost:</strong> {a.cost}</p>
+                <p class="av-section-desc"><strong>Verdict:</strong> {a.verdict}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. ROBOTAXI NETWORKS ══ */}
+    <section class="av-section">
+      <div class="av-container">
+        <span class="av-eyebrow av-reveal">Commercial Race</span>
+        <h2 class="av-section-title av-reveal">Robotaxi <span class="av-grad-text">Networks</span></h2>
+        <p class="av-section-sub av-reveal">Waymo leads with 200K+ paid rides per week. China's Baidu and Pony.ai are scaling rapidly.</p>
+        <div class="av-section-grid av-reveal">
+          {c.robotaxi.networks.slice(0, 4).map((n, i) => (
+            <div class="av-section-card">
+              <div class="av-section-img-wrap">
+                <img class="av-section-img" src={robotaxiImages[i]} alt={n.name} loading="lazy" />
+                <div class="av-section-img-overlay"></div>
+              </div>
+              <div class="av-section-header">
+                <div class="av-section-eyebrow">Network</div>
+                <h3 class="av-section-title">{n.name}</h3>
+              </div>
+              <div class="av-section-body">
+                <p class="av-section-desc"><strong>Cities:</strong> {n.cities}</p>
+                <p class="av-section-desc"><strong>Rides:</strong> {n.rides}</p>
+                <p class="av-section-desc"><strong>Status:</strong> {n.status}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. PLAYERS ══ */}
+    <section class="av-section av-section-alt">
+      <div class="av-container">
+        <span class="av-eyebrow av-reveal">Key Players</span>
+        <h2 class="av-section-title av-reveal">Leading <span class="av-grad-text">AV Companies</span></h2>
+        <p class="av-section-sub av-reveal">The companies driving innovation in autonomous vehicles.</p>
+        <div class="av-players-grid av-reveal">
+          {c.keyPlayers.players.map((p, i) => (
+            <div class="av-player-card">
+              <div class="av-player-img-wrap">
+                <img class="av-player-img" src={playerImages[i % playerImages.length]} alt={p.name} loading="lazy" />
+                <div class="av-player-img-overlay"></div>
+              </div>
+              <h3 class="av-player-name">{p.name}</h3>
+              <div class="av-player-approach">{p.approach}</div>
+              <p class="av-player-desc">{p.desc}</p>
+              <span class="av-player-metric">{p.rides}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. FUTURE — Journey timeline ══ */}
+    <section class="av-section">
+      <div class="av-container">
+        <span class="av-eyebrow av-reveal">2026 → 2030</span>
+        <h2 class="av-section-title av-reveal">The <span class="av-grad-text">Road</span> Ahead</h2>
+        <p class="av-section-sub av-reveal">Five predictions for the future of autonomous vehicles.</p>
+        <div class="av-future-timeline av-reveal">
+          {c.futureOutlook.predictions.map((p) => (
+            <div class="av-future-item">
+              <div class="av-future-year-marker">{p.year}</div>
+              <div class="av-future-content">
+                <div class="av-future-year">{p.year}</div>
+                <div class="av-future-prediction">{p.prediction}</div>
+                <div class="av-future-detail">{p.detail}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="av-section av-section-alt" id="faq">
+      <div class="av-container">
+        <span class="av-eyebrow av-reveal">FAQ</span>
+        <h2 class="av-section-title av-reveal">Frequently Asked <span class="av-grad-text">Questions</span></h2>
+        <p class="av-section-sub av-reveal">Structured answers to the most common AV questions — optimized for AI search citation.</p>
+        <div class="av-faq-list">
+          {c.faq.items.map((f) => (
+            <details class="av-faq-item">
+              <summary>{f.q}</summary>
+              <div class="av-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. CTA ══ */}
+    <section class="av-cta">
+      <div class="av-cta-bg">
+        <img src="/images/018-av-character-silver-teal.webp" alt="AV character" loading="lazy" />
+      </div>
+      <div class="av-cta-inner">
+        <h3>Stay on the Autonomous Road</h3>
+        <p>Get the latest robotaxi updates, FSD breakthroughs, and AV industry news delivered weekly.</p>
+        <a href="/blog?category=AV" class="av-cta-btn">Explore AV Articles →</a>
+        <div class="av-cta-pills">
+          <span class="av-cta-pill">🚗 Robotaxi updates</span>
+          <span class="av-cta-pill">🤖 Tesla FSD</span>
+          <span class="av-cta-pill">🚚 Trucking</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.av-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/AV' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/AV', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+/**
+ * RecommendationsMethodology — How we evaluate and recommend
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const steps = [
+  { num: '01', title: 'Hands-On Testing', desc: 'We install and use every tool for at least 2 weeks on real projects. No spec-sheet reviews. No "we looked at the website."' },
+  { num: '02', title: 'topic Expert Review', desc: 'A team member with domain expertise in the relevant topic evaluates the tool against topic-specific criteria.' },
+  { num: '03', title: 'Comparison & Benchmarking', desc: 'We compare tools head-to-head on performance, ease of use, documentation, community, and pricing.' },
+  { num: '04', title: 'Community Feedback', desc: 'We gather feedback from our community — what works, what breaks, what people actually use in production.' },
+  { num: '05', title: 'Ongoing Updates', desc: 'Technology evolves. We re-evaluate recommendations quarterly and update our guides when better tools emerge.' },
+  { num: '06', title: 'Zero Sponsorship Influence', desc: 'We do not accept payment for recommendations. If a tool is listed here, it earned its place on merit.' },
+];
+---
+
+<section class="rec-methodology-section">
+  <div class="rec-container">
+    <div class="rec-section-head">
+      <span class="rec-eyebrow">Our Process</span>
+      <h2 class="rec-section-title">How We Evaluate and Recommend</h2>
+      <p class="rec-section-sub">
+        Recommendations are only as trustworthy as the process behind them. Here is exactly
+        how we test, compare, and decide what makes our list.
+      </p>
+    </div>
+
+    <div class="rec-methodology-grid">
+      {steps.map((step) => (
+        <div class="rec-methodology-card">
+          <span class="rec-methodology-num">{step.num}</span>
+          <h3 class="rec-methodology-title">{step.title}</h3>
+          <p class="rec-methodology-desc">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

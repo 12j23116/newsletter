@@ -1,0 +1,62 @@
+---
+import { quantumContent as c } from '../../../data/topics/Quantum/quantum-content';
+---
+<section class="qm-hero">
+  <div class="qm-hero-bg">
+    <img src={c.heroImage} alt="" class="qm-hero-bg-img" loading="eager" />
+  </div>
+  <div class="qm-hero-orb-1 qm-orb"></div>
+  <div class="qm-hero-orb-2 qm-orb"></div>
+  <div class="qm-hero-orb-3 qm-orb"></div>
+
+  <div class="qm-hero-inner">
+    <div class="qm-hero-left">
+      <nav class="qm-hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/#topics">topics</a>
+        <span>/</span>
+        <span>Quantum</span>
+      </nav>
+      <div class="qm-hero-pill">
+        <span class="qm-hero-dot"></span>
+        <span>41.8% CAGR to $20.2B by 2030</span>
+      </div>
+      <span class="qm-hero-icon">{c.icon}</span>
+      <h1 class="qm-hero-name">{c.name}</h1>
+      <p class="qm-hero-tagline">{c.tagline}</p>
+      <p class="qm-hero-desc">{c.description}</p>
+      <div class="qm-hero-ctas">
+        <a href="#quantum-market" class="qm-btn qm-btn-primary">
+          Explore Sections
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+        </a>
+        <a href="#qm-trends" class="qm-btn qm-btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+          Trending Now
+        </a>
+      </div>
+      <div class="qm-hero-stats">
+        {c.stats.map((s) => (
+          <div class="qm-hero-stat">
+            <span class="qm-hero-stat-value">{s.value}</span>
+            <span class="qm-hero-stat-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="qm-hero-right">
+      <div class="qm-hero-img-wrap">
+        <img src={c.heroImage} alt={c.name} class="qm-hero-img" loading="eager" />
+        <div class="qm-hero-img-overlay"></div>
+      </div>
+      <div class="qm-circuit-dot qm-circuit-dot-1"></div>
+      <div class="qm-circuit-dot qm-circuit-dot-2"></div>
+      <div class="qm-circuit-dot qm-circuit-dot-3"></div>
+      <div class="qm-circuit-dot qm-circuit-dot-4"></div>
+      <div class="qm-circuit-line qm-circuit-line-1"></div>
+      <div class="qm-circuit-line qm-circuit-line-2"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+---
+import { comparisontopics } from '../../data/comparisons/comparisons-content';
+---
+
+<div class="cmp-filter-bar">
+  <div class="cmp-filter-scroll" id="cmp-filter-scroll">
+    {comparisontopics.map((cat, i) => (
+      <button
+        class={`cmp-filter-pill${i === 0 ? ' active' : ''}`}
+        data-cat={cat.id}
+      >
+        <span>{cat.icon}</span>
+        {cat.name}
+      </button>
+    ))}
+  </div>
+</div>

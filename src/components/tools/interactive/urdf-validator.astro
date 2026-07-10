@@ -1,0 +1,621 @@
+---
+/**
+ * URDF Validator — Interactive tool
+ * Validate robot URDF/XACRO files for syntax, geometry, and collision mesh issues
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="urdf-validator">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🤖</div>
+      <div>
+        <h2>URDF Validator</h2>
+        <p>Validate robot URDF/XACRO files for syntax, geometry, and collision issues</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">URDF/XML Content</label>
+        <textarea class="it-textarea" id="uv-input" placeholder="<?xml version='1.0'?>
+<robot name='my_robot'>
+  <link name='base_link'>
+    <visual>
+      <geometry>
+        <cylinder radius='0.1' length='0.5'/>
+      </geometry>
+    </visual>
+  </link>
+  <link name='arm_link'>
+    <visual>
+      <geometry>
+        <box size='0.3 0.1 0.1'/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name='arm_joint' type='revolute'>
+    <parent link='base_link'/>
+    <child link='arm_link'/>
+    <limit lower='-1.57' upper='1.57' effort='10' velocity='1.0'/>
+  </joint>
+</robot>" style="min-height: 200px; font-family: var(--tl-mono); font-size: 0.75rem;"></textarea>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="uv-validate">Validate URDF</button>
+        <button class="it-btn it-btn-secondary" id="uv-clear">Clear</button>
+        <button class="it-btn it-btn-secondary" id="uv-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="uv-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Validation Report</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Total Issues</div>
+            <div class="it-stat-value" id="uv-issues">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Errors</div>
+            <div class="it-stat-value" id="uv-errors" style="color:#dc2626;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Warnings</div>
+            <div class="it-stat-value" id="uv-warnings" style="color:#d97706;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Status</div>
+            <div class="it-stat-value" id="uv-status" style="font-size:1.25rem;">—</div>
+          </div>
+        </div>
+
+        <div id="uv-findings"></div>
+        <div id="uv-summary"></div>
+      </div>
+
+      <!-- Feature 1: Kinematic Tree -->
+      <div class="it-results-card" id="uv-tree-section" style="display:none;">
+        <div class="it-results-title">🌳 Kinematic Tree Visualization</div>
+        <canvas id="uv-tree-canvas" width="800" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="uv-tree-list"></div>
+      </div>
+
+      <!-- Feature 2: Joint Limit Analysis -->
+      <div class="it-results-card" id="uv-joint-section" style="display:none;">
+        <div class="it-results-title">🔧 Joint Limit & Dynamics Analysis</div>
+        <div id="uv-joint-list"></div>
+      </div>
+
+      <!-- Feature 3: Inertia Validation -->
+      <div class="it-results-card" id="uv-inertia-section" style="display:none;">
+        <div class="it-results-title">⚖️ Inertia & Mass Validation (Dynamics Readiness)</div>
+        <div id="uv-inertia-list"></div>
+      </div>
+
+      <!-- Feature 4: Mesh Checker -->
+      <div class="it-results-card" id="uv-mesh-section" style="display:none;">
+        <div class="it-results-title">📦 Mesh File Reference Checker</div>
+        <div id="uv-mesh-list"></div>
+      </div>
+
+      <!-- Feature 5: Collision/Visual Consistency -->
+      <div class="it-results-card" id="uv-consistency-section" style="display:none;">
+        <div class="it-results-title">🔍 Collision/Visual Geometry Consistency</div>
+        <div id="uv-consistency-list"></div>
+      </div>
+
+      <!-- Feature 6: SDF Converter -->
+      <div class="it-results-card" id="uv-sdf-section" style="display:none;">
+        <div class="it-results-title">🔄 URDF→SDF Format Converter</div>
+        <div id="uv-sdf-list"></div>
+      </div>
+
+      <!-- Feature 7: Gazebo/ROS Tags -->
+      <div class="it-results-card" id="uv-gazebo-section" style="display:none;">
+        <div class="it-results-title">🏷️ ROS Namespace & Gazebo Tag Checker</div>
+        <div id="uv-gazebo-list"></div>
+      </div>
+
+      <!-- Feature 8: Connectivity Matrix -->
+      <div class="it-results-card" id="uv-connect-section" style="display:none;">
+        <div class="it-results-title">🔗 Link Connectivity Matrix</div>
+        <div id="uv-connect-list"></div>
+      </div>
+
+      <!-- Feature 9: Best Practices -->
+      <div class="it-results-card" id="uv-practices-section" style="display:none;">
+        <div class="it-results-title">✅ Best Practices & Optimization Suggestions</div>
+        <div id="uv-practices-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  function validate() {
+    const input = document.getElementById('uv-input').value.trim();
+    if (!input) { alert('Please paste URDF content to validate.'); return; }
+
+    const findings = [];
+    let errors = 0, warnings = 0;
+
+    // XML parsing
+    let parser = new DOMParser();
+    let doc;
+    try {
+      doc = parser.parseFromString(input, 'text/xml');
+      const parseError = doc.querySelector('parsererror');
+      if (parseError) {
+        findings.push({ type: 'error', text: 'XML syntax error: ' + parseError.textContent.substring(0, 200) });
+        errors++;
+      }
+    } catch(e) {
+      findings.push({ type: 'error', text: 'Failed to parse XML: ' + e.message });
+      errors++;
+    }
+
+    if (errors === 0 && doc) {
+      const robot = doc.querySelector('robot');
+      if (!robot) {
+        findings.push({ type: 'error', text: 'Missing <robot> root element.' });
+        errors++;
+      } else {
+        const robotName = robot.getAttribute('name');
+        if (!robotName) {
+          findings.push({ type: 'warn', text: 'Robot element missing "name" attribute.' });
+          warnings++;
+        } else {
+          findings.push({ type: 'info', text: `Robot name: "${robotName}"` });
+        }
+
+        // Check links
+        const links = doc.querySelectorAll('link');
+        const joints = doc.querySelectorAll('joint');
+
+        if (links.length === 0) {
+          findings.push({ type: 'error', text: 'No <link> elements found — a robot must have at least one link.' });
+          errors++;
+        }
+
+        links.forEach((link, i) => {
+          const name = link.getAttribute('name');
+          if (!name) {
+            findings.push({ type: 'error', text: `Link #${i + 1} missing "name" attribute.` });
+            errors++;
+          } else {
+            // Check for visual/collision/inertial
+            const hasVisual = link.querySelector('visual');
+            const hasCollision = link.querySelector('collision');
+            const hasInertial = link.querySelector('inertial');
+
+            if (!hasVisual) {
+              findings.push({ type: 'warn', text: `Link "${name}" has no <visual> element — will not render in visualization.` });
+              warnings++;
+            }
+            if (!hasCollision) {
+              findings.push({ type: 'warn', text: `Link "${name}" has no <collision> element — collision detection will not work.` });
+              warnings++;
+            }
+            if (!hasInertial) {
+              findings.push({ type: 'warn', text: `Link "${name}" has no <inertial> element — dynamics simulation will not work properly.` });
+              warnings++;
+            }
+
+            // Check geometry
+            const geometries = link.querySelectorAll('geometry');
+            geometries.forEach(geo => {
+              const cylinder = geo.querySelector('cylinder');
+              const box = geo.querySelector('box');
+              const sphere = geo.querySelector('sphere');
+              const mesh = geo.querySelector('mesh');
+
+              if (cylinder) {
+                const r = parseFloat(cylinder.getAttribute('radius'));
+                const l = parseFloat(cylinder.getAttribute('length'));
+                if (r <= 0) { findings.push({ type: 'error', text: `Link "${name}": cylinder radius must be positive (got ${r}).` }); errors++; }
+                if (l <= 0) { findings.push({ type: 'error', text: `Link "${name}": cylinder length must be positive (got ${l}).` }); errors++; }
+              }
+              if (box) {
+                const size = box.getAttribute('size');
+                if (!size) { findings.push({ type: 'error', text: `Link "${name}": box missing "size" attribute.` }); errors++; }
+                else {
+                  const dims = size.split(/\s+/).map(parseFloat);
+                  if (dims.some(d => d <= 0)) { findings.push({ type: 'error', text: `Link "${name}": box dimensions must be positive.` }); errors++; }
+                }
+              }
+              if (sphere) {
+                const r = parseFloat(sphere.getAttribute('radius'));
+                if (r <= 0) { findings.push({ type: 'error', text: `Link "${name}": sphere radius must be positive.` }); errors++; }
+              }
+              if (mesh) {
+                const filename = mesh.getAttribute('filename');
+                if (!filename) { findings.push({ type: 'error', text: `Link "${name}": mesh missing "filename" attribute.` }); errors++; }
+                else if (!filename.endsWith('.stl') && !filename.endsWith('.dae') && !filename.endsWith('.obj')) {
+                  findings.push({ type: 'warn', text: `Link "${name}": mesh "${filename}" — recommended formats are .stl, .dae, or .obj.` });
+                  warnings++;
+                }
+              }
+            });
+          }
+        });
+
+        // Check joints
+        joints.forEach((joint, i) => {
+          const name = joint.getAttribute('name');
+          const type = joint.getAttribute('type');
+          if (!name) { findings.push({ type: 'error', text: `Joint #${i + 1} missing "name" attribute.` }); errors++; }
+          if (!type) { findings.push({ type: 'error', text: `Joint "${name || '#' + (i+1)}" missing "type" attribute.` }); errors++; }
+          else if (!['revolute', 'continuous', 'prismatic', 'fixed', 'floating', 'planar'].includes(type)) {
+            findings.push({ type: 'error', text: `Joint "${name}": invalid type "${type}". Valid: revolute, continuous, prismatic, fixed, floating, planar.` });
+            errors++;
+          }
+
+          const parent = joint.querySelector('parent');
+          const child = joint.querySelector('child');
+          if (!parent) { findings.push({ type: 'error', text: `Joint "${name}": missing <parent> element.` }); errors++; }
+          if (!child) { findings.push({ type: 'error', text: `Joint "${name}": missing <child> element.` }); errors++; }
+
+          if (parent && child) {
+            const parentLink = parent.getAttribute('link');
+            const childLink = child.getAttribute('link');
+            if (!parentLink) { findings.push({ type: 'error', text: `Joint "${name}": parent missing "link" attribute.` }); errors++; }
+            if (!childLink) { findings.push({ type: 'error', text: `Joint "${name}": child missing "link" attribute.` }); errors++; }
+
+            // Check if referenced links exist
+            if (parentLink) {
+              const exists = doc.querySelector(`link[name="${parentLink}"]`);
+              if (!exists) { findings.push({ type: 'error', text: `Joint "${name}": parent link "${parentLink}" not defined.` }); errors++; }
+            }
+            if (childLink) {
+              const exists = doc.querySelector(`link[name="${childLink}"]`);
+              if (!exists) { findings.push({ type: 'error', text: `Joint "${name}": child link "${childLink}" not defined.` }); errors++; }
+            }
+          }
+
+          // Check limits for revolute/prismatic joints
+          if (type === 'revolute' || type === 'prismatic') {
+            const limit = joint.querySelector('limit');
+            if (!limit) {
+              findings.push({ type: 'error', text: `Joint "${name}": ${type} joint requires <limit> element.` });
+              errors++;
+            } else {
+              const effort = parseFloat(limit.getAttribute('effort'));
+              const velocity = parseFloat(limit.getAttribute('velocity'));
+              const lower = parseFloat(limit.getAttribute('lower') || '0');
+              const upper = parseFloat(limit.getAttribute('upper') || '0');
+              if (isNaN(effort) || effort <= 0) { findings.push({ type: 'warn', text: `Joint "${name}": limit effort should be positive.` }); warnings++; }
+              if (isNaN(velocity) || velocity <= 0) { findings.push({ type: 'warn', text: `Joint "${name}": limit velocity should be positive.` }); warnings++; }
+              if (lower > upper) { findings.push({ type: 'error', text: `Joint "${name}": lower limit (${lower}) > upper limit (${upper}).` }); errors++; }
+            }
+          }
+        });
+
+        // Check for kinematic tree issues
+        const childLinks = new Set();
+        joints.forEach(j => {
+          const child = j.querySelector('child');
+          if (child) childLinks.add(child.getAttribute('link'));
+        });
+
+        // Check for multiple parents (invalid in URDF)
+        const childCount = {};
+        joints.forEach(j => {
+          const child = j.querySelector('child')?.getAttribute('link');
+          if (child) childCount[child] = (childCount[child] || 0) + 1;
+        });
+        Object.entries(childCount).forEach(([link, count]) => {
+          if (count > 1) {
+            findings.push({ type: 'error', text: `Link "${link}" has ${count} parent joints — URDF only supports tree structures (one parent per link).` });
+            errors++;
+          }
+        });
+
+        // Check for root link (link with no parent)
+        const allLinks = new Set();
+        links.forEach(l => allLinks.add(l.getAttribute('name')));
+        const rootLinks = [...allLinks].filter(l => !childLinks.has(l));
+        if (rootLinks.length === 0 && joints.length > 0) {
+          findings.push({ type: 'error', text: 'No root link found — kinematic loop detected. URDF does not support closed loops.' });
+          errors++;
+        } else if (rootLinks.length > 1) {
+          findings.push({ type: 'warn', text: `Multiple root links found: ${rootLinks.join(', ')}. Consider connecting them with a fixed joint.` });
+          warnings++;
+        } else if (rootLinks.length === 1) {
+          findings.push({ type: 'info', text: `Root link: "${rootLinks[0]}"` });
+        }
+      }
+    }
+
+    // Update UI
+    document.getElementById('uv-issues').textContent = findings.filter(f => f.type !== 'info').length;
+    document.getElementById('uv-errors').textContent = errors;
+    document.getElementById('uv-warnings').textContent = warnings;
+    const status = document.getElementById('uv-status');
+    if (errors > 0) { status.textContent = '✗ Invalid'; status.style.color = '#dc2626'; }
+    else if (warnings > 0) { status.textContent = '⚠ Valid (with warnings)'; status.style.color = '#d97706'; }
+    else { status.textContent = '✓ Valid'; status.style.color = '#059669'; }
+
+    const findingsHtml = findings.map(f => {
+      const cls = f.type === 'error' ? 'it-alert-bad' : f.type === 'warn' ? 'it-alert-warn' : f.type === 'info' ? 'it-alert-info' : 'it-alert-good';
+      const icon = f.type === 'error' ? '✗' : f.type === 'warn' ? '⚠️' : 'ℹ️';
+      return `<div class="it-alert ${cls}">${icon} ${f.text}</div>`;
+    }).join('');
+    document.getElementById('uv-findings').innerHTML = findingsHtml;
+
+    const summary = document.getElementById('uv-summary');
+    if (errors === 0 && warnings === 0) {
+      summary.innerHTML = '<div class="it-alert it-alert-good">✓ URDF is valid with no errors or warnings. The robot model is ready for simulation and visualization.</div>';
+    } else if (errors === 0) {
+      summary.innerHTML = `<div class="it-alert it-alert-warn">⚠️ URDF is valid but has ${warnings} warning(s). The robot will work but consider fixing the warnings for better simulation accuracy.</div>`;
+    } else {
+      summary.innerHTML = `<div class="it-alert it-alert-bad">✗ URDF has ${errors} error(s) and ${warnings} warning(s). Fix all errors before using this robot model.</div>`;
+    }
+
+    document.getElementById('uv-results').classList.add('show');
+
+    // === Feature 1: Kinematic Tree Visualization ===
+    const treeCanvas = document.getElementById('uv-tree-canvas');
+    const tctx = treeCanvas.getContext('2d');
+    const tw = treeCanvas.width, th = treeCanvas.height;
+    tctx.fillStyle = '#ebedf5'; tctx.fillRect(0, 0, tw, th);
+    if (doc && errors === 0) {
+      const allLinks2 = Array.from(doc.querySelectorAll('link')).map(l => l.getAttribute('name'));
+      const jointList = Array.from(doc.querySelectorAll('joint'));
+      const childrenMap = {};
+      const parentMap = {};
+      allLinks2.forEach(l => { childrenMap[l] = []; });
+      jointList.forEach(j => {
+        const p = j.querySelector('parent')?.getAttribute('link');
+        const c = j.querySelector('child')?.getAttribute('link');
+        if (p && c) { childrenMap[p] = childrenMap[p] || []; childrenMap[p].push(c); parentMap[c] = p; }
+      });
+      const rootLink = allLinks2.find(l => !parentMap[l]);
+      // BFS layout
+      const levels = {};
+      const queue = [{ link: rootLink, level: 0 }];
+      const visited = new Set();
+      while (queue.length > 0) {
+        const { link, level } = queue.shift();
+        if (visited.has(link)) continue;
+        visited.add(link);
+        levels[link] = level;
+        (childrenMap[link] || []).forEach(c => queue.push({ link: c, level: level + 1 }));
+      }
+      const maxLevel = Math.max(...Object.values(levels), 0);
+      const linksByLevel = {};
+      Object.entries(levels).forEach(([l, lv]) => { linksByLevel[lv] = linksByLevel[lv] || []; linksByLevel[lv].push(l); });
+      // Draw
+      const positions = {};
+      for (let lv = 0; lv <= maxLevel; lv++) {
+        const links = linksByLevel[lv] || [];
+        links.forEach((l, i) => {
+          const x = links.length === 1 ? tw / 2 : (i + 0.5) / links.length * tw;
+          const y = 30 + lv * (th - 60) / Math.max(1, maxLevel);
+          positions[l] = { x, y };
+        });
+      }
+      // Draw edges
+      tctx.strokeStyle = '#8b5cf6'; tctx.lineWidth = 2;
+      jointList.forEach(j => {
+        const p = j.querySelector('parent')?.getAttribute('link');
+        const c = j.querySelector('child')?.getAttribute('link');
+        if (positions[p] && positions[c]) { tctx.beginPath(); tctx.moveTo(positions[p].x, positions[p].y); tctx.lineTo(positions[c].x, positions[c].y); tctx.stroke(); }
+      });
+      // Draw nodes
+      Object.entries(positions).forEach(([link, pos]) => {
+        tctx.fillStyle = link === rootLink ? '#059669' : '#8b5cf6';
+        tctx.beginPath(); tctx.arc(pos.x, pos.y, 12, 0, Math.PI * 2); tctx.fill();
+        tctx.fillStyle = '#1e293b'; tctx.font = '9px sans-serif'; tctx.textAlign = 'center';
+        tctx.fillText(link.length > 15 ? link.substring(0, 12) + '...' : link, pos.x, pos.y - 16);
+      });
+      document.getElementById('uv-tree-list').innerHTML = `<div class="it-alert it-alert-info">Root: <strong>${rootLink}</strong>. ${allLinks2.length} links, ${jointList.length} joints, max depth: ${maxLevel}. ${maxLevel > 6 ? '⚠️ Deep tree — consider simplifying for performance.' : 'Tree depth is reasonable.'}</div>`;
+    } else {
+      tctx.fillStyle = '#dc2626'; tctx.font = '14px sans-serif'; tctx.textAlign = 'center'; tctx.fillText('Fix XML errors to view kinematic tree', tw / 2, th / 2);
+      document.getElementById('uv-tree-list').innerHTML = '';
+    }
+    document.getElementById('uv-tree-section').style.display = 'block';
+
+    // === Feature 2: Joint Limit & Dynamics Analysis ===
+    if (doc && errors === 0) {
+      const jointList2 = Array.from(doc.querySelectorAll('joint'));
+      document.getElementById('uv-joint-list').innerHTML = `
+        <table class="it-table"><thead><tr><th>Joint</th><th>Type</th><th>Lower</th><th>Upper</th><th>Range</th><th>Effort (N·m)</th><th>Velocity (rad/s)</th><th>Dynamics</th></tr></thead><tbody>
+          ${jointList2.map(j => {
+            const name = j.getAttribute('name'); const type = j.getAttribute('type');
+            const limit = j.querySelector('limit');
+            const lower = limit ? parseFloat(limit.getAttribute('lower') || '0') : null;
+            const upper = limit ? parseFloat(limit.getAttribute('upper') || '0') : null;
+            const effort = limit ? parseFloat(limit.getAttribute('effort') || '0') : null;
+            const velocity = limit ? parseFloat(limit.getAttribute('velocity') || '0') : null;
+            const dyn = j.querySelector('dynamics');
+            const damping = dyn ? parseFloat(dyn.getAttribute('damping') || '0') : '—';
+            const friction = dyn ? parseFloat(dyn.getAttribute('friction') || '0') : '—';
+            const range = lower !== null && upper !== null ? (upper - lower).toFixed(3) + ' rad (' + ((upper - lower) * 180 / Math.PI).toFixed(1) + '°)' : '—';
+            return `<tr><td><strong>${name}</strong></td><td>${type}</td><td>${lower !== null ? lower.toFixed(3) : '—'}</td><td>${upper !== null ? upper.toFixed(3) : '—'}</td><td>${range}</td><td>${effort !== null ? effort.toFixed(1) : '—'}</td><td>${velocity !== null ? velocity.toFixed(2) : '—'}</td><td style="font-size:0.8125rem;">d=${damping}, f=${friction}</td></tr>`;
+          }).join('')}
+        </tbody></table>
+        <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${jointList2.filter(j => !j.querySelector('dynamics')).length} joint(s) missing <dynamics> element — add damping & friction for realistic simulation. ${jointList2.filter(j => j.getAttribute('type') === 'revolute' && !j.querySelector('limit')).length} revolute joint(s) missing <limit> — required for MoveIt planning.</div>
+      `;
+    } else { document.getElementById('uv-joint-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-joint-section').style.display = 'block';
+
+    // === Feature 3: Inertia & Mass Validation ===
+    if (doc && errors === 0) {
+      const linkList = Array.from(doc.querySelectorAll('link'));
+      const inertiaData = linkList.map(l => {
+        const name = l.getAttribute('name');
+        const inertial = l.querySelector('inertial');
+        const mass = inertial ? parseFloat(inertial.querySelector('mass')?.getAttribute('value') || '0') : 0;
+        const inertia = inertial?.querySelector('inertia');
+        const ixx = inertia ? parseFloat(inertia.getAttribute('ixx') || '0') : 0;
+        const iyy = inertia ? parseFloat(inertia.getAttribute('iyy') || '0') : 0;
+        const izz = inertia ? parseFloat(inertia.getAttribute('izz') || '0') : 0;
+        const issues = [];
+        if (!inertial) issues.push('No <inertial>');
+        if (mass <= 0) issues.push('Mass ≤ 0');
+        if (ixx <= 0 || iyy <= 0 || izz <= 0) issues.push('Inertia ≤ 0');
+        if (mass > 0 && (ixx + iyy + izz) / mass > 100) issues.push('Inertia/mass ratio suspiciously high');
+        return { name, mass, ixx, iyy, izz, issues };
+      });
+      const totalMass = inertiaData.reduce((s, d) => s + d.mass, 0);
+      document.getElementById('uv-inertia-list').innerHTML = `
+        <table class="it-table"><thead><tr><th>Link</th><th>Mass (kg)</th><th>Ixx</th><th>Iyy</th><th>Izz</th><th>Status</th></tr></thead><tbody>
+          ${inertiaData.map(d => `<tr><td><strong>${d.name}</strong></td><td>${d.mass.toFixed(3)}</td><td>${d.ixx.toFixed(4)}</td><td>${d.iyy.toFixed(4)}</td><td>${d.izz.toFixed(4)}</td><td style="color:${d.issues.length > 0 ? '#dc2626' : '#059669'};font-weight:700;">${d.issues.length > 0 ? '⚠️ ' + d.issues.join('; ') : '✓ OK'}</td></tr>`).join('')}
+          <tr class="it-highlight"><td><strong>Total</strong></td><td class="it-highlight">${totalMass.toFixed(3)} kg</td><td colspan="4">—</td></tr>
+        </tbody></table>
+        <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Total robot mass: ${totalMass.toFixed(3)} kg. ${inertiaData.filter(d => d.issues.length > 0).length} link(s) with inertia issues. For Gazebo simulation, all links need valid <inertial> with positive mass and inertia. Zero-mass links cause physics instability.</div>
+      `;
+    } else { document.getElementById('uv-inertia-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-inertia-section').style.display = 'block';
+
+    // === Feature 4: Mesh File Reference Checker ===
+    if (doc && errors === 0) {
+      const meshes = Array.from(doc.querySelectorAll('mesh'));
+      const meshData = meshes.map(m => {
+        const filename = m.getAttribute('filename') || '';
+        const ext = filename.split('.').pop().toLowerCase();
+        const valid = ['stl', 'dae', 'obj'].includes(ext);
+        const scale = m.getAttribute('scale') || '1 1 1';
+        return { filename, ext, valid, scale };
+      });
+      document.getElementById('uv-mesh-list').innerHTML = meshData.length > 0 ? `
+        <table class="it-table"><thead><tr><th>Mesh File</th><th>Format</th><th>Scale</th><th>Valid?</th></tr></thead><tbody>
+          ${meshData.map(m => `<tr><td>${m.filename}</td><td>.${m.ext}</td><td>${m.scale}</td><td style="color:${m.valid ? '#059669' : '#dc2626'};font-weight:700;">${m.valid ? '✓' : '✗ Unsupported'}</td></tr>`).join('')}
+        </tbody></table>
+        <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${meshData.length} mesh reference(s) found. ${meshData.filter(m => !m.valid).length} with unsupported format. Use package:// or file:// URIs. Supported: STL (binary/ASCII), DAE (Collada), OBJ. For Gazebo, use package:// URIs relative to ROS package.</div>
+      ` : '<div class="it-alert it-alert-info">No mesh files referenced — using primitive geometry only.</div>';
+    } else { document.getElementById('uv-mesh-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-mesh-section').style.display = 'block';
+
+    // === Feature 5: Collision/Visual Geometry Consistency ===
+    if (doc && errors === 0) {
+      const linkList2 = Array.from(doc.querySelectorAll('link'));
+      const consistencyData = linkList2.map(l => {
+        const name = l.getAttribute('name');
+        const visualGeo = l.querySelector('visual geometry');
+        const collisionGeo = l.querySelector('collision geometry');
+        const visualType = visualGeo ? visualGeo.children[0]?.tagName : null;
+        const collisionType = collisionGeo ? collisionGeo.children[0]?.tagName : null;
+        const match = visualType === collisionType;
+        return { name, visualType, collisionType, match, hasVisual: !!visualGeo, hasCollision: !!collisionGeo };
+      });
+      document.getElementById('uv-consistency-list').innerHTML = `
+        <table class="it-table"><thead><tr><th>Link</th><th>Visual Geometry</th><th>Collision Geometry</th><th>Match?</th></tr></thead><tbody>
+          ${consistencyData.map(d => `<tr><td><strong>${d.name}</strong></td><td>${d.visualType || '—'}</td><td>${d.collisionType || '—'}</td><td style="color:${d.match && d.hasCollision ? '#059669' : '#d97706'};font-weight:700;">${!d.hasCollision ? '⚠️ No collision' : !d.hasVisual ? '⚠️ No visual' : d.match ? '✓ Match' : '⚠️ Mismatch'}</td></tr>`).join('')}
+        </tbody></table>
+        <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${consistencyData.filter(d => d.match && d.hasCollision).length}/${consistencyData.length} links have matching visual/collision geometry. Mismatched geometry causes unrealistic collisions. For performance, use simplified collision meshes (convex hulls) vs detailed visual meshes.</div>
+      `;
+    } else { document.getElementById('uv-consistency-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-consistency-section').style.display = 'block';
+
+    // === Feature 6: SDF Converter ===
+    if (doc && errors === 0) {
+      const robotName = doc.querySelector('robot').getAttribute('name') || 'robot';
+      const sdfLinks = Array.from(doc.querySelectorAll('link')).map(l => {
+        const name = l.getAttribute('name');
+        const mass = l.querySelector('inertial mass')?.getAttribute('value') || '0';
+        return `    <model name='${name}'>\n      <static>false</static>\n      <link name='${name}'>\n        <inertial><mass>${mass}</mass></inertial>\n      </link>\n    </model>`;
+      }).join('\n');
+      const sdfJoints = Array.from(doc.querySelectorAll('joint')).map(j => {
+        const name = j.getAttribute('name'); const type = j.getAttribute('type');
+        const parent = j.querySelector('parent')?.getAttribute('link') || '';
+        const child = j.querySelector('child')?.getAttribute('link') || '';
+        return `    <joint name='${name}' type='${type}'>\n      <parent>${parent}</parent>\n      <child>${child}</child>\n    </joint>`;
+      }).join('\n');
+      document.getElementById('uv-sdf-list').innerHTML = `
+        <div class="it-alert it-alert-info" style="margin-bottom:0.5rem;">SDF (Simulation Description Format) conversion for Gazebo. Copy to a .sdf file.</div>
+        <pre style="background:#1e293b;color:#e2e8f0;padding:1rem;border-radius:var(--tl-radius-sm);overflow-x:auto;font-size:0.75rem;line-height:1.4;"><code>&lt;?xml version="1.0"?&gt;\n&lt;sdf version="1.6"&gt;\n  &lt;world name="default"&gt;\n${sdfLinks}\n${sdfJoints}\n  &lt;/world&gt;\n&lt;/sdf&gt;</code></pre>
+      `;
+    } else { document.getElementById('uv-sdf-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-sdf-section').style.display = 'block';
+
+    // === Feature 7: Gazebo/ROS Tags ===
+    if (doc && errors === 0) {
+      const gazeboTags = Array.from(doc.querySelectorAll('gazebo'));
+      const rosTags = Array.from(doc.querySelectorAll('[*|*=transmission], transmission'));
+      const materialTags = Array.from(doc.querySelectorAll('material'));
+      const gazeboIssues = [];
+      if (gazeboTags.length === 0) gazeboIssues.push('No <gazebo> tags — Gazebo plugins (ros_control, diff_drive) won\'t load');
+      if (rosTags.length === 0) gazeboIssues.push('No <transmission> tags — required for ros_control interface');
+      if (materialTags.length === 0) gazeboIssues.push('No <material> tags — links will appear white/gray in RViz');
+      document.getElementById('uv-gazebo-list').innerHTML = `
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Gazebo Tags</span><strong style="color:${gazeboTags.length > 0 ? '#059669' : '#d97706'};">${gazeboTags.length}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Transmission Tags</span><strong style="color:${rosTags.length > 0 ? '#059669' : '#d97706'};">${rosTags.length}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Material Tags</span><strong style="color:${materialTags.length > 0 ? '#059669' : '#d97706'};">${materialTags.length}</strong></div>
+        ${gazeboIssues.length > 0 ? `<div class="it-alert it-alert-warn" style="margin-top:0.5rem;">${gazeboIssues.map(i => '⚠️ ' + i).join('<br>')}</div>` : '<div class="it-alert it-alert-good" style="margin-top:0.5rem;">✓ All essential Gazebo/ROS tags present.</div>'}
+        <div class="it-alert it-alert-info" style="margin-top:0.5rem;">For Gazebo: add <gazebo> with <plugin> tags for ros_control. For RViz: add <material> with color or texture. For MoveIt: add <transmission> with hardwareInterface for each actuated joint.</div>
+      `;
+    } else { document.getElementById('uv-gazebo-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-gazebo-section').style.display = 'block';
+
+    // === Feature 8: Link Connectivity Matrix ===
+    if (doc && errors === 0) {
+      const allLinks3 = Array.from(doc.querySelectorAll('link')).map(l => l.getAttribute('name'));
+      const allJoints = Array.from(doc.querySelectorAll('joint'));
+      let matrixHtml = '<table class="it-table"><thead><tr><th></th>' + allLinks3.map(l => `<th style="font-size:0.7rem;">${l.substring(0, 6)}</th>`).join('') + '</tr></thead><tbody>';
+      allLinks3.forEach(rowLink => {
+        matrixHtml += `<tr><td style="font-size:0.75rem;"><strong>${rowLink.substring(0, 8)}</strong></td>`;
+        allLinks3.forEach(colLink => {
+          const connected = allJoints.some(j => {
+            const p = j.querySelector('parent')?.getAttribute('link');
+            const c = j.querySelector('child')?.getAttribute('link');
+            return (p === rowLink && c === colLink) || (p === colLink && c === rowLink);
+          });
+          matrixHtml += `<td style="text-align:center;color:${connected ? '#8b5cf6' : '#ccc'};">${connected ? '●' : '·'}</td>`;
+        });
+        matrixHtml += '</tr>';
+      });
+      matrixHtml += '</tbody></table>';
+      document.getElementById('uv-connect-list').innerHTML = matrixHtml + `<div class="it-alert it-alert-info" style="margin-top:0.5rem;">Connectivity matrix shows direct link connections via joints. ● = connected, · = not connected. ${allLinks3.length}×${allLinks3.length} matrix. For a tree structure, each link (except root) has exactly one connection.</div>`;
+    } else { document.getElementById('uv-connect-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-connect-section').style.display = 'block';
+
+    // === Feature 9: Best Practices ===
+    if (doc && errors === 0) {
+      const practices = [];
+      const linkCount = doc.querySelectorAll('link').length;
+      const jointCount = doc.querySelectorAll('joint').length;
+      const missingInertial = Array.from(doc.querySelectorAll('link')).filter(l => !l.querySelector('inertial')).length;
+      const missingCollision = Array.from(doc.querySelectorAll('link')).filter(l => !l.querySelector('collision')).length;
+      const missingDynamics = Array.from(doc.querySelectorAll('joint')).filter(j => !j.querySelector('dynamics')).length;
+      const missingTransmission = Array.from(doc.querySelectorAll('joint')).filter(j => j.getAttribute('type') !== 'fixed' && !j.querySelector('transmission')).length;
+      const hasMaterial = doc.querySelectorAll('material').length > 0;
+      const hasGazebo = doc.querySelectorAll('gazebo').length > 0;
+      if (missingInertial > 0) practices.push({ cat: 'Dynamics', sev: 'High', text: `${missingInertial} link(s) missing <inertial> — add mass & inertia for physics simulation.` });
+      if (missingCollision > 0) practices.push({ cat: 'Collision', sev: 'Medium', text: `${missingCollision} link(s) missing <collision> — add collision geometry for collision detection.` });
+      if (missingDynamics > 0) practices.push({ cat: 'Dynamics', sev: 'Low', text: `${missingDynamics} joint(s) missing <dynamics> — add damping & friction for realistic motion.` });
+      if (missingTransmission > 0) practices.push({ cat: 'ROS', sev: 'Medium', text: `${missingTransmission} actuated joint(s) missing <transmission> — required for ros_control.` });
+      if (!hasMaterial) practices.push({ cat: 'Visualization', sev: 'Low', text: 'No <material> tags — add colors for better RViz visualization.' });
+      if (!hasGazebo) practices.push({ cat: 'Gazebo', sev: 'Low', text: 'No <gazebo> tags — add for Gazebo plugins and simulation settings.' });
+      if (linkCount > 20) practices.push({ cat: 'Performance', sev: 'Low', text: `${linkCount} links — consider using XACRO macros for maintainability.` });
+      if (jointCount > 0 && !doc.querySelector('joint[type="fixed"]')) practices.push({ cat: 'Structure', sev: 'Info', text: 'No fixed joints — consider merging rigidly connected links for performance.' });
+      if (practices.length === 0) practices.push({ cat: 'Info', sev: 'Info', text: 'URDF follows best practices. No major improvements needed.' });
+      document.getElementById('uv-practices-list').innerHTML = `
+        <table class="it-table"><thead><tr><th>Category</th><th>Severity</th><th>Recommendation</th></tr></thead><tbody>
+          ${practices.map(p => `<tr><td><strong>${p.cat}</strong></td><td style="color:${p.sev === 'High' ? '#dc2626' : p.sev === 'Medium' ? '#d97706' : '#06b6d4'};font-weight:700;">${p.sev}</td><td>${p.text}</td></tr>`).join('')}
+        </tbody></table>
+      `;
+    } else { document.getElementById('uv-practices-list').innerHTML = '<div class="it-alert it-alert-bad">Fix errors first.</div>'; }
+    document.getElementById('uv-practices-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('uv-export').style.display = 'inline-flex';
+    document.getElementById('uv-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), status: errors > 0 ? 'Invalid' : warnings > 0 ? 'Valid (with warnings)' : 'Valid', errors, warnings, findings };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'urdf-validation-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('uv-validate').addEventListener('click', validate);
+  document.getElementById('uv-clear').addEventListener('click', () => {
+    document.getElementById('uv-input').value = '';
+    document.getElementById('uv-results').classList.remove('show');
+  });
+})();
+</script>

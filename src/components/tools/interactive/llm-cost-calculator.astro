@@ -1,0 +1,583 @@
+---
+/**
+ * LLM Cost Calculator — Interactive tool
+ * Compare API costs across Claude, GPT, Gemini, and open models
+ */
+import './interactive-tools.css';
+
+const providers = [
+  { id: 'anthropic', name: 'Anthropic Claude', models: [
+    { id: 'claude-opus-4', name: 'Claude Opus 4', inputPrice: 15, outputPrice: 75 },
+    { id: 'claude-sonnet-4', name: 'Claude Sonnet 4', inputPrice: 3, outputPrice: 15 },
+    { id: 'claude-haiku-3.5', name: 'Claude Haiku 3.5', inputPrice: 0.8, outputPrice: 4 },
+  ]},
+  { id: 'openai', name: 'OpenAI GPT', models: [
+    { id: 'gpt-4o', name: 'GPT-4o', inputPrice: 2.5, outputPrice: 10 },
+    { id: 'gpt-4o-mini', name: 'GPT-4o mini', inputPrice: 0.15, outputPrice: 0.6 },
+    { id: 'o3', name: 'o3', inputPrice: 10, outputPrice: 40 },
+  ]},
+  { id: 'google', name: 'Google Gemini', models: [
+    { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro', inputPrice: 1.25, outputPrice: 10 },
+    { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash', inputPrice: 0.075, outputPrice: 0.3 },
+  ]},
+  { id: 'mistral', name: 'Mistral', models: [
+    { id: 'mistral-large', name: 'Mistral Large', inputPrice: 2, outputPrice: 6 },
+    { id: 'mistral-small', name: 'Mistral Small', inputPrice: 0.2, outputPrice: 0.6 },
+  ]},
+];
+---
+
+<div class="it-container" id="llm-cost-calc">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">💰</div>
+      <div>
+        <h2>LLM Cost Calculator</h2>
+        <p>Compare API costs across providers based on your usage pattern</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Input Tokens per Call <span class="it-label-hint">(avg)</span></label>
+          <input type="number" class="it-input" id="lcc-input-tokens" value="2000" min="0" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Output Tokens per Call <span class="it-label-hint">(avg)</span></label>
+          <input type="number" class="it-input" id="lcc-output-tokens" value="500" min="0" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Calls per Day</label>
+          <input type="number" class="it-input" id="lcc-calls-day" value="100" min="0" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Days per Month</label>
+          <input type="number" class="it-input" id="lcc-days-month" value="30" min="1" max="31" />
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Select Models to Compare</label>
+        <div class="it-checkbox-group" id="lcc-models">
+          {providers.map(p => (
+            p.models.map(m => (
+              <label class="it-checkbox-item" data-model={m.id}>
+                <input type="checkbox" value={m.id} />
+                {m.name}
+              </label>
+            ))
+          ))}
+        </div>
+      </div>
+
+      <!-- Feature 1: Token Estimator -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem; margin-top: 0.5rem;">
+        <label class="it-label">📝 Token Estimator <span class="it-label-hint">(words/chars → tokens)</span></label>
+        <div class="it-row">
+          <input type="number" class="it-input" id="lcc-word-count" placeholder="Word count" value="500" min="0" />
+          <input type="number" class="it-input" id="lcc-char-count" placeholder="Char count" value="0" min="0" />
+          <button class="it-btn it-btn-secondary" id="lcc-est-tokens" style="white-space:nowrap;">Est. Tokens</button>
+        </div>
+        <div id="lcc-token-est" style="font-size:0.8125rem;color:var(--tl-text-muted);margin-top:0.25rem;"></div>
+      </div>
+
+      <!-- Feature 2: Batch API Discount -->
+      <div class="it-field">
+        <label class="it-checkbox-item" id="lcc-batch-toggle">
+          <input type="checkbox" id="lcc-batch-check" />
+          🏷️ Batch API Pricing <span class="it-label-hint">(50% discount, 24h turnaround)</span>
+        </label>
+      </div>
+
+      <!-- Feature 3: Prompt Caching -->
+      <div class="it-field">
+        <label class="it-label">⚡ Prompt Caching <span class="it-label-hint">(% of input that is cached/repeated)</span></label>
+        <input type="range" class="it-input" id="lcc-cache-pct" value="0" min="0" max="90" step="5" style="width:100%;" />
+        <span id="lcc-cache-val" style="font-size:0.8125rem;color:var(--tl-text-muted);">0% cached</span>
+      </div>
+
+      <!-- Feature 5: Growth Projection -->
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">📈 Monthly Growth Rate <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="lcc-growth-rate" value="0" min="-50" max="100" step="1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Projection Months</label>
+          <input type="number" class="it-input" id="lcc-proj-months" value="12" min="1" max="36" />
+        </div>
+      </div>
+
+      <!-- Feature 7: Budget Tracker -->
+      <div class="it-field">
+        <label class="it-label">💰 Monthly Budget <span class="it-label-hint">(USD, 0 = no budget)</span></label>
+        <input type="number" class="it-input" id="lcc-budget" value="0" min="0" step="10" />
+      </div>
+
+      <!-- Feature 8: Embedding Cost -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem;">
+        <label class="it-label">🧮 Embedding Cost (RAG) <span class="it-label-hint">(optional)</span></label>
+        <div class="it-row">
+          <div class="it-field">
+            <input type="number" class="it-input" id="lcc-emb-docs" placeholder="# documents" value="1000" min="0" />
+          </div>
+          <div class="it-field">
+            <input type="number" class="it-input" id="lcc-emb-chunk-size" placeholder="chunk size (tokens)" value="500" min="1" />
+          </div>
+          <div class="it-field">
+            <select class="it-select" id="lcc-emb-provider">
+              <option value="openai">OpenAI text-embedding-3-small ($0.02/1M)</option>
+              <option value="openai-large">OpenAI text-embedding-3-large ($0.13/1M)</option>
+              <option value="cohere">Cohere embed-v3 ($0.10/1M)</option>
+              <option value="google">Google text-embedding-004 ($0.025/1M)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 9: Fine-tuning Cost -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem;">
+        <label class="it-label">🔧 Fine-tuning Cost Estimator <span class="it-label-hint">(optional)</span></label>
+        <div class="it-row">
+          <div class="it-field">
+            <input type="number" class="it-input" id="lcc-ft-examples" placeholder="# training examples" value="1000" min="1" />
+          </div>
+          <div class="it-field">
+            <input type="number" class="it-input" id="lcc-ft-avg-tokens" placeholder="avg tokens/example" value="1000" min="1" />
+          </div>
+          <div class="it-field">
+            <select class="it-select" id="lcc-ft-provider">
+              <option value="openai-ft">OpenAI Fine-tune ($8/1M train)</option>
+              <option value="openai-host">OpenAI Hosting ($3/hr)</option>
+              <option value="self-host">Self-host (GPU rental)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 10: Multi-model Routing -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem;">
+        <label class="it-label">🔀 Multi-model Routing Optimizer <span class="it-label-hint">(allocate tasks to cheapest model)</span></label>
+        <div class="it-row">
+          <div class="it-field">
+            <label class="it-label" style="font-size:0.75rem;">Simple tasks %</label>
+            <input type="number" class="it-input" id="lcc-route-simple" value="60" min="0" max="100" />
+          </div>
+          <div class="it-field">
+            <label class="it-label" style="font-size:0.75rem;">Medium tasks %</label>
+            <input type="number" class="it-input" id="lcc-route-medium" value="30" min="0" max="100" />
+          </div>
+          <div class="it-field">
+            <label class="it-label" style="font-size:0.75rem;">Complex tasks %</label>
+            <input type="number" class="it-input" id="lcc-route-complex" value="10" min="0" max="100" />
+          </div>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="lcc-calculate">Calculate Full Analysis</button>
+        <button class="it-btn it-btn-secondary" id="lcc-reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="lcc-results">
+      <!-- Main cost comparison -->
+      <div class="it-results-card">
+        <div class="it-results-title">Monthly Cost Comparison</div>
+        <div id="lcc-chart" class="it-chart" style="margin-bottom: 1.5rem; height: 180px;"></div>
+        <table class="it-table" id="lcc-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Input Cost</th>
+              <th>Output Cost</th>
+              <th>Monthly Total</th>
+              <th>Cost per 1K Calls</th>
+            </tr>
+          </thead>
+          <tbody id="lcc-table-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="lcc-insight"></div>
+      </div>
+
+      <!-- Feature 5: Growth Projection Results -->
+      <div class="it-results-card" id="lcc-growth-section" style="display:none;">
+        <div class="it-results-title">📈 Annual Cost Projection</div>
+        <div id="lcc-growth-chart" class="it-chart" style="height: 160px; margin-bottom: 1rem;"></div>
+        <table class="it-table" id="lcc-growth-table">
+          <thead><tr><th>Month</th><th>Cheapest Model</th><th>Most Expensive</th><th>Cumulative</th></tr></thead>
+          <tbody id="lcc-growth-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="lcc-growth-insight"></div>
+      </div>
+
+      <!-- Feature 7: Budget Tracker Results -->
+      <div class="it-results-card" id="lcc-budget-section" style="display:none;">
+        <div class="it-results-title">💰 Budget Analysis</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Budget</div><div class="it-stat-value" id="lcc-budget-val">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Projected Spend</div><div class="it-stat-value" id="lcc-spend-val">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Utilization</div><div class="it-stat-value" id="lcc-util-val">0%</div></div>
+          <div class="it-stat"><div class="it-stat-label">Status</div><div class="it-stat-value" id="lcc-budget-status" style="font-size:1rem;">—</div></div>
+        </div>
+        <div id="lcc-budget-bar" style="height:24px;border-radius:12px;background:var(--tl-border);overflow:hidden;margin-bottom:0.5rem;"><div id="lcc-budget-fill" style="height:100%;width:0%;background:#059669;transition:width 0.5s;"></div></div>
+        <div class="it-alert" id="lcc-budget-alert"></div>
+      </div>
+
+      <!-- Feature 8: Embedding Cost Results -->
+      <div class="it-results-card" id="lcc-emb-section" style="display:none;">
+        <div class="it-results-title">🧮 Embedding / RAG Cost</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Total Tokens</div><div class="it-stat-value" id="lcc-emb-tokens">0</div></div>
+          <div class="it-stat"><div class="it-stat-label">One-time Cost</div><div class="it-stat-value" id="lcc-emb-cost">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Monthly Re-embed</div><div class="it-stat-value" id="lcc-emb-monthly">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Cost per Doc</div><div class="it-stat-value" id="lcc-emb-per-doc">$0</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="lcc-emb-insight"></div>
+      </div>
+
+      <!-- Feature 9: Fine-tuning Cost Results -->
+      <div class="it-results-card" id="lcc-ft-section" style="display:none;">
+        <div class="it-results-title">🔧 Fine-tuning Cost Estimate</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Training Tokens</div><div class="it-stat-value" id="lcc-ft-tokens">0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Training Cost</div><div class="it-stat-value" id="lcc-ft-train-cost">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Hosting/Month</div><div class="it-stat-value" id="lcc-ft-host-cost">$0</div></div>
+          <div class="it-stat"><div class="it-stat-label">Break-even</div><div class="it-stat-value" id="lcc-ft-breakeven" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="lcc-ft-insight"></div>
+      </div>
+
+      <!-- Feature 10: Routing Optimizer Results -->
+      <div class="it-results-card" id="lcc-route-section" style="display:none;">
+        <div class="it-results-title">🔀 Multi-model Routing Recommendation</div>
+        <table class="it-table" id="lcc-route-table">
+          <thead><tr><th>Task Tier</th><th>% of Calls</th><th>Recommended Model</th><th>Monthly Cost</th><th>Savings vs All-Premium</th></tr></thead>
+          <tbody id="lcc-route-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-good" id="lcc-route-insight"></div>
+      </div>
+
+      <!-- Feature 9b: Self-hosting Comparison -->
+      <div class="it-results-card" id="lcc-selfhost-section" style="display:none;">
+        <div class="it-results-title">🖥️ API vs Self-hosting TCO</div>
+        <table class="it-table" id="lcc-selfhost-table">
+          <thead><tr><th>Option</th><th>Setup Cost</th><th>Monthly Cost</th><th>12-Month TCO</th><th>Break-even</th></tr></thead>
+          <tbody id="lcc-selfhost-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="lcc-selfhost-insight"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const pricing = {
+    'claude-opus-4': { name: 'Claude Opus 4', input: 15, output: 75 },
+    'claude-sonnet-4': { name: 'Claude Sonnet 4', input: 3, output: 15 },
+    'claude-haiku-3.5': { name: 'Claude Haiku 3.5', input: 0.8, output: 4 },
+    'gpt-4o': { name: 'GPT-4o', input: 2.5, output: 10 },
+    'gpt-4o-mini': { name: 'GPT-4o mini', input: 0.15, output: 0.6 },
+    'o3': { name: 'o3', input: 10, output: 40 },
+    'gemini-2.5-pro': { name: 'Gemini 2.5 Pro', input: 1.25, output: 10 },
+    'gemini-2.5-flash': { name: 'Gemini 2.5 Flash', input: 0.075, output: 0.3 },
+    'mistral-large': { name: 'Mistral Large', input: 2, output: 6 },
+    'mistral-small': { name: 'Mistral Small', input: 0.2, output: 0.6 },
+  };
+
+  const colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#06b6d4', '#10b981', '#f59e0b', '#ef4444', '#6366f1', '#14b8a6', '#f97316'];
+
+  function toggleModel(el) {
+    el.classList.toggle('active');
+    const cb = el.querySelector('input');
+    cb.checked = el.classList.contains('active');
+  }
+
+  document.querySelectorAll('#lcc-models .it-checkbox-item').forEach(el => {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleModel(this);
+    });
+  });
+
+  // Pre-select 3 popular models
+  ['claude-sonnet-4', 'gpt-4o', 'gemini-2.5-pro'].forEach(id => {
+    const el = document.querySelector(`[data-model="${id}"]`);
+    if (el) toggleModel(el);
+  });
+
+  function calculate() {
+    const inputTokens = parseFloat(document.getElementById('lcc-input-tokens').value) || 0;
+    const outputTokens = parseFloat(document.getElementById('lcc-output-tokens').value) || 0;
+    const callsDay = parseFloat(document.getElementById('lcc-calls-day').value) || 0;
+    const daysMonth = parseFloat(document.getElementById('lcc-days-month').value) || 30;
+
+    const selected = [];
+    document.querySelectorAll('#lcc-models .it-checkbox-item.active').forEach(el => {
+      const id = el.getAttribute('data-model');
+      if (pricing[id]) selected.push({ id, ...pricing[id] });
+    });
+
+    if (selected.length === 0) {
+      alert('Please select at least one model to compare.');
+      return;
+    }
+
+    const monthlyCalls = callsDay * daysMonth;
+    const results = selected.map(m => {
+      const rawInputCost = (inputTokens / 1_000_000) * m.input * monthlyCalls;
+      const rawOutputCost = (outputTokens / 1_000_000) * m.output * monthlyCalls;
+      const inputCost = applyDiscounts(rawInputCost, true);
+      const outputCost = applyDiscounts(rawOutputCost, false);
+      const total = inputCost + outputCost;
+      const perK = total / (monthlyCalls / 1000);
+      return { ...m, inputCost, outputCost, total, perK };
+    });
+
+    results.sort((a, b) => a.total - b.total);
+
+    // Table
+    const tbody = document.getElementById('lcc-table-body');
+    tbody.innerHTML = results.map((r, i) => {
+      const isCheapest = i === 0;
+      return `<tr${isCheapest ? ' style="background: color-mix(in srgb, #059669 5%, transparent);"' : ''}>
+        <td><strong>${r.name}</strong>${isCheapest ? ' <span class="it-badge it-badge-good">Cheapest</span>' : ''}</td>
+        <td>$${r.inputCost.toFixed(2)}</td>
+        <td>$${r.outputCost.toFixed(2)}</td>
+        <td class="it-highlight">$${r.total.toFixed(2)}</td>
+        <td>$${r.perK.toFixed(4)}</td>
+      </tr>`;
+    }).join('');
+
+    // Chart
+    const chart = document.getElementById('lcc-chart');
+    const maxCost = Math.max(...results.map(r => r.total));
+    chart.innerHTML = results.map((r, i) => {
+      const heightPct = maxCost > 0 ? (r.total / maxCost) * 100 : 0;
+      const color = colors[i % colors.length];
+      return `<div class="it-chart-bar" style="height: ${heightPct}%; background: ${color};">
+        <div class="it-chart-bar-label">${r.name.split(' ').slice(-1)[0]}</div>
+      </div>`;
+    }).join('');
+
+    // Insight
+    const cheapest = results[0];
+    const mostExpensive = results[results.length - 1];
+    const savings = mostExpensive.total - cheapest.total;
+    const insight = document.getElementById('lcc-insight');
+    if (results.length > 1) {
+      insight.innerHTML = `<strong>💡 Insight:</strong> ${cheapest.name} is the most cost-effective at <strong>$${cheapest.total.toFixed(2)}/month</strong>. You could save <strong>$${savings.toFixed(2)}/month</strong> ($${(savings * 12).toFixed(2)}/year) by choosing it over ${mostExpensive.name}.`;
+    } else {
+      insight.innerHTML = `<strong>💡 Insight:</strong> ${cheapest.name} costs <strong>$${cheapest.total.toFixed(2)}/month</strong> for ${monthlyCalls.toLocaleString()} calls ($${cheapest.perK.toFixed(4)} per 1K calls).`;
+    }
+
+    // === Feature 1: Token Estimator ===
+    function estimateTokens() {
+      const words = parseFloat(document.getElementById('lcc-word-count').value) || 0;
+      const chars = parseFloat(document.getElementById('lcc-char-count').value) || 0;
+      const wordTokens = Math.round(words * 1.3);
+      const charTokens = Math.round(chars / 4);
+      const est = Math.max(wordTokens, charTokens);
+      document.getElementById('lcc-token-est').innerHTML = `≈ <strong>${est.toLocaleString()} tokens</strong> (words: ${wordTokens}, chars: ${charTokens}) — <a href="#" onclick="document.getElementById('lcc-input-tokens').value=${est};return false;" style="color:var(--tl-accent);">use as input →</a>`;
+    }
+    document.getElementById('lcc-est-tokens').addEventListener('click', estimateTokens);
+
+    // === Feature 3: Cache slider ===
+    const cacheSlider = document.getElementById('lcc-cache-pct');
+    cacheSlider.addEventListener('input', () => {
+      document.getElementById('lcc-cache-val').textContent = cacheSlider.value + '% cached';
+    });
+
+    // === Feature 2+3: Apply batch & caching discounts ===
+    const useBatch = document.getElementById('lcc-batch-check');
+    const cachePct = () => parseInt(cacheSlider.value) || 0;
+
+    function applyDiscounts(cost, isInput) {
+      let adjusted = cost;
+      if (useBatch.checked) adjusted *= 0.5;
+      if (isInput && cachePct() > 0) adjusted *= (1 - cachePct() * 0.8 / 100); // cached tokens at 80% discount
+      return adjusted;
+    }
+
+    // === Feature 5: Growth Projection ===
+    function calcGrowthProjection(cheapestMonthly, expensiveMonthly) {
+      const rate = (parseFloat(document.getElementById('lcc-growth-rate').value) || 0) / 100;
+      const months = parseInt(document.getElementById('lcc-proj-months').value) || 12;
+      const growthBody = document.getElementById('lcc-growth-body');
+      const growthChart = document.getElementById('lcc-growth-chart');
+      let cumCheap = 0, cumExp = 0;
+      const rows = [], chartBars = [];
+      let maxVal = 0;
+      for (let m = 1; m <= months; m++) {
+        const factor = Math.pow(1 + rate, m - 1);
+        const cheapM = cheapestMonthly * factor;
+        const expM = expensiveMonthly * factor;
+        cumCheap += cheapM; cumExp += expM;
+        maxVal = Math.max(maxVal, expM);
+        rows.push(`<tr><td>Month ${m}</td><td>$${cheapM.toFixed(2)}</td><td>$${expM.toFixed(2)}</td><td>$${cumCheap.toFixed(2)}</td></tr>`);
+        chartBars.push(`<div class="it-chart-bar" style="height:${(cheapM/maxVal*100)}%;background:#059669;"><div class="it-chart-bar-label">M${m}</div></div>`);
+      }
+      growthBody.innerHTML = rows.join('');
+      growthChart.innerHTML = chartBars.join('');
+      const totalSavings = cumExp - cumCheap;
+      document.getElementById('lcc-growth-insight').innerHTML = `Over ${months} months at ${((rate)*100).toFixed(0)}% monthly growth: cheapest model cumulative = <strong>$${cumCheap.toFixed(2)}</strong>, most expensive = <strong>$${cumExp.toFixed(2)}</strong>. Total savings: <strong>$${totalSavings.toFixed(2)}</strong>.`;
+      document.getElementById('lcc-growth-section').style.display = rate !== 0 ? 'block' : 'none';
+    }
+
+    // === Feature 7: Budget Tracker ===
+    function calcBudget(cheapestMonthly, expensiveMonthly) {
+      const budget = parseFloat(document.getElementById('lcc-budget').value) || 0;
+      const section = document.getElementById('lcc-budget-section');
+      if (budget <= 0) { section.style.display = 'none'; return; }
+      section.style.display = 'block';
+      const spend = cheapestMonthly;
+      const util = (spend / budget) * 100;
+      const fill = document.getElementById('lcc-budget-fill');
+      const alert = document.getElementById('lcc-budget-alert');
+      fill.style.width = Math.min(util, 100) + '%';
+      fill.style.background = util > 100 ? '#dc2626' : util > 75 ? '#d97706' : '#059669';
+      document.getElementById('lcc-budget-val').textContent = '$' + budget.toFixed(2);
+      document.getElementById('lcc-spend-val').textContent = '$' + spend.toFixed(2);
+      document.getElementById('lcc-util-val').textContent = util.toFixed(1) + '%';
+      const status = document.getElementById('lcc-budget-status');
+      if (util > 100) {
+        status.textContent = '⚠️ Over Budget'; status.style.color = '#dc2626';
+        alert.className = 'it-alert it-alert-bad';
+        alert.innerHTML = `Over budget by <strong>$${(spend - budget).toFixed(2)}</strong>. Consider using cheaper models, batch API, or prompt caching to reduce costs. The most expensive option would exceed budget by $${(expensiveMonthly - budget).toFixed(2)}.`;
+      } else if (util > 75) {
+        status.textContent = '⚠️ Near Limit'; status.style.color = '#d97706';
+        alert.className = 'it-alert it-alert-warn';
+        alert.innerHTML = `Using <strong>${util.toFixed(1)}%</strong> of budget. At this rate, you'll spend $${(spend * 12).toFixed(2)}/year. Consider batch API for 50% savings.`;
+      } else {
+        status.textContent = '✓ Within Budget'; status.style.color = '#059669';
+        alert.className = 'it-alert it-alert-good';
+        alert.innerHTML = `Only using <strong>${util.toFixed(1)}%</strong> of budget. You have $${(budget - spend).toFixed(2)} headroom. Could upgrade to a more capable model if needed.`;
+      }
+    }
+
+    // === Feature 8: Embedding Cost ===
+    function calcEmbedding() {
+      const docs = parseFloat(document.getElementById('lcc-emb-docs').value) || 0;
+      const chunkSize = parseFloat(document.getElementById('lcc-emb-chunk-size').value) || 500;
+      const provider = document.getElementById('lcc-emb-provider').value;
+      const prices = { 'openai': 0.02, 'openai-large': 0.13, 'cohere': 0.10, 'google': 0.025 };
+      const pricePerM = prices[provider] || 0.02;
+      const totalTokens = docs * chunkSize;
+      const cost = (totalTokens / 1_000_000) * pricePerM;
+      const monthlyReembed = cost * 0.1; // assume 10% re-embedded monthly
+      document.getElementById('lcc-emb-tokens').textContent = totalTokens.toLocaleString();
+      document.getElementById('lcc-emb-cost').innerHTML = '$' + cost.toFixed(4);
+      document.getElementById('lcc-emb-monthly').innerHTML = '$' + monthlyReembed.toFixed(4);
+      document.getElementById('lcc-emb-per-doc').innerHTML = '$' + (cost / docs).toFixed(6);
+      document.getElementById('lcc-emb-insight').innerHTML = `Embedding ${docs.toLocaleString()} docs (${chunkSize} tokens each) = ${totalTokens.toLocaleString()} tokens. One-time cost: $${cost.toFixed(4)}. Estimated monthly re-embedding (10% churn): $${monthlyReembed.toFixed(4)}. For large-scale RAG, consider self-hosted embeddings (e.g. BGE, E5) for zero per-token cost.`;
+      document.getElementById('lcc-emb-section').style.display = 'block';
+    }
+
+    // === Feature 9: Fine-tuning Cost ===
+    function calcFineTuning(apiMonthlyCheap) {
+      const examples = parseFloat(document.getElementById('lcc-ft-examples').value) || 0;
+      const avgTokens = parseFloat(document.getElementById('lcc-ft-avg-tokens').value) || 0;
+      const ftProvider = document.getElementById('lcc-ft-provider').value;
+      const totalTokens = examples * avgTokens;
+      let trainCost = 0, hostMonthly = 0;
+      if (ftProvider === 'openai-ft') { trainCost = (totalTokens / 1_000_000) * 8; hostMonthly = 0; }
+      else if (ftProvider === 'openai-host') { trainCost = (totalTokens / 1_000_000) * 8; hostMonthly = 3 * 24 * 30; }
+      else if (ftProvider === 'self-host') { trainCost = (totalTokens / 1_000_000) * 2; hostMonthly = 0.5 * 24 * 30; }
+      const breakEven = apiMonthlyCheap > 0 && hostMonthly > 0 ? (trainCost / (apiMonthlyCheap - hostMonthly)) : null;
+      document.getElementById('lcc-ft-tokens').textContent = totalTokens.toLocaleString();
+      document.getElementById('lcc-ft-train-cost').innerHTML = '$' + trainCost.toFixed(2);
+      document.getElementById('lcc-ft-host-cost').innerHTML = '$' + hostMonthly.toFixed(2);
+      document.getElementById('lcc-ft-breakeven').textContent = breakEven ? breakEven.toFixed(1) + ' mo' : 'N/A';
+      document.getElementById('lcc-ft-insight').innerHTML = `Training on ${examples.toLocaleString()} examples (${totalTokens.toLocaleString()} tokens) costs $${trainCost.toFixed(2)}. ${hostMonthly > 0 ? `Hosting: $${hostMonthly.toFixed(2)}/mo. ` : ''}${breakEven ? `Break-even vs API at ${breakEven.toFixed(1)} months.` : 'Self-hosted fine-tuning eliminates per-token costs but requires GPU infrastructure.'}`;
+      document.getElementById('lcc-ft-section').style.display = 'block';
+    }
+
+    // === Feature 10: Multi-model Routing ===
+    function calcRouting(monthlyCalls, inputTokens, outputTokens) {
+      const simplePct = parseFloat(document.getElementById('lcc-route-simple').value) || 0;
+      const mediumPct = parseFloat(document.getElementById('lcc-route-medium').value) || 0;
+      const complexPct = parseFloat(document.getElementById('lcc-route-complex').value) || 0;
+      const total = simplePct + mediumPct + complexPct;
+      if (total !== 100) { document.getElementById('lcc-route-section').style.display = 'none'; return; }
+      const tiers = [
+        { name: 'Simple (classification, extraction)', pct: simplePct, model: 'gpt-4o-mini', price: pricing['gpt-4o-mini'] },
+        { name: 'Medium (summarization, Q&A)', pct: mediumPct, model: 'gemini-2.5-flash', price: pricing['gemini-2.5-flash'] },
+        { name: 'Complex (reasoning, coding)', pct: complexPct, model: 'claude-sonnet-4', price: pricing['claude-sonnet-4'] },
+      ];
+      const allPremium = pricing['claude-opus-4'];
+      let totalRouted = 0, totalPremium = 0;
+      const rows = tiers.map(t => {
+        const calls = monthlyCalls * t.pct / 100;
+        const inCost = (inputTokens / 1_000_000) * t.price.input * calls;
+        const outCost = (outputTokens / 1_000_000) * t.price.output * calls;
+        const cost = inCost + outCost;
+        const premInCost = (inputTokens / 1_000_000) * allPremium.input * calls;
+        const premOutCost = (outputTokens / 1_000_000) * allPremium.output * calls;
+        const premCost = premInCost + premOutCost;
+        totalRouted += cost; totalPremium += premCost;
+        return `<tr><td>${t.name}</td><td>${t.pct}%</td><td>${t.price.name}</td><td>$${cost.toFixed(2)}</td><td style="color:#059669;">-$${(premCost - cost).toFixed(2)}</td></tr>`;
+      });
+      document.getElementById('lcc-route-body').innerHTML = rows.join('') +
+        `<tr class="it-highlight-row"><td><strong>Total</strong></td><td>100%</td><td>—</td><td><strong>$${totalRouted.toFixed(2)}</strong></td><td style="color:#059669;"><strong>-$${(totalPremium - totalRouted).toFixed(2)}</strong></td></tr>`;
+      document.getElementById('lcc-route-insight').innerHTML = `Routing ${simplePct}% to mini, ${mediumPct}% to flash, ${complexPct}% to Sonnet saves <strong>$${(totalPremium - totalRouted).toFixed(2)}/month</strong> (${(((totalPremium - totalRouted) / totalPremium) * 100).toFixed(0)}%) vs using Opus for all calls.`;
+      document.getElementById('lcc-route-section').style.display = 'block';
+    }
+
+    // === Feature 9b: Self-hosting TCO ===
+    function calcSelfHosting(cheapestMonthly) {
+      const gpuOptions = [
+        { name: 'API (cheapest model)', setup: 0, monthly: cheapestMonthly },
+        { name: 'Self-host Llama 3 70B (2× A100)', setup: 0, monthly: 2 * 3.0 * 24 * 30 },
+        { name: 'Self-host Llama 3 8B (1× A10)', setup: 0, monthly: 1 * 1.0 * 24 * 30 },
+        { name: 'Self-host Mistral 7B (1× A10)', setup: 0, monthly: 1 * 1.0 * 24 * 30 },
+      ];
+      const rows = gpuOptions.map(o => {
+        const tco = o.setup + o.monthly * 12;
+        const breakeven = o.monthly < cheapestMonthly ? `Save $${((cheapestMonthly - o.monthly) * 12).toFixed(0)}/yr` : 'More expensive';
+        return `<tr><td>${o.name}</td><td>$${o.setup.toFixed(0)}</td><td>$${o.monthly.toFixed(2)}</td><td>$${tco.toFixed(2)}</td><td>${breakeven}</td></tr>`;
+      });
+      document.getElementById('lcc-selfhost-body').innerHTML = rows.join('');
+      const cheapest = gpuOptions.reduce((a, b) => a.monthly < b.monthly ? a : b);
+      document.getElementById('lcc-selfhost-insight').innerHTML = `Cheapest option: <strong>${cheapest.name}</strong> at $${cheapest.monthly.toFixed(2)}/mo. Self-hosting breaks even when monthly API spend exceeds GPU rental cost. For 24/7 inference, self-hosting 8B models on A10 GPUs is often cheaper than API for >${Math.round(1.0 * 24 * 30 / cheapestMonthly * 100)}% utilization.`;
+      document.getElementById('lcc-selfhost-section').style.display = 'block';
+    }
+
+    // === Extended calculate with all features ===
+    function calculateFull() {
+      calculate();
+      const cheapest = parseFloat(document.querySelector('#lcc-table-body tr td.it-highlight').textContent.replace(/[^0-9.]/g, '')) || 0;
+      const allRows = document.querySelectorAll('#lcc-table-body tr');
+      const expensiveEl = allRows[allRows.length - 1].querySelector('td.it-highlight');
+      const expensive = expensiveEl ? parseFloat(expensiveEl.textContent.replace(/[^0-9.]/g, '')) || 0 : 0;
+      const inputTokens = parseFloat(document.getElementById('lcc-input-tokens').value) || 0;
+      const outputTokens = parseFloat(document.getElementById('lcc-output-tokens').value) || 0;
+      const callsDay = parseFloat(document.getElementById('lcc-calls-day').value) || 0;
+      const daysMonth = parseFloat(document.getElementById('lcc-days-month').value) || 30;
+      const monthlyCalls = callsDay * daysMonth;
+      calcGrowthProjection(cheapest, expensive);
+      calcBudget(cheapest, expensive);
+      calcEmbedding();
+      calcFineTuning(cheapest);
+      calcRouting(monthlyCalls, inputTokens, outputTokens);
+      calcSelfHosting(cheapest);
+    }
+
+    document.getElementById('lcc-calculate').addEventListener('click', calculateFull);
+    document.getElementById('lcc-reset').addEventListener('click', () => {
+      document.getElementById('lcc-results').classList.remove('show');
+      document.querySelectorAll('#lcc-models .it-checkbox-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('input').checked = false;
+      });
+      ['claude-sonnet-4', 'gpt-4o', 'gemini-2.5-pro'].forEach(id => {
+        const el = document.querySelector(`[data-model="${id}"]`);
+        if (el) toggleModel(el);
+      });
+    });
+})();
+</script>

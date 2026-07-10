@@ -1,0 +1,477 @@
+---
+/**
+ * ODD Boundary Definer — Interactive tool
+ * Define Operational Design Domain boundaries for autonomous driving systems
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="odd-definer">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🗺️</div>
+      <div>
+        <h2>ODD Boundary Definer</h2>
+        <p>Define and document Operational Design Domain boundaries per SAE J3016</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Automation Level (SAE J3016)</label>
+          <select class="it-select" id="odd-level">
+            <option value="2">Level 2 — Partial Driving Automation</option>
+            <option value="3">Level 3 — Conditional Driving Automation</option>
+            <option value="4">Level 4 — High Driving Automation</option>
+            <option value="5">Level 5 — Full Driving Automation</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">System Name</label>
+          <input type="text" class="it-input" id="odd-name" value="Highway Pilot v2.0" />
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Speed Range</label>
+        <div class="it-row">
+          <div class="it-field"><input type="number" class="it-input" id="odd-speed-min" value="0" min="0" placeholder="Min (km/h)" /></div>
+          <div class="it-field"><input type="number" class="it-input" id="odd-speed-max" value="130" min="0" placeholder="Max (km/h)" /></div>
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Supported Road Types</label>
+        <div class="it-checkbox-group" id="odd-roads">
+          <label class="it-checkbox-item" data-r="highway"><input type="checkbox" />Highway</label>
+          <label class="it-checkbox-item" data-r="urban"><input type="checkbox" />Urban Arterial</label>
+          <label class="it-checkbox-item" data-r="residential"><input type="checkbox" />Residential</label>
+          <label class="it-checkbox-item" data-r="rural"><input type="checkbox" />Rural Road</label>
+          <label class="it-checkbox-item" data-r="parking"><input type="checkbox" />Parking Lot</label>
+          <label class="it-checkbox-item" data-r="tunnel"><input type="checkbox" />Tunnel</label>
+          <label class="it-checkbox-item" data-r="bridge"><input type="checkbox" />Bridge</label>
+          <label class="it-checkbox-item" data-r="roundabout"><input type="checkbox" />Roundabout</label>
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Weather Conditions (Supported)</label>
+        <div class="it-checkbox-group" id="odd-weather">
+          <label class="it-checkbox-item" data-w="clear"><input type="checkbox" />Clear</label>
+          <label class="it-checkbox-item" data-w="cloudy"><input type="checkbox" />Cloudy</label>
+          <label class="it-checkbox-item" data-w="rain"><input type="checkbox" />Light Rain</label>
+          <label class="it-checkbox-item" data-w="snow"><input type="checkbox" />Light Snow</label>
+          <label class="it-checkbox-item" data-w="fog"><input type="checkbox" />Fog</label>
+          <label class="it-checkbox-item" data-w="night"><input type="checkbox" />Night</label>
+          <label class="it-checkbox-item" data-w="heavy_rain"><input type="checkbox" />Heavy Rain</label>
+          <label class="it-checkbox-item" data-w="storm"><input type="checkbox" />Storm</label>
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Geofence Radius <span class="it-label-hint">(km, 0 = unlimited)</span></label>
+          <input type="number" class="it-input" id="odd-geofence" value="0" min="0" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Min Visibility <span class="it-label-hint">(m)</span></label>
+          <input type="number" class="it-input" id="odd-visibility" value="100" min="10" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="odd-generate">Generate ODD Document</button>
+        <button class="it-btn it-btn-secondary" id="odd-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="odd-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="odd-results">
+      <div class="it-results-card">
+        <div class="it-results-title">ODD Definition Document</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">ODD Coverage</div>
+            <div class="it-stat-value" id="odd-coverage">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Road Types</div>
+            <div class="it-stat-value" id="odd-road-count">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Weather Modes</div>
+            <div class="it-stat-value" id="odd-weather-count">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Restrictions</div>
+            <div class="it-stat-value" id="odd-restrictions">0</div>
+          </div>
+        </div>
+
+        <div id="odd-document"></div>
+        <div class="it-alert" id="odd-alert"></div>
+      </div>
+
+      <!-- Feature 1: ODD Coverage Radar -->
+      <div class="it-results-card" id="odd-radar-section" style="display:none;">
+        <div class="it-results-title">📐 ODD Coverage Radar Chart</div>
+        <canvas id="odd-radar-canvas" width="400" height="400" style="width:100%;max-width:400px;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin:0 auto 0.75rem;display:block;"></canvas>
+        <div id="odd-radar-list"></div>
+      </div>
+
+      <!-- Feature 2: Disengagement Triggers -->
+      <div class="it-results-card" id="odd-disengage-section" style="display:none;">
+        <div class="it-results-title">⚠️ Disengagement Trigger Taxonomy</div>
+        <div id="odd-disengage-list"></div>
+      </div>
+
+      <!-- Feature 3: Sensor Performance Envelope -->
+      <div class="it-results-card" id="odd-sensor-section" style="display:none;">
+        <div class="it-results-title">📡 Sensor Performance Envelope per ODD Dimension</div>
+        <div id="odd-sensor-list"></div>
+      </div>
+
+      <!-- Feature 4: ODD-to-Scenario Mapping -->
+      <div class="it-results-card" id="odd-scenario-section" style="display:none;">
+        <div class="it-results-title">🧪 ODD-to-Scenario Test Mapping</div>
+        <div id="odd-scenario-list"></div>
+      </div>
+
+      <!-- Feature 5: Geofence Visualization -->
+      <div class="it-results-card" id="odd-geo-section" style="display:none;">
+        <div class="it-results-title">🌍 Geofence Visualization</div>
+        <canvas id="odd-geo-canvas" width="500" height="400" style="width:100%;max-width:500px;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin:0 auto 0.75rem;display:block;"></canvas>
+        <div id="odd-geo-list"></div>
+      </div>
+
+      <!-- Feature 6: ODD Comparison Matrix -->
+      <div class="it-results-card" id="odd-compare-section" style="display:none;">
+        <div class="it-results-title">📊 ODD Comparison with Reference Systems</div>
+        <div id="odd-compare-list"></div>
+      </div>
+
+      <!-- Feature 7: Safety Case (GSN) -->
+      <div class="it-results-card" id="odd-gsn-section" style="display:none;">
+        <div class="it-results-title">🛡️ Safety Case Argument (GSN Format)</div>
+        <div id="odd-gsn-list"></div>
+      </div>
+
+      <!-- Feature 8: Runtime Monitoring Checklist -->
+      <div class="it-results-card" id="odd-monitor-section" style="display:none;">
+        <div class="it-results-title">📋 ODD Monitoring & Runtime Verification Checklist</div>
+        <div id="odd-monitor-list"></div>
+      </div>
+
+      <!-- Feature 9: Regulatory Cross-Reference -->
+      <div class="it-results-card" id="odd-reg-section" style="display:none;">
+        <div class="it-results-title">📑 Regulatory Compliance Cross-Reference</div>
+        <div id="odd-reg-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  function toggle(el) { el.classList.toggle('active'); el.querySelector('input').checked = el.classList.contains('active'); }
+  document.querySelectorAll('#odd-roads .it-checkbox-item').forEach(el => el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); }));
+  document.querySelectorAll('#odd-weather .it-checkbox-item').forEach(el => el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); }));
+  ['highway'].forEach(id => { const el = document.querySelector(`#odd-roads [data-r="${id}"]`); if (el) toggle(el); });
+  ['clear', 'cloudy', 'night'].forEach(id => { const el = document.querySelector(`#odd-weather [data-w="${id}"]`); if (el) toggle(el); });
+
+  function generate() {
+    const level = document.getElementById('odd-level').value;
+    const name = document.getElementById('odd-name').value || 'AV System';
+    const speedMin = parseFloat(document.getElementById('odd-speed-min').value) || 0;
+    const speedMax = parseFloat(document.getElementById('odd-speed-max').value) || 130;
+    const geofence = parseFloat(document.getElementById('odd-geofence').value) || 0;
+    const visibility = parseFloat(document.getElementById('odd-visibility').value) || 100;
+
+    const roads = [...document.querySelectorAll('#odd-roads .it-checkbox-item.active')].map(el => el.getAttribute('data-r'));
+    const weather = [...document.querySelectorAll('#odd-weather .it-checkbox-item.active')].map(el => el.getAttribute('data-w'));
+
+    if (roads.length === 0) { alert('Select at least one road type.'); return; }
+    if (weather.length === 0) { alert('Select at least one weather condition.'); return; }
+
+    // Calculate ODD coverage (simplified metric)
+    const roadCoverage = roads.length / 8 * 40;
+    const weatherCoverage = weather.length / 8 * 30;
+    const speedCoverage = Math.min(speedMax / 200, 1) * 20;
+    const geoCoverage = geofence === 0 ? 10 : Math.min(geofence / 100, 1) * 10;
+    const totalCoverage = Math.round(roadCoverage + weatherCoverage + speedCoverage + geoCoverage);
+
+    const restrictions = [];
+    if (!weather.includes('heavy_rain')) restrictions.push('Heavy rain — system disengagement required');
+    if (!weather.includes('snow')) restrictions.push('Snow accumulation > 5cm — not supported');
+    if (!weather.includes('fog')) restrictions.push('Fog with visibility < ' + visibility + 'm — not supported');
+    if (!roads.includes('parking')) restrictions.push('Parking lot navigation — not supported');
+    if (geofence > 0) restrictions.push(`Geofenced to ${geofence} km radius from deployment center`);
+    if (speedMax < 130) restrictions.push(`Speed limited to ${speedMax} km/h maximum`);
+    if (!weather.includes('storm')) restrictions.push('Severe storm conditions — system disengagement required');
+
+    document.getElementById('odd-coverage').innerHTML = totalCoverage + '<span class="it-stat-unit">%</span>';
+    document.getElementById('odd-road-count').textContent = roads.length;
+    document.getElementById('odd-weather-count').textContent = weather.length;
+    document.getElementById('odd-restrictions').textContent = restrictions.length;
+
+    const levelLabels = { '2': 'Level 2 — Partial', '3': 'Level 3 — Conditional', '4': 'Level 4 — High', '5': 'Level 5 — Full' };
+
+    const doc = document.getElementById('odd-document');
+    doc.innerHTML = `
+      <div style="padding:1.5rem;background:var(--tl-bg);border-radius:var(--tl-radius-sm);margin-bottom:1rem;">
+        <h3 style="margin:0 0 0.5rem;font-size:1.125rem;">${name}</h3>
+        <p style="font-size:0.8125rem;color:var(--tl-text-muted);margin:0;">SAE J3016 ${levelLabels[level]} | Generated: ${new Date().toISOString().split('T')[0]}</p>
+      </div>
+      <table class="it-table">
+        <thead><tr><th>ODD Dimension</th><th>Specification</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Automation Level</strong></td><td>SAE Level ${level} — ${levelLabels[level]}</td></tr>
+          <tr><td><strong>Speed Range</strong></td><td>${speedMin} – ${speedMax} km/h</td></tr>
+          <tr><td><strong>Road Types</strong></td><td>${roads.map(r => r.charAt(0).toUpperCase() + r.slice(1)).join(', ')}</td></tr>
+          <tr><td><strong>Weather Conditions</strong></td><td>${weather.map(w => w.split('_').map(x => x.charAt(0).toUpperCase() + x.slice(1)).join(' ')).join(', ')}</td></tr>
+          <tr><td><strong>Minimum Visibility</strong></td><td>${visibility} m</td></tr>
+          <tr><td><strong>Geofence</strong></td><td>${geofence === 0 ? 'Unlimited' : geofence + ' km radius'}</td></tr>
+          <tr><td><strong>Time of Day</strong></td><td>${weather.includes('night') ? 'Day and Night' : 'Daytime only'}</td></tr>
+        </tbody>
+      </table>
+      <div class="it-results-title" style="margin-top:1.5rem;">Restrictions & Disengagement Conditions</div>
+      ${restrictions.length > 0 ? `<table class="it-table"><thead><tr><th>#</th><th>Restriction</th></tr></thead><tbody>
+        ${restrictions.map((r, i) => `<tr><td>${i + 1}</td><td>${r}</td></tr>`).join('')}
+      </tbody></table>` : '<div class="it-alert it-alert-info">No restrictions — full ODD coverage.</div>'}
+    `;
+
+    const alert = document.getElementById('odd-alert');
+    if (totalCoverage >= 60) {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>Broad ODD coverage (${totalCoverage}%).</strong> This system can operate in diverse conditions. Ensure thorough validation testing across all defined scenarios.`;
+    } else if (totalCoverage >= 30) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>Moderate ODD coverage (${totalCoverage}%).</strong> The system has ${restrictions.length} restrictions. Consider expanding ODD gradually after safety validation in current scope.`;
+    } else {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>Limited ODD coverage (${totalCoverage}%).</strong> The system is restricted to narrow operating conditions with ${restrictions.length} limitations. This is typical for early-stage L4 deployments — expand cautiously.`;
+    }
+
+    document.getElementById('odd-results').classList.add('show');
+
+    // === Feature 1: ODD Coverage Radar Chart ===
+    const radarCanvas = document.getElementById('odd-radar-canvas');
+    const radCtx = radarCanvas.getContext('2d');
+    const radW = radarCanvas.width, radH = radarCanvas.height;
+    radCtx.fillStyle = '#ebedf5'; radCtx.fillRect(0, 0, radW, radH);
+    const radCx = radW / 2, radCy = radH / 2, radR = Math.min(radW, radH) / 2 - 50;
+    const dimensions = ['Road Types', 'Weather', 'Speed Range', 'Geofence', 'Visibility', 'Time of Day'];
+    const dimValues = [roads.length / 8, weather.length / 8, speedMax / 200, geofence === 0 ? 1 : geofence / 100, visibility / 500, weather.includes('night') ? 1 : 0.5];
+    // Draw grid
+    for (let level = 1; level <= 4; level++) {
+      radCtx.strokeStyle = 'rgba(15,23,42,0.08)'; radCtx.lineWidth = 1;
+      radCtx.beginPath();
+      for (let i = 0; i < dimensions.length; i++) {
+        const angle = (i / dimensions.length) * Math.PI * 2 - Math.PI / 2;
+        const r = radR * level / 4;
+        const x = radCx + Math.cos(angle) * r, y = radCy + Math.sin(angle) * r;
+        if (i === 0) radCtx.moveTo(x, y); else radCtx.lineTo(x, y);
+      }
+      radCtx.closePath(); radCtx.stroke();
+    }
+    // Draw axes
+    dimensions.forEach((dim, i) => {
+      const angle = (i / dimensions.length) * Math.PI * 2 - Math.PI / 2;
+      radCtx.strokeStyle = 'rgba(15,23,42,0.1)';
+      radCtx.beginPath(); radCtx.moveTo(radCx, radCy); radCtx.lineTo(radCx + Math.cos(angle) * radR, radCy + Math.sin(angle) * radR); radCtx.stroke();
+      radCtx.fillStyle = '#1e293b'; radCtx.font = '10px sans-serif'; radCtx.textAlign = 'center';
+      radCtx.fillText(dim, radCx + Math.cos(angle) * (radR + 20), radCy + Math.sin(angle) * (radR + 20));
+    });
+    // Draw data
+    radCtx.fillStyle = 'rgba(139,92,246,0.2)'; radCtx.strokeStyle = '#8b5cf6'; radCtx.lineWidth = 2;
+    radCtx.beginPath();
+    dimValues.forEach((v, i) => {
+      const angle = (i / dimensions.length) * Math.PI * 2 - Math.PI / 2;
+      const r = radR * Math.min(v, 1);
+      const x = radCx + Math.cos(angle) * r, y = radCy + Math.sin(angle) * r;
+      if (i === 0) radCtx.moveTo(x, y); else radCtx.lineTo(x, y);
+    });
+    radCtx.closePath(); radCtx.fill(); radCtx.stroke();
+    document.getElementById('odd-radar-list').innerHTML = `<div class="it-alert it-alert-info">Radar chart shows ODD coverage across 6 dimensions. Larger area = broader ODD. Narrow radar indicates restricted deployment. Ideal for L4: broad road/weather, moderate speed. For L5: full coverage in all dimensions.</div>`;
+    document.getElementById('odd-radar-section').style.display = 'block';
+
+    // === Feature 2: Disengagement Trigger Taxonomy ===
+    const triggers = [
+      { cat: 'Environmental', conditions: restrictions.filter(r => r.includes('rain') || r.includes('snow') || r.includes('fog') || r.includes('storm')), action: 'Controlled stop in safe lane' },
+      { cat: 'Infrastructure', conditions: restrictions.filter(r => r.includes('Parking') || r.includes('Geofenced')), action: 'Driver takeover or MRC' },
+      { cat: 'Operational', conditions: restrictions.filter(r => r.includes('Speed')), action: 'Speed limiter active' },
+      { cat: 'System', conditions: ['Sensor degradation', 'Compute overload', 'Communication loss'], action: 'Fallback to minimal risk condition' },
+      { cat: 'External', conditions: ['Emergency vehicle approach', 'Police traffic stop', 'Construction zone'], action: 'Pull over and yield' },
+    ];
+    document.getElementById('odd-disengage-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Category</th><th>Trigger Conditions</th><th>Fallback Action</th></tr></thead><tbody>
+        ${triggers.map(t => `<tr><td><strong>${t.cat}</strong></td><td style="font-size:0.8125rem;">${t.conditions.length > 0 ? t.conditions.map(c => `<div>• ${c}</div>`).join('') : '<span style="color:#059669;">None defined</span>'}</td><td style="font-size:0.8125rem;">${t.action}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Disengagement triggers categorized per ISO 21448 (SOTIF) and SAE J3016 fallback taxonomy. MRC = Minimal Risk Condition (safe stop). Each trigger must have: detection criterion, response time budget, fallback action, and logging requirement.</div>
+    `;
+    document.getElementById('odd-disengage-section').style.display = 'block';
+
+    // === Feature 3: Sensor Performance Envelope ===
+    const sensorEnv = [
+      { sensor: 'Camera', clear: '100%', rain: '70%', fog: '30%', snow: '40%', night: '50%' },
+      { sensor: 'LiDAR', clear: '100%', rain: '60%', fog: '20%', snow: '30%', night: '100%' },
+      { sensor: 'Radar', clear: '100%', rain: '90%', fog: '95%', snow: '80%', night: '100%' },
+      { sensor: 'Ultrasonic', clear: '100%', rain: '85%', fog: '100%', snow: '70%', night: '100%' },
+    ];
+    document.getElementById('odd-sensor-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Sensor</th><th>Clear</th><th>Rain</th><th>Fog</th><th>Snow</th><th>Night</th><th>Supported Weather</th></tr></thead><tbody>
+        ${sensorEnv.map(s => {
+          const supported = weather.map(w => s[w] || s.clear || '100%');
+          const minPerf = Math.min(...supported.map(p => parseInt(p)));
+          return `<tr><td><strong>${s.sensor}</strong></td><td>${s.clear}</td><td style="color:${parseInt(s.rain) < 70 ? '#d97706' : '#059669'};">${s.rain}</td><td style="color:${parseInt(s.fog) < 50 ? '#dc2626' : '#d97706'};">${s.fog}</td><td style="color:${parseInt(s.snow) < 50 ? '#dc2626' : '#d97706'};">${s.snow}</td><td>${s.night}</td><td style="font-weight:700;color:${minPerf < 50 ? '#dc2626' : minPerf < 70 ? '#d97706' : '#059669'};">Min ${minPerf}%</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Sensor performance degrades differently per weather. Camera worst in fog (30%), LiDAR worst in fog (20%). Radar most robust across conditions. If min performance < 50%, add redundant sensor or restrict ODD. Fusion of camera+LiDAR+radar provides >90% availability in most conditions.</div>
+    `;
+    document.getElementById('odd-sensor-section').style.display = 'block';
+
+    // === Feature 4: ODD-to-Scenario Mapping ===
+    const scenarioMap = [];
+    roads.forEach(r => {
+      weather.forEach(w => {
+        scenarioMap.push({ road: r, weather: w, speed: speedMax + ' km/h', tests: ['Normal driving', 'Obstacle avoidance', 'Lane keeping', 'Emergency brake'] });
+      });
+    });
+    const totalScenarios = scenarioMap.length * 4;
+    document.getElementById('odd-scenario-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Road Type</th><th>Weather</th><th>Max Speed</th><th>Required Tests</th></tr></thead><tbody>
+        ${scenarioMap.slice(0, 15).map(s => `<tr><td>${s.road}</td><td>${s.weather}</td><td>${s.speed}</td><td style="font-size:0.8125rem;">${s.tests.join(', ')}</td></tr>`).join('')}
+        ${scenarioMap.length > 15 ? `<tr><td colspan="4" style="text-align:center;color:var(--tl-text-muted);">... and ${scenarioMap.length - 15} more combinations</td></tr>` : ''}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${scenarioMap.length} road×weather combinations × 4 test types = ${totalScenarios} total test scenarios needed for full ODD validation. Use with AV Scenario Test Generator to create test cases. Prioritize critical combinations (night + rain, fog + highway).</div>
+    `;
+    document.getElementById('odd-scenario-section').style.display = 'block';
+
+    // === Feature 5: Geofence Visualization ===
+    const geoCanvas = document.getElementById('odd-geo-canvas');
+    const gCtx = geoCanvas.getContext('2d');
+    const gW = geoCanvas.width, gH = geoCanvas.height;
+    gCtx.fillStyle = '#ebedf5'; gCtx.fillRect(0, 0, gW, gH);
+    // Draw grid (simulated map)
+    gCtx.strokeStyle = 'rgba(15,23,42,0.06)'; gCtx.lineWidth = 1;
+    for (let i = 0; i < gW; i += 30) { gCtx.beginPath(); gCtx.moveTo(i, 0); gCtx.lineTo(i, gH); gCtx.stroke(); }
+    for (let i = 0; i < gH; i += 30) { gCtx.beginPath(); gCtx.moveTo(0, i); gCtx.lineTo(gW, i); gCtx.stroke(); }
+    // Draw roads
+    gCtx.strokeStyle = '#94a3b8'; gCtx.lineWidth = 3;
+    gCtx.beginPath(); gCtx.moveTo(0, gH / 2); gCtx.lineTo(gW, gH / 2); gCtx.stroke();
+    gCtx.beginPath(); gCtx.moveTo(gW / 2, 0); gCtx.lineTo(gW / 2, gH); gCtx.stroke();
+    gCtx.beginPath(); gCtx.moveTo(0, gH / 4); gCtx.lineTo(gW, gH / 3); gCtx.stroke();
+    // Draw geofence
+    const gCx = gW / 2, gCy = gH / 2;
+    if (geofence > 0) {
+      const drawR = Math.min(geofence / 100 * (Math.min(gW, gH) / 2 - 20), Math.min(gW, gH) / 2 - 20);
+      gCtx.fillStyle = 'rgba(139,92,246,0.1)'; gCtx.strokeStyle = '#8b5cf6'; gCtx.lineWidth = 2;
+      gCtx.beginPath(); gCtx.arc(gCx, gCy, drawR, 0, Math.PI * 2); gCtx.fill(); gCtx.stroke();
+      gCtx.fillStyle = '#8b5cf6'; gCtx.font = '11px sans-serif'; gCtx.textAlign = 'center';
+      gCtx.fillText(`${geofence} km radius`, gCx, gCy - drawR - 5);
+    } else {
+      gCtx.fillStyle = '#059669'; gCtx.font = '12px sans-serif'; gCtx.textAlign = 'center';
+      gCtx.fillText('Unlimited Geofence (Global)', gCx, gCy - 10);
+    }
+    // Center marker
+    gCtx.fillStyle = '#dc2626'; gCtx.beginPath(); gCtx.arc(gCx, gCy, 5, 0, Math.PI * 2); gCtx.fill();
+    gCtx.fillStyle = '#1e293b'; gCtx.font = '10px sans-serif';
+    gCtx.fillText('Deployment Center', gCx, gCy + 20);
+    document.getElementById('odd-geo-list').innerHTML = `<div class="it-alert it-alert-info">${geofence > 0 ? `Geofenced to ${geofence} km radius from deployment center. Vehicle must disengage when exiting boundary. Use GPS + HD map for boundary enforcement. OTA updates can expand geofence gradually.` : 'No geofence restriction — system can operate globally within other ODD constraints. Ensure HD map coverage for all operational areas.'}</div>`;
+    document.getElementById('odd-geo-section').style.display = 'block';
+
+    // === Feature 6: ODD Comparison Matrix ===
+    const refODDs = [
+      { name: 'Waymo One (L4)', roads: 3, weather: 5, speedMax: 100, geofence: 120, coverage: 55 },
+      { name: 'Cruise Origin (L4)', roads: 2, weather: 4, speedMax: 40, geofence: 50, coverage: 35 },
+      { name: 'Tesla FSD (L2)', roads: 7, weather: 6, speedMax: 150, geofence: 0, coverage: 75 },
+      { name: 'Mercedes Drive Pilot (L3)', roads: 1, weather: 3, speedMax: 95, geofence: 0, coverage: 30 },
+      { name: 'Your System', roads: roads.length, weather: weather.length, speedMax, geofence, coverage: totalCoverage },
+    ];
+    document.getElementById('odd-compare-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>System</th><th>Road Types</th><th>Weather Modes</th><th>Max Speed</th><th>Geofence</th><th>Coverage</th></tr></thead><tbody>
+        ${refODDs.map(r => `<tr${r.name === 'Your System' ? ' class="it-highlight"' : ''}><td><strong>${r.name}</strong></td><td>${r.roads}</td><td>${r.weather}</td><td>${r.speedMax} km/h</td><td>${r.geofence === 0 ? 'Global' : r.geofence + ' km'}</td><td class="it-highlight">${r.coverage}%</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Comparison with deployed AV systems. Tesla FSD has broadest ODD (L2, driver responsible). Waymo/Cruise are narrower but fully autonomous (L4). Mercedes L3 is very narrow (highway only, <95 km/h). Your system at ${totalCoverage}% coverage — ${totalCoverage > 60 ? 'comparable to Tesla FSD scope' : totalCoverage > 30 ? 'similar to Waymo One scope' : 'narrower than Mercedes Drive Pilot'}.</div>
+    `;
+    document.getElementById('odd-compare-section').style.display = 'block';
+
+    // === Feature 7: Safety Case (GSN) ===
+    document.getElementById('odd-gsn-list').innerHTML = `
+      <div style="padding:1rem;background:var(--tl-bg);border-radius:var(--tl-radius-sm);font-family:var(--tl-mono);font-size:0.8125rem;line-height:1.6;">
+        <div style="font-weight:700;margin-bottom:0.5rem;">G1: System operates safely within defined ODD</div>
+        <div style="padding-left:1.5rem;">
+          <div>S1: ODD boundaries are explicitly defined and documented</div>
+          <div style="padding-left:1.5rem;color:var(--tl-text-muted);">→ Sn1: ${roads.length} road types, ${weather.length} weather modes, ${speedMin}-${speedMax} km/h, vis ≥${visibility}m</div>
+          <div>S2: System detects ODD exit conditions</div>
+          <div style="padding-left:1.5rem;color:var(--tl-text-muted);">→ Sn2: ${restrictions.length} disengagement triggers defined with fallback actions</div>
+          <div>S3: Fallback to MRC is guaranteed within ${level >= 4 ? '10s' : '15s'}</div>
+          <div style="padding-left:1.5rem;color:var(--tl-text-muted);">→ Sn3: MRC = controlled stop in safe lane or pull-over</div>
+          <div>S4: All ODD scenarios validated through simulation + real-world testing</div>
+          <div style="padding-left:1.5rem;color:var(--tl-text-muted);">→ Sn4: ${totalScenarios} test scenarios required for full coverage</div>
+          <div>S5: Sensor redundancy ensures perception availability</div>
+          <div style="padding-left:1.5rem;color:var(--tl-text-muted);">→ Sn5: Camera+LiDAR+Radar fusion, min performance ${Math.min(...sensorEnv.map(s => parseInt(s[s.weather[0] || 'clear'] || '100')))}% in supported weather</div>
+        </div>
+        <div style="font-weight:700;margin-top:0.5rem;">C1: Context — SAE Level ${level}, ${name}</div>
+      </div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">GSN (Goal Structuring Notation) safety case per ISO 21448 (SOTIF) and ISO 26262. Each Strategy (S) is supported by Solution (Sn) evidence. Context (C) bounds the argument. Submit to safety authority for approval.</div>
+    `;
+    document.getElementById('odd-gsn-section').style.display = 'block';
+
+    // === Feature 8: Runtime Monitoring Checklist ===
+    const checklist = [
+      { item: 'GPS position within geofence boundary', method: 'GNSS + HD map matching', freq: '10 Hz' },
+      { item: 'Current speed within ODD speed range', method: 'Vehicle speed sensor', freq: '100 Hz' },
+      { item: 'Weather classification matches supported set', method: 'Camera + wiper sensor + IMU', freq: '10 Hz' },
+      { item: 'Road type matches supported types', method: 'HD map + lane detection', freq: '10 Hz' },
+      { item: 'Visibility above minimum threshold', method: 'LiDAR max range check', freq: '10 Hz' },
+      { item: 'Sensor health and calibration status', method: 'Built-in self-test', freq: '1 Hz' },
+      { item: 'Compute resource utilization < 80%', method: 'OS monitoring', freq: '1 Hz' },
+      { item: 'Communication link available', method: 'Heartbeat to fleet manager', freq: '1 Hz' },
+      { item: 'No disengagement trigger active', method: 'Trigger evaluator state machine', freq: '100 Hz' },
+      { item: 'ODD exit prediction (time-to-boundary)', method: 'Trajectory prediction vs ODD limits', freq: '10 Hz' },
+    ];
+    document.getElementById('odd-monitor-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Monitor</th><th>Detection Method</th><th>Frequency</th><th>Status</th></tr></thead><tbody>
+        ${checklist.map(c => `<tr><td><strong>${c.item}</strong></td><td style="font-size:0.8125rem;">${c.method}</td><td style="font-family:var(--tl-mono);">${c.freq}</td><td><span style="color:#059669;">✓ Required</span></td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Runtime verification ensures the AV stays within its ODD during operation. If any monitor fails, system must transition to fallback. Time-to-boundary prediction enables graceful disengagement before ODD exit. Log all monitor states for safety analysis and regulatory reporting.</div>
+    `;
+    document.getElementById('odd-monitor-section').style.display = 'block';
+
+    // === Feature 9: Regulatory Cross-Reference ===
+    const regCrossRef = [
+      { reg: 'SAE J3016', desc: 'Taxonomy and definitions for driving automation', relevance: `Defines Level ${level} requirements`, status: '✓ Applied' },
+      { reg: 'SAE J3016_202104', desc: 'ODD definition format and fallback requirements', relevance: `ODD document generated per J3016 format`, status: '✓ Compliant' },
+      { reg: 'ISO 34503:2023', desc: 'Taxonomy for ODD for automated driving systems', relevance: `Road, weather, speed dimensions defined`, status: '✓ Applied' },
+      { reg: 'ISO 21448:2022 (SOTIF)', desc: 'Safety of the intended functionality', relevance: `${restrictions.length} disengagement triggers, ${totalScenarios} test scenarios`, status: '✓ Addressed' },
+      { reg: 'UN-R157 (ALKS)', desc: 'Automated Lane Keeping Systems regulation', relevance: level >= 3 ? `Level ${level} system — ALKS applicable` : 'Not applicable (L2)', status: level >= 3 ? '✓ Applicable' : 'N/A' },
+      { reg: 'ISO 26262', desc: 'Functional safety for road vehicles', relevance: 'Safety case GSN argument generated', status: '✓ Supported' },
+      { reg: 'NHTSA AV 3.0', desc: 'Automated Vehicles 3.0 guidance', relevance: 'ODD documentation and safety case', status: '✓ Aligned' },
+      { reg: 'Euro NCAP ADAS', desc: 'European consumer rating for ADAS', relevance: weather.includes('night') ? 'Night testing included' : 'Daytime only — add night testing', status: weather.includes('night') ? '✓ Covered' : '⚠️ Gap' },
+    ];
+    document.getElementById('odd-reg-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Standard/Regulation</th><th>Description</th><th>Relevance</th><th>Status</th></tr></thead><tbody>
+        ${regCrossRef.map(r => `<tr><td><strong>${r.reg}</strong></td><td style="font-size:0.8125rem;">${r.desc}</td><td style="font-size:0.8125rem;">${r.relevance}</td><td style="font-weight:700;color:${r.status.startsWith('✓') ? '#059669' : r.status === 'N/A' ? '#94a3b8' : '#d97706'};">${r.status}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${regCrossRef.filter(r => r.status.startsWith('✓')).length}/${regCrossRef.length} standards addressed. Gaps require additional documentation or testing. For type approval, UN-R157 compliance is mandatory for L3+ systems in EU. Submit ODD document with safety case to approval authority.</div>
+    `;
+    document.getElementById('odd-reg-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('odd-export').style.display = 'inline-flex';
+    document.getElementById('odd-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), system: name, level, speedRange: { min: speedMin, max: speedMax }, roads, weather, geofence, visibility, coverage: totalCoverage, restrictions, disengagementTriggers: triggers, sensorEnvelope: sensorEnv, scenarioMapping: { combinations: scenarioMap.length, totalTests: totalScenarios }, comparison: refODDs, safetyCase: 'GSN', monitoring: checklist, regulatory: regCrossRef };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'odd-definition-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('odd-generate').addEventListener('click', generate);
+  document.getElementById('odd-reset').addEventListener('click', () => {
+    document.getElementById('odd-results').classList.remove('show');
+  });
+})();
+</script>

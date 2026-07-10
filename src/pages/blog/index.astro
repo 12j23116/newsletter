@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './blog-styles.css';
+import BlogHero from '../../components/blog/BlogHero.astro';
+import BlogFeatured from '../../components/blog/BlogFeatured.astro';
+import BlogTrending from '../../components/blog/BlogTrending.astro';
+import BlogFilter from '../../components/blog/BlogFilter.astro';
+import BlogGrid from '../../components/blog/BlogGrid.astro';
+import BlogNewsletter from '../../components/blog/BlogNewsletter.astro';
+
+const title = 'Blog — Frontier Tech Analysis & Deep Dives';
+const description = 'Breaking analysis, expert commentary, and deep dives across 12 emerging technology frontiers — AI, fusion, quantum, biotech, cybersecurity, and more. Updated daily.';
+const keywords = 'emerging technology blog, AI news, fusion energy updates, quantum computing articles, biotech news, cybersecurity analysis, robotics blog, space technology, nuclear energy, energy storage';
+
+const blogLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'TechNanoAI Blog',
+  description: description,
+  url: 'https://technanoai.com/blog',
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+};
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="bl-page">
+    <BlogHero />
+    <BlogFeatured />
+    <BlogTrending />
+    <BlogFilter />
+    <BlogGrid />
+    <BlogNewsletter />
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(blogLd)} />
+</BaseLayout>
+
+<script>
+  const filterPills = document.querySelectorAll<HTMLElement>('.bl-filter-pill');
+  const cards = document.querySelectorAll<HTMLElement>('.bl-card');
+  const noResults = document.getElementById('bl-no-results');
+  const countEl = document.getElementById('bl-grid-count');
+  const paginationEl = document.getElementById('bl-pagination');
+  const searchInput = document.getElementById('bl-search-input') as HTMLInputElement | null;
+  const authorSelect = document.getElementById('bl-author-select') as HTMLSelectElement | null;
+  const sortSelect = document.getElementById('bl-sort-select') as HTMLSelectElement | null;
+  const grid = document.getElementById('bl-grid');
+  const PER_PAGE = 30;
+  let currentPage = 1;
+  let currentTopic = 'All';
+  let currentAuthor = 'all';
+  let currentSort = 'newest';
+  let searchTerm = '';
+  let searchTimer: ReturnType<typeof setTimeout> | null = null;
+
+  function getFilteredCards(): HTMLElement[] {
+    let visible: HTMLElement[] = [];
+    cards.forEach((card) => {
+      const cardTopic = card.dataset.topic || '';
+      const cardAuthor = card.dataset.author || '';
+      const cardTitle = (card.dataset.title || '').toLowerCase();
+      const cardTags = card.dataset.tags || '';
+      const cardExcerpt = card.dataset.excerpt || '';
+      const cardText = `${cardTitle} ${cardTags} ${cardExcerpt} ${cardAuthor.toLowerCase()} ${cardTopic.toLowerCase()}`;
+
+      const topicMatch = currentTopic === 'All' || currentTopic === cardTopic;
+      const authorMatch = currentAuthor === 'all' || currentAuthor === cardAuthor;
+      const searchMatch = !searchTerm || cardText.includes(searchTerm);
+
+      if (topicMatch && authorMatch && searchMatch) {
+        visible.push(card);
+      }
+    });
+
+    visible.sort((a, b) => {
+      switch (currentSort) {
+        case 'oldest':
+          return (a.dataset.date || '').localeCompare(b.dataset.date || '');
+        case 'shortest':
+          return parseInt(a.dataset.readtime || '0') - parseInt(b.dataset.readtime || '0');
+        case 'longest':
+          return parseInt(b.dataset.readtime || '0') - parseInt(a.dataset.readtime || '0');
+        case 'title':
+          return (a.dataset.title || '').localeCompare(b.dataset.title || '');
+        default:
+          return (b.dataset.date || '').localeCompare(a.dataset.date || '');
+      }
+    });
+
+    return visible;
+  }
+
+  function renderPage() {
+    const visible = getFilteredCards();
+    const totalPages = Math.ceil(visible.length / PER_PAGE);
+    if (currentPage > totalPages) currentPage = 1;
+
+    const start = (currentPage - 1) * PER_PAGE;
+    const end = start + PER_PAGE;
+
+    cards.forEach((card) => (card.style.display = 'none'));
+    const pageCards = visible.slice(start, end);
+    pageCards.forEach((card) => {
+      card.style.display = '';
+      if (grid) grid.appendChild(card);
+    });
+
+    if (countEl) {
+      const showing = visible.length > 0 ? Math.min(end, visible.length) - start : 0;
+      countEl.textContent = `Showing ${showing} of ${visible.length} article${visible.length !== 1 ? 's' : ''}`;
+    }
+    if (noResults) noResults.classList.toggle('active', visible.length === 0);
+
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages: number) {
+    if (!paginationEl) return;
+    if (totalPages <= 1) {
+      paginationEl.innerHTML = '';
+      paginationEl.style.display = 'none';
+      return;
+    }
+
+    paginationEl.style.display = '';
+    let html = '';
+
+    if (currentPage > 1) {
+      html += `<button class="bl-page-btn bl-page-prev" data-page="${currentPage - 1}" aria-label="Previous page">‹</button>`;
+    }
+
+    const maxVisible = 7;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+    if (endPage - startPage < maxVisible - 1) {
+      startPage = Math.max(1, endPage - maxVisible + 1);
+    }
+
+    if (startPage > 1) {
+      html += `<button class="bl-page-btn" data-page="1">1</button>`;
+      if (startPage > 2) html += `<span class="bl-page-ellipsis">…</span>`;
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      html += `<button class="bl-page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+    }
+
+    if (endPage < totalPages) {
+      if (endPage < totalPages - 1) html += `<span class="bl-page-ellipsis">…</span>`;
+      html += `<button class="bl-page-btn" data-page="${totalPages}">${totalPages}</button>`;
+    }
+
+    if (currentPage < totalPages) {
+      html += `<button class="bl-page-btn bl-page-next" data-page="${currentPage + 1}" aria-label="Next page">›</button>`;
+    }
+
+    paginationEl.innerHTML = html;
+
+    paginationEl.querySelectorAll<HTMLElement>('.bl-page-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentPage = parseInt(btn.dataset.page || '1', 10);
+        renderPage();
+        if (grid) {
+          const rect = grid.getBoundingClientRect();
+          if (rect.top < 0) window.scrollTo({ top: window.scrollY + rect.top - 80, behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
+  filterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      currentTopic = pill.dataset.topic || 'All';
+      currentPage = 1;
+      filterPills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      renderPage();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      if (searchTimer) clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        searchTerm = searchInput.value.trim().toLowerCase();
+        currentPage = 1;
+        renderPage();
+      }, 200);
+    });
+  }
+
+  if (authorSelect) {
+    authorSelect.addEventListener('change', () => {
+      currentAuthor = authorSelect.value;
+      currentPage = 1;
+      renderPage();
+    });
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      currentSort = sortSelect.value;
+      currentPage = 1;
+      renderPage();
+    });
+  }
+
+  renderPage();
+</script>

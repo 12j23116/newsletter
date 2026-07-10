@@ -1,0 +1,82 @@
+---
+const trending = [
+  {
+    rank: '01', tag: 'AI', gradient: 'linear-gradient(135deg,#3b82f6,#1e40af)',
+    title: 'GPT-5 Architecture Leak: What We Know About OpenAI\'s Next Model',
+    excerpt: 'Rumored multimodal capabilities, improved reasoning chains, and a 10x context window expansion.',
+    author: 'AK', authorName: 'Alex Kim', readTime: '8 min read', date: 'Jul 7', img: '/images/ai-02-ml-training.webp',
+  },
+  {
+    rank: '02', tag: 'Quantum', gradient: 'linear-gradient(135deg,#8b5cf6,#5b21b6)',
+    title: 'IBM\'s 1,000-Qubit Processor: A Milestone or a Mirage?',
+    excerpt: 'IBM unveiled its largest quantum processor yet. We analyze the real-world implications for error correction.',
+    author: 'SL', authorName: 'Sarah Lin', readTime: '12 min read', date: 'Jul 5', img: '/images/quantum-03-entanglement-photons.webp',
+  },
+  {
+    rank: '03', tag: 'Fusion', gradient: 'linear-gradient(135deg,#ec4899,#be185d)',
+    title: 'ITER Timeline Slips Again: What It Means for Fusion Commercialization',
+    excerpt: 'The world\'s largest fusion project faces another delay. Private startups may benefit from the gap.',
+    author: 'MR', authorName: 'Marcus Reed', readTime: '10 min read', date: 'Jul 3', img: '/images/fusion-04-laser-ignition.webp',
+  },
+  {
+    rank: '04', tag: 'Biotech', gradient: 'linear-gradient(135deg,#10b981,#047857)',
+    title: 'CRISPR 3.0: Prime Editing Moves from Lab to Clinic',
+    excerpt: 'The next generation of gene editing is entering human trials. Here is what patients and investors need to know.',
+    author: 'NP', authorName: 'Nina Patel', readTime: '7 min read', date: 'Jun 28', img: '/images/biotech-01-crispr-editing.webp',
+  },
+  {
+    rank: '05', tag: 'Space', gradient: 'linear-gradient(135deg,#06b6d4,#0e7490)',
+    title: 'Starship\'s Orbital Refueling: The Missing Link to Mars',
+    excerpt: 'How SpaceX solved the orbital propellant transfer problem — and what it means for the lunar and Martian timelines.',
+    author: 'JD', authorName: 'James Doyle', readTime: '9 min read', date: 'Jun 25', img: '/images/space-04-rocket-launch.webp',
+  },
+  {
+    rank: '06', tag: 'Cybersecurity', gradient: 'linear-gradient(135deg,#ef4444,#b91c1c)',
+    title: 'Post-Quantum Cryptography: The 2025 Migration Deadline',
+    excerpt: 'NIST standards are finalized. Organizations that delay migration risk catastrophic data exposure.',
+    author: 'TC', authorName: 'Tina Chen', readTime: '11 min read', date: 'Jun 22', img: '/images/cyber-05-ransomware-response.webp',
+  },
+];
+---
+
+<section class="lv-section lv-section-dark" id="trending">
+  <div class="lv-orb" style="width:300px;height:300px;background:var(--accent-blue);top:10%;left:-50px"></div>
+  <div class="lv-container" style="position:relative;z-index:1">
+    <div class="lv-section-head reveal">
+      <div class="lv-eyebrow">Latest</div>
+      <h2 class="lv-section-h2 lv-section-h2-light">
+        Trending Now<br />
+        <span class="lv-grad-text">across all frontiers.</span>
+      </h2>
+      <p class="lv-section-sub" style="color:var(--text-muted)">
+        The most-read articles this week — from AI breakthroughs to fusion milestones, quantum advances to cybersecurity threats.
+      </p>
+    </div>
+
+    <div class="trending-grid">
+      {trending.map((t, i) => (
+        <article class="trending-card reveal" style={`--card-gradient:${t.gradient};transition-delay:${i * 0.06}s`}>
+          <div class="trending-card-cover">
+            <img src={t.img} alt={t.title} class="trending-card-cover-img" loading="lazy" />
+            <span class="trending-card-rank">{t.rank}</span>
+            <span class="trending-card-tag">{t.tag}</span>
+          </div>
+          <div class="trending-card-body">
+            <h3 class="trending-card-title">{t.title}</h3>
+            <p class="trending-card-excerpt">{t.excerpt}</p>
+            <div class="trending-card-meta">
+              <div class="trending-card-author">
+                <div class="trending-card-avatar">{t.author}</div>
+                <span>{t.authorName}</span>
+              </div>
+              <span>·</span>
+              <span>{t.readTime}</span>
+              <span>·</span>
+              <span>{t.date}</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,130 @@
+---
+const tabs = [
+  {
+    label: 'Blog Articles',
+    icon: '📰',
+    color: '#3b82f6',
+    title: '100+ expert-written articles',
+    desc: 'Deep dives into AI, quantum, fusion, biotech, and more — written by domain experts for builders, investors, and the endlessly curious.',
+    stat: '100+ articles',
+    path: '#trending',
+    features: ['Original research reports', 'Expert comparison guides', 'Pillar guides (6K-12K words)', 'Updated weekly'],
+    img: '/images/ai-03-llm-chat.webp',
+  },
+  {
+    label: 'Learning Guides',
+    icon: '🎓',
+    color: '#06b6d4',
+    title: '50+ step-by-step guides',
+    desc: 'Structured learning paths that take you from complete beginner to informed strategist with clear, actionable steps for each technology frontier.',
+    stat: '50+ guides',
+    path: '#learn',
+    features: ['Beginner-to-advanced paths', 'Interactive worksheets', 'Self-paced progress tracking', 'Real-world case examples'],
+    img: '/images/quantum-04-annealing-machine.webp',
+  },
+  {
+    label: 'Tech Glossary',
+    icon: '📖',
+    color: '#ec4899',
+    title: '200+ tech terms decoded',
+    desc: 'A complete A-to-Z glossary of emerging technology terminology explained in plain, jargon-free language with practical examples.',
+    stat: '200+ terms',
+    path: '#learn',
+    features: ['Plain-English definitions', 'Searchable & filterable', 'Cross-referenced examples', 'Bookmark your favorites'],
+    img: '/images/materials-03-aerogel-demo.webp',
+  },
+  {
+    label: 'Case Studies',
+    icon: '📊',
+    color: '#10b981',
+    title: '30+ real technology journeys',
+    desc: 'Detailed breakdowns of how companies and labs are deploying emerging tech — from prototype to production with real data.',
+    stat: '30+ stories',
+    path: '#trending',
+    features: ['Detailed technical breakdowns', 'Before & after comparisons', 'Strategy analysis & takeaways', 'Community discussions'],
+    img: '/images/biotech-05-protein-folding.webp',
+  },
+  {
+    label: 'Comparisons',
+    icon: '⚖️',
+    color: '#f59e0b',
+    title: '20+ side-by-side comparisons',
+    desc: 'Compare technologies, products, and strategies with clear pros, cons, and recommendations tailored to your use case.',
+    stat: '20+ comparisons',
+    path: '#tools',
+    features: ['Tech vs tech breakdowns', 'Strategy comparison tables', 'Cost & benefit analysis', 'Personalized recommendations'],
+    img: '/images/energy-05-solid-state-lab.webp',
+  },
+];
+---
+
+<section class="lv-section lv-section-light" id="learn">
+  <div class="lv-container">
+    <div class="lv-section-head reveal">
+      <div class="lv-eyebrow">Learn &amp; Grow</div>
+      <h2 class="lv-section-h2">
+        Expert content that<br />
+        <span class="lv-grad-text-dark">actually makes sense.</span>
+      </h2>
+      <p class="lv-section-sub">
+        Hover any tab to explore the content type — articles, guides, glossary, case studies, and comparisons.
+      </p>
+    </div>
+
+    <div class="learntabs-wrapper">
+      <div class="learntabs-list">
+        {tabs.map((tab, i) => (
+          <div
+            class={`learntab ${i === 0 ? 'learntab-active' : ''}`}
+            data-tab={i}
+            style={`--tab-color:${tab.color}`}
+          >
+            <div class="learntab-icon" style={`background:${tab.color}15;color:${tab.color}`}>
+              {tab.icon}
+            </div>
+            <div class="learntab-label">
+              <span class="learntab-name">{tab.label}</span>
+              <span class="learntab-stat">{tab.stat}</span>
+            </div>
+            <svg class="learntab-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={tab.color} stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+        ))}
+      </div>
+
+      <div class="learntabs-display" id="learntabs-display">
+        {tabs.map((tab, i) => (
+          <div class="learntabs-panel" data-panel={i} style={i === 0 ? '' : 'display:none'}>
+            <div class="learntabs-img-wrap" style={`background:linear-gradient(135deg,${tab.color}40,rgba(0,0,0,.5))`}>
+              <img src={tab.img} alt={tab.title} class="learntabs-img" loading="lazy" />
+              <div class="learntabs-img-overlay" style={`background:linear-gradient(135deg,${tab.color}40 0%,rgba(0,0,0,.5) 100%)`}></div>
+              <div class="learntabs-img-badge" style={`background:${tab.color}`}>{tab.stat}</div>
+            </div>
+            <div class="learntabs-content">
+              <h3 class="learntabs-title">{tab.title}</h3>
+              <p class="learntabs-desc">{tab.desc}</p>
+              <ul class="learntabs-features">
+                {tab.features.map((f) => (
+                  <li class="learntabs-feature">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={tab.color} stroke-width="2.5">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                      <path d="M22 4L12 14.01l-3-3" />
+                    </svg>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={tab.path} class="learntabs-cta" style={`background:${tab.color}`}>
+                Explore {tab.label}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

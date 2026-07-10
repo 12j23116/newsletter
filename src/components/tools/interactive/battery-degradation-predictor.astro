@@ -1,0 +1,525 @@
+---
+/**
+ * Battery Degradation Predictor — Interactive tool
+ * Predict battery capacity fade and cycle life
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="battery-degradation">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🔋</div>
+      <div>
+        <h2>Battery Degradation Predictor</h2>
+        <p>Predict capacity fade and cycle life based on usage patterns and chemistry</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Battery Chemistry</label>
+          <select class="it-select" id="bdp-chemistry">
+            <option value="lfp">LFP (LiFePO4)</option>
+            <option value="nmc">NMC (NiMnCo)</option>
+            <option value="nca">NCA (NiCoAl)</option>
+            <option value="lco">LCO (LiCoO2)</option>
+            <option value="solid">Solid-State</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Capacity <span class="it-label-hint">(kWh)</span></label>
+          <input type="number" class="it-input" id="bdp-capacity" value="75" min="1" />
+        </div>
+      </div>
+
+      <div class="it-row-3">
+        <div class="it-field">
+          <label class="it-label">Depth of Discharge <span class="it-label-hint">(%)</span></label>
+          <input type="number" class="it-input" id="bdp-dod" value="80" min="10" max="100" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">C-Rate</label>
+          <input type="number" class="it-input" id="bdp-crate" value="1" min="0.1" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Avg Temperature <span class="it-label-hint">(°C)</span></label>
+          <input type="number" class="it-input" id="bdp-temp" value="25" min="-20" max="60" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Cycles per Day</label>
+          <input type="number" class="it-input" id="bdp-cycles" value="1" min="0.1" step="0.1" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">End-of-Life Threshold <span class="it-label-hint">(% of original)</span></label>
+          <input type="number" class="it-input" id="bdp-eol" value="80" min="50" max="95" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="bdp-predict">Predict Degradation</button>
+        <button class="it-btn it-btn-secondary" id="bdp-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="bdp-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="bdp-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Degradation Prediction</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Expected Cycle Life</div>
+            <div class="it-stat-value" id="bdp-cycle-life">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Calendar Life</div>
+            <div class="it-stat-value" id="bdp-cal-life">0<span class="it-stat-unit"> yrs</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Capacity @ 5 yrs</div>
+            <div class="it-stat-value" id="bdp-5yr">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Replacement In</div>
+            <div class="it-stat-value" id="bdp-replace">0<span class="it-stat-unit"> yrs</span></div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Capacity Fade Curve</div>
+        <canvas id="bdp-canvas" width="800" height="200" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="bdp-details"></div>
+        <div class="it-alert" id="bdp-alert"></div>
+      </div>
+
+      <!-- Feature 1: Temperature Stress -->
+      <div class="it-results-card" id="bdp-temp-section" style="display:none;">
+        <div class="it-results-title">🌡️ Temperature Stress Profile (Arrhenius)</div>
+        <div id="bdp-temp-list"></div>
+      </div>
+
+      <!-- Feature 2: DoD Optimizer -->
+      <div class="it-results-card" id="bdp-dod-section" style="display:none;">
+        <div class="it-results-title">⚙️ DoD Optimization Recommender</div>
+        <div id="bdp-dod-list"></div>
+      </div>
+
+      <!-- Feature 3: SoH Timeline -->
+      <div class="it-results-card" id="bdp-soh-section" style="display:none;">
+        <div class="it-results-title">📊 State of Health Timeline</div>
+        <div id="bdp-soh-list"></div>
+      </div>
+
+      <!-- Feature 4: TCO Calculator -->
+      <div class="it-results-card" id="bdp-tco-section" style="display:none;">
+        <div class="it-results-title">💰 Total Cost of Ownership</div>
+        <div id="bdp-tco-list"></div>
+      </div>
+
+      <!-- Feature 5: Fast Charge Impact -->
+      <div class="it-results-card" id="bdp-fastcharge-section" style="display:none;">
+        <div class="it-results-title">⚡ Fast Charge Impact Analyzer</div>
+        <div id="bdp-fastcharge-list"></div>
+      </div>
+
+      <!-- Feature 6: Calendar vs Cycle -->
+      <div class="it-results-card" id="bdp-decomp-section" style="display:none;">
+        <div class="it-results-title">🔬 Calendar vs Cycle Aging Decomposition</div>
+        <div id="bdp-decomp-list"></div>
+      </div>
+
+      <!-- Feature 7: Second-Life -->
+      <div class="it-results-card" id="bdp-secondlife-section" style="display:none;">
+        <div class="it-results-title">♻️ Second-Life / Repurposing Feasibility</div>
+        <div id="bdp-secondlife-list"></div>
+      </div>
+
+      <!-- Feature 8: Energy Throughput -->
+      <div class="it-results-card" id="bdp-throughput-section" style="display:none;">
+        <div class="it-results-title">⚡ Energy Throughput & Efficiency Tracker</div>
+        <div id="bdp-throughput-list"></div>
+      </div>
+
+      <!-- Feature 9: Chemistry Comparison -->
+      <div class="it-results-card" id="bdp-chemcomp-section" style="display:none;">
+        <div class="it-results-title">🧪 Cross-Chemistry Comparison (Same Conditions)</div>
+        <div id="bdp-chemcomp-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const chemistries = {
+    lfp: { name: 'LFP', baseCycles: 6000, calendarDegradation: 2.0, tempSensitivity: 1.0, dodSensitivity: 0.8, crateSensitivity: 0.5 },
+    nmc: { name: 'NMC', baseCycles: 2000, calendarDegradation: 3.0, tempSensitivity: 1.5, dodSensitivity: 1.2, crateSensitivity: 0.8 },
+    nca: { name: 'NCA', baseCycles: 1500, calendarDegradation: 3.5, tempSensitivity: 1.8, dodSensitivity: 1.3, crateSensitivity: 1.0 },
+    lco: { name: 'LCO', baseCycles: 1000, calendarDegradation: 4.0, tempSensitivity: 2.0, dodSensitivity: 1.5, crateSensitivity: 1.2 },
+    solid: { name: 'Solid-State', baseCycles: 5000, calendarDegradation: 1.0, tempSensitivity: 0.5, dodSensitivity: 0.5, crateSensitivity: 0.3 },
+  };
+
+  function predict() {
+    const chemId = document.getElementById('bdp-chemistry').value;
+    const chem = chemistries[chemId];
+    const capacity = parseFloat(document.getElementById('bdp-capacity').value) || 75;
+    const dod = parseFloat(document.getElementById('bdp-dod').value) / 100;
+    const crate = parseFloat(document.getElementById('bdp-crate').value) || 1;
+    const temp = parseFloat(document.getElementById('bdp-temp').value) || 25;
+    const cyclesDay = parseFloat(document.getElementById('bdp-cycles').value) || 1;
+    const eolThreshold = parseFloat(document.getElementById('bdp-eol').value) / 100;
+
+    // Cycle life model (simplified semi-empirical)
+    // Base cycles adjusted for DoD, C-rate, and temperature
+    const dodFactor = Math.pow(1 / dod, chem.dodSensitivity);
+    const crateFactor = 1 / (1 + chem.crateSensitivity * (crate - 1) * 0.15);
+    const tempFactor = Math.exp(-chem.tempSensitivity * 0.015 * (temp - 25));
+    const cycleLife = Math.round(chem.baseCycles * dodFactor * crateFactor * tempFactor);
+
+    // Calendar aging (capacity loss per year at storage temp)
+    const calendarLossPerYear = chem.calendarDegradation * Math.exp(0.06 * (temp - 25)) / 100;
+
+    // Combined degradation: capacity(t) = 1 - cycleLoss - calendarLoss
+    // cycleLoss per year = (cyclesDay * 365 / cycleLife) * 0.2 (20% fade over cycleLife)
+    const cycleLossPerYear = (cyclesDay * 365 / cycleLife) * 0.2;
+
+    // Find time to EOL
+    let years = 0;
+    let capacityPct = 100;
+    const curveData = [];
+    for (let y = 0; y <= 20; y += 0.25) {
+      const cycleLoss = (cyclesDay * 365 * y / cycleLife) * 0.2;
+      const calendarLoss = calendarLossPerYear * y;
+      capacityPct = (1 - cycleLoss - calendarLoss) * 100;
+      curveData.push({ year: y, capacity: Math.max(0, capacityPct) });
+      if (capacityPct / 100 <= eolThreshold && years === 0) {
+        years = y;
+      }
+    }
+
+    const capacity5yr = curveData.find(d => d.year === 5)?.capacity || 0;
+
+    // Update UI
+    document.getElementById('bdp-cycle-life').textContent = cycleLife.toLocaleString();
+    document.getElementById('bdp-cal-life').innerHTML = (1 / calendarLossPerYear).toFixed(1) + '<span class="it-stat-unit"> yrs</span>';
+    document.getElementById('bdp-5yr').innerHTML = capacity5yr.toFixed(1) + '<span class="it-stat-unit">%</span>';
+    document.getElementById('bdp-replace').innerHTML = years.toFixed(1) + '<span class="it-stat-unit"> yrs</span>';
+
+    // Draw curve
+    const canvas = document.getElementById('bdp-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+
+    // Grid
+    ctx.strokeStyle = 'rgba(15,23,42,0.08)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 20; i += 4) {
+      ctx.beginPath();
+      ctx.moveTo(i / 20 * w, 0);
+      ctx.lineTo(i / 20 * w, h);
+      ctx.stroke();
+    }
+    for (let i = 0; i <= 4; i++) {
+      ctx.beginPath();
+      ctx.moveTo(0, i / 4 * h);
+      ctx.lineTo(w, i / 4 * h);
+      ctx.stroke();
+    }
+
+    // EOL line
+    const eolY = h - (eolThreshold * 100 / 100) * (h - 20) - 10;
+    ctx.strokeStyle = '#dc2626';
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.moveTo(0, eolY);
+    ctx.lineTo(w, eolY);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#dc2626';
+    ctx.font = '10px sans-serif';
+    ctx.fillText(`EOL (${(eolThreshold * 100).toFixed(0)}%)`, 4, eolY - 4);
+
+    // Capacity curve
+    ctx.strokeStyle = '#f97316';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    curveData.forEach((d, i) => {
+      const x = (d.year / 20) * w;
+      const y = h - (d.capacity / 100) * (h - 20) - 10;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+
+    // Mark replacement point
+    if (years > 0 && years <= 20) {
+      const rx = (years / 20) * w;
+      ctx.fillStyle = '#dc2626';
+      ctx.beginPath();
+      ctx.arc(rx, eolY, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.fillText(`Replace: ${years.toFixed(1)}y`, rx + 8, eolY + 14);
+    }
+
+    // Labels
+    ctx.fillStyle = '#5c5c72';
+    ctx.font = '10px sans-serif';
+    ctx.fillText('0 yr', 4, h - 4);
+    ctx.fillText('10 yr', w / 2 - 15, h - 4);
+    ctx.fillText('20 yr', w - 30, h - 4);
+
+    // Details
+    const details = document.getElementById('bdp-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Chemistry</td><td>${chem.name}</td></tr>
+          <tr><td>Capacity</td><td>${capacity} kWh</td></tr>
+          <tr><td>Depth of Discharge</td><td>${(dod * 100).toFixed(0)}%</td></tr>
+          <tr><td>C-Rate</td><td>${crate}C</td></tr>
+          <tr><td>Average Temperature</td><td>${temp}°C</td></tr>
+          <tr><td>Cycles per Day</td><td>${cyclesDay}</td></tr>
+          <tr><td>DoD Adjustment Factor</td><td>${dodFactor.toFixed(2)}x</td></tr>
+          <tr><td>C-Rate Adjustment Factor</td><td>${crateFactor.toFixed(2)}x</td></tr>
+          <tr><td>Temperature Adjustment Factor</td><td>${tempFactor.toFixed(2)}x</td></tr>
+          <tr><td class="it-highlight">Expected Cycle Life</td><td class="it-highlight">${cycleLife.toLocaleString()} cycles</td></tr>
+          <tr><td>Calendar Degradation Rate</td><td>${(calendarLossPerYear * 100).toFixed(2)}%/year</td></tr>
+          <tr><td>Cycle Degradation Rate</td><td>${(cycleLossPerYear * 100).toFixed(2)}%/year</td></tr>
+          <tr><td>Capacity at 5 years</td><td>${capacity5yr.toFixed(1)}% (${(capacity * capacity5yr / 100).toFixed(1)} kWh)</td></tr>
+          <tr><td class="it-highlight">Time to EOL (${(eolThreshold * 100).toFixed(0)}%)</td><td class="it-highlight">${years.toFixed(1)} years (${Math.round(years * 365 * cyclesDay).toLocaleString()} cycles)</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const alert = document.getElementById('bdp-alert');
+    if (years >= 10) {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>Long battery life expected (${years.toFixed(1)} years).</strong> ${chem.name} with ${(dod * 100).toFixed(0)}% DoD at ${temp}°C is a good operating envelope. Total energy throughput: ${Math.round(years * 365 * cyclesDay * capacity * dod).toLocaleString()} kWh.`;
+    } else if (years >= 5) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>Moderate battery life (${years.toFixed(1)} years).</strong> Consider reducing DoD to ${(dod * 80).toFixed(0)}% or lowering operating temperature to ${Math.max(15, temp - 5)}°C to extend life by ~${Math.round(years * 0.3)} years.`;
+    } else {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>Short battery life (${years.toFixed(1)} years).</strong> High degradation rate. Recommendations: reduce DoD, lower C-rate, improve thermal management, or switch to ${chemId === 'nmc' || chemId === 'nca' ? 'LFP chemistry for longer cycle life' : 'a more suitable chemistry'}.`;
+    }
+
+    document.getElementById('bdp-results').classList.add('show');
+
+    // === Feature 1: Temperature Stress Profile ===
+    const tempRange = [-20, -10, 0, 10, 20, 25, 30, 40, 45, 50, 55];
+    const Ea = 20000; // Activation energy (J/mol) - typical for Li-ion
+    const R = 8.314; // Gas constant
+    const tempStressData = tempRange.map(t => {
+      const arrheniusFactor = Math.exp(-Ea / (R * (t + 273.15)) + Ea / (R * 298.15));
+      const stressMultiplier = arrheniusFactor;
+      const adjustedCycleLife = Math.round(chem.baseCycles * dodFactor * crateFactor * Math.exp(-chem.tempSensitivity * 0.015 * (t - 25)));
+      const calendarLoss = chem.calendarDegradation * Math.exp(0.06 * (t - 25)) / 100;
+      return { temp: t, stress: stressMultiplier, cycleLife: adjustedCycleLife, calendarLoss };
+    });
+    document.getElementById('bdp-temp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Temp (°C)</th><th>Stress Factor</th><th>Cycle Life</th><th>Calendar Loss (%/yr)</th><th>vs 25°C</th></tr></thead><tbody>
+        ${tempStressData.map(d => `<tr${d.temp === temp ? ' style="background:color-mix(in srgb,#059669 5%,transparent);"' : ''}><td><strong>${d.temp}°C</strong>${d.temp === temp ? ' ★' : ''}</td><td style="color:${d.stress > 2 ? '#dc2626' : d.stress > 1 ? '#d97706' : '#059669'};">${d.stress.toFixed(2)}x</td><td>${d.cycleLife.toLocaleString()}</td><td>${(d.calendarLoss * 100).toFixed(2)}%</td><td>${d.stress > 1 ? '⚠️ ' + (d.stress).toFixed(1) + 'x faster aging' : d.stress < 1 ? '✓ ' + (1/d.stress).toFixed(1) + 'x slower aging' : 'Baseline'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${temp > 40 ? 'it-alert-bad' : temp < 10 ? 'it-alert-warn' : 'it-alert-good'}" style="margin-top:0.5rem;">${temp > 40 ? '🚨 High temperature accelerates degradation exponentially. Every 10°C above 25°C roughly doubles aging rate. Improve cooling.' : temp < 10 ? '⚠️ Low temperatures reduce calendar aging but increase internal resistance. Fast charging below 10°C can cause lithium plating.' : '✓ Operating temperature is in the optimal range (20-30°C).'} Arrhenius model: k = A × exp(-Ea/RT).</div>
+    `;
+    document.getElementById('bdp-temp-section').style.display = 'block';
+
+    // === Feature 2: DoD Optimization ===
+    const dodRange = [20, 30, 40, 50, 60, 70, 80, 90, 100];
+    const dodResults = dodRange.map(d => {
+      const dF = Math.pow(1 / (d / 100), chem.dodSensitivity);
+      const cL = Math.round(chem.baseCycles * dF * crateFactor * tempFactor);
+      const cLYear = (cyclesDay * 365 / cL) * 0.2;
+      const calLoss = calendarLossPerYear;
+      let yr = 0;
+      for (let y = 0.25; y <= 20; y += 0.25) {
+        if ((1 - cLYear * y - calLoss * y) * 100 <= eolThreshold * 100) { yr = y; break; }
+      }
+      const energyPerCycle = capacity * d / 100;
+      const totalEnergy = cL * energyPerCycle;
+      return { dod: d, cycleLife: cL, years: yr, totalEnergy };
+    });
+    const optimalDod = dodResults.reduce((best, d) => d.totalEnergy > best.totalEnergy ? d : best, dodResults[0]);
+    document.getElementById('bdp-dod-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>DoD (%)</th><th>Cycle Life</th><th>Time to EOL (yrs)</th><th>Energy/Cycle (kWh)</th><th>Total Throughput (MWh)</th></tr></thead><tbody>
+        ${dodResults.map(d => `<tr${d.dod === optimalDod.dod ? ' style="background:color-mix(in srgb,#059669 5%,transparent);"' : ''}><td><strong>${d.dod}%</strong>${d.dod === optimalDod.dod ? ' ★' : ''}</td><td>${d.cycleLife.toLocaleString()}</td><td>${d.years.toFixed(1)}</td><td>${(capacity * d.dod / 100).toFixed(1)}</td><td class="it-highlight">${(d.totalEnergy / 1000).toFixed(1)}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Optimal DoD for maximum total energy throughput: <strong>${optimalDod.dod}%</strong> (${(optimalDod.totalEnergy / 1000).toFixed(1)} MWh over lifetime). Lower DoD extends cycle life but reduces usable energy per cycle. Your current ${Math.round(dod * 100)}% DoD yields ${(cycleLife * capacity * dod / 1000).toFixed(1)} MWh.</div>
+    `;
+    document.getElementById('bdp-dod-section').style.display = 'block';
+
+    // === Feature 3: SoH Timeline ===
+    const sohMilestones = [
+      { soh: 95, label: 'Initial break-in complete', severity: 'info' },
+      { soh: 90, label: 'Noticeable capacity loss', severity: 'info' },
+      { soh: 85, label: 'Reduced range/performance', severity: 'warn' },
+      { soh: 80, label: 'EOL threshold reached', severity: 'bad' },
+      { soh: 70, label: 'Significant degradation', severity: 'bad' },
+      { soh: 60, label: 'Second-life threshold', severity: 'bad' },
+    ];
+    const sohTimeline = sohMilestones.map(m => {
+      let yr = 0;
+      for (let y = 0.25; y <= 20; y += 0.25) {
+        const cap = (1 - cycleLossPerYear * y - calendarLossPerYear * y) * 100;
+        if (cap <= m.soh) { yr = y; break; }
+      }
+      return { ...m, year: yr };
+    });
+    document.getElementById('bdp-soh-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>SoH (%)</th><th>Milestone</th><th>Expected Time</th><th>Status</th></tr></thead><tbody>
+        ${sohTimeline.map(m => `<tr><td><strong>${m.soh}%</strong></td><td>${m.label}</td><td class="it-highlight">${m.year > 0 ? m.year.toFixed(1) + ' yrs' : 'Beyond 20 yrs'}</td><td style="color:${m.severity === 'good' ? '#059669' : m.severity === 'warn' ? '#d97706' : '#dc2626'};">${m.severity === 'info' ? 'ℹ️' : m.severity === 'warn' ? '⚠️' : '🚨'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">SoH = current capacity / rated capacity × 100%. Battery warranties typically guarantee >70% SoH for 8 years/100k miles. Your battery reaches 80% SoH (warranty EOL) in ${years.toFixed(1)} years.</div>
+    `;
+    document.getElementById('bdp-soh-section').style.display = 'block';
+
+    // === Feature 4: TCO Calculator ===
+    const batteryCost = capacity * 200; // ~$200/kWh
+    const replacementCost = batteryCost * 0.8; // 20% cost reduction by replacement time
+    const electricityCost = 0.15; // $/kWh
+    const annualEnergy = capacity * dod * cyclesDay * 365;
+    const annualElectricityCost = annualEnergy * electricityCost;
+    const replacementsOver20yr = Math.floor(20 / years);
+    const totalBatteryCost = batteryCost + replacementsOver20yr * replacementCost;
+    const totalElectricity = annualEnergy * 20 * electricityCost;
+    const totalTCO = totalBatteryCost + totalElectricity;
+    document.getElementById('bdp-tco-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Battery Cost (initial)</span><strong>$${batteryCost.toLocaleString()}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Replacement Cost (projected)</span><strong>$${replacementCost.toLocaleString()}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Replacements over 20 yrs</span><strong>${replacementsOver20yr}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Total Battery Cost (20yr)</span><strong>$${totalBatteryCost.toLocaleString()}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Energy</span><strong>${annualEnergy.toFixed(0)} kWh/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Electricity Cost (20yr @ $0.15/kWh)</span><strong>$${totalElectricity.toLocaleString()}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span class="it-highlight">Total Cost of Ownership (20yr)</span><strong class="it-highlight">$${totalTCO.toLocaleString()}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Cost per kWh delivered</span><strong>$${(totalTCO / (annualEnergy * 20)).toFixed(3)}/kWh</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Assumes $200/kWh battery cost, $0.15/kWh electricity. Extending battery life from ${years.toFixed(1)} to ${(years * 1.5).toFixed(1)} years would save $${(Math.floor(20 / years) - Math.floor(20 / (years * 1.5))) * replacementCost} in replacement costs over 20 years.</div>
+    `;
+    document.getElementById('bdp-tco-section').style.display = 'block';
+
+    // === Feature 5: Fast Charge Impact ===
+    const fastChargeScenarios = [
+      { name: 'Level 1 (1.4 kW)', crate: 0.1, freq: 100, tempRise: 0 },
+      { name: 'Level 2 (7 kW)', crate: 0.3, freq: 80, tempRise: 2 },
+      { name: 'DC Fast (50 kW)', crate: 1.0, freq: 20, tempRise: 8 },
+      { name: 'DC Fast (150 kW)', crate: 2.0, freq: 10, tempRise: 15 },
+      { name: 'Ultra-Fast (350 kW)', crate: 4.0, freq: 5, tempRise: 25 },
+    ];
+    document.getElementById('bdp-fastcharge-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Charging Scenario</th><th>C-Rate</th><th>Temp Rise (°C)</th><th>Cycle Life Impact</th><th>Life Reduction</th></tr></thead><tbody>
+        ${fastChargeScenarios.map(s => {
+          const fcCrateFactor = 1 / (1 + chem.crateSensitivity * (s.crate - 1) * 0.15);
+          const fcTempFactor = Math.exp(-chem.tempSensitivity * 0.015 * (temp + s.tempRise - 25));
+          const fcCycleLife = Math.round(chem.baseCycles * dodFactor * fcCrateFactor * fcTempFactor);
+          const reduction = ((1 - fcCycleLife / cycleLife) * 100);
+          return `<tr><td><strong>${s.name}</strong></td><td>${s.crate}C</td><td>+${s.tempRise}°C</td><td>${fcCycleLife.toLocaleString()} cycles</td><td style="color:${reduction > 30 ? '#dc2626' : reduction > 10 ? '#d97706' : '#059669'};">${reduction > 0 ? '-' + reduction.toFixed(0) + '%' : 'Baseline'}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-warn" style="margin-top:0.5rem;">Frequent DC fast charging significantly reduces cycle life due to high C-rates and temperature rise. ${chem.name} is ${chem.crateSensitivity < 0.6 ? 'relatively resistant to' : 'moderately sensitive to'} fast charging. Limit DC fast charging to <20% of charging events for optimal longevity.</div>
+    `;
+    document.getElementById('bdp-fastcharge-section').style.display = 'block';
+
+    // === Feature 6: Calendar vs Cycle Decomposition ===
+    const decompYears = [1, 2, 3, 5, 7, 10, 15, 20];
+    document.getElementById('bdp-decomp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Year</th><th>Cycle Loss (%)</th><th>Calendar Loss (%)</th><th>Total Loss (%)</th><th>Dominant</th></tr></thead><tbody>
+        ${decompYears.map(y => {
+          const cLoss = cycleLossPerYear * y * 100;
+          const calLoss = calendarLossPerYear * y * 100;
+          const total = cLoss + calLoss;
+          const dominant = cLoss > calLoss ? 'Cycle' : 'Calendar';
+          return `<tr><td><strong>Year ${y}</strong></td><td>${cLoss.toFixed(2)}%</td><td>${calLoss.toFixed(2)}%</td><td class="it-highlight">${total.toFixed(2)}%</td><td style="color:${dominant === 'Cycle' ? '#06b6d4' : '#d97706'};">${dominant}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${cycleLossPerYear > calendarLossPerYear ? 'Cycle aging dominates — reducing usage intensity will extend life most effectively.' : 'Calendar aging dominates — even idle batteries degrade. Temperature control is the primary lever.'} At ${cyclesDay} cycles/day, cycle aging contributes ${(cycleLossPerYear * 100).toFixed(2)}%/yr vs calendar aging at ${(calendarLossPerYear * 100).toFixed(2)}%/yr.</div>
+    `;
+    document.getElementById('bdp-decomp-section').style.display = 'block';
+
+    // === Feature 7: Second-Life Feasibility ===
+    const secondLifeApps = [
+      { name: 'Grid Storage (10yr)', minSoH: 70, value: 80, suitable: years < 15 },
+      { name: 'Home Backup (5yr)', minSoH: 60, value: 50, suitable: years < 18 },
+      { name: 'Solar Self-Consumption', minSoH: 65, value: 60, suitable: years < 16 },
+      { name: 'Telecom Backup', minSoH: 50, value: 30, suitable: years < 20 },
+      { name: 'Recycling (Material Recovery)', minSoH: 0, value: 20, suitable: true },
+    ];
+    document.getElementById('bdp-secondlife-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Second-Life Application</th><th>Min SoH</th><th>Value ($/kWh)</th><th>Feasible After EOL</th><th>Residual Value</th></tr></thead><tbody>
+        ${secondLifeApps.map(app => {
+          const feasible = app.suitable;
+          const residualValue = feasible ? (capacity * app.value) : 0;
+          return `<tr><td><strong>${app.name}</strong></td><td>${app.minSoH}%</td><td>$${app.value}/kWh</td><td style="color:${feasible ? '#059669' : '#dc2626'};">${feasible ? '✓ Yes' : '✗ No'}</td><td>${feasible ? '$' + residualValue.toLocaleString() : '—'}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-good" style="margin-top:0.5rem;">After automotive EOL (${years.toFixed(1)} yrs at ${Math.round(eolThreshold * 100)}% SoH), the battery still has ${Math.round(eolThreshold * 100)}% capacity. Second-life applications can recover $${(capacity * 80).toLocaleString()}–$${(capacity * 50).toLocaleString()} in residual value. Recycling recovers Li, Co, Ni, Mn.</div>
+    `;
+    document.getElementById('bdp-secondlife-section').style.display = 'block';
+
+    // === Feature 8: Energy Throughput ===
+    const annualThroughput = capacity * dod * cyclesDay * 365;
+    const lifetimeThroughput = cycleLife * capacity * dod;
+    const roundTripEfficiency = chemId === 'lfp' ? 0.95 : chemId === 'nmc' ? 0.93 : chemId === 'nca' ? 0.92 : chemId === 'solid' ? 0.97 : 0.90;
+    const annualLosses = annualThroughput * (1 - roundTripEfficiency);
+    document.getElementById('bdp-throughput-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Energy Throughput</span><strong>${annualThroughput.toFixed(0)} kWh/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Lifetime Energy Throughput</span><strong>${(lifetimeThroughput / 1000).toFixed(1)} MWh</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Round-Trip Efficiency</span><strong>${(roundTripEfficiency * 100).toFixed(0)}%</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Energy Losses</span><strong>${annualLosses.toFixed(0)} kWh/yr</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Annual Heat Generated</span><strong>${(annualLosses * 3.6e6 / 3.15e7).toFixed(1)} W avg</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Lifetime Energy Cost</span><strong>$${(lifetimeThroughput * 0.15).toLocaleString()}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>kWh per Cycle</span><strong>${(capacity * dod).toFixed(1)} kWh</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Effective $/kWh over lifetime</span><strong>$${(batteryCost / lifetimeThroughput).toFixed(3)}/kWh</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Total lifetime throughput: ${(lifetimeThroughput / 1000).toFixed(1)} MWh. At $${(batteryCost / lifetimeThroughput).toFixed(3)}/kWh, battery depreciation cost is ${((batteryCost / lifetimeThroughput) * 100).toFixed(1)} cents/kWh — a key metric for grid storage economics.</div>
+    `;
+    document.getElementById('bdp-throughput-section').style.display = 'block';
+
+    // === Feature 9: Chemistry Comparison ===
+    const chemIds = ['lfp', 'nmc', 'nca', 'lco', 'solid'];
+    document.getElementById('bdp-chemcomp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Chemistry</th><th>Cycle Life</th><th>Years to EOL</th><th>5yr Capacity</th><th>Total Throughput</th><th>Best For</th></tr></thead><tbody>
+        ${chemIds.map(id => {
+          const c = chemistries[id];
+          const dF = Math.pow(1 / dod, c.dodSensitivity);
+          const cF = 1 / (1 + c.crateSensitivity * (crate - 1) * 0.15);
+          const tF = Math.exp(-c.tempSensitivity * 0.015 * (temp - 25));
+          const cL = Math.round(c.baseCycles * dF * cF * tF);
+          const cLY = (cyclesDay * 365 / cL) * 0.2;
+          const calL = c.calendarDegradation * Math.exp(0.06 * (temp - 25)) / 100;
+          let yr = 0;
+          let cap5 = 100;
+          for (let y = 0.25; y <= 20; y += 0.25) {
+            const cap = (1 - cLY * y - calL * y) * 100;
+            if (cap <= eolThreshold * 100 && yr === 0) yr = y;
+            if (Math.abs(y - 5) < 0.01) cap5 = cap;
+          }
+          const throughput = cL * capacity * dod / 1000;
+          const bestFor = { lfp: 'Grid storage, EVs (long life)', nmc: 'EVs (energy density)', nca: 'High-performance EVs', lco: 'Consumer electronics', solid: 'Future (safety + density)' };
+          return `<tr${id === chemId ? ' style="background:color-mix(in srgb,#059669 5%,transparent);"' : ''}><td><strong>${c.name}</strong>${id === chemId ? ' ★' : ''}</td><td>${cL.toLocaleString()}</td><td>${yr.toFixed(1)} yrs</td><td>${cap5.toFixed(1)}%</td><td class="it-highlight">${throughput.toFixed(1)} MWh</td><td style="font-size:0.8125rem;">${bestFor[id]}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Under your operating conditions (${Math.round(dod * 100)}% DoD, ${crate}C, ${temp}°C, ${cyclesDay} cycles/day), ${chemistries[chemIds.reduce((best, id) => { const c = chemistries[id]; const dF = Math.pow(1/dod, c.dodSensitivity); const cL = Math.round(c.baseCycles * dF * crateFactor * tempFactor); return cL > chemistries[best].baseCycles * Math.pow(1/dod, chemistries[best].dodSensitivity) * crateFactor * tempFactor ? id : best; }, chemId)].name} offers the longest cycle life.</div>
+    `;
+    document.getElementById('bdp-chemcomp-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('bdp-export').style.display = 'inline-flex';
+    document.getElementById('bdp-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), chemistry: chem.name, capacity, dod: dod * 100, crate, temp, cyclesDay, eolThreshold: eolThreshold * 100, cycleLife, calendarLife: 1 / calendarLossPerYear, replacementYears: years, capacity5yr, tempStress: tempStressData, optimalDod: optimalDod.dod, sohTimeline, tco: { batteryCost, replacementCost, totalTCO }, fastChargeImpact: fastChargeScenarios, decomposition: decompYears.map(y => ({ year: y, cycle: cycleLossPerYear * y * 100, calendar: calendarLossPerYear * y * 100 })), secondLife: secondLifeApps, throughput: { annual: annualThroughput, lifetime: lifetimeThroughput, efficiency: roundTripEfficiency } };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'battery-degradation-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('bdp-predict').addEventListener('click', predict);
+  document.getElementById('bdp-reset').addEventListener('click', () => {
+    document.getElementById('bdp-results').classList.remove('show');
+  });
+})();
+</script>

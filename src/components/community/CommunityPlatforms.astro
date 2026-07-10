@@ -1,0 +1,96 @@
+---
+/**
+ * CommunityPlatforms — Platform channels section
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const platforms = [
+  {
+    name: 'Discord Server',
+    desc: 'Real-time chat, voice rooms, and study groups. The hub for daily discussions across all 12 topics.',
+    members: '12,000+',
+    icon: 'M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zM8 12h.01M12 12h.01M16 12h.01',
+    color: '#5865F2',
+    href: '#discord',
+    badge: 'Most Active',
+  },
+  {
+    name: 'Reddit Community',
+    desc: 'Long-form discussions, deep dives, and community-voted guides. r/TechNanoAI for weekly threads.',
+    members: '25,000+',
+    icon: 'M12 8c-2 0-3 1-3 3 0 2 1 3 3 3s3-1 3-3-1-3-3-3z',
+    color: '#FF4500',
+    href: '#reddit',
+    badge: 'Deep Dives',
+  },
+  {
+    name: 'LinkedIn Group',
+    desc: 'Professional networking, thought leadership, and industry insights for the emerging tech community.',
+    members: '8,500+',
+    icon: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z',
+    color: '#0A66C2',
+    href: '#linkedin',
+    badge: 'Professional',
+  },
+  {
+    name: 'GitHub',
+    desc: 'Open-source tools, data visualizations, and interactive calculators. Contribute code or report issues.',
+    members: '3,200+',
+    icon: 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12',
+    color: '#f0f0f5',
+    href: '#github',
+    badge: 'Open Source',
+  },
+  {
+    name: 'YouTube Channel',
+    desc: '"100 Seconds of" explainer series, expert interviews, and deep-dive documentaries on emerging tech.',
+    members: '15,000+',
+    icon: 'M23 12s0-3.5-.4-5.2c-.2-1-.9-1.7-1.9-1.9C19 4.5 12 4.5 12 4.5s-7 0-8.7.4c-1 .2-1.7.9-1.9 1.9C1 8.5 1 12 1 12s0 3.5.4 5.2c.2 1 .9 1.7 1.9 1.9 1.7.4 8.7.4 8.7.4s7 0 8.7-.4c1-.2 1.7-.9 1.9-1.9.4-1.7.4-5.2.4-5.2zM10 15.5v-7l6 3.5-6 3.5z',
+    color: '#FF0000',
+    href: '#youtube',
+    badge: 'Video Series',
+  },
+  {
+    name: 'Newsletter',
+    desc: 'Weekly digest of the most important developments across all 12 frontiers. Curated, concise, free.',
+    members: '50,000+',
+    icon: 'M22 6l-10 7L2 6M2 6h20v12H2z',
+    color: '#10b981',
+    href: '/newsletter',
+    badge: 'Weekly',
+  },
+];
+---
+
+<section class="community-platforms-section">
+  <div class="community-container">
+    <div class="community-section-head">
+      <span class="community-eyebrow">Where We Hang Out</span>
+      <h2 class="community-section-title">Six Platforms, One Community</h2>
+      <p class="community-section-sub">
+        Different platforms for different conversations. Pick the ones that fit your style —
+        from real-time Discord chats to deep-dive Reddit threads to weekly newsletter digests.
+      </p>
+    </div>
+
+    <div class="community-platforms-grid">
+      {platforms.map((p) => (
+        <a href={p.href} class="community-platform-card" style={`--card-color:${p.color}`}>
+          <div class="community-platform-header">
+            <div class="community-platform-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d={p.icon} />
+              </svg>
+            </div>
+            <span class="community-platform-badge">{p.badge}</span>
+          </div>
+          <h3 class="community-platform-name">{p.name}</h3>
+          <p class="community-platform-desc">{p.desc}</p>
+          <div class="community-platform-footer">
+            <span class="community-platform-members">{p.members} members</span>
+            <span class="community-platform-join">Join →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+/* ABOUT PAGE STYLES — edit without affecting other pages */
+
+.about-page { padding: 3rem 0; }
+.about-title { font-size: 2.75rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+.about-subtitle { font-size: 1.0625rem; color: var(--color-text-muted); max-width: 640px; line-height: 1.7; margin-bottom: 2rem; }
+.about-section { margin-bottom: 2.5rem; }
+.about-section h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; }
+.about-section p { font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.7; max-width: 640px; }
+.about-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+.about-value-card { padding: 1.5rem; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.5); border: 1px solid var(--color-border); }
+.about-value-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.about-value-card p { font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.6; }
+
+@media (max-width: 767px) {
+  .about-title { font-size: 2rem; }
+  .about-values { grid-template-columns: 1fr; }
+}
+@media (max-width: 358px) {
+  .about-page { padding: 2rem 0; }
+  .about-title { font-size: 1.625rem; }
+}

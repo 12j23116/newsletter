@@ -1,0 +1,100 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-header">
+    <div class="tool-header-icon">📖</div>
+    <div>
+      <h3 class="tool-header-title">AI Glossary Decoder</h3>
+      <p class="tool-header-desc">Plain-English explanations of AI/ML terms and concepts</p>
+    </div>
+  </div>
+
+  <div class="tool-card" style="margin-bottom:1rem">
+    <div class="tool-field">
+      <label class="tool-label">Search a term or concept</label>
+      <input type="text" class="tool-input" id="ag-search" placeholder="e.g. transformer, attention, RLHF, LoRA..." autocomplete="off" />
+    </div>
+    <div class="tool-toggle-group" id="ag-popular">
+      <button class="tool-toggle" data-term="transformer">Transformer</button>
+      <button class="tool-toggle" data-term="attention">Attention</button>
+      <button class="tool-toggle" data-term="rlhf">RLHF</button>
+      <button class="tool-toggle" data-term="lora">LoRA</button>
+      <button class="tool-toggle" data-term="rag">RAG</button>
+      <button class="tool-toggle" data-term="moe">MoE</button>
+      <button class="tool-toggle" data-term="diffusion">Diffusion</button>
+      <button class="tool-toggle" data-term="embedding">Embedding</button>
+      <button class="tool-toggle" data-term="hallucination">Hallucination</button>
+      <button class="tool-toggle" data-term="cot">Chain of Thought</button>
+      <button class="tool-toggle" data-term="tokenizer">Tokenizer</button>
+      <button class="tool-toggle" data-term="finetuning">Fine-Tuning</button>
+    </div>
+  </div>
+
+  <div class="tool-output" id="ag-result"></div>
+</div>
+
+<script is:inline>
+(function() {
+  const glossary = {
+    transformer: { term: 'Transformer', category: 'Architecture', plain: 'A neural network architecture that processes all tokens simultaneously using attention mechanisms, enabling parallel training and long-range context understanding. Unlike RNNs, transformers don\'t process data sequentially.', keyPoints: ['Parallel processing — much faster training than RNNs', 'Self-attention lets every token "see" every other token', 'Scales efficiently with more parameters and data', 'Foundation for GPT, BERT, Claude, and all modern LLMs'], related: ['Attention', 'Self-Attention', 'Positional Encoding', 'Encoder-Decoder'] },
+    attention: { term: 'Attention Mechanism', category: 'Core Concept', plain: 'A technique that lets a model focus on the most relevant parts of the input when producing each part of the output. Think of it as a spotlight — the model learns which words matter most in context.', keyPoints: ['Computes weighted relationships between all token pairs', 'Self-attention: tokens attend to each other within the same sequence', 'Multi-head attention: runs multiple attention patterns in parallel', 'O(n²) complexity — expensive for very long sequences'], related: ['Transformer', 'Multi-Head Attention', 'Scaled Dot-Product Attention'] },
+    rlhf: { term: 'RLHF (Reinforcement Learning from Human Feedback)', category: 'Training Method', plain: 'A training process where humans rate AI responses, and the AI learns to generate responses that humans prefer. It\'s how ChatGPT learned to be helpful and safe rather than just predicting the next word.', keyPoints: ['Step 1: Train a reward model on human preferences', 'Step 2: Use PPO to optimize the LLM against the reward model', 'Aligns model behavior with human values', 'Can lead to sycophancy or bias if feedback is skewed'], related: ['PPO', 'Reward Model', 'Constitutional AI', 'DPO'] },
+    lora: { term: 'LoRA (Low-Rank Adaptation)', category: 'Fine-Tuning', plain: 'A technique that fine-tunes large models by training small, low-rank matrices instead of updating all parameters. This uses 90%+ less memory while achieving similar results to full fine-tuning.', keyPoints: ['Freezes original model weights, trains small adapter matrices', 'Typically reduces trainable parameters by 10,000x', 'Adapters can be swapped at inference time', 'Enables fine-tuning on consumer GPUs'], related: ['QLoRA', 'PEFT', 'Adapter', 'Fine-Tuning'] },
+    rag: { term: 'RAG (Retrieval-Augmented Generation)', category: 'Architecture', plain: 'A technique where the AI first searches a knowledge base for relevant information, then uses that information to generate its answer. It\'s like giving the AI an open-book exam instead of a closed-book one.', keyPoints: ['Reduces hallucinations by grounding responses in retrieved facts', 'Enables updating knowledge without retraining the model', 'Requires: embedding model + vector database + retrieval pipeline', 'Cheaper than fine-tuning for frequently changing information'], related: ['Vector Database', 'Embedding', 'Semantic Search', 'Fine-Tuning'] },
+    moe: { term: 'MoE (Mixture of Experts)', category: 'Architecture', plain: 'A model design where multiple specialized sub-networks ("experts") handle different types of inputs. A gating network routes each token to the best expert, so only a fraction of the model is active at any time.', keyPoints: ['Increases model capacity without increasing compute per token', 'Only top-k experts are activated per token (e.g., 2 of 8)', 'Used by Mixtral, GPT-4 (rumored), and DeepSeek', 'Challenge: load balancing across experts'], related: ['Sparse Models', 'Gating Network', 'Expert Routing'] },
+    diffusion: { term: 'Diffusion Model', category: 'Generative AI', plain: 'A generative model that creates data (usually images) by starting from random noise and gradually removing noise step by step, guided by a neural network. It\'s like sculpting — starting from a block of random stone and carving out the image.', keyPoints: ['Forward process: add noise to training data', 'Reverse process: learn to denoise step by step', 'Powers DALL-E, Stable Diffusion, and Midjourney', 'Slower than GANs but produces higher quality and more diverse outputs'], related: ['DDPM', 'Latent Diffusion', 'U-Net', 'Score-Based Models'] },
+    embedding: { term: 'Embedding', category: 'Core Concept', plain: 'A way to represent text, images, or other data as a list of numbers (a vector) where similar things have similar numbers. It converts meaning into a mathematical form that computers can compare and search.', keyPoints: ['Maps semantic meaning to a high-dimensional vector space', 'Similar concepts have vectors close together', 'Enables semantic search, clustering, and RAG', 'Common models: OpenAI text-embedding-3, Cohere, BGE'], related: ['Vector Database', 'RAG', 'Cosine Similarity', 'Sentence Transformers'] },
+    hallucination: { term: 'Hallucination', category: 'AI Safety', plain: 'When an AI generates confident-sounding but factually incorrect information. The model doesn\'t "know" it\'s wrong because it\'s predicting likely text, not checking facts. It\'s the AI equivalent of a confident guess.', keyPoints: ['Caused by the model\'s next-token prediction objective', 'More common with rare facts or complex reasoning', 'Mitigation: RAG, fact-checking, lower temperature, system prompts', 'Not a bug — it\'s inherent to how LLMs work'], related: ['RAG', 'Fact-Checking', 'Temperature', 'Grounding'] },
+    cot: { term: 'Chain of Thought (CoT)', category: 'Prompting', plain: 'A prompting technique where you ask the AI to show its reasoning step by step before giving the final answer. This improves accuracy on math, logic, and multi-step problems because the model can "think out loud."', keyPoints: ['Dramatically improves performance on reasoning tasks', 'Can be triggered by adding "Let\'s think step by step"', 'o1/o3 models do this internally (hidden CoT)', 'Trade-off: uses more tokens and time'], related: ['Few-Shot Prompting', 'Self-Consistency', 'Tree of Thought', 'Reasoning'] },
+    tokenizer: { term: 'Tokenizer', category: 'Core Concept', plain: 'The component that splits text into smaller pieces (tokens) that the model can process. A token might be a word, part of a word, or even a single character. "Unbelievable" might become ["un", "believ", "able"].', keyPoints: ['Tokens are the basic unit of LLM input/output', '1 token ≈ 4 characters ≈ 0.75 words in English', 'Different tokenizers handle languages differently', 'Affects cost, context length, and multilingual performance'], related: ['BPE', 'WordPiece', 'SentencePiece', 'Context Length'] },
+    finetuning: { term: 'Fine-Tuning', category: 'Training', plain: 'Taking a pre-trained model and training it further on a smaller, specific dataset to specialize it for a particular task. Like taking a general practitioner and sending them to residency for cardiology.', keyPoints: ['Full fine-tuning: update all weights (expensive)', 'LoRA/QLoRA: update small adapters (cheap, effective)', 'Improves performance on domain-specific tasks', 'Risk: catastrophic forgetting of general capabilities'], related: ['LoRA', 'QLoRA', 'PEFT', 'Pre-Training', 'Catastrophic Forgetting'] },
+  };
+
+  function show(key) {
+    const entry = glossary[key];
+    const container = document.getElementById('ag-result');
+    if (!container) return;
+    if (!entry) {
+      container.innerHTML = '<div class="tool-note">Term not found. Try one of the popular terms above, or search for: transformer, attention, RLHF, LoRA, RAG, MoE, diffusion, embedding, hallucination, chain of thought, tokenizer, or fine-tuning.</div>';
+      return;
+    }
+
+    let html = `<div class="tool-result-row"><span class="tool-result-label">Term</span><span class="tool-result-value">${entry.term}</span></div>`;
+    html += `<div class="tool-result-row"><span class="tool-result-label">Category</span><span class="tool-result-value tool-result-value-accent">${entry.category}</span></div>`;
+    html += `<div class="tool-section-title">Plain-English Explanation</div>`;
+    html += `<p style="font-size:0.875rem; line-height:1.7; color:var(--tool-text)">${entry.plain}</p>`;
+    html += `<div class="tool-section-title">Key Points</div>`;
+    html += '<ul style="font-size:0.8125rem; line-height:1.8; color:var(--tool-text); padding-left:1.25rem">';
+    entry.keyPoints.forEach(p => html += `<li>${p}</li>`);
+    html += '</ul>';
+    html += `<div class="tool-section-title">Related Terms</div>`;
+    html += '<div class="tool-toggle-group">';
+    entry.related.forEach(r => html += `<span class="tool-badge tool-badge-info">${r}</span>`);
+    html += '</div>';
+
+    container.innerHTML = html;
+  }
+
+  const search = document.getElementById('ag-search');
+  search?.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    if (q.length < 2) return;
+    const match = Object.keys(glossary).find(k => k.includes(q) || glossary[k].term.toLowerCase().includes(q));
+    if (match) show(match);
+  });
+
+  document.querySelectorAll('#ag-popular .tool-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#ag-popular .tool-toggle').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      show(btn.dataset.term);
+    });
+  });
+
+  show('transformer');
+})();
+</script>

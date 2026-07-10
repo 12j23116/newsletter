@@ -1,0 +1,54 @@
+---
+/**
+ * CommunityHero — Hero section for the Community page
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const stats = [
+  { value: '50K+', label: 'Community Members' },
+  { value: '1,200+', label: 'Active Contributors' },
+  { value: '80+', label: 'Countries Represented' },
+  { value: '24/7', label: 'Discussions Always On' },
+];
+---
+
+<section class="community-hero">
+  <div class="community-hero-bg"></div>
+  <div class="community-hero-grid-overlay"></div>
+  <div class="community-hero-orb community-hero-orb-1"></div>
+  <div class="community-hero-orb community-hero-orb-2"></div>
+  <div class="community-hero-orb community-hero-orb-3"></div>
+
+  <div class="community-hero-inner">
+    <div class="community-hero-content">
+      <span class="community-hero-eyebrow">
+        <span class="community-hero-dot"></span>
+        Join the Community
+      </span>
+      <h1 class="community-hero-title">
+        Where Technology Enthusiasts
+        <span class="community-hero-grad">Connect, Learn, and Build</span>
+      </h1>
+      <p class="community-hero-sub">
+        TechNanoAI Community brings together researchers, engineers, investors, and curious minds
+        from 80+ countries. Ask questions, share insights, contribute guides, and stay ahead of
+        the curve across all 12 emerging technology frontiers.
+      </p>
+      <div class="community-hero-actions">
+        <a href="#join" class="community-btn community-btn-primary">
+          Join Free
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#discussions" class="community-btn community-btn-secondary">Browse Discussions</a>
+      </div>
+    </div>
+
+    <div class="community-hero-stats">
+      {stats.map((stat) => (
+        <div class="community-hero-stat-card">
+          <span class="community-hero-stat-value">{stat.value}</span>
+          <span class="community-hero-stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

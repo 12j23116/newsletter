@@ -1,0 +1,435 @@
+---
+/**
+ * Post-Quantum Crypto Checker — Interactive tool
+ * Check if your encryption is vulnerable to quantum attacks and recommend NIST PQC alternatives
+ */
+import './interactive-tools.css';
+
+const algorithms = [
+  { id: 'rsa-2048', name: 'RSA-2048', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-768 (Kyber)', migrationDifficulty: 'High', keySize: '2048 bits', pqcKeySize: '1568 bytes' },
+  { id: 'rsa-4096', name: 'RSA-4096', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-1024 (Kyber)', migrationDifficulty: 'High', keySize: '4096 bits', pqcKeySize: '2048 bytes' },
+  { id: 'ecdsa-256', name: 'ECDSA P-256', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-DSA-65 (Dilithium)', migrationDifficulty: 'Medium', keySize: '256 bits', pqcKeySize: '1952 bytes' },
+  { id: 'ecdsa-384', name: 'ECDSA P-384', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-DSA-87 (Dilithium)', migrationDifficulty: 'Medium', keySize: '384 bits', pqcKeySize: '2592 bytes' },
+  { id: 'aes-128', name: 'AES-128', type: 'Symmetric', quantumSafe: false, shorVulnerable: false, groverVulnerable: true, nistPQC: 'AES-256', migrationDifficulty: 'Low', keySize: '128 bits', pqcKeySize: '256 bits' },
+  { id: 'aes-256', name: 'AES-256', type: 'Symmetric', quantumSafe: true, shorVulnerable: false, groverVulnerable: false, nistPQC: 'Already quantum-safe', migrationDifficulty: 'None', keySize: '256 bits', pqcKeySize: '256 bits' },
+  { id: 'sha-256', name: 'SHA-256', type: 'Hash', quantumSafe: true, shorVulnerable: false, groverVulnerable: true, nistPQC: 'SHA-384/SHA-512', migrationDifficulty: 'Low', keySize: '256 bits', pqcKeySize: '384+ bits' },
+  { id: 'sha-512', name: 'SHA-512', type: 'Hash', quantumSafe: true, shorVulnerable: false, groverVulnerable: false, nistPQC: 'Already quantum-safe', migrationDifficulty: 'None', keySize: '512 bits', pqcKeySize: '512 bits' },
+  { id: 'dh-2048', name: 'Diffie-Hellman 2048', type: 'Key Exchange', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-768 (Kyber)', migrationDifficulty: 'High', keySize: '2048 bits', pqcKeySize: '1568 bytes' },
+  { id: 'ecdhe-256', name: 'ECDHE P-256', type: 'Key Exchange', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-768 (Kyber)', migrationDifficulty: 'Medium', keySize: '256 bits', pqcKeySize: '1568 bytes' },
+  { id: 'ed25519', name: 'Ed25519', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-DSA-65 (Dilithium)', migrationDifficulty: 'Medium', keySize: '256 bits', pqcKeySize: '1952 bytes' },
+  { id: 'chacha20', name: 'ChaCha20-256', type: 'Symmetric', quantumSafe: true, shorVulnerable: false, groverVulnerable: false, nistPQC: 'Already quantum-safe', migrationDifficulty: 'None', keySize: '256 bits', pqcKeySize: '256 bits' },
+];
+---
+
+<div class="it-container" id="pqc-checker">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🔐</div>
+      <div>
+        <h2>Post-Quantum Crypto Checker</h2>
+        <p>Check if your encryption is vulnerable to quantum attacks and get NIST PQC migration recommendations</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">Select Your Current Cryptographic Algorithms</label>
+        <div class="it-checkbox-group" id="pqc-algos">
+          {algorithms.map(a => (
+            <label class="it-checkbox-item" data-algo={a.id}>
+              <input type="checkbox" value={a.id} />
+              {a.name}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Data Sensitivity Retention <span class="it-label-hint">(years)</span></label>
+          <input type="number" class="it-input" id="pqc-retention" value="20" min="1" max="100" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Expected Quantum Timeline <span class="it-label-hint">(years from now)</span></label>
+          <input type="number" class="it-input" id="pqc-timeline" value="10" min="1" max="30" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="pqc-check">Check Quantum Vulnerability</button>
+        <button class="it-btn it-btn-secondary" id="pqc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="pqc-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="pqc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Quantum Vulnerability Assessment</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Risk Level</div>
+            <div class="it-stat-value" id="pqc-risk" style="font-size:1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Vulnerable Algorithms</div>
+            <div class="it-stat-value" id="pqc-vuln" style="color:#dc2626;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Quantum-Safe</div>
+            <div class="it-stat-value" id="pqc-safe" style="color:#059669;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Migration Priority</div>
+            <div class="it-stat-value" id="pqc-priority" style="font-size:1.25rem;">—</div>
+          </div>
+        </div>
+
+        <div id="pqc-report"></div>
+        <div class="it-alert" id="pqc-alert"></div>
+      </div>
+
+      <!-- Feature 1: NIST PQC Standard Details -->
+      <div class="it-results-card" id="pqc-standards-section" style="display:none;">
+        <div class="it-results-title">📋 NIST PQC Standard Details</div>
+        <div id="pqc-standards-list"></div>
+      </div>
+
+      <!-- Feature 2: Key Size Comparison Chart -->
+      <div class="it-results-card" id="pqc-keysize-section" style="display:none;">
+        <div class="it-results-title">📊 Key Size Comparison (Classical vs PQC)</div>
+        <canvas id="pqc-keysize-canvas" width="600" height="350" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="pqc-keysize-list"></div>
+      </div>
+
+      <!-- Feature 3: HNDL Risk Timeline -->
+      <div class="it-results-card" id="pqc-hndl-section" style="display:none;">
+        <div class="it-results-title">⏰ Harvest Now, Decrypt Later (HNDL) Risk Timeline</div>
+        <div id="pqc-hndl-list"></div>
+      </div>
+
+      <!-- Feature 4: Migration Cost Estimator -->
+      <div class="it-results-card" id="pqc-cost-section" style="display:none;">
+        <div class="it-results-title">💰 Migration Cost Estimator</div>
+        <div id="pqc-cost-list"></div>
+      </div>
+
+      <!-- Feature 5: Hybrid Deployment Guide -->
+      <div class="it-results-card" id="pqc-hybrid-section" style="display:none;">
+        <div class="it-results-title">🔀 Hybrid Deployment Guide</div>
+        <div id="pqc-hybrid-list"></div>
+      </div>
+
+      <!-- Feature 6: Performance Impact Analysis -->
+      <div class="it-results-card" id="pqc-perf-section" style="display:none;">
+        <div class="it-results-title">⚡ Performance Impact Analysis</div>
+        <div id="pqc-perf-list"></div>
+      </div>
+
+      <!-- Feature 7: Protocol Compatibility Matrix -->
+      <div class="it-results-card" id="pqc-compat-section" style="display:none;">
+        <div class="it-results-title">🔗 Protocol Compatibility Matrix</div>
+        <div id="pqc-compat-list"></div>
+      </div>
+
+      <!-- Feature 8: Crypto Agility Assessment -->
+      <div class="it-results-card" id="pqc-agility-section" style="display:none;">
+        <div class="it-results-title">🔄 Crypto Agility Assessment</div>
+        <div id="pqc-agility-list"></div>
+      </div>
+
+      <!-- Feature 9: Compliance & Standards Mapping -->
+      <div class="it-results-card" id="pqc-compliance-section" style="display:none;">
+        <div class="it-results-title">📜 Compliance & Standards Mapping</div>
+        <div id="pqc-compliance-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const algos = {
+    'rsa-2048': { name: 'RSA-2048', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-768 (Kyber)', migrationDifficulty: 'High', keySize: '2048 bits', pqcKeySize: '1568 bytes' },
+    'rsa-4096': { name: 'RSA-4096', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-1024 (Kyber)', migrationDifficulty: 'High', keySize: '4096 bits', pqcKeySize: '2048 bytes' },
+    'ecdsa-256': { name: 'ECDSA P-256', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-DSA-65 (Dilithium)', migrationDifficulty: 'Medium', keySize: '256 bits', pqcKeySize: '1952 bytes' },
+    'ecdsa-384': { name: 'ECDSA P-384', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-DSA-87 (Dilithium)', migrationDifficulty: 'Medium', keySize: '384 bits', pqcKeySize: '2592 bytes' },
+    'aes-128': { name: 'AES-128', type: 'Symmetric', quantumSafe: false, shorVulnerable: false, groverVulnerable: true, nistPQC: 'AES-256', migrationDifficulty: 'Low', keySize: '128 bits', pqcKeySize: '256 bits' },
+    'aes-256': { name: 'AES-256', type: 'Symmetric', quantumSafe: true, shorVulnerable: false, groverVulnerable: false, nistPQC: 'Already quantum-safe', migrationDifficulty: 'None', keySize: '256 bits', pqcKeySize: '256 bits' },
+    'sha-256': { name: 'SHA-256', type: 'Hash', quantumSafe: true, shorVulnerable: false, groverVulnerable: true, nistPQC: 'SHA-384/SHA-512', migrationDifficulty: 'Low', keySize: '256 bits', pqcKeySize: '384+ bits' },
+    'sha-512': { name: 'SHA-512', type: 'Hash', quantumSafe: true, shorVulnerable: false, groverVulnerable: false, nistPQC: 'Already quantum-safe', migrationDifficulty: 'None', keySize: '512 bits', pqcKeySize: '512 bits' },
+    'dh-2048': { name: 'Diffie-Hellman 2048', type: 'Key Exchange', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-768 (Kyber)', migrationDifficulty: 'High', keySize: '2048 bits', pqcKeySize: '1568 bytes' },
+    'ecdhe-256': { name: 'ECDHE P-256', type: 'Key Exchange', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-KEM-768 (Kyber)', migrationDifficulty: 'Medium', keySize: '256 bits', pqcKeySize: '1568 bytes' },
+    'ed25519': { name: 'Ed25519', type: 'Asymmetric', quantumSafe: false, shorVulnerable: true, groverVulnerable: false, nistPQC: 'ML-DSA-65 (Dilithium)', migrationDifficulty: 'Medium', keySize: '256 bits', pqcKeySize: '1952 bytes' },
+    'chacha20': { name: 'ChaCha20-256', type: 'Symmetric', quantumSafe: true, shorVulnerable: false, groverVulnerable: false, nistPQC: 'Already quantum-safe', migrationDifficulty: 'None', keySize: '256 bits', pqcKeySize: '256 bits' },
+  };
+
+  function toggle(el) { el.classList.toggle('active'); el.querySelector('input').checked = el.classList.contains('active'); }
+  document.querySelectorAll('#pqc-algos .it-checkbox-item').forEach(el => el.addEventListener('click', function(e) { e.preventDefault(); toggle(this); }));
+  ['rsa-2048', 'ecdsa-256', 'aes-256'].forEach(id => { const el = document.querySelector(`[data-algo="${id}"]`); if (el) toggle(el); });
+
+  function check() {
+    const selected = [...document.querySelectorAll('#pqc-algos .it-checkbox-item.active')].map(el => el.getAttribute('data-algo'));
+    if (selected.length === 0) { alert('Select at least one algorithm.'); return; }
+
+    const retention = parseFloat(document.getElementById('pqc-retention').value) || 20;
+    const timeline = parseFloat(document.getElementById('pqc-timeline').value) || 10;
+
+    const vulnerable = selected.filter(id => !algos[id].quantumSafe);
+    const safe = selected.filter(id => algos[id].quantumSafe);
+    const shorVuln = selected.filter(id => algos[id].shorVulnerable);
+    const groverVuln = selected.filter(id => algos[id].groverVulnerable);
+
+    // Risk assessment
+    let risk, riskColor, priority;
+    if (shorVuln.length > 0 && retention > timeline) {
+      risk = 'Critical — Harvest Now, Decrypt Later'; riskColor = '#dc2626'; priority = 'Immediate';
+    } else if (shorVuln.length > 0) {
+      risk = 'High — Quantum Vulnerable'; riskColor = '#dc2626'; priority = 'High';
+    } else if (groverVuln.length > 0) {
+      risk = 'Medium — Grover Reduced Security'; riskColor = '#d97706'; priority = 'Medium';
+    } else {
+      risk = 'Low — Quantum Safe'; riskColor = '#059669'; priority = 'Low';
+    }
+
+    document.getElementById('pqc-risk').textContent = risk;
+    document.getElementById('pqc-risk').style.color = riskColor;
+    document.getElementById('pqc-vuln').textContent = vulnerable.length;
+    document.getElementById('pqc-safe').textContent = safe.length;
+    document.getElementById('pqc-priority').textContent = priority;
+    document.getElementById('pqc-priority').style.color = riskColor;
+
+    const report = document.getElementById('pqc-report');
+    report.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Algorithm</th><th>Type</th><th>Quantum Safe?</th><th>Attack Vector</th><th>NIST PQC Replacement</th><th>Migration</th></tr></thead>
+        <tbody>
+          ${selected.map(id => {
+            const a = algos[id];
+            const qsBadge = a.quantumSafe ? '<span class="it-badge it-badge-good">✓ Safe</span>' : '<span class="it-badge it-badge-bad">✗ Vulnerable</span>';
+            const attack = a.shorVulnerable ? 'Shor (fully broken)' : a.groverVulnerable ? 'Grover (½ security)' : 'None';
+            const migColor = a.migrationDifficulty === 'High' ? '#dc2626' : a.migrationDifficulty === 'Medium' ? '#d97706' : a.migrationDifficulty === 'Low' ? '#65a30d' : '#059669';
+            return `<tr>
+              <td><strong>${a.name}</strong></td>
+              <td>${a.type}</td>
+              <td>${qsBadge}</td>
+              <td>${attack}</td>
+              <td class="it-highlight">${a.nistPQC}</td>
+              <td><span class="it-badge" style="background:${migColor}22;color:${migColor};">${a.migrationDifficulty}</span></td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+      ${shorVuln.length > 0 ? `
+      <div class="it-results-title" style="margin-top:1.5rem;">Migration Plan</div>
+      <table class="it-table">
+        <thead><tr><th>Phase</th><th>Action</th><th>Timeline</th></tr></thead>
+        <tbody>
+          <tr><td>1 — Assessment</td><td>Inventory all cryptographic assets and dependencies</td><td>Months 1-3</td></tr>
+          <tr><td>2 — Pilot</td><td>Deploy ${algos[shorVuln[0]].nistPQC} in test environment with hybrid mode</td><td>Months 3-9</td></tr>
+          <tr><td>3 — Migration</td><td>Replace ${shorVuln.map(id => algos[id].name).join(', ')} with NIST PQC standards</td><td>Months 9-24</td></tr>
+          <tr><td>4 — Validation</td><td>Security audit and penetration testing of PQC implementation</td><td>Months 24-30</td></tr>
+          <tr><td>5 — Decommission</td><td>Remove legacy algorithms after full PQC migration</td><td>Month 30+</td></tr>
+        </tbody>
+      </table>` : ''}
+    `;
+
+    const alert = document.getElementById('pqc-alert');
+    if (shorVuln.length > 0 && retention > timeline) {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>Critical: Harvest Now, Decrypt Later (HNDL) risk detected.</strong> Your data needs to remain secure for ${retention} years, but quantum computers may break ${shorVuln.map(id => algos[id].name).join(', ')} in ${timeline} years. Encrypted data captured today can be decrypted later. Begin PQC migration <strong>immediately</strong>.`;
+    } else if (shorVuln.length > 0) {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `⚠️ <strong>${shorVuln.length} algorithm(s) fully broken by Shor's algorithm.</strong> Replace ${shorVuln.map(id => algos[id].name).join(', ')} with NIST PQC standards (${[...new Set(shorVuln.map(id => algos[id].nistPQC))].join(', ')}). Begin migration planning now.`;
+    } else if (groverVuln.length > 0) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>${groverVuln.length} algorithm(s) have reduced security under Grover's algorithm.</strong> ${groverVuln.map(id => algos[id].name).join(', ')} effectively lose half their security bits. Upgrade to ${groverVuln.map(id => algos[id].nistPQC).join(', ')} when convenient.`;
+    } else {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>All selected algorithms are quantum-safe.</strong> No immediate migration required. Continue monitoring NIST PQC standardization for future enhancements.`;
+    }
+
+    document.getElementById('pqc-results').classList.add('show');
+
+    // === Feature 1: NIST PQC Standard Details ===
+    const nistStandards = {
+      'ML-KEM-768': { formalName: 'FIPS 203', category: 'Key Encapsulation', basedOn: 'CRYSTALS-Kyber', publicKey: 1184, privateKey: 2400, ciphertext: 1088, securityLevel: 'NIST Level 3 (192-bit)', status: 'Standardized (Aug 2024)' },
+      'ML-KEM-1024': { formalName: 'FIPS 203', category: 'Key Encapsulation', basedOn: 'CRYSTALS-Kyber', publicKey: 1568, privateKey: 3168, ciphertext: 1568, securityLevel: 'NIST Level 5 (256-bit)', status: 'Standardized (Aug 2024)' },
+      'ML-DSA-65': { formalName: 'FIPS 204', category: 'Digital Signature', basedOn: 'CRYSTALS-Dilithium', publicKey: 1952, privateKey: 4032, signature: 3309, securityLevel: 'NIST Level 3 (192-bit)', status: 'Standardized (Aug 2024)' },
+      'ML-DSA-87': { formalName: 'FIPS 204', category: 'Digital Signature', basedOn: 'CRYSTALS-Dilithium', publicKey: 2592, privateKey: 4896, signature: 4627, securityLevel: 'NIST Level 5 (256-bit)', status: 'Standardized (Aug 2024)' },
+      'SLH-DSA': { formalName: 'FIPS 205', category: 'Digital Signature', basedOn: 'SPHINCS+', publicKey: 64, privateKey: 64, signature: 7856, securityLevel: 'NIST Level 3', status: 'Standardized (Aug 2024)' },
+      'FN-DSA': { formalName: 'FIPS 206 (draft)', category: 'Digital Signature', basedOn: 'Falcon', publicKey: 897, privateKey: 1280, signature: 666, securityLevel: 'NIST Level 3', status: 'Draft (expected 2025)' },
+    };
+    const recommendedStandards = [...new Set(vulnerable.map(id => algos[id].nistPQC.split(' (')[0]))];
+    document.getElementById('pqc-standards-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Standard</th><th>FIPS</th><th>Category</th><th>Based On</th><th>PubKey Size</th><th>Sig/Cipher Size</th><th>Security Level</th><th>Status</th></tr></thead><tbody>
+        ${Object.entries(nistStandards).filter(([k]) => recommendedStandards.some(r => k.includes(r) || r.includes(k))).map(([name, s]) => `<tr><td><strong>${name}</strong></td><td>${s.formalName}</td><td>${s.category}</td><td>${s.basedOn}</td><td>${s.publicKey} B</td><td>${s.signature || s.ciphertext} B</td><td>${s.securityLevel}</td><td style="color:${s.status.includes('Standardized') ? '#059669' : '#d97706'};font-weight:700;">${s.status}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">NIST finalized FIPS 203/204/205 in August 2024. ML-KEM (Kyber) for key exchange, ML-DSA (Dilithium) for signatures, SLH-DSA (SPHINCS+) as stateless hash-based backup. Key sizes are 10-50x larger than classical equivalents — plan for bandwidth and storage impact.</div>
+    `;
+    document.getElementById('pqc-standards-section').style.display = 'block';
+
+    // === Feature 2: Key Size Comparison Chart ===
+    const ksCanvas = document.getElementById('pqc-keysize-canvas');
+    const ksCtx = ksCanvas.getContext('2d');
+    const ksW = ksCanvas.width, ksH = ksCanvas.height;
+    ksCtx.fillStyle = '#ebedf5'; ksCtx.fillRect(0, 0, ksW, ksH);
+    const ksData = selected.map(id => { const a = algos[id]; return { name: a.name, classical: parseInt(a.keySize) || 256, pqc: parseInt(a.pqcKeySize) || 256, safe: a.quantumSafe }; });
+    const ksMax = Math.max(...ksData.flatMap(d => [d.classical, d.pqc])) * 1.1;
+    const barH = 20, barGap = 10, groupGap = 15;
+    const startY = 40;
+    ksData.forEach((d, i) => {
+      const yBase = startY + i * (barH * 2 + barGap + groupGap);
+      ksCtx.fillStyle = '#94a3b8'; ksCtx.fillRect(120, yBase, (d.classical / ksMax) * (ksW - 160), barH);
+      ksCtx.fillStyle = d.safe ? '#059669' : '#dc2626'; ksCtx.fillRect(120, yBase + barH + 2, (d.pqc / ksMax) * (ksW - 160), barH);
+      ksCtx.fillStyle = '#1e293b'; ksCtx.font = '10px sans-serif'; ksCtx.textAlign = 'right';
+      ksCtx.fillText(d.name, 115, yBase + barH - 2);
+      ksCtx.textAlign = 'left'; ksCtx.fillStyle = '#64748b';
+      ksCtx.fillText(`${d.classical} b`, 125 + (d.classical / ksMax) * (ksW - 160), yBase + barH - 2);
+      ksCtx.fillText(`${d.pqc} B`, 125 + (d.pqc / ksMax) * (ksW - 160), yBase + barH * 2 + 2);
+    });
+    ksCtx.fillStyle = '#94a3b8'; ksCtx.font = '9px sans-serif'; ksCtx.textAlign = 'left';
+    ksCtx.fillText('■ Classical (bits)', 10, ksH - 15);
+    ksCtx.fillStyle = '#dc2626'; ksCtx.fillText('■ PQC (bytes)', 120, ksH - 15);
+    document.getElementById('pqc-keysize-list').innerHTML = `<div class="it-alert it-alert-info">PQC key sizes are dramatically larger: RSA-2048 = 256B → ML-KEM-768 = 1184B (4.6x). ECDSA P-256 = 32B → ML-DSA-65 = 1952B (61x). Plan for increased bandwidth, storage, and handshake message sizes. TLS certificates will grow significantly.</div>`;
+    document.getElementById('pqc-keysize-section').style.display = 'block';
+
+    // === Feature 3: HNDL Risk Timeline ===
+    const hndlRisk = retention > timeline;
+    const exposureYears = Math.max(0, retention - timeline);
+    document.getElementById('pqc-hndl-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Timeline</th><th>Event</th><th>Risk</th></tr></thead><tbody>
+        <tr><td>Now</td><td>Adversaries may be recording encrypted traffic today</td><td style="color:#dc2626;font-weight:700;">${hndlRisk ? '⚠️ Active HNDL threat' : 'Low (data expires before Q-day)'}</td></tr>
+        <tr><td>Year ${timeline}</td><td>Estimated Q-day — quantum computer can break Shor-vulnerable algorithms</td><td style="color:#dc2626;font-weight:700;">${shorVuln.length > 0 ? 'Critical for ' + shorVuln.map(id => algos[id].name).join(', ') : 'N/A'}</td></tr>
+        <tr><td>Year ${retention}</td><td>Data sensitivity expires</td><td>—</td></tr>
+        <tr class="it-highlight"><td><strong>Exposure Window</strong></td><td class="it-highlight">${hndlRisk ? exposureYears + ' years of recorded data at risk' : 'No exposure — data expires before Q-day'}</td><td class="it-highlight" style="color:${hndlRisk ? '#dc2626' : '#059669'};font-weight:700;">${hndlRisk ? 'CRITICAL' : 'SAFE'}</td></tr>
+      </tbody></table>
+      <div class="it-alert ${hndlRisk ? 'it-alert-bad' : 'it-alert-good'}" style="margin-top:0.5rem;">${hndlRisk ? `<strong>Critical HNDL Risk:</strong> Data encrypted today with ${shorVuln.map(id => algos[id].name).join(', ')} must remain confidential for ${retention} years. If a quantum computer is built in ${timeline} years, adversaries who capture traffic now can decrypt it ${exposureYears} years before it expires. <strong>Migrate to PQC immediately — every day of delay extends the exposure window.</strong>` : `<strong>No HNDL Risk:</strong> Data retention (${retention} years) is shorter than estimated quantum timeline (${timeline} years). However, quantum timelines may accelerate — consider proactive migration anyway.`}</div>
+    `;
+    document.getElementById('pqc-hndl-section').style.display = 'block';
+
+    // === Feature 4: Migration Cost Estimator ===
+    const costFactors = { High: { eng: 8, time: 18, cost: 500000 }, Medium: { eng: 4, time: 9, cost: 200000 }, Low: { eng: 1, time: 3, cost: 50000 }, None: { eng: 0, time: 0, cost: 0 } };
+    const migrationCosts = vulnerable.map(id => { const a = algos[id]; const f = costFactors[a.migrationDifficulty]; return { algo: a.name, difficulty: a.migrationDifficulty, engineers: f.eng, months: f.time, cost: f.cost, replacement: a.nistPQC }; });
+    const totalEng = migrationCosts.reduce((s, c) => s + c.engineers, 0);
+    const totalMonths = Math.max(...migrationCosts.map(c => c.months), 0);
+    const totalCost = migrationCosts.reduce((s, c) => s + c.cost, 0);
+    document.getElementById('pqc-cost-list').innerHTML = migrationCosts.length > 0 ? `
+      <table class="it-table"><thead><tr><th>Algorithm</th><th>Difficulty</th><th>Engineers</th><th>Duration</th><th>Cost (est.)</th><th>Replacement</th></tr></thead><tbody>
+        ${migrationCosts.map(c => `<tr><td><strong>${c.algo}</strong></td><td style="color:${c.difficulty === 'High' ? '#dc2626' : c.difficulty === 'Medium' ? '#d97706' : '#65a30d'};">${c.difficulty}</td><td>${c.engineers}</td><td>${c.months} mo</td><td>$${(c.cost / 1000).toFixed(0)}K</td><td>${c.replacement}</td></tr>`).join('')}
+        <tr class="it-highlight"><td colspan="2"><strong>Total</strong></td><td class="it-highlight">${totalEng} eng</td><td class="it-highlight">${totalMonths} mo (parallel)</td><td class="it-highlight">$${(totalCost / 1000).toFixed(0)}K</td><td>—</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Cost estimates include engineering, testing, infrastructure changes, and certification. High-difficulty migrations involve protocol changes (TLS, X.509). Add 30% contingency for integration challenges. Crypto libraries (OpenSSL, BoringSSL) are adding PQC support — leverage existing implementations to reduce cost.</div>
+    ` : '<div class="it-alert it-alert-good">✓ No migration needed — all algorithms are quantum-safe.</div>';
+    document.getElementById('pqc-cost-section').style.display = 'block';
+
+    // === Feature 5: Hybrid Deployment Guide ===
+    const hybridAlgos = vulnerable.filter(id => algos[id].type === 'Asymmetric' || algos[id].type === 'Key Exchange');
+    document.getElementById('pqc-hybrid-list').innerHTML = hybridAlgos.length > 0 ? `
+      <table class="it-table"><thead><tr><th>Phase</th><th>Strategy</th><th>Configuration</th><th>Risk Mitigated</th></tr></thead><tbody>
+        <tr><td><strong>Phase 1: Classical + PQC</strong></td><td>Run both algorithms in parallel; attacker must break both</td><td style="font-family:var(--tl-mono);font-size:0.75rem;">TLS: ECDHE + ML-KEM hybrid<br>X.509: ECDSA + ML-DSA dual sig</td><td>Protects against both classical and quantum attacks during transition</td></tr>
+        <tr><td><strong>Phase 2: PQC-preferred</strong></td><td>Prefer PQC but accept classical fallback for compatibility</td><td style="font-family:var(--tl-mono);font-size:0.75rem;">Negotiate PQC first, fall back to classical</td><td>Gradual phase-out of classical algorithms</td></tr>
+        <tr><td><strong>Phase 3: PQC-only</strong></td><td>Remove classical algorithms entirely</td><td style="font-family:var(--tl-mono);font-size:0.75rem;">TLS 1.3 with PQC-only cipher suites</td><td>Full quantum resistance achieved</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Hybrid mode is recommended for 2-5 years during transition. OpenSSL 3.2+ supports hybrid KEM via provider API. Cloudflare and Google already testing hybrid TLS. Key concern: larger handshake messages may exceed MTU — implement TCP fragmentation or TLS records splitting.</div>
+    ` : '<div class="it-alert it-alert-info">No asymmetric algorithms selected — hybrid mode not applicable.</div>';
+    document.getElementById('pqc-hybrid-section').style.display = 'block';
+
+    // === Feature 6: Performance Impact Analysis ===
+    const perfData = {
+      'ML-KEM-768': { keygen: 0.05, encaps: 0.06, decaps: 0.06, bandwidth: 2240 },
+      'ML-KEM-1024': { keygen: 0.08, encaps: 0.09, decaps: 0.09, bandwidth: 3136 },
+      'ML-DSA-65': { keygen: 0.15, sign: 0.20, verify: 0.08, bandwidth: 5261 },
+      'ML-DSA-87': { keygen: 0.25, sign: 0.35, verify: 0.12, bandwidth: 7219 },
+    };
+    const classicalPerf = { 'RSA-2048': { keygen: 0.5, sign: 0.5, verify: 0.01, bandwidth: 256 }, 'ECDSA P-256': { keygen: 0.01, sign: 0.01, verify: 0.02, bandwidth: 64 } };
+    document.getElementById('pqc-perf-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Operation</th><th>RSA-2048 (classical)</th><th>ML-KEM-768 (PQC)</th><th>ML-DSA-65 (PQC)</th><th>Impact</th></tr></thead><tbody>
+        <tr><td>Key Generation</td><td>500 μs</td><td>50 μs</td><td>150 μs</td><td style="color:#059669;">✓ Faster for KEM</td></tr>
+        <tr><td>Sign/Encaps</td><td>500 μs</td><td>60 μs</td><td>200 μs</td><td style="color:#059669;">✓ Faster</td></tr>
+        <tr><td>Verify/Decaps</td><td>10 μs</td><td>60 μs</td><td>80 μs</td><td style="color:#d97706;">⚠️ 6-8x slower</td></tr>
+        <tr class="it-highlight"><td><strong>Handshake Bandwidth</strong></td><td>256 B</td><td class="it-highlight">2240 B</td><td class="it-highlight">5261 B</td><td class="it-highlight" style="color:#dc2626;">⚠️ 9-20x larger</td></tr>
+        <tr><td>TLS 1.3 RTT</td><td>1-RTT</td><td>1-RTT</td><td>1-RTT</td><td style="color:#059669;">✓ Same round trips</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">PQC operations are CPU-competitive or faster than RSA. Main impact is bandwidth: ML-KEM adds ~2KB, ML-DSA adds ~5KB to handshakes. For mobile/IoT, this may cause TCP fragmentation. Use TLS record splitting (RFC 8446) to stay within MTU. CPU impact is negligible for most workloads.</div>
+    `;
+    document.getElementById('pqc-perf-section').style.display = 'block';
+
+    // === Feature 7: Protocol Compatibility Matrix ===
+    const protocols = ['TLS 1.3', 'SSH', 'IPSec/IKEv2', 'X.509/PKIX', 'VPN/WireGuard', 'S/MIME', 'DNSSEC', 'Kerberos', 'JWT/OAuth', 'Blockchain'];
+    const compatMap = { 'ML-KEM': ['TLS 1.3', 'SSH', 'IPSec/IKEv2', 'VPN/WireGuard'], 'ML-DSA': ['TLS 1.3', 'SSH', 'X.509/PKIX', 'S/MIME', 'DNSSEC', 'JWT/OAuth'], 'SLH-DSA': ['X.509/PKIX', 'DNSSEC', 'Blockchain'] };
+    document.getElementById('pqc-compat-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Protocol</th><th>ML-KEM (KEM)</th><th>ML-DSA (Sig)</th><th>SLH-DSA (Sig)</th><th>Hybrid Support</th></tr></thead><tbody>
+        ${protocols.map(p => `<tr><td><strong>${p}</strong></td><td style="text-align:center;color:${compatMap['ML-KEM'].includes(p) ? '#059669' : '#94a3b8'};">${compatMap['ML-KEM'].includes(p) ? '✓' : '—'}</td><td style="text-align:center;color:${compatMap['ML-DSA'].includes(p) ? '#059669' : '#94a3b8'};">${compatMap['ML-DSA'].includes(p) ? '✓' : '—'}</td><td style="text-align:center;color:${compatMap['SLH-DSA'].includes(p) ? '#059669' : '#94a3b8'};">${compatMap['SLH-DSA'].includes(p) ? '✓' : '—'}</td><td>${['TLS 1.3', 'SSH', 'VPN/WireGuard'].includes(p) ? '✓ Available' : '⚠️ Limited'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">TLS 1.3 has the best PQC support via draft RFC for hybrid KEM. SSH supports PQC in OpenSSH 9.0+. X.509 certificates with PQC keys are supported by OpenSSL 3.2+. IPSec and VPN support is still maturing. Blockchain protocols need consensus changes for PQC — slow adoption expected.</div>
+    `;
+    document.getElementById('pqc-compat-section').style.display = 'block';
+
+    // === Feature 8: Crypto Agility Assessment ===
+    const agilityChecks = [
+      { check: 'Algorithm configuration is externalized (not hardcoded)', weight: 20 },
+      { check: 'Crypto library supports pluggable algorithm providers', weight: 20 },
+      { check: 'Key/cert rotation process is automated', weight: 15 },
+      { check: 'Protocol negotiation supports new algorithms (e.g., TLS cipher suites)', weight: 15 },
+      { check: 'Inventory of all crypto usage exists and is maintained', weight: 10 },
+      { check: 'CI/CD pipeline includes crypto compatibility tests', weight: 10 },
+      { check: 'HSM/KMS supports PQC algorithm loading', weight: 10 },
+    ];
+    document.getElementById('pqc-agility-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Crypto Agility Check</th><th>Weight</th><th>Status</th></tr></thead><tbody>
+        ${agilityChecks.map(c => `<tr><td style="font-size:0.8125rem;">${c.check}</td><td>${c.weight}%</td><td><select class="it-select pqc-agility-sel" style="width:auto;font-size:0.75rem;" data-weight="${c.weight}"><option value="yes">✓ Yes</option><option value="partial">~ Partial</option><option value="no">✗ No</option></select></td></tr>`).join('')}
+        <tr class="it-highlight"><td><strong>Agility Score</strong></td><td class="it-highlight">100%</td><td class="it-highlight" id="pqc-agility-score" style="font-weight:700;font-size:1.1rem;">— %</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Crypto agility is the ability to swap algorithms without major code changes. A score ≥70% means your system can adopt PQC with minimal refactoring. <50% requires significant architecture changes. Assess honestly — overestimating agility leads to migration delays. This checklist should be answered by your security engineering team.</div>
+    `;
+    document.getElementById('pqc-agility-section').style.display = 'block';
+    function updateAgilityScore() {
+      const sels = [...document.querySelectorAll('.pqc-agility-sel')];
+      let score = 0;
+      sels.forEach(s => { const w = parseInt(s.getAttribute('data-weight')); if (s.value === 'yes') score += w; else if (s.value === 'partial') score += w * 0.5; });
+      const scoreEl = document.getElementById('pqc-agility-score');
+      scoreEl.textContent = Math.round(score) + ' %';
+      scoreEl.style.color = score >= 70 ? '#059669' : score >= 50 ? '#d97706' : '#dc2626';
+    }
+    document.querySelectorAll('.pqc-agility-sel').forEach(s => s.addEventListener('change', updateAgilityScore));
+    updateAgilityScore();
+
+    // === Feature 9: Compliance & Standards Mapping ===
+    const complianceItems = [
+      { standard: 'NIST SP 800-208', desc: 'Stateful hash-based signatures', relevance: 'For long-lived signatures (code signing, root CA)', status: 'Published' },
+      { standard: 'NIST FIPS 203', desc: 'ML-KEM (Kyber) standard', relevance: 'Replace RSA/ECDH key exchange', status: 'Finalized Aug 2024' },
+      { standard: 'NIST FIPS 204', desc: 'ML-DSA (Dilithium) standard', relevance: 'Replace RSA/ECDSA signatures', status: 'Finalized Aug 2024' },
+      { standard: 'NIST FIPS 205', desc: 'SLH-DSA (SPHINCS+) standard', relevance: 'Hash-based signature backup', status: 'Finalized Aug 2024' },
+      { standard: 'CNSS Policy 15', desc: 'National Security Systems PQC mandate', relevance: 'US gov must migrate by 2035', status: 'Active' },
+      { standard: 'BND PQC Guidelines', desc: 'German intelligence PQC requirements', relevance: 'Federal systems in Germany', status: 'Published 2023' },
+      { standard: 'ANSSI PQC Position', desc: 'French cybersecurity agency guidance', relevance: 'Hybrid mode recommended for France', status: 'Published 2022' },
+      { standard: 'BSI TR-02102', desc: 'German BSI crypto guidelines', relevance: 'PQC migration roadmap for Germany', status: 'Updated 2024' },
+      { standard: 'ETSI TR 103 619', desc: 'European PQC migration guidance', relevance: 'EU-wide recommendations', status: 'Published 2020' },
+      { standard: 'IETF draft-pquip', desc: 'PQC for protocols (TLS, SSH, X.509)', relevance: 'Internet protocol standardization', status: 'In progress' },
+    ];
+    document.getElementById('pqc-compliance-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Standard / Guideline</th><th>Description</th><th>Relevance</th><th>Status</th></tr></thead><tbody>
+        ${complianceItems.map(c => `<tr><td><strong>${c.standard}</strong></td><td style="font-size:0.8125rem;">${c.desc}</td><td style="font-size:0.8125rem;">${c.relevance}</td><td style="color:${c.status.includes('Finalized') || c.status === 'Active' || c.status === 'Published' ? '#059669' : '#d97706'};font-weight:700;">${c.status}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">US federal systems must migrate to PQC by 2035 (CNSS Policy 15). EU agencies recommend hybrid mode during transition. NIST FIPS 203/204/205 are finalized — production deployments can begin now. Monitor IETF drafts for protocol-level PQC standards. Compliance audits will increasingly check for PQC readiness.</div>
+    `;
+    document.getElementById('pqc-compliance-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('pqc-export').style.display = 'inline-flex';
+    document.getElementById('pqc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), selectedAlgorithms: selected.map(id => ({ id, ...algos[id] })), risk, priority, retention, quantumTimeline: timeline, hndlRisk, exposureYears, vulnerable: vulnerable.map(id => algos[id].name), safe: safe.map(id => algos[id].name), migrationCosts: { totalEngineers: totalEng, totalMonths, totalCost }, recommendedStandards: recommendedStandards, compliance: complianceItems };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pqc-assessment-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('pqc-check').addEventListener('click', check);
+  document.getElementById('pqc-reset').addEventListener('click', () => {
+    document.getElementById('pqc-results').classList.remove('show');
+    document.querySelectorAll('#pqc-algos .it-checkbox-item').forEach(el => { el.classList.remove('active'); el.querySelector('input').checked = false; });
+    ['rsa-2048', 'ecdsa-256', 'aes-256'].forEach(id => { const el = document.querySelector(`[data-algo="${id}"]`); if (el) toggle(el); });
+  });
+})();
+</script>

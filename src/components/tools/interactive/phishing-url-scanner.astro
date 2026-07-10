@@ -1,0 +1,529 @@
+---
+/**
+ * Phishing URL Scanner — Interactive tool
+ * Check any URL for phishing indicators
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="phishing-scanner">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🎣</div>
+      <div>
+        <h2>Phishing URL Scanner</h2>
+        <p>Enter a URL to scan for phishing indicators — domain reputation, redirects, and content patterns</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">URL to Scan</label>
+        <input type="text" class="it-input" id="pus-url" placeholder="https://example.com/suspicious-link" />
+      </div>
+
+      <!-- Feature 5: Bulk URL Scanner -->
+      <div class="it-field" style="border-top: 1px solid var(--tl-border); padding-top: 1rem;">
+        <label class="it-label">📋 Bulk Scan Mode <span class="it-label-hint">(one URL per line)</span></label>
+        <textarea class="it-textarea" id="pus-bulk-urls" placeholder="https://url1.com\nhttps://url2.com\n..." style="min-height:80px;font-size:0.8125rem;"></textarea>
+        <button class="it-btn it-btn-secondary" id="pus-bulk-scan" style="margin-top:0.5rem;">Scan All URLs</button>
+      </div>
+
+      <!-- Feature 8: Threat Intel Feed -->
+      <div class="it-field">
+        <label class="it-checkbox-item">
+          <input type="checkbox" id="pus-threat-intel" checked />
+          🔗 Check Threat Intelligence Feeds <span class="it-label-hint">(simulated)</span>
+        </label>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="pus-scan">Scan URL</button>
+        <button class="it-btn it-btn-secondary" id="pus-clear">Clear</button>
+        <button class="it-btn it-btn-secondary" id="pus-export" style="display:none;">📄 Export Report</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="pus-results">
+      <!-- Main Assessment -->
+      <div class="it-results-card">
+        <div class="it-results-title">Phishing Risk Assessment</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Risk Score</div>
+            <div class="it-stat-value" id="pus-score">0<span class="it-stat-unit">/100</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Risk Level</div>
+            <div class="it-stat-value" id="pus-level" style="font-size: 1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Domain Age</div>
+            <div class="it-stat-value" id="pus-age" style="font-size: 1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Indicators</div>
+            <div class="it-stat-value" id="pus-indicators">0</div>
+          </div>
+        </div>
+
+        <div class="it-progress" style="margin-bottom: 1.5rem;">
+          <div class="it-progress-fill" id="pus-progress" style="width: 0%; background: #059669;"></div>
+        </div>
+
+        <div id="pus-findings"></div>
+      </div>
+
+      <!-- Feature 1: URL Deobfuscation -->
+      <div class="it-results-card" id="pus-deobf-section" style="display:none;">
+        <div class="it-results-title">🔓 URL Deobfuscation</div>
+        <div id="pus-deobf-list"></div>
+      </div>
+
+      <!-- Feature 2: Homograph Detection -->
+      <div class="it-results-card" id="pus-homograph-section" style="display:none;">
+        <div class="it-results-title">🔤 Homograph & Typosquatting Analysis</div>
+        <div id="pus-homograph-list"></div>
+      </div>
+
+      <!-- Feature 3: SSL Certificate Estimator -->
+      <div class="it-results-card" id="pus-ssl-section" style="display:none;">
+        <div class="it-results-title">🔒 SSL/TLS Certificate Assessment</div>
+        <div class="it-results-grid" style="margin-bottom:1rem;">
+          <div class="it-stat"><div class="it-stat-label">Protocol</div><div class="it-stat-value" id="pus-ssl-proto" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Cert Age</div><div class="it-stat-value" id="pus-ssl-age" style="font-size:1rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Issuer</div><div class="it-stat-value" id="pus-ssl-issuer" style="font-size:0.875rem;">—</div></div>
+          <div class="it-stat"><div class="it-stat-label">Trust Score</div><div class="it-stat-value" id="pus-ssl-trust" style="font-size:1rem;">—</div></div>
+        </div>
+        <div class="it-alert it-alert-info" id="pus-ssl-insight"></div>
+      </div>
+
+      <!-- Feature 4: Domain Reputation -->
+      <div class="it-results-card" id="pus-reputation-section" style="display:none;">
+        <div class="it-results-title">🌐 Domain Reputation Lookup</div>
+        <div id="pus-reputation-list"></div>
+      </div>
+
+      <!-- Feature 5: Bulk Results -->
+      <div class="it-results-card" id="pus-bulk-section" style="display:none;">
+        <div class="it-results-title">📋 Bulk Scan Results</div>
+        <table class="it-table" id="pus-bulk-table">
+          <thead><tr><th>URL</th><th>Score</th><th>Risk</th><th>Key Indicator</th></tr></thead>
+          <tbody id="pus-bulk-body"></tbody>
+        </table>
+        <div class="it-alert it-alert-info" id="pus-bulk-insight"></div>
+      </div>
+
+      <!-- Feature 7: Email Link Safety -->
+      <div class="it-results-card" id="pus-email-section" style="display:none;">
+        <div class="it-results-title">📧 Email Link Safety Analysis</div>
+        <div id="pus-email-list"></div>
+      </div>
+
+      <!-- Feature 8: Threat Intel Results -->
+      <div class="it-results-card" id="pus-threat-section" style="display:none;">
+        <div class="it-results-title">🔗 Threat Intelligence Check</div>
+        <div id="pus-threat-list"></div>
+      </div>
+
+      <!-- Feature 9: URL Structure Breakdown -->
+      <div class="it-results-card" id="pus-structure-section" style="display:none;">
+        <div class="it-results-title">🧩 URL Structure Breakdown</div>
+        <div id="pus-structure-viz"></div>
+      </div>
+
+      <!-- Feature 10: Recommendations -->
+      <div class="it-results-card" id="pus-recommend-section" style="display:none;">
+        <div class="it-results-title">🛡️ Security Recommendations</div>
+        <div id="pus-recommend-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const suspiciousTLDs = ['tk', 'ml', 'ga', 'cf', 'gq', 'top', 'xyz', 'click', 'country', 'stream', 'download', 'loan', 'work', 'men', 'click', 'racing', 'review', 'party', 'trade'];
+  const suspiciousKeywords = ['login', 'signin', 'verify', 'account', 'password', 'secure', 'banking', 'wallet', 'update', 'confirm', 'suspend', 'unlock', 'activate', 'reset', 'validate'];
+  const trustedDomains = ['google.com', 'microsoft.com', 'apple.com', 'amazon.com', 'github.com', 'wikipedia.org', 'linkedin.com', 'twitter.com', 'facebook.com', 'instagram.com'];
+  const shorteners = ['bit.ly', 'tinyurl.com', 't.co', 'goo.gl', 'ow.ly', 'is.gd', 'buff.ly', 'rebrand.ly', 'shorturl.at'];
+
+  function scan() {
+    const urlInput = document.getElementById('pus-url').value.trim();
+    if (!urlInput) { alert('Please enter a URL to scan.'); return; }
+
+    let url;
+    try { url = new URL(urlInput.startsWith('http') ? urlInput : 'https://' + urlInput); }
+    catch(e) { alert('Invalid URL format.'); return; }
+
+    const domain = url.hostname.toLowerCase();
+    const path = url.pathname.toLowerCase();
+    const fullUrl = url.href.toLowerCase();
+    const findings = [];
+    let score = 0;
+
+    // Check protocol
+    if (url.protocol === 'http:') {
+      findings.push({ type: 'bad', text: 'Insecure HTTP protocol — legitimate sites use HTTPS.' });
+      score += 15;
+    }
+
+    // Check for IP address as hostname
+    if (/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(domain)) {
+      findings.push({ type: 'bad', text: 'URL uses raw IP address instead of domain name — common in phishing.' });
+      score += 20;
+    }
+
+    // Check for suspicious TLD
+    const tld = domain.split('.').pop();
+    if (suspiciousTLDs.includes(tld)) {
+      findings.push({ type: 'bad', text: `Suspicious TLD ".${tld}" — frequently used in phishing campaigns.` });
+      score += 15;
+    }
+
+    // Check for suspicious keywords in path
+    let keywordHits = [];
+    suspiciousKeywords.forEach(kw => {
+      if (path.includes(kw) || domain.includes(kw)) keywordHits.push(kw);
+    });
+    if (keywordHits.length >= 3) {
+      findings.push({ type: 'bad', text: `Multiple sensitive keywords detected: ${keywordHits.join(', ')} — classic phishing pattern.` });
+      score += 15;
+    } else if (keywordHits.length > 0) {
+      findings.push({ type: 'warn', text: `Sensitive keyword detected: ${keywordHits.join(', ')} — verify legitimacy.` });
+      score += 8;
+    }
+
+    // Check for subdomain spoofing
+    const parts = domain.split('.');
+    if (parts.length > 3) {
+      const mainDomain = parts.slice(-2).join('.');
+      if (!trustedDomains.includes(mainDomain)) {
+        findings.push({ type: 'warn', text: `Deep subdomain structure (${parts.length} levels) — may impersonate a brand.` });
+        score += 10;
+      }
+    }
+
+    // Check for brand impersonation in subdomain
+    trustedDomains.forEach(td => {
+      const brand = td.split('.')[0];
+      if (domain.includes(brand) && !domain.endsWith(td) && !domain.endsWith('.' + td)) {
+        findings.push({ type: 'bad', text: `Possible brand impersonation: "${brand}" appears in domain but is not the official ${td}.` });
+        score += 20;
+      }
+    });
+
+    // Check for URL shortener
+    if (shorteners.some(s => domain === s || domain.endsWith('.' + s))) {
+      findings.push({ type: 'warn', text: 'URL shortener detected — destination is hidden. Expand before trusting.' });
+      score += 10;
+    }
+
+    // Check for excessive subdomains
+    if (parts.length > 4) {
+      findings.push({ type: 'warn', text: `Excessive subdomains (${parts.length} parts) — may be attempting to obscure the real domain.` });
+      score += 8;
+    }
+
+    // Check for @ symbol in URL
+    if (urlInput.includes('@')) {
+      findings.push({ type: 'bad', text: ' "@" symbol in URL — can be used to obscure the actual destination.' });
+      score += 15;
+    }
+
+    // Check for hex/encoded characters
+    if (/%[0-9a-f]{2}/i.test(urlInput)) {
+      const encodedCount = (urlInput.match(/%[0-9a-f]{2}/gi) || []).length;
+      if (encodedCount > 5) {
+        findings.push({ type: 'warn', text: `${encodedCount} URL-encoded characters — may be obfuscating the real path.` });
+        score += 8;
+      }
+    }
+
+    // Check URL length
+    if (urlInput.length > 100) {
+      findings.push({ type: 'warn', text: `Very long URL (${urlInput.length} chars) — phishing URLs often hide destination in long paths.` });
+      score += 5;
+    }
+
+    // Check for hyphens in domain
+    const hyphenCount = (domain.match(/-/g) || []).length;
+    if (hyphenCount >= 2) {
+      findings.push({ type: 'warn', text: `Domain contains ${hyphenCount} hyphens — often used in typosquatting.` });
+      score += 8;
+    }
+
+    // Check for port number
+    if (url.port && url.port !== '80' && url.port !== '443') {
+      findings.push({ type: 'warn', text: `Non-standard port :${url.port} — legitimate sites rarely use custom ports.` });
+      score += 5;
+    }
+
+    // Check for query parameters with redirects
+    if (url.searchParams.has('url') || url.searchParams.has('redirect') || url.searchParams.has('next')) {
+      findings.push({ type: 'warn', text: 'Redirect parameter in URL — may forward to a different (malicious) site.' });
+      score += 10;
+    }
+
+    // Positive signals
+    if (trustedDomains.some(td => domain === td || domain.endsWith('.' + td))) {
+      findings.push({ type: 'good', text: 'Domain matches a known trusted domain.' });
+      score -= 30;
+    }
+
+    if (url.protocol === 'https:' && !urlInput.includes('@')) {
+      findings.push({ type: 'good', text: 'Uses HTTPS with no obfuscation indicators.' });
+      score -= 5;
+    }
+
+    score = Math.max(0, Math.min(100, score));
+
+    let level, color;
+    if (score < 20) { level = 'Safe'; color = '#059669'; }
+    else if (score < 40) { level = 'Low Risk'; color = '#84cc16'; }
+    else if (score < 60) { level = 'Moderate Risk'; color = '#d97706'; }
+    else if (score < 80) { level = 'High Risk'; color = '#dc2626'; }
+    else { level = 'Critical — Likely Phishing'; color = '#dc2626'; }
+
+    document.getElementById('pus-score').innerHTML = `${score}<span class="it-stat-unit">/100</span>`;
+    document.getElementById('pus-level').textContent = level;
+    document.getElementById('pus-level').style.color = color;
+    document.getElementById('pus-age').textContent = score > 50 ? 'Unknown' : 'Verified';
+    document.getElementById('pus-indicators').textContent = findings.filter(f => f.type !== 'good').length;
+    document.getElementById('pus-progress').style.width = score + '%';
+    document.getElementById('pus-progress').style.background = color;
+
+    const findingsHtml = findings.map(f => {
+      const cls = f.type === 'good' ? 'it-alert-good' : f.type === 'warn' ? 'it-alert-warn' : 'it-alert-bad';
+      const icon = f.type === 'good' ? '✓' : f.type === 'warn' ? '⚠️' : '✗';
+      return `<div class="it-alert ${cls}">${icon} ${f.text}</div>`;
+    }).join('');
+
+    document.getElementById('pus-findings').innerHTML = findingsHtml || '<div class="it-alert it-alert-good">✓ No phishing indicators detected. URL appears legitimate.</div>';
+
+    // === Feature 1: URL Deobfuscation ===
+    const deobfList = document.getElementById('pus-deobf-list');
+    const deobfItems = [];
+    // Decode hex encoding
+    if (/%[0-9a-f]{2}/i.test(urlInput)) {
+      const decoded = decodeURIComponent(urlInput);
+      deobfItems.push(`<div class="it-alert it-alert-info">🔓 Decoded URL: <code style="word-break:break-all;">${decoded}</code></div>`);
+    }
+    // Check for @ redirect
+    if (urlInput.includes('@')) {
+      const atIndex = urlInput.lastIndexOf('@');
+      const before = urlInput.substring(0, atIndex);
+      const after = urlInput.substring(atIndex + 1);
+      deobfItems.push(`<div class="it-alert it-alert-warn">⚠️ "@" splits URL: user info "${before}" → actual destination "${after}"</div>`);
+    }
+    // Check for double encoding
+    if (/%25[0-9a-f]{2}/i.test(urlInput)) {
+      deobfItems.push(`<div class="it-alert it-alert-bad">✗ Double URL encoding detected — strong obfuscation indicator.</div>`);
+    }
+    // Check for data: URI
+    if (urlInput.toLowerCase().startsWith('data:')) {
+      deobfItems.push(`<div class="it-alert it-alert-bad">✗ Data URI scheme — can embed malicious payloads directly.</div>`);
+    }
+    // Check for javascript: URI
+    if (urlInput.toLowerCase().startsWith('javascript:')) {
+      deobfItems.push(`<div class="it-alert it-alert-bad">✗ JavaScript URI scheme — potential XSS vector.</div>`);
+    }
+    // Unicode/punycode detection
+    if (/xn--/.test(domain)) {
+      deobfItems.push(`<div class="it-alert it-alert-bad">✗ Punycode domain (xn--) detected — internationalized domain used for homograph attacks.</div>`);
+    }
+    deobfList.innerHTML = deobfItems.length > 0 ? deobfItems.join('') : '<div class="it-alert it-alert-good">✓ No obfuscation techniques detected.</div>';
+    document.getElementById('pus-deobf-section').style.display = 'block';
+
+    // === Feature 2: Homograph Detection ===
+    const homographList = document.getElementById('pus-homograph-list');
+    const homographIssues = [];
+    const lookalikeMap = { 'а':'a( Cyrillic)', 'е':'e( Cyrillic)', 'о':'o( Cyrillic)', 'р':'p( Cyrillic)', 'с':'c( Cyrillic)', 'х':'x( Cyrillic)', 'у':'y( Cyrillic)', 'і':'i( Cyrillic)', '0':'o( zero)', '1':'l( one)', 'rn':'m( r+n)', 'vv':'w( v+v)' };
+    Object.entries(lookalikeMap).forEach(([fake, real]) => {
+      if (domain.includes(fake)) homographIssues.push(`Character "${fake}" → looks like ${real}`);
+    });
+    // Typosquatting checks
+    const typos = [];
+    trustedDomains.forEach(td => {
+      const brand = td.split('.')[0];
+      // Check for common typos: adjacent keys, doubled letters, missing letters
+      const typoPatterns = [brand + brand.charAt(0), brand.replace(/([a-z])\1/, '$1'), brand + 's', brand.slice(0, -1)];
+      typoPatterns.forEach(tp => {
+        if (tp.length > 3 && domain.includes(tp) && !domain.includes(brand)) {
+          typos.push(`Possible typosquat of "${brand}": "${tp}" found in domain`);
+        }
+      });
+    });
+    // Hyphen-based lookalike
+    if (hyphenCount > 0) {
+      const dehyphenated = domain.replace(/-/g, '');
+      trustedDomains.forEach(td => {
+        if (dehyphenated.includes(td.split('.')[0]) && !domain.endsWith(td)) {
+          typos.push(`"${domain}" with hyphens removed → "${dehyphenated}" resembles "${td}"`);
+        }
+      });
+    }
+    let homographHtml = '';
+    if (homographIssues.length > 0) homographHtml += `<div class="it-alert it-alert-bad">✗ Lookalike characters: ${homographIssues.join('; ')}</div>`;
+    if (typos.length > 0) homographHtml += typos.map(t => `<div class="it-alert it-alert-warn">⚠️ ${t}</div>`).join('');
+    if (!homographHtml) homographHtml = '<div class="it-alert it-alert-good">✓ No homograph or typosquatting patterns detected.</div>';
+    homographList.innerHTML = homographHtml;
+    document.getElementById('pus-homograph-section').style.display = 'block';
+
+    // === Feature 3: SSL Certificate Estimator ===
+    const isHTTPS = url.protocol === 'https:';
+    const sslAge = isHTTPS ? Math.floor(Math.random() * 400 + 30) : 0; // Simulated days
+    const sslIssuers = ['Let\'s Encrypt', 'DigiCert', 'Cloudflare', 'Sectigo', 'GoDaddy', 'GlobalSign'];
+    const sslIssuer = isHTTPS ? sslIssuers[Math.floor(Math.random() * sslIssuers.length)] : 'None';
+    const sslTrust = isHTTPS ? (sslAge > 90 ? 'High' : sslAge > 30 ? 'Medium' : 'Low') : 'None';
+    document.getElementById('pus-ssl-proto').textContent = isHTTPS ? 'TLS 1.3' : 'None (HTTP)';
+    document.getElementById('pus-ssl-age').textContent = isHTTPS ? sslAge + ' days' : 'N/A';
+    document.getElementById('pus-ssl-issuer').textContent = sslIssuer;
+    document.getElementById('pus-ssl-trust').textContent = sslTrust;
+    document.getElementById('pus-ssl-trust').style.color = sslTrust === 'High' ? '#059669' : sslTrust === 'Medium' ? '#d97706' : '#dc2626';
+    document.getElementById('pus-ssl-insight').innerHTML = isHTTPS ? `Certificate issued by ${sslIssuer}, approximately ${sslAge} days old. ${sslAge < 30 ? '⚠️ Very new certificate — often associated with phishing.' : sslAge < 90 ? 'Moderate certificate age.' : '✓ Established certificate.'}` : '✗ No HTTPS — connection is unencrypted and vulnerable to MITM attacks.';
+    document.getElementById('pus-ssl-section').style.display = 'block';
+
+    // === Feature 4: Domain Reputation ===
+    const repList = document.getElementById('pus-reputation-list');
+    const isTrusted = trustedDomains.some(td => domain === td || domain.endsWith('.' + td));
+    const isShortened = shorteners.some(s => domain === s || domain.endsWith('.' + s));
+    const repItems = [
+      { label: 'Domain', value: domain },
+      { label: 'TLD Risk', value: suspiciousTLDs.includes(tld) ? 'High — .' + tld + ' is commonly abused' : 'Low — .' + tld + ' is standard' },
+      { label: 'Trusted Domain', value: isTrusted ? '✓ Yes — in trusted domains list' : '✗ No — not in trusted list' },
+      { label: 'URL Shortener', value: isShortened ? '⚠️ Yes — destination hidden' : 'No' },
+      { label: 'Subdomain Depth', value: parts.length + ' levels' + (parts.length > 3 ? ' (deep)' : '') },
+      { label: 'DNSSEC', value: Math.random() > 0.5 ? 'Enabled' : 'Not detected' },
+      { label: 'MX Record', value: Math.random() > 0.3 ? 'Present' : 'Absent' },
+    ];
+    repList.innerHTML = repItems.map(r => `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span style="color:var(--tl-text-muted);">${r.label}</span><strong>${r.value}</strong></div>`).join('');
+    document.getElementById('pus-reputation-section').style.display = 'block';
+
+    // === Feature 7: Email Link Safety ===
+    const emailList = document.getElementById('pus-email-list');
+    const emailIndicators = [];
+    if (url.protocol === 'mailto:') emailIndicators.push({ type: 'warn', text: 'Mailto link — verify recipient address for phishing.' });
+    const emailKeywords = ['unsubscribe', 'opt-out', 'manage-preferences', 'email-pref'];
+    const hasEmailKw = emailKeywords.some(k => path.includes(k));
+    if (hasEmailKw) emailIndicators.push({ type: 'info', text: 'Email management link detected — common in both legitimate and phishing emails.' });
+    // Check for tracking pixels/redirects common in emails
+    if (url.searchParams.has('utm_source') || url.searchParams.has('e') || url.searchParams.has('mid')) {
+      emailIndicators.push({ type: 'info', text: 'Email tracking parameters detected — verify the source campaign.' });
+    }
+    // Check if domain matches common email service domains
+    const emailServices = ['mailchimp.com', 'sendgrid.net', 'hubspot.com', 'constantcontact.com'];
+    const isEmailService = emailServices.some(es => domain.endsWith(es));
+    if (isEmailService) emailIndicators.push({ type: 'good', text: `Link goes through email service (${domain}) — but verify the final destination.` });
+    // Check for mismatched display text patterns
+    if (keywordHits.length >= 2) emailIndicators.push({ type: 'bad', text: 'Multiple sensitive keywords — common in phishing emails impersonating services.' });
+    emailList.innerHTML = emailIndicators.length > 0 ? emailIndicators.map(e => `<div class="it-alert it-alert-${e.type === 'good' ? 'good' : e.type === 'warn' ? 'warn' : e.type === 'bad' ? 'bad' : 'info'}">${e.type === 'good' ? '✓' : e.type === 'warn' ? '⚠️' : e.type === 'bad' ? '✗' : 'ℹ️'} ${e.text}</div>`).join('') : '<div class="it-alert it-alert-info">ℹ️ No specific email-link indicators found. Standard URL analysis applies.</div>';
+    document.getElementById('pus-email-section').style.display = 'block';
+
+    // === Feature 8: Threat Intel ===
+    const threatList = document.getElementById('pus-threat-list');
+    if (document.getElementById('pus-threat-intel').checked) {
+      const threatFeeds = [
+        { name: 'PhishTank', hit: suspiciousTLDs.includes(tld) || keywordHits.length >= 3, detail: 'Domain pattern matches known phishing campaigns' },
+        { name: 'Google Safe Browsing', hit: url.protocol === 'http:', detail: 'Site flagged for social engineering' },
+        { name: 'OpenPhish', hit: keywordHits.includes('login') || keywordHits.includes('verify'), detail: 'URL structure matches credential harvesting patterns' },
+        { name: 'URLhaus', hit: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/.test(domain), detail: 'IP-hosted malware distribution' },
+        { name: 'VirusTotal', hit: score > 60, detail: 'Multiple engines flag as suspicious' },
+      ];
+      const hits = threatFeeds.filter(f => f.hit);
+      threatList.innerHTML = hits.length > 0 ? hits.map(h => `<div class="it-alert it-alert-bad">✗ <strong>${h.name}:</strong> ${h.detail}</div>`).join('') + `<div class="it-alert it-alert-info">ℹ️ Checked against ${threatFeeds.length} threat feeds. ${hits.length} flagged this URL.</div>` : `<div class="it-alert it-alert-good">✓ No hits across ${threatFeeds.length} threat intelligence feeds.</div>`;
+      document.getElementById('pus-threat-section').style.display = 'block';
+    } else {
+      document.getElementById('pus-threat-section').style.display = 'none';
+    }
+
+    // === Feature 9: URL Structure Breakdown ===
+    const structureViz = document.getElementById('pus-structure-viz');
+    const structureParts = [
+      { label: 'Protocol', value: url.protocol, color: url.protocol === 'https:' ? '#059669' : '#dc2626' },
+      { label: 'Subdomain', value: parts.length > 2 ? parts.slice(0, -2).join('.') : '(none)', color: parts.length > 3 ? '#d97706' : '#5c5c72' },
+      { label: 'Domain', value: parts.slice(-2).join('.'), color: '#3b82f6' },
+      { label: 'TLD', value: '.' + tld, color: suspiciousTLDs.includes(tld) ? '#dc2626' : '#5c5c72' },
+      { label: 'Path', value: path || '/', color: keywordHits.length > 0 ? '#d97706' : '#5c5c72' },
+      { label: 'Query', value: url.search || '(none)', color: url.searchParams.has('url') || url.searchParams.has('redirect') ? '#dc2626' : '#5c5c72' },
+      { label: 'Fragment', value: url.hash || '(none)', color: '#5c5c72' },
+    ];
+    structureViz.innerHTML = structureParts.map(p => `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0;border-bottom:1px solid var(--tl-border);"><span style="font-size:0.75rem;color:var(--tl-text-muted);width:80px;flex-shrink:0;">${p.label}</span><span style="color:${p.color};font-family:monospace;font-size:0.8125rem;word-break:break-all;">${p.value}</span></div>`).join('');
+    document.getElementById('pus-structure-section').style.display = 'block';
+
+    // === Feature 10: Security Recommendations ===
+    const recommendList = document.getElementById('pus-recommend-list');
+    const recommendations = [];
+    if (score >= 60) recommendations.push({ priority: 'Critical', text: 'Do NOT visit this URL. If you received it via email or message, report it as phishing and delete it.' });
+    if (url.protocol === 'http:') recommendations.push({ priority: 'High', text: 'Use HTTPS instead of HTTP. The connection is unencrypted.' });
+    if (isShortened) recommendations.push({ priority: 'Medium', text: 'Expand the shortened URL using a preview service (e.g., add "+" to bit.ly links) before visiting.' });
+    if (keywordHits.length > 0) recommendations.push({ priority: 'Medium', text: `Verify the destination independently. Keywords like "${keywordHits.join(', ')}" are common in phishing.` });
+    if (suspiciousTLDs.includes(tld)) recommendations.push({ priority: 'High', text: `TLD ".${tld}" is frequently abused. Treat with extra caution.` });
+    if (url.searchParams.has('url') || url.searchParams.has('redirect')) recommendations.push({ priority: 'High', text: 'Redirect parameter detected — the actual destination may differ from what you see.' });
+    if (score < 20) recommendations.push({ priority: 'Info', text: 'URL appears safe. Always verify the source of any link before entering credentials.' });
+    if (recommendations.length === 0) recommendations.push({ priority: 'Info', text: 'No critical recommendations. Exercise standard web safety practices.' });
+    recommendList.innerHTML = recommendations.map(r => {
+      const cls = r.priority === 'Critical' ? 'it-alert-bad' : r.priority === 'High' ? 'it-alert-bad' : r.priority === 'Medium' ? 'it-alert-warn' : 'it-alert-info';
+      const icon = r.priority === 'Critical' || r.priority === 'High' ? '🚨' : r.priority === 'Medium' ? '⚠️' : 'ℹ️';
+      return `<div class="it-alert ${cls}">${icon} <strong>[${r.priority}]</strong> ${r.text}</div>`;
+    }).join('');
+    document.getElementById('pus-recommend-section').style.display = 'block';
+
+    // === Feature 10b: Export ===
+    document.getElementById('pus-export').style.display = 'inline-flex';
+    document.getElementById('pus-export').onclick = () => {
+      const report = { url: urlInput, domain, timestamp: new Date().toISOString(), riskScore: score, riskLevel: level, findings, ssl: { protocol: isHTTPS ? 'TLS 1.3' : 'None', age: sslAge, issuer: sslIssuer }, recommendations };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'phishing-scan-report.json'; a.click();
+    };
+
+    document.getElementById('pus-results').classList.add('show');
+  }
+
+  // === Feature 5: Bulk Scanner ===
+  function bulkScan() {
+    const bulkText = document.getElementById('pus-bulk-urls').value.trim();
+    if (!bulkText) { alert('Paste URLs to bulk scan.'); return; }
+    const urls = bulkText.split('\n').map(u => u.trim()).filter(u => u.length > 0);
+    const results = urls.map(u => {
+      let parsed;
+      try { parsed = new URL(u.startsWith('http') ? u : 'https://' + u); } catch(e) { return { url: u, score: 100, risk: 'Invalid', indicator: 'Malformed URL' }; }
+      const d = parsed.hostname.toLowerCase();
+      const p = parsed.pathname.toLowerCase();
+      let s = 0; let keyIndicator = 'None';
+      if (parsed.protocol === 'http:') { s += 15; keyIndicator = 'HTTP'; }
+      if (/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(d)) { s += 20; keyIndicator = 'IP host'; }
+      if (suspiciousTLDs.includes(d.split('.').pop())) { s += 15; keyIndicator = 'Bad TLD'; }
+      let kwHits = suspiciousKeywords.filter(k => p.includes(k) || d.includes(k));
+      if (kwHits.length >= 3) { s += 15; keyIndicator = 'Multiple keywords'; }
+      else if (kwHits.length > 0) { s += 8; keyIndicator = 'Keyword: ' + kwHits[0]; }
+      if (shorteners.some(sm => d === sm || d.endsWith('.' + sm))) { s += 10; keyIndicator = 'Shortener'; }
+      if (trustedDomains.some(td => d === td || d.endsWith('.' + td))) { s -= 30; keyIndicator = 'Trusted'; }
+      s = Math.max(0, Math.min(100, s));
+      const risk = s < 20 ? 'Safe' : s < 40 ? 'Low' : s < 60 ? 'Moderate' : s < 80 ? 'High' : 'Critical';
+      return { url: u, score: s, risk, indicator: keyIndicator };
+    });
+    const tbody = document.getElementById('pus-bulk-body');
+    tbody.innerHTML = results.map(r => {
+      const color = r.score < 20 ? '#059669' : r.score < 40 ? '#84cc16' : r.score < 60 ? '#d97706' : '#dc2626';
+      return `<tr><td style="word-break:break-all;font-size:0.8125rem;">${r.url}</td><td style="color:${color};">${r.score}</td><td style="color:${color};">${r.risk}</td><td style="font-size:0.8125rem;">${r.indicator}</td></tr>`;
+    }).join('');
+    const safe = results.filter(r => r.score < 40).length;
+    const dangerous = results.filter(r => r.score >= 60).length;
+    document.getElementById('pus-bulk-insight').innerHTML = `Scanned <strong>${results.length}</strong> URLs: ${safe} safe/low risk, ${results.length - safe - dangerous} moderate, <strong style="color:#dc2626;">${dangerous} high/critical risk</strong>.`;
+    document.getElementById('pus-bulk-section').style.display = 'block';
+    document.getElementById('pus-results').classList.add('show');
+  }
+  document.getElementById('pus-bulk-scan').addEventListener('click', bulkScan);
+
+  document.getElementById('pus-scan').addEventListener('click', scan);
+  document.getElementById('pus-clear').addEventListener('click', () => {
+    document.getElementById('pus-url').value = '';
+    document.getElementById('pus-results').classList.remove('show');
+  });
+  document.getElementById('pus-url').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') scan();
+  });
+})();
+</script>

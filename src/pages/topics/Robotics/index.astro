@@ -1,0 +1,397 @@
+---
+/**
+ * Robotics topic Page — Premium Redesign
+ * Unique layout: image-left hero, alternating topic rows,
+ * banner deep dive, horizontal timeline.
+ * 12 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { roboticsContent } from '../../../data/topics/Robotics/robotics-content';
+import './robotics-styles.css';
+const c = roboticsContent;
+
+const topicImages = [
+  '/images/robotics-08-exoskeleton.webp',
+  '/images/robotics-01-cobot-assembly.webp',
+  '/images/robotics-03-warehouse-amr.webp',
+  '/images/robotics-02-surgical-robot.webp',
+  '/images/robotics-07-welding-arm.webp',
+  '/images/robotics-09-mars-rover.webp',
+  '/images/robotics-03-warehouse-amr.webp',
+  '/images/robotics-10-micro-drones.webp',
+  '/images/robotics-06-quadruped-rescue.webp',
+];
+
+const industryImages = [
+  '/images/robotics-07-welding-arm.webp',
+  '/images/robotics-03-warehouse-amr.webp',
+  '/images/robotics-02-surgical-robot.webp',
+  '/images/robotics-04-agricultural-harvest.webp',
+];
+
+const marqueeItems = ['Humanoids', 'Cobots', 'AMRs', 'Surgical Robots', 'Physical AI', 'RaaS', 'Swarm Robotics', 'Soft Robotics', '$65B Market', '560K Installations', '+30% Cobot Growth', '200K+ AMRs'];
+---
+
+<BaseLayout title={`${c.name} — Trends, Market & Future Outlook 2026-2030`} description={c.description} keywords="robotics, humanoid robots, collaborative robots, cobots, autonomous mobile robots, AMR, surgical robots, industrial automation, physical AI, robot-as-a-service, RaaS, swarm robotics, soft robotics, NVIDIA Isaac Sim, manufacturing automation, warehouse robots">
+  <div class="rb-page">
+
+    {/* ══ 1. HERO — Image LEFT, text RIGHT ══ */}
+    <section class="rb-hero">
+      <div class="rb-hero-bg">
+        <img src="/images/002-robotics-precision-lab.webp" alt="Robotics precision lab" loading="eager" />
+      </div>
+      <div class="rb-grid-overlay"></div>
+      <div class="rb-orb rb-hero-orb-1"></div>
+      <div class="rb-orb rb-hero-orb-2"></div>
+      <div class="rb-hero-inner">
+        <div class="rb-hero-visual">
+          <div class="rb-hero-img-wrap">
+            <img class="rb-hero-img" src="/images/robotics-08-exoskeleton.webp" alt="Robotic exoskeleton" loading="eager" />
+            <div class="rb-hero-img-overlay"></div>
+          </div>
+          <div class="rb-hero-float-badge">🟢 Deployed at BMW</div>
+          <div class="rb-hero-float-card">
+            <div>
+              <div class="rb-hero-float-label">Humanoid Market</div>
+              <div class="rb-hero-float-value">$1.8B</div>
+            </div>
+            <div>
+              <div class="rb-hero-float-label">Growth</div>
+              <div class="rb-hero-float-value" style="color:var(--rb-green)">2.25×</div>
+            </div>
+          </div>
+        </div>
+        <div class="rb-hero-right">
+          <span class="rb-hero-pill"><span class="rb-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="rb-grad-text">Robotics</span></h1>
+          <p class="rb-hero-tagline">{c.tagline}</p>
+          <p class="rb-hero-desc">{c.description}</p>
+          <div class="rb-hero-ctas">
+            <a href="#topics" class="rb-btn rb-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="rb-btn rb-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="rb-hero-stats">
+            {c.heroStats.map((s) => (
+              <div class="rb-hero-stat">
+                <span class="rb-hero-stat-value">{s.value}</span>
+                <span class="rb-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="rb-marquee">
+      <div class="rb-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'rb-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="rb-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. MARKET STATS — 6-col horizontal strip ══ */}
+    <section class="rb-section">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Market Snapshot</span>
+        <h2 class="rb-section-title rb-reveal">Robotics by the <span class="rb-grad-text">Numbers</span></h2>
+        <p class="rb-section-sub rb-reveal">Real data from IFR, market reports, and investment tracking — the robotics industry at a glance.</p>
+        <div class="rb-market-grid">
+          {c.marketStats.map((s) => (
+            <div class="rb-market-card rb-reveal">
+              <div class="rb-market-value">{s.value}</div>
+              <div class="rb-market-label">{s.label}</div>
+              <div class="rb-market-source">{s.source}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. TOPICS — Alternating image/text rows ══ */}
+    <section class="rb-section rb-section-alt" id="topics">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Core Topics</span>
+        <h2 class="rb-section-title rb-reveal">What's Driving Robotics <span class="rb-grad-text">Search Demand</span></h2>
+        <p class="rb-section-sub rb-reveal">Nine topics capturing the most search interest — from humanoids to soft robotics, each backed by real growth data.</p>
+        <div class="rb-topics-list">
+          {c.topics.map((t, i) => (
+            <div class="rb-topic-row rb-reveal">
+              <div class="rb-topic-img-wrap">
+                <img class="rb-topic-img" src={topicImages[i]} alt={t.title} loading="lazy" />
+                <div class="rb-topic-img-overlay"></div>
+              </div>
+              <div class="rb-topic-body">
+                <div class="rb-topic-icon">{t.icon}</div>
+                <div class="rb-topic-content">
+                  <h3 class="rb-topic-title">{t.title}</h3>
+                  <p class="rb-topic-desc">{t.description}</p>
+                  <div class="rb-topic-meta">
+                    <span class="rb-topic-trend">{t.trend}</span>
+                    <span class="rb-topic-searches">{t.searches}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. HUMANOID — Full-width banner with overlay ══ */}
+    <section class="rb-section rb-humanoid">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Deep Dive</span>
+        <div class="rb-humanoid-banner rb-reveal">
+          <img class="rb-humanoid-banner-img" src="/images/robotics-06-quadruped-rescue.webp" alt="Humanoid robots" loading="lazy" />
+          <div class="rb-humanoid-banner-overlay"></div>
+          <div class="rb-humanoid-banner-content">
+            <h3>{c.humanoidDeepDive.title}</h3>
+            <p class="rb-humanoid-subtitle">{c.humanoidDeepDive.subtitle}</p>
+            <p class="rb-humanoid-desc">{c.humanoidDeepDive.description}</p>
+            <div class="rb-humanoid-stats">
+              {c.humanoidDeepDive.stats.map((s) => (
+                <div class="rb-humanoid-stat">
+                  <div class="rb-humanoid-stat-val">{s.value}</div>
+                  <div class="rb-humanoid-stat-lbl">{s.label}</div>
+                </div>
+              ))}
+            </div>
+            <div class="rb-humanoid-features">
+              {c.humanoidDeepDive.features.map((f) => (
+                <div class="rb-humanoid-feature">
+                  <h4>{f.title}</h4>
+                  <p>{f.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. COBOTS — 2x2 bento with images ══ */}
+    <section class="rb-section">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Human-Robot Collaboration</span>
+        <h2 class="rb-section-title rb-reveal">Collaborative Robots: <span class="rb-grad-text">Cobots</span></h2>
+        <p class="rb-section-sub rb-reveal">Cobots grew 30%+ year-over-year, making automation accessible to businesses of every size.</p>
+        <div class="rb-cobot-grid">
+          {c.cobotFeatures.map((f, i) => (
+            <div class="rb-cobot-card rb-reveal">
+              <div class="rb-cobot-img-wrap">
+                <img class="rb-cobot-img" src={`/images/robotics-0${i + 1}-cobot-assembly.webp`} alt={f.title} loading="lazy" />
+                <div class="rb-cobot-img-overlay"></div>
+              </div>
+              <div class="rb-cobot-body">
+                <h4>{f.title}</h4>
+                <p>{f.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. SEGMENTS — Cards with colored left border ══ */}
+    <section class="rb-section rb-section-alt">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Market Segments</span>
+        <h2 class="rb-section-title rb-reveal">Robotics <span class="rb-grad-text">Segments</span> & Market Size</h2>
+        <p class="rb-section-sub rb-reveal">From industrial robots to humanoids — the four key segments driving the $65B robotics market.</p>
+        <div class="rb-segment-grid">
+          {c.segments.map((s) => (
+            <div class="rb-segment-card rb-reveal" style={`border-left-color:${s.color}`}>
+              <div class="rb-segment-header">
+                <div class="rb-segment-icon" style={`background:${s.color}22`}>{s.icon}</div>
+                <h3 class="rb-segment-name">{s.name}</h3>
+              </div>
+              <div class="rb-segment-meta">
+                <span class="rb-segment-size">{s.size}</span>
+                <span class="rb-segment-growth">{s.growth}</span>
+              </div>
+              <p class="rb-segment-detail">{s.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 8. AI + ROBOTICS — Split with image right ══ */}
+    <section class="rb-section">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Physical AI</span>
+        <div class="rb-airobot-inner">
+          <div class="rb-airobot-left rb-reveal">
+            <h3>AI Meets <span class="rb-grad-text">Robotics</span></h3>
+            <p>The big story of 2026: AI-powered robots moving from research labs to mainstream deployment. Simulation platforms, reinforcement learning, and agentic AI are transforming what robots can do.</p>
+            <div class="rb-airobot-features">
+              {c.aiRoboticsFeatures.map((f) => (
+                <div class="rb-airobot-feature">
+                  <h4>{f.title}</h4>
+                  <p>{f.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="rb-airobot-right rb-reveal">
+            <div class="rb-airobot-img-wrap">
+              <img class="rb-airobot-img" src="/images/robotics-09-mars-rover.webp" alt="AI-powered robotics" loading="lazy" />
+            </div>
+            <div class="rb-airobot-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. INDUSTRY APPS — Image header cards ══ */}
+    <section class="rb-section rb-section-alt">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Real-World Impact</span>
+        <h2 class="rb-section-title rb-reveal">Robotics Across <span class="rb-grad-text">Industries</span></h2>
+        <p class="rb-section-sub rb-reveal">From automotive assembly lines to surgical theaters — how robots are transforming every sector.</p>
+        <div class="rb-industry-grid">
+          {c.industryApps.map((ind, i) => (
+            <div class="rb-industry-card rb-reveal">
+              <div class="rb-industry-img-wrap">
+                <img class="rb-industry-img" src={industryImages[i]} alt={ind.industry} loading="lazy" />
+                <div class="rb-industry-img-overlay"></div>
+                <div class="rb-industry-icon" style={`background:${ind.color}22`}>{ind.icon}</div>
+              </div>
+              <div class="rb-industry-body">
+                <h3 class="rb-industry-name">{ind.industry}</h3>
+                <div class="rb-industry-list">
+                  {ind.applications.map((a) => (
+                    <div class="rb-industry-item">{a}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 10. REGIONAL DYNAMICS ══ */}
+    <section class="rb-section">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">Global Landscape</span>
+        <h2 class="rb-section-title rb-reveal">Regional <span class="rb-grad-text">Dynamics</span></h2>
+        <p class="rb-section-sub rb-reveal">China leads installations, the US leads AI innovation, Europe leads regulation, and Asia drives demographic adoption.</p>
+        <div class="rb-region-grid">
+          {c.regionalDynamics.map((r) => (
+            <div class="rb-region-card rb-reveal">
+              <div class="rb-region-icon">{r.icon}</div>
+              <h4 class="rb-region-name">{r.region}</h4>
+              <div class="rb-region-share">{r.share}</div>
+              <p class="rb-region-detail">{r.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 11. FUTURE — Horizontal scroll timeline ══ */}
+    <section class="rb-section rb-section-alt">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">2026 → 2030</span>
+        <h2 class="rb-section-title rb-reveal">The <span class="rb-grad-text">Future</span> of Robotics</h2>
+        <p class="rb-section-sub rb-reveal">Five predictions for how robotics evolves over the next four years — based on current trajectories and expert analysis.</p>
+        <div class="rb-future-timeline">
+          {c.futurePredictions.map((p) => (
+            <div class="rb-future-item rb-reveal">
+              <div class="rb-future-year">{p.year}</div>
+              <div class="rb-future-prediction">{p.prediction}</div>
+              <div class="rb-future-detail">{p.detail}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 12. TRENDING SEARCHES ══ */}
+    <section class="rb-section">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">SEO Data</span>
+        <h2 class="rb-section-title rb-reveal">Trending Robotics <span class="rb-grad-text">Searches</span></h2>
+        <p class="rb-section-sub rb-reveal">Real Google search volume data showing what people are searching for in robotics.</p>
+        <table class="rb-trending-table">
+          <thead>
+            <tr>
+              <th>Search Term</th>
+              <th>Volume</th>
+              <th>Growth</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.trendingSearches.map((s) => (
+              <tr>
+                <td class="rb-trending-term">{s.term}</td>
+                <td>{s.volume}</td>
+                <td class="rb-trending-growth">{s.growth}</td>
+                <td><span class="rb-trending-type">{s.type}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ══ 13. FAQ ══ */}
+    <section class="rb-section rb-section-alt" id="faq">
+      <div class="rb-container">
+        <span class="rb-eyebrow rb-reveal">FAQ</span>
+        <h2 class="rb-section-title rb-reveal">Frequently Asked <span class="rb-grad-text">Questions</span></h2>
+        <p class="rb-section-sub rb-reveal">Structured answers to the most common robotics questions — optimized for AI search citation.</p>
+        <div class="rb-faq-list">
+          {c.faqs.map((f) => (
+            <details class="rb-faq-item">
+              <summary>{f.q}</summary>
+              <div class="rb-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 14. CTA ══ */}
+    <section class="rb-cta">
+      <div class="rb-cta-bg">
+        <img src="/images/014-robotics-character-orange.webp" alt="Robotics character" loading="lazy" />
+      </div>
+      <div class="rb-cta-inner">
+        <h3>Stay Ahead of the Robotics Revolution</h3>
+        <p>Get the latest robotics trends, humanoid updates, and deep-dive analysis delivered weekly.</p>
+        <a href="/blog?category=Robotics" class="rb-cta-btn">Explore Robotics Articles →</a>
+        <div class="rb-cta-pills">
+          <span class="rb-cta-pill">🤖 Humanoid updates</span>
+          <span class="rb-cta-pill">📦 Warehouse automation</span>
+          <span class="rb-cta-pill">🏭 Industry analysis</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.rb-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Robotics' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Robotics', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

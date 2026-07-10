@@ -1,0 +1,222 @@
+---
+/**
+ * Header Component
+ * ────────────────
+ * Edit this file and header.css independently.
+ * Changes here do NOT affect other pages or components.
+ */
+import './header.css';
+
+const categories = [
+  { label: 'Artificial Intelligence', short: 'AI', href: '/categories/AI', icon: '🧠' },
+  { label: 'Cybersecurity', short: 'Cyber', href: '/categories/Cybersecurity', icon: '🛡️' },
+  { label: 'Space Exploration', short: 'Space', href: '/categories/Space', icon: '🚀' },
+  { label: 'Biotechnology', short: 'Biotech', href: '/categories/Biotech', icon: '🧬' },
+  { label: 'Nuclear Energy', short: 'Nuclear', href: '/categories/Nuclear', icon: '⚛️' },
+  { label: 'Energy Storage', short: 'Energy', href: '/categories/Energy-Storage', icon: '🔋' },
+  { label: 'Robotics', short: 'Robotics', href: '/categories/Robotics', icon: '🤖' },
+  { label: 'Autonomous Vehicles', short: 'AV', href: '/categories/AV', icon: '🚗' },
+  { label: 'Quantum Computing', short: 'Quantum', href: '/categories/Quantum', icon: '⚛️' },
+  { label: 'Advanced Materials', short: 'Materials', href: '/categories/Materials', icon: '🔬' },
+  { label: 'Brain-Computer Interfaces', short: 'BCI', href: '/categories/BCI', icon: '🧠' },
+  { label: 'Nuclear Fusion', short: 'Fusion', href: '/categories/Fusion', icon: '🔥' },
+];
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Tools', href: '/tools' },
+];
+
+const aboutLinks = [
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact Us', href: '/contact' },
+  { label: 'Recommendations', href: '/recommendations' },
+];
+---
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="/" class="header-logo" aria-label="TechScope home">
+      <svg class="header-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 6L26 26H6L16 6Z" fill="url(#header-grad)" stroke="url(#header-grad)" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="16" cy="20" r="3" fill="#fff" opacity="0.9"/>
+        <defs>
+          <linearGradient id="header-grad" x1="6" y1="6" x2="26" y2="26">
+            <stop stop-color="#3380ff"/>
+            <stop offset="1" stop-color="#7c3aed"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="header-logo-text">TechScope</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="header-nav" aria-label="Main navigation">
+      <!-- Categories Mega Menu -->
+      <div class="header-nav-dropdown" id="categories-dropdown">
+        <button class="header-nav-link header-nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          Categories
+          <svg class="header-nav-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="header-mega-menu" id="header-mega-menu">
+          <div class="header-mega-grid">
+            {categories.map((cat) => (
+              <a href={cat.href} class="header-mega-item">
+                <span class="header-mega-icon">{cat.icon}</span>
+                <span class="header-mega-text">
+                  <span class="header-mega-label">{cat.label}</span>
+                  <span class="header-mega-short">{cat.short}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      {navLinks.map((link) => (
+        <a href={link.href} class="header-nav-link">{link.label}</a>
+      ))}
+      <!-- About Dropdown -->
+      <div class="header-nav-dropdown" id="about-dropdown">
+        <button class="header-nav-link header-nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          About
+          <svg class="header-nav-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="header-simple-dropdown" id="header-about-dropdown">
+          {aboutLinks.map((link) => (
+            <a href={link.href} class="header-simple-dropdown-link">{link.label}</a>
+          ))}
+        </div>
+      </div>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <button class="header-search-btn" aria-label="Search" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.3-4.3"/>
+        </svg>
+      </button>
+      <a href="/newsletter" class="header-cta">
+        Subscribe
+      </a>
+      <button class="header-menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="header-mobile-menu" id="mobile-menu">
+    <div class="header-mobile-section-label">Categories</div>
+    {categories.map((cat) => (
+      <a href={cat.href} class="header-mobile-link">
+        <span class="header-mobile-link-icon">{cat.icon}</span>
+        {cat.label}
+      </a>
+    ))}
+    <div class="header-mobile-section-label">Resources</div>
+    {navLinks.map((link) => (
+      <a href={link.href} class="header-mobile-link">{link.label}</a>
+    ))}
+    <div class="header-mobile-section-label">About</div>
+    {aboutLinks.map((link) => (
+      <a href={link.href} class="header-mobile-link">{link.label}</a>
+    ))}
+    <a href="/newsletter" class="header-mobile-cta">Subscribe</a>
+  </div>
+</header>
+
+<script>
+  // Header scroll effect
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // Mega menu dropdown (desktop)
+  const dropdown = document.getElementById('categories-dropdown');
+  const trigger = dropdown?.querySelector('.header-nav-dropdown-trigger');
+  const megaMenu = document.getElementById('header-mega-menu');
+  let megaTimeout: ReturnType<typeof setTimeout>;
+
+  function openMega() {
+    clearTimeout(megaTimeout);
+    megaMenu?.classList.add('open');
+    trigger?.setAttribute('aria-expanded', 'true');
+  }
+  function closeMega() {
+    megaTimeout = setTimeout(() => {
+      megaMenu?.classList.remove('open');
+      trigger?.setAttribute('aria-expanded', 'false');
+    }, 150);
+  }
+
+  dropdown?.addEventListener('mouseenter', openMega);
+  dropdown?.addEventListener('mouseleave', closeMega);
+  trigger?.addEventListener('click', () => {
+    const isOpen = megaMenu?.classList.toggle('open');
+    trigger?.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // About dropdown (desktop)
+  const aboutDropdown = document.getElementById('about-dropdown');
+  const aboutTrigger = aboutDropdown?.querySelector('.header-nav-dropdown-trigger');
+  const aboutMenu = document.getElementById('header-about-dropdown');
+  let aboutTimeout: ReturnType<typeof setTimeout>;
+
+  aboutDropdown?.addEventListener('mouseenter', () => {
+    clearTimeout(aboutTimeout);
+    aboutMenu?.classList.add('open');
+    aboutTrigger?.setAttribute('aria-expanded', 'true');
+  });
+  aboutDropdown?.addEventListener('mouseleave', () => {
+    aboutTimeout = setTimeout(() => {
+      aboutMenu?.classList.remove('open');
+      aboutTrigger?.setAttribute('aria-expanded', 'false');
+    }, 150);
+  });
+  aboutTrigger?.addEventListener('click', () => {
+    const isOpen = aboutMenu?.classList.toggle('open');
+    aboutTrigger?.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close all dropdowns on outside click
+  document.addEventListener('click', (e) => {
+    if (!dropdown?.contains(e.target as Node)) {
+      megaMenu?.classList.remove('open');
+      trigger?.setAttribute('aria-expanded', 'false');
+    }
+    if (!aboutDropdown?.contains(e.target as Node)) {
+      aboutMenu?.classList.remove('open');
+      aboutTrigger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = toggle.classList.toggle('open');
+    menu?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close mobile menu on link click
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      toggle?.classList.remove('open');
+      menu?.classList.remove('open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

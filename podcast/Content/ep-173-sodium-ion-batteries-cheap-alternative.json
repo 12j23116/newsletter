@@ -1,0 +1,192 @@
+{
+  "id": 173,
+  "title": "Sodium-Ion Batteries: The Cheap Alternative to Lithium",
+  "slug": "sodium-ion-batteries-cheap-alternative",
+  "topic": "Energy Storage",
+  "topicColor": "#f97316",
+  "duration": "42:30",
+  "date": "2026-04-15",
+  "season": 4,
+  "episode": 65,
+  "featured": false,
+  "guest": {
+    "name": "Marek Kubik",
+    "role": "Energy Storage Expert",
+    "company": "Former Fluence"
+  },
+  "hosts": [
+    {
+      "name": "Dr. Sarah Chen",
+      "role": "Host & AI Research Lead"
+    },
+    {
+      "name": "Marcus Webb",
+      "role": "Co-host & Security Analyst"
+    }
+  ],
+  "topics": [
+    "Sodium-Ion",
+    "Battery Tech",
+    "Cost"
+  ],
+  "script": [
+    {
+      "segment": "COLD OPEN",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Marek, I've been following sodium-ion for a while, and I have to say — what's happened in the last year feels different. Not just incremental progress, but a qualitative shift. Am I reading that right?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "You are. And I think the reason it feels different is that we've crossed the threshold from 'interesting science' to 'practical technology.' That's a transition that many fields never make. The fact that we're talking about the cheap alternative to lithium in terms of deployment timelines and unit economics, not just research papers — that's the signal."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Welcome to TechNova. I'm Dr. Sarah Chen."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "And I'm Marcus Webb. Today we're joined by Marek Kubik, Energy Storage Expert at Former Fluence. Marek, welcome to the show."
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "Thanks for having me. Looking forward to this."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 1: The State of the Field",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Marek, for listeners who are new to this topic, can you explain what sodium-ion actually involves and why it matters?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "At its core, sodium-ion is about battery chemistry. That sounds simple, but the implications are profound. When you can do manufacturing scale reliably and at scale, it changes what's possible in Energy Storage. The applications range from grid integration to cost curves, and we're just scratching the surface."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "How did we get here? What was the path from idea to reality?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "It was a long path — decades, in some cases. The foundational research in safety standards goes back years, but it was always limited by competing technologies. What changed is that we solved that limitation — through a combination of better technology, better understanding, and honestly, better computing power. Once the bottleneck cleared, everything downstream accelerated."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And where are we now on that path?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "We're in the early deployment phase. The technology works. We're proving it in real-world conditions. The next challenge is scaling — making it cheaper, more reliable, and more accessible. That's an engineering challenge, not a science challenge, and engineering challenges are solvable with enough time and resources."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 2: The Technical Details",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Marek, I want to get into the technical details. What makes your approach different from what's been tried before?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "The traditional approach to sodium-ion relied on policy incentives. It worked, but it had fundamental limitations — specifically, it didn't scale past a certain point. Our approach is different because we use supply chain to bypass those limitations entirely. Instead of trying to optimize within the old framework, we created a new framework."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What was the key insight that enabled that?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "It was actually a cross-disciplinary insight. Someone on our team had experience in battery tech, and they noticed a parallel between a problem in that field and our problem in sodium-ion. They brought a technique over, adapted it, and it worked. The biggest breakthroughs often come from the intersection of fields, not from deep within one field."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "What's the current performance level, and what's the theoretical limit?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "We're currently at about 60 percent of what we believe is the theoretical limit. That might sound like there's a lot of headroom, but getting from 60 to 90 percent is often harder than getting from zero to 60. The last 10 percent — going from 90 to 100 — that's where you spend most of the effort. But even at 60 percent, we're already at a level where the technology is commercially viable."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 3: Real-World Impact",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Let's talk about impact. Who benefits from this, and how?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "The impact is broad. In the near term, market data is the primary application — and that alone justifies the investment. But the second-order effects are where it gets really interesting. Once you have sodium-ion working at scale, it enables things that weren't possible before — long-duration storage, new business models, new capabilities. It's a platform technology, not just a point solution."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "What about the risks? What could go wrong?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "I take risks seriously, and there are real ones. battery chemistry at scale is untested — we're confident, but there could be surprises. There's the regulatory risk — if policymakers move too slowly, deployment stalls. And there's the societal risk — any transformative technology has distributional effects, and we need to be thoughtful about who benefits and who's displaced."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "How do you think about the ethical dimensions?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "It's something we discuss internally a lot. The technology itself is neutral — it's a tool. But how it's deployed, who has access to it, what safeguards are in place — those are choices, and they matter. I think the tech industry as a whole needs to do a better job of engaging with these questions proactively, not reactively."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 4: Looking Forward",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Marek, what's your vision for where this field is in five years?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "In five years, I think sodium-ion will be unremarkable — and that's the goal. When a technology becomes unremarkable, it means it's become infrastructure. It's just part of how things work. That's what happened with the internet, with smartphones, with cloud computing. I think sodium-ion is on that same trajectory, and the five-year mark is when it crosses from 'exciting new technology' to 'standard tool that everyone uses.'"
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What's the one thing you want our listeners to remember from this conversation?"
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "That the future is being built right now, by people who are solving hard problems in labs and offices and factories. It's not science fiction — it's engineering. And engineering, when done well, is the most powerful force for progress that humanity has ever developed."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "Marek Kubik, Energy Storage Expert at Former Fluence. Thank you for a really thought-provoking conversation."
+        },
+        {
+          "speaker": "Marek Kubik",
+          "text": "Thank you both. I loved this."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And thanks to all of you for listening. This is TechNova — see you next time."
+        }
+      ]
+    }
+  ],
+  "showNotes": {
+    "keyTopics": [
+      "battery chemistry",
+      "manufacturing scale",
+      "grid integration",
+      "cost curves",
+      "safety standards",
+      "competing technologies",
+      "policy incentives",
+      "supply chain"
+    ],
+    "estimatedDuration": "10-12 minutes"
+  }
+}

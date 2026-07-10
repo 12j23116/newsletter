@@ -1,0 +1,302 @@
+---
+/**
+ * Cybersecurity topic Page — Premium Redesign
+ * Unique layout: shield-themed hero, lock patterns,
+ * security-styled cards, firewall grid.
+ * 8 sections + CTA, SEO-optimized, responsive down to 358px.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { cybersecurityContent } from '../../../data/topics/Cybersecurity/cybersecurity-content';
+import './cybersecurity-styles.css';
+const c = cybersecurityContent;
+
+const marqueeItems = ['$215B Market', '$4.45M Breach Cost', '60% AI Attacks', 'Zero Trust', 'Ransomware', 'Post-Quantum Crypto', 'Cloud Security', 'AI vs AI', '2,220 Attacks/Day', 'NIST CSF 2.0', 'CNAPP', 'PQC Migration'];
+
+const overviewImages = ['/images/cyber-01-soc-threat-hunting.webp', '/images/cyber-02-red-team-pentest.webp'];
+const pillarImages = ['/images/cyber-03-firewall-shield.webp', '/images/cyber-04-zero-trust-architecture.webp', '/images/cyber-05-ransomware-response.webp', '/images/cyber-06-bug-bounty.webp', '/images/cyber-07-hsm-vault.webp', '/images/cyber-08-phishing-training.webp'];
+const threatImages = ['/images/cyber-01-soc-threat-hunting.webp', '/images/cyber-02-red-team-pentest.webp', '/images/cyber-03-firewall-shield.webp', '/images/cyber-06-bug-bounty.webp', '/images/cyber-07-hsm-vault.webp', '/images/cyber-09-cloud-security-scan.webp'];
+const aiImages = ['/images/cyber-10-mfa-biometric-gate.webp', '/images/cyber-04-zero-trust-architecture.webp'];
+---
+
+<BaseLayout title={`${c.name} — Zero Trust, AI Security & Post-Quantum Cryptography 2026-2030`} description={c.description} keywords="cybersecurity, zero trust, AI security, post-quantum cryptography, ransomware, cloud security, CNAPP, CSPM, NIST CSF, threat detection, phishing, MFA, passwordless authentication, SOC, incident response, security frameworks">
+  <div class="cy-page">
+
+    {/* ══ 1. HERO — Shield themed ══ */}
+    <section class="cy-hero">
+      <div class="cy-hero-bg">
+        <img src="/images/012-cybersecurity-digital-shield.webp" alt="Cybersecurity shield" loading="eager" />
+      </div>
+      <div class="cy-grid-overlay"></div>
+      <div class="cy-shield-pattern"></div>
+      <div class="cy-orb cy-hero-orb-1"></div>
+      <div class="cy-orb cy-hero-orb-2"></div>
+      <div class="cy-orb cy-hero-orb-3"></div>
+      <div class="cy-hero-inner">
+        <div class="cy-hero-left">
+          <span class="cy-hero-pill"><span class="cy-hero-dot"></span> Live · Updated 2026</span>
+          <h1><span class="cy-grad-text">Cybersecurity</span></h1>
+          <p class="cy-hero-tagline">{c.tagline}</p>
+          <p class="cy-hero-desc">{c.description}</p>
+          <div class="cy-hero-ctas">
+            <a href="#sections" class="cy-btn cy-btn-primary">Explore Topics →</a>
+            <a href="#faq" class="cy-btn cy-btn-secondary">Read FAQ</a>
+          </div>
+          <div class="cy-hero-stats">
+            {c.heroStats.map((s) => (
+              <div class="cy-hero-stat">
+                <span class="cy-hero-stat-value">{s.value}</span>
+                <span class="cy-hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="cy-hero-right">
+          <div class="cy-hero-img-wrap">
+            <img class="cy-hero-img" src="/images/cyber-04-zero-trust-architecture.webp" alt="Zero trust architecture" loading="eager" />
+            <div class="cy-hero-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 2. MARQUEE ══ */}
+    <div class="cy-marquee">
+      <div class="cy-marquee-track">
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span class={i % 3 === 2 ? 'cy-marquee-group' : ''}>
+            {item}{i % 3 !== 2 ? <span class="cy-marquee-sep"> • </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* ══ 3. THREAT LANDSCAPE ══ */}
+    <section class="cy-section" id="sections">
+      <div class="cy-container">
+        <span class="cy-eyebrow cy-reveal">Threat Intelligence</span>
+        <h2 class="cy-section-title cy-reveal">The <span class="cy-grad-text">2026 Threat Landscape</span></h2>
+        <p class="cy-section-sub cy-reveal">AI-powered attacks, nation-state operations, and supply chain compromises — organizations face 2,220 attacks per day.</p>
+        <div class="cy-section-grid cy-reveal">
+          <div class="cy-section-card">
+            <div class="cy-section-img-wrap">
+              <img class="cy-section-img" src={overviewImages[0]} alt={c.threatLandscapeSection.title} loading="lazy" />
+              <div class="cy-section-img-overlay"></div>
+            </div>
+            <div class="cy-section-header">
+              <div class="cy-section-eyebrow">Threat Landscape</div>
+              <h3 class="cy-section-title">{c.threatLandscapeSection.title}</h3>
+            </div>
+            <div class="cy-section-body">
+              <p class="cy-section-desc">{c.threatLandscapeSection.description}</p>
+              <div class="cy-section-points">
+                {c.threatLandscapeSection.keyStats.map((s) => (
+                  <div class="cy-section-point"><strong>{s.stat}</strong>: {s.label}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="cy-section-card">
+            <div class="cy-section-img-wrap">
+              <img class="cy-section-img" src={overviewImages[1]} alt="Critical Vulnerabilities" loading="lazy" />
+              <div class="cy-section-img-overlay"></div>
+            </div>
+            <div class="cy-section-header">
+              <div class="cy-section-eyebrow">Top Threats</div>
+              <h3 class="cy-section-title">Critical Vulnerabilities</h3>
+            </div>
+            <div class="cy-section-body">
+              <p class="cy-section-desc">Six top threats organizations face in 2026.</p>
+              <div class="cy-section-points">
+                {c.threatLandscapeSection.topThreats.map((t) => (
+                  <div class="cy-section-point"><strong>{t.threat}</strong>: {t.severity}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 4. ZERO TRUST ══ */}
+    <section class="cy-section cy-section-alt">
+      <div class="cy-container">
+        <span class="cy-eyebrow cy-reveal">Security Framework</span>
+        <h2 class="cy-section-title cy-reveal">Zero Trust <span class="cy-grad-text">Architecture</span></h2>
+        <p class="cy-section-sub cy-reveal">Never trust, always verify — the dominant security paradigm replacing perimeter-based defenses.</p>
+        <div class="cy-pillars-grid cy-reveal">
+          {c.zeroTrustSection.pillars.map((p, i) => (
+            <div class="cy-pillar-card">
+              <div class="cy-pillar-img-wrap">
+                <img class="cy-pillar-img" src={pillarImages[i % pillarImages.length]} alt={p.pillar} loading="lazy" />
+                <div class="cy-pillar-img-overlay"></div>
+              </div>
+              <h3 class="cy-pillar-name">{p.pillar}</h3>
+              <p class="cy-pillar-desc">{p.desc}</p>
+              <div class="cy-pillar-tools">{p.tools}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 5. AI CYBER ══ */}
+    <section class="cy-section">
+      <div class="cy-container">
+        <span class="cy-eyebrow cy-reveal">AI Arms Race</span>
+        <h2 class="cy-section-title cy-reveal">AI in <span class="cy-grad-text">Cybersecurity</span></h2>
+        <p class="cy-section-sub cy-reveal">60% of cyberattacks involve AI — while AI-powered defense reduces breach costs by $2.2M.</p>
+        <div class="cy-ai-grid cy-reveal">
+          <div class="cy-ai-card">
+            <div class="cy-ai-img-wrap">
+              <img class="cy-ai-img" src={aiImages[0]} alt="AI Attack Uses" loading="lazy" />
+              <div class="cy-ai-img-overlay"></div>
+            </div>
+            <h3 class="cy-ai-title">AI Attack Uses</h3>
+            <div class="cy-ai-items">
+              {c.aiCyberSection.attackUses.map((a) => (
+                <div class="cy-ai-item">{a.title}: {a.desc}</div>
+              ))}
+            </div>
+          </div>
+          <div class="cy-ai-card">
+            <div class="cy-ai-img-wrap">
+              <img class="cy-ai-img" src={aiImages[1]} alt="AI Defense Uses" loading="lazy" />
+              <div class="cy-ai-img-overlay"></div>
+            </div>
+            <h3 class="cy-ai-title">AI Defense Uses</h3>
+            <div class="cy-ai-items">
+              {c.aiCyberSection.defenseUses.map((d) => (
+                <div class="cy-ai-item">{d.title}: {d.desc}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 6. THREATS ══ */}
+    <section class="cy-section cy-section-alt">
+      <div class="cy-container">
+        <span class="cy-eyebrow cy-reveal">Threat Deep Dive</span>
+        <h2 class="cy-section-title cy-reveal">Top <span class="cy-grad-text">Threats</span></h2>
+        <p class="cy-section-sub cy-reveal">The most critical threats organizations face in 2026.</p>
+        <div class="cy-threats-grid cy-reveal">
+          {c.threatLandscapeSection.topThreats.map((t, i) => (
+            <div class="cy-threat-card">
+              <div class="cy-threat-img-wrap">
+                <img class="cy-threat-img" src={threatImages[i % threatImages.length]} alt={t.threat} loading="lazy" />
+                <div class="cy-threat-img-overlay"></div>
+              </div>
+              <h3 class="cy-threat-name">{t.threat}</h3>
+              <div class="cy-threat-severity">{t.severity} — {t.trend}</div>
+              <p class="cy-threat-desc">{t.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7. FUTURE — Security timeline ══ */}
+    <section class="cy-section">
+      <div class="cy-container">
+        <span class="cy-eyebrow cy-reveal">2026 → 2030</span>
+        <h2 class="cy-section-title cy-reveal">The <span class="cy-grad-text">Security</span> Future</h2>
+        <p class="cy-section-sub cy-reveal">Key milestones defining the next five years of cybersecurity.</p>
+        <div class="cy-future-timeline cy-reveal">
+          {c.futureOutlookSection.timeline.map((t) => (
+            <div class="cy-future-item">
+              <div class="cy-future-year-marker">{t.year}</div>
+              <div class="cy-future-content">
+                <div class="cy-future-year">{t.year}</div>
+                <div class="cy-future-prediction">{t.events[0]}</div>
+                <div class="cy-future-detail">{t.events.slice(1).join(' • ')}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 7.5. Trending Searches ══ */}
+    <section class="cy-section" id="trending">
+      <div class="cy-container">
+        <span class="cy-eyebrow cy-reveal">Search Trends</span>
+        <h2 class="cy-section-title cy-reveal">Trending <span class="cy-grad-text">Cybersecurity</span> Searches</h2>
+        <p class="cy-section-sub cy-reveal">What people are searching for in cybersecurity — monthly volumes and growth rates.</p>
+        <table class="cy-trending-table cy-reveal">
+          <thead>
+            <tr>
+              <th>Search Term</th>
+              <th>Monthly Volume</th>
+              <th>Growth</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.trendingSearches.map((t) => (
+              <tr>
+                <td class="cy-trending-term">{t.term}</td>
+                <td>{t.volume}</td>
+                <td class="cy-trending-growth">{t.growth}</td>
+                <td><span class={`cy-trending-type ${t.type.toLowerCase()}`}>{t.type}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ══ 8. FAQ ══ */}
+    <section class="cy-section cy-section-alt" id="faq">
+      <div class="cy-container">
+        <span class="cy-eyebrow cy-reveal">FAQ</span>
+        <h2 class="cy-section-title cy-reveal">Frequently Asked <span class="cy-grad-text">Questions</span></h2>
+        <p class="cy-section-sub cy-reveal">Structured answers to the most common cybersecurity questions — optimized for AI search citation.</p>
+        <div class="cy-faq-list">
+          {c.faqSection.items.map((f) => (
+            <details class="cy-faq-item">
+              <summary>{f.q}</summary>
+              <div class="cy-faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ══ 9. CTA ══ */}
+    <section class="cy-cta">
+      <div class="cy-cta-bg">
+        <img src="/images/024-cybersecurity-character-crimson.webp" alt="Cybersecurity character" loading="lazy" />
+      </div>
+      <div class="cy-cta-inner">
+        <h3>Secure Your Future</h3>
+        <p>Get the latest zero trust insights, AI security updates, and post-quantum cryptography guidance delivered weekly.</p>
+        <a href="/blog?category=Cybersecurity" class="cy-cta-btn">Explore Cybersecurity Articles →</a>
+        <div class="cy-cta-pills">
+          <span class="cy-cta-pill">🛡️ Zero Trust</span>
+          <span class="cy-cta-pill">🤖 AI Security</span>
+          <span class="cy-cta-pill">🔐 Post-Quantum</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.cy-reveal').forEach((el) => observer.observe(el));
+  </script>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' }, { '@type': 'ListItem', position: 2, name: c.name, item: 'https://technanoai.com/topics/Cybersecurity' }] })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'TopicPage', name: c.name, description: c.description, url: 'https://technanoai.com/topics/Cybersecurity', publisher: { '@type': 'Organization', name: 'TechNanoAI' } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqSection.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+</BaseLayout>

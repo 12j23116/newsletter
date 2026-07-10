@@ -1,0 +1,92 @@
+---
+/**
+ * RecommendationsLearning — Books, courses, and learning resources
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const learningResources = [
+  {
+    type: 'Books',
+    icon: 'M4 19.5A2.5 2.5 0 016.5 17H20 M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z',
+    color: '#3b82f6',
+    items: [
+      { title: 'Deep Learning', author: 'Ian Goodfellow et al.', desc: 'The definitive textbook on deep learning. Covers theory, practice, and applications.', level: 'Intermediate', href: '#' },
+      { title: 'Quantum Computation and Quantum Information', author: 'Nielsen & Chuang', desc: 'The bible of quantum computing. Comprehensive, rigorous, and essential.', level: 'Advanced', href: '#' },
+      { title: 'The Singularity Is Near', author: 'Ray Kurzweil', desc: 'Futurist analysis of how technology will transform humanity by 2045.', level: 'Beginner', href: '#' },
+      { title: 'Life 3.0: Being Human in the Age of AI', author: 'Max Tegmark', desc: 'Explores the future of intelligence — biological, artificial, and beyond.', level: 'Beginner', href: '#' },
+    ],
+  },
+  {
+    type: 'Online Courses',
+    icon: 'M22 10v6M2 10l10-5 10 5-10 5z M6 12v5c3 3 9 3 12 0v-5',
+    color: '#8b5cf6',
+    items: [
+      { title: 'MIT 6.S191: Introduction to Deep Learning', author: 'MIT OpenCourseWare', desc: 'Free MIT course covering neural networks, generative models, and AI agents.', level: 'Intermediate', href: '#' },
+      { title: 'Quantum Computing for the Determined', author: 'Michael Nielsen', desc: 'Free YouTube series that builds quantum computing intuition from scratch.', level: 'Beginner', href: '#' },
+      { title: 'Coursera: Genomic Data Science', author: 'Johns Hopkins University', desc: 'Specialization covering bioinformatics, sequencing, and genomic analysis.', level: 'Intermediate', href: '#' },
+      { title: 'edX: Space Mission Engineering', author: 'MIT', desc: 'Designing space missions from concept to launch — taught by MIT faculty.', level: 'Advanced', href: '#' },
+    ],
+  },
+  {
+    type: 'YouTube Channels',
+    icon: 'M23 12s0-3.5-.4-5.2c-.2-1-.9-1.7-1.9-1.9C19 4.5 12 4.5 12 4.5s-7 0-8.7.4c-1 .2-1.7.9-1.9 1.9C1 8.5 1 12 1 12s0 3.5.4 5.2c.2 1 .9 1.7 1.9 1.9 1.7.4 8.7.4 8.7.4s7 0 8.7-.4c1-.2 1.7-.9 1.9-1.9.4-1.7.4-5.2.4-5.2zM10 15.5v-7l6 3.5-6 3.5z',
+    color: '#ef4444',
+    items: [
+      { title: 'Two Minute Papers', author: 'Károly Zsolnai-Fehér', desc: 'AI and graphics research explained in two minutes. Fast, accurate, and fun.', level: 'All Levels', href: '#' },
+      { title: 'Fireship', author: 'Jeff Delaney', desc: '"100 Seconds of" series covering every tech topic with humor and precision.', level: 'All Levels', href: '#' },
+      { title: 'PBS Space Time', author: 'Matt O\'Dowd', desc: 'Astrophysics and quantum mechanics explained with deep rigor and clarity.', level: 'Intermediate', href: '#' },
+      { title: 'Veritasium', author: 'Derek Muller', desc: 'Science and engineering deep dives with stunning production quality.', level: 'All Levels', href: '#' },
+    ],
+  },
+  {
+    type: 'Podcasts',
+    icon: 'M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8',
+    color: '#10b981',
+    items: [
+      { title: 'Lex Fridman Podcast', author: 'Lex Fridman', desc: 'Long-form interviews with AI researchers, scientists, and technology leaders.', level: 'All Levels', href: '#' },
+      { title: 'The AI Alignment Podcast', author: 'Lucas Perry', desc: 'Focused on AI safety, alignment, and the long-term future of artificial intelligence.', level: 'Advanced', href: '#' },
+      { title: 'SpaceRocket Radio', author: 'Various', desc: 'Weekly coverage of space industry news, launches, and mission analysis.', level: 'All Levels', href: '#' },
+      { title: 'Darknet Diaries', author: 'Jack Rhysider', desc: 'True stories from the dark side of the internet — hackers, breaches, and cybercrime.', level: 'All Levels', href: '#' },
+    ],
+  },
+];
+---
+
+<section class="rec-learning-section" id="learning">
+  <div class="rec-container">
+    <div class="rec-section-head">
+      <span class="rec-eyebrow">Books, Courses, Channels, Podcasts</span>
+      <h2 class="rec-section-title">Best Learning Resources by Format</h2>
+      <p class="rec-section-sub">
+        Whether you prefer reading, watching, or listening, these are the resources we
+        recommend to go deeper into any of the 12 technology frontiers.
+      </p>
+    </div>
+
+    <div class="rec-learning-grid">
+      {learningResources.map((group) => (
+        <div class="rec-learning-group" style={`--group-color:${group.color}`}>
+          <div class="rec-learning-header">
+            <div class="rec-learning-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d={group.icon} />
+              </svg>
+            </div>
+            <h3 class="rec-learning-type">{group.type}</h3>
+          </div>
+          <div class="rec-learning-items">
+            {group.items.map((item) => (
+              <a href={item.href} class="rec-learning-item">
+                <div class="rec-learning-item-header">
+                  <h4 class="rec-learning-item-title">{item.title}</h4>
+                  <span class="rec-learning-level">{item.level}</span>
+                </div>
+                <span class="rec-learning-author">{item.author}</span>
+                <p class="rec-learning-desc">{item.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

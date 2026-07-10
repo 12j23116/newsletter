@@ -1,0 +1,60 @@
+---
+const radarTechs = [
+  { name: 'Generative AI', stage: 'Mainstream', desc: 'Widely adopted across industries with proven ROI.', color: '#3b82f6', x: 25, y: 30 },
+  { name: 'Small Modular Reactors', stage: 'Adopting', desc: 'First commercial deployments underway globally.', color: '#f59e0b', x: 70, y: 35 },
+  { name: 'Quantum Computing', stage: 'Emerging', desc: 'Error-corrected qubits approaching practical threshold.', color: '#8b5cf6', x: 45, y: 60 },
+  { name: 'Fusion Energy', stage: 'Emerging', desc: 'Net energy gain achieved; commercialization by 2035.', color: '#ec4899', x: 60, y: 70 },
+  { name: 'Brain-Computer Interfaces', stage: 'Emerging', desc: 'First human trials showing promising neural decoding.', color: '#06b6d4', x: 35, y: 75 },
+  { name: 'Humanoid Robotics', stage: 'Adopting', desc: 'Pilot deployments in manufacturing and logistics.', color: '#10b981', x: 80, y: 55 },
+  { name: 'Solid-State Batteries', stage: 'Adopting', desc: 'Production scaling begins; EV adoption by 2027.', color: '#ef4444', x: 20, y: 55 },
+  { name: 'Autonomous Vehicles', stage: 'Mainstream', desc: 'Level 4 robotaxis operational in major cities.', color: '#3b82f6', x: 55, y: 25 },
+];
+---
+
+<section class="lv-section lv-section-light" id="radar">
+  <div class="lv-container">
+    <div class="lv-section-head reveal">
+      <div class="lv-eyebrow">Strategic Intelligence</div>
+      <h2 class="lv-section-h2">
+        TechScope Radar<br />
+        <span class="lv-grad-text-dark">2025</span>
+      </h2>
+      <p class="lv-section-sub">
+        Our proprietary radar tracks where each technology sits on the adoption curve — from emerging research to mainstream deployment.
+      </p>
+    </div>
+
+    <div class="radar-section">
+      <div class="radar-visual reveal">
+        <div class="radar-ring radar-ring-1"></div>
+        <div class="radar-ring radar-ring-2"></div>
+        <div class="radar-ring radar-ring-3"></div>
+        <div class="radar-ring radar-ring-4"></div>
+        <div class="radar-sweep"></div>
+        <div class="radar-center">📡</div>
+        {radarTechs.map((tech, i) => (
+          <div
+            class={`radar-dot ${i === 0 ? 'active' : ''}`}
+            data-radar-dot={i}
+            style={`background:${tech.color};color:${tech.color};left:${tech.x}%;top:${tech.y}%`}
+          >
+          </div>
+        ))}
+      </div>
+
+      <div class="radar-info">
+        {radarTechs.map((tech, i) => (
+          <div
+            class={`radar-info-card reveal ${i === 0 ? 'active' : ''}`}
+            data-radar-card={i}
+            style={`transition-delay:${i * 0.04}s`}
+          >
+            <div class="radar-info-card-stage" style={`color:${tech.color}`}>{tech.stage}</div>
+            <div class="radar-info-card-name">{tech.name}</div>
+            <p class="radar-info-card-desc">{tech.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './recommendations-styles.css';
+import RecommendationsHero from '../../components/recommendations/RecommendationsHero.astro';
+import RecommendationsTools from '../../components/recommendations/RecommendationsTools.astro';
+import RecommendationsLearning from '../../components/recommendations/RecommendationsLearning.astro';
+import RecommendationsComparisons from '../../components/recommendations/RecommendationsComparisons.astro';
+import RecommendationsMethodology from '../../components/recommendations/RecommendationsMethodology.astro';
+import RecommendationsNewsletter from '../../components/recommendations/RecommendationsNewsletter.astro';
+---
+<BaseLayout
+  title="Recommendations"
+  description="The best tools, books, courses, and resources for emerging technology — tested and recommended by TechNanoAI. AI, quantum, biotech, space, cybersecurity, and more. No sponsorships."
+  keywords="best tech tools, recommended AI tools, best tech courses, technology recommendations, best emerging tech resources, top tech books"
+>
+  <RecommendationsHero />
+  <RecommendationsTools />
+  <RecommendationsLearning />
+  <RecommendationsComparisons />
+  <RecommendationsMethodology />
+  <RecommendationsNewsletter />
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+interface Props {
+  groupNumber: string;
+  groupTitle: string;
+  id: string;
+  categories: Array<{
+    name: string;
+    desc: string;
+    icon: string;
+    color: string;
+    img: string;
+    articles: string;
+    readers: string;
+    href: string;
+  }>;
+}
+
+const { groupNumber, groupTitle, id, categories } = Astro.props;
+---
+
+<section class="lv-section lv-section-light" id={id}>
+  <div class="lv-container">
+    <div class="cat-group-header reveal">
+      <span class="cat-group-number">{groupNumber}</span>
+      <h2 class="cat-group-title">{groupTitle}</h2>
+    </div>
+
+    <div class="cat-group-grid">
+      {categories.map((cat, i) => (
+        <a href={cat.href} class="cat-card reveal" style={`transition-delay:${i * 0.08}s`}>
+          <div class="cat-card-img-wrap">
+            <img src={cat.img} alt={cat.name} class="cat-card-img" loading="lazy" />
+            <div class="cat-card-img-overlay" style={`background:linear-gradient(135deg,${cat.color}30,rgba(0,0,0,.4))`}></div>
+            <div class="cat-card-icon" style={`background:${cat.color}30;color:${cat.color};border-color:${cat.color}40`}>
+              {cat.icon}
+            </div>
+          </div>
+          <div class="cat-card-body">
+            <h3 class="cat-card-title">{cat.name}</h3>
+            <p class="cat-card-desc">{cat.desc}</p>
+            <div class="cat-card-stats">
+              <span class="cat-card-stat"><strong>{cat.articles}</strong> articles</span>
+              <span class="cat-card-stat"><strong>{cat.readers}</strong> readers</span>
+            </div>
+            <span class="cat-card-arrow" style={`color:${cat.color}`}>
+              Explore
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

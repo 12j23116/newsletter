@@ -1,0 +1,192 @@
+{
+  "id": 134,
+  "title": "Ransomware as a Service: The Supply Chain Attack Epidemic",
+  "slug": "ransomware-as-a-service-epidemic",
+  "topic": "Cybersecurity",
+  "topicColor": "#ef4444",
+  "duration": "46:22",
+  "date": "2026-03-25",
+  "season": 4,
+  "episode": 102,
+  "featured": false,
+  "guest": {
+    "name": "Allan Liska",
+    "role": "Senior Security Architect",
+    "company": "Recorded Future"
+  },
+  "hosts": [
+    {
+      "name": "Dr. Sarah Chen",
+      "role": "Host & AI Research Lead"
+    },
+    {
+      "name": "Marcus Webb",
+      "role": "Co-host & Security Analyst"
+    }
+  ],
+  "topics": [
+    "Ransomware",
+    "Supply Chain",
+    "Threat Intel"
+  ],
+  "script": [
+    {
+      "segment": "COLD OPEN",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Allan, I've been following ransomware for a while, and I have to say — what's happened in the last year feels different. Not just incremental progress, but a qualitative shift. Am I reading that right?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "You are. And I think the reason it feels different is that we've crossed the threshold from 'interesting science' to 'practical technology.' That's a transition that many fields never make. The fact that we're talking about the supply chain attack epidemic in terms of deployment timelines and unit economics, not just research papers — that's the signal."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Welcome to TechNova. I'm Dr. Sarah Chen."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "And I'm Marcus Webb. Today we're joined by Allan Liska, Senior Security Architect at Recorded Future. Allan, welcome to the show."
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "Thanks for having me. Looking forward to this."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 1: The State of the Field",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Allan, for listeners who are new to this topic, can you explain what ransomware actually involves and why it matters?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "At its core, ransomware is about threat landscape evolution. That sounds simple, but the implications are profound. When you can do zero-day economics reliably and at scale, it changes what's possible in Cybersecurity. The applications range from AI-powered attacks to defensive AI, and we're just scratching the surface."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "How did we get here? What was the path from idea to reality?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "It was a long path — decades, in some cases. The foundational research in supply chain risks goes back years, but it was always limited by regulatory compliance. What changed is that we solved that limitation — through a combination of better technology, better understanding, and honestly, better computing power. Once the bottleneck cleared, everything downstream accelerated."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And where are we now on that path?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "We're in the early deployment phase. The technology works. We're proving it in real-world conditions. The next challenge is scaling — making it cheaper, more reliable, and more accessible. That's an engineering challenge, not a science challenge, and engineering challenges are solvable with enough time and resources."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 2: The Technical Details",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Allan, I want to get into the technical details. What makes your approach different from what's been tried before?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "The traditional approach to ransomware relied on workforce shortage. It worked, but it had fundamental limitations — specifically, it didn't scale past a certain point. Our approach is different because we use cloud security to bypass those limitations entirely. Instead of trying to optimize within the old framework, we created a new framework."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What was the key insight that enabled that?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "It was actually a cross-disciplinary insight. Someone on our team had experience in supply chain, and they noticed a parallel between a problem in that field and our problem in ransomware. They brought a technique over, adapted it, and it worked. The biggest breakthroughs often come from the intersection of fields, not from deep within one field."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "What's the current performance level, and what's the theoretical limit?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "We're currently at about 60 percent of what we believe is the theoretical limit. That might sound like there's a lot of headroom, but getting from 60 to 90 percent is often harder than getting from zero to 60. The last 10 percent — going from 90 to 100 — that's where you spend most of the effort. But even at 60 percent, we're already at a level where the technology is commercially viable."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 3: Real-World Impact",
+      "lines": [
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "Let's talk about impact. Who benefits from this, and how?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "The impact is broad. In the near term, incident response is the primary application — and that alone justifies the investment. But the second-order effects are where it gets really interesting. Once you have ransomware working at scale, it enables things that weren't possible before — encryption and PQC, new business models, new capabilities. It's a platform technology, not just a point solution."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "What about the risks? What could go wrong?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "I take risks seriously, and there are real ones. threat landscape evolution at scale is untested — we're confident, but there could be surprises. There's the regulatory risk — if policymakers move too slowly, deployment stalls. And there's the societal risk — any transformative technology has distributional effects, and we need to be thoughtful about who benefits and who's displaced."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "How do you think about the ethical dimensions?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "It's something we discuss internally a lot. The technology itself is neutral — it's a tool. But how it's deployed, who has access to it, what safeguards are in place — those are choices, and they matter. I think the tech industry as a whole needs to do a better job of engaging with these questions proactively, not reactively."
+        }
+      ]
+    },
+    {
+      "segment": "SEGMENT 4: Looking Forward",
+      "lines": [
+        {
+          "speaker": "Marcus Webb",
+          "text": "Allan, what's your vision for where this field is in five years?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "In five years, I think ransomware will be unremarkable — and that's the goal. When a technology becomes unremarkable, it means it's become infrastructure. It's just part of how things work. That's what happened with the internet, with smartphones, with cloud computing. I think ransomware is on that same trajectory, and the five-year mark is when it crosses from 'exciting new technology' to 'standard tool that everyone uses.'"
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "What's the one thing you want our listeners to remember from this conversation?"
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "That the future is being built right now, by people who are solving hard problems in labs and offices and factories. It's not science fiction — it's engineering. And engineering, when done well, is the most powerful force for progress that humanity has ever developed."
+        },
+        {
+          "speaker": "Marcus Webb",
+          "text": "Allan Liska, Senior Security Architect at Recorded Future. Thank you for a really thought-provoking conversation."
+        },
+        {
+          "speaker": "Allan Liska",
+          "text": "Thank you both. I loved this."
+        },
+        {
+          "speaker": "Dr. Sarah Chen",
+          "text": "And thanks to all of you for listening. This is TechNova — see you next time."
+        }
+      ]
+    }
+  ],
+  "showNotes": {
+    "keyTopics": [
+      "threat landscape evolution",
+      "zero-day economics",
+      "AI-powered attacks",
+      "defensive AI",
+      "supply chain risks",
+      "regulatory compliance",
+      "workforce shortage",
+      "cloud security"
+    ],
+    "estimatedDuration": "10-12 minutes"
+  }
+}

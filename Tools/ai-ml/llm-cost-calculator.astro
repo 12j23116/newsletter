@@ -1,0 +1,106 @@
+---
+import '../shared/tool-base.css';
+interface Props { toolColor: string; }
+const { toolColor } = Astro.props;
+---
+
+<div class="tool-container" style={`--tool-accent: ${toolColor}`}>
+  <div class="tool-header">
+    <div class="tool-header-icon">💰</div>
+    <div>
+      <h3 class="tool-header-title">LLM Cost Calculator</h3>
+      <p class="tool-header-desc">Compare API costs across providers for your workload</p>
+    </div>
+  </div>
+
+  <div class="tool-grid">
+    <div class="tool-card">
+      <p class="tool-card-title">Your Workload</p>
+      <div class="tool-field">
+        <label class="tool-label">Input tokens per request</label>
+        <input type="number" class="tool-input" id="llm-input-tokens" value="2000" min="0" />
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Output tokens per request</label>
+        <input type="number" class="tool-input" id="llm-output-tokens" value="500" min="0" />
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Requests per day</label>
+        <input type="number" class="tool-input" id="llm-requests" value="1000" min="0" />
+      </div>
+      <div class="tool-field">
+        <label class="tool-label">Days per month</label>
+        <input type="number" class="tool-input" id="llm-days" value="30" min="1" max="31" />
+      </div>
+      <button class="tool-btn" id="llm-calc-btn" style="width:100%; margin-top:0.5rem">Calculate Costs</button>
+    </div>
+
+    <div class="tool-output">
+      <p class="tool-card-title">Monthly Cost Comparison</p>
+      <div id="llm-results"></div>
+      <div class="tool-note">Prices based on published API rates (Jan 2025). Batch API typically 50% off. Check provider docs for latest pricing.</div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const models = [
+    { name: 'GPT-4o', provider: 'OpenAI', inputRate: 2.50, outputRate: 10.00 },
+    { name: 'GPT-4o mini', provider: 'OpenAI', inputRate: 0.15, outputRate: 0.60 },
+    { name: 'Claude 3.5 Sonnet', provider: 'Anthropic', inputRate: 3.00, outputRate: 15.00 },
+    { name: 'Claude 3.5 Haiku', provider: 'Anthropic', inputRate: 0.80, outputRate: 4.00 },
+    { name: 'Gemini 1.5 Pro', provider: 'Google', inputRate: 1.25, outputRate: 5.00 },
+    { name: 'Gemini 1.5 Flash', provider: 'Google', inputRate: 0.075, outputRate: 0.30 },
+    { name: 'Mistral Large', provider: 'Mistral', inputRate: 2.00, outputRate: 6.00 },
+    { name: 'Llama 3.1 70B', provider: 'Groq', inputRate: 0.59, outputRate: 0.79 },
+    { name: 'DeepSeek V3', provider: 'DeepSeek', inputRate: 0.27, outputRate: 1.10 },
+  ];
+
+  function calc() {
+    const inputTokens = parseInt(document.getElementById('llm-input-tokens')?.value || '0', 10);
+    const outputTokens = parseInt(document.getElementById('llm-output-tokens')?.value || '0', 10);
+    const requests = parseInt(document.getElementById('llm-requests')?.value || '0', 10);
+    const days = parseInt(document.getElementById('llm-days')?.value || '30', 10);
+
+    const monthlyInput = inputTokens * requests * days;
+    const monthlyOutput = outputTokens * requests * days;
+    const inputMTok = monthlyInput / 1_000_000;
+    const outputMTok = monthlyOutput / 1_000_000;
+
+    const results = models.map(m => ({
+      ...m,
+      cost: (inputMTok * m.inputRate + outputMTok * m.outputRate),
+    })).sort((a, b) => a.cost - b.cost);
+
+    const minCost = results[0].cost;
+    const container = document.getElementById('llm-results');
+    if (!container) return;
+
+    let html = '<div class="tool-bar-chart">';
+    results.forEach(r => {
+      const pct = minCost > 0 ? Math.max(3, (r.cost / results[results.length - 1].cost) * 100) : 0;
+      const isBest = r.cost === minCost;
+      html += `<div class="tool-bar-row">
+        <span class="tool-bar-label">${r.name}</span>
+        <div class="tool-bar-track">
+          <div class="tool-bar-fill" style="width:${pct}%; background: ${isBest ? '#22c55e' : 'var(--tool-accent)'}">$${r.cost.toFixed(2)}</div>
+        </div>
+        <span class="tool-bar-value">$${r.cost.toFixed(2)}</span>
+      </div>`;
+    });
+    html += '</div>';
+
+    html += `<div class="tool-section-title">Best Value: ${results[0].name}</div>`;
+    html += `<div class="tool-result-row"><span class="tool-result-label">Cheapest monthly cost</span><span class="tool-result-value tool-result-value-accent">$${results[0].cost.toFixed(2)}/mo</span></div>`;
+    html += `<div class="tool-result-row"><span class="tool-result-label">Most expensive</span><span class="tool-result-value">$${results[results.length - 1].cost.toFixed(2)}/mo</span></div>`;
+    html += `<div class="tool-result-row"><span class="tool-result-label">Total monthly tokens</span><span class="tool-result-value">${(monthlyInput + monthlyOutput).toLocaleString()}</span></div>`;
+    html += `<div class="tool-result-row"><span class="tool-result-label">Cost per 1K requests</span><span class="tool-result-value">$${(results[0].cost / (requests * days) * 1000).toFixed(4)}</span></div>`;
+
+    container.innerHTML = html;
+  }
+
+  document.getElementById('llm-calc-btn')?.addEventListener('click', calc);
+  calc();
+})();
+</script>

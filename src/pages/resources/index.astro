@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './resources-styles.css';
+import ResourcesHero from '../../components/resources/ResourcesHero.astro';
+import ResourcesFilter from '../../components/resources/ResourcesFilter.astro';
+import ResourcesFeatured from '../../components/resources/ResourcesFeatured.astro';
+import Resourcestopics from '../../components/resources/ResourcesTopics.astro';
+import ResourcesGrid from '../../components/resources/ResourcesGrid.astro';
+import ResourcesCTA from '../../components/resources/ResourcesCTA.astro';
+
+const title = 'Resources — Guides, Reports, Tools, Courses & Datasets';
+const description = '85+ curated resources across 12 emerging technology frontiers — AI, Robotics, Fusion, Biotech, BCI, AV, Space, Materials, Quantum, Nuclear, Energy Storage, and Cybersecurity.';
+const keywords = 'emerging technology resources, AI learning resources, quantum computing courses, biotech courses, cybersecurity training, fusion energy guides, robotics tutorials, space technology resources, nuclear energy education, energy storage guides, BCI resources, materials science learning';
+
+const resLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'TechNanoAI Resources',
+  description: description,
+  url: 'https://technanoai.com/resources',
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+};
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="res-page">
+    <ResourcesHero />
+    <ResourcesFilter />
+    <ResourcesFeatured />
+    <Resourcestopics />
+    <ResourcesGrid />
+    <ResourcesCTA />
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(resLd)} />
+</BaseLayout>
+
+<script>
+  // ===== Scroll reveal =====
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+  document.querySelectorAll('.res-reveal').forEach((el) => revealObserver.observe(el));
+
+  // ===== Search =====
+  const searchInput = document.getElementById('res-search') as HTMLInputElement | null;
+  const searchClear = document.getElementById('res-search-clear');
+  const cards = document.querySelectorAll<HTMLElement>('.res-card');
+  const noResults = document.getElementById('res-no-results');
+  const countEl = document.getElementById('res-grid-count');
+  const filterPills = document.querySelectorAll<HTMLElement>('.res-filter-pill');
+  const clearBtn = document.getElementById('res-clear-filters');
+
+  let activeFilter = 'all';
+  let searchTerm = '';
+
+  const updateResults = () => {
+    let visible = 0;
+    cards.forEach((card) => {
+      const type = card.dataset.type || '';
+      const title = card.dataset.title || '';
+      const desc = card.dataset.desc || '';
+      const cat = card.dataset.cat || '';
+
+      const matchesFilter = activeFilter === 'all' || type === activeFilter;
+      const matchesSearch = !searchTerm ||
+        title.includes(searchTerm) ||
+        desc.includes(searchTerm) ||
+        cat.includes(searchTerm);
+
+      if (matchesFilter && matchesSearch) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (countEl) countEl.textContent = `Showing ${visible} resource${visible !== 1 ? 's' : ''}`;
+    if (noResults) noResults.classList.toggle('active', visible === 0);
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      searchTerm = searchInput.value.trim().toLowerCase();
+      if (searchClear) searchClear.classList.toggle('visible', searchTerm.length > 0);
+      updateResults();
+    });
+  }
+
+  if (searchClear && searchInput) {
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      searchTerm = '';
+      searchClear.classList.remove('visible');
+      updateResults();
+    });
+  }
+
+  filterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      activeFilter = pill.dataset.type || 'all';
+      updateResults();
+    });
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      searchTerm = '';
+      activeFilter = 'all';
+      if (searchClear) searchClear.classList.remove('visible');
+      filterPills.forEach((p) => p.classList.remove('active'));
+      filterPills[0]?.classList.add('active');
+      updateResults();
+    });
+  }
+</script>

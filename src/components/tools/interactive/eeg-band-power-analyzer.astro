@@ -1,0 +1,509 @@
+---
+/**
+ * EEG Band Power Analyzer — Interactive tool
+ * Analyze EEG frequency bands: Delta, Theta, Alpha, Beta, Gamma
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="eeg-band-power">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">📊</div>
+      <div>
+        <h2>EEG Band Power Analyzer</h2>
+        <p>Analyze EEG frequency bands — Delta, Theta, Alpha, Beta, Gamma power distribution</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Sampling Rate <span class="it-label-hint">(Hz)</span></label>
+          <input type="number" class="it-input" id="ebp-fs" value="250" min="100" max="1000" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Duration <span class="it-label-hint">(seconds)</span></label>
+          <input type="number" class="it-input" id="ebp-duration" value="10" min="1" max="60" />
+        </div>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Mental State Preset</label>
+          <select class="it-select" id="ebp-state">
+            <option value="relaxed">Relaxed (eyes closed)</option>
+            <option value="focused">Focused / Concentrating</option>
+            <option value="drowsy">Drowsy / Fatigued</option>
+            <option value="meditation">Meditation</option>
+            <option value="rem">REM Sleep</option>
+            <option value="deep">Deep Sleep (N3)</option>
+            <option value="custom">Custom Band Weights</option>
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Number of Channels</label>
+          <input type="number" class="it-input" id="ebp-channels" value="8" min="1" max="32" />
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="ebp-analyze">Analyze Band Power</button>
+        <button class="it-btn it-btn-secondary" id="ebp-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="ebp-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="ebp-results">
+      <div class="it-results-card">
+        <div class="it-results-title">EEG Band Power Analysis</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Dominant Band</div>
+            <div class="it-stat-value" id="ebp-dominant" style="font-size:1.25rem;">—</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Total Power</div>
+            <div class="it-stat-value" id="ebp-total">0<span class="it-stat-unit"> µV²</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Theta/Alpha Ratio</div>
+            <div class="it-stat-value" id="ebp-tar">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Engagement Index</div>
+            <div class="it-stat-value" id="ebp-engagement">0</div>
+          </div>
+        </div>
+
+        <div class="it-results-title">Band Power Distribution</div>
+        <canvas id="ebp-canvas" width="800" height="300" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:1.5rem;"></canvas>
+
+        <div id="ebp-details"></div>
+        <div class="it-alert it-alert-info" id="ebp-insight"></div>
+      </div>
+
+      <!-- Feature 1: Topographic Map -->
+      <div class="it-results-card" id="ebp-topo-section" style="display:none;">
+        <div class="it-results-title">🗺️ Scalp Topographic Map</div>
+        <canvas id="ebp-topo-canvas" width="400" height="400" style="width:100%;max-width:400px;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin:0 auto 0.75rem;display:block;"></canvas>
+        <div id="ebp-topo-list"></div>
+      </div>
+
+      <!-- Feature 2: Per-Channel Breakdown -->
+      <div class="it-results-card" id="ebp-channel-section" style="display:none;">
+        <div class="it-results-title">📡 Per-Channel Band Power Breakdown</div>
+        <div id="ebp-channel-list"></div>
+      </div>
+
+      <!-- Feature 3: Spectrogram -->
+      <div class="it-results-card" id="ebp-spectro-section" style="display:none;">
+        <div class="it-results-title">🌈 Time-Frequency Spectrogram</div>
+        <canvas id="ebp-spectro-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="ebp-spectro-list"></div>
+      </div>
+
+      <!-- Feature 4: Band Ratio Analysis -->
+      <div class="it-results-card" id="ebp-ratio-section" style="display:none;">
+        <div class="it-results-title">⚖️ Band Ratio Analysis</div>
+        <div id="ebp-ratio-list"></div>
+      </div>
+
+      <!-- Feature 5: Mental State Classifier -->
+      <div class="it-results-card" id="ebp-classifier-section" style="display:none;">
+        <div class="it-results-title">🧠 Mental State Classifier</div>
+        <div id="ebp-classifier-list"></div>
+      </div>
+
+      <!-- Feature 6: Asymmetry Index -->
+      <div class="it-results-card" id="ebp-asym-section" style="display:none;">
+        <div class="it-results-title">↔️ Hemispheric Asymmetry Index</div>
+        <div id="ebp-asym-list"></div>
+      </div>
+
+      <!-- Feature 7: Band Power Time Series -->
+      <div class="it-results-card" id="ebp-timeseries-section" style="display:none;">
+        <div class="it-results-title">📈 Band Power Over Time</div>
+        <canvas id="ebp-timeseries-canvas" width="800" height="250" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin-bottom:0.75rem;"></canvas>
+        <div id="ebp-timeseries-list"></div>
+      </div>
+
+      <!-- Feature 8: Clinical Interpretation -->
+      <div class="it-results-card" id="ebp-clinical-section" style="display:none;">
+        <div class="it-results-title">🏥 Clinical Interpretation & Biomarkers</div>
+        <div id="ebp-clinical-list"></div>
+      </div>
+
+      <!-- Feature 9: BCI Feature Recommendations -->
+      <div class="it-results-card" id="ebp-bci-section" style="display:none;">
+        <div class="it-results-title">🤖 BCI Feature Extraction Recommendations</div>
+        <div id="ebp-bci-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const bandDefs = {
+    delta: { range: [0.5, 4], color: '#1e40af', label: 'Delta (0.5-4 Hz)' },
+    theta: { range: [4, 8], color: '#7c3aed', label: 'Theta (4-8 Hz)' },
+    alpha: { range: [8, 13], color: '#059669', label: 'Alpha (8-13 Hz)' },
+    beta: { range: [13, 30], color: '#d97706', label: 'Beta (13-30 Hz)' },
+    gamma: { range: [30, 45], color: '#dc2626', label: 'Gamma (30-45 Hz)' },
+  };
+
+  const stateWeights = {
+    relaxed: { delta: 0.1, theta: 0.15, alpha: 0.55, beta: 0.15, gamma: 0.05 },
+    focused: { delta: 0.05, theta: 0.10, alpha: 0.20, beta: 0.45, gamma: 0.20 },
+    drowsy: { delta: 0.25, theta: 0.35, alpha: 0.25, beta: 0.10, gamma: 0.05 },
+    meditation: { delta: 0.10, theta: 0.35, alpha: 0.35, beta: 0.15, gamma: 0.05 },
+    rem: { delta: 0.05, theta: 0.40, alpha: 0.15, beta: 0.25, gamma: 0.15 },
+    deep: { delta: 0.65, theta: 0.20, alpha: 0.08, beta: 0.05, gamma: 0.02 },
+    custom: { delta: 0.15, theta: 0.20, alpha: 0.30, beta: 0.25, gamma: 0.10 },
+  };
+
+  function analyze() {
+    const fs = parseInt(document.getElementById('ebp-fs').value) || 250;
+    const duration = parseInt(document.getElementById('ebp-duration').value) || 10;
+    const state = document.getElementById('ebp-state').value;
+    const channels = parseInt(document.getElementById('ebp-channels').value) || 8;
+    const N = fs * duration;
+    const weights = stateWeights[state];
+
+    // Generate multi-channel EEG with weighted band powers
+    const t = Array.from({ length: N }, (_, i) => i / fs);
+    const channelPowers = [];
+
+    for (let ch = 0; ch < channels; ch++) {
+      const chWeights = { ...weights };
+      // Add channel variation
+      Object.keys(chWeights).forEach(k => { chWeights[k] *= (0.8 + Math.random() * 0.4); });
+
+      // Generate signal
+      let signal = new Array(N).fill(0);
+      Object.entries(bandDefs).forEach(([band, def]) => {
+        const [fLow, fHigh] = def.range;
+        const numComponents = 5;
+        for (let c = 0; c < numComponents; c++) {
+          const freq = fLow + Math.random() * (fHigh - fLow);
+          const amp = Math.sqrt(chWeights[band] * 100 / numComponents) * (0.5 + Math.random());
+          const phase = Math.random() * 2 * Math.PI;
+          for (let i = 0; i < N; i++) {
+            signal[i] += amp * Math.sin(2 * Math.PI * freq * t[i] + phase);
+          }
+        }
+      });
+
+      // Calculate band powers via simplified FFT (periodogram)
+      const bandPowers = {};
+      Object.entries(bandDefs).forEach(([band, def]) => {
+        const [fLow, fHigh] = def.range;
+        let power = 0;
+        // Estimate power by filtering (simplified: sum of squared amplitudes in band)
+        for (let f = fLow; f < fHigh; f += 0.5) {
+          let re = 0, im = 0;
+          for (let i = 0; i < N; i += 4) { // subsample for speed
+            re += signal[i] * Math.cos(2 * Math.PI * f * t[i]);
+            im += signal[i] * Math.sin(2 * Math.PI * f * t[i]);
+          }
+          power += (re * re + im * im) / (N / 4) * (N / 4);
+        }
+        bandPowers[band] = power / (fHigh - fLow) * 2;
+      });
+
+      const total = Object.values(bandPowers).reduce((a, b) => a + b, 0);
+      channelPowers.push({ channel: ch + 1, powers: bandPowers, total });
+    }
+
+    // Average across channels
+    const avgPowers = {};
+    Object.keys(bandDefs).forEach(band => {
+      avgPowers[band] = channelPowers.reduce((s, ch) => s + ch.powers[band], 0) / channels;
+    });
+    const totalPower = Object.values(avgPowers).reduce((a, b) => a + b, 0);
+
+    // Normalize to percentages
+    const bandPercentages = {};
+    Object.keys(avgPowers).forEach(band => {
+      bandPercentages[band] = (avgPowers[band] / totalPower) * 100;
+    });
+
+    // Find dominant band
+    const dominantBand = Object.entries(bandPercentages).sort((a, b) => b[1] - a[1])[0][0];
+
+    // Theta/Alpha ratio
+    const thetaAlphaRatio = avgPowers.theta / Math.max(avgPowers.alpha, 0.001);
+
+    // Engagement index (beta / (theta + alpha))
+    const engagementIndex = avgPowers.beta / Math.max(avgPowers.theta + avgPowers.alpha, 0.001);
+
+    // Update UI
+    document.getElementById('ebp-dominant').textContent = bandDefs[dominantBand].label.split(' ')[0];
+    document.getElementById('ebp-dominant').style.color = bandDefs[dominantBand].color;
+    document.getElementById('ebp-total').innerHTML = totalPower.toFixed(1) + '<span class="it-stat-unit"> µV²</span>';
+    document.getElementById('ebp-tar').textContent = thetaAlphaRatio.toFixed(3);
+    document.getElementById('ebp-engagement').textContent = engagementIndex.toFixed(3);
+
+    // Draw bar chart
+    const canvas = document.getElementById('ebp-canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    ctx.fillStyle = '#ebedf5';
+    ctx.fillRect(0, 0, w, h);
+
+    const bands = Object.keys(bandDefs);
+    const barWidth = w / bands.length - 40;
+    const maxPct = Math.max(...Object.values(bandPercentages));
+
+    bands.forEach((band, i) => {
+      const def = bandDefs[band];
+      const pct = bandPercentages[band];
+      const barH = (pct / maxPct) * (h - 60);
+      const x = i * (w / bands.length) + 20;
+
+      ctx.fillStyle = def.color;
+      ctx.fillRect(x, h - barH - 30, barWidth, barH);
+      ctx.fillStyle = '#111125';
+      ctx.font = 'bold 12px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(def.label.split(' ')[0], x + barWidth / 2, h - 10);
+      ctx.font = '11px sans-serif';
+      ctx.fillStyle = '#5c5c72';
+      ctx.fillText(pct.toFixed(1) + '%', x + barWidth / 2, h - barH - 38);
+    });
+
+    // Details table
+    const details = document.getElementById('ebp-details');
+    details.innerHTML = `
+      <table class="it-table">
+        <thead><tr><th>Band</th><th>Frequency Range</th><th>Avg Power (µV²)</th><th>Percentage</th><th>Interpretation</th></tr></thead>
+        <tbody>
+          ${bands.map(b => {
+            const def = bandDefs[b];
+            const interp = {
+              delta: bandPercentages[b] > 30 ? 'High — deep sleep or pathology' : bandPercentages[b] > 15 ? 'Moderate — drowsiness' : 'Normal',
+              theta: bandPercentages[b] > 30 ? 'High — drowsy/meditative' : bandPercentages[b] > 15 ? 'Moderate — creative/memory' : 'Normal',
+              alpha: bandPercentages[b] > 40 ? 'High — relaxed/eyes closed' : bandPercentages[b] > 20 ? 'Moderate — calm' : 'Low — active attention',
+              beta: bandPercentages[b] > 40 ? 'High — active concentration' : bandPercentages[b] > 20 ? 'Moderate — engaged' : 'Low — relaxed',
+              gamma: bandPercentages[b] > 15 ? 'High — high-level processing' : bandPercentages[b] > 5 ? 'Moderate — sensory binding' : 'Low',
+            }[b];
+            return `<tr>
+              <td><span class="it-badge" style="background:${def.color}22;color:${def.color};">${def.label.split(' ')[0]}</span></td>
+              <td>${def.range[0]}-${def.range[1]} Hz</td>
+              <td>${avgPowers[b].toFixed(2)}</td>
+              <td class="it-highlight">${bandPercentages[b].toFixed(1)}%</td>
+              <td style="font-size:0.75rem;">${interp}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+      <table class="it-table" style="margin-top:1rem;">
+        <thead><tr><th>Metric</th><th>Value</th><th>Interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>Dominant Band</td><td>${bandDefs[dominantBand].label}</td><td>${dominantBand === 'alpha' ? 'Relaxed wakefulness' : dominantBand === 'beta' ? 'Active concentration' : dominantBand === 'theta' ? 'Drowsy/meditative' : dominantBand === 'delta' ? 'Deep sleep' : 'High cognitive load'}</td></tr>
+          <tr><td>Theta/Alpha Ratio</td><td>${thetaAlphaRatio.toFixed(3)}</td><td>${thetaAlphaRatio > 1 ? 'Drowsiness indicator — reduced alertness' : 'Normal alertness'}</td></tr>
+          <tr><td>Engagement Index (β/(θ+α))</td><td>${engagementIndex.toFixed(3)}</td><td>${engagementIndex > 1 ? 'High engagement — active task processing' : engagementIndex > 0.5 ? 'Moderate engagement' : 'Low engagement — resting state'}</td></tr>
+          <tr><td>Total Power</td><td>${totalPower.toFixed(1)} µV²</td><td>${totalPower > 500 ? 'High overall activity' : totalPower > 100 ? 'Normal' : 'Low activity'}</td></tr>
+          <tr><td>Channels Averaged</td><td>${channels}</td><td>—</td></tr>
+        </tbody>
+      </table>
+    `;
+
+    const stateLabels = { relaxed: 'relaxed (eyes closed)', focused: 'focused/concentrating', drowsy: 'drowsy', meditation: 'meditation', rem: 'REM sleep', deep: 'deep sleep', custom: 'custom' };
+    const insight = document.getElementById('ebp-insight');
+    insight.innerHTML = `<strong>💡 Analysis Result:</strong> The EEG signal simulates a ${stateLabels[state]} state with dominant ${bandDefs[dominantBand].label.split(' ')[0]} activity (${bandPercentages[dominantBand].toFixed(1)}%). ${thetaAlphaRatio > 1 ? 'Elevated theta/alpha ratio suggests drowsiness — consider alertness interventions.' : 'Normal theta/alpha ratio indicates adequate alertness.'} Engagement index of ${engagementIndex.toFixed(2)} suggests ${engagementIndex > 1 ? 'high cognitive engagement' : engagementIndex > 0.5 ? 'moderate engagement' : 'a resting state'} suitable for ${engagementIndex > 1 ? 'active BCI tasks' : 'passive monitoring'}.`;
+
+    document.getElementById('ebp-results').classList.add('show');
+
+    // === Feature 1: Scalp Topographic Map ===
+    const topoCanvas = document.getElementById('ebp-topo-canvas');
+    const tpCtx = topoCanvas.getContext('2d');
+    const tpW = topoCanvas.width, tpH = topoCanvas.height;
+    tpCtx.fillStyle = '#ebedf5'; tpCtx.fillRect(0, 0, tpW, tpH);
+    const cx = tpW / 2, cy = tpH / 2, radius = tpW * 0.4;
+    tpCtx.beginPath(); tpCtx.arc(cx, cy, radius, 0, 2 * Math.PI); tpCtx.strokeStyle = '#94a3b8'; tpCtx.lineWidth = 2; tpCtx.stroke();
+    tpCtx.fillStyle = '#1e293b'; tpCtx.font = '9px sans-serif'; tpCtx.textAlign = 'center';
+    const electrodePositions = [
+      { name: 'F3', x: cx - radius * 0.5, y: cy - radius * 0.3 }, { name: 'F4', x: cx + radius * 0.5, y: cy - radius * 0.3 },
+      { name: 'C3', x: cx - radius * 0.6, y: cy }, { name: 'Cz', x: cx, y: cy }, { name: 'C4', x: cx + radius * 0.6, y: cy },
+      { name: 'P3', x: cx - radius * 0.5, y: cy + radius * 0.3 }, { name: 'P4', x: cx + radius * 0.5, y: cy + radius * 0.3 },
+      { name: 'O1', x: cx - radius * 0.3, y: cy + radius * 0.6 }, { name: 'O2', x: cx + radius * 0.3, y: cy + radius * 0.6 },
+      { name: 'Fz', x: cx, y: cy - radius * 0.5 }, { name: 'Pz', x: cx, y: cy + radius * 0.5 },
+      { name: 'T3', x: cx - radius * 0.85, y: cy }, { name: 'T4', x: cx + radius * 0.85, y: cy },
+    ];
+    const dominantColor = bandDefs[dominantBand].color;
+    electrodePositions.forEach((pos, i) => {
+      const chIdx = i % channels;
+      const chPower = channelPowers[chIdx] ? channelPowers[chIdx].powers[dominantBand] / channelPowers[chIdx].total : 0.3;
+      const intensity = Math.min(1, chPower * 2);
+      tpCtx.beginPath(); tpCtx.arc(pos.x, pos.y, 12, 0, 2 * Math.PI);
+      tpCtx.fillStyle = `rgba(${parseInt(dominantColor.slice(1,3),16)},${parseInt(dominantColor.slice(3,5),16)},${parseInt(dominantColor.slice(5,7),16)},${0.2 + intensity * 0.6})`;
+      tpCtx.fill(); tpCtx.strokeStyle = dominantColor; tpCtx.lineWidth = 1.5; tpCtx.stroke();
+      tpCtx.fillStyle = '#1e293b'; tpCtx.font = '7px sans-serif'; tpCtx.fillText(pos.name, pos.x, pos.y + 2);
+    });
+    tpCtx.fillStyle = '#64748b'; tpCtx.font = '10px sans-serif'; tpCtx.textAlign = 'left';
+    tpCtx.fillText(`Dominant: ${bandDefs[dominantBand].label.split(' ')[0]} (${bandPercentages[dominantBand].toFixed(1)}%)`, 10, tpH - 8);
+    tpCtx.fillText('Nasion →', cx - 20, 15);
+    document.getElementById('ebp-topo-list').innerHTML = `<div class="it-alert it-alert-info">Topographic map shows ${bandDefs[dominantBand].label.split(' ')[0]} power distribution across scalp electrodes. Brighter/saturated electrodes indicate higher ${dominantBand} power. ${dominantBand === 'alpha' ? 'Alpha is typically posterior-dominant (occipital). ' : dominantBand === 'beta' ? 'Beta is typically frontal/central. ' : dominantBand === 'delta' ? 'Delta is diffuse in deep sleep. ' : ''}Interpolation between electrodes uses spherical splines in clinical systems.</div>`;
+    document.getElementById('ebp-topo-section').style.display = 'block';
+
+    // === Feature 2: Per-Channel Breakdown ===
+    document.getElementById('ebp-channel-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Channel</th><th>Delta</th><th>Theta</th><th>Alpha</th><th>Beta</th><th>Gamma</th><th>Total (µV²)</th><th>Dominant</th></tr></thead><tbody>
+        ${channelPowers.map(ch => { const dom = Object.entries(ch.powers).sort((a,b) => b[1] - a[1])[0][0]; return `<tr><td><strong>Ch${ch.channel}</strong></td><td>${ch.powers.delta.toFixed(1)}</td><td>${ch.powers.theta.toFixed(1)}</td><td class="it-highlight">${ch.powers.alpha.toFixed(1)}</td><td>${ch.powers.beta.toFixed(1)}</td><td>${ch.powers.gamma.toFixed(1)}</td><td>${ch.total.toFixed(1)}</td><td><span class="it-badge" style="background:${bandDefs[dom].color}22;color:${bandDefs[dom].color};">${dom}</span></td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Per-channel breakdown shows band power variation across ${channels} electrodes. Channel variation (±20%) simulates individual electrode differences. In clinical EEG, frontal channels (F3/F4) typically show more beta, occipital (O1/O2) more alpha, and central (C3/C4) mixed sensorimotor rhythms.</div>
+    `;
+    document.getElementById('ebp-channel-section').style.display = 'block';
+
+    // === Feature 3: Spectrogram ===
+    const sgCanvas = document.getElementById('ebp-spectro-canvas');
+    const sgCtx = sgCanvas.getContext('2d');
+    const sgW = sgCanvas.width, sgH = sgCanvas.height;
+    sgCtx.fillStyle = '#1e293b'; sgCtx.fillRect(0, 0, sgW, sgH);
+    const numWindows = 20;
+    const maxFreq = 45;
+    for (let wx = 0; wx < numWindows; wx++) {
+      for (let fy = 0; fy < maxFreq; fy++) {
+        let intensity = 0;
+        Object.entries(bandDefs).forEach(([band, def]) => { if (fy >= def.range[0] && fy <= def.range[1]) { const w = weights[band]; const timeVar = 0.7 + 0.3 * Math.sin(wx * 0.5 + fy * 0.1); intensity += w * timeVar * (1 - Math.abs(fy - (def.range[0] + def.range[1]) / 2) / (def.range[1] - def.range[0] + 1)); } });
+        intensity = Math.min(1, intensity * 2);
+        const r = Math.round(intensity * 255), g = Math.round(intensity * 100), b = Math.round((1 - intensity) * 100);
+        sgCtx.fillStyle = `rgb(${r},${g},${b})`;
+        sgCtx.fillRect(wx * (sgW / numWindows), sgH - (fy / maxFreq) * sgH, sgW / numWindows, sgH / maxFreq);
+      }
+    }
+    sgCtx.fillStyle = '#e2e8f0'; sgCtx.font = '9px sans-serif'; sgCtx.textAlign = 'left';
+    sgCtx.fillText('45 Hz', 5, 12); sgCtx.fillText('0 Hz', 5, sgH - 3);
+    sgCtx.textAlign = 'right'; sgCtx.fillText('Time →', sgW - 5, sgH - 3);
+    document.getElementById('ebp-spectro-list').innerHTML = `<div class="it-alert it-alert-info">Spectrogram shows time-frequency power distribution. Warmer colors (red) indicate higher power. ${bandDefs[dominantBand].label.split(' ')[0]} band should show consistent warm colors across time. Variation across time windows simulates natural EEG non-stationarity. In real EEG, spectrograms reveal event-related desynchronization (ERD) and synchronization (ERS).</div>`;
+    document.getElementById('ebp-spectro-section').style.display = 'block';
+
+    // === Feature 4: Band Ratio Analysis ===
+    const ratios = [
+      { name: 'Theta/Alpha', value: avgPowers.theta / Math.max(avgPowers.alpha, 0.001), normal: '< 1.0', interpretation: '>1.0 indicates drowsiness' },
+      { name: 'Beta/Alpha', value: avgPowers.beta / Math.max(avgPowers.alpha, 0.001), normal: '0.3-1.5', interpretation: 'High = active thinking' },
+      { name: 'Theta/Beta', value: avgPowers.theta / Math.max(avgPowers.beta, 0.001), normal: '< 2.0', interpretation: '>2.0 ADHD indicator' },
+      { name: 'Alpha/Beta', value: avgPowers.alpha / Math.max(avgPowers.beta, 0.001), normal: '0.5-3.0', interpretation: 'High = relaxation' },
+      { name: 'Delta/Theta', value: avgPowers.delta / Math.max(avgPowers.theta, 0.001), normal: '< 1.5', interpretation: 'High = sleep pathology' },
+      { name: 'Delta/Beta', value: avgPowers.delta / Math.max(avgPowers.beta, 0.001), normal: '< 3.0', interpretation: 'High = sleep onset' },
+      { name: '(Theta+Alpha)/Beta', value: (avgPowers.theta + avgPowers.alpha) / Math.max(avgPowers.beta, 0.001), normal: '1-5', interpretation: 'Attention index inverse' },
+    ];
+    document.getElementById('ebp-ratio-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Ratio</th><th>Value</th><th>Normal Range</th><th>Interpretation</th><th>Status</th></tr></thead><tbody>
+        ${ratios.map(r => { const isHigh = r.value > 2.0; const isNormal = r.value >= 0.3 && r.value <= 3.0; return `<tr><td><strong>${r.name}</strong></td><td class="it-highlight">${r.value.toFixed(3)}</td><td style="font-size:0.8125rem;">${r.normal}</td><td style="font-size:0.8125rem;">${r.interpretation}</td><td style="color:${isNormal ? '#059669' : '#d97706'};font-weight:700;">${isNormal ? '✓ Normal' : '⚠️ Abnormal'}</td></tr>`; }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Band ratios are clinically validated biomarkers. Theta/Beta ratio >2.0 is an FDA-approved ADHD indicator. Theta/Alpha >1.0 suggests drowsiness. Beta/Alpha >1.5 indicates active cognitive processing. These ratios are used in neurofeedback protocols and BCI feature extraction.</div>
+    `;
+    document.getElementById('ebp-ratio-section').style.display = 'block';
+
+    // === Feature 5: Mental State Classifier ===
+    const stateProfiles = [
+      { state: 'Relaxed', confidence: 0, criteria: { alpha: 40, beta: 20 } },
+      { state: 'Focused', confidence: 0, criteria: { beta: 35, alpha: 25 } },
+      { state: 'Drowsy', confidence: 0, criteria: { theta: 25, delta: 20 } },
+      { state: 'Meditation', confidence: 0, criteria: { theta: 25, alpha: 30 } },
+      { state: 'REM Sleep', confidence: 0, criteria: { theta: 30, beta: 20 } },
+      { state: 'Deep Sleep', confidence: 0, criteria: { delta: 50 } },
+    ];
+    stateProfiles.forEach(s => { let match = 0; Object.entries(s.criteria).forEach(([band, thresh]) => { if (bandPercentages[band] >= thresh * 0.7) match += (1 - Math.abs(bandPercentages[band] - thresh) / thresh) * 100 / Object.keys(s.criteria).length; }); s.confidence = Math.max(0, Math.min(100, match)); });
+    stateProfiles.sort((a, b) => b.confidence - a.confidence);
+    document.getElementById('ebp-classifier-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>State</th><th>Confidence</th><th>Bar</th><th>Key Criteria</th></tr></thead><tbody>
+        ${stateProfiles.map((s, i) => `<tr${i === 0 ? ' class="it-highlight"' : ''}><td><strong>${s.state}</strong></td><td style="font-weight:700;color:${s.confidence > 60 ? '#059669' : s.confidence > 30 ? '#d97706' : '#94a3b8'};">${s.confidence.toFixed(1)}%</td><td style="width:200px;"><div style="background:var(--tl-border);height:8px;border-radius:4px;overflow:hidden;"><div style="width:${s.confidence}%;height:100%;background:${s.confidence > 60 ? '#059669' : s.confidence > 30 ? '#d97706' : '#94a3b8'};"></div></div></td><td style="font-size:0.8125rem;">${Object.entries(s.criteria).map(([b, t]) => `${b}≥${t}%`).join(', ')}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${stateProfiles[0].confidence > 60 ? 'it-alert-good' : 'it-alert-warn'}" style="margin-top:0.5rem;">Classified state: <strong>${stateProfiles[0].state}</strong> (${stateProfiles[0].confidence.toFixed(1)}% confidence). ${stateProfiles[0].confidence > 60 ? 'High confidence classification — band power profile strongly matches this state.' : 'Low confidence — band power profile is ambiguous. Consider longer recording for better classification.'} Classifier uses template matching against known state profiles. Real-world classifiers use SVM, LDA, or neural networks with 80-95% accuracy.</div>
+    `;
+    document.getElementById('ebp-classifier-section').style.display = 'block';
+
+    // === Feature 6: Hemispheric Asymmetry Index ===
+    const leftChs = channelPowers.filter(ch => [1, 3, 5, 7].includes(ch.channel));
+    const rightChs = channelPowers.filter(ch => [2, 4, 6, 8].includes(ch.channel));
+    const asymBands = ['delta', 'theta', 'alpha', 'beta', 'gamma'];
+    const asymData = asymBands.map(band => {
+      const leftAvg = leftChs.length > 0 ? leftChs.reduce((s, ch) => s + ch.powers[band], 0) / leftChs.length : 0;
+      const rightAvg = rightChs.length > 0 ? rightChs.reduce((s, ch) => s + ch.powers[band], 0) / rightChs.length : 0;
+      const ai = (rightAvg - leftAvg) / Math.max(rightAvg + leftAvg, 0.001);
+      return { band, leftAvg, rightAvg, asymmetry: ai };
+    });
+    document.getElementById('ebp-asym-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Band</th><th>Left Hemisphere</th><th>Right Hemisphere</th><th>Asymmetry Index</th><th>Interpretation</th></tr></thead><tbody>
+        ${asymData.map(a => `<tr><td><strong>${a.band}</strong></td><td>${a.leftAvg.toFixed(2)}</td><td>${a.rightAvg.toFixed(2)}</td><td style="color:${Math.abs(a.asymmetry) < 0.15 ? '#059669' : '#d97706'};font-weight:700;">${a.asymmetry > 0 ? '+' : ''}${a.asymmetry.toFixed(3)}</td><td style="font-size:0.8125rem;">${Math.abs(a.asymmetry) < 0.1 ? 'Symmetric' : a.asymmetry > 0 ? 'Right-lateralized' : 'Left-lateralized'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Asymmetry index = (R-L)/(R+L). Positive = right-lateralized, negative = left. Frontal alpha asymmetry is linked to emotional valence (left = approach, right = withdrawal). ${asymData[2].asymmetry > 0.1 ? 'Right frontal alpha asymmetry may indicate withdrawal-related emotion.' : asymData[2].asymmetry < -0.1 ? 'Left frontal alpha asymmetry may indicate approach motivation.' : 'Symmetric alpha distribution — neutral emotional state.'} Values ±0.15 are clinically significant.</div>
+    `;
+    document.getElementById('ebp-asym-section').style.display = 'block';
+
+    // === Feature 7: Band Power Time Series ===
+    const tsCanvas = document.getElementById('ebp-timeseries-canvas');
+    const tsCtx = tsCanvas.getContext('2d');
+    const tsW = tsCanvas.width, tsH = tsCanvas.height;
+    tsCtx.fillStyle = '#ebedf5'; tsCtx.fillRect(0, 0, tsW, tsH);
+    const numEpochs = 10;
+    const tsData = {};
+    Object.keys(bandDefs).forEach(band => { tsData[band] = Array.from({ length: numEpochs }, (_, i) => avgPowers[band] * (0.8 + 0.4 * Math.sin(i * 0.7 + band.charCodeAt(0)))); });
+    const tsMax = Math.max(...Object.values(tsData).flat()) * 1.1;
+    Object.entries(bandDefs).forEach(([band, def]) => {
+      tsCtx.strokeStyle = def.color; tsCtx.lineWidth = 2; tsCtx.beginPath();
+      tsData[band].forEach((v, i) => { const x = (i / (numEpochs - 1)) * (tsW - 40) + 30; const y = tsH - 20 - (v / tsMax) * (tsH - 40); if (i === 0) tsCtx.moveTo(x, y); else tsCtx.lineTo(x, y); });
+      tsCtx.stroke();
+    });
+    tsCtx.fillStyle = '#64748b'; tsCtx.font = '9px sans-serif'; tsCtx.textAlign = 'left';
+    Object.entries(bandDefs).forEach(([band, def], i) => { tsCtx.fillStyle = def.color; tsCtx.fillText('● ' + band, tsW - 80, 15 + i * 12); });
+    tsCtx.fillStyle = '#64748b'; tsCtx.fillText('0s', 30, tsH - 5); tsCtx.textAlign = 'right'; tsCtx.fillText(duration + 's', tsW - 5, tsH - 5);
+    document.getElementById('ebp-timeseries-list').innerHTML = `<div class="it-alert it-alert-info">Time series shows band power fluctuations across ${numEpochs} epochs of ${duration/numEpochs}s each. Natural EEG shows 10-30% variation over time. ${dominantBand} band remains dominant throughout. Stable power indicates consistent mental state. Large fluctuations may indicate state transitions (e.g., onset of drowsiness).</div>`;
+    document.getElementById('ebp-timeseries-section').style.display = 'block';
+
+    // === Feature 8: Clinical Interpretation ===
+    const clinicalBiomarkers = [
+      { biomarker: 'Theta/Beta Ratio', value: (avgPowers.theta / Math.max(avgPowers.beta, 0.001)).toFixed(2), normal: '< 2.0', clinical: 'ADHD screening (FDA-approved)', abnormal: (avgPowers.theta / Math.max(avgPowers.beta, 0.001)) > 2.0 },
+      { biomarker: 'Alpha Peak Frequency', value: (8 + Math.random() * 5).toFixed(1) + ' Hz', normal: '9-11 Hz', clinical: 'Cognitive aging, MCI indicator', abnormal: false },
+      { biomarker: 'Delta Power %', value: bandPercentages.delta.toFixed(1) + '%', normal: '< 15% (awake)', clinical: 'Sleep, anesthesia depth, pathology', abnormal: bandPercentages.delta > 20 && state !== 'deep' },
+      { biomarker: 'Beta Power %', value: bandPercentages.beta.toFixed(1) + '%', normal: '15-25% (awake)', clinical: 'Anxiety, medication effects', abnormal: bandPercentages.beta > 50 },
+      { biomarker: 'Alpha Suppression', value: bandPercentages.alpha < 20 ? 'Suppressed' : 'Present', normal: 'Present (eyes closed)', clinical: 'Attention, eyes-open response', abnormal: bandPercentages.alpha < 10 && state === 'relaxed' },
+      { biomarker: 'Gamma Power %', value: bandPercentages.gamma.toFixed(1) + '%', normal: '2-8%', clinical: 'High-level cognition, binding', abnormal: bandPercentages.gamma > 15 },
+      { biomarker: 'Total Power', value: totalPower.toFixed(0) + ' µV²', normal: '100-500 µV²', clinical: 'Overall cortical activity', abnormal: totalPower > 1000 || totalPower < 50 },
+      { biomarker: 'Engagement Index', value: engagementIndex.toFixed(2), normal: '0.5-2.0', clinical: 'Cognitive workload, vigilance', abnormal: engagementIndex > 3 || engagementIndex < 0.2 },
+    ];
+    document.getElementById('ebp-clinical-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Biomarker</th><th>Value</th><th>Normal Range</th><th>Clinical Use</th><th>Status</th></tr></thead><tbody>
+        ${clinicalBiomarkers.map(b => `<tr><td><strong>${b.biomarker}</strong></td><td class="it-highlight">${b.value}</td><td style="font-size:0.8125rem;">${b.normal}</td><td style="font-size:0.8125rem;">${b.clinical}</td><td style="color:${b.abnormal ? '#dc2626' : '#059669'};font-weight:700;">${b.abnormal ? '⚠️ Abnormal' : '✓ Normal'}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert ${clinicalBiomarkers.some(b => b.abnormal) ? 'it-alert-warn' : 'it-alert-good'}" style="margin-top:0.5rem;">${clinicalBiomarkers.some(b => b.abnormal) ? '⚠️ Some biomarkers outside normal range. This is a simulation — consult a clinical neurophysiologist for actual EEG interpretation. Abnormal values may indicate: ' + clinicalBiomarkers.filter(b => b.abnormal).map(b => b.biomarker).join(', ') + '.' : '✓ All biomarkers within normal range for the selected mental state. Values are consistent with expected EEG patterns.'} This tool is for educational purposes only and not a medical device.</div>
+    `;
+    document.getElementById('ebp-clinical-section').style.display = 'block';
+
+    // === Feature 9: BCI Feature Recommendations ===
+    const bciFeatures = [
+      { feature: 'Band Power (log)', bands: [dominantBand, 'beta'], extraction: 'Log-transformed absolute band power', classifier: 'LDA or SVM', accuracy: '70-85%', useCase: 'Motor imagery, mental state' },
+      { feature: 'Band Ratio', bands: ['theta', 'alpha', 'beta'], extraction: 'Theta/Beta or Alpha/Beta ratio', classifier: 'LDA', accuracy: '65-80%', useCase: 'ADHD neurofeedback, attention BCI' },
+      { feature: 'Power Spectral Density', bands: 'all', extraction: 'PSD vector (1 Hz bins)', classifier: 'CNN or Riemannian', accuracy: '75-90%', useCase: 'Multi-class motor imagery' },
+      { feature: 'Common Spatial Pattern', bands: ['alpha', 'beta'], extraction: 'CSP filters + log-variance', classifier: 'LDA', accuracy: '80-95%', useCase: 'Motor imagery (benchmark)' },
+      { feature: 'Wavelet Coefficients', bands: 'all', extraction: 'CWT or DWT coefficients', classifier: 'SVM or Neural Net', accuracy: '70-88%', useCase: 'P300, ERD/ERS detection' },
+      { feature: 'Connectivity (Coherence)', bands: [dominantBand], extraction: 'Inter-channel coherence matrix', classifier: 'Graph neural net', accuracy: '65-82%', useCase: 'Mental workload, emotion' },
+    ];
+    document.getElementById('ebp-bci-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Feature</th><th>Bands</th><th>Extraction Method</th><th>Classifier</th><th>Typical Accuracy</th><th>Use Case</th></tr></thead><tbody>
+        ${bciFeatures.map(f => `<tr><td><strong>${f.feature}</strong></td><td style="font-size:0.8125rem;">${Array.isArray(f.bands) ? f.bands.join(', ') : f.bands}</td><td style="font-size:0.8125rem;">${f.extraction}</td><td style="font-size:0.8125rem;">${f.classifier}</td><td style="color:#059669;font-weight:700;">${f.accuracy}</td><td style="font-size:0.8125rem;">${f.useCase}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">For your ${stateLabels[state]} state with dominant ${dominantBand} activity, recommended features: <strong>${bciFeatures[0].feature}</strong> using ${bciFeatures[0].extraction}. Use ${channels >= 8 ? 'CSP (Common Spatial Pattern) for multi-channel spatial filtering' : 'band power or PSD for few-channel setups'}. Typical BCI pipeline: Preprocessing → Feature extraction → Classification → Feedback. CSP + LDA is the gold standard for motor imagery BCI (BCI Competition winner).</div>
+    `;
+    document.getElementById('ebp-bci-section').style.display = 'block';
+
+    // === Feature 10: JSON Export ===
+    document.getElementById('ebp-export').style.display = 'inline-flex';
+    document.getElementById('ebp-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), parameters: { samplingRate: fs, duration, state, channels }, results: { dominantBand, totalPower, thetaAlphaRatio, engagementIndex, bandPercentages, avgPowers }, channelPowers, ratios, stateClassification: stateProfiles, asymmetry: asymData, clinicalBiomarkers, bciRecommendations: bciFeatures };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'eeg-band-power-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('ebp-analyze').addEventListener('click', analyze);
+  document.getElementById('ebp-reset').addEventListener('click', () => {
+    document.getElementById('ebp-results').classList.remove('show');
+  });
+})();
+</script>

@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './tools-styles.css';
+import ToolsHero from '../../components/tools/ToolsHero.astro';
+import ToolsGrid from '../../components/tools/ToolsGrid.astro';
+import ToolsCTA from '../../components/tools/ToolsCTA.astro';
+
+const title = 'Tools — Best Digital Tools for Emerging Tech | AI, Quantum, Robotics & More';
+const description = '183 curated digital tools across 12 emerging technology frontiers — AI frameworks, cybersecurity platforms, quantum SDKs, robotics simulators, space mission design tools, biotech bioinformatics platforms, and more.';
+const keywords = 'emerging technology tools, AI tools, cybersecurity tools, quantum computing SDK, robotics simulator, space mission design, biotech bioinformatics, nuclear engineering tools, energy storage tools, BCI tools, materials science tools';
+
+const toolsLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'TechNanoAI Tools',
+  description: description,
+  url: 'https://technanoai.com/tools',
+  publisher: { '@type': 'Organization', name: 'TechNanoAI' },
+};
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="tl-page">
+    <ToolsHero />
+    <ToolsGrid />
+    <ToolsCTA />
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(toolsLd)} />
+</BaseLayout>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLElement>('.tl-tab');
+  const filterPills = document.querySelectorAll<HTMLElement>('.tl-filter-pill');
+  const cards = document.querySelectorAll<HTMLElement>('.tl-card');
+  const searchInput = document.getElementById('tl-search') as HTMLInputElement | null;
+  const topicSelect = document.getElementById('tl-topic-filter') as HTMLSelectElement | null;
+  const noResultsExternal = document.getElementById('tl-no-results-external');
+  const noResultsOurs = document.getElementById('tl-no-results-ours');
+  const resultCount = document.getElementById('tl-result-count');
+
+  let currentSource: 'external' | 'ours' = 'external';
+  let currentType = 'All';
+  let currentTopic = 'All';
+  let currentSearch = '';
+
+  function applyFilters() {
+    let visible = 0;
+    cards.forEach((card) => {
+      const cardSource = card.dataset.source || 'external';
+      const cardType = card.dataset.type;
+      const cardTopic = card.dataset.topic;
+      const cardName = card.dataset.name || '';
+      const cardTags = card.dataset.tags || '';
+      const cardTopicLower = (cardTopic || '').toLowerCase();
+
+      const sourceMatch = cardSource === currentSource;
+      const typeMatch = currentType === 'All' || currentType === cardType;
+      const topicMatch = currentTopic === 'All' || currentTopic === cardTopic;
+      const searchMatch = !currentSearch ||
+        cardName.includes(currentSearch) ||
+        cardTags.includes(currentSearch) ||
+        cardTopicLower.includes(currentSearch);
+
+      if (sourceMatch && typeMatch && topicMatch && searchMatch) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (resultCount) resultCount.textContent = String(visible);
+
+    if (currentSource === 'external') {
+      noResultsExternal?.classList.toggle('active', visible === 0);
+      noResultsOurs?.classList.remove('active');
+    } else {
+      noResultsOurs?.classList.toggle('active', visible === 0);
+      noResultsExternal?.classList.remove('active');
+    }
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const source = tab.dataset.source as 'external' | 'ours';
+      currentSource = source;
+      tabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  filterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const type = pill.dataset.type || 'All';
+      currentType = type;
+      filterPills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      currentSearch = searchInput.value.trim().toLowerCase();
+      applyFilters();
+    });
+  }
+
+  if (topicSelect) {
+    topicSelect.addEventListener('change', () => {
+      currentTopic = topicSelect.value;
+      applyFilters();
+    });
+  }
+</script>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './contact-styles.css';
+import ContactHero from '../../components/contact/ContactHero.astro';
+import ContactChannels from '../../components/contact/ContactChannels.astro';
+import ContactForm from '../../components/contact/ContactForm.astro';
+import ContactFAQ from '../../components/contact/ContactFAQ.astro';
+import ContactSocial from '../../components/contact/ContactSocial.astro';
+import PageCTA from '../../components/shared/PageCTA.astro';
+---
+<BaseLayout
+  title="Contact Us"
+  description="Get in touch with the TechNanoAI team. Questions, feedback, partnerships, contributor pitches, and press inquiries — we respond within 48 hours."
+  keywords="contact TechNanoAI, tech contact, feedback, partnerships, press inquiries, contributor pitches"
+>
+  <ContactHero />
+  <ContactChannels />
+  <ContactForm />
+  <ContactFAQ />
+  <ContactSocial />
+  <PageCTA
+    eyebrow="Stay Connected"
+    title="Never miss a"
+    highlight="breakthrough"
+    description="Join 50,000+ readers who get the latest emerging tech intelligence delivered weekly. AI, fusion, quantum, biotech, and more — straight to your inbox."
+    primaryLabel="Subscribe to Newsletter"
+    primaryHref="/newsletter"
+    secondaryLabel="Explore Topics"
+    secondaryHref="/#cat-group-1"
+  />
+</BaseLayout>

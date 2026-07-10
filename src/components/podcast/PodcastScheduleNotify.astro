@@ -1,0 +1,33 @@
+---
+import { scheduleSeasons } from '../../data/podcast/podcast-content';
+---
+
+<section class="pc-sched-notify">
+  <div class="pc-subscribe-inner">
+    <div class="pc-subscribe-glow"></div>
+    <div class="pc-subscribe-content">
+      <span class="pc-subscribe-label">Get Notified</span>
+      <h2 class="pc-subscribe-title">
+        Never Miss a <span class="pc-grad">Recording</span>
+      </h2>
+      <p class="pc-subscribe-desc">
+        Get a reminder 24 hours before each episode goes live. See who's coming on,
+        what we'll cover, and submit your questions for the Q&A segment.
+      </p>
+      <form class="pc-subscribe-form" onsubmit="return false;">
+        <input type="email" placeholder="you@company.com" aria-label="Email address" />
+        <button type="submit">Notify Me</button>
+      </form>
+      <span class="pc-subscribe-note">No spam. Unsubscribe anytime. We never share your email.</span>
+      <div class="pc-sched-seasons">
+        {scheduleSeasons.map((s) => (
+          <div class={`pc-sched-season ${s.active ? 'active' : ''}`}>
+            <span class="pc-sched-season-label">{s.label}</span>
+            <span class="pc-sched-season-eps">{s.episodes} episodes</span>
+            <span class="pc-sched-season-range">{s.dateRange}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

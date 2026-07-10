@@ -1,0 +1,572 @@
+---
+/**
+ * DNA Sequence Analyzer — Interactive tool
+ * Analyze DNA sequences — GC content, ORFs, restriction sites, repeats, translation
+ */
+import './interactive-tools.css';
+---
+
+<div class="it-container" id="dna-analyzer">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">🧪</div>
+      <div>
+        <h2>DNA Sequence Analyzer</h2>
+        <p>Comprehensive DNA analysis — GC content, ORFs, restriction sites, protein translation</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-field">
+        <label class="it-label">DNA Sequence <span class="it-label-hint">(5' → 3')</span></label>
+        <textarea class="it-textarea" id="dsa-sequence" placeholder="ATGCGATCGATCGATCGATCG..." style="min-height: 120px; font-family: var(--tl-mono);"></textarea>
+      </div>
+
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Minimum ORF Length <span class="it-label-hint">(codons)</span></label>
+          <input type="number" class="it-input" id="dsa-min-orf" value="30" min="10" />
+        </div>
+        <div class="it-field">
+          <label class="it-label">Analysis Options</label>
+          <select class="it-select" id="dsa-options">
+            <option value="all">All Analyses</option>
+            <option value="gc">GC Content Only</option>
+            <option value="orf">ORF Detection Only</option>
+            <option value="restriction">Restriction Sites Only</option>
+            <option value="translation">Protein Translation Only</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="dsa-analyze">Analyze Sequence</button>
+        <button class="it-btn it-btn-secondary" id="dsa-clear">Clear</button>
+        <button class="it-btn it-btn-secondary" id="dsa-export" style="display:none;">📄 Export</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="dsa-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Sequence Analysis Report</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Sequence Length</div>
+            <div class="it-stat-value" id="dsa-length">0<span class="it-stat-unit"> bp</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">GC Content</div>
+            <div class="it-stat-value" id="dsa-gc">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">ORFs Found</div>
+            <div class="it-stat-value" id="dsa-orfs">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Restriction Sites</div>
+            <div class="it-stat-value" id="dsa-restrict">0</div>
+          </div>
+        </div>
+
+        <div id="dsa-details"></div>
+      </div>
+
+      <!-- Feature 1: Codon Usage Bias -->
+      <div class="it-results-card" id="dsa-codon-section" style="display:none;">
+        <div class="it-results-title">📊 Codon Usage Bias & CAI</div>
+        <div id="dsa-codon-list"></div>
+      </div>
+
+      <!-- Feature 2: CpG Islands -->
+      <div class="it-results-card" id="dsa-cpg-section" style="display:none;">
+        <div class="it-results-title">🧲 CpG Island Detection</div>
+        <div id="dsa-cpg-list"></div>
+      </div>
+
+      <!-- Feature 3: Promoter Elements -->
+      <div class="it-results-card" id="dsa-promoter-section" style="display:none;">
+        <div class="it-results-title">🔍 Promoter Element Detection</div>
+        <div id="dsa-promoter-list"></div>
+      </div>
+
+      <!-- Feature 4: Sequence Complexity -->
+      <div class="it-results-card" id="dsa-complexity-section" style="display:none;">
+        <div class="it-results-title">🧩 Sequence Complexity (Shannon Entropy)</div>
+        <div id="dsa-complexity-list"></div>
+      </div>
+
+      <!-- Feature 5: Protein Properties -->
+      <div class="it-results-card" id="dsa-protein-section" style="display:none;">
+        <div class="it-results-title">🥩 Protein Properties from Translation</div>
+        <div id="dsa-protein-list"></div>
+      </div>
+
+      <!-- Feature 6: RFLP Map -->
+      <div class="it-results-card" id="dsa-rflp-section" style="display:none;">
+        <div class="it-results-title">✂️ Restriction Fragment Length Map</div>
+        <div id="dsa-rflp-list"></div>
+      </div>
+
+      <!-- Feature 7: 6-Frame Translation -->
+      <div class="it-results-card" id="dsa-frames-section" style="display:none;">
+        <div class="it-results-title">🔄 Six-Frame Translation Viewer</div>
+        <div id="dsa-frames-list"></div>
+      </div>
+
+      <!-- Feature 8: GC Skew Plot -->
+      <div class="it-results-card" id="dsa-skew-section" style="display:none;">
+        <div class="it-results-title">📈 GC Skew — Replication Origin Prediction</div>
+        <canvas id="dsa-skew-canvas" width="800" height="150" style="width:100%;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);"></canvas>
+        <div id="dsa-skew-list" style="margin-top:0.75rem;"></div>
+      </div>
+
+      <!-- Feature 9: Motif Scanner -->
+      <div class="it-results-card" id="dsa-motif-section" style="display:none;">
+        <div class="it-results-title">🔎 Custom Motif Scanner (IUPAC)</div>
+        <div class="it-field" style="margin-bottom:0.75rem;">
+          <label class="it-label">Motif Pattern <span class="it-label-hint">(IUPAC: ACGT, R=AG, Y=CT, W=AT, S=GC, N=any)</span></label>
+          <input type="text" class="it-input" id="dsa-motif-input" placeholder="GGWGG" style="font-family:var(--tl-mono);" />
+        </div>
+        <button class="it-btn it-btn-secondary" id="dsa-motif-scan">Scan Motif</button>
+        <div id="dsa-motif-list" style="margin-top:0.75rem;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const codonTable = {
+    'TTT':'F','TTC':'F','TTA':'L','TTG':'L','CTT':'L','CTC':'L','CTA':'L','CTG':'L',
+    'ATT':'I','ATC':'I','ATA':'I','ATG':'M','GTT':'V','GTC':'V','GTA':'V','GTG':'V',
+    'TCT':'S','TCC':'S','TCA':'S','TCG':'S','CCT':'P','CCC':'P','CCA':'P','CCG':'P',
+    'ACT':'T','ACC':'T','ACA':'T','ACG':'T','GCT':'A','GCC':'A','GCA':'A','GCG':'A',
+    'TAT':'Y','TAC':'Y','TAA':'*','TAG':'*','CAT':'H','CAC':'H','CAA':'Q','CAG':'Q',
+    'AAT':'N','AAC':'N','AAA':'K','AAG':'K','GAT':'D','GAC':'D','GAA':'E','GAG':'E',
+    'TGT':'C','TGC':'C','TGA':'*','TGG':'W','CGT':'R','CGC':'R','CGA':'R','CGG':'R',
+    'AGT':'S','AGC':'S','AGA':'R','AGG':'R','GGT':'G','GGC':'G','GGA':'G','GGG':'G',
+  };
+
+  const restrictionEnzymes = {
+    'EcoRI': 'GAATTC', 'BamHI': 'GGATCC', 'HindIII': 'AAGCTT',
+    'XhoI': 'CTCGAG', 'NotI': 'GCGGCCGC', 'PstI': 'CTGCAG',
+    'KpnI': 'GGTACC', 'SacI': 'GAGCTC', 'SmaI': 'CCCGGG', 'XbaI': 'TCTAGA',
+  };
+
+  function analyze() {
+    let seq = document.getElementById('dsa-sequence').value.trim().toUpperCase().replace(/[^ATCG]/g, '');
+    if (seq.length < 10) { alert('Please enter a DNA sequence of at least 10 bp.'); return; }
+
+    const minORF = parseInt(document.getElementById('dsa-min-orf').value) || 30;
+    const option = document.getElementById('dsa-options').value;
+    const details = [];
+
+    // GC Content
+    const gcCount = (seq.match(/[GC]/g) || []).length;
+    const gcContent = (gcCount / seq.length) * 100;
+    const atCount = seq.length - gcCount;
+
+    // Nucleotide counts
+    const counts = { A: 0, T: 0, C: 0, G: 0 };
+    seq.split('').forEach(n => counts[n]++);
+
+    // GC skew
+    let gcSkew = 0;
+    if (counts.G + counts.C > 0) gcSkew = ((counts.G - counts.C) / (counts.G + counts.C) * 100);
+
+    // Molecular weight (approximate)
+    const mw = seq.length * 660; // ~660 Da per bp for dsDNA
+
+    // Melting temperature (Wallace rule for short, nearest-neighbor approx for longer)
+    let tm;
+    if (seq.length < 14) {
+      tm = 2 * (counts.A + counts.T) + 4 * (counts.G + counts.C);
+    } else {
+      tm = 64.9 + 41 * (gcCount - 16.4) / seq.length;
+    }
+
+    // ORF Detection
+    const orfs = [];
+    for (let frame = 0; frame < 3; frame++) {
+      let i = frame;
+      while (i < seq.length - 2) {
+        const codon = seq.substring(i, i + 3);
+        if (codon === 'ATG') {
+          // Found start, look for stop
+          for (let j = i + 3; j < seq.length - 2; j += 3) {
+            const stopCodon = seq.substring(j, j + 3);
+            if (codonTable[stopCodon] === '*') {
+              const orfLen = (j + 3 - i) / 3;
+              if (orfLen >= minORF) {
+                orfs.push({ start: i, end: j + 3, length: orfLen, frame: frame + 1, protein: translate(seq.substring(i, j + 3)) });
+              }
+              break;
+            }
+          }
+        }
+        i += 3;
+      }
+    }
+
+    // Also check reverse strand
+    const revSeq = reverseComplement(seq);
+    for (let frame = 0; frame < 3; frame++) {
+      let i = frame;
+      while (i < revSeq.length - 2) {
+        const codon = revSeq.substring(i, i + 3);
+        if (codon === 'ATG') {
+          for (let j = i + 3; j < revSeq.length - 2; j += 3) {
+            const stopCodon = revSeq.substring(j, j + 3);
+            if (codonTable[stopCodon] === '*') {
+              const orfLen = (j + 3 - i) / 3;
+              if (orfLen >= minORF) {
+                orfs.push({ start: seq.length - i - 3, end: seq.length - j, length: orfLen, frame: -(frame + 1), protein: translate(revSeq.substring(i, j + 3)) });
+              }
+              break;
+            }
+          }
+        }
+        i += 3;
+      }
+    }
+
+    // Restriction sites
+    const restrictionSites = [];
+    Object.entries(restrictionEnzymes).forEach(([enzyme, site]) => {
+      const re = new RegExp(site, 'gi');
+      let match;
+      while ((match = re.exec(seq)) !== null) {
+        restrictionSites.push({ enzyme, position: match.index, site });
+        if (re.lastIndex === match.index) re.lastIndex++;
+      }
+    });
+
+    // Tandem repeats (simple detection)
+    const repeats = [];
+    for (let len = 2; len <= 6; len++) {
+      for (let i = 0; i <= seq.length - len * 2; i++) {
+        const motif = seq.substring(i, i + len);
+        if (motif.includes('N')) continue;
+        let count = 1, pos = i + len;
+        while (pos + len <= seq.length && seq.substring(pos, pos + len) === motif) {
+          count++;
+          pos += len;
+        }
+        if (count >= 3) {
+          repeats.push({ motif, count, start: i, end: pos });
+        }
+      }
+    }
+
+    // Update stats
+    document.getElementById('dsa-length').innerHTML = seq.length + '<span class="it-stat-unit"> bp</span>';
+    document.getElementById('dsa-gc').innerHTML = gcContent.toFixed(1) + '<span class="it-stat-unit">%</span>';
+    document.getElementById('dsa-orfs').textContent = orfs.length;
+    document.getElementById('dsa-restrict').textContent = restrictionSites.length;
+
+    // Details
+    if (option === 'all' || option === 'gc') {
+      details.push(`
+        <div class="it-results-title">Nucleotide Composition</div>
+        <table class="it-table"><thead><tr><th>Property</th><th>Value</th></tr></thead><tbody>
+          <tr><td>Length</td><td>${seq.length} bp</td></tr>
+          <tr><td>Adenine (A)</td><td>${counts.A} (${(counts.A / seq.length * 100).toFixed(1)}%)</td></tr>
+          <tr><td>Thymine (T)</td><td>${counts.T} (${(counts.T / seq.length * 100).toFixed(1)}%)</td></tr>
+          <tr><td>Cytosine (C)</td><td>${counts.C} (${(counts.C / seq.length * 100).toFixed(1)}%)</td></tr>
+          <tr><td>Guanine (G)</td><td>${counts.G} (${(counts.G / seq.length * 100).toFixed(1)}%)</td></tr>
+          <tr><td class="it-highlight">GC Content</td><td class="it-highlight">${gcContent.toFixed(1)}%</td></tr>
+          <tr><td>GC Skew</td><td>${gcSkew.toFixed(2)}</td></tr>
+          <tr><td>Melting Temperature (Tm)</td><td>${tm.toFixed(1)} °C</td></tr>
+          <tr><td>Molecular Weight (dsDNA)</td><td>${(mw / 1000).toFixed(1)} kDa</td></tr>
+        </tbody></table>
+      `);
+    }
+
+    if (option === 'all' || option === 'orf') {
+      details.push(`
+        <div class="it-results-title">Open Reading Frames (min ${minORF} codons)</div>
+        ${orfs.length > 0 ? `<table class="it-table"><thead><tr><th>#</th><th>Start</th><th>End</th><th>Length</th><th>Frame</th><th>Protein (first 30 aa)</th></tr></thead><tbody>
+          ${orfs.sort((a, b) => b.length - a.length).map((orf, i) => `<tr>
+            <td>${i + 1}</td><td>${orf.start}</td><td>${orf.end}</td><td>${orf.length} codons</td><td>${orf.frame > 0 ? '+' + orf.frame : orf.frame}</td>
+            <td style="font-family:var(--tl-mono);font-size:0.75rem;">${orf.protein.substring(0, 30)}${orf.protein.length > 30 ? '...' : ''}</td>
+          </tr>`).join('')}
+        </tbody></table>` : '<div class="it-alert it-alert-warn">⚠️ No ORFs found meeting the minimum length criteria.</div>'}
+      `);
+    }
+
+    if (option === 'all' || option === 'restriction') {
+      details.push(`
+        <div class="it-results-title">Restriction Enzyme Sites</div>
+        ${restrictionSites.length > 0 ? `<table class="it-table"><thead><tr><th>Enzyme</th><th>Recognition Site</th><th>Position</th></tr></thead><tbody>
+          ${restrictionSites.map(r => `<tr><td><strong>${r.enzyme}</strong></td><td style="font-family:var(--tl-mono);">${r.site}</td><td>${r.position}</td></tr>`).join('')}
+        </tbody></table>` : '<div class="it-alert it-alert-info">ℹ️ No restriction enzyme sites found for the tested enzymes.</div>'}
+      `);
+    }
+
+    if (option === 'all' || option === 'translation') {
+      const protein = translate(seq.substring(0, Math.min(seq.length - (seq.length % 3), 300)));
+      details.push(`
+        <div class="it-results-title">Protein Translation (Frame +1, first 100 codons)</div>
+        <div style="font-family:var(--tl-mono);font-size:0.8125rem;padding:1rem;background:var(--tl-bg);border-radius:var(--tl-radius-sm);word-break:break-all;">${protein}</div>
+      `);
+    }
+
+    if (option === 'all' && repeats.length > 0) {
+      details.push(`
+        <div class="it-results-title">Tandem Repeats</div>
+        <table class="it-table"><thead><tr><th>Motif</th><th>Count</th><th>Start</th><th>End</th></tr></thead><tbody>
+          ${repeats.slice(0, 10).map(r => `<tr><td style="font-family:var(--tl-mono);">${r.motif}</td><td>${r.count}x</td><td>${r.start}</td><td>${r.end}</td></tr>`).join('')}
+        </tbody></table>
+      `);
+    }
+
+    document.getElementById('dsa-details').innerHTML = details.join('');
+    document.getElementById('dsa-results').classList.add('show');
+
+    // === Feature 1: Codon Usage Bias ===
+    const codonCounts = {};
+    const totalCodons = Math.floor(seq.length / 3);
+    for (let i = 0; i < seq.length - 2; i += 3) {
+      const codon = seq.substring(i, i + 3);
+      codonCounts[codon] = (codonCounts[codon] || 0) + 1;
+    }
+    // E. coli reference frequencies (simplified top codons)
+    const ecoliRef = { CTG: 1.0, GGC: 0.95, GCG: 0.90, ATG: 0.85, GTG: 0.80, CAG: 0.78, GAT: 0.75, GAA: 0.72, AAG: 0.70, CGT: 0.68 };
+    let caiSum = 0, caiCount = 0;
+    Object.entries(codonCounts).forEach(([codon, count]) => {
+      const ref = ecoliRef[codon] || 0.3;
+      caiSum += Math.log(ref);
+      caiCount += count;
+    });
+    const cai = Math.exp(caiSum / Math.max(caiCount, 1));
+    const topCodons = Object.entries(codonCounts).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    document.getElementById('dsa-codon-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Total Codons</span><strong>${totalCodons}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Unique Codons Used</span><strong>${Object.keys(codonCounts).length}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>CAI (E. coli ref)</span><strong style="color:${cai > 0.5 ? '#059669' : cai > 0.3 ? '#d97706' : '#dc2626'};">${cai.toFixed(3)}</strong></div>
+      <div style="margin-top:0.5rem;font-size:0.8125rem;color:var(--tl-text-muted);margin-bottom:0.25rem;">Top 10 codons:</div>
+      ${topCodons.map(([codon, count]) => `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;border-bottom:1px solid var(--tl-border);font-family:var(--tl-mono);font-size:0.75rem;"><span>${codon} → ${codonTable[codon] || 'X'}</span><span>${count}x (${(count / totalCodons * 100).toFixed(1)}%)</span></div>`).join('')}
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">CAI > 0.5 indicates good codon optimization for E. coli expression. Low CAI suggests heterologous expression challenges.</div>
+    `;
+    document.getElementById('dsa-codon-section').style.display = 'block';
+
+    // === Feature 2: CpG Islands ===
+    const cpgIslands = [];
+    const cpgWindow = 200;
+    const cpgStep = 50;
+    for (let i = 0; i <= seq.length - cpgWindow; i += cpgStep) {
+      const window = seq.substring(i, i + cpgWindow);
+      const gc = ((window.match(/[GC]/g) || []).length / cpgWindow) * 100;
+      const cpg = (window.match(/CG/g) || []).length;
+      const observed = cpg;
+      const expected = (gc / 100) ** 2 * cpgWindow / 2;
+      const ratio = expected > 0 ? observed / expected : 0;
+      if (gc > 50 && ratio > 0.6) cpgIslands.push({ start: i, end: i + cpgWindow, gc, ratio });
+    }
+    document.getElementById('dsa-cpg-list').innerHTML = cpgIslands.length > 0 ?
+      cpgIslands.map(c => `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${c.start}-${c.end}</strong></div><div>GC: ${c.gc.toFixed(0)}% · Obs/Exp: ${c.ratio.toFixed(2)}</div></div>`).join('') +
+      `<div class="it-alert it-alert-good" style="margin-top:0.5rem;">✓ ${cpgIslands.length} CpG island(s) detected. These regions are often associated with promoter regions and gene regulation.</div>`
+      : `<div class="it-alert it-alert-info">ℹ️ No CpG islands detected (GC > 50% and Obs/Exp > 0.6 required).</div>`;
+    document.getElementById('dsa-cpg-section').style.display = 'block';
+
+    // === Feature 3: Promoter Elements ===
+    const promoters = [];
+    // TATA box (TATAAA, ~25-30bp upstream of TSS)
+    const tataRe = /TATA[AT]A[AT]/gi;
+    let tataMatch;
+    while ((tataMatch = tataRe.exec(seq)) !== null) promoters.push({ type: 'TATA Box', pos: tataMatch.index, seq: tataMatch[0] });
+    // -35 region (TTGACA)
+    const p35Re = /TTGACA/gi;
+    let p35Match;
+    while ((p35Match = p35Re.exec(seq)) !== null) promoters.push({ type: '-35 Element', pos: p35Match.index, seq: p35Match[0] });
+    // -10 region (TATAAT)
+    const p10Re = /TATAAT/gi;
+    let p10Match;
+    while ((p10Match = p10Re.exec(seq)) !== null) promoters.push({ type: '-10 Element (Pribnow)', pos: p10Match.index, seq: p10Match[0] });
+    // Shine-Dalgarno (AGGAGG)
+    const sdRe = /AGGAGG/gi;
+    let sdMatch;
+    while ((sdMatch = sdRe.exec(seq)) !== null) promoters.push({ type: 'Shine-Dalgarno', pos: sdMatch.index, seq: sdMatch[0] });
+    document.getElementById('dsa-promoter-list').innerHTML = promoters.length > 0 ?
+      promoters.slice(0, 15).map(p => `<div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><div><strong>${p.type}</strong></div><div style="font-family:var(--tl-mono);font-size:0.75rem;">${p.seq} @ pos ${p.pos}</div></div>`).join('') +
+      `<div class="it-alert it-alert-good" style="margin-top:0.5rem;">✓ ${promoters.length} promoter element(s) detected.</div>`
+      : `<div class="it-alert it-alert-info">ℹ️ No canonical promoter elements detected.</div>`;
+    document.getElementById('dsa-promoter-section').style.display = 'block';
+
+    // === Feature 4: Sequence Complexity ===
+    const complexityWindow = 50;
+    const entropyValues = [];
+    for (let i = 0; i <= seq.length - complexityWindow; i += complexityWindow) {
+      const window = seq.substring(i, i + complexityWindow);
+      const freq = {};
+      window.split('').forEach(n => freq[n] = (freq[n] || 0) + 1);
+      let entropy = 0;
+      Object.values(freq).forEach(c => {
+        const p = c / complexityWindow;
+        entropy -= p * Math.log2(p);
+      });
+      entropyValues.push({ start: i, entropy });
+    }
+    const avgEntropy = entropyValues.reduce((s, e) => s + e.entropy, 0) / Math.max(entropyValues.length, 1);
+    const lowComplexity = entropyValues.filter(e => e.entropy < 1.5);
+    document.getElementById('dsa-complexity-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Avg Shannon Entropy</span><strong>${avgEntropy.toFixed(3)} bits</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Max Entropy (4 symbols)</span><strong>2.000 bits</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Low-Complexity Regions</span><strong style="color:${lowComplexity.length > 0 ? '#d97706' : '#059669'};">${lowComplexity.length}</strong></div>
+      ${lowComplexity.length > 0 ? lowComplexity.slice(0, 5).map(lc => `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;border-bottom:1px solid var(--tl-border);font-size:0.75rem;"><span>Position ${lc.start}</span><span>${lc.entropy.toFixed(2)} bits</span></div>`).join('') : ''}
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Shannon entropy measures sequence randomness. Max for DNA = 2.0 bits. Low entropy regions (< 1.5) may indicate repeats or regulatory elements.</div>
+    `;
+    document.getElementById('dsa-complexity-section').style.display = 'block';
+
+    // === Feature 5: Protein Properties ===
+    if (orfs.length > 0) {
+      const bestORF = orfs.sort((a, b) => b.length - a.length)[0];
+      const protein = bestORF.protein;
+      const aaMW = { A: 89, R: 174, N: 132, D: 133, C: 121, E: 147, Q: 146, G: 75, H: 155, I: 131, L: 131, K: 146, M: 149, F: 165, P: 115, S: 105, T: 119, W: 204, Y: 181, V: 117 };
+      const proteinMW = protein.split('').reduce((s, aa) => s + (aaMW[aa] || 0), 0) - 18 * (protein.length - 1);
+      // pI estimation (simplified)
+      const acidic = (protein.match(/[DE]/g) || []).length;
+      const basic = (protein.match(/[RK]/g) || []).length;
+      const pI = basic > acidic ? 8.5 + (basic - acidic) * 0.3 : 5.5 - (acidic - basic) * 0.3;
+      // Hydrophobicity (Kyte-Doolittle avg)
+      const kd = { A: 1.8, R: -4.5, N: -3.5, D: -3.5, C: 2.5, E: -3.5, Q: -3.5, G: -0.4, H: -3.2, I: 4.5, L: 3.8, K: -3.9, M: 1.9, F: 2.8, P: -1.6, S: -0.8, T: -0.7, W: -0.9, Y: -1.3, V: 4.2 };
+      const avgHydro = protein.split('').reduce((s, aa) => s + (kd[aa] || 0), 0) / protein.length;
+      const aromatic = (protein.match(/[FWY]/g) || []).length;
+      document.getElementById('dsa-protein-list').innerHTML = `
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Protein Length</span><strong>${protein.length} aa</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Molecular Weight</span><strong>${(proteinMW / 1000).toFixed(1)} kDa</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Estimated pI</span><strong>${pI.toFixed(1)}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Avg Hydrophobicity (KD)</span><strong>${avgHydro.toFixed(2)}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Acidic Residues (D+E)</span><strong>${acidic} (${(acidic / protein.length * 100).toFixed(1)}%)</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Basic Residues (R+K)</span><strong>${basic} (${(basic / protein.length * 100).toFixed(1)}%)</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Aromatic Residues</span><strong>${aromatic}</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Charge at pH 7</span><strong>${basic - acidic > 0 ? '+' : ''}${basic - acidic}</strong></div>
+        <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Properties from largest ORF translation. ${avgHydro > 0.5 ? 'Hydrophobic protein — may be membrane-associated.' : avgHydro < -0.5 ? 'Hydrophilic protein — likely soluble.' : 'Mixed hydrophobicity.'}</div>
+      `;
+    } else {
+      document.getElementById('dsa-protein-list').innerHTML = '<div class="it-alert it-alert-warn">⚠️ No ORFs found — protein properties unavailable.</div>';
+    }
+    document.getElementById('dsa-protein-section').style.display = 'block';
+
+    // === Feature 6: RFLP Map ===
+    const rflpEnzymes = ['EcoRI', 'BamHI', 'HindIII', 'XhoI', 'PstI'];
+    const rflpData = rflpEnzymes.map(name => {
+      const site = restrictionEnzymes[name];
+      const re = new RegExp(site, 'gi');
+      const positions = [0];
+      let m;
+      while ((m = re.exec(seq)) !== null) { positions.push(m.index); if (re.lastIndex === m.index) re.lastIndex++; }
+      positions.push(seq.length);
+      const fragments = [];
+      for (let i = 1; i < positions.length; i++) fragments.push(positions[i] - positions[i - 1]);
+      return { enzyme: name, cutCount: positions.length - 2, fragments };
+    });
+    document.getElementById('dsa-rflp-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Enzyme</th><th>Cuts</th><th>Fragment Sizes (bp)</th></tr></thead><tbody>
+        ${rflpData.map(r => `<tr><td><strong>${r.enzyme}</strong></td><td>${r.cutCount}</td><td style="font-family:var(--tl-mono);font-size:0.75rem;">${r.fragments.join(', ')}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">RFLP fragment sizes for gel electrophoresis prediction. Uncut = ${seq.length} bp.</div>
+    `;
+    document.getElementById('dsa-rflp-section').style.display = 'block';
+
+    // === Feature 7: Six-Frame Translation ===
+    const revComp = reverseComplement(seq);
+    const frames = [];
+    for (let f = 0; f < 3; f++) {
+      frames.push({ frame: '+' + (f + 1), seq: translate(seq.substring(f, Math.min(seq.length - ((seq.length - f) % 3), 300 + f))) });
+    }
+    for (let f = 0; f < 3; f++) {
+      frames.push({ frame: '-' + (f + 1), seq: translate(revComp.substring(f, Math.min(revComp.length - ((revComp.length - f) % 3), 300 + f))) });
+    }
+    document.getElementById('dsa-frames-list').innerHTML = frames.map(fr =>
+      `<div style="margin-bottom:0.5rem;"><div style="font-size:0.75rem;color:var(--tl-text-muted);margin-bottom:0.25rem;">Frame ${fr.frame}:</div><div style="font-family:var(--tl-mono);font-size:0.75rem;padding:0.5rem;background:var(--tl-bg);border-radius:var(--tl-radius-sm);word-break:break-all;">${fr.seq.substring(0, 100)}${fr.seq.length > 100 ? '...' : ''}</div></div>`
+    ).join('');
+    document.getElementById('dsa-frames-section').style.display = 'block';
+
+    // === Feature 8: GC Skew Plot ===
+    const skewWindow = 1000;
+    const skewStep = 100;
+    const skewData = [];
+    for (let i = 0; i <= seq.length - skewWindow; i += skewStep) {
+      const window = seq.substring(i, i + skewWindow);
+      const g = (window.match(/G/g) || []).length;
+      const c = (window.match(/C/g) || []).length;
+      skewData.push((g - c) / Math.max(g + c, 1));
+    }
+    const skewCanvas = document.getElementById('dsa-skew-canvas');
+    const skewCtx = skewCanvas.getContext('2d');
+    const sw = skewCanvas.width, sh = skewCanvas.height;
+    skewCtx.fillStyle = '#ebedf5';
+    skewCtx.fillRect(0, 0, sw, sh);
+    skewCtx.strokeStyle = 'rgba(15,23,42,0.1)';
+    skewCtx.beginPath(); skewCtx.moveTo(0, sh / 2); skewCtx.lineTo(sw, sh / 2); skewCtx.stroke();
+    skewCtx.strokeStyle = '#06b6d4';
+    skewCtx.lineWidth = 1.5;
+    skewCtx.beginPath();
+    skewData.forEach((v, i) => {
+      const x = (i / Math.max(skewData.length - 1, 1)) * sw;
+      const y = sh / 2 - v * sh / 2 * 0.9;
+      if (i === 0) skewCtx.moveTo(x, y); else skewCtx.lineTo(x, y);
+    });
+    skewCtx.stroke();
+    // Find origin (skew crossing point)
+    let originPos = -1;
+    for (let i = 1; i < skewData.length; i++) {
+      if (skewData[i - 1] < 0 && skewData[i] >= 0) { originPos = i * skewStep; break; }
+    }
+    document.getElementById('dsa-skew-list').innerHTML = `
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Skew Data Points</span><strong>${skewData.length}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--tl-border);"><span>Predicted OriC Position</span><strong>${originPos >= 0 ? originPos + ' bp' : 'Not detected'}</strong></div>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">GC skew (G-C)/(G+C) transitions from negative to positive at replication origin. Used in bacterial genome analysis.</div>
+    `;
+    document.getElementById('dsa-skew-section').style.display = 'block';
+
+    // === Feature 9: Motif Scanner ===
+    document.getElementById('dsa-motif-scan').onclick = () => {
+      const motif = document.getElementById('dsa-motif-input').value.trim().toUpperCase();
+      if (!motif) return;
+      const iupac = { A: 'A', C: 'C', G: 'G', T: 'T', R: '[AG]', Y: '[CT]', W: '[AT]', S: '[GC]', N: '[ACGT]', M: '[AC]', K: '[GT]', H: '[ACT]', B: '[CGT]', D: '[AGT]', V: '[ACG]' };
+      let regexStr = '';
+      for (const ch of motif) regexStr += iupac[ch] || ch;
+      const motifRe = new RegExp(regexStr, 'gi');
+      const matches = [];
+      let m;
+      while ((m = motifRe.exec(seq)) !== null) { matches.push(m.index); if (motifRe.lastIndex === m.index) motifRe.lastIndex++; }
+      document.getElementById('dsa-motif-list').innerHTML = matches.length > 0 ?
+        `<div style="margin-bottom:0.5rem;">Found <strong>${matches.length}</strong> match(es):</div>` +
+        matches.slice(0, 20).map(pos => `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;border-bottom:1px solid var(--tl-border);font-family:var(--tl-mono);font-size:0.75rem;"><span>Position ${pos}</span><span>${seq.substring(pos, pos + motif.length)}</span></div>`).join('') +
+        (matches.length > 20 ? `<div style="color:var(--tl-text-muted);font-size:0.75rem;margin-top:0.25rem;">...and ${matches.length - 20} more</div>` : '')
+        : '<div class="it-alert it-alert-warn">⚠️ No matches found for this motif.</div>';
+    };
+    document.getElementById('dsa-motif-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('dsa-export').style.display = 'inline-flex';
+    document.getElementById('dsa-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), sequenceLength: seq.length, gcContent, gcSkew, tm, mw, nucleotideCounts: counts, orfs: orfs.length, restrictionSites, repeats, codonUsage: { totalCodons, cai, topCodons }, cpgIslands, promoterElements: promoters, complexity: { avgEntropy, lowComplexityRegions: lowComplexity.length }, proteinProperties: orfs.length > 0 ? { length: orfs.sort((a, b) => b.length - a.length)[0].protein.length } : null, rflp: rflpData };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'dna-analysis-report.json'; a.click();
+    };
+  }
+
+  function translate(dna) {
+    let protein = '';
+    for (let i = 0; i < dna.length - 2; i += 3) {
+      protein += codonTable[dna.substring(i, i + 3)] || 'X';
+    }
+    return protein;
+  }
+
+  function reverseComplement(seq) {
+    const comp = { A: 'T', T: 'A', C: 'G', G: 'C' };
+    return seq.split('').reverse().map(n => comp[n] || n).join('');
+  }
+
+  document.getElementById('dsa-analyze').addEventListener('click', analyze);
+  document.getElementById('dsa-clear').addEventListener('click', () => {
+    document.getElementById('dsa-sequence').value = '';
+    document.getElementById('dsa-results').classList.remove('show');
+  });
+})();
+</script>

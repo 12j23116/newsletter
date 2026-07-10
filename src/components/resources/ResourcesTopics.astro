@@ -1,0 +1,21 @@
+---
+import { resourceTopics } from '../../data/resources/resources-data';
+---
+
+<section class="res-section">
+  <div class="res-section-head res-reveal">
+    <div class="res-eyebrow-sm">Browse</div>
+    <h2>Explore by <span class="res-grad">Technology Frontier</span></h2>
+    <p>Each topic contains curated guides, reports, tools, and datasets — pick a frontier to dive deeper.</p>
+  </div>
+  <div class="res-cat-grid">
+    {resourceTopics.map((cat) => (
+      <a href={`/topics/${cat.id}`} class="res-cat-card res-reveal" style={`--cat-color:${cat.color}`}>
+        <span class="res-cat-card-icon">{cat.icon}</span>
+        <h3>{cat.name}</h3>
+        <p>{cat.description}</p>
+        <span class="res-cat-card-count">{cat.count} resources →</span>
+      </a>
+    ))}
+  </div>
+</section>

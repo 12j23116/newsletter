@@ -1,0 +1,50 @@
+---
+const areas = [
+  { icon: '📊', title: 'Tech Radar', desc: 'Interactive adoption tracker for 12 frontiers', path: '#radar', color: '#3b82f6', img: '/images/001-ai-neural-agent-cluster.webp' },
+  { icon: '📰', title: 'Blog', desc: '100+ expert articles on emerging tech', path: '#trending', color: '#ec4899', img: '/images/007-space-orbital-station.webp' },
+  { icon: '🛠️', title: 'Tools', desc: 'Free calculators & comparison tools', path: '#tools', color: '#06b6d4', img: '/images/009-quantum-computing.webp' },
+  { icon: '🎓', title: 'Guides', desc: 'Step-by-step learning paths for each frontier', path: '#learn', color: '#10b981', img: '/images/004-biotech-gene-editing.webp' },
+  { icon: '🎙️', title: 'Podcast', desc: 'Interviews with researchers and founders', path: '#community', color: '#f59e0b', img: '/images/006-av-autonomous-vehicle.webp' },
+  { icon: '💬', title: 'Community', desc: '50K+ builders, investors & technologists', path: '#community', color: '#8b5cf6', img: '/images/012-cybersecurity-digital-shield.webp' },
+];
+---
+
+<section class="lv-section lv-section-dark" id="overview">
+  <div class="lv-orb" style="width:300px;height:300px;background:var(--accent-purple);top:20%;right:-50px"></div>
+  <div class="lv-container" style="position:relative;z-index:1">
+    <div class="lv-section-head reveal">
+      <div class="lv-eyebrow">Your Complete Tech Intelligence Toolkit</div>
+      <h2 class="lv-section-h2 lv-section-h2-light">
+        Everything you need to<br />
+        <span class="lv-grad-text">stay ahead of the curve.</span>
+      </h2>
+      <p class="lv-section-sub" style="color:var(--text-muted)">
+        Six powerful areas — radar, articles, tools, guides, podcast, and community — working together to keep you informed on every emerging frontier.
+      </p>
+    </div>
+
+    <div class="showcase-grid">
+      {areas.map((a, i) => (
+        <a href={a.path} class="showcase-card reveal" style={`transition-delay:${i * 0.05}s`}>
+          <div class="showcase-img-wrap" style={`background:linear-gradient(135deg,${a.color}30,${a.color}10)`}>
+            <img src={a.img} alt={a.title} class="showcase-img" loading="lazy" />
+            <div class="showcase-overlay"></div>
+            <div class="showcase-icon" style={`background:${a.color}30;color:${a.color};border-color:${a.color}40`}>
+              {a.icon}
+            </div>
+          </div>
+          <div class="showcase-body">
+            <h3 class="showcase-title">{a.title}</h3>
+            <p class="showcase-desc">{a.desc}</p>
+            <span class="showcase-link" style={`color:${a.color}`}>
+              Explore
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+---
+const steps = [
+  {
+    num: '01', icon: '🔍',
+    title: 'Discover Your Frontiers',
+    desc: 'Browse 12 emerging technology categories. Find the frontiers that matter to your work, investments, or curiosity.',
+    checks: ['No experience required', 'Completely free to start', 'Personalized recommendations'],
+    img: '/images/ai-08-generative-art.webp',
+  },
+  {
+    num: '02', icon: '📊',
+    title: 'Track with the Radar',
+    desc: 'Use our interactive Tech Radar to monitor adoption stages, breakthroughs, and milestones across every frontier.',
+    checks: ['Real-time adoption data', 'Quarterly radar updates', 'Custom alert preferences'],
+    img: '/images/fusion-07-power-plant-skyline.webp',
+  },
+  {
+    num: '03', icon: '🚀',
+    title: 'Act on Intelligence',
+    desc: 'Apply your knowledge with confidence. Read deep dives, use tools, and join discussions with 50K+ technologists.',
+    checks: ['Expert analysis & insights', 'Free interactive tools', 'Community of 50K+ readers'],
+    img: '/images/space-09-booster-landing.webp',
+  },
+];
+---
+
+<section class="lv-section lv-section-dark" id="how-it-works">
+  <div class="lv-orb" style="width:300px;height:300px;background:var(--accent-blue);top:20%;left:-50px"></div>
+  <div class="lv-orb" style="width:300px;height:300px;background:var(--accent-purple);bottom:10%;right:-50px;animation-delay:-7s"></div>
+  <div class="lv-container" style="position:relative;z-index:1">
+    <div class="lv-section-head reveal">
+      <div class="lv-eyebrow">Start Your Journey</div>
+      <h2 class="lv-section-h2 lv-section-h2-light">
+        From curious to informed<br />
+        <span class="lv-grad-text">in three simple steps.</span>
+      </h2>
+      <p class="lv-section-sub" style="color:var(--text-muted)">
+        No PhD required. No jargon. Just a clear path from where you are today to where you want to be in emerging tech.
+      </p>
+    </div>
+
+    <div class="howto-grid">
+      {steps.map((s, i) => (
+        <div class={`howto-card reveal ${i === 0 ? 'howto-card-active' : ''}`} data-step={i} style={`transition-delay:${i * 0.1}s`}>
+          <div class="howto-img-wrap" style={`background:linear-gradient(135deg,rgba(59,130,246,${0.2 - i * 0.05}),rgba(0,0,0,.5))`}>
+            <img src={s.img} alt={s.title} class="howto-img" loading="lazy" />
+            <div class="howto-img-overlay"></div>
+            <div class="howto-num-badge">{s.num}</div>
+            <div class="howto-icon-badge">{s.icon}</div>
+          </div>
+          <div class="howto-body">
+            <h3 class="howto-title">{s.title}</h3>
+            <p class="howto-desc">{s.desc}</p>
+            <ul class="howto-checks">
+              {s.checks.map((c) => (
+                <li class="howto-check">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                    <path d="M22 4L12 14.01l-3-3" />
+                  </svg>
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

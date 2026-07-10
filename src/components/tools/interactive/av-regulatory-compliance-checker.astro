@@ -1,0 +1,463 @@
+---
+/**
+ * AV Regulatory Compliance Checker — Interactive tool
+ * Check AV system compliance with NHTSA, UN R157, and state regulations
+ */
+import './interactive-tools.css';
+
+const jurisdictions = [
+  { id: 'us-federal', name: 'US Federal (NHTSA)' },
+  { id: 'us-california', name: 'US — California (DMV)' },
+  { id: 'us-arizona', name: 'US — Arizona (DOT)' },
+  { id: 'eu-r157', name: 'EU — UN R157 (ALKS)' },
+  { id: 'uk', name: 'UK — Automated Vehicles Act' },
+  { id: 'china', name: 'China — ICV Guidelines' },
+  { id: 'japan', name: 'Japan — Automated Driving' },
+];
+
+const requirements = [
+  { id: 'data-recorder', jur: ['us-federal','us-california','eu-r157','uk','china','japan'], text: 'Data recording system (EDR/DSSAD) capturing 30s before and 30s after event', severity: 'Critical' },
+  { id: 'cyber-security', jur: ['us-federal','eu-r157','uk','china','japan'], text: 'Cybersecurity management system (ISO/SAE 21434)', severity: 'Critical' },
+  { id: 'ota-updates', jur: ['us-federal','eu-r157','uk','china'], text: 'OTA update capability with safety validation and rollback', severity: 'High' },
+  { id: 'collision-avoid', jur: ['us-federal','us-california','eu-r157','uk','china','japan'], text: 'Automatic emergency braking (AEB) system', severity: 'Critical' },
+  { id: 'lane-keep', jur: ['eu-r157','uk','japan'], text: 'Lane keeping assistance within ODD', severity: 'High' },
+  { id: 'driver-monitor', jur: ['us-federal','eu-r157','uk','japan'], text: 'Driver monitoring system (DMS) for L2/L3 fallback', severity: 'High' },
+  { id: 'disengagement-log', jur: ['us-california','us-arizona','china'], text: 'Disengagement reporting and logging', severity: 'High' },
+  { id: 'permit', jur: ['us-california','us-arizona','china','japan'], text: 'Testing permit from state/national authority', severity: 'Critical' },
+  { id: 'insurance', jur: ['us-california','uk','china'], text: 'Proof of financial responsibility / insurance ($5M minimum)', severity: 'Critical' },
+  { id: 'v2x', jur: ['china','eu-r157'], text: 'V2X communication capability (DSM/C-V2X)', severity: 'Medium' },
+  { id: 'hmi', jur: ['us-federal','eu-r157','uk','japan'], text: 'Human-Machine Interface showing automation status', severity: 'High' },
+  { id: 'fallback', jur: ['eu-r157','uk','japan'], text: 'Minimal Risk Maneuver (MRM) fallback capability', severity: 'Critical' },
+  { id: 'speed-limit', jur: ['eu-r157'], text: 'ALKS speed limited to 130 km/h with lane change capability', severity: 'High' },
+  { id: 'crash-report', jur: ['us-federal','us-california','us-arizona'], text: 'Crash reporting within 10 days to NHTSA/state authority', severity: 'High' },
+  { id: 'data-sharing', jur: ['us-california','china'], text: 'Annual data sharing with regulatory authority', severity: 'Medium' },
+  { id: 'safety-case', jur: ['uk','eu-r157'], text: 'Safety case / safety assessment report', severity: 'Critical' },
+  { id: 'simulation', jur: ['us-federal','eu-r157','china','japan'], text: 'Simulation-based safety validation (billions of miles equivalent)', severity: 'High' },
+  { id: 'accessibility', jur: ['us-federal','uk'], text: 'Accessibility features for persons with disabilities', severity: 'Medium' },
+];
+---
+
+<div class="it-container" id="av-compliance">
+  <div class="it-card">
+    <div class="it-header">
+      <div class="it-header-icon">📋</div>
+      <div>
+        <h2>AV Regulatory Compliance Checker</h2>
+        <p>Check compliance with NHTSA, UN R157, and state-level autonomous driving regulations</p>
+      </div>
+    </div>
+
+    <div class="it-form">
+      <div class="it-row">
+        <div class="it-field">
+          <label class="it-label">Jurisdiction</label>
+          <select class="it-select" id="avc-jurisdiction">
+            {jurisdictions.map(j => <option value={j.id}>{j.name}</option>)}
+          </select>
+        </div>
+        <div class="it-field">
+          <label class="it-label">Automation Level</label>
+          <select class="it-select" id="avc-level">
+            <option value="2">SAE Level 2</option>
+            <option value="3">SAE Level 3</option>
+            <option value="4">SAE Level 4</option>
+            <option value="5">SAE Level 5</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="it-field">
+        <label class="it-label">Compliance Checklist — Mark your system's status</label>
+        <div id="avc-checks" style="display:grid;gap:0.625rem;"></div>
+      </div>
+
+      <div class="it-btn-row">
+        <button class="it-btn it-btn-primary" id="avc-check">Check Compliance</button>
+        <button class="it-btn it-btn-secondary" id="avc-reset">Reset</button>
+        <button class="it-btn it-btn-secondary" id="avc-export" style="display:none;">📄 Export JSON</button>
+      </div>
+    </div>
+
+    <div class="it-results" id="avc-results">
+      <div class="it-results-card">
+        <div class="it-results-title">Compliance Report</div>
+
+        <div class="it-results-grid" style="margin-bottom: 1.5rem;">
+          <div class="it-stat">
+            <div class="it-stat-label">Compliance Score</div>
+            <div class="it-stat-value" id="avc-score">0<span class="it-stat-unit">%</span></div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Compliant</div>
+            <div class="it-stat-value" id="avc-pass" style="color:#059669;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Non-Compliant</div>
+            <div class="it-stat-value" id="avc-fail" style="color:#dc2626;">0</div>
+          </div>
+          <div class="it-stat">
+            <div class="it-stat-label">Critical Gaps</div>
+            <div class="it-stat-value" id="avc-critical" style="color:#dc2626;">0</div>
+          </div>
+        </div>
+
+        <div class="it-progress" style="margin-bottom: 1.5rem;">
+          <div class="it-progress-fill" id="avc-progress" style="width:0%;background:#059669;"></div>
+        </div>
+
+        <div id="avc-report"></div>
+        <div class="it-alert" id="avc-alert"></div>
+      </div>
+
+      <!-- Feature 1: Multi-Jurisdiction Comparison -->
+      <div class="it-results-card" id="avc-multi-section" style="display:none;">
+        <div class="it-results-title">🌍 Multi-Jurisdiction Compliance Comparison</div>
+        <div id="avc-multi-list"></div>
+      </div>
+
+      <!-- Feature 2: Compliance Timeline -->
+      <div class="it-results-card" id="avc-timeline-section" style="display:none;">
+        <div class="it-results-title">📅 Compliance Timeline & Milestone Planner</div>
+        <div id="avc-timeline-list"></div>
+      </div>
+
+      <!-- Feature 3: Standard-Specific Details -->
+      <div class="it-results-card" id="avc-detail-section" style="display:none;">
+        <div class="it-results-title">📖 Standard-Specific Requirement Details</div>
+        <div id="avc-detail-list"></div>
+      </div>
+
+      <!-- Feature 4: Gap Remediation Cost -->
+      <div class="it-results-card" id="avc-cost-section" style="display:none;">
+        <div class="it-results-title">💰 Gap Remediation Cost Estimator</div>
+        <div id="avc-cost-list"></div>
+      </div>
+
+      <!-- Feature 5: Audit Trail & Evidence -->
+      <div class="it-results-card" id="avc-audit-section" style="display:none;">
+        <div class="it-results-title">📂 Audit Trail & Evidence Checklist</div>
+        <div id="avc-audit-list"></div>
+      </div>
+
+      <!-- Feature 6: Compliance Score Radar -->
+      <div class="it-results-card" id="avc-radar-section" style="display:none;">
+        <div class="it-results-title">📊 Compliance Score by Category</div>
+        <canvas id="avc-radar-canvas" width="400" height="400" style="width:100%;max-width:400px;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);background:var(--tl-bg);margin:0 auto 0.75rem;display:block;"></canvas>
+        <div id="avc-radar-list"></div>
+      </div>
+
+      <!-- Feature 7: Cross-Jurisdiction Diff -->
+      <div class="it-results-card" id="avc-diff-section" style="display:none;">
+        <div class="it-results-title">🔀 Cross-Jurisdiction Requirement Diff</div>
+        <div id="avc-diff-list"></div>
+      </div>
+
+      <!-- Feature 8: Regulatory Updates -->
+      <div class="it-results-card" id="avc-updates-section" style="display:none;">
+        <div class="it-results-title">🔔 Recent Regulatory Updates Tracker</div>
+        <div id="avc-updates-list"></div>
+      </div>
+
+      <!-- Feature 9: Certification Pathway -->
+      <div class="it-results-card" id="avc-cert-section" style="display:none;">
+        <div class="it-results-title">🎓 Certification Pathway Recommender</div>
+        <div id="avc-cert-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function() {
+  const reqs = [
+    { id: 'data-recorder', jur: ['us-federal','us-california','eu-r157','uk','china','japan'], text: 'Data recording system (EDR/DSSAD) capturing 30s before/after event', severity: 'Critical' },
+    { id: 'cyber-security', jur: ['us-federal','eu-r157','uk','china','japan'], text: 'Cybersecurity management system (ISO/SAE 21434)', severity: 'Critical' },
+    { id: 'ota-updates', jur: ['us-federal','eu-r157','uk','china'], text: 'OTA update capability with safety validation and rollback', severity: 'High' },
+    { id: 'collision-avoid', jur: ['us-federal','us-california','eu-r157','uk','china','japan'], text: 'Automatic emergency braking (AEB) system', severity: 'Critical' },
+    { id: 'lane-keep', jur: ['eu-r157','uk','japan'], text: 'Lane keeping assistance within ODD', severity: 'High' },
+    { id: 'driver-monitor', jur: ['us-federal','eu-r157','uk','japan'], text: 'Driver monitoring system (DMS) for L2/L3 fallback', severity: 'High' },
+    { id: 'disengagement-log', jur: ['us-california','us-arizona','china'], text: 'Disengagement reporting and logging', severity: 'High' },
+    { id: 'permit', jur: ['us-california','us-arizona','china','japan'], text: 'Testing permit from state/national authority', severity: 'Critical' },
+    { id: 'insurance', jur: ['us-california','uk','china'], text: 'Proof of financial responsibility / insurance ($5M min)', severity: 'Critical' },
+    { id: 'v2x', jur: ['china','eu-r157'], text: 'V2X communication capability (DSM/C-V2X)', severity: 'Medium' },
+    { id: 'hmi', jur: ['us-federal','eu-r157','uk','japan'], text: 'HMI showing automation status', severity: 'High' },
+    { id: 'fallback', jur: ['eu-r157','uk','japan'], text: 'Minimal Risk Maneuver (MRM) fallback', severity: 'Critical' },
+    { id: 'speed-limit', jur: ['eu-r157'], text: 'ALKS speed limited to 130 km/h', severity: 'High' },
+    { id: 'crash-report', jur: ['us-federal','us-california','us-arizona'], text: 'Crash reporting within 10 days', severity: 'High' },
+    { id: 'data-sharing', jur: ['us-california','china'], text: 'Annual data sharing with authority', severity: 'Medium' },
+    { id: 'safety-case', jur: ['uk','eu-r157'], text: 'Safety case / safety assessment report', severity: 'Critical' },
+    { id: 'simulation', jur: ['us-federal','eu-r157','china','japan'], text: 'Simulation-based safety validation', severity: 'High' },
+    { id: 'accessibility', jur: ['us-federal','uk'], text: 'Accessibility features for disabilities', severity: 'Medium' },
+  ];
+
+  function renderChecks() {
+    const jur = document.getElementById('avc-jurisdiction').value;
+    const level = document.getElementById('avc-level').value;
+    const filtered = reqs.filter(r => r.jur.includes(jur));
+    const container = document.getElementById('avc-checks');
+    container.innerHTML = filtered.map(r => {
+      const sevColor = r.severity === 'Critical' ? '#dc2626' : r.severity === 'High' ? '#d97706' : '#65a30d';
+      const showDMS = r.id === 'driver-monitor' && (level === '4' || level === '5');
+      return `<div style="display:flex;align-items:center;gap:0.75rem;padding:0.625rem 0.875rem;border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);font-size:0.8125rem;">
+        <span class="it-badge" style="background:${sevColor}22;color:${sevColor};min-width:70px;justify-content:center;">${r.severity}</span>
+        <span style="flex:1;color:var(--tl-text);">${r.text}${showDMS ? ' <em style="color:var(--tl-text-muted);">(Not required for L4+)</em>' : ''}</span>
+        <select class="it-select avc-status" data-id="${r.id}" data-severity="${r.severity}" style="width:auto;min-width:110px;font-size:0.75rem;">
+          <option value="pass">✓ Compliant</option>
+          <option value="fail">✗ Non-Compliant</option>
+          <option value="na">N/A</option>
+        </select>
+      </div>`;
+    }).join('');
+  }
+
+  renderChecks();
+  document.getElementById('avc-jurisdiction').addEventListener('change', renderChecks);
+  document.getElementById('avc-level').addEventListener('change', renderChecks);
+
+  function check() {
+    const items = [...document.querySelectorAll('.avc-status')];
+    let pass = 0, fail = 0, critical = 0, total = 0;
+    const failedItems = [];
+
+    items.forEach(sel => {
+      const status = sel.value;
+      const severity = sel.getAttribute('data-severity');
+      const id = sel.getAttribute('data-id');
+      const req = reqs.find(r => r.id === id);
+      if (status === 'na') return;
+      total++;
+      if (status === 'pass') pass++;
+      else if (status === 'fail') {
+        fail++;
+        if (severity === 'Critical') critical++;
+        failedItems.push({ text: req.text, severity });
+      }
+    });
+
+    const score = total > 0 ? Math.round((pass / total) * 100) : 0;
+    document.getElementById('avc-score').innerHTML = score + '<span class="it-stat-unit">%</span>';
+    document.getElementById('avc-pass').textContent = pass;
+    document.getElementById('avc-fail').textContent = fail;
+    document.getElementById('avc-critical').textContent = critical;
+    document.getElementById('avc-progress').style.width = score + '%';
+    document.getElementById('avc-progress').style.background = score >= 80 ? '#059669' : score >= 50 ? '#d97706' : '#dc2626';
+
+    const report = document.getElementById('avc-report');
+    if (fail === 0) {
+      report.innerHTML = '<div class="it-alert it-alert-good">✓ All applicable requirements are met. Your AV system is compliant with the selected jurisdiction.</div>';
+    } else {
+      report.innerHTML = '<div class="it-results-title">Non-Compliant Items — Remediation Required</div>' + failedItems.map(f => {
+        const sevColor = f.severity === 'Critical' ? '#dc2626' : f.severity === 'High' ? '#d97706' : '#65a30d';
+        return `<div style="border:1px solid var(--tl-border);border-radius:var(--tl-radius-sm);padding:0.875rem 1rem;margin-bottom:0.625rem;border-left:4px solid ${sevColor};">
+          <span class="it-badge" style="background:${sevColor}22;color:${sevColor};">${f.severity}</span>
+          <span style="font-size:0.8125rem;margin-left:0.5rem;color:var(--tl-text);">${f.text}</span>
+        </div>`;
+      }).join('');
+    }
+
+    const alert = document.getElementById('avc-alert');
+    const jurName = document.getElementById('avc-jurisdiction').selectedOptions[0].text;
+    if (critical > 0) {
+      alert.className = 'it-alert it-alert-bad';
+      alert.innerHTML = `✗ <strong>${critical} critical compliance gap(s) in ${jurName}.</strong> The system cannot be deployed until all critical requirements are met. Address these before road testing.`;
+    } else if (fail > 0) {
+      alert.className = 'it-alert it-alert-warn';
+      alert.innerHTML = `⚠️ <strong>${fail} non-critical gap(s) in ${jurName}.</strong> The system may be eligible for limited testing permits. Address remaining items before full deployment.`;
+    } else {
+      alert.className = 'it-alert it-alert-good';
+      alert.innerHTML = `✓ <strong>Fully compliant with ${jurName}.</strong> Score: ${score}%. The system meets all applicable regulatory requirements for the selected jurisdiction and automation level.`;
+    }
+
+    document.getElementById('avc-results').classList.add('show');
+
+    // === Feature 1: Multi-Jurisdiction Comparison ===
+    const allJurs = ['us-federal','us-california','eu-r157','uk','china','japan'];
+    const jurNames = { 'us-federal':'US Federal','us-california':'CA','eu-r157':'EU R157','uk':'UK','china':'China','japan':'Japan' };
+    const currentJur = document.getElementById('avc-jurisdiction').value;
+    document.getElementById('avc-multi-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Requirement</th>${allJurs.map(j => `<th style="font-size:0.7rem;">${jurNames[j]}</th>`).join('')}</tr></thead><tbody>
+        ${reqs.map(r => `<tr><td style="font-size:0.8125rem;">${r.text.substring(0, 50)}${r.text.length > 50 ? '...' : ''}</td>${allJurs.map(j => `<td style="text-align:center;">${r.jur.includes(j) ? `<span style="color:${j === currentJur ? '#8b5cf6' : '#94a3b8'};font-weight:${j === currentJur ? '700' : '400'};">●</span>` : '<span style="color:#ccc;">·</span>'}</td>`).join('')}</tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">● = required, · = not required. Purple = selected jurisdiction. ${allJurs.length} jurisdictions compared. EU R157 has the most requirements (${reqs.filter(r => r.jur.includes('eu-r157')).length}), US Federal has ${reqs.filter(r => r.jur.includes('us-federal')).length}.</div>
+    `;
+    document.getElementById('avc-multi-section').style.display = 'block';
+
+    // === Feature 2: Compliance Timeline ===
+    const milestones = [];
+    if (critical > 0) milestones.push({ phase: 'Phase 1: Critical Fixes', duration: '3-6 months', items: failedItems.filter(f => f.severity === 'Critical'), cost: '$500K-$2M' });
+    if (fail > critical) milestones.push({ phase: 'Phase 2: High Priority', duration: '2-4 months', items: failedItems.filter(f => f.severity === 'High'), cost: '$200K-$800K' });
+    if (fail > 0) milestones.push({ phase: 'Phase 3: Medium Priority', duration: '1-2 months', items: failedItems.filter(f => f.severity === 'Medium'), cost: '$50K-$200K' });
+    milestones.push({ phase: 'Phase 4: Documentation', duration: '1-3 months', items: [{ text: 'Prepare safety case documentation', severity: 'Info' }, { text: 'Submit permit applications', severity: 'Info' }], cost: '$100K-$300K' });
+    milestones.push({ phase: 'Phase 5: Audit & Approval', duration: '2-6 months', items: [{ text: 'Regulatory audit and inspection', severity: 'Info' }, { text: 'Type approval / certification', severity: 'Info' }], cost: '$200K-$500K' });
+    document.getElementById('avc-timeline-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Phase</th><th>Duration</th><th>Key Items</th><th>Est. Cost</th></tr></thead><tbody>
+        ${milestones.map(m => `<tr><td><strong>${m.phase}</strong></td><td>${m.duration}</td><td style="font-size:0.8125rem;">${m.items.map(i => `<div>• ${i.text.substring(0, 50)}</div>`).join('')}</td><td style="font-weight:700;">${m.cost}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Total estimated timeline: ${milestones.reduce((s, m) => s + parseInt(m.duration), 0)} months. Total cost range: $${milestones.reduce((s, m) => s + parseInt(m.cost.replace(/[^0-9]/g, '')), 0) / 1000}M-$${milestones.reduce((s, m) => s + parseInt(m.cost.split('-')[1].replace(/[^0-9]/g, '')), 0) / 1000}M. Timeline assumes parallel work where possible. Critical gaps block all subsequent phases.</div>
+    `;
+    document.getElementById('avc-timeline-section').style.display = 'block';
+
+    // === Feature 3: Standard-Specific Details ===
+    const standardDetails = {
+      'data-recorder': { standard: 'ISO 20912 / UN R160', subReqs: ['Pre-crash buffer: 30s minimum', 'Post-crash buffer: 30s minimum', 'Data elements: speed, steering, braking, signals', 'Storage: non-volatile, crash-survivable', 'Access: standardized retrieval interface'] },
+      'cyber-security': { standard: 'ISO/SAE 21434', subReqs: ['Threat analysis and risk assessment (TARA)', 'Security management system process', 'Component-level security requirements', 'Incident response plan', 'OTA update security (signed, encrypted)'] },
+      'ota-updates': { standard: 'ISO 24089 / UN R156', subReqs: ['Update integrity verification (signatures)', 'Rollback capability within 60s', 'Staged rollout with canary testing', 'User consent and notification', 'Regulatory notification for safety-critical updates'] },
+      'collision-avoid': { standard: 'UN R152 / FMVSS 127', subReqs: ['AEB for car-to-car up to 60 km/h', 'Pedestrian detection day and night', 'Cyclist detection', 'False positive rate < 1 per 10,000 km', 'Brake authority: up to 10 m/s² deceleration'] },
+      'fallback': { standard: 'UN R157 Annex 4', subReqs: ['MRC within 10s of disengagement trigger', 'Safe stop: lane + shoulder + parking', 'Hazard lights activation', 'Door unlock for emergency access', '911/emergency services notification'] },
+      'safety-case': { standard: 'ISO 26262 / ISO 21448', subReqs: ['HARA (Hazard Analysis and Risk Assessment)', 'ASIL determination per component', 'GSN safety case argument', 'SOTIF analysis for perception triggers', 'Independent safety assessment'] },
+    };
+    const filteredReqs = reqs.filter(r => r.jur.includes(currentJur));
+    document.getElementById('avc-detail-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Requirement</th><th>Standard</th><th>Sub-Requirements</th></tr></thead><tbody>
+        ${filteredReqs.map(r => {
+          const detail = standardDetails[r.id] || { standard: 'TBD', subReqs: ['Refer to applicable regulation text'] };
+          return `<tr><td style="font-size:0.8125rem;">${r.text.substring(0, 40)}...</td><td><strong>${detail.standard}</strong></td><td style="font-size:0.8125rem;">${detail.subReqs.map(s => `<div style="padding:0.15rem 0;">• ${s}</div>`).join('')}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Each requirement maps to specific international standards with detailed sub-requirements. Use these for engineering specification and test plan development. Standards available from ISO, UNECE, and SAE.</div>
+    `;
+    document.getElementById('avc-detail-section').style.display = 'block';
+
+    // === Feature 4: Gap Remediation Cost ===
+    const costMap = { Critical: { low: 200000, high: 800000 }, High: { low: 50000, high: 300000 }, Medium: { low: 10000, high: 100000 } };
+    const gapCosts = failedItems.map(f => ({ text: f.text, severity: f.severity, low: costMap[f.severity].low, high: costMap[f.severity].high }));
+    const totalLow = gapCosts.reduce((s, c) => s + c.low, 0);
+    const totalHigh = gapCosts.reduce((s, c) => s + c.high, 0);
+    document.getElementById('avc-cost-list').innerHTML = gapCosts.length > 0 ? `
+      <table class="it-table"><thead><tr><th>Gap</th><th>Severity</th><th>Est. Low ($)</th><th>Est. High ($)</th></tr></thead><tbody>
+        ${gapCosts.map(c => `<tr><td style="font-size:0.8125rem;">${c.text.substring(0, 50)}...</td><td style="color:${c.severity === 'Critical' ? '#dc2626' : c.severity === 'High' ? '#d97706' : '#65a30d'};font-weight:700;">${c.severity}</td><td>$${(c.low / 1000).toFixed(0)}K</td><td>$${(c.high / 1000).toFixed(0)}K</td></tr>`).join('')}
+        <tr class="it-highlight"><td colspan="2"><strong>Total</strong></td><td class="it-highlight">$${(totalLow / 1000).toFixed(0)}K</td><td class="it-highlight">$${(totalHigh / 1000).toFixed(0)}K</td></tr>
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Cost estimates include engineering, testing, documentation, and third-party assessment. Critical gaps cost 4-8x more than medium. Budget for 20% contingency. Hardware changes (sensors, recorders) add capital cost on top of engineering.</div>
+    ` : '<div class="it-alert it-alert-good">✓ No compliance gaps — no remediation costs needed.</div>';
+    document.getElementById('avc-cost-section').style.display = 'block';
+
+    // === Feature 5: Audit Trail & Evidence ===
+    const evidenceItems = [
+      { req: 'Data recorder', evidence: ['EDR specification document', 'Crash test data retrieval logs', 'Storage integrity test results'], format: 'Technical spec + test report' },
+      { req: 'Cybersecurity', evidence: ['TARA report', 'Penetration test results', 'CSMS process documentation', 'Vulnerability management log'], format: 'ISO 21434 compliance report' },
+      { req: 'OTA updates', evidence: ['Update architecture document', 'Security signature chain', 'Rollback test results', 'Canary deployment log'], format: 'Process doc + test results' },
+      { req: 'AEB system', evidence: ['AEB performance test results', 'False positive rate analysis', 'Pedestrian/cyclist test reports', 'Sensor calibration records'], format: 'Test reports (NHTSA/Euro NCAP format)' },
+      { req: 'Safety case', evidence: ['GSN safety case document', 'HARA worksheet', 'SOTIF analysis report', 'Independent assessment letter'], format: 'Safety case report + assessment' },
+      { req: 'Permit', evidence: ['Application form', 'Insurance proof ($5M+)', 'Testing plan', 'Safety driver certifications'], format: 'Permit application package' },
+    ];
+    document.getElementById('avc-audit-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Requirement</th><th>Evidence Documents</th><th>Format</th></tr></thead><tbody>
+        ${evidenceItems.map(e => `<tr><td><strong>${e.req}</strong></td><td style="font-size:0.8125rem;">${e.evidence.map(ev => `<div>📄 ${ev}</div>`).join('')}</td><td style="font-size:0.8125rem;">${e.format}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Prepare all evidence before audit. Maintain version-controlled document repository. Evidence must be traceable to requirements (traceability matrix). Third-party assessment may be required for critical items. Retain evidence for 10+ years per regulatory requirements.</div>
+    `;
+    document.getElementById('avc-audit-section').style.display = 'block';
+
+    // === Feature 6: Compliance Score Radar ===
+    const categories = ['Safety', 'Security', 'Data', 'HMI', 'Fallback', 'Ops'];
+    const catMap = { 'collision-avoid':'Safety', 'lane-keep':'Safety', 'fallback':'Fallback', 'data-recorder':'Data', 'data-sharing':'Data', 'crash-report':'Data', 'cyber-security':'Security', 'ota-updates':'Security', 'driver-monitor':'HMI', 'hmi':'HMI', 'permit':'Ops', 'insurance':'Ops', 'disengagement-log':'Ops', 'simulation':'Ops', 'safety-case':'Safety', 'speed-limit':'Safety', 'v2x':'Ops', 'accessibility':'HMI' };
+    const catScores = {};
+    categories.forEach(c => catScores[c] = { pass: 0, total: 0 });
+    items.forEach(sel => {
+      if (sel.value === 'na') return;
+      const cat = catMap[sel.getAttribute('data-id')] || 'Ops';
+      catScores[cat].total++;
+      if (sel.value === 'pass') catScores[cat].pass++;
+    });
+    const radarVals = categories.map(c => catScores[c].total > 0 ? catScores[c].pass / catScores[c].total : 0);
+    const avcRadarCanvas = document.getElementById('avc-radar-canvas');
+    const arCtx = avcRadarCanvas.getContext('2d');
+    const arW = avcRadarCanvas.width, arH = avcRadarCanvas.height;
+    arCtx.fillStyle = '#ebedf5'; arCtx.fillRect(0, 0, arW, arH);
+    const arCx = arW / 2, arCy = arH / 2, arR = Math.min(arW, arH) / 2 - 50;
+    for (let level = 1; level <= 4; level++) {
+      arCtx.strokeStyle = 'rgba(15,23,42,0.08)'; arCtx.lineWidth = 1; arCtx.beginPath();
+      for (let i = 0; i < categories.length; i++) {
+        const angle = (i / categories.length) * Math.PI * 2 - Math.PI / 2;
+        const r = arR * level / 4; const x = arCx + Math.cos(angle) * r, y = arCy + Math.sin(angle) * r;
+        if (i === 0) arCtx.moveTo(x, y); else arCtx.lineTo(x, y);
+      }
+      arCtx.closePath(); arCtx.stroke();
+    }
+    categories.forEach((cat, i) => {
+      const angle = (i / categories.length) * Math.PI * 2 - Math.PI / 2;
+      arCtx.strokeStyle = 'rgba(15,23,42,0.1)'; arCtx.beginPath(); arCtx.moveTo(arCx, arCy); arCtx.lineTo(arCx + Math.cos(angle) * arR, arCy + Math.sin(angle) * arR); arCtx.stroke();
+      arCtx.fillStyle = '#1e293b'; arCtx.font = '10px sans-serif'; arCtx.textAlign = 'center';
+      arCtx.fillText(cat, arCx + Math.cos(angle) * (arR + 20), arCy + Math.sin(angle) * (arR + 20));
+    });
+    arCtx.fillStyle = 'rgba(5,150,105,0.2)'; arCtx.strokeStyle = '#059669'; arCtx.lineWidth = 2; arCtx.beginPath();
+    radarVals.forEach((v, i) => {
+      const angle = (i / categories.length) * Math.PI * 2 - Math.PI / 2;
+      const r = arR * v; const x = arCx + Math.cos(angle) * r, y = arCy + Math.sin(angle) * r;
+      if (i === 0) arCtx.moveTo(x, y); else arCtx.lineTo(x, y);
+    });
+    arCtx.closePath(); arCtx.fill(); arCtx.stroke();
+    document.getElementById('avc-radar-list').innerHTML = `<div class="it-alert it-alert-info">Compliance by category: ${categories.map(c => `${c}: ${catScores[c].total > 0 ? Math.round(catScores[c].pass / catScores[c].total * 100) : 'N/A'}%`).join(' | ')}. Weakest categories need immediate attention. Full coverage in all categories required for type approval.</div>`;
+    document.getElementById('avc-radar-section').style.display = 'block';
+
+    // === Feature 7: Cross-Jurisdiction Diff ===
+    const diffData = [];
+    reqs.forEach(r => {
+      const inCurrent = r.jur.includes(currentJur);
+      const others = allJurs.filter(j => j !== currentJur);
+      const onlyHere = inCurrent && !others.some(j => r.jur.includes(j));
+      const notHere = !inCurrent && others.some(j => r.jur.includes(j));
+      if (onlyHere) diffData.push({ text: r.text, type: 'unique', severity: r.severity });
+      if (notHere) diffData.push({ text: r.text, type: 'missing', severity: r.severity });
+    });
+    document.getElementById('avc-diff-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Requirement</th><th>Status</th><th>Severity</th></tr></thead><tbody>
+        ${diffData.length > 0 ? diffData.map(d => `<tr><td style="font-size:0.8125rem;">${d.text.substring(0, 60)}...</td><td style="color:${d.type === 'unique' ? '#8b5cf6' : '#94a3b8'};font-weight:700;">${d.type === 'unique' ? '🔍 Unique to selected jurisdiction' : '❌ Not required here (required elsewhere)'}</td><td style="color:${d.severity === 'Critical' ? '#dc2626' : d.severity === 'High' ? '#d97706' : '#65a30d'};">${d.severity}</td></tr>`).join('') : '<tr><td colspan="3" style="text-align:center;color:var(--tl-text-muted);">All requirements are common across jurisdictions.</td></tr>'}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">Unique requirements are only needed in the selected jurisdiction. Missing requirements are required in other jurisdictions but not here. Plan for multi-jurisdiction deployment by addressing all unique requirements across target markets.</div>
+    `;
+    document.getElementById('avc-diff-section').style.display = 'block';
+
+    // === Feature 8: Regulatory Updates ===
+    const updates = [
+      { date: '2024-01-15', jur: 'eu-r157', title: 'UN R157 amended: ALKS speed increased to 130 km/h', impact: 'High', desc: 'Lane change capability now mandatory for ALKS at speeds up to 130 km/h.' },
+      { date: '2024-03-01', jur: 'us-federal', title: 'NHTSA final rule: AEB mandatory on all new vehicles by 2029', impact: 'Critical', desc: 'FMVSS 127 requires AEB with pedestrian detection on all light vehicles.' },
+      { date: '2024-05-20', jur: 'uk', title: 'Automated Vehicles Act 2024 received Royal Assent', impact: 'High', desc: 'Legal framework for L4 deployment. Safety case requirements defined.' },
+      { date: '2024-06-10', jur: 'china', title: 'China ICV safety guidelines updated', impact: 'Medium', desc: 'New data localization requirements for AV testing data.' },
+      { date: '2024-09-01', jur: 'eu-r157', title: 'UN R156 OTA update regulation in force', impact: 'High', desc: 'OTA updates require type approval and regulatory notification.' },
+      { date: '2024-11-15', jur: 'us-california', title: 'CA DMV updates permit requirements', impact: 'Medium', desc: 'Enhanced disengagement reporting with causal analysis.' },
+    ];
+    const relevantUpdates = updates.filter(u => u.jur === currentJur || u.jur === 'us-federal');
+    document.getElementById('avc-updates-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Date</th><th>Update</th><th>Impact</th><th>Description</th></tr></thead><tbody>
+        ${relevantUpdates.map(u => `<tr><td style="font-family:var(--tl-mono);font-size:0.8125rem;">${u.date}</td><td style="font-size:0.8125rem;"><strong>${u.title}</strong></td><td style="color:${u.impact === 'Critical' ? '#dc2626' : u.impact === 'High' ? '#d97706' : '#65a30d'};font-weight:700;">${u.impact}</td><td style="font-size:0.8125rem;">${u.desc}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${relevantUpdates.length} recent regulatory updates for ${jurNames[currentJur] || 'selected jurisdiction'}. Review impact on compliance status. Regulations change frequently — subscribe to UNECE, NHTSA, and local authority newsletters for updates.</div>
+    `;
+    document.getElementById('avc-updates-section').style.display = 'block';
+
+    // === Feature 9: Certification Pathway ===
+    const certPaths = {
+      'us-federal': [{ body: 'NHTSA', type: 'Self-certification', steps: ['Comply with FMVSS standards', 'Submit compliance documentation', 'NHTSA may audit post-deployment'], time: '3-6 months', cost: '$200K-$500K' }],
+      'us-california': [{ body: 'CA DMV', type: 'Permit application', steps: ['Submit application with $5M insurance', 'Provide testing plan', 'Safety driver certification', 'Annual disengagement reports'], time: '2-4 months', cost: '$150-$360 permit fee' }],
+      'eu-r157': [{ body: 'UNECE / Type Approval Authority', type: 'Type approval', steps: ['Technical service assessment', 'On-track testing per UN R157', 'Documentation package submission', 'Type approval certificate issued'], time: '6-12 months', cost: '$500K-$1.5M' }],
+      'uk': [{ body: 'DVSA / VCA', type: 'Type approval under AV Act', steps: ['Safety case submission', 'Independent safety assessment', 'Authorization from Secretary of State'], time: '6-12 months', cost: '$400K-$1M' }],
+      'china': [{ body: 'MIIT / ICC', type: 'ICV testing permit', steps: ['Apply through local pilot zone', 'Submit safety plan', 'Data localization compliance', 'Road testing in designated areas'], time: '3-6 months', cost: '$100K-$300K' }],
+      'japan': [{ body: 'MLIT / NPA', type: 'Automated driving permit', steps: ['Safety assessment per guidelines', 'On-road testing', 'Police notification for testing routes'], time: '3-6 months', cost: '$200K-$500K' }],
+    };
+    const paths = certPaths[currentJur] || certPaths['us-federal'];
+    document.getElementById('avc-cert-list').innerHTML = `
+      <table class="it-table"><thead><tr><th>Certification Body</th><th>Type</th><th>Steps</th><th>Timeline</th><th>Cost</th></tr></thead><tbody>
+        ${paths.map(p => `<tr><td><strong>${p.body}</strong></td><td>${p.type}</td><td style="font-size:0.8125rem;">${p.steps.map((s, i) => `<div>${i + 1}. ${s}</div>`).join('')}</td><td>${p.time}</td><td style="font-weight:700;">${p.cost}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="it-alert it-alert-info" style="margin-top:0.5rem;">${critical > 0 ? '⚠️ Fix all critical compliance gaps before applying for certification. Certification body will reject applications with known critical gaps.' : '✓ No critical gaps — ready to begin certification process. Start with documentation preparation, then submit application.'} For multi-jurisdiction deployment, pursue EU type approval first (most stringent), then leverage for other markets.</div>
+    `;
+    document.getElementById('avc-cert-section').style.display = 'block';
+
+    // === Feature 10: Export ===
+    document.getElementById('avc-export').style.display = 'inline-flex';
+    document.getElementById('avc-export').onclick = () => {
+      const report = { timestamp: new Date().toISOString(), jurisdiction: currentJur, level: document.getElementById('avc-level').value, score, pass, fail, critical, failedItems, milestones, gapCosts: { totalLow, totalHigh }, categories: categories.map(c => ({ name: c, ...catScores[c] })), regulatoryUpdates: relevantUpdates, certificationPath: paths };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'av-compliance-report.json'; a.click();
+    };
+  }
+
+  document.getElementById('avc-check').addEventListener('click', check);
+  document.getElementById('avc-reset').addEventListener('click', () => {
+    document.getElementById('avc-results').classList.remove('show');
+    renderChecks();
+  });
+})();
+</script>

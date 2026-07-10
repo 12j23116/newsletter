@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import './glossary-styles.css';
+import GlossaryHero from '../../components/glossary/GlossaryHero.astro';
+import Glossarytopics from '../../components/glossary/GlossaryTopics.astro';
+import GlossaryTerms from '../../components/glossary/GlossaryTerms.astro';
+import GlossaryCTA from '../../components/glossary/GlossaryCTA.astro';
+
+const title = 'Technology Glossary — 216+ Emerging Tech Terms Explained';
+const description = 'Comprehensive glossary of 216+ terms across AI, Robotics, Fusion, Biotech, BCI, AV, Space, Materials, Quantum, Nuclear, Energy Storage, and Cybersecurity.';
+---
+
+<BaseLayout title={title} description={description} keywords="technology glossary, AI glossary, quantum computing terms, biotech definitions, cybersecurity terms, fusion energy glossary, robotics terminology, space technology glossary, emerging tech definitions">
+  <div class="gl-page">
+    <GlossaryHero />
+    <Glossarytopics />
+    <GlossaryTerms />
+    <GlossaryCTA />
+  </div>
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('gl-search') as HTMLInputElement | null;
+    const searchClear = document.getElementById('gl-search-clear');
+    const termCards = document.querySelectorAll<HTMLElement>('.gl-term-card');
+    const noResults = document.getElementById('gl-no-results');
+    const termsCount = document.getElementById('gl-terms-count');
+    const termsTitle = document.getElementById('gl-terms-title');
+    const catCards = document.querySelectorAll<HTMLElement>('.gl-cat-card');
+    const clearFiltersBtn = document.getElementById('gl-clear-filters');
+    const filterClearBtn = document.getElementById('gl-filter-clear');
+    const sortSelect = document.getElementById('gl-sort') as HTMLSelectElement | null;
+    const viewBtns = document.querySelectorAll<HTMLElement>('.gl-view-btn');
+    const termsGrid = document.getElementById('gl-terms-grid');
+
+    // Modal elements
+    const modalOverlay = document.getElementById('gl-modal-overlay');
+    const modalClose = document.getElementById('gl-modal-close');
+    const modalTitle = document.getElementById('gl-modal-title');
+    const modalAbbr = document.getElementById('gl-modal-abbr');
+    const modalDef = document.getElementById('gl-modal-def');
+    const modalCat = document.getElementById('gl-modal-cat');
+    const modalRelated = document.getElementById('gl-modal-related');
+    const modalRelatedSection = document.getElementById('gl-modal-related-section');
+    const modalIcon = document.getElementById('gl-modal-icon') as HTMLElement | null;
+    const modalIconSvg = document.getElementById('gl-modal-icon-svg') as SVGPathElement | null;
+
+    let activetopic = 'all';
+    let searchQuery = '';
+    let sortMode = 'default';
+    let currentView = 'grid';
+
+    function filterTerms() {
+      let visible = 0;
+      termCards.forEach(card => {
+        const cat = card.dataset.cat;
+        const term = card.dataset.term;
+        const abbr = card.dataset.abbr;
+        const def = card.dataset.def;
+
+        const catMatch = activetopic === 'all' || cat === activetopic;
+        const searchMatch = !searchQuery ||
+          term?.includes(searchQuery) ||
+          abbr?.includes(searchQuery) ||
+          def?.includes(searchQuery);
+
+        if (catMatch && searchMatch) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (termsCount) termsCount.textContent = `Showing ${visible} term${visible !== 1 ? 's' : ''}`;
+      if (noResults) noResults.classList.toggle('active', visible === 0);
+    }
+
+    function sortCards() {
+      if (!termsGrid) return;
+      const cards = Array.from(termCards) as HTMLElement[];
+      if (sortMode === 'default') {
+        cards.sort((a, b) => (parseInt(a.dataset.index || '0')) - (parseInt(b.dataset.index || '0')));
+      } else if (sortMode === 'az') {
+        cards.sort((a, b) => (a.dataset.term || '').localeCompare(b.dataset.term || ''));
+      } else if (sortMode === 'za') {
+        cards.sort((a, b) => (b.dataset.term || '').localeCompare(a.dataset.term || ''));
+      } else if (sortMode === 'cat') {
+        cards.sort((a, b) => {
+          const catCmp = (a.dataset.cat || '').localeCompare(b.dataset.cat || '');
+          if (catCmp !== 0) return catCmp;
+          return (a.dataset.term || '').localeCompare(b.dataset.term || '');
+        });
+      }
+      cards.forEach(card => termsGrid.appendChild(card));
+    }
+
+    function setView(view: string) {
+      currentView = view;
+      viewBtns.forEach(btn => {
+        btn.classList.toggle('gl-view-active', btn.dataset.view === view);
+      });
+      if (termsGrid) {
+        termsGrid.classList.toggle('gl-terms-list', view === 'list');
+      }
+    }
+
+    // Search
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        searchQuery = searchInput.value.toLowerCase().trim();
+        searchClear?.classList.toggle('visible', !!searchQuery);
+        filterTerms();
+      });
+    }
+
+    if (searchClear && searchInput) {
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        searchClear.classList.remove('visible');
+        filterTerms();
+      });
+    }
+
+    // Category filter
+    catCards.forEach(card => {
+      card.addEventListener('click', () => {
+        catCards.forEach(c => c.classList.remove('gl-cat-active'));
+        card.classList.add('gl-cat-active');
+        activetopic = card.dataset.cat || 'all';
+
+        const catName = card.querySelector('.gl-cat-card-name')?.textContent;
+        if (termsTitle) termsTitle.textContent = activetopic === 'all' ? 'All Terms' : (catName || 'All Terms');
+
+        filterTerms();
+      });
+    });
+
+    // Sort
+    if (sortSelect) {
+      sortSelect.addEventListener('change', () => {
+        sortMode = sortSelect.value;
+        sortCards();
+      });
+    }
+
+    // View toggle
+    viewBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setView(btn.dataset.view || 'grid');
+      });
+    });
+
+    // Clear all filters
+    function clearAll() {
+      if (searchInput) searchInput.value = '';
+      searchQuery = '';
+      searchClear?.classList.remove('visible');
+      activetopic = 'all';
+      catCards.forEach(c => c.classList.remove('gl-cat-active'));
+      catCards[0]?.classList.add('gl-cat-active');
+      if (termsTitle) termsTitle.textContent = 'All Terms';
+      sortMode = 'default';
+      if (sortSelect) sortSelect.value = 'default';
+      sortCards();
+      filterTerms();
+    }
+
+    clearFiltersBtn?.addEventListener('click', clearAll);
+    filterClearBtn?.addEventListener('click', clearAll);
+
+    // Modal logic
+    function openModal(card: HTMLElement) {
+      const term = card.dataset.fullTerm || '';
+      const abbr = card.dataset.fullAbbr || '';
+      const def = card.dataset.fullDef || '';
+      const cat = card.dataset.fullCat || '';
+      const catColor = card.dataset.fullCatColor || '';
+      const catSvg = card.dataset.fullCatSvg || '';
+      const related = (card.dataset.fullRelated || '').split(',').filter(Boolean);
+
+      if (modalTitle) modalTitle.textContent = term;
+      if (modalAbbr) {
+        modalAbbr.textContent = abbr;
+        modalAbbr.style.display = abbr ? '' : 'none';
+      }
+      if (modalDef) modalDef.textContent = def;
+      if (modalCat) {
+        modalCat.textContent = cat;
+        modalCat.style.color = catColor;
+        modalCat.style.borderColor = catColor;
+      }
+      if (modalIcon) {
+        modalIcon.style.color = catColor;
+        modalIcon.style.background = `${catColor}15`;
+      }
+      if (modalIconSvg) {
+        modalIconSvg.setAttribute('d', catSvg);
+      }
+
+      if (modalRelated && modalRelatedSection) {
+        if (related.length > 0) {
+          modalRelated.innerHTML = related.map(r =>
+            `<span class="gl-modal-rel-pill" data-search="${r.toLowerCase()}">${r}</span>`
+          ).join('');
+          modalRelatedSection.style.display = '';
+          modalRelated.querySelectorAll('.gl-modal-rel-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+              const searchTerm = pill.dataset.search || '';
+              if (searchInput) {
+                searchInput.value = searchTerm;
+                searchQuery = searchTerm;
+                searchClear?.classList.add('visible');
+              }
+              activetopic = 'all';
+              catCards.forEach(c => c.classList.remove('gl-cat-active'));
+              catCards[0]?.classList.add('gl-cat-active');
+              if (termsTitle) termsTitle.textContent = 'All Terms';
+              filterTerms();
+              closeModal();
+              document.getElementById('gl-terms')?.scrollIntoView({ behavior: 'smooth' });
+            });
+          });
+        } else {
+          modalRelatedSection.style.display = 'none';
+        }
+      }
+
+      modalOverlay?.classList.add('gl-modal-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalOverlay?.classList.remove('gl-modal-open');
+      document.body.style.overflow = '';
+    }
+
+    termCards.forEach(card => {
+      card.addEventListener('click', () => openModal(card));
+    });
+
+    modalClose?.addEventListener('click', closeModal);
+    modalOverlay?.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput?.focus();
+      }
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('gl-revealed');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.gl-reveal').forEach(el => observer.observe(el));
+  });
+</script>

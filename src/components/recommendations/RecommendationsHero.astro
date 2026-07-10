@@ -1,0 +1,53 @@
+---
+/**
+ * RecommendationsHero — Hero section for the Recommendations page
+ * Independent component. Edits here do NOT affect other pages.
+ */
+const stats = [
+  { value: '120+', label: 'Tools Tested' },
+  { value: '45', label: 'Detailed Reviews' },
+  { value: '12', label: 'topics Covered' },
+  { value: '100%', label: 'Independent' },
+];
+---
+
+<section class="rec-hero">
+  <div class="rec-hero-bg"></div>
+  <div class="rec-hero-grid-overlay"></div>
+  <div class="rec-hero-orb rec-hero-orb-1"></div>
+  <div class="rec-hero-orb rec-hero-orb-2"></div>
+
+  <div class="rec-hero-inner">
+    <div class="rec-hero-content">
+      <span class="rec-hero-eyebrow">
+        <span class="rec-hero-dot"></span>
+        Curated Recommendations
+      </span>
+      <h1 class="rec-hero-title">
+        The Best Tools and Resources
+        <span class="rec-hero-grad">for Emerging Technology</span>
+      </h1>
+      <p class="rec-hero-sub">
+        We test, compare, and recommend the best tools, platforms, books, courses, and resources
+        across all 12 technology frontiers. No sponsorships. No affiliate spam. Just honest
+        recommendations from people who actually use these tools.
+      </p>
+      <div class="rec-hero-actions">
+        <a href="#tools" class="rec-btn rec-btn-primary">
+          Browse Tools
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#learning" class="rec-btn rec-btn-secondary">Learning Resources</a>
+      </div>
+    </div>
+
+    <div class="rec-hero-stats">
+      {stats.map((stat) => (
+        <div class="rec-hero-stat-card">
+          <span class="rec-hero-stat-value">{stat.value}</span>
+          <span class="rec-hero-stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

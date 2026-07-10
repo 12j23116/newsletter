@@ -1,0 +1,317 @@
+/* ============================================
+   CYBERSECURITY topic STYLES — Premium Redesign
+   Unique layout: shield-themed hero, lock patterns,
+   security-styled cards, firewall grid.
+   ============================================ */
+
+/* ── Cybersecurity Page Tokens ─────────────────────────── */
+.cy-page {
+  --cy-pink: #ec4899;
+  --cy-rose: #f43f5e;
+  --cy-red: #dc2626;
+  --cy-orange: #f97316;
+  --cy-grad: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+  --cy-grad-soft: linear-gradient(135deg, rgba(236,72,153,0.12) 0%, rgba(244,63,94,0.12) 100%);
+  --cy-bg: #0a0a0f;
+  --cy-bg-alt: #0d0d18;
+  --cy-surface: #11111e;
+  --cy-surface-2: #161628;
+  --cy-surface-hover: #1a1a30;
+  --cy-border: rgba(255,255,255,0.08);
+  --cy-border-strong: rgba(255,255,255,0.14);
+  --cy-text: #e2e8f0;
+  --cy-text-muted: #94a3b8;
+  --cy-text-dim: #64748b;
+  --cy-radius: 12px;
+  --cy-radius-lg: 20px;
+  --cy-radius-xl: 28px;
+  --cy-transition: 250ms ease;
+  --cy-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* ── Section Base ────────────────────────────────────────── */
+.cy-section { padding: 5rem 0; position: relative; overflow: hidden; }
+.cy-section-alt { background: var(--cy-bg-alt); }
+.cy-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; position: relative; z-index: 1; }
+.cy-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--cy-pink); margin-bottom: 0.75rem; }
+.cy-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--cy-pink); }
+.cy-section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+.cy-section-sub { font-size: 1.0625rem; color: var(--cy-text-muted); max-width: 640px; line-height: 1.7; margin-bottom: 2.5rem; }
+.cy-grad-text { background: var(--cy-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── Scroll Reveal ───────────────────────────────────────── */
+.cy-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.cy-reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ── Grid Overlay ────────────────────────────────────────── */
+.cy-grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); z-index: 0; pointer-events: none; }
+
+/* ── Orb ─────────────────────────────────────────────────── */
+.cy-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; z-index: 0; animation: cy-orb-float 20s ease-in-out infinite; pointer-events: none; }
+@keyframes cy-orb-float { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(30px,-30px) scale(1.1);} 66%{transform:translate(-20px,20px) scale(.95);} }
+
+/* ── Shield Pattern (Cybersecurity unique element) ───────── */
+.cy-shield-pattern { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L 50 15 L 50 35 Q 50 50, 30 55 Q 10 50, 10 35 L 10 15 Z' fill='none' stroke='rgba(236,72,153,0.06)' stroke-width='1.5'/%3E%3Cpath d='M30 15 L 40 20 L 40 30 Q 40 38, 30 42 Q 20 38, 20 30 L 20 20 Z' fill='none' stroke='rgba(244,63,94,0.06)' stroke-width='1'/%3E%3C/svg%3E"); background-size: 60px 60px; z-index: 0; pointer-events: none; }
+
+/* ════════════════════════════════════════════════════════════
+   1. HERO — Shield themed (unique)
+   ════════════════════════════════════════════════════════════ */
+.cy-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 80px; }
+.cy-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.cy-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.15; }
+.cy-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 0%, var(--cy-bg) 80%); }
+.cy-shield-pattern { position: absolute; inset: 0; opacity: 0.6; }
+.cy-hero-orb-1 { width: 400px; height: 400px; background: var(--cy-pink); top: 10%; right: -100px; }
+.cy-hero-orb-2 { width: 350px; height: 350px; background: var(--cy-rose); bottom: 20%; left: -80px; animation-delay: -5s; }
+.cy-hero-orb-3 { width: 300px; height: 300px; background: var(--cy-red); top: 50%; right: 30%; animation-delay: -10s; }
+
+.cy-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.cy-hero-left { max-width: 540px; }
+.cy-hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--cy-border); font-size: 0.8125rem; color: var(--cy-text-muted); margin-bottom: 1.5rem; }
+.cy-hero-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cy-pink); box-shadow: 0 0 8px var(--cy-pink); animation: cy-dot-blink 1.5s ease-in-out infinite; }
+@keyframes cy-dot-blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.cy-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #fff; margin-bottom: 1.25rem; }
+.cy-hero-tagline { font-size: 1.125rem; color: var(--cy-pink); font-weight: 600; margin-bottom: 0.75rem; }
+.cy-hero-desc { font-size: 1rem; color: var(--cy-text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 2rem; }
+.cy-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.cy-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; font-size: 0.9375rem; transition: all var(--cy-transition); white-space: nowrap; cursor: pointer; }
+.cy-btn-primary { background: var(--cy-grad); color: #fff; box-shadow: 0 4px 20px rgba(236,72,153,0.3); }
+.cy-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(236,72,153,0.45); }
+.cy-btn-secondary { background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: var(--cy-text); border: 1px solid var(--cy-border); }
+.cy-btn-secondary:hover { background: var(--cy-surface-hover); border-color: var(--cy-border-strong); transform: translateY(-2px); }
+
+/* Hero stats — 2x2 grid with shield-style borders */
+.cy-hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+.cy-hero-stat { padding: 1rem; border-radius: var(--cy-radius); background: rgba(17,17,30,0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--cy-border); border-radius: 4px 20px 4px 20px; transition: transform var(--cy-transition), border-color var(--cy-transition); }
+.cy-hero-stat:hover { transform: translateY(-4px); border-color: var(--cy-border-strong); }
+.cy-hero-stat-value { font-size: 1.5rem; font-weight: 800; background: var(--cy-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: block; margin-bottom: 0.125rem; }
+.cy-hero-stat-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cy-text-dim); }
+
+/* Hero right — Shield visualization */
+.cy-hero-right { position: relative; height: 400px; display: flex; align-items: center; justify-content: center; }
+.cy-hero-img-wrap { border-radius: var(--cy-radius-xl); overflow: hidden; border: 1px solid var(--cy-border); box-shadow: var(--cy-shadow); position: relative; }
+.cy-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.cy-hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(0,0,0,0.3)); border-radius: var(--cy-radius-xl); pointer-events: none; }
+
+/* ════════════════════════════════════════════════════════════
+   2. MARQUEE
+   ════════════════════════════════════════════════════════════ */
+.cy-marquee { overflow: hidden; padding: 0.75rem 0; border-block: 1px solid var(--cy-border); background: var(--cy-bg-alt); }
+.cy-marquee-track { display: flex; gap: 0; animation: cy-marquee 30s linear infinite; width: max-content; }
+@keyframes cy-marquee { to { transform: translateX(-33.333%); } }
+.cy-marquee-group { display: flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem; }
+.cy-marquee-group span { font-size: 0.875rem; color: var(--cy-text-dim); white-space: nowrap; font-weight: 500; }
+.cy-marquee-sep { color: var(--cy-pink) !important; }
+
+/* ════════════════════════════════════════════════════════════
+   3. SECTION CARDS — Security-styled cards
+   ════════════════════════════════════════════════════════════ */
+.cy-section-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.cy-section-card { border-radius: var(--cy-radius-lg); background: var(--cy-surface); border: 1px solid var(--cy-border); overflow: hidden; transition: transform var(--cy-transition), border-color var(--cy-transition); }
+.cy-section-card:hover { transform: translateY(-6px); border-color: var(--cy-pink); box-shadow: var(--cy-shadow), 0 0 30px rgba(236,72,153,0.15); }
+.cy-section-img-wrap { position: relative; height: 160px; overflow: hidden; }
+.cy-section-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.cy-section-card:hover .cy-section-img { transform: scale(1.05); }
+.cy-section-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(0,0,0,0.4)); }
+.cy-section-header { padding: 1.25rem; background: var(--cy-surface-2); border-bottom: 1px solid var(--cy-border); }
+.cy-section-eyebrow { font-size: 0.6875rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cy-pink); margin-bottom: 0.5rem; }
+.cy-section-title { font-size: 1.125rem; font-weight: 700; color: #fff; }
+.cy-section-body { padding: 1.25rem; }
+.cy-section-desc { font-size: 0.8125rem; color: var(--cy-text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.cy-section-points { display: flex; flex-direction: column; gap: 0.5rem; }
+.cy-section-point { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--cy-text-muted); }
+.cy-section-point::before { content: '🛡️'; font-size: 0.625rem; }
+
+/* ════════════════════════════════════════════════════════════
+   4. THREATS — Threat severity cards
+   ════════════════════════════════════════════════════════════ */
+.cy-threats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.cy-threat-card { padding: 0; border-radius: var(--cy-radius-lg); background: var(--cy-surface); border: 1px solid var(--cy-border); overflow: hidden; transition: transform var(--cy-transition), border-color var(--cy-transition); }
+.cy-threat-card:hover { transform: translateY(-6px); border-color: var(--cy-pink); }
+.cy-threat-img-wrap { position: relative; height: 140px; overflow: hidden; }
+.cy-threat-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.cy-threat-card:hover .cy-threat-img { transform: scale(1.05); }
+.cy-threat-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(0,0,0,0.4)); }
+.cy-threat-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; padding: 1.25rem 1.25rem 0; }
+.cy-threat-severity { font-size: 0.75rem; color: var(--cy-rose); margin-bottom: 0.5rem; padding: 0 1.25rem; }
+.cy-threat-desc { font-size: 0.8125rem; color: var(--cy-text-muted); line-height: 1.6; margin-bottom: 0.75rem; padding: 0 1.25rem; }
+.cy-threat-trend { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.625rem; border-radius: 999px; background: rgba(236,72,153,0.12); color: var(--cy-pink); display: inline-block; }
+
+/* ════════════════════════════════════════════════════════════
+   5. ZERO TRUST — Pillars visualization
+   ════════════════════════════════════════════════════════════ */
+.cy-pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.cy-pillar-card { padding: 0; border-radius: var(--cy-radius-lg); background: var(--cy-surface); border: 1px solid var(--cy-border); overflow: hidden; transition: transform var(--cy-transition), border-color var(--cy-transition); }
+.cy-pillar-card:hover { transform: translateY(-6px); border-color: var(--cy-pink); }
+.cy-pillar-img-wrap { position: relative; height: 140px; overflow: hidden; }
+.cy-pillar-img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.cy-pillar-card:hover .cy-pillar-img { transform: scale(1.05); }
+.cy-pillar-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(0,0,0,0.4)); }
+.cy-pillar-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; padding: 1.25rem 1.25rem 0; }
+.cy-pillar-desc { font-size: 0.8125rem; color: var(--cy-text-muted); line-height: 1.6; margin-bottom: 0.75rem; padding: 0 1.25rem; }
+.cy-pillar-tools { font-size: 0.75rem; color: var(--cy-pink); padding: 0 1.25rem 1.25rem; }
+
+/* ════════════════════════════════════════════════════════════
+   6. AI CYBER — Split attack/defense cards
+   ════════════════════════════════════════════════════════════ */
+.cy-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cy-ai-card { padding: 0; border-radius: var(--cy-radius-lg); background: var(--cy-surface); border: 1px solid var(--cy-border); overflow: hidden; transition: border-color var(--cy-transition); }
+.cy-ai-card:hover { border-color: var(--cy-border-strong); }
+.cy-ai-img-wrap { position: relative; height: 160px; overflow: hidden; }
+.cy-ai-img { width: 100%; height: 100%; object-fit: cover; }
+.cy-ai-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(0,0,0,0.4)); }
+.cy-ai-title { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; padding: 1.5rem 1.5rem 0; }
+.cy-ai-items { display: flex; flex-direction: column; gap: 0.75rem; padding: 0 1.5rem 1.5rem; }
+.cy-ai-item { display: flex; align-items: start; gap: 0.5rem; font-size: 0.8125rem; color: var(--cy-text-muted); }
+.cy-ai-item::before { content: '→'; color: var(--cy-pink); flex-shrink: 0; }
+
+/* ════════════════════════════════════════════════════════════
+   7. FUTURE — Security timeline
+   ════════════════════════════════════════════════════════════ */
+.cy-future-timeline { position: relative; display: flex; flex-direction: column; gap: 1rem; }
+.cy-future-timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--cy-grad); opacity: 0.3; }
+.cy-future-item { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; align-items: start; }
+.cy-future-year-marker { width: 40px; height: 40px; border-radius: 50%; background: var(--cy-grad); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; color: #fff; flex-shrink: 0; position: relative; z-index: 1; }
+.cy-future-content { padding: 1rem; border-radius: var(--cy-radius); background: var(--cy-surface); border: 1px solid var(--cy-border); transition: border-color var(--cy-transition); }
+.cy-future-content:hover { border-color: var(--cy-border-strong); }
+.cy-future-year { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; font-weight: 700; color: var(--cy-pink); margin-bottom: 0.25rem; }
+.cy-future-prediction { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.375rem; }
+.cy-future-detail { font-size: 0.8125rem; color: var(--cy-text-muted); line-height: 1.6; }
+
+/* ════════════════════════════════════════════════════════════
+   8. FAQ
+   ════════════════════════════════════════════════════════════ */
+.cy-faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.cy-faq-item { border-radius: var(--cy-radius); background: var(--cy-surface); border: 1px solid var(--cy-border); overflow: hidden; transition: border-color var(--cy-transition); }
+.cy-faq-item:hover { border-color: var(--cy-border-strong); }
+.cy-faq-item summary { padding: 1rem 1.25rem; font-size: 0.9375rem; font-weight: 600; color: #fff; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: background var(--cy-transition); }
+.cy-faq-item summary::-webkit-details-marker { display: none; }
+.cy-faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--cy-pink); flex-shrink: 0; transition: transform var(--cy-transition); }
+.cy-faq-item[open] summary::after { transform: rotate(45deg); }
+.cy-faq-item summary:hover { background: rgba(236,72,153,0.04); }
+.cy-faq-answer { padding: 0 1.25rem 1.25rem; font-size: 0.875rem; color: var(--cy-text-muted); line-height: 1.7; }
+
+/* ════════════════════════════════════════════════════════════
+   9. CTA
+   ════════════════════════════════════════════════════════════ */
+.cy-cta { position: relative; text-align: center; padding: 5rem 0; overflow: hidden; }
+.cy-cta-bg { position: absolute; inset: 0; z-index: 0; }
+.cy-cta-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.12; }
+.cy-cta-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(244,63,94,0.15)); }
+.cy-cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
+.cy-cta h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+.cy-cta p { font-size: 0.9375rem; color: var(--cy-text-muted); margin-bottom: 1.5rem; }
+.cy-cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; border-radius: 999px; background: var(--cy-grad); color: #fff; font-weight: 600; font-size: 0.9375rem; transition: transform var(--cy-transition), box-shadow var(--cy-transition); box-shadow: 0 4px 20px rgba(236,72,153,0.3); }
+.cy-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(236,72,153,0.45); }
+.cy-cta-pills { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
+.cy-cta-pill { display: flex; align-items: center; gap: 0.375rem; padding: 0.5rem 1rem; border-radius: 999px; background: rgba(17,17,30,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--cy-border); font-size: 0.8125rem; color: var(--cy-text-muted); }
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .cy-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .cy-hero-right { height: 320px; }
+  .cy-section-grid { grid-template-columns: 1fr; }
+  .cy-threats-grid { grid-template-columns: 1fr; }
+  .cy-pillars-grid { grid-template-columns: 1fr; }
+  .cy-ai-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .cy-section { padding: 3.5rem 0; }
+}
+
+@media (max-width: 480px) {
+  .cy-section { padding: 2.75rem 0; }
+  .cy-container { padding: 0 1rem; }
+  .cy-hero { min-height: auto; padding: 5rem 0 2.5rem; }
+  .cy-hero h1 { font-size: 1.75rem; }
+  .cy-hero-tagline { font-size: 0.9375rem; }
+  .cy-hero-desc { font-size: 0.875rem; }
+  .cy-hero-ctas { flex-direction: column; width: 100%; }
+  .cy-hero-ctas .cy-btn { width: 100%; }
+  .cy-hero-stats { grid-template-columns: 1fr 1fr; }
+  .cy-hero-stat { padding: 0.875rem 0.625rem; }
+  .cy-hero-stat-value { font-size: 1.25rem; }
+  .cy-hero-stat-label { font-size: 0.625rem; }
+  .cy-section-title { font-size: 1.5rem; }
+  .cy-section-sub { font-size: 0.875rem; margin-bottom: 1.5rem; }
+  .cy-cta { padding: 3rem 0; }
+  .cy-cta h3 { font-size: 1.375rem; }
+  .cy-cta p { font-size: 0.8125rem; }
+}
+
+@media (max-width: 358px) {
+  .cy-section { padding: 2.25rem 0; }
+  .cy-container { padding: 0 0.75rem; }
+  .cy-hero { padding: 4rem 0 2rem; }
+  .cy-hero h1 { font-size: 1.5rem; line-height: 1.15; }
+  .cy-hero-pill { font-size: 0.625rem; padding: 0.25rem 0.75rem; }
+  .cy-hero-tagline { font-size: 0.8125rem; }
+  .cy-hero-desc { font-size: 0.8125rem; line-height: 1.6; }
+  .cy-hero-ctas { gap: 0.5rem; }
+  .cy-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .cy-hero-stats { gap: 0.5rem; }
+  .cy-hero-stat { padding: 0.625rem 0.5rem; }
+  .cy-hero-stat-value { font-size: 1rem; }
+  .cy-hero-stat-label { font-size: 0.5625rem; }
+  .cy-eyebrow { font-size: 0.5625rem; }
+  .cy-eyebrow::before { width: 16px; }
+  .cy-section-title { font-size: 1.25rem; }
+  .cy-section-sub { font-size: 0.8125rem; margin-bottom: 1.25rem; }
+  .cy-section-header { padding: 1rem; }
+  .cy-section-body { padding: 1rem; }
+  .cy-section-title { font-size: 1rem; }
+  .cy-section-desc { font-size: 0.75rem; }
+  .cy-section-point { font-size: 0.6875rem; }
+  .cy-threat-card { padding: 0; }
+  .cy-threat-name { font-size: 0.875rem; padding: 1rem 1rem 0; }
+  .cy-threat-desc { font-size: 0.75rem; padding: 0 1rem; }
+  .cy-threat-img-wrap { height: 110px; }
+  .cy-pillar-card { padding: 0; }
+  .cy-pillar-name { font-size: 0.875rem; padding: 1rem 1rem 0; }
+  .cy-pillar-desc { font-size: 0.75rem; padding: 0 1rem; }
+  .cy-pillar-tools { font-size: 0.625rem; padding: 0 1rem 1rem; }
+  .cy-pillar-img-wrap { height: 110px; }
+  .cy-section-img-wrap { height: 120px; }
+  .cy-ai-card { padding: 0; }
+  .cy-ai-title { font-size: 1rem; padding: 1rem 1rem 0; }
+  .cy-ai-item { font-size: 0.6875rem; }
+  .cy-ai-items { padding: 0 1rem 1rem; }
+  .cy-ai-img-wrap { height: 120px; }
+  .cy-future-item { grid-template-columns: 32px 1fr; }
+  .cy-future-year-marker { width: 32px; height: 32px; font-size: 0.625rem; }
+  .cy-future-content { padding: 0.75rem; }
+  .cy-future-year { font-size: 0.75rem; }
+  .cy-future-prediction { font-size: 0.875rem; }
+  .cy-future-detail { font-size: 0.6875rem; }
+  .cy-faq-item summary { padding: 0.75rem 1rem; font-size: 0.8125rem; }
+  .cy-faq-answer { padding: 0 1rem 1rem; font-size: 0.75rem; }
+  .cy-cta { padding: 2.5rem 0; }
+  .cy-cta h3 { font-size: 1.125rem; }
+  .cy-cta p { font-size: 0.75rem; }
+  .cy-cta-btn { padding: 0.625rem 1.25rem; font-size: 0.8125rem; }
+  .cy-cta-pills { gap: 0.375rem; }
+  .cy-cta-pill { font-size: 0.6875rem; padding: 0.375rem 0.625rem; }
+  .cy-marquee-group span { font-size: 0.6875rem; }
+}
+
+/* ── Trending Searches Table ─────────────────────────────── */
+.cy-trending-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.cy-trending-table th { text-align: left; padding: 0.875rem 1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cy-text-dim); border-bottom: 1px solid var(--cy-border-strong); font-family: 'JetBrains Mono', monospace; }
+.cy-trending-table td { padding: 0.875rem 1rem; border-bottom: 1px solid var(--cy-border); color: var(--cy-text); font-size: 0.875rem; }
+.cy-trending-table tr:hover td { background: var(--cy-surface); }
+.cy-trending-term { font-weight: 600; color: #fff; }
+.cy-trending-growth { color: var(--cy-pink); font-weight: 600; }
+.cy-trending-type { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 99px; font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.cy-trending-type.hot { background: rgba(239,68,68,0.15); color: #ef4444; }
+.cy-trending-type.rising { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.cy-trending-type.breakout { background: rgba(16,185,129,0.15); color: #10b981; }
+.cy-trending-type.steady { background: rgba(59,130,246,0.15); color: #3b82f6; }
+.cy-trending-type.stable { background: rgba(100,116,139,0.15); color: #94a3b8; }
+
+@media (max-width: 768px) {
+  .cy-trending-table { font-size: 0.75rem; }
+  .cy-trending-table th, .cy-trending-table td { padding: 0.5rem 0.625rem; }
+}

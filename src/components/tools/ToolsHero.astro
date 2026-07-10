@@ -1,0 +1,46 @@
+---
+import { toolStats } from '../../data/tools/tools-content';
+---
+
+<section class="tl-hero">
+  <div class="tl-hero-bg">
+    <div class="tl-hero-grid"></div>
+    <div class="tl-hero-beam tl-hero-beam-1"></div>
+    <div class="tl-hero-beam tl-hero-beam-2"></div>
+    <div class="tl-hero-orb tl-hero-orb-1"></div>
+    <div class="tl-hero-orb tl-hero-orb-2"></div>
+  </div>
+  <div class="tl-hero-inner">
+    <span class="tl-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+      Digital Tools Catalog · 183 Frameworks, Platforms & SDKs
+    </span>
+    <h1 class="tl-hero-title">
+      The best digital tools for<br />
+      <span class="tl-grad">emerging technology.</span>
+    </h1>
+    <p class="tl-hero-sub">
+      From PyTorch to Qiskit, CrowdStrike to CARLA — discover the frameworks, platforms, simulators, and SDKs
+      powering innovation across 12 technology frontiers. All tools link to their official sources.
+    </p>
+    <div class="tl-hero-stats">
+      {toolStats.map((stat) => (
+        <div class="tl-hero-stat">
+          <strong>{stat.value}{stat.suffix}</strong>
+          <span>{stat.label}</span>
+        </div>
+      ))}
+    </div>
+    <div class="tl-hero-actions">
+      <a href="/tools/request" class="tl-btn tl-btn-primary">
+        Request a Tool
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="#tl-all" class="tl-btn tl-btn-outline">Browse All Tools</a>
+    </div>
+  </div>
+</section>
