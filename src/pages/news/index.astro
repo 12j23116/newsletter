@@ -289,6 +289,9 @@ const newsLd = {
         </div>
       </div>
 
+      <!-- Pagination -->
+      <div class="news-pagination" id="news-pagination"></div>
+
       <!-- CTA -->
       <div class="news-cta">
         <h2>Stay Ahead of the Frontier</h2>
@@ -308,7 +311,7 @@ const newsLd = {
   const tabs = document.querySelectorAll<HTMLElement>('.news-tab');
   const tabContents = document.querySelectorAll<HTMLElement>('.news-tab-content');
 
-  function activateTab(topicId: string) {
+  let activateTab = function(topicId: string) {
     tabs.forEach((t) => {
       const isActive = t.dataset.topic === topicId;
       t.classList.toggle('active', isActive);
@@ -352,7 +355,7 @@ const newsLd = {
   const searchClear = document.getElementById('news-search-clear') as HTMLButtonElement | null;
   const searchCount = document.getElementById('news-search-count') as HTMLElement | null;
 
-  function filterNews(query: string) {
+  let filterNews = function(query: string) {
     let totalVisible = 0;
     let totalCards = 0;
 
@@ -450,6 +453,121 @@ const newsLd = {
       requestAnimationFrame(animateTicker);
     }
   }
+
+  // ─── Pagination (60 per page) ─────────────────────────────────────────────
+  const ITEMS_PER_PAGE = 60;
+  const paginationEl = document.getElementById('news-pagination');
+  let currentPage = 1;
+
+  function getActivePanel(): HTMLElement | null {
+    return document.querySelector<HTMLElement>('.news-tab-content.active');
+  }
+
+  function getAllCardsInPanel(panel: HTMLElement): HTMLElement[] {
+    return Array.from(panel.querySelectorAll<HTMLElement>('.news-card'));
+  }
+
+  function applyPagination() {
+    const panel = getActivePanel();
+    if (!panel || !paginationEl) return;
+
+    const searchVal = searchInput?.value.trim().toLowerCase() || '';
+    const allCards = getAllCardsInPanel(panel);
+
+    // Only count visible (non-search-filtered) cards
+    const visibleCards = searchVal
+      ? allCards.filter((c) => c.style.display !== 'none')
+      : allCards;
+
+    const totalPages = Math.ceil(visibleCards.length / ITEMS_PER_PAGE);
+
+    // Reset page if out of range
+    if (currentPage > totalPages) currentPage = 1;
+    if (currentPage < 1) currentPage = 1;
+
+    // Hide cards beyond current page
+    visibleCards.forEach((card, idx) => {
+      const inPage = idx >= (currentPage - 1) * ITEMS_PER_PAGE && idx < currentPage * ITEMS_PER_PAGE;
+      card.style.display = inPage ? '' : 'none';
+    });
+
+    // Re-evaluate date group visibility
+    const dateGroups = panel.querySelectorAll<HTMLElement>('.news-date-group');
+    dateGroups.forEach((group) => {
+      const groupCards = Array.from(group.querySelectorAll<HTMLElement>('.news-card'));
+      const hasVisible = groupCards.some((c) => c.style.display !== 'none');
+      group.style.display = hasVisible ? '' : 'none';
+    });
+
+    // Render pagination buttons
+    if (totalPages <= 1) {
+      paginationEl.style.display = 'none';
+      paginationEl.innerHTML = '';
+      return;
+    }
+
+    paginationEl.style.display = 'flex';
+    let html = '';
+
+    // Prev button
+    html += `<button class="news-page-btn" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
+
+    // Page numbers with ellipsis
+    const maxVisible = 7;
+    let start = Math.max(1, currentPage - 3);
+    let end = Math.min(totalPages, start + maxVisible - 1);
+    if (end - start < maxVisible - 1) start = Math.max(1, end - maxVisible + 1);
+
+    if (start > 1) {
+      html += `<button class="news-page-num" data-page="1">1</button>`;
+      if (start > 2) html += `<span class="news-page-dots">…</span>`;
+    }
+
+    for (let p = start; p <= end; p++) {
+      html += `<button class="news-page-num${p === currentPage ? ' active' : ''}" data-page="${p}">${p}</button>`;
+    }
+
+    if (end < totalPages) {
+      if (end < totalPages - 1) html += `<span class="news-page-dots">…</span>`;
+      html += `<button class="news-page-num" data-page="${totalPages}">${totalPages}</button>`;
+    }
+
+    // Next button
+    html += `<button class="news-page-btn" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
+
+    paginationEl.innerHTML = html;
+
+    // Attach click handlers
+    paginationEl.querySelectorAll<HTMLElement>('[data-page]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const p = parseInt(btn.dataset.page || '1', 10);
+        if (p >= 1 && p <= totalPages) {
+          currentPage = p;
+          applyPagination();
+          paginationEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  }
+
+  // Reset to page 1 on tab switch
+  const origActivateTab = activateTab;
+  activateTab = function(topicId: string) {
+    origActivateTab(topicId);
+    currentPage = 1;
+    setTimeout(() => applyPagination(), 50);
+  };
+
+  // Re-run pagination after search filter
+  const origFilterNews = filterNews;
+  filterNews = function(query: string) {
+    origFilterNews(query);
+    currentPage = 1;
+    setTimeout(() => applyPagination(), 50);
+  };
+
+  // Initial pagination
+  applyPagination();
 
   // Reveal animation
   const revealObserver = new IntersectionObserver(

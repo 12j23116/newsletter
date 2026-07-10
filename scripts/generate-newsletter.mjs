@@ -210,44 +210,84 @@ function buildNewsletterSubject(articles) {
 function buildNewsletterHTML(articles, issueNum) {
   const dateStr = formatDate(new Date());
   const subject = buildNewsletterSubject(articles);
-
-  const storiesHTML = articles.map(article => {
-    const meta = TOPIC_META[article.topicId] || { icon: '📰', label: article.topicId, color: '#64748b' };
-    const title = article.title || 'Untitled';
-    const excerpt = article.excerpt || article.description || '';
-    const link = article.url || `${SITE_URL}/news/${article.slug || ''}`;
-    const readTime = article.readTime || '3 min';
-
-    return `
-    <tr>
-      <td style="padding: 20px 0; border-bottom: 1px solid #1e293b;">
-        <table width="100%" cellpadding="0" cellspacing="0">
-          <tr>
-            <td style="width: 40px; vertical-align: top; padding-right: 12px;">
-              <div style="font-size: 24px;">${meta.icon}</div>
-            </td>
-            <td>
-              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: ${meta.color}; margin-bottom: 4px;">
-                ${meta.label} · ${readTime}
-              </div>
-              <a href="${link}" style="font-size: 16px; font-weight: 700; color: #f1f5f9; text-decoration: none; line-height: 1.4;">
-                ${title}
-              </a>
-              <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 6px 0 0;">
-                ${excerpt.substring(0, 180)}${excerpt.length > 180 ? '...' : ''}
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>`;
-  }).join('');
-
+  const issuePadded = String(issueNum).padStart(3, '0');
+  const totalReadTime = articles.length * 3;
   const topicsCovered = [...new Set(articles.map(a => a.topicId))];
+
+  const topTopicLabels = topicsCovered.slice(0, 3).map(t => TOPIC_META[t]?.label || t);
+  const preheaderText = `${articles.length} breakthroughs across ${topicsCovered.length} frontiers — ${topTopicLabels.join(', ')} & more. Your weekly dose of emerging tech.`;
+
+  const editorNote = articles.length > 0
+    ? `This week's headlines span ${topicsCovered.length} frontiers, from ${TOPIC_META[topicsCovered[0]]?.label || 'tech'} breakthroughs to ${TOPIC_META[topicsCovered[topicsCovered.length - 1]]?.label || 'innovation'} updates. ${articles.length === 12 ? 'A full deck today' : `${articles.length} stories to catch you up`} — here's what mattered.`
+    : 'A lighter week for emerging tech, but we\'ve got you covered with what did happen.';
+
+  const featured = articles[0];
+  const fMeta = TOPIC_META[featured?.topicId] || { icon: '📰', label: 'Tech', color: '#64748b' };
+  const fTitle = featured?.title || 'Untitled';
+  const fExcerpt = (featured?.excerpt || featured?.description || '').substring(0, 220);
+  const fLink = featured?.url || `${SITE_URL}/news/${featured?.slug || ''}`;
+
+  const featuredHTML = `
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;"><tr><td style="background: linear-gradient(135deg, ${fMeta.color}15, ${fMeta.color}05); border: 1px solid ${fMeta.color}30; border-radius: 14px; padding: 20px 24px;">
+      <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: ${fMeta.color}; margin-bottom: 8px;">⭐ FEATURED STORY · ${fMeta.icon} ${fMeta.label}</div>
+      <a href="${fLink}" style="font-size: 17px; font-weight: 800; color: #f8fafc; text-decoration: none; line-height: 1.3;">${fTitle}</a>
+      <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 10px 0 14px;">${fExcerpt}${(featured?.excerpt || '').length > 220 ? '...' : ''}</p>
+      <a href="${fLink}" style="display: inline-block; font-size: 13px; font-weight: 700; color: #fff; background: ${fMeta.color}; border-radius: 999px; padding: 8px 20px; text-decoration: none;">Read Full Story →</a>
+    </td></tr></table>`;
+
+  const remaining = articles.slice(1);
+  const topicGroups = {};
+  for (const article of remaining) {
+    const tid = article.topicId || 'general';
+    if (!topicGroups[tid]) topicGroups[tid] = [];
+    topicGroups[tid].push(article);
+  }
+
+  const TAGS = ['🔥 Trending', '💡 Insight', '🧪 Breakthrough', '💰 Funding', '📦 Product', '📊 Research', '⚠️ Alert', '🚀 Launch', '🔬 Study', '⚖️ Policy', '👥 Community', '🚨 Breach'];
+
+  let storiesHTML = '';
+  let tagIdx = 0;
+  for (const [topicId, items] of Object.entries(topicGroups)) {
+    const meta = TOPIC_META[topicId] || { icon: '📰', label: topicId, color: '#64748b' };
+    const sectionReadTime = items.length * 3;
+    storiesHTML += `<div style="font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: ${meta.color}; margin: 20px 0 12px; padding-bottom: 8px; border-bottom: 1px solid ${meta.color}20;">${meta.icon} ${meta.label} · ${sectionReadTime} min</div>`;
+    for (const article of items) {
+      const title = article.title || 'Untitled';
+      const excerpt = (article.excerpt || article.description || '').substring(0, 160);
+      const link = article.url || `${SITE_URL}/news/${article.slug || ''}`;
+      const tag = TAGS[tagIdx % TAGS.length];
+      tagIdx++;
+      storiesHTML += `<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 12px;"><tr><td style="background: ${meta.color}08; border: 1px solid ${meta.color}15; border-radius: 12px; padding: 14px 18px;">
+        <div style="font-size: 10px; font-weight: 600; color: ${meta.color}; margin-bottom: 5px; letter-spacing: 0.05em;">${tag} · 3 min read</div>
+        <a href="${link}" style="font-size: 15px; font-weight: 700; color: #f1f5f9; text-decoration: none; line-height: 1.35;">${title}</a>
+        <p style="font-size: 13px; color: #94a3b8; line-height: 1.55; margin: 6px 0 0;">${excerpt}${(article.excerpt || '').length > 160 ? '...' : ''}</p>
+      </td></tr></table>`;
+    }
+  }
+
+  const quickHits = remaining.slice(-3);
+  let quickHitsHTML = '';
+  if (quickHits.length > 0) {
+    quickHitsHTML = `<div style="font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #475569; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.06);">⚡ Quick Hits</div>`;
+    for (const article of quickHits) {
+      const meta = TOPIC_META[article.topicId] || { icon: '📰', label: 'Tech' };
+      const link = article.url || `${SITE_URL}/news/${article.slug || ''}`;
+      quickHitsHTML += `<div style="padding: 8px 0; font-size: 13px; color: #94a3b8; line-height: 1.5;"><span style="font-size: 16px;">${meta.icon}</span> <a href="${link}" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">${article.title || 'Untitled'}</a></div>`;
+    }
+  }
+
   const topicsBadges = topicsCovered.map(t => {
-    const meta = TOPIC_META[t] || { icon: '📰', label: t };
-    return `<span style="display: inline-block; font-size: 12px; font-weight: 600; color: #94a3b8; background: #1e293b; border-radius: 999px; padding: 4px 12px; margin: 0 4px 4px 0;">${meta.icon} ${meta.label}</span>`;
+    const meta = TOPIC_META[t] || { icon: '📰', label: t, color: '#64748b' };
+    return `<span style="display: inline-block; font-size: 11px; font-weight: 600; color: ${meta.color}; background: ${meta.color}15; border: 1px solid ${meta.color}30; border-radius: 999px; padding: 5px 12px; margin: 0 4px 4px 0;">${meta.icon} ${meta.label}</span>`;
   }).join('');
+
+  const bestExcerpt = articles.reduce((longest, a) => (a.excerpt || '').length > (longest.excerpt || '').length ? a : longest, articles[0]);
+  const quoteText = bestExcerpt ? (bestExcerpt.excerpt || '').substring(0, 120).split('.')[0] + '.' : '';
+  const quoteHTML = quoteText ? `<table width="100%" cellpadding="0" cellspacing="0" style="margin: 24px 0;"><tr><td style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(124, 58, 237, 0.06)); border-left: 3px solid #818cf8; border-radius: 0 12px 12px 0; padding: 20px 24px;">
+    <div style="font-size: 20px; color: #818cf8; margin-bottom: 6px;">"</div>
+    <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin: 0; font-style: italic;">${quoteText}</p>
+    <div style="font-size: 11px; color: #64748b; margin-top: 10px;">— from "${(bestExcerpt.title || '').substring(0, 50)}${(bestExcerpt.title || '').length > 50 ? '...' : ''}"</div>
+  </td></tr></table>` : '';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -256,77 +296,62 @@ function buildNewsletterHTML(articles, issueNum) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${subject}</title>
 </head>
-<body style="margin: 0; padding: 0; background: #0a0a0f; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background: #0a0a0f;">
-    <tr>
-      <td align="center" style="padding: 20px;">
-        <table width="600" cellpadding="0" cellspacing="0" style="background: #0d1220; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden;">
+<body style="margin: 0; padding: 0; background: #060810; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+<div style="display: none; max-height: 0; overflow: hidden; opacity: 0;">${preheaderText}</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background: #060810;">
+  <tr><td align="center" style="padding: 0;">
+    <table width="640" cellpadding="0" cellspacing="0" style="max-width: 640px;"><tr><td style="padding: 24px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" style="background: linear-gradient(180deg, #0d1220 0%, #0a0e1a 100%); border-radius: 24px; border: 1px solid rgba(99, 102, 241, 0.15); overflow: hidden; box-shadow: 0 0 80px -20px rgba(51, 128, 255, 0.15);">
 
-          <!-- Header -->
-          <tr>
-            <td style="padding: 32px 40px; text-align: center; background: linear-gradient(135deg, rgba(51,128,255,0.08), rgba(124,58,237,0.08)); border-bottom: 1px solid rgba(255,255,255,0.08);">
-              <div style="font-size: 22px; font-weight: 800; color: #f1f5f9; margin-bottom: 4px;">
-                ${SITE_NAME} <span style="color: #3380ff;">Weekly</span>
-              </div>
-              <div style="font-size: 13px; color: #64748b;">Issue #${issueNum} · ${dateStr}</div>
-            </td>
-          </tr>
+        <tr><td style="padding: 12px 40px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.04);"><a href="${SITE_URL}/newsletter/issue-${issueNum}-${dateStr.replace(/ /g, '-')}" style="font-size: 11px; color: #475569; text-decoration: none;">View in browser →</a></td></tr>
 
-          <!-- Subject -->
-          <tr>
-            <td style="padding: 28px 40px 8px;">
-              <h1 style="font-size: 22px; font-weight: 700; color: #f1f5f9; margin: 0; line-height: 1.3;">
-                ${subject}
-              </h1>
-            </td>
-          </tr>
+        <tr><td style="padding: 0;"><table width="100%" cellpadding="0" cellspacing="0" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); border-bottom: 1px solid rgba(99, 102, 241, 0.2);"><tr><td style="padding: 36px 40px 24px; text-align: center;">
+          <div style="margin-bottom: 16px;"><span style="display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #818cf8; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 999px; padding: 6px 16px;">⚡ ${SITE_NAME.toUpperCase()} WEEKLY</span></div>
+          <div style="font-size: 13px; color: #64748b; margin-bottom: 14px;">Issue #${issuePadded} · ${dateStr}</div>
+          <h1 style="font-size: 26px; font-weight: 800; color: #f8fafc; margin: 0; line-height: 1.2; letter-spacing: -0.02em;">This Week in <span style="background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Emerging Tech</span></h1>
+          <p style="font-size: 14px; color: #94a3b8; margin: 10px 0 0; line-height: 1.5;">${editorNote}</p>
+        </td></tr></table></td></tr>
 
-          <!-- Topics covered -->
-          <tr>
-            <td style="padding: 12px 40px 20px;">
-              ${topicsBadges}
-            </td>
-          </tr>
+        <tr><td style="padding: 0;"><table width="100%" cellpadding="0" cellspacing="0" style="background: #0a0e1a; border-bottom: 1px solid rgba(255,255,255,0.06);"><tr>
+          <td width="33%" style="padding: 16px 12px; text-align: center; border-right: 1px solid rgba(255,255,255,0.06);"><div style="font-size: 22px; font-weight: 800; color: #60a5fa;">${articles.length}</div><div style="font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #475569;">Stories</div></td>
+          <td width="33%" style="padding: 16px 12px; text-align: center; border-right: 1px solid rgba(255,255,255,0.06);"><div style="font-size: 22px; font-weight: 800; color: #a78bfa;">${topicsCovered.length}</div><div style="font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #475569;">Topics</div></td>
+          <td width="34%" style="padding: 16px 12px; text-align: center;"><div style="font-size: 22px; font-weight: 800; color: #34d399;">${totalReadTime}<span style="font-size: 13px; color: #475569;">min</span></div><div style="font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #475569;">Read Time</div></td>
+        </tr></table></td></tr>
 
-          <!-- Stories -->
-          <tr>
-            <td style="padding: 0 40px 20px;">
-              <table width="100%" cellpadding="0" cellspacing="0">
-                ${storiesHTML}
-              </table>
-            </td>
-          </tr>
+        <tr><td style="padding: 18px 40px 0;"><div style="font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #334155; margin-bottom: 10px;">Covered This Week</div>${topicsBadges}</td></tr>
 
-          <!-- CTA -->
-          <tr>
-            <td style="padding: 8px 40px 32px; text-align: center;">
-              <a href="${SITE_URL}/news" style="display: inline-block; font-size: 14px; font-weight: 700; color: #fff; background: linear-gradient(135deg, #3380ff, #7c3aed); border-radius: 999px; padding: 12px 32px; text-decoration: none;">
-                Read All Stories →
-              </a>
-            </td>
-          </tr>
+        <tr><td style="padding: 20px 40px 0;">${featuredHTML}</td></tr>
 
-          <!-- Footer -->
-          <tr>
-            <td style="padding: 24px 40px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
-              <p style="font-size: 13px; color: #64748b; margin: 0 0 8px;">
-                You're receiving this because you subscribed to ${SITE_NAME}.
-              </p>
-              <p style="font-size: 12px; color: #475569; margin: 0;">
-                <a href="${SITE_URL}/newsletter" style="color: #475569;">Manage preferences</a> ·
-                <a href="{{unsubscribe_url}}" style="color: #475569;">Unsubscribe</a> ·
-                <a href="${SITE_URL}" style="color: #475569;">${SITE_URL}</a>
-              </p>
-              <p style="font-size: 11px; color: #334155; margin: 12px 0 0;">
-                © ${new Date().getFullYear()} ${SITE_NAME}. All rights reserved.
-              </p>
-            </td>
-          </tr>
+        <tr><td style="padding: 4px 40px 8px;">${storiesHTML}</td></tr>
 
-        </table>
-      </td>
-    </tr>
-  </table>
+        <tr><td style="padding: 0 40px;">${quoteHTML}</td></tr>
+
+        <tr><td style="padding: 0 40px 16px;">${quickHitsHTML}</td></tr>
+
+        <tr><td style="padding: 8px 40px 28px;"><table width="100%" cellpadding="0" cellspacing="0" style="background: linear-gradient(135deg, rgba(51, 128, 255, 0.08), rgba(124, 58, 237, 0.08)); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: 16px;"><tr><td style="padding: 24px 32px; text-align: center;">
+          <div style="font-size: 16px; font-weight: 700; color: #f1f5f9; margin-bottom: 6px;">Dive deeper into every story</div>
+          <p style="font-size: 13px; color: #94a3b8; margin: 0 0 18px;">Full articles, sources, and analysis on the website</p>
+          <a href="${SITE_URL}/news" style="display: inline-block; font-size: 14px; font-weight: 700; color: #fff; background: linear-gradient(135deg, #3380ff, #7c3aed); border-radius: 999px; padding: 14px 36px; text-decoration: none; box-shadow: 0 4px 24px -4px rgba(51, 128, 255, 0.4);">Read All Stories →</a>
+        </td></tr></table></td></tr>
+
+        <tr><td style="padding: 0 40px 28px;"><table width="100%" cellpadding="0" cellspacing="0" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px;"><tr><td style="padding: 20px 24px; text-align: center;">
+          <div style="font-size: 14px; font-weight: 700; color: #f1f5f9; margin-bottom: 6px;">💬 Was this useful?</div>
+          <p style="font-size: 12px; color: #94a3b8; margin: 0 0 12px;">Reply to this email and tell us what you think. We read every response.</p>
+          <a href="mailto:${FROM_EMAIL}?subject=Newsletter%20Feedback%20Issue%20${issueNum}" style="display: inline-block; font-size: 12px; font-weight: 600; color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 999px; padding: 8px 20px; text-decoration: none;">💬 Send Feedback</a>
+        </td></tr></table></td></tr>
+
+        <tr><td style="padding: 24px 40px 32px; border-top: 1px solid rgba(255,255,255,0.06); background: #080b14;"><table width="100%" cellpadding="0" cellspacing="0"><tr><td style="text-align: center;">
+          <div style="font-size: 16px; font-weight: 800; color: #f1f5f9; margin-bottom: 10px;">${SITE_NAME} <span style="color: #3380ff;">Weekly</span></div>
+          <p style="font-size: 12px; color: #64748b; margin: 0 0 10px;">You're receiving this because you subscribed at <a href="${SITE_URL}" style="color: #818cf8; text-decoration: none;">technanoai.com</a></p>
+          <p style="font-size: 12px; color: #475569; margin: 0 0 14px;"><a href="${SITE_URL}/newsletter" style="color: #64748b; text-decoration: none;">📋 Manage preferences</a> &nbsp;·&nbsp; <a href="{{unsubscribe_url}}" style="color: #64748b; text-decoration: none;">🚫 Unsubscribe</a> &nbsp;·&nbsp; <a href="${SITE_URL}/newsletter/archive" style="color: #64748b; text-decoration: none;">📚 Past issues</a></p>
+          <p style="font-size: 12px; color: #475569; margin: 0 0 14px;"><a href="mailto:${FROM_EMAIL}?subject=Forward&body=Check%20out%20TechNanoAI%20Weekly%3A%20${SITE_URL}/newsletter" style="color: #64748b; text-decoration: none;">📤 Forward to a friend</a> &nbsp;·&nbsp; <a href="${SITE_URL}/newsletter" style="color: #64748b; text-decoration: none;">🔔 Subscribe</a></p>
+          <p style="font-size: 11px; color: #334155; margin: 0;">© ${new Date().getFullYear()} ${SITE_NAME} · 12 frontiers of emerging technology, explained simply</p>
+        </td></tr></table></td></tr>
+
+      </table>
+    </td></tr></table>
+  </td></tr>
+</table>
 </body>
 </html>`;
 }
