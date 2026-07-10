@@ -1,0 +1,75 @@
+name: Weekly Newsletter
+
+on:
+  schedule:
+    # Runs every Monday at 07:00 UTC (after daily news runs at 06:00)
+    - cron: '0 7 * * 1'
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-newsletter
+  cancel-in-progress: false
+
+jobs:
+  generate-and-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate and send newsletter
+        id: newsletter
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+        run: |
+          # Determine provider based on available secrets
+          if [ -n "$RESEND_API_KEY" ]; then
+            echo "Using Resend provider"
+            node scripts/generate-newsletter.mjs --provider=resend --send
+          elif [ -n "$MAILGUN_API_KEY" ] && [ -n "$MAILGUN_DOMAIN" ]; then
+            echo "Using Mailgun provider"
+            node scripts/generate-newsletter.mjs --provider=mailgun --send
+          else
+            echo "No email provider secrets found — generating newsletter only (no sending)"
+            node scripts/generate-newsletter.mjs --provider=console
+          fi
+
+      - name: Commit newsletter files
+        run: |
+          git config user.name "TechNanoAI Newsletter Bot"
+          git config user.email "newsletter-bot@technanoai.com"
+          git add src/data/newsletters/
+          if git diff --cached --quiet; then
+            echo "No newsletter files to commit."
+          else
+            git commit -m "📰 Weekly newsletter issue $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              git pull --rebase origin main || true
+              if git push; then
+                echo "Push successful"
+                break
+              else
+                echo "Push attempt $i failed, retrying..."
+                sleep 5
+              fi
+            done
+          fi

@@ -79,6 +79,7 @@
 .nl-btn-subscribed { background: var(--color-emerald); box-shadow: 0 0 24px -4px rgba(16, 185, 129, 0.5); }
 
 .nl-trust { display: flex; justify-content: center; gap: 1.75rem; flex-wrap: wrap; }
+.nl-form-msg { font-size: 0.8125rem; text-align: center; margin: 0.625rem 0 0; min-height: 1.25rem; font-weight: 500; }
 .nl-trust-item {
   font-size: 0.8125rem; color: var(--color-text-dim);
   display: flex; align-items: center; gap: 0.375rem;

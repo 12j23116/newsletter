@@ -18,7 +18,7 @@ const topics = [
 ];
 
 const perks = [
-  { icon: '📰', title: 'Weekly Digest', desc: 'The week's most important tech developments, summarized in a 5-minute read every Monday morning.', tag: 'Every Monday' },
+  { icon: '📰', title: 'Weekly Digest', desc: "The week's most important tech developments, summarized in a 5-minute read every Monday morning.", tag: 'Every Monday' },
   { icon: '🔬', title: 'Deep Dives', desc: 'Exclusive in-depth analysis of breakthroughs before they appear on the website.', tag: 'Subscriber-only' },
   { icon: '📊', title: 'Trend Reports', desc: 'Monthly trend reports tracking search interest, funding, and market movements across all 12 topics.', tag: 'Monthly' },
   { icon: '⚡', title: 'Breaking Alerts', desc: 'Instant notifications for major breakthroughs — fusion milestones, AI model releases, quantum supremacy claims.', tag: 'Real-time' },
@@ -54,10 +54,11 @@ const faqs = [
         No fluff — just the breakthroughs that matter, backed by research.
       </p>
 
-      <form class="nl-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed!'; this.querySelector('button').classList.add('nl-btn-subscribed');">
+      <form class="nl-form" data-nl-form>
         <input class="nl-input" type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
         <button class="nl-btn" type="submit">Subscribe Free</button>
       </form>
+      <div class="nl-form-msg" data-nl-msg></div>
 
       <div class="nl-trust">
         <span class="nl-trust-item">Weekly digest</span>
@@ -66,6 +67,52 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('[data-nl-form]').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const input = form.querySelector('input');
+        const btn = form.querySelector('button');
+        const msg = form.parentElement.querySelector('[data-nl-msg]');
+        const email = input.value.trim();
+        if (!email) return;
+        btn.disabled = true;
+        btn.textContent = 'Subscribing...';
+        try {
+          const res = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email }),
+          });
+          const data = await res.json();
+          if (res.ok) {
+            input.value = '';
+            btn.textContent = 'Subscribed!';
+            btn.classList.add('nl-btn-subscribed');
+            if (msg) {
+              msg.textContent = data.message || 'Successfully subscribed!';
+              msg.style.color = 'var(--color-emerald)';
+            }
+          } else {
+            btn.textContent = 'Subscribe Free';
+            btn.disabled = false;
+            if (msg) {
+              msg.textContent = data.error || 'Something went wrong. Please try again.';
+              msg.style.color = 'var(--color-pink)';
+            }
+          }
+        } catch (err) {
+          btn.textContent = 'Subscribe Free';
+          btn.disabled = false;
+          if (msg) {
+            msg.textContent = 'Network error. Please try again later.';
+            msg.style.color = 'var(--color-pink)';
+          }
+        }
+      });
+    });
+  </script>
 
   <!-- Stats -->
   <div class="nl-stats">
@@ -166,10 +213,11 @@ const faqs = [
     <div class="nl-final-inner">
       <h2 class="nl-final-title">Join 50,000+ frontier thinkers</h2>
       <p class="nl-final-sub">Start receiving your weekly intelligence briefing every Monday. It takes 10 seconds to subscribe.</p>
-      <form class="nl-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed!'; this.querySelector('button').classList.add('nl-btn-subscribed');">
+      <form class="nl-form" data-nl-form>
         <input class="nl-input" type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
         <button class="nl-btn" type="submit">Subscribe Free</button>
       </form>
+      <div class="nl-form-msg" data-nl-msg></div>
       <div class="nl-trust" style="margin-top:1.25rem;">
         <span class="nl-trust-item">Free forever</span>
         <span class="nl-trust-item">No credit card</span>

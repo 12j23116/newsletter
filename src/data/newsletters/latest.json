@@ -1,0 +1,112 @@
+{
+  "issue": 79,
+  "date": "2026-07-10",
+  "subject": "This Week: Cybersecurity, Energy Storage & more — July 10, 2026",
+  "articleCount": 12,
+  "topicsCovered": [
+    "cybersecurity",
+    "energy",
+    "biotech",
+    "fusion",
+    "quantum",
+    "av"
+  ],
+  "articles": [
+    {
+      "title": "'HalluSquatting' Turns AI Hallucinations Into Botnet Deli... | Cybersecurity News",
+      "slug": "8216hallusquatting8217-turns-ai-hallucinations-into-botnet-delivery-me",
+      "topic": "cybersecurity",
+      "excerpt": "Researchers demonstrate adversarial hallucination squatting against popular AI assistants to achieve remote code execution.\nThe post 'HalluSquatting' Turns AI Hallucinations Into Botnet Delivery Mecha",
+      "url": "https://technanoai.com/news/8216hallusquatting8217-turns-ai-hallucinations-into-botnet-delivery-me",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Former ransomware negotiator gets 4 years for BlackCat at... | Cybersecurity News",
+      "slug": "former-ransomware-negotiator-gets-4-years-for-blackcat-attacks",
+      "topic": "cybersecurity",
+      "excerpt": "A former employee of cybersecurity incident response company DigitalMint was sentenced to 70 months in prison for targeting U.S. companies in BlackCat (ALPHV) ransomware attacks. [...]",
+      "url": "https://technanoai.com/news/former-ransomware-negotiator-gets-4-years-for-blackcat-attacks",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "'Never underestimate the impact you can have, whatever yo... | Energy Storage News",
+      "slug": "8216never-underestimate-the-impact-you-can-have-whatever-your-role8217",
+      "topic": "energy",
+      "excerpt": "This week, Women in Solar+ Europe gives voice to Lindsay Dixon, Corporate Partnerships Manager at the UK’s SolarAid. She highlights how solar energy is not only a powerful tool for decarbonisation but",
+      "url": "https://technanoai.com/news/8216never-underestimate-the-impact-you-can-have-whatever-your-role8217",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Canadian Solar unveils new EP Cube systems featuring high... | Energy Storage News",
+      "slug": "canadian-solar-unveils-new-ep-cube-systems-featuring-higher-power-scal",
+      "topic": "energy",
+      "excerpt": "Canadian Solar has launched upgraded EP Cube Single-Phase 2.0 and Three-Phase Pro energy storage systems, combining hybrid inverters with modular LFP batteries for residential, C'I, and scalable backu",
+      "url": "https://technanoai.com/news/canadian-solar-unveils-new-ep-cube-systems-featuring-higher-power-scal",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Ag Genomics Begins to Bear Fruit | Biotechnology News",
+      "slug": "ag-genomics-begins-to-bear-fruit",
+      "topic": "biotech",
+      "excerpt": "Genomics tools—applied to agriculture—create commercially desirable traits in a fraction of the time required by standard breeding programs.\nThe post Ag Genomics Begins to Bear Fruit appeared first on",
+      "url": "https://technanoai.com/news/ag-genomics-begins-to-bear-fruit",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Crohn’s Disease Phage Therapy Neutralizes Inflammatory E.... | Biotechnology News",
+      "slug": "crohns-disease-phage-therapy-neutralizes-inflammatory-e-coli-in-mouse-",
+      "topic": "biotech",
+      "excerpt": "Researchers developed a supportive bacteriophage therapy for Crohn’s disease that in a mouse model neutralized a type of E. coli bacteria that drives inflammation in the gut, and improved responses to",
+      "url": "https://technanoai.com/news/crohns-disease-phage-therapy-neutralizes-inflammatory-e-coli-in-mouse-",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "AI just supercharged the race to find room temperature su... | Nuclear Fusion News",
+      "slug": "ai-just-supercharged-the-race-to-find-room-temperature-superconductors",
+      "topic": "fusion",
+      "excerpt": "Scientists have combined machine learning with quantum physics to discover two new superconductors and create a much faster way to search for many more. The technique could bring researchers significa",
+      "url": "https://technanoai.com/news/ai-just-supercharged-the-race-to-find-room-temperature-superconductors",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Engineers solved an airflow mystery hidden nearly a mile ... | Nuclear Fusion News",
+      "slug": "engineers-solved-an-airflow-mystery-hidden-nearly-a-mile-underground",
+      "topic": "fusion",
+      "excerpt": "Engineers at a deep underground research facility noticed something strange during major rainstorms: airflow underground sometimes reversed direction. Using new sensors and mathematical modeling, they",
+      "url": "https://technanoai.com/news/engineers-solved-an-airflow-mystery-hidden-nearly-a-mile-underground",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Amsterdam’s QDNL Participations Rebrands as Ground State ... | Quantum Computing News",
+      "slug": "amsterdams-qdnl-participations-rebrands-as-ground-state-ventures-secur",
+      "topic": "quantum",
+      "excerpt": "Amsterdam-based specialized venture capital firm QDNL Participations has announced its formal corporate rebranding to Ground State Ventures as it prepares the final close of its inaugural early-stage ",
+      "url": "https://technanoai.com/news/amsterdams-qdnl-participations-rebrands-as-ground-state-ventures-secur",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "QIZ Security Raises $17M Seed Round to Scale Enterprise C... | Quantum Computing News",
+      "slug": "qiz-security-raises-17m-seed-round-to-scale-enterprise-cryptographic-p",
+      "topic": "quantum",
+      "excerpt": "Post-Quantum Cryptography (PQC) orchestrator QIZ Security has secured a $17 million seed funding round to expand the deployment of its unified cryptographic governance and discovery platform. The inve",
+      "url": "https://technanoai.com/news/qiz-security-raises-17m-seed-round-to-scale-enterprise-cryptographic-p",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Another massive data breach exposed millions of driver's ... | Autonomous Vehicles News",
+      "slug": "another-massive-data-breach-exposed-millions-of-driver8217s-license-nu",
+      "topic": "av",
+      "excerpt": "The cyberattack targeting a U.S. insurance giant is the largest known breach of driver's license numbers so far in 2026.",
+      "url": "https://technanoai.com/news/another-massive-data-breach-exposed-millions-of-driver8217s-license-nu",
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Autonomous drone delivery startup Manna plots major US ex... | Autonomous Vehicles News",
+      "slug": "autonomous-drone-delivery-startup-manna-plots-major-us-expansion",
+      "topic": "av",
+      "excerpt": "Manna is launching a U.S. operations and manufacturing facility in Tulsa, Oklahoma, that will eventually employ 1,000 people.",
+      "url": "https://technanoai.com/news/autonomous-drone-delivery-startup-manna-plots-major-us-expansion",
+      "date": "2026-07-10"
+    }
+  ]
+}
