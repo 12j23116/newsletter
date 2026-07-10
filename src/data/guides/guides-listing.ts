@@ -17,6 +17,7 @@ export interface Guide {
   icon: string;
   popular?: boolean;
   new?: boolean;
+  date?: string;
 }
 
 export interface GuideTrack {

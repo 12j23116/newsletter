@@ -33,6 +33,39 @@ const bodySections: NewsSection[] = item.body ?? [
   { type: 'h2', text: 'Why It Matters' },
   { type: 'p', text: `For professionals, investors, and enthusiasts tracking ${item.topicLabel}, this development signals where the field is heading next. The implications extend beyond the immediate announcement.` },
 ];
+
+const newsUrl = `https://technanoai.com/news/${item.slug}`;
+const newsImage = item.img?.startsWith('http') ? item.img : `https://technanoai.com${item.img}`;
+
+const newsLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: item.metaTitle || item.title,
+  description: item.metaDescription || item.excerpt,
+  image: newsImage,
+  datePublished: item.date,
+  dateModified: item.date,
+  author: { '@type': 'Organization', name: 'TechNanoAI' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'TechNanoAI',
+    logo: { '@type': 'ImageObject', url: 'https://technanoai.com/images/logo/technanoai-icon-32.png' },
+  },
+  articleSection: item.topicLabel,
+  keywords: item.keywords || item.topicLabel,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': newsUrl },
+  url: newsUrl,
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://technanoai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'News', item: 'https://technanoai.com/news' },
+    { '@type': 'ListItem', position: 3, name: item.title, item: newsUrl },
+  ],
+};
 ---
 
 <BaseLayout title={item.metaTitle || item.title} description={item.metaDescription || item.excerpt} type="news" image={item.img} keywords={item.keywords || `${item.topicLabel}, emerging tech news`} publishedDate={item.date} section={item.topicLabel}>
@@ -375,4 +408,6 @@ const bodySections: NewsSection[] = item.body ?? [
       }));
     }
   </script>
+  <script type="application/ld+json" set:html={JSON.stringify(newsLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
 </BaseLayout>

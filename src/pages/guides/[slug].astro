@@ -47,6 +47,7 @@ const jsonLd = {
   about: hasContent ? content.keyConcepts.map((c) => c.term) : [guide.topic],
   url: guideUrl,
   mainEntityOfPage: { '@type': 'WebPage', '@id': guideUrl },
+  datePublished: guide.date || '2026-01-01',
   ...(guideImage ? { image: `https://technanoai.com${guideImage}` } : {}),
 };
 
@@ -69,6 +70,7 @@ const breadcrumbLd = {
   type="article"
   keywords={guideKeywords}
   section={guide.topic}
+  publishedDate={guide.date || '2026-01-01'}
 >
   <article class="gp-page" style={`--cat-color: ${guide.topicColor}`}>
     <!-- Hero -->

@@ -1,11 +1,12 @@
 import { allPosts } from '../data/blog/blog-content.ts';
+import { allGuides } from '../data/guides/guides-listing.ts';
+import { allNewsItems } from '../data/news/news-content.ts';
+import { allEpisodes } from '../data/podcast/podcast-content.ts';
 
 export async function GET({ site }) {
   const siteUrl = site?.toString().replace(/\/$/, '') || 'https://technanoai.com';
 
-  const items = allPosts
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 50)
+  const blogItems = allPosts
     .map((post) => {
       const url = `${siteUrl}/blog/${post.slug}`;
       return `    <item>
@@ -13,8 +14,52 @@ export async function GET({ site }) {
       <link>${url}</link>
       <guid isPermaLink="true">${url}</guid>
       <description><![CDATA[${post.excerpt}]]></description>
-      <category>${post.topic}</category>
+      <category>Blog — ${post.topic}</category>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+    </item>`;
+    })
+    .join('\n');
+
+  const guideItems = allGuides
+    .map((guide) => {
+      const url = `${siteUrl}/guides/${guide.slug}`;
+      const date = guide.date ? new Date(guide.date).toUTCString() : new Date('2026-01-01').toUTCString();
+      return `    <item>
+      <title><![CDATA[${guide.title}]]></title>
+      <link>${url}</link>
+      <guid isPermaLink="true">${url}</guid>
+      <description><![CDATA[${guide.description}]]></description>
+      <category>Guide — ${guide.topic}</category>
+      <pubDate>${date}</pubDate>
+    </item>`;
+    })
+    .join('\n');
+
+  const newsItems = allNewsItems
+    .slice(0, 50)
+    .map((item) => {
+      const url = `${siteUrl}/news/${item.slug}`;
+      return `    <item>
+      <title><![CDATA[${item.title}]]></title>
+      <link>${url}</link>
+      <guid isPermaLink="true">${url}</guid>
+      <description><![CDATA[${item.excerpt}]]></description>
+      <category>News — ${item.topicLabel}</category>
+      <pubDate>${new Date(item.date).toUTCString()}</pubDate>
+    </item>`;
+    })
+    .join('\n');
+
+  const podcastItems = allEpisodes
+    .map((ep) => {
+      const url = `${siteUrl}/podcast/${ep.slug}`;
+      return `    <item>
+      <title><![CDATA[${ep.title} — The Frontier Tech Show]]></title>
+      <link>${url}</link>
+      <guid isPermaLink="true">${url}</guid>
+      <description><![CDATA[${ep.description}]]></description>
+      <category>Podcast — ${ep.topic}</category>
+      <pubDate>${new Date(ep.date).toUTCString()}</pubDate>
     </item>`;
     })
     .join('\n');
@@ -28,7 +73,10 @@ export async function GET({ site }) {
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml" />
-${items}
+${blogItems}
+${guideItems}
+${newsItems}
+${podcastItems}
   </channel>
 </rss>`;
 

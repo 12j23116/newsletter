@@ -137,6 +137,8 @@ const jsonLd = {
   },
   keywords: tool.tags.join(', '),
   about: tool.topic,
+  datePublished: tool.date || '2026-01-01',
+  ...(tool.image ? { image: `https://technanoai.com${tool.image}` } : {}),
 };
 
 const toolUrl = `https://technanoai.com/tools/${tool.slug}`;
@@ -165,7 +167,7 @@ document.getElementById('td-notify-form')?.addEventListener('submit', (e) => {
 `;
 ---
 
-<BaseLayout title={title} description={description} type="article" keywords={tool.tags.join(', ')} section={tool.topic}>
+<BaseLayout title={title} description={description} type="article" keywords={tool.tags.join(', ')} section={tool.topic} publishedDate={tool.date || '2026-01-01'} image={tool.image}>
   <div class="tool-detail-page" style={`--td-color: ${tool.topicColor}`}>
     <!-- Tool Section (First) — Interactive tool or Coming Soon -->
     <section class="td-tool-section" id="td-tool-container">

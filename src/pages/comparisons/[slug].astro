@@ -29,6 +29,8 @@ const fallbackRelated = comparisons
 
 const finalRelated = relatedComparisons.length >= 4 ? relatedComparisons : [...relatedComparisons, ...fallbackRelated].slice(0, 4);
 
+const comparisonUrl = `https://technanoai.com/comparisons/${item.id}`;
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -38,9 +40,11 @@ const jsonLd = {
   publisher: { '@type': 'Organization', name: 'TechNanoAI' },
   articleSection: item.topic,
   about: item.subjects,
+  datePublished: item.date || '2026-01-01',
+  url: comparisonUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': comparisonUrl },
+  ...(item.image ? { image: `https://technanoai.com${item.image}` } : {}),
 };
-
-const comparisonUrl = `https://technanoai.com/comparisons/${item.id}`;
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -53,7 +57,7 @@ const breadcrumbLd = {
 };
 ---
 
-<BaseLayout title={title} description={description} type="article" keywords={`${item.subjects.join(', ')}, ${item.topic} comparison, head-to-head technology comparison`} section={item.topic}>
+<BaseLayout title={title} description={description} type="article" keywords={`${item.subjects.join(', ')}, ${item.topic} comparison, head-to-head technology comparison`} section={item.topic} publishedDate={item.date || '2026-01-01'} image={item.image}>
   <article class="cmp-page cmp-detail-page" style={`--cat-color: ${item.topicColor}`}>
     <!-- Hero -->
     <header class="cmp-detail-hero">

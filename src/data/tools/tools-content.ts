@@ -21,6 +21,8 @@ export interface Tool {
   featured?: boolean;
   tags: string[];
   source?: 'external' | 'ours';
+  date?: string;
+  image?: string;
 }
 
 export interface Tooltopic {

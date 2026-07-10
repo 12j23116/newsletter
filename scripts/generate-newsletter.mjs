@@ -9,26 +9,44 @@
  * and sends it to all subscribers via email.
  *
  * Email Providers:
- *   --provider=resend   (default, free tier: 100 emails/day) → RESEND_API_KEY
- *   --provider=mailgun                            → MAILGUN_API_KEY + MAILGUN_DOMAIN
- *   --provider=console  (just print, don't send)  → no key needed
+ *   --provider=smtp     (default, Gmail/Outlook, 500/day) → SMTP_HOST, SMTP_USER, SMTP_PASS, SMTP_PORT
+ *   --provider=resend   (API, free tier: 100/day)        → RESEND_API_KEY
+ *   --provider=mailgun                                   → MAILGUN_API_KEY + MAILGUN_DOMAIN
+ *   --provider=console  (just print, don't send)         → no key needed
  *
  * Usage:
- *   node scripts/generate-newsletter.mjs                        # generate + send via Resend
- *   node scripts/generate-newsletter.mjs --provider=console     # generate only, print preview
- *   node scripts/generate-newsletter.mjs --provider=mailgun     # send via Mailgun
- *   node scripts/generate-newsletter.mjs --dry-run              # generate but don't save or send
- *   node scripts/generate-newsletter.mjs --max-per-topic=2      # limit stories per topic
- *   node scripts/generate-newsletter.mjs --send                 # actually send emails (required flag)
+ *   node scripts/generate-newsletter.mjs --provider=console              # generate only, print preview
+ *   node scripts/generate-newsletter.mjs --provider=smtp --send          # generate + send via Gmail SMTP
+ *   node scripts/generate-newsletter.mjs --provider=resend --send        # generate + send via Resend API
+ *   node scripts/generate-newsletter.mjs --dry-run                       # generate but don't save or send
+ *   node scripts/generate-newsletter.mjs --max-per-topic=2               # limit stories per topic
+ *   node scripts/generate-newsletter.mjs --send                          # actually send emails (required flag)
+ *
+ * SMTP Setup (Gmail, no API key needed):
+ *   1. Enable 2FA on your Google account
+ *   2. Go to https://myaccount.google.com/apppasswords
+ *   3. Create an app password (select "Mail")
+ *   4. Set in .env:
+ *      SMTP_HOST=smtp.gmail.com
+ *      SMTP_PORT=465
+ *      SMTP_USER=your-email@gmail.com
+ *      SMTP_PASS=your-16-char-app-password
  *
  * Requires:
- *   RESEND_API_KEY (or MAILGUN_API_KEY + MAILGUN_DOMAIN) in .env
+ *   SMTP_* vars (or RESEND_API_KEY or MAILGUN_API_KEY + MAILGUN_DOMAIN) in .env
  *   Subscribers stored in src/data/subscribers/subscribers.json
  */
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'fs';
 import { resolve, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+
+let nodemailer = null;
+try {
+  nodemailer = (await import('nodemailer')).default;
+} catch {
+  // nodemailer not installed — SMTP provider will be unavailable
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(__dirname, '..');
@@ -358,6 +376,68 @@ function loadSubscribers() {
 
 // ─── Email Providers ─────────────────────────────────────────────────────────
 
+async function sendViaSMTP(subscribers, subject, html, text) {
+  if (!nodemailer) {
+    throw new Error('nodemailer not installed. Run: npm install nodemailer');
+  }
+
+  const host = process.env.SMTP_HOST;
+  const port = parseInt(process.env.SMTP_PORT || '465', 10);
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASS;
+
+  if (!host || !user || !pass) {
+    throw new Error('SMTP_HOST, SMTP_USER, and SMTP_PASS not found in .env');
+  }
+
+  const transporter = nodemailer.createTransport({
+    host,
+    port,
+    secure: port === 465,
+    auth: { user, pass },
+  });
+
+  // Verify connection
+  await transporter.verify();
+  console.log('   ✅ SMTP connection verified');
+
+  let totalSent = 0;
+  let totalFailed = 0;
+
+  for (const sub of subscribers) {
+    const unsubUrl = `${SITE_URL}/unsubscribe?email=${encodeURIComponent(sub.email)}`;
+    const personalizedHtml = html.replace(/{{unsubscribe_url}}/g, unsubUrl);
+    const personalizedText = text.replace(/{{unsubscribe_url}}/g, unsubUrl);
+
+    try {
+      await transporter.sendMail({
+        from: `${FROM_NAME} <${user}>`,
+        to: sub.email,
+        subject,
+        html: personalizedHtml,
+        text: personalizedText,
+        headers: {
+          'List-Unsubscribe': `<${unsubUrl}>`,
+        },
+      });
+      totalSent++;
+      if (totalSent % 10 === 0 || totalSent === subscribers.length) {
+        console.log(`  📧 Sent ${totalSent}/${subscribers.length} emails`);
+      }
+      // Rate limit: 500/day for Gmail, pace at 1 per 1.5s to be safe
+      if (totalSent < subscribers.length) {
+        await new Promise(r => setTimeout(r, 1500));
+      }
+    } catch (err) {
+      totalFailed++;
+      console.warn(`  ⚠️  Failed to send to ${sub.email}: ${err.message}`);
+    }
+  }
+
+  console.log(`   ✅ Sent ${totalSent} emails, ${totalFailed} failed`);
+  return totalSent;
+}
+
 async function sendViaResend(apiKey, subscribers, subject, html, text) {
   const RESEND_URL = 'https://api.resend.com/emails/batch';
 
@@ -458,7 +538,7 @@ async function main() {
   loadEnv();
 
   const args = parseArgs();
-  const providerKey = args.provider || 'resend';
+  const providerKey = args.provider || 'smtp';
   const maxPerTopic = parseInt(args['max-per-topic'] || String(DEFAULT_MAX_PER_TOPIC), 10);
   const dryRun = args['dry-run'] || false;
   const shouldSend = args['send'] || false;
@@ -561,7 +641,14 @@ async function main() {
     } else {
       console.log(`   → ${activeSubscribers.length} active subscribers`);
 
-      if (providerKey === 'resend') {
+      if (providerKey === 'smtp') {
+        if (!nodemailer) {
+          console.error('   ❌ nodemailer not installed. Run: npm install nodemailer');
+          process.exit(1);
+        }
+        const sent = await sendViaSMTP(activeSubscribers, subject, html, text);
+        console.log(`   ✅ Sent ${sent} emails successfully!`);
+      } else if (providerKey === 'resend') {
         const apiKey = process.env.RESEND_API_KEY;
         if (!apiKey) {
           console.error('   ❌ RESEND_API_KEY not found in .env');
@@ -580,7 +667,7 @@ async function main() {
         console.log(`   ✅ Sent ${sent} emails successfully!`);
       } else {
         console.error(`   ❌ Unknown provider: ${providerKey}`);
-        console.error('   Available: resend, mailgun, console');
+        console.error('   Available: smtp, resend, mailgun, console');
         process.exit(1);
       }
     }

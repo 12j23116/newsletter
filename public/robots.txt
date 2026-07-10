@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /components/
-Disallow: /*-content$
 
 Sitemap: https://technanoai.com/sitemap-index.xml

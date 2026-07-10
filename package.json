@@ -12,10 +12,13 @@
     "write-posts-local": "node scripts/local-llm-batch-writer.mjs",
     "news": "node scripts/generate-daily-news.mjs",
     "news:dry": "node scripts/generate-daily-news.mjs --dry-run",
-    "news:cleanup": "node scripts/generate-daily-news.mjs --cleanup-only"
+    "news:cleanup": "node scripts/generate-daily-news.mjs --cleanup-only",
+    "newsletter": "node scripts/generate-newsletter.mjs --provider=console",
+    "newsletter:send": "node scripts/generate-newsletter.mjs --provider=smtp --send"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^5.7.0"
+    "astro": "^5.7.0",
+    "nodemailer": "^9.0.3"
   }
 }

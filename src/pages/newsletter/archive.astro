@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { readdirSync, readFileSync } from 'fs';
+import { join } from 'path';
+
+const newslettersDir = join(process.cwd(), 'src', 'data', 'newsletters');
+let issues = [];
+
+try {
+  const files = readdirSync(newslettersDir).filter(f => f.startsWith('issue-') && f.endsWith('.json'));
+  issues = files.map(f => {
+    const data = JSON.parse(readFileSync(join(newslettersDir, f), 'utf-8'));
+    const slug = f.replace('.json', '');
+    return { ...data, slug };
+  }).sort((a, b) => b.issue - a.issue);
+} catch {
+  // no newsletters yet
+}
+---
+
+<BaseLayout
+  title="Newsletter Archive — TechNanoAI"
+  description="Browse all past issues of TechNanoAI Weekly. Download any issue as PDF or read online."
+  noindex
+>
+  <style>
+    .nl-archive {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+    .nl-archive-hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .nl-archive-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 12px;
+    }
+    .nl-archive-hero p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .nl-archive-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+    .nl-archive-back:hover { color: #94a3b8; }
+    .nl-issue-card {
+      background: rgba(13, 18, 32, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s, transform 0.2s;
+      text-decoration: none;
+      display: block;
+    }
+    .nl-issue-card:hover {
+      border-color: rgba(51, 128, 255, 0.3);
+      transform: translateY(-2px);
+    }
+    .nl-issue-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .nl-issue-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #3380ff;
+    }
+    .nl-issue-date {
+      font-size: 0.8125rem;
+      color: #64748b;
+    }
+    .nl-issue-subject {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 4px 0 8px;
+      line-height: 1.4;
+    }
+    .nl-issue-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8125rem;
+      color: #94a3b8;
+    }
+    .nl-issue-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nl-issue-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .nl-issue-topic-badge {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: #94a3b8;
+      background: rgba(30, 41, 59, 0.6);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+    .nl-archive-empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: #64748b;
+    }
+    .nl-archive-empty a {
+      color: #3380ff;
+      text-decoration: none;
+    }
+    .nl-archive-empty a:hover { text-decoration: underline; }
+  </style>
+
+  <div class="nl-archive">
+    <a href="/newsletter" class="nl-archive-back">← Back to Subscribe</a>
+
+    <div class="nl-archive-hero">
+      <h1>Newsletter Archive</h1>
+      <p>Every issue of TechNanoAI Weekly — read online or download as PDF</p>
+    </div>
+
+    {issues.length === 0 ? (
+      <div class="nl-archive-empty">
+        <p>No issues published yet.</p>
+        <p>The first issue will appear here after the next newsletter generation.</p>
+        <p style="margin-top: 20px;"><a href="/newsletter">Subscribe to get the first issue →</a></p>
+      </div>
+    ) : (
+      <div class="nl-issue-list">
+        {issues.map(issue => (
+          <a class="nl-issue-card" href={`/newsletter/${issue.slug}`}>
+            <div class="nl-issue-card-header">
+              <span class="nl-issue-num">Issue #{issue.issue}</span>
+              <span class="nl-issue-date">{new Date(issue.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+            </div>
+            <div class="nl-issue-subject">{issue.subject}</div>
+            <div class="nl-issue-meta">
+              <span>📰 {issue.articleCount} stories</span>
+              <span>📂 {issue.topicsCovered?.length || 0} topics</span>
+              <span>📄 Download PDF</span>
+            </div>
+            {issue.topicsCovered && issue.topicsCovered.length > 0 && (
+              <div class="nl-issue-topics">
+                {issue.topicsCovered.map(t => (
+                  <span class="nl-issue-topic-badge">{t}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>

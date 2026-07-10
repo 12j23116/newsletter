@@ -102,34 +102,6 @@ const newsLd = {
     <div class="news-bg"></div>
     <div class="news-bg-grid"></div>
 
-    <!-- Breaking News Ticker -->
-    {breakingNews.length > 0 && (
-      <div class="news-ticker-bar" id="news-ticker-bar">
-        <div class="news-ticker-label">
-          <span class="news-ticker-bolt">⚡</span>
-          <span>BREAKING</span>
-        </div>
-        <div class="news-ticker-track" id="news-ticker-track">
-          <div class="news-ticker-content" id="news-ticker-content">
-            {breakingNews.map((item) => (
-              <a href={`/news/${item.slug}`} class="news-ticker-item" style={`--ticker-color:${item.topicColor}`}>
-                <span class="news-ticker-dot" style={`background:${item.topicColor}`}></span>
-                <span class="news-ticker-text">{item.title}</span>
-              </a>
-            ))}
-          </div>
-          <div class="news-ticker-content" aria-hidden="true">
-            {breakingNews.map((item) => (
-              <a href={`/news/${item.slug}`} class="news-ticker-item" style={`--ticker-color:${item.topicColor}`}>
-                <span class="news-ticker-dot" style={`background:${item.topicColor}`}></span>
-                <span class="news-ticker-text">{item.title}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    )}
-
     <div class="news-content">
       <!-- Hero -->
       <section class="news-hero">
@@ -155,6 +127,34 @@ const newsLd = {
           </div>
         </div>
       </section>
+
+      <!-- Breaking News Ticker -->
+      {breakingNews.length > 0 && (
+        <div class="news-ticker-bar" id="news-ticker-bar">
+          <div class="news-ticker-label">
+            <span class="news-ticker-bolt">⚡</span>
+            <span>BREAKING</span>
+          </div>
+          <div class="news-ticker-track" id="news-ticker-track">
+            <div class="news-ticker-content" id="news-ticker-content">
+              {breakingNews.map((item) => (
+                <a href={`/news/${item.slug}`} class="news-ticker-item" style={`--ticker-color:${item.topicColor}`}>
+                  <span class="news-ticker-dot" style={`background:${item.topicColor}`}></span>
+                  <span class="news-ticker-text">{item.title}</span>
+                </a>
+              ))}
+            </div>
+            <div class="news-ticker-content" aria-hidden="true">
+              {breakingNews.map((item) => (
+                <a href={`/news/${item.slug}`} class="news-ticker-item" style={`--ticker-color:${item.topicColor}`}>
+                  <span class="news-ticker-dot" style={`background:${item.topicColor}`}></span>
+                  <span class="news-ticker-text">{item.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       <!-- Search Bar -->
       <div class="news-search-wrapper">
@@ -287,35 +287,6 @@ const newsLd = {
             );
           })}
         </div>
-
-        <!-- Trending Sidebar -->
-        <aside class="news-sidebar">
-          <div class="news-sidebar-section">
-            <h3 class="news-sidebar-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              Trending
-            </h3>
-            {trendingNews.map((item, idx) => (
-              <a href={`/news/${item.slug}`} class="news-trending-item">
-                <span class="news-trending-num">{idx + 1}</span>
-                <div class="news-trending-body">
-                  <span class="news-trending-topic" style={`color:${item.topicColor}`}>{item.topicLabel}</span>
-                  <h4 class="news-trending-title">{item.title}</h4>
-                  <span class="news-trending-meta">{relativeTime(item.date)} · {item.readTime}</span>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          <div class="news-sidebar-section news-sidebar-cta">
-            <h3 class="news-sidebar-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Newsletter
-            </h3>
-            <p>Weekly emerging tech digest. No fluff.</p>
-            <a href="/newsletter" class="news-sidebar-btn">Subscribe →</a>
-          </div>
-        </aside>
       </div>
 
       <!-- CTA -->
@@ -468,7 +439,7 @@ const newsLd = {
       function animateTicker() {
         if (!paused && tickerContent) {
           offset -= 0.5;
-          const contentWidth = tickerContent.scrollWidth;
+          const contentWidth = tickerContent.scrollWidth + 2;
           if (contentWidth > 0 && Math.abs(offset) >= contentWidth) {
             offset = 0;
           }

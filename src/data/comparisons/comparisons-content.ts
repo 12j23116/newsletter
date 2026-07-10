@@ -18,6 +18,8 @@ export interface ComparisonItem {
   rows: ComparisonRow[];
   popularity: number;
   trending: boolean;
+  date?: string;
+  image?: string;
 }
 
 export const comparisontopics = [

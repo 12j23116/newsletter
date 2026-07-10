@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { readdirSync, readFileSync } from 'fs';
+import { join } from 'path';
+
+const TOPIC_LABELS = {
+  ai: 'AI', cybersecurity: 'Cybersecurity', space: 'Space', biotech: 'Biotech',
+  nuclear: 'Nuclear', energy: 'Energy Storage', robotics: 'Robotics',
+  av: 'Autonomous Vehicles', quantum: 'Quantum', materials: 'Materials',
+  bci: 'BCI', fusion: 'Fusion',
+};
+
+const TOPIC_ICONS = {
+  ai: '🤖', cybersecurity: '🛡️', space: '🚀', biotech: '🧬',
+  nuclear: '☢️', energy: '🔋', robotics: '🦾', av: '🚗',
+  quantum: '💠', materials: '🔬', bci: '🧠', fusion: '⚛️',
+};
+
+export function getStaticPaths() {
+  const dir = join(process.cwd(), 'src', 'data', 'newsletters');
+  let paths = [];
+  try {
+    const files = readdirSync(dir).filter(f => f.startsWith('issue-') && f.endsWith('.json'));
+    paths = files.map(f => {
+      const slug = f.replace('.json', '');
+      const data = JSON.parse(readFileSync(join(dir, f), 'utf-8'));
+      return {
+        params: { slug },
+        props: { issue: data },
+      };
+    });
+  } catch (e) {
+    console.warn('Newsletter getStaticPaths:', e.message);
+  }
+  return paths;
+}
+
+const { issue } = Astro.props;
+---
+
+<BaseLayout
+  title={issue ? `${issue.subject} — TechNanoAI Weekly` : 'Newsletter Not Found'}
+  description={issue?.subject || 'Newsletter issue not found'}
+  noindex
+>
+  <style>
+    .nl-viewer {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+    }
+    .nl-viewer-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .nl-viewer-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .nl-viewer-back:hover { color: #94a3b8; }
+    .nl-pdf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #3380ff, #7c3aed);
+      border: none;
+      border-radius: 999px;
+      padding: 10px 24px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nl-pdf-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 24px -4px rgba(51, 128, 255, 0.5);
+    }
+    .nl-viewer-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .nl-viewer-brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #f1f5f9;
+      margin: 0 0 4px;
+    }
+    .nl-viewer-brand span { color: #3380ff; }
+    .nl-viewer-issue {
+      font-size: 0.8125rem;
+      color: #64748b;
+      letter-spacing: 0.05em;
+    }
+    .nl-viewer-subject {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 16px 0 0;
+      line-height: 1.3;
+    }
+    .nl-viewer-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .nl-viewer-topic {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: #94a3b8;
+      background: rgba(30, 41, 59, 0.6);
+      border-radius: 999px;
+      padding: 4px 12px;
+    }
+    .nl-story {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .nl-story:last-child { border-bottom: none; }
+    .nl-story-topic {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #3380ff;
+      margin-bottom: 4px;
+    }
+    .nl-story-title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 0 0 6px;
+      line-height: 1.4;
+    }
+    .nl-story-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nl-story-title a:hover { color: #60a5fa; }
+    .nl-story-excerpt {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .nl-viewer-footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .nl-viewer-footer a {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #3380ff, #7c3aed);
+      border-radius: 999px;
+      padding: 12px 32px;
+      text-decoration: none;
+    }
+    .nl-viewer-notfound {
+      text-align: center;
+      padding: 80px 20px;
+      color: #64748b;
+    }
+    .nl-viewer-notfound a { color: #3380ff; text-decoration: none; }
+
+    /* Print styles for PDF */
+    @media print {
+      body { background: #fff !important; }
+      .nl-viewer-actions, .nl-pdf-btn, .nl-viewer-footer a { display: none !important; }
+      .nl-viewer {
+        max-width: 100%;
+        padding: 0;
+        color: #000;
+      }
+      .nl-viewer-header, .nl-story {
+        border-color: #ddd;
+      }
+      .nl-viewer-subject, .nl-story-title, .nl-viewer-brand {
+        color: #000;
+      }
+      .nl-story-excerpt, .nl-viewer-issue {
+        color: #444;
+      }
+      .nl-story-topic {
+        color: #2563eb;
+      }
+      .nl-viewer-topic {
+        background: #f0f0f0;
+        color: #555;
+      }
+    }
+  </style>
+
+  {!issue ? (
+    <div class="nl-viewer">
+      <div class="nl-viewer-notfound">
+        <h1 style="font-size: 2rem; color: #f1f5f9;">Issue not found</h1>
+        <p>This newsletter issue doesn't exist or hasn't been generated yet.</p>
+        <p style="margin-top: 20px;">
+          <a href="/newsletter/archive">← View all issues</a>
+        </p>
+      </div>
+    </div>
+  ) : (
+    <div class="nl-viewer">
+      <div class="nl-viewer-actions">
+        <a href="/newsletter/archive" class="nl-viewer-back">← All Issues</a>
+        <button class="nl-pdf-btn" onclick="window.print()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+          </svg>
+          Download PDF
+        </button>
+      </div>
+
+      <div class="nl-viewer-header">
+        <div class="nl-viewer-brand">TechNanoAI <span>Weekly</span></div>
+        <div class="nl-viewer-issue">Issue #{issue.issue} · {new Date(issue.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+        <h1 class="nl-viewer-subject">{issue.subject}</h1>
+        {issue.topicsCovered && issue.topicsCovered.length > 0 && (
+          <div class="nl-viewer-topics">
+            {issue.topicsCovered.map(t => (
+              <span class="nl-viewer-topic">{TOPIC_ICONS[t] || '📰'} {TOPIC_LABELS[t] || t}</span>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div class="nl-stories">
+        {issue.articles && issue.articles.map((article, i) => (
+          <div class="nl-story">
+            <div class="nl-story-topic">
+              {TOPIC_ICONS[article.topic] || '📰'} {TOPIC_LABELS[article.topic] || article.topic}
+            </div>
+            <h2 class="nl-story-title">
+              <a href={article.url} target="_blank" rel="noopener">{article.title}</a>
+            </h2>
+            <p class="nl-story-excerpt">{article.excerpt}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="nl-viewer-footer">
+        <a href="/news">Read All Stories →</a>
+        <p style="margin-top: 16px; font-size: 0.8125rem; color: #64748b;">
+          <a href="/newsletter" style="background: none; color: #64748b; padding: 0; font-weight: 400;">Subscribe</a> ·
+          <a href="/newsletter/archive" style="background: none; color: #64748b; padding: 0; font-weight: 400;">Archive</a>
+        </p>
+      </div>
+    </div>
+  )}
+</BaseLayout>
