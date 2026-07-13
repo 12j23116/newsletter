@@ -1,112 +1,113 @@
 {
-  "issue": 79,
-  "date": "2026-07-10",
-  "subject": "This Week: Cybersecurity, Energy Storage & more — July 10, 2026",
+  "issue": 80,
+  "date": "2026-07-13",
+  "subject": "This Week: Cybersecurity, Energy Storage & more — July 13, 2026",
   "articleCount": 12,
   "topicsCovered": [
     "cybersecurity",
     "energy",
     "biotech",
-    "fusion",
-    "quantum",
-    "av"
+    "robotics",
+    "av",
+    "ai",
+    "space"
   ],
   "articles": [
     {
-      "title": "'HalluSquatting' Turns AI Hallucinations Into Botnet Deli... | Cybersecurity News",
-      "slug": "8216hallusquatting8217-turns-ai-hallucinations-into-botnet-delivery-me",
+      "title": "Centers Laboratory Data Breach Affects 540,000 Individuals | Cybersecurity News",
+      "slug": "centers-laboratory-data-breach-affects-540000-individuals",
       "topic": "cybersecurity",
-      "excerpt": "Researchers demonstrate adversarial hallucination squatting against popular AI assistants to achieve remote code execution.\nThe post 'HalluSquatting' Turns AI Hallucinations Into Botnet Delivery Mecha",
-      "url": "https://technanoai.com/news/8216hallusquatting8217-turns-ai-hallucinations-into-botnet-delivery-me",
-      "date": "2026-07-10"
+      "excerpt": "The WorldLeaks extortion group claimed to have stolen 720 GB of data from the healthcare testing and laboratory services provider.\nThe post Centers Laboratory Data Breach Affects 540,000 Individuals a",
+      "url": "https://technanoai.com/news/centers-laboratory-data-breach-affects-540000-individuals",
+      "date": "2026-07-13"
     },
     {
-      "title": "Former ransomware negotiator gets 4 years for BlackCat at... | Cybersecurity News",
-      "slug": "former-ransomware-negotiator-gets-4-years-for-blackcat-attacks",
+      "title": "Claude Fable 5 stays free for paid users until July 19 as... | Cybersecurity News",
+      "slug": "claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-bu",
       "topic": "cybersecurity",
-      "excerpt": "A former employee of cybersecurity incident response company DigitalMint was sentenced to 70 months in prison for targeting U.S. companies in BlackCat (ALPHV) ransomware attacks. [...]",
-      "url": "https://technanoai.com/news/former-ransomware-negotiator-gets-4-years-for-blackcat-attacks",
-      "date": "2026-07-10"
+      "excerpt": "Anthropic has just extended access to Claude Fable 5 for paid subscribers until July 19, giving you another week to keep using the most powerful model. [...]",
+      "url": "https://technanoai.com/news/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-bu",
+      "date": "2026-07-13"
     },
     {
-      "title": "'Never underestimate the impact you can have, whatever yo... | Energy Storage News",
-      "slug": "8216never-underestimate-the-impact-you-can-have-whatever-your-role8217",
+      "title": "‘Australian first’ compressed CO2 battery project takes s... | Energy Storage News",
+      "slug": "australian-first-compressed-co2-battery-project-takes-shape",
       "topic": "energy",
-      "excerpt": "This week, Women in Solar+ Europe gives voice to Lindsay Dixon, Corporate Partnerships Manager at the UK’s SolarAid. She highlights how solar energy is not only a powerful tool for decarbonisation but",
-      "url": "https://technanoai.com/news/8216never-underestimate-the-impact-you-can-have-whatever-your-role8217",
-      "date": "2026-07-10"
+      "excerpt": "The Victorian government and Italian clean technology company Energy Dome have announced plans to develop Australia’s first long-duration compressed carbon dioxide battery energy storage facility in t",
+      "url": "https://technanoai.com/news/australian-first-compressed-co2-battery-project-takes-shape",
+      "date": "2026-07-13"
     },
     {
-      "title": "Canadian Solar unveils new EP Cube systems featuring high... | Energy Storage News",
-      "slug": "canadian-solar-unveils-new-ep-cube-systems-featuring-higher-power-scal",
+      "title": "Battery storage investment at stake as Australia’s AEMC c... | Energy Storage News",
+      "slug": "battery-storage-investment-at-stake-as-australias-aemc-consults-on-min",
       "topic": "energy",
-      "excerpt": "Canadian Solar has launched upgraded EP Cube Single-Phase 2.0 and Three-Phase Pro energy storage systems, combining hybrid inverters with modular LFP batteries for residential, C'I, and scalable backu",
-      "url": "https://technanoai.com/news/canadian-solar-unveils-new-ep-cube-systems-featuring-higher-power-scal",
-      "date": "2026-07-10"
+      "excerpt": "Australia's AEMC is consulting on minimum system load in the NEM, with battery energy storage investment at the heart of the debate.",
+      "url": "https://technanoai.com/news/battery-storage-investment-at-stake-as-australias-aemc-consults-on-min",
+      "date": "2026-07-13"
     },
     {
-      "title": "Ag Genomics Begins to Bear Fruit | Biotechnology News",
-      "slug": "ag-genomics-begins-to-bear-fruit",
+      "title": "<a href=\"/biotech/apnimed-dreams-ipo-fund-launch-sleep-ap... | Biotechnology News",
+      "slug": "a-hrefbiotechapnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-",
       "topic": "biotech",
-      "excerpt": "Genomics tools—applied to agriculture—create commercially desirable traits in a fraction of the time required by standard breeding programs.\nThe post Ag Genomics Begins to Bear Fruit appeared first on",
-      "url": "https://technanoai.com/news/ag-genomics-begins-to-bear-fruit",
-      "date": "2026-07-10"
+      "excerpt": "Apnimed is having sweet dreams of an IPO that could fund the planned commercial launch of an obstructive sleep apnea therapy that is currently awaiting an FDA approval decision.",
+      "url": "https://technanoai.com/news/a-hrefbiotechapnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-",
+      "date": "2026-07-13"
     },
     {
-      "title": "Crohn’s Disease Phage Therapy Neutralizes Inflammatory E.... | Biotechnology News",
-      "slug": "crohns-disease-phage-therapy-neutralizes-inflammatory-e-coli-in-mouse-",
+      "title": "<a href=\"/biotech/how-did-they-get-there-first-biotechs-f... | Biotechnology News",
+      "slug": "a-hrefbiotechhow-did-they-get-there-first-biotechs-forced-learn-new-tr",
       "topic": "biotech",
-      "excerpt": "Researchers developed a supportive bacteriophage therapy for Crohn’s disease that in a mouse model neutralized a type of E. coli bacteria that drives inflammation in the gut, and improved responses to",
-      "url": "https://technanoai.com/news/crohns-disease-phage-therapy-neutralizes-inflammatory-e-coli-in-mouse-",
-      "date": "2026-07-10"
+      "excerpt": "For a biotech, your intellectual property is your most prized asset. But a new era of increased global competition means that strong patents, longer stealth periods and even some misdirection can be r",
+      "url": "https://technanoai.com/news/a-hrefbiotechhow-did-they-get-there-first-biotechs-forced-learn-new-tr",
+      "date": "2026-07-13"
     },
     {
-      "title": "AI just supercharged the race to find room temperature su... | Nuclear Fusion News",
-      "slug": "ai-just-supercharged-the-race-to-find-room-temperature-superconductors",
-      "topic": "fusion",
-      "excerpt": "Scientists have combined machine learning with quantum physics to discover two new superconductors and create a much faster way to search for many more. The technique could bring researchers significa",
-      "url": "https://technanoai.com/news/ai-just-supercharged-the-race-to-find-room-temperature-superconductors",
-      "date": "2026-07-10"
+      "title": "Physicists recreate black hole energy extraction in the lab | Robotics News",
+      "slug": "physicists-recreate-black-hole-energy-extraction-in-the-lab",
+      "topic": "robotics",
+      "excerpt": "Researchers have recreated the physics of extracting energy from a spinning black hole using a stationary device that produces synthetic ultrafast rotation. The achievement transforms a long-standing ",
+      "url": "https://technanoai.com/news/physicists-recreate-black-hole-energy-extraction-in-the-lab",
+      "date": "2026-07-13"
     },
     {
-      "title": "Engineers solved an airflow mystery hidden nearly a mile ... | Nuclear Fusion News",
-      "slug": "engineers-solved-an-airflow-mystery-hidden-nearly-a-mile-underground",
-      "topic": "fusion",
-      "excerpt": "Engineers at a deep underground research facility noticed something strange during major rainstorms: airflow underground sometimes reversed direction. Using new sensors and mathematical modeling, they",
-      "url": "https://technanoai.com/news/engineers-solved-an-airflow-mystery-hidden-nearly-a-mile-underground",
-      "date": "2026-07-10"
+      "title": "STEM education in the classroom, introducing BotBall | Robotics News",
+      "slug": "stem-education-in-the-classroom-introducing-botball",
+      "topic": "robotics",
+      "excerpt": "Botball addresses STEM education with autonomous robotics, real coding, and a level playing field driven entirely by students.\nThe post STEM education in the classroom, introducing BotBall appeared fi",
+      "url": "https://technanoai.com/news/stem-education-in-the-classroom-introducing-botball",
+      "date": "2026-07-13"
     },
     {
-      "title": "Amsterdam’s QDNL Participations Rebrands as Ground State ... | Quantum Computing News",
-      "slug": "amsterdams-qdnl-participations-rebrands-as-ground-state-ventures-secur",
-      "topic": "quantum",
-      "excerpt": "Amsterdam-based specialized venture capital firm QDNL Participations has announced its formal corporate rebranding to Ground State Ventures as it prepares the final close of its inaugural early-stage ",
-      "url": "https://technanoai.com/news/amsterdams-qdnl-participations-rebrands-as-ground-state-ventures-secur",
-      "date": "2026-07-10"
-    },
-    {
-      "title": "QIZ Security Raises $17M Seed Round to Scale Enterprise C... | Quantum Computing News",
-      "slug": "qiz-security-raises-17m-seed-round-to-scale-enterprise-cryptographic-p",
-      "topic": "quantum",
-      "excerpt": "Post-Quantum Cryptography (PQC) orchestrator QIZ Security has secured a $17 million seed funding round to expand the deployment of its unified cryptographic governance and discovery platform. The inve",
-      "url": "https://technanoai.com/news/qiz-security-raises-17m-seed-round-to-scale-enterprise-cryptographic-p",
-      "date": "2026-07-10"
-    },
-    {
-      "title": "Another massive data breach exposed millions of driver's ... | Autonomous Vehicles News",
-      "slug": "another-massive-data-breach-exposed-millions-of-driver8217s-license-nu",
+      "title": "TechCrunch Mobility: A robotaxi ultimatum | Autonomous Vehicles News",
+      "slug": "techcrunch-mobility-a-robotaxi-ultimatum",
       "topic": "av",
-      "excerpt": "The cyberattack targeting a U.S. insurance giant is the largest known breach of driver's license numbers so far in 2026.",
-      "url": "https://technanoai.com/news/another-massive-data-breach-exposed-millions-of-driver8217s-license-nu",
-      "date": "2026-07-10"
+      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
+      "url": "https://technanoai.com/news/techcrunch-mobility-a-robotaxi-ultimatum",
+      "date": "2026-07-13"
     },
     {
-      "title": "Autonomous drone delivery startup Manna plots major US ex... | Autonomous Vehicles News",
-      "slug": "autonomous-drone-delivery-startup-manna-plots-major-us-expansion",
-      "topic": "av",
-      "excerpt": "Manna is launching a U.S. operations and manufacturing facility in Tulsa, Oklahoma, that will eventually employ 1,000 people.",
-      "url": "https://technanoai.com/news/autonomous-drone-delivery-startup-manna-plots-major-us-expansion",
-      "date": "2026-07-10"
+      "title": "iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploi... | AI News",
+      "slug": "icagenda-and-balbooa-forms-joomla-flaws-reportedly-exploited-as-zero-d",
+      "topic": "ai",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added two maximum-severity security flaws impacting iCagenda and Balbooa extensions for Joomla to its Known Exploited Vulnerabiliti",
+      "url": "https://technanoai.com/news/icagenda-and-balbooa-forms-joomla-flaws-reportedly-exploited-as-zero-d",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "Misconfigured Server Reveals Three Evilginx Phishing Oper... | AI News",
+      "slug": "misconfigured-server-reveals-three-evilginx-phishing-operations-target",
+      "topic": "ai",
+      "excerpt": "An attacker running a live Microsoft 365 phishing operation left a Python web server listening on a public port with directory listing switched on. The command that did it: python3 -m http.server 8080",
+      "url": "https://technanoai.com/news/misconfigured-server-reveals-three-evilginx-phishing-operations-target",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "China lines up methalox Long March 10C as commercial work... | Space Exploration News",
+      "slug": "china-lines-up-methalox-long-march-10c-as-commercial-workhorse-after-f",
+      "topic": "space",
+      "excerpt": "HELSINKI — China confirmed a methalox Long March 10C as its commercial workhorse following its first successful booster recovery, while injecting fresh capital into commercial rocket ventures. The Chi",
+      "url": "https://technanoai.com/news/china-lines-up-methalox-long-march-10c-as-commercial-workhorse-after-f",
+      "date": "2026-07-13"
     }
   ]
 }
