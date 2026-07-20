@@ -1,113 +1,114 @@
 {
-  "issue": 80,
-  "date": "2026-07-13",
-  "subject": "This Week: Cybersecurity, Energy Storage & more — July 13, 2026",
+  "issue": 81,
+  "date": "2026-07-20",
+  "subject": "This Week: Energy Storage, Autonomous Vehicles & more — July 20, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "cybersecurity",
     "energy",
-    "biotech",
-    "robotics",
     "av",
+    "biotech",
+    "quantum",
+    "cybersecurity",
     "ai",
-    "space"
+    "robotics",
+    "nuclear"
   ],
   "articles": [
     {
-      "title": "Centers Laboratory Data Breach Affects 540,000 Individuals | Cybersecurity News",
-      "slug": "centers-laboratory-data-breach-affects-540000-individuals",
-      "topic": "cybersecurity",
-      "excerpt": "The WorldLeaks extortion group claimed to have stolen 720 GB of data from the healthcare testing and laboratory services provider.\nThe post Centers Laboratory Data Breach Affects 540,000 Individuals a",
-      "url": "https://technanoai.com/news/centers-laboratory-data-breach-affects-540000-individuals",
-      "date": "2026-07-13"
-    },
-    {
-      "title": "Claude Fable 5 stays free for paid users until July 19 as... | Cybersecurity News",
-      "slug": "claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-bu",
-      "topic": "cybersecurity",
-      "excerpt": "Anthropic has just extended access to Claude Fable 5 for paid subscribers until July 19, giving you another week to keep using the most powerful model. [...]",
-      "url": "https://technanoai.com/news/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-bu",
-      "date": "2026-07-13"
-    },
-    {
-      "title": "‘Australian first’ compressed CO2 battery project takes s... | Energy Storage News",
-      "slug": "australian-first-compressed-co2-battery-project-takes-shape",
+      "title": "Australia adds 9.1GW of new generation and storage in FY2... | Energy Storage News",
+      "slug": "australia-adds-91gw-of-new-generation-and-storage-in-fy26-with-battery",
       "topic": "energy",
-      "excerpt": "The Victorian government and Italian clean technology company Energy Dome have announced plans to develop Australia’s first long-duration compressed carbon dioxide battery energy storage facility in t",
-      "url": "https://technanoai.com/news/australian-first-compressed-co2-battery-project-takes-shape",
-      "date": "2026-07-13"
+      "excerpt": "Australia's NEM connected 9.1GW of new generation and energy storage to full output in FY26, more than double the result achieved in FY25.",
+      "url": "https://technanoai.com/news/australia-adds-91gw-of-new-generation-and-storage-in-fy26-with-battery",
+      "date": "2026-07-20"
     },
     {
-      "title": "Battery storage investment at stake as Australia’s AEMC c... | Energy Storage News",
-      "slug": "battery-storage-investment-at-stake-as-australias-aemc-consults-on-min",
+      "title": "Australia sees record surge in solar, wind and battery pr... | Energy Storage News",
+      "slug": "australia-sees-record-surge-in-solar-wind-and-battery-projects",
       "topic": "energy",
-      "excerpt": "Australia's AEMC is consulting on minimum system load in the NEM, with battery energy storage investment at the heart of the debate.",
-      "url": "https://technanoai.com/news/battery-storage-investment-at-stake-as-australias-aemc-consults-on-min",
-      "date": "2026-07-13"
+      "excerpt": "Australia’s energy market operator says the past financial year was the best yet for the completion of large-scale renewable energy projects in the country, with a record 9.1 GW of new generation and ",
+      "url": "https://technanoai.com/news/australia-sees-record-surge-in-solar-wind-and-battery-projects",
+      "date": "2026-07-20"
     },
     {
-      "title": "<a href=\"/biotech/apnimed-dreams-ipo-fund-launch-sleep-ap... | Biotechnology News",
-      "slug": "a-hrefbiotechapnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-",
-      "topic": "biotech",
-      "excerpt": "Apnimed is having sweet dreams of an IPO that could fund the planned commercial launch of an obstructive sleep apnea therapy that is currently awaiting an FDA approval decision.",
-      "url": "https://technanoai.com/news/a-hrefbiotechapnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-",
-      "date": "2026-07-13"
-    },
-    {
-      "title": "<a href=\"/biotech/how-did-they-get-there-first-biotechs-f... | Biotechnology News",
-      "slug": "a-hrefbiotechhow-did-they-get-there-first-biotechs-forced-learn-new-tr",
-      "topic": "biotech",
-      "excerpt": "For a biotech, your intellectual property is your most prized asset. But a new era of increased global competition means that strong patents, longer stealth periods and even some misdirection can be r",
-      "url": "https://technanoai.com/news/a-hrefbiotechhow-did-they-get-there-first-biotechs-forced-learn-new-tr",
-      "date": "2026-07-13"
-    },
-    {
-      "title": "Physicists recreate black hole energy extraction in the lab | Robotics News",
-      "slug": "physicists-recreate-black-hole-energy-extraction-in-the-lab",
-      "topic": "robotics",
-      "excerpt": "Researchers have recreated the physics of extracting energy from a spinning black hole using a stationary device that produces synthetic ultrafast rotation. The achievement transforms a long-standing ",
-      "url": "https://technanoai.com/news/physicists-recreate-black-hole-energy-extraction-in-the-lab",
-      "date": "2026-07-13"
-    },
-    {
-      "title": "STEM education in the classroom, introducing BotBall | Robotics News",
-      "slug": "stem-education-in-the-classroom-introducing-botball",
-      "topic": "robotics",
-      "excerpt": "Botball addresses STEM education with autonomous robotics, real coding, and a level playing field driven entirely by students.\nThe post STEM education in the classroom, introducing BotBall appeared fi",
-      "url": "https://technanoai.com/news/stem-education-in-the-classroom-introducing-botball",
-      "date": "2026-07-13"
-    },
-    {
-      "title": "TechCrunch Mobility: A robotaxi ultimatum | Autonomous Vehicles News",
-      "slug": "techcrunch-mobility-a-robotaxi-ultimatum",
+      "title": "TechCrunch Mobility: The battle over robotaxi rules | Autonomous Vehicles News",
+      "slug": "techcrunch-mobility-the-battle-over-robotaxi-rules",
       "topic": "av",
       "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
-      "url": "https://technanoai.com/news/techcrunch-mobility-a-robotaxi-ultimatum",
-      "date": "2026-07-13"
+      "url": "https://technanoai.com/news/techcrunch-mobility-the-battle-over-robotaxi-rules",
+      "date": "2026-07-20"
     },
     {
-      "title": "iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploi... | AI News",
-      "slug": "icagenda-and-balbooa-forms-joomla-flaws-reportedly-exploited-as-zero-d",
+      "title": "<a href=\"/biotech/blossomhill-eyes-ipo-fertilizer-grow-ta... | Biotechnology News",
+      "slug": "a-hrefbiotechblossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cance",
+      "topic": "biotech",
+      "excerpt": "Another biotech is squeezing into the crowded IPO waiting room just in time for the weekend. BlossomHill Therapeutics, a San Diego-based oncology outfit focused on small molecules, has filed paperwork",
+      "url": "https://technanoai.com/news/a-hrefbiotechblossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cance",
+      "date": "2026-07-20"
+    },
+    {
+      "title": "<a href=\"/biotech/latigo-preps-ipo-fund-non-opioid-pain-d... | Biotechnology News",
+      "slug": "a-hrefbiotechlatigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-",
+      "topic": "biotech",
+      "excerpt": "Latigo Biotherapeutics is preparing to go public in order to bankroll the development of its clinical-stage pipeline of non-opioid pain management drugs.",
+      "url": "https://technanoai.com/news/a-hrefbiotechlatigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-",
+      "date": "2026-07-20"
+    },
+    {
+      "title": "A tiny universe in a bottle reveals clues to the origins ... | Quantum Computing News",
+      "slug": "a-tiny-universe-in-a-bottle-reveals-clues-to-the-origins-of-life",
+      "topic": "quantum",
+      "excerpt": "Researchers have created cosmic dust from scratch by recreating space-like conditions inside glass tubes. The dust contains complex carbon-rich molecules built from elements essential to life and prod",
+      "url": "https://technanoai.com/news/a-tiny-universe-in-a-bottle-reveals-clues-to-the-origins-of-life",
+      "date": "2026-07-20"
+    },
+    {
+      "title": "Chrome 150 Update Patches Severe Memory Safety Bugs | Cybersecurity News",
+      "slug": "chrome-150-update-patches-severe-memory-safety-bugs",
+      "topic": "cybersecurity",
+      "excerpt": "The fresh security update resolves six critical and high-severity use-after-free vulnerabilities.\nThe post Chrome 150 Update Patches Severe Memory Safety Bugs appeared first on SecurityWeek.",
+      "url": "https://technanoai.com/news/chrome-150-update-patches-severe-memory-safety-bugs",
+      "date": "2026-07-20"
+    },
+    {
+      "title": "Hackers abuse ViPNet software to target Russian govt agen... | Cybersecurity News",
+      "slug": "hackers-abuse-vipnet-software-to-target-russian-govt-agencies",
+      "topic": "cybersecurity",
+      "excerpt": "An advanced threat actor is abusing the update mechanism for the ViPNet private networking product suite to target Russian organizations, including government agencies. [...]",
+      "url": "https://technanoai.com/news/hackers-abuse-vipnet-software-to-target-russian-govt-agencies",
+      "date": "2026-07-20"
+    },
+    {
+      "title": "Can an Apple lawsuit derail OpenAI’s hardware plans? | AI News",
+      "slug": "can-an-apple-lawsuit-derail-openais-hardware-plans",
       "topic": "ai",
-      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added two maximum-severity security flaws impacting iCagenda and Balbooa extensions for Joomla to its Known Exploited Vulnerabiliti",
-      "url": "https://technanoai.com/news/icagenda-and-balbooa-forms-joomla-flaws-reportedly-exploited-as-zero-d",
-      "date": "2026-07-13"
+      "excerpt": "On the latest episode of Equity, we debate whether Apple's lawsuit will cast over OpenAi's much-discussed plans to get into hardware and go public.",
+      "url": "https://technanoai.com/news/can-an-apple-lawsuit-derail-openais-hardware-plans",
+      "date": "2026-07-20"
     },
     {
-      "title": "Misconfigured Server Reveals Three Evilginx Phishing Oper... | AI News",
-      "slug": "misconfigured-server-reveals-three-evilginx-phishing-operations-target",
+      "title": "Critical NGINX Vulnerability Can Crash Workers and May Al... | AI News",
+      "slug": "critical-nginx-vulnerability-can-crash-workers-and-may-allow-remote-co",
       "topic": "ai",
-      "excerpt": "An attacker running a live Microsoft 365 phishing operation left a Python web server listening on a public port with directory listing switched on. The command that did it: python3 -m http.server 8080",
-      "url": "https://technanoai.com/news/misconfigured-server-reveals-three-evilginx-phishing-operations-target",
-      "date": "2026-07-13"
+      "excerpt": "F5 has shipped fixes for a critical nginx flaw that lets a remote, unauthenticated attacker trigger a heap buffer overflow in the worker process with crafted HTTP requests. CVE-2026-42533 was patched ",
+      "url": "https://technanoai.com/news/critical-nginx-vulnerability-can-crash-workers-and-may-allow-remote-co",
+      "date": "2026-07-20"
     },
     {
-      "title": "China lines up methalox Long March 10C as commercial work... | Space Exploration News",
-      "slug": "china-lines-up-methalox-long-march-10c-as-commercial-workhorse-after-f",
-      "topic": "space",
-      "excerpt": "HELSINKI — China confirmed a methalox Long March 10C as its commercial workhorse following its first successful booster recovery, while injecting fresh capital into commercial rocket ventures. The Chi",
-      "url": "https://technanoai.com/news/china-lines-up-methalox-long-march-10c-as-commercial-workhorse-after-f",
-      "date": "2026-07-13"
+      "title": "How to avoid the teleoperation trap in robotics development | Robotics News",
+      "slug": "how-to-avoid-the-teleoperation-trap-in-robotics-development",
+      "topic": "robotics",
+      "excerpt": "Teleoperation is necessary for training humanoid robots, but reinforcement learning and simulation are still necessary, says Flexion's CEO.\nThe post How to avoid the teleoperation trap in robotics dev",
+      "url": "https://technanoai.com/news/how-to-avoid-the-teleoperation-trap-in-robotics-development",
+      "date": "2026-07-20"
+    },
+    {
+      "title": "Bulgaria launches LLW/ILW repository | Nuclear Energy News",
+      "slug": "bulgaria-launches-llwilw-repository",
+      "topic": "nuclear",
+      "excerpt": "Bulgaria has inaugurated its National Repository for Radioactive Waste near Kozloduy NPP to manage low- and intermediate-level waste.\nThe post Bulgaria launches LLW/ILW repository appeared first on Nu",
+      "url": "https://technanoai.com/news/bulgaria-launches-llwilw-repository",
+      "date": "2026-07-20"
     }
   ]
 }
