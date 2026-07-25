@@ -1,11 +1,11 @@
 {
-  "id": "fusion-1783682777941-3",
+  "id": "fusion-1784965834031-4",
   "topic": "fusion",
   "topicLabel": "Nuclear Fusion",
   "topicColor": "#fb923c",
   "title": "Engineers solved an airflow mystery hidden nearly a mile ... | Nuclear Fusion News",
   "excerpt": "Engineers at a deep underground research facility noticed something strange during major rainstorms: airflow underground sometimes reversed direction. Using new sensors and mathematical modeling, they",
-  "date": "2026-07-10",
+  "date": "2026-07-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/003-fusion-tokamak-reactor.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-10",
+      "date": "2026-07-25",
       "event": "Engineers solved an airflow mystery hidden nearly a mile underground",
       "current": true
     },

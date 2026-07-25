@@ -1,11 +1,11 @@
 {
-  "id": "bci-1783682775734-0",
+  "id": "bci-1784965833893-4",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Separating logic and language | Brain-Computer Interfaces News",
   "excerpt": "Neuroscientists find logical reasoning does not involve language-processing parts of the brain.",
-  "date": "2026-07-10",
+  "date": "2026-07-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-10",
+      "date": "2026-07-25",
       "event": "Separating logic and language",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Separating logic and language | Brain-Computer Interfaces News",
   "metaDescription": "Neuroscientists find logical reasoning does not involve language-processing parts of the brain. Neural implants & EEG control. Latest Brain-Computer Interfaces ",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, separating, logic, language, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }

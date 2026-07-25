@@ -1,11 +1,11 @@
 {
-  "id": "fusion-1783682777939-2",
+  "id": "fusion-1784965834031-3",
   "topic": "fusion",
   "topicLabel": "Nuclear Fusion",
   "topicColor": "#fb923c",
   "title": "AI just supercharged the race to find room temperature su... | Nuclear Fusion News",
   "excerpt": "Scientists have combined machine learning with quantum physics to discover two new superconductors and create a much faster way to search for many more. The technique could bring researchers significa",
-  "date": "2026-07-10",
+  "date": "2026-07-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/003-fusion-tokamak-reactor.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-10",
+      "date": "2026-07-25",
       "event": "AI just supercharged the race to find room temperature superconductors",
       "current": true
     },

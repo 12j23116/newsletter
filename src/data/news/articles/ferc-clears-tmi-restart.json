@@ -1,11 +1,11 @@
 {
-  "id": "nuclear-1783682744335-2",
+  "id": "nuclear-1784965830209-2",
   "topic": "nuclear",
   "topicLabel": "Nuclear Energy",
   "topicColor": "#f59e0b",
   "title": "FERC clears TMI restart | Nuclear Energy News",
   "excerpt": "Constellation Energy has secured FERC approval to overcome transmission barriers and accelerate the restart of Three Mile Island Unit 1.\nThe post FERC clears TMI restart appeared first on Nuclear Engi",
-  "date": "2026-07-10",
+  "date": "2026-07-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/010-nuclear-smr-reactor.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-10",
+      "date": "2026-07-25",
       "event": "FERC clears TMI restart",
       "current": true
     },

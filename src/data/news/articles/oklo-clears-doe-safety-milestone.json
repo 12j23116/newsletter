@@ -1,11 +1,11 @@
 {
-  "id": "nuclear-1783682744339-4",
+  "id": "nuclear-1784965830210-4",
   "topic": "nuclear",
   "topicLabel": "Nuclear Energy",
   "topicColor": "#f59e0b",
   "title": "Oklo clears DOE safety milestone | Nuclear Energy News",
   "excerpt": "The US DoE has approved Oklo’s Preliminary Documented Safety Analysis for the Aurora-INL reactor, bringing it a step closer to construction and operation.\nThe post Oklo clears DOE safety milestone app",
-  "date": "2026-07-10",
+  "date": "2026-07-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/010-nuclear-smr-reactor.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-10",
+      "date": "2026-07-25",
       "event": "Oklo clears DOE safety milestone",
       "current": true
     },
