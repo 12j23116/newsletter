@@ -1,21 +1,21 @@
 {
-  "id": "ai-1783755596203-4",
+  "id": "ai-1785053239186-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US h... | AI News",
-  "excerpt": "The AI chip boom just produced its biggest Wall Street moment yet. Now SK Hynix and Samsung are being asked to build U.S. factories.",
-  "date": "2026-07-11",
+  "title": "Librarians are hosting viral 'Avoiding AI' workshops for ... | AI News",
+  "excerpt": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand.",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "sk-hynix-raises-265b-in-the-biggest-foreign-ipo-in-us-history-is-urged",
-  "sourceLink": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
-  "sourceName": "Kate Park",
+  "slug": "librarians-are-hosting-viral-8216avoiding-ai8217-workshops-for-people-",
+  "sourceLink": "https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech/",
+  "sourceName": "Amanda Silberling",
   "body": [
     {
       "type": "p",
-      "text": "The AI chip boom just produced its biggest Wall Street moment yet.  Now SK Hynix and Samsung are being asked to build U."
+      "text": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "S.  factories."
+      "text": "According to reporting from Amanda Silberling, At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to bui — a notable development in AI",
+    "Librarians are hosting viral 'Avoiding AI' workshops for people who are fed up w — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Kate Park",
+      "value": "Amanda Silberling",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to bui",
+      "date": "2026-07-26",
+      "event": "Librarians are hosting viral 'Avoiding AI' workshops for people who are fed up w",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hynix",
-    "raises",
+    "librarians",
+    "hosting",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SK Hynix raises $26.5B in the biggest foreign IPO in US h... | AI News",
-  "metaDescription": "The AI chip boom just produced its biggest Wall Street moment yet. Now SK Hynix and Samsung are being asked to build U.S. factories.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hynix, raises, biggest, TechNanoAI, emerging tech news",
+  "metaTitle": "Librarians are hosting viral 'Avoiding AI' workshops for ... | AI News",
+  "metaDescription": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand. LLMs, agents & the race to AGI. Latest AI developments and analysis",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, librarians, hosting, viral, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "av-1783755604556-5",
+  "id": "av-1785053245142-0",
   "topic": "av",
   "topicLabel": "Autonomous Vehicles",
   "topicColor": "#8b5cf6",
-  "title": "This startup pits dealerships against each other to bid o... | Autonomous Vehicles News",
-  "excerpt": "Bidbus, which lets dealerships bid on used cars, has raised $15 million in a Series A round that was led by early-stage mobility fund Ibex Investors.",
-  "date": "2026-07-11",
+  "title": "Elon Musk’s Boring Company reportedly raising funding at ... | Autonomous Vehicles News",
+  "excerpt": "Elon Musk's tunneling startup is reportedly in talks for a major new funding round.",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/006-av-autonomous-vehicle.webp",
-  "slug": "this-startup-pits-dealerships-against-each-other-to-bid-on-your-used-c",
-  "sourceLink": "https://techcrunch.com/2026/07/07/this-startup-is-pitting-dealerships-against-each-other-to-bid-on-your-used-car/",
-  "sourceName": "Sean O'Kane",
+  "slug": "elon-musks-boring-company-reportedly-raising-funding-at-a-20-billion-v",
+  "sourceLink": "https://techcrunch.com/2026/07/25/elon-musks-boring-company-reportedly-raising-funding-at-a-20-billion-valuation/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Bidbus, which lets dealerships bid on used cars, has raised $15 million in a Series A round that was led by early-stage mobility fund Ibex Investors."
+      "text": "Elon Musk's tunneling startup is reportedly in talks for a major new funding round."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sean O'Kane, Bidbus, which lets dealerships bid on used cars, has raised $15 million in a Series A round that was led by early-stage mobility fund Ibex Investors.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Elon Musk's tunneling startup is reportedly in talks for a major new funding round.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "This startup pits dealerships against each other to bid on your used car — a notable development in Autonomous Vehicles",
+    "Elon Musk’s Boring Company reportedly raising funding at a $20 billion valuation — a notable development in Autonomous Vehicles",
     "The autonomous vehicles sector continues to accelerate, with robotaxis & level 4 autonomy driving rapid progress",
     "Industry context: Autonomous vehicles are scaling commercially, with robotaxi services operating in 40+ cities and Lev...",
     "Challenges remain: Edge case handling in dense urban environments, regulatory frameworks for driver...",
@@ -120,7 +120,7 @@
       "change": "Robotaxis & Level 4 autonomy"
     },
     {
-      "value": "Sean O'Kane",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "This startup pits dealerships against each other to bid on your used car",
+      "date": "2026-07-26",
+      "event": "Elon Musk’s Boring Company reportedly raising funding at a $20 billion valuation",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "autonomous vehicles",
     "self-driving",
-    "startup",
-    "dealerships",
+    "boring",
+    "company",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "This startup pits dealerships against each other to bid o... | Autonomous Vehicles News",
-  "metaDescription": "Bidbus, which lets dealerships bid on used cars, has raised $15 million in a Series A round that was led by early-stage mobility fund Ibex Investors.",
-  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, this, startup, pits, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Elon Musk’s Boring Company reportedly raising funding at ... | Autonomous Vehicles News",
+  "metaDescription": "Elon Musk's tunneling startup is reportedly in talks for a major new funding round. Robotaxis & Level 4 autonomy. Latest Autonomous Vehicles developments and an",
+  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, elon, musk, boring, TechNanoAI, emerging tech news",
+  "featured": true
 }

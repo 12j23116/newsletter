@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1783755597446-3",
+  "id": "cybersecurity-1785053239580-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Police suspects Dutch hackers were involved in Odido breach | Cybersecurity News",
-  "excerpt": "The Dutch National Police (Politie) says it has found \"strong indications\" that Dutch hackers have been involved in a February breach at the telecommunications provider Odido. [...]",
-  "date": "2026-07-11",
+  "title": "ShinyHunters data leaks fuel $2,000 sextortion email scam | Cybersecurity News",
+  "excerpt": "Threat actors are using email addresses exposed in data breaches leaked by the ShinyHunters extortion group to send sextortion emails demanding $2,000 in Bitcoin. [...]",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "police-suspects-dutch-hackers-were-involved-in-odido-breach",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/police-suspects-dutch-hackers-were-involved-in-odido-breach/",
-  "sourceName": "Sergiu Gatlan",
+  "slug": "shinyhunters-data-leaks-fuel-2000-sextortion-email-scam",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/shinyhunters-data-leaks-fuel-2-000-sextortion-email-scam/",
+  "sourceName": "Lawrence Abrams",
   "body": [
     {
       "type": "p",
-      "text": "The Dutch National Police (Politie) says it has found \"strong indications\" that Dutch hackers have been involved in a February breach at the telecommunications provider Odido.  [..."
+      "text": "Threat actors are using email addresses exposed in data breaches leaked by the ShinyHunters extortion group to send sextortion emails demanding $2,000 in Bitcoin.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sergiu Gatlan, The Dutch National Police (Politie) says it has found \"strong indications\" that Dutch hackers have been involved in a February breach at the telecommunications provider Odido. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lawrence Abrams, Threat actors are using email addresses exposed in data breaches leaked by the ShinyHunters extortion group to send sextortion emails demanding $2,000 in Bitcoin. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Police suspects Dutch hackers were involved in Odido breach — a notable development in Cybersecurity",
+    "ShinyHunters data leaks fuel $2,000 sextortion email scam — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Sergiu Gatlan",
+      "value": "Lawrence Abrams",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "Police suspects Dutch hackers were involved in Odido breach",
+      "date": "2026-07-26",
+      "event": "ShinyHunters data leaks fuel $2,000 sextortion email scam",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "police",
-    "suspects",
+    "shinyhunters",
+    "leaks",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Police suspects Dutch hackers were involved in Odido breach | Cybersecurity News",
-  "metaDescription": "The Dutch National Police (Politie) says it has found \"strong indications\" that Dutch hackers have been involved in a February breach at the telecommunicatio...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, police, suspects, dutch, TechNanoAI, emerging tech news",
+  "metaTitle": "ShinyHunters data leaks fuel $2,000 sextortion email scam | Cybersecurity News",
+  "metaDescription": "Threat actors are using email addresses exposed in data breaches leaked by the ShinyHunters extortion group to send sextortion emails demanding $2,000 in Bit...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, shinyhunters, data, leaks, TechNanoAI, emerging tech news",
   "featured": false
 }

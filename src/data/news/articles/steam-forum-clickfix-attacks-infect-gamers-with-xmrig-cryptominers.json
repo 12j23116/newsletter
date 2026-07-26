@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1783755597447-5",
+  "id": "cybersecurity-1785053239579-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Injective Labs GitHub Compromise Pushes Wallet-Key-Steali... | Cybersecurity News",
-  "excerpt": "Unknown threat actors compromised the Injective Labs SDK project's GitHub repository and leveraged it to publish a malicious package on the npm registry to steal cryptocurrency wallet private keys and",
-  "date": "2026-07-11",
+  "title": "Steam forum ClickFix attacks infect gamers with XMRig cry... | Cybersecurity News",
+  "excerpt": "Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptominers. [...]",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "injective-labs-github-compromise-pushes-wallet-key-stealing-npm-packag",
-  "sourceLink": "https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/",
+  "sourceName": "Lawrence Abrams",
   "body": [
     {
       "type": "p",
-      "text": "Unknown threat actors compromised the Injective Labs SDK project's GitHub repository and leveraged it to publish a malicious package on the npm registry to steal cryptocurrency wallet private keys and mnemonic seed phrases. \n\nThe compromised version, @injectivelabs/sdk-ts@1."
+      "text": "Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptominers.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "20. 21, came embedded with fake telemetry functionality that exfiltrated data from cryptocurrency wallets."
+      "text": "According to reporting from Lawrence Abrams, Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptominers. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages — a notable development in Cybersecurity",
+    "Steam forum ClickFix attacks infect gamers with XMRig cryptominers — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Lawrence Abrams",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages",
+      "date": "2026-07-26",
+      "event": "Steam forum ClickFix attacks infect gamers with XMRig cryptominers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "injective",
-    "github",
+    "steam",
+    "forum",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Injective Labs GitHub Compromise Pushes Wallet-Key-Steali... | Cybersecurity News",
-  "metaDescription": "Unknown threat actors compromised the Injective Labs SDK project's GitHub repository and leveraged it to publish a malicious package on the npm registry to s...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, injective, labs, github, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Steam forum ClickFix attacks infect gamers with XMRig cry... | Cybersecurity News",
+  "metaDescription": "Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptom...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, steam, forum, clickfix, TechNanoAI, emerging tech news",
+  "featured": true
 }

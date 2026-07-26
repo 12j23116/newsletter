@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1783755605169-1",
+  "id": "quantum-1785053245520-4",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "ETH Zurich Combines Superconducting Qubits with Mechanica... | Quantum Computing News",
-  "excerpt": "Researchers at ETH Zurich have engineered a hardware architecture for quantum computers that separates processing from working memory by utilizing mechanical vibrations instead of electromagnetic fiel",
-  "date": "2026-07-11",
+  "title": "Infleqtion to Deploy Fault-Tolerant Neutral-Atom Quantum ... | Quantum Computing News",
+  "excerpt": "Quantum computing and sensing company Infleqtion (NYSE: INFQ) has announced plans to deploy its fault-tolerant, neutral-atom quantum computer—Sqale—at the Illinois Quantum & Microelectronics Park (IQM",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "eth-zurich-combines-superconducting-qubits-with-mechanical-resonators-",
-  "sourceLink": "https://quantumcomputingreport.com/eth-zurich-combines-superconducting-qubits-with-mechanical-resonators-to-build-vibrating-quantum-ram/",
+  "slug": "infleqtion-to-deploy-fault-tolerant-neutral-atom-quantum-computer-at-i",
+  "sourceLink": "https://quantumcomputingreport.com/infleqtion-to-deploy-fault-tolerant-neutral-atom-quantum-computer-at-illinois-quantum-park/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Researchers at ETH Zurich have engineered a hardware architecture for quantum computers that separates processing from working memory by utilizing mechanical vibrations instead of electromagnetic fields.  Published in Science (\"Mechanical resonator–based quantum computing\"), the design mirrors classical computing frameworks that isolate a central processing unit (CPU) from random access memory (RAM)."
+      "text": "Quantum computing and sensing company Infleqtion (NYSE: INFQ) has announced plans to deploy its fault-tolerant, neutral-atom quantum computer—Sqale—at the Illinois Quantum & Microelectronics Park (IQMP) in Chicago, with hardware delivery scheduled for 2027.  In parallel, the company opened its new Chicago Quantum Innovation Center, an application development hub that will initially function as a center  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "By storing information as  [..."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Quantum computing and sensing company Infleqtion (NYSE: INFQ) has announced plans to deploy its fault-tolerant, neutral-atom quantum computer—Sqale—at the Illinois Quantum & Microelectronics Park (IQMP) in Chicago, with hardware delivery scheduled for 2027. In parallel, the company opened its new Chicago Quantum Innovation Center, an application development hub that will initially function as a center  [...]\nThe post Infleqtion to Deploy Fault-Tolerant Neutral-Atom Quantum Computer at Illinois Q. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "ETH Zurich Combines Superconducting Qubits with Mechanical Resonators to Build V — a notable development in Quantum Computing",
+    "Infleqtion to Deploy Fault-Tolerant Neutral-Atom Quantum Computer at Illinois Qu — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "ETH Zurich Combines Superconducting Qubits with Mechanical Resonators to Build V",
+      "date": "2026-07-26",
+      "event": "Infleqtion to Deploy Fault-Tolerant Neutral-Atom Quantum Computer at Illinois Qu",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "zurich",
-    "combines",
+    "infleqtion",
+    "deploy",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "ETH Zurich Combines Superconducting Qubits with Mechanica... | Quantum Computing News",
-  "metaDescription": "Researchers at ETH Zurich have engineered a hardware architecture for quantum computers that separates processing from working memory by utilizing mechanical...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, zurich, combines, superconducting, TechNanoAI, emerging tech news",
+  "metaTitle": "Infleqtion to Deploy Fault-Tolerant Neutral-Atom Quantum ... | Quantum Computing News",
+  "metaDescription": "Quantum computing and sensing company Infleqtion (NYSE: INFQ) has announced plans to deploy its fault-tolerant, neutral-atom quantum computer—Sqale—at the Il...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, infleqtion, deploy, fault, TechNanoAI, emerging tech news",
   "featured": false
 }

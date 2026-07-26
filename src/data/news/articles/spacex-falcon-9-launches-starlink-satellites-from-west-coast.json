@@ -1,21 +1,21 @@
 {
-  "id": "space-1783755598534-3",
+  "id": "space-1785053240395-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Early Career Faculty (ECF) 2025 Awards | Space Exploration News",
-  "excerpt": "Back to ECF Home Advanced Diagnostics for High-Enthalpy Test Facilities Simulating Spacecraft Atmospheric Entry Planning for Autonomous Spacecraft Using Machine Learning Methods to Enable Onboard Guid",
-  "date": "2026-07-11",
+  "title": "SpaceX Falcon 9 launches Starlink satellites from West Coast | Space Exploration News",
+  "excerpt": "Liftoff from Vandenberg Space Force Base in California occurred at 8:51 a.m. PDT (11:51 a.m. EDT / 1551 UTC). The Falcon 9 placed 24 Starlink satellites into orbit.",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "early-career-faculty-ecf-2025-awards",
-  "sourceLink": "https://www.nasa.gov/directorates/stmd/space-tech-research-grants/ecf/early-career-faculty-ecf-2025-awards/",
-  "sourceName": "Loura Hall",
+  "slug": "spacex-falcon-9-launches-starlink-satellites-from-west-coast",
+  "sourceLink": "https://spaceflightnow.com/2026/07/25/live-coverage-spacex-falcon-9-to-launch-starlink-satellites-from-west-coast/",
+  "sourceName": "Steven Young",
   "body": [
     {
       "type": "p",
-      "text": "Back to ECF Home Advanced Diagnostics for High-Enthalpy Test Facilities Simulating Spacecraft Atmospheric Entry Planning for Autonomous Spacecraft Using Machine Learning Methods to Enable Onboard Guidance, Navigation, and Control"
+      "text": "Liftoff from Vandenberg Space Force Base in California occurred at 8:51 a. m."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Loura Hall, Back to ECF Home Advanced Diagnostics for High-Enthalpy Test Facilities Simulating Spacecraft Atmospheric Entry Planning for Autonomous Spacecraft Using Machine Learning Methods to Enable Onboard Guidance, Navigation, and Control. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "PDT (11:51 a. m."
+    },
+    {
+      "type": "p",
+      "text": "EDT / 1551 UTC).  The Falcon 9 placed 24 Starlink satellites into orbit."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Early Career Faculty (ECF) 2025 Awards — a notable development in Space Exploration",
+    "SpaceX Falcon 9 launches Starlink satellites from West Coast — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Loura Hall",
+      "value": "Steven Young",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "Early Career Faculty (ECF) 2025 Awards",
+      "date": "2026-07-26",
+      "event": "SpaceX Falcon 9 launches Starlink satellites from West Coast",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "early",
-    "career",
+    "spacex",
+    "falcon",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Early Career Faculty (ECF) 2025 Awards | Space Exploration News",
-  "metaDescription": "Back to ECF Home Advanced Diagnostics for High-Enthalpy Test Facilities Simulating Spacecraft Atmospheric Entry Planning for Autonomous Spacecraft Using Mach...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, early, career, faculty, TechNanoAI, emerging tech news",
+  "metaTitle": "SpaceX Falcon 9 launches Starlink satellites from West Coast | Space Exploration News",
+  "metaDescription": "Liftoff from Vandenberg Space Force Base in California occurred at 8:51 a.m. PDT (11:51 a.m. EDT / 1551 UTC). The Falcon 9 placed 24 Starlink satellites into...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, falcon, launches, TechNanoAI, emerging tech news",
   "featured": false
 }

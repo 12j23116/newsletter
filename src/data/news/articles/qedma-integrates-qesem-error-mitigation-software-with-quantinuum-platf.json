@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1783755605169-0",
+  "id": "quantum-1785053245519-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "MIT and IBM Project Quantum Unity Operators into Language... | Quantum Computing News",
-  "excerpt": "Researchers from the MIT-IBM Computing Research Lab and IBM Quantum have developed a multimodal alignment framework that maps quantum unitary operators directly into the latent space of a large langua",
-  "date": "2026-07-11",
-  "readTime": "4 min",
+  "title": "Qedma Integrates QESEM Error Mitigation Software with Qua... | Quantum Computing News",
+  "excerpt": "Quantum software provider Qedma has announced a technical integration with Quantinuum, making its Quantum Error Suppression and Error Mitigation (QESEM) platform directly available across Quantinuum’s",
+  "date": "2026-07-26",
+  "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "mit-and-ibm-project-quantum-unity-operators-into-language-model-latent",
-  "sourceLink": "https://quantumcomputingreport.com/mit-and-ibm-project-quantum-unity-operators-into-language-model-latent-spaces-for-multimodal-circuit-synthesis/",
+  "slug": "qedma-integrates-qesem-error-mitigation-software-with-quantinuum-platf",
+  "sourceLink": "https://quantumcomputingreport.com/qedma-integrates-qesem-error-mitigation-software-with-quantinuum-platform/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Researchers from the MIT-IBM Computing Research Lab and IBM Quantum have developed a multimodal alignment framework that maps quantum unitary operators directly into the latent space of a large language model (LLM).  Published as an IEEE QCE 2026 conference paper (\"Aligning Quantum Operators with Large Language Models\"), the architecture treats mathematical quantum operations as \"visual  [..."
+      "text": "Quantum software provider Qedma has announced a technical integration with Quantinuum, making its Quantum Error Suppression and Error Mitigation (QESEM) platform directly available across Quantinuum’s trapped-ion hardware systems.  Developed over the past year through Qedma’s role as a founding member of the Quantinuum Startup Partner Program, the integration combines Qedma’s hardware-agnostic noise-reduction algorithms with Quantinuum’s  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Researchers from the MIT-IBM Computing Research Lab and IBM Quantum have developed a multimodal alignment framework that maps quantum unitary operators directly into the latent space of a large language model (LLM). Published as an IEEE QCE 2026 conference paper (\"Aligning Quantum Operators with Large Language Models\"), the architecture treats mathematical quantum operations as \"visual  [...]\nThe post MIT and IBM Project Quantum Unity Operators into Language Model Latent Spaces for Multimodal Ci. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Quantum software provider Qedma has announced a technical integration with Quantinuum, making its Quantum Error Suppression and Error Mitigation (QESEM) platform directly available across Quantinuum’s trapped-ion hardware systems. Developed over the past year through Qedma’s role as a founding member of the Quantinuum Startup Partner Program, the integration combines Qedma’s hardware-agnostic noise-reduction algorithms with Quantinuum’s  [...]\nThe post Qedma Integrates QESEM Error Mitigation Sof. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "MIT and IBM Project Quantum Unity Operators into Language Model Latent Spaces fo — a notable development in Quantum Computing",
+    "Qedma Integrates QESEM Error Mitigation Software with Quantinuum Platform — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "MIT and IBM Project Quantum Unity Operators into Language Model Latent Spaces fo",
+      "date": "2026-07-26",
+      "event": "Qedma Integrates QESEM Error Mitigation Software with Quantinuum Platform",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "project",
-    "quantum",
+    "qedma",
+    "integrates",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "MIT and IBM Project Quantum Unity Operators into Language... | Quantum Computing News",
-  "metaDescription": "Researchers from the MIT-IBM Computing Research Lab and IBM Quantum have developed a multimodal alignment framework that maps quantum unitary operators direc...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, project, quantum, unity, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Qedma Integrates QESEM Error Mitigation Software with Qua... | Quantum Computing News",
+  "metaDescription": "Quantum software provider Qedma has announced a technical integration with Quantinuum, making its Quantum Error Suppression and Error Mitigation (QESEM) plat...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, qedma, integrates, qesem, TechNanoAI, emerging tech news",
+  "featured": false
 }

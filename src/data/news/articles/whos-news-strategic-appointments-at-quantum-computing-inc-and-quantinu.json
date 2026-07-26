@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1783755605170-3",
+  "id": "quantum-1785053245518-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Who’s News: Strategic Appointments at Photonic, Aliro Qua... | Quantum Computing News",
-  "excerpt": "Photonic Inc. has appointed Orlagh Neary as Chief Marketing Officer (CMO) and Briony Shipman as Vice President, Global Government Affairs. Neary joins from Microsoft, where she recently served as Gene",
-  "date": "2026-07-11",
+  "title": "Who’s News: Strategic Appointments at Quantum Computing I... | Quantum Computing News",
+  "excerpt": "Quantum Computing Inc. (QCi) has appointed Susan Hunt as Chief Revenue Officer (CRO). Hunt brings over 30 years of experience in enterprise sales and go-to-market execution across AI, cloud computing,",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "whos-news-strategic-appointments-at-photonic-aliro-quantum-florida-atl",
-  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-photonic-aliro-quantum-florida-atlantic-university-qusecure-quantum-elements-and-qai-ventures/",
+  "slug": "whos-news-strategic-appointments-at-quantum-computing-inc-and-quantinu",
+  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-quantum-computing-inc-and-quantinuum/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Photonic Inc.  has appointed Orlagh Neary as Chief Marketing Officer (CMO) and Briony Shipman as Vice President, Global Government Affairs."
+      "text": "Quantum Computing Inc.  (QCi) has appointed Susan Hunt as Chief Revenue Officer (CRO)."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "Neary joins from Microsoft, where she recently served as General Manager of Microsoft Quantum and AI Ecosystem Engagement.  Shipman joins following a tenure as head of Cyber and Physical Defence, Data Security and Supply Chain  [..."
+      "text": "Hunt brings over 30 years of experience in enterprise sales and go-to-market execution across AI, cloud computing, and telecommunications, having previously held executive roles at Orbital Insight, Nuance Communications, LivePerson, Salesforce, and Sprint PCS.  Concurrently, former CRO Pouya Dianat has transitioned into  [..."
+    },
+    {
+      "type": "p",
+      "text": "]\nThe post Who’s News: Strategic Appointments at Quantum Computing Inc."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Who’s News: Strategic Appointments at Photonic, Aliro Quantum, Florida Atlantic  — a notable development in Quantum Computing",
+    "Who’s News: Strategic Appointments at Quantum Computing Inc. and Quantinuum — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "Who’s News: Strategic Appointments at Photonic, Aliro Quantum, Florida Atlantic ",
+      "date": "2026-07-26",
+      "event": "Who’s News: Strategic Appointments at Quantum Computing Inc. and Quantinuum",
       "current": true
     },
     {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Who’s News: Strategic Appointments at Photonic, Aliro Qua... | Quantum Computing News",
-  "metaDescription": "Photonic Inc. has appointed Orlagh Neary as Chief Marketing Officer (CMO) and Briony Shipman as Vice President, Global Government Affairs. Neary joins from M...",
+  "metaTitle": "Who’s News: Strategic Appointments at Quantum Computing I... | Quantum Computing News",
+  "metaDescription": "Quantum Computing Inc. (QCi) has appointed Susan Hunt as Chief Revenue Officer (CRO). Hunt brings over 30 years of experience in enterprise sales and go-to-m...",
   "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
-  "featured": false
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1783755603879-2",
+  "id": "robotics-1785053244671-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "AI² Robotics raises $735M at $3B valuation for wheeled hu... | Robotics News",
-  "excerpt": "Shenzhen’s Ai2 Robotics raised $735 million at a $2.8 billion valuation, backed by state, corporate, and financial giants.\nThe post AI² Robotics raises $735M at $3B valuation for wheeled humanoid robo",
-  "date": "2026-07-11",
+  "title": "Photos: First look at J'J's Ottava surgical robot | Robotics News",
+  "excerpt": "The robot-in-table design is meant to save space in the operating room, with J'J saying its novel architecture takes up 30-50% less space than boom-and-cart systems.\nThe post Photos: First look at J'J",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "ai-robotics-raises-735m-at-3b-valuation-for-wheeled-humanoid-robots",
-  "sourceLink": "https://www.therobotreport.com/ai%c2%b2-robotics-raises-735m-3b-valuation-wheeled-humanoid-robots/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "photos-first-look-at-j038j8217s-ottava-surgical-robot",
+  "sourceLink": "https://www.therobotreport.com/photos-first-look-at-jjs-ottava-surgical-robot/",
+  "sourceName": "Jim Hammerand",
   "body": [
     {
       "type": "p",
-      "text": "Shenzhen’s Ai2 Robotics raised $735 million at a $2. 8 billion valuation, backed by state, corporate, and financial giants."
+      "text": "The robot-in-table design is meant to save space in the operating room, with J'J saying its novel architecture takes up 30-50% less space than boom-and-cart systems. \nThe post Photos: First look at J'J's Ottava surgical robot appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post AI² Robotics raises $735M at $3B valuation for wheeled humanoid robots appeared first on The Robot Report."
+      "text": "According to reporting from Jim Hammerand, The robot-in-table design is meant to save space in the operating room, with J'J saying its novel architecture takes up 30-50% less space than boom-and-cart systems.\nThe post Photos: First look at J'J's Ottava surgical robot appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "AI² Robotics raises $735M at $3B valuation for wheeled humanoid robots — a notable development in Robotics",
+    "Photos: First look at J'J's Ottava surgical robot — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Jim Hammerand",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "AI² Robotics raises $735M at $3B valuation for wheeled humanoid robots",
+      "date": "2026-07-26",
+      "event": "Photos: First look at J'J's Ottava surgical robot",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "robotics",
-    "raises",
+    "photos",
+    "first",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "AI² Robotics raises $735M at $3B valuation for wheeled hu... | Robotics News",
-  "metaDescription": "Shenzhen’s Ai2 Robotics raised $735 million at a $2.8 billion valuation, backed by state, corporate, and financial giants.\nThe post AI² Robotics raises $735M...",
-  "keywords": "robotics, humanoid robot, automation, drones, robotics, raises, valuation, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Photos: First look at J'J's Ottava surgical robot | Robotics News",
+  "metaDescription": "The robot-in-table design is meant to save space in the operating room, with J'J saying its novel architecture takes up 30-50% less space than boom-and-cart ...",
+  "keywords": "robotics, humanoid robot, automation, drones, photos, first, look, TechNanoAI, emerging tech news",
+  "featured": true
 }

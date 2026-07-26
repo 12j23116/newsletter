@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1783755605171-5",
+  "id": "quantum-1785053245519-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Google Research Stabilizes 'Willow' Quantum Processor Usi... | Quantum Computing News",
-  "excerpt": "Overview of RL control. Google Quantum AI has introduced a hardware-control framework that unifies real-time calibration with active quantum error correction (QEC), allowing an autonomous reinforcemen",
-  "date": "2026-07-11",
+  "title": "Quantum Elements Launches 'Orbit' as Qiskit Function for ... | Quantum Computing News",
+  "excerpt": "Quantum software provider Quantum Elements has released Orbit, an advanced error suppression tool accessible as a Qiskit Function in the IBM Qiskit Functions Catalog. Designed to streamline noise mana",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "google-research-stabilizes-8220willow8221-quantum-processor-using-cont",
-  "sourceLink": "https://quantumcomputingreport.com/google-research-stabilizes-willow-quantum-processor-using-continuous-reinforcement-learning-control-layers/",
+  "slug": "quantum-elements-launches-8220orbit8221-as-qiskit-function-for-automat",
+  "sourceLink": "https://quantumcomputingreport.com/quantum-elements-launches-orbit-as-qiskit-function-for-automated-error-suppression/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Overview of RL control.  Google Quantum AI has introduced a hardware-control framework that unifies real-time calibration with active quantum error correction (QEC), allowing an autonomous reinforcement learning (RL) agent to stabilize logical qubits during uninterrupted execution."
+      "text": "Quantum software provider Quantum Elements has released Orbit, an advanced error suppression tool accessible as a Qiskit Function in the IBM Qiskit Functions Catalog.  Designed to streamline noise management for quantum developers, Orbit provides members of the IBM Quantum Network with an automated, low-overhead suite to improve circuit execution fidelity on live processors."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Published in Nature (\"Reinforcement learning control of quantum error correction\"), the engineering milestone addresses the primary bottleneck facing fault-tolerant  [..."
+      "text": "The tool  [..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Google Research Stabilizes 'Willow' Quantum Processor Using Continuous Reinforce — a notable development in Quantum Computing",
+    "Quantum Elements Launches 'Orbit' as Qiskit Function for Automated Error Suppres — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "Google Research Stabilizes 'Willow' Quantum Processor Using Continuous Reinforce",
+      "date": "2026-07-26",
+      "event": "Quantum Elements Launches 'Orbit' as Qiskit Function for Automated Error Suppres",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "google",
-    "research",
+    "quantum",
+    "elements",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Google Research Stabilizes 'Willow' Quantum Processor Usi... | Quantum Computing News",
-  "metaDescription": "Overview of RL control. Google Quantum AI has introduced a hardware-control framework that unifies real-time calibration with active quantum error correction...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, google, research, stabilizes, TechNanoAI, emerging tech news",
+  "metaTitle": "Quantum Elements Launches 'Orbit' as Qiskit Function for ... | Quantum Computing News",
+  "metaDescription": "Quantum software provider Quantum Elements has released Orbit, an advanced error suppression tool accessible as a Qiskit Function in the IBM Qiskit Functions...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, elements, launches, TechNanoAI, emerging tech news",
   "featured": false
 }

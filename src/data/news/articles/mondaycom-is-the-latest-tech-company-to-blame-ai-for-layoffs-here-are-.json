@@ -1,21 +1,21 @@
 {
-  "id": "ai-1783755596200-1",
+  "id": "ai-1785053239185-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Meta removes controversial AI feature on Instagram after ... | AI News",
-  "excerpt": "\"Our intent was to provide a useful creative tool and to give people control over whether their public content could be referenced in this way,\" the company said in a blog post. \"We've heard the feedb",
-  "date": "2026-07-11",
+  "title": "Monday.com is the latest tech company to blame AI for lay... | AI News",
+  "excerpt": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "meta-removes-controversial-ai-feature-on-instagram-after-backlash",
-  "sourceLink": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
-  "sourceName": "Lucas Ropek",
+  "slug": "mondaycom-is-the-latest-tech-company-to-blame-ai-for-layoffs-here-are-",
+  "sourceLink": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+  "sourceName": "Rebecca Bellan, Connie Loizos",
   "body": [
     {
       "type": "p",
-      "text": "\"Our intent was to provide a useful creative tool and to give people control over whether their public content could be referenced in this way,\" the company said in a blog post.  \"We've heard the feedback that this feature missed the mark, so it's no longer available."
+      "text": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, \"Our intent was to provide a useful creative tool and to give people control over whether their public content could be referenced in this way,\" the company said in a blog post. \"We've heard the feedback that this feature missed the mark, so it's no longer available.\". The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Rebecca Bellan, Connie Loizos, A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Meta removes controversial AI feature on Instagram after backlash — a notable development in AI",
+    "Monday.com is the latest tech company to blame AI for layoffs — here are 20 othe — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "Rebecca Bellan, Connie Loizos",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "Meta removes controversial AI feature on Instagram after backlash",
+      "date": "2026-07-26",
+      "event": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 othe",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "removes",
-    "controversial",
+    "monday",
+    "latest",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Meta removes controversial AI feature on Instagram after ... | AI News",
-  "metaDescription": "\"Our intent was to provide a useful creative tool and to give people control over whether their public content could be referenced in this way,\" the company ...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, meta, removes, controversial, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Monday.com is the latest tech company to blame AI for lay... | AI News",
+  "metaDescription": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, monday, latest, tech, TechNanoAI, emerging tech news",
+  "featured": true
 }

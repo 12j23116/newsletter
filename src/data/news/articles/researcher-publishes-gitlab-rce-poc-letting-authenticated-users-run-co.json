@@ -1,21 +1,21 @@
 {
-  "id": "ai-1783755596203-5",
+  "id": "ai-1785053239187-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "URGENT - Progress Tells ShareFile Customers to Shut Down ... | AI News",
-  "excerpt": "Progress Software has told ShareFile customers to shut down the Windows servers running their Storage Zone Controllers, confirming to The Hacker News that it is responding to a \"credible external secu",
-  "date": "2026-07-11",
+  "title": "Researcher Publishes GitLab RCE PoC Letting Authenticated... | AI News",
+  "excerpt": "Security researchers at depthfirst published working exploit code on July 24 for a GitLab flaw that GitLab patched six weeks earlier, on June 10. It runs commands as git on any self-managed 18.11.3 se",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "urgent-progress-tells-sharefile-customers-to-shut-down-storage-zone-co",
-  "sourceLink": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
+  "slug": "researcher-publishes-gitlab-rce-poc-letting-authenticated-users-run-co",
+  "sourceLink": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Progress Software has told ShareFile customers to shut down the Windows servers running their Storage Zone Controllers, confirming to The Hacker News that it is responding to a \"credible external security threat."
+      "text": "Security researchers at depthfirst published working exploit code on July 24 for a GitLab flaw that GitLab patched six weeks earlier, on June 10.  It runs commands as git on any self-managed 18."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Progress Software has told ShareFile customers to shut down the Windows servers running their Storage Zone Controllers, confirming to The Hacker News that it is responding to a \"credible external security threat.\"\n\nThe company has temporarily disabled access to the affected accounts, a step it says it took \"out of an abundance of caution\" while it works with internal and external security. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "11. 3 server that has not taken the update."
+    },
+    {
+      "type": "p",
+      "text": "Any authenticated user who can push to a project can run it."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controller — a notable development in AI",
+    "Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controller",
+      "date": "2026-07-26",
+      "event": "Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as ",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "urgent",
-    "progress",
+    "researcher",
+    "publishes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "URGENT - Progress Tells ShareFile Customers to Shut Down ... | AI News",
-  "metaDescription": "Progress Software has told ShareFile customers to shut down the Windows servers running their Storage Zone Controllers, confirming to The Hacker News that it...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, urgent, progress, tells, TechNanoAI, emerging tech news",
+  "metaTitle": "Researcher Publishes GitLab RCE PoC Letting Authenticated... | AI News",
+  "metaDescription": "Security researchers at depthfirst published working exploit code on July 24 for a GitLab flaw that GitLab patched six weeks earlier, on June 10. It runs com...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, researcher, publishes, gitlab, TechNanoAI, emerging tech news",
   "featured": false
 }

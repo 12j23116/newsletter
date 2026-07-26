@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1783755605170-2",
+  "id": "quantum-1785053245519-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Google and Fraunhofer Launch Global Calls for Early Fault... | Quantum Computing News",
-  "excerpt": "International research networks and academic sponsors have opened competitive application windows targeting immediate software optimizations for early fault-tolerant quantum computing (FTQC) platforms",
-  "date": "2026-07-11",
-  "readTime": "3 min",
+  "title": "IQMP and Q-STAR Sign MoU to Connect Illinois and Japanese... | Quantum Computing News",
+  "excerpt": "The Illinois Quantum and Microelectronics Park (IQMP) has signed a Memorandum of Understanding (MoU) with Japan’s Quantum STrategic industry Alliance for Revolution (Q-STAR) to build cross-border comm",
+  "date": "2026-07-26",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "google-and-fraunhofer-launch-global-calls-for-early-fault-tolerant-alg",
-  "sourceLink": "https://quantumcomputingreport.com/google-and-fraunhofer-launch-global-calls-for-early-fault-tolerant-algorithms-and-enterprise-use-cases/",
+  "slug": "iqmp-and-q-star-sign-mou-to-connect-illinois-and-japanese-quantum-ecos",
+  "sourceLink": "https://quantumcomputingreport.com/iqmp-and-q-star-sign-mou-to-connect-illinois-and-japanese-quantum-ecosystems/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "International research networks and academic sponsors have opened competitive application windows targeting immediate software optimizations for early fault-tolerant quantum computing (FTQC) platforms and industry-specific classical-to-quantum workload migrations.  The structural focal point across these programs avoids the long-term, distant requirement of large-scale, million-qubit systems."
+      "text": "The Illinois Quantum and Microelectronics Park (IQMP) has signed a Memorandum of Understanding (MoU) with Japan’s Quantum STrategic industry Alliance for Revolution (Q-STAR) to build cross-border commercialization pathways, joint R&D pipelines, and supply chain connections between Japan and Illinois.  Signed at the Global Quantum Forum in Chicago by IQMP CEO Harley Johnson and Q-STAR Global  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, International research networks and academic sponsors have opened competitive application windows targeting immediate software optimizations for early fault-tolerant quantum computing (FTQC) platforms and industry-specific classical-to-quantum workload migrations. The structural focal point across these programs avoids the long-term, distant requirement of large-scale, million-qubit systems. Instead, they incentivize algorithms, error-mitigation layers, and mathematical compilations designed to. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mohamed Abdel-Kareem, The Illinois Quantum and Microelectronics Park (IQMP) has signed a Memorandum of Understanding (MoU) with Japan’s Quantum STrategic industry Alliance for Revolution (Q-STAR) to build cross-border commercialization pathways, joint R&D pipelines, and supply chain connections between Japan and Illinois. Signed at the Global Quantum Forum in Chicago by IQMP CEO Harley Johnson and Q-STAR Global  [...]\nThe post IQMP and Q-STAR Sign MoU to Connect Illinois and Japanese Quantum Ecosystems appeared first. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Google and Fraunhofer Launch Global Calls for Early Fault-Tolerant Algorithms an — a notable development in Quantum Computing",
+    "IQMP and Q-STAR Sign MoU to Connect Illinois and Japanese Quantum Ecosystems — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "Google and Fraunhofer Launch Global Calls for Early Fault-Tolerant Algorithms an",
+      "date": "2026-07-26",
+      "event": "IQMP and Q-STAR Sign MoU to Connect Illinois and Japanese Quantum Ecosystems",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "google",
-    "fraunhofer",
+    "connect",
+    "illinois",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Google and Fraunhofer Launch Global Calls for Early Fault... | Quantum Computing News",
-  "metaDescription": "International research networks and academic sponsors have opened competitive application windows targeting immediate software optimizations for early fault-...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, google, fraunhofer, launch, TechNanoAI, emerging tech news",
+  "metaTitle": "IQMP and Q-STAR Sign MoU to Connect Illinois and Japanese... | Quantum Computing News",
+  "metaDescription": "The Illinois Quantum and Microelectronics Park (IQMP) has signed a Memorandum of Understanding (MoU) with Japan’s Quantum STrategic industry Alliance for Rev...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, iqmp, star, sign, TechNanoAI, emerging tech news",
   "featured": false
 }

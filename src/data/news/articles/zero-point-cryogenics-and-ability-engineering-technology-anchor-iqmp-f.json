@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1783755605170-4",
+  "id": "quantum-1785053245520-5",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "EeroQ Validates CMOS-Controlled Electron Shuttling on Sup... | Quantum Computing News",
-  "excerpt": "Schematic rendering of EeroQ’s Wonder Lake chip stack. Quantum hardware developer EeroQ has published peer-reviewed experimental results demonstrating the selective, two-dimensional transport of elect",
-  "date": "2026-07-11",
+  "title": "Zero Point Cryogenics and Ability Engineering Technology ... | Quantum Computing News",
+  "excerpt": "Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physical supply-chain tenants: Edmonton-based dilu",
+  "date": "2026-07-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "eeroq-validates-cmos-controlled-electron-shuttling-on-superfluid-heliu",
-  "sourceLink": "https://quantumcomputingreport.com/eeroq-validates-cmos-controlled-electron-shuttling-on-superfluid-helium-for-all-to-all-qubit-routing/",
+  "slug": "zero-point-cryogenics-and-ability-engineering-technology-anchor-iqmp-f",
+  "sourceLink": "https://quantumcomputingreport.com/zero-point-cryogenics-and-ability-engineering-technology-anchor-iqmp-faqtory-in-chicago/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Schematic rendering of EeroQ’s Wonder Lake chip stack.  Quantum hardware developer EeroQ has published peer-reviewed experimental results demonstrating the selective, two-dimensional transport of electrons on superfluid helium using a commercial silicon control architecture."
+      "text": "Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physical supply-chain tenants: Edmonton-based dilution refrigerator manufacturer Zero Point Cryogenics (ZPC) and Illinois-based precision engineering firm Ability Engineering Technology (AET).  Both companies will establish operational footprints at the IQMP FaQtory—a specialized campus  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Published in Physical Review Applied (\"Selective shuttling of electrons on helium using a CMOS control platform\"), the research validates the structural integrity  [..."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physical supply-chain tenants: Edmonton-based dilution refrigerator manufacturer Zero Point Cryogenics (ZPC) and Illinois-based precision engineering firm Ability Engineering Technology (AET). Both companies will establish operational footprints at the IQMP FaQtory—a specialized campus  [...]\nThe post Zero Point Cryogenics and Ability Engineering T. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "EeroQ Validates CMOS-Controlled Electron Shuttling on Superfluid Helium for All- — a notable development in Quantum Computing",
+    "Zero Point Cryogenics and Ability Engineering Technology Anchor IQMP FaQtory in  — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-11",
-      "event": "EeroQ Validates CMOS-Controlled Electron Shuttling on Superfluid Helium for All-",
+      "date": "2026-07-26",
+      "event": "Zero Point Cryogenics and Ability Engineering Technology Anchor IQMP FaQtory in ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "eeroq",
-    "validates",
+    "point",
+    "cryogenics",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "EeroQ Validates CMOS-Controlled Electron Shuttling on Sup... | Quantum Computing News",
-  "metaDescription": "Schematic rendering of EeroQ’s Wonder Lake chip stack. Quantum hardware developer EeroQ has published peer-reviewed experimental results demonstrating the se...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, eeroq, validates, cmos, TechNanoAI, emerging tech news",
+  "metaTitle": "Zero Point Cryogenics and Ability Engineering Technology ... | Quantum Computing News",
+  "metaDescription": "Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physica...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, zero, point, cryogenics, TechNanoAI, emerging tech news",
   "featured": false
 }
