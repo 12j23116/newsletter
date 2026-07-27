@@ -1,114 +1,113 @@
 {
-  "issue": 81,
-  "date": "2026-07-20",
-  "subject": "This Week: Energy Storage, Autonomous Vehicles & more — July 20, 2026",
+  "issue": 82,
+  "date": "2026-07-27",
+  "subject": "This Week: Space, Energy Storage & more — July 27, 2026",
   "articleCount": 12,
   "topicsCovered": [
+    "space",
     "energy",
-    "av",
-    "biotech",
-    "quantum",
-    "cybersecurity",
     "ai",
     "robotics",
-    "nuclear"
+    "av",
+    "cybersecurity",
+    "biotech"
   ],
   "articles": [
     {
-      "title": "Australia adds 9.1GW of new generation and storage in FY2... | Energy Storage News",
-      "slug": "australia-adds-91gw-of-new-generation-and-storage-in-fy26-with-battery",
+      "title": "Juno reveals surprising subsurface tempertures at Io, rem... | Space Exploration News",
+      "slug": "juno-reveals-surprising-subsurface-tempertures-at-io-remarkably-smooth",
+      "topic": "space",
+      "excerpt": "Following two flybys of Jupiter's innermost Galilean moon Io, teams using data from NASA's Juno'\nThe post Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface appeared first",
+      "url": "https://technanoai.com/news/juno-reveals-surprising-subsurface-tempertures-at-io-remarkably-smooth",
+      "date": "2026-07-27"
+    },
+    {
+      "title": "Albanian government approves agrivoltaics | Energy Storage News",
+      "slug": "albanian-government-approves-agrivoltaics",
       "topic": "energy",
-      "excerpt": "Australia's NEM connected 9.1GW of new generation and energy storage to full output in FY26, more than double the result achieved in FY25.",
-      "url": "https://technanoai.com/news/australia-adds-91gw-of-new-generation-and-storage-in-fy26-with-battery",
-      "date": "2026-07-20"
+      "excerpt": "Albania is set to allow agrivoltaics under certain conditions following approved amendments to its law governing agricultural land, with its council of ministers tasked with determining the applicable",
+      "url": "https://technanoai.com/news/albanian-government-approves-agrivoltaics",
+      "date": "2026-07-27"
     },
     {
-      "title": "Australia sees record surge in solar, wind and battery pr... | Energy Storage News",
-      "slug": "australia-sees-record-surge-in-solar-wind-and-battery-projects",
+      "title": "Canadian Solar subsidiary opens 6 GW solar cell factory i... | Energy Storage News",
+      "slug": "canadian-solar-subsidiary-opens-6-gw-solar-cell-factory-in-indiana",
       "topic": "energy",
-      "excerpt": "Australia’s energy market operator says the past financial year was the best yet for the completion of large-scale renewable energy projects in the country, with a record 9.1 GW of new generation and ",
-      "url": "https://technanoai.com/news/australia-sees-record-surge-in-solar-wind-and-battery-projects",
-      "date": "2026-07-20"
+      "excerpt": "Canadian Solar subsidiary CS PowerTech officially opened phase one of its solar cell manufacturing plant in Jeffersonville, Indiana, targeting over 6 GW of annual capacity at full buildout.\nThe post C",
+      "url": "https://technanoai.com/news/canadian-solar-subsidiary-opens-6-gw-solar-cell-factory-in-indiana",
+      "date": "2026-07-27"
     },
     {
-      "title": "TechCrunch Mobility: The battle over robotaxi rules | Autonomous Vehicles News",
-      "slug": "techcrunch-mobility-the-battle-over-robotaxi-rules",
-      "topic": "av",
-      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
-      "url": "https://technanoai.com/news/techcrunch-mobility-the-battle-over-robotaxi-rules",
-      "date": "2026-07-20"
-    },
-    {
-      "title": "<a href=\"/biotech/blossomhill-eyes-ipo-fertilizer-grow-ta... | Biotechnology News",
-      "slug": "a-hrefbiotechblossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cance",
-      "topic": "biotech",
-      "excerpt": "Another biotech is squeezing into the crowded IPO waiting room just in time for the weekend. BlossomHill Therapeutics, a San Diego-based oncology outfit focused on small molecules, has filed paperwork",
-      "url": "https://technanoai.com/news/a-hrefbiotechblossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cance",
-      "date": "2026-07-20"
-    },
-    {
-      "title": "<a href=\"/biotech/latigo-preps-ipo-fund-non-opioid-pain-d... | Biotechnology News",
-      "slug": "a-hrefbiotechlatigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-",
-      "topic": "biotech",
-      "excerpt": "Latigo Biotherapeutics is preparing to go public in order to bankroll the development of its clinical-stage pipeline of non-opioid pain management drugs.",
-      "url": "https://technanoai.com/news/a-hrefbiotechlatigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-",
-      "date": "2026-07-20"
-    },
-    {
-      "title": "A tiny universe in a bottle reveals clues to the origins ... | Quantum Computing News",
-      "slug": "a-tiny-universe-in-a-bottle-reveals-clues-to-the-origins-of-life",
-      "topic": "quantum",
-      "excerpt": "Researchers have created cosmic dust from scratch by recreating space-like conditions inside glass tubes. The dust contains complex carbon-rich molecules built from elements essential to life and prod",
-      "url": "https://technanoai.com/news/a-tiny-universe-in-a-bottle-reveals-clues-to-the-origins-of-life",
-      "date": "2026-07-20"
-    },
-    {
-      "title": "Chrome 150 Update Patches Severe Memory Safety Bugs | Cybersecurity News",
-      "slug": "chrome-150-update-patches-severe-memory-safety-bugs",
-      "topic": "cybersecurity",
-      "excerpt": "The fresh security update resolves six critical and high-severity use-after-free vulnerabilities.\nThe post Chrome 150 Update Patches Severe Memory Safety Bugs appeared first on SecurityWeek.",
-      "url": "https://technanoai.com/news/chrome-150-update-patches-severe-memory-safety-bugs",
-      "date": "2026-07-20"
-    },
-    {
-      "title": "Hackers abuse ViPNet software to target Russian govt agen... | Cybersecurity News",
-      "slug": "hackers-abuse-vipnet-software-to-target-russian-govt-agencies",
-      "topic": "cybersecurity",
-      "excerpt": "An advanced threat actor is abusing the update mechanism for the ViPNet private networking product suite to target Russian organizations, including government agencies. [...]",
-      "url": "https://technanoai.com/news/hackers-abuse-vipnet-software-to-target-russian-govt-agencies",
-      "date": "2026-07-20"
-    },
-    {
-      "title": "Can an Apple lawsuit derail OpenAI’s hardware plans? | AI News",
-      "slug": "can-an-apple-lawsuit-derail-openais-hardware-plans",
+      "title": "America's AI Investment Boom Is Reshaping the Economy | AI News",
+      "slug": "america8217s-ai-investment-boom-is-reshaping-the-economy",
       "topic": "ai",
-      "excerpt": "On the latest episode of Equity, we debate whether Apple's lawsuit will cast over OpenAi's much-discussed plans to get into hardware and go public.",
-      "url": "https://technanoai.com/news/can-an-apple-lawsuit-derail-openais-hardware-plans",
-      "date": "2026-07-20"
+      "excerpt": "America's AI Investment Boom Is Reshaping the Economy Artificial intelligence has become one of the defining investment stories in the United States, and the numbers continue to grow. Microsoft, Meta,",
+      "url": "https://technanoai.com/news/america8217s-ai-investment-boom-is-reshaping-the-economy",
+      "date": "2026-07-27"
     },
     {
-      "title": "Critical NGINX Vulnerability Can Crash Workers and May Al... | AI News",
-      "slug": "critical-nginx-vulnerability-can-crash-workers-and-may-allow-remote-co",
+      "title": "Are brain waves the next unlock for physical AI? | AI News",
+      "slug": "are-brain-waves-the-next-unlock-for-physical-ai",
       "topic": "ai",
-      "excerpt": "F5 has shipped fixes for a critical nginx flaw that lets a remote, unauthenticated attacker trigger a heap buffer overflow in the worker process with crafted HTTP requests. CVE-2026-42533 was patched ",
-      "url": "https://technanoai.com/news/critical-nginx-vulnerability-can-crash-workers-and-may-allow-remote-co",
-      "date": "2026-07-20"
+      "excerpt": "Forget YouTube videos—frontier physical AI models need multiple camera angles, dense annotation, and soon, brain wave readings.",
+      "url": "https://technanoai.com/news/are-brain-waves-the-next-unlock-for-physical-ai",
+      "date": "2026-07-27"
     },
     {
-      "title": "How to avoid the teleoperation trap in robotics development | Robotics News",
-      "slug": "how-to-avoid-the-teleoperation-trap-in-robotics-development",
+      "title": "Magmotor makes motors for a changing world for 150+ years | Robotics News",
+      "slug": "magmotor-makes-motors-for-a-changing-world-for-150-years",
       "topic": "robotics",
-      "excerpt": "Teleoperation is necessary for training humanoid robots, but reinforcement learning and simulation are still necessary, says Flexion's CEO.\nThe post How to avoid the teleoperation trap in robotics dev",
-      "url": "https://technanoai.com/news/how-to-avoid-the-teleoperation-trap-in-robotics-development",
-      "date": "2026-07-20"
+      "excerpt": "Magmotor has been providing motors for demanding use cases for decades and offers custom systems for robotics.\nThe post Magmotor makes motors for a changing world for 150+ years appeared first on The ",
+      "url": "https://technanoai.com/news/magmotor-makes-motors-for-a-changing-world-for-150-years",
+      "date": "2026-07-27"
     },
     {
-      "title": "Bulgaria launches LLW/ILW repository | Nuclear Energy News",
-      "slug": "bulgaria-launches-llwilw-repository",
-      "topic": "nuclear",
-      "excerpt": "Bulgaria has inaugurated its National Repository for Radioactive Waste near Kozloduy NPP to manage low- and intermediate-level waste.\nThe post Bulgaria launches LLW/ILW repository appeared first on Nu",
-      "url": "https://technanoai.com/news/bulgaria-launches-llwilw-repository",
-      "date": "2026-07-20"
+      "title": "Optical Tech Would Update a Robot’s AI on the Fly | Robotics News",
+      "slug": "optical-tech-would-update-a-robots-ai-on-the-fly",
+      "topic": "robotics",
+      "excerpt": "Atop a lab bench, Cornell Tech postdoctoral researcher Yifan He positions the lens of an optical receiver almost a meter away from an LED emitting a beam of red light. The computer monitor attached to",
+      "url": "https://technanoai.com/news/optical-tech-would-update-a-robots-ai-on-the-fly",
+      "date": "2026-07-27"
+    },
+    {
+      "title": "TechCrunch Mobility: Uber bets on its former CEO | Autonomous Vehicles News",
+      "slug": "techcrunch-mobility-uber-bets-on-its-former-ceo",
+      "topic": "av",
+      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
+      "url": "https://technanoai.com/news/techcrunch-mobility-uber-bets-on-its-former-ceo",
+      "date": "2026-07-27"
+    },
+    {
+      "title": "GitHub, PyPI add time-based defenses against supply chain... | Cybersecurity News",
+      "slug": "github-pypi-add-time-based-defenses-against-supply-chain-attacks",
+      "topic": "cybersecurity",
+      "excerpt": "GitHub and PyPI (Python Package Index) have introduced a time-based mechanism in the Dependabot dependency management tool to protect against supply-chain attacks and to limit their impact. [...]",
+      "url": "https://technanoai.com/news/github-pypi-add-time-based-defenses-against-supply-chain-attacks",
+      "date": "2026-07-27"
+    },
+    {
+      "title": "MCBS Data Breach Affects 1.2 Million Individuals | Cybersecurity News",
+      "slug": "mcbs-data-breach-affects-12-million-individuals",
+      "topic": "cybersecurity",
+      "excerpt": "The PEAR ransomware group claimed to have stolen 3 TB of information from the medical business management company.\nThe post MCBS Data Breach Affects 1.2 Million Individuals appeared first on SecurityW",
+      "url": "https://technanoai.com/news/mcbs-data-breach-affects-12-million-individuals",
+      "date": "2026-07-27"
+    },
+    {
+      "title": "<a href=\"/biotech/amgen-sheds-around-40-staffers-struggle... | Biotechnology News",
+      "slug": "a-hrefbiotechamgen-sheds-around-40-staffers-struggles-pile-tavneos-pip",
+      "topic": "biotech",
+      "excerpt": "Amgen has laid off around 40 employees as part of “organizational changes” meant to better align operations with the company’s strategic objectives, Fierce has learned.",
+      "url": "https://technanoai.com/news/a-hrefbiotechamgen-sheds-around-40-staffers-struggles-pile-tavneos-pip",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "<a href=\"/biotech/chutes-ladders-biogen-rd-vet-gets-forma... | Biotechnology News",
+      "slug": "a-hrefbiotechchutes-ladders-biogen-rd-vet-gets-formation-hreflangenchu",
+      "topic": "biotech",
+      "excerpt": "AI-focused Formation Bio has found a new chief scientist with extensive experience in biotech, Big Pharma and academia. Michael Ehlers, M.D., Ph.D., is joining the 2025 Fierce 15 honoree as chief scie",
+      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-biogen-rd-vet-gets-formation-hreflangenchu",
+      "date": "2026-07-26"
     }
   ]
 }
