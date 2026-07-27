@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1783843142838-1",
+  "id": "robotics-1785144572323-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Why robotics teams need virtual gyms before deployment | Robotics News",
-  "excerpt": "To address environmental and task variability, robots can benefit from 'virtual gyms' to bridge the sim-to-real gap, says SoftServe.\nThe post Why robotics teams need virtual gyms before deployment app",
-  "date": "2026-07-12",
+  "title": "Magmotor makes motors for a changing world for 150+ years | Robotics News",
+  "excerpt": "Magmotor has been providing motors for demanding use cases for decades and offers custom systems for robotics.\nThe post Magmotor makes motors for a changing world for 150+ years appeared first on The ",
+  "date": "2026-07-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "why-robotics-teams-need-virtual-gyms-before-deployment",
-  "sourceLink": "https://www.therobotreport.com/why-robotics-teams-need-virtual-gyms-before-deployment/",
-  "sourceName": "Mariusz Janiak",
+  "slug": "magmotor-makes-motors-for-a-changing-world-for-150-years",
+  "sourceLink": "https://www.therobotreport.com/magmotor-makes-motors-changing-world-150-years/",
+  "sourceName": "Duggan Flanakin",
   "body": [
     {
       "type": "p",
-      "text": "To address environmental and task variability, robots can benefit from 'virtual gyms' to bridge the sim-to-real gap, says SoftServe. \nThe post Why robotics teams need virtual gyms before deployment appeared first on The Robot Report."
+      "text": "Magmotor has been providing motors for demanding use cases for decades and offers custom systems for robotics. \nThe post Magmotor makes motors for a changing world for 150+ years appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mariusz Janiak, To address environmental and task variability, robots can benefit from 'virtual gyms' to bridge the sim-to-real gap, says SoftServe.\nThe post Why robotics teams need virtual gyms before deployment appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Duggan Flanakin, Magmotor has been providing motors for demanding use cases for decades and offers custom systems for robotics.\nThe post Magmotor makes motors for a changing world for 150+ years appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Why robotics teams need virtual gyms before deployment — a notable development in Robotics",
+    "Magmotor makes motors for a changing world for 150+ years — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Mariusz Janiak",
+      "value": "Duggan Flanakin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "Why robotics teams need virtual gyms before deployment",
+      "date": "2026-07-27",
+      "event": "Magmotor makes motors for a changing world for 150+ years",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "robotics",
-    "teams",
+    "magmotor",
+    "makes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Why robotics teams need virtual gyms before deployment | Robotics News",
-  "metaDescription": "To address environmental and task variability, robots can benefit from 'virtual gyms' to bridge the sim-to-real gap, says SoftServe.\nThe post Why robotics te...",
-  "keywords": "robotics, humanoid robot, automation, drones, robotics, teams, need, TechNanoAI, emerging tech news",
+  "metaTitle": "Magmotor makes motors for a changing world for 150+ years | Robotics News",
+  "metaDescription": "Magmotor has been providing motors for demanding use cases for decades and offers custom systems for robotics.\nThe post Magmotor makes motors for a changing ...",
+  "keywords": "robotics, humanoid robot, automation, drones, magmotor, makes, motors, TechNanoAI, emerging tech news",
   "featured": false
 }

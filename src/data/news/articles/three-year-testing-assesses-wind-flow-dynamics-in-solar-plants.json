@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783843142303-3",
+  "id": "energy-1785144572111-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "End-of-life solar module recycling unviable if material d... | Energy Storage News",
-  "excerpt": "Researchers from Australia and Poland have collaborated on a study to determine the value of upcycling key materials from end-of-life panels such as aluminium, glass and solar cells with the express p",
-  "date": "2026-07-12",
-  "readTime": "3 min",
+  "title": "Three-year testing assesses wind flow dynamics in solar p... | Energy Storage News",
+  "excerpt": "A French research team analyzed nearly three years of wind and turbulence measurements over a 140-hectare photovoltaic park in southwestern France, comparing it with a nearby pine forest to understand",
+  "date": "2026-07-27",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "end-of-life-solar-module-recycling-unviable-if-material-diversity-is-n",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/11/end-of-life-module-recycling-unviable-if-material-diversity-is-not-considered/",
-  "sourceName": "Ev Foley",
+  "slug": "three-year-testing-assesses-wind-flow-dynamics-in-solar-plants",
+  "sourceLink": "https://www.pv-magazine.com/2026/07/27/three-year-testing-assesses-wind-flow-dynamics-in-solar-plants/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "Researchers from Australia and Poland have collaborated on a study to determine the value of upcycling key materials from end-of-life panels such as aluminium, glass and solar cells with the express purpose of purifying the components for reuse in solar panel manufacturing. \nThe post End-of-life solar module recycling unviable if material diversity is not considered appeared first on pv magazine Global."
+      "text": "A French research team analyzed nearly three years of wind and turbulence measurements over a 140-hectare photovoltaic park in southwestern France, comparing it with a nearby pine forest to understand airflow behavior above PV canopies.  They found that wind direction relative to panel rows strongly controls turbulence and drag, and they developed a generalized wind-profile parameterization to better represent PV parks in land–atmosphere and weather models."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ev Foley, Researchers from Australia and Poland have collaborated on a study to determine the value of upcycling key materials from end-of-life panels such as aluminium, glass and solar cells with the express purpose of purifying the components for reuse in solar panel manufacturing.\nThe post End-of-life solar module recycling unviable if material diversity is not considered appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lior Kahana, A French research team analyzed nearly three years of wind and turbulence measurements over a 140-hectare photovoltaic park in southwestern France, comparing it with a nearby pine forest to understand airflow behavior above PV canopies. They found that wind direction relative to panel rows strongly controls turbulence and drag, and they developed a generalized wind-profile parameterization to better represent PV parks in land–atmosphere and weather models.\nThe post Three-year testing assesses wi. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "End-of-life solar module recycling unviable if material diversity is not conside — a notable development in Energy Storage",
+    "Three-year testing assesses wind flow dynamics in solar plants — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Ev Foley",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "End-of-life solar module recycling unviable if material diversity is not conside",
+      "date": "2026-07-27",
+      "event": "Three-year testing assesses wind flow dynamics in solar plants",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "solar",
-    "module",
+    "three",
+    "testing",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "End-of-life solar module recycling unviable if material d... | Energy Storage News",
-  "metaDescription": "Researchers from Australia and Poland have collaborated on a study to determine the value of upcycling key materials from end-of-life panels such as aluminiu...",
-  "keywords": "energy storage, battery, solid-state, grid storage, life, solar, module, TechNanoAI, emerging tech news",
+  "metaTitle": "Three-year testing assesses wind flow dynamics in solar p... | Energy Storage News",
+  "metaDescription": "A French research team analyzed nearly three years of wind and turbulence measurements over a 140-hectare photovoltaic park in southwestern France, comparing...",
+  "keywords": "energy storage, battery, solid-state, grid storage, three, year, testing, TechNanoAI, emerging tech news",
   "featured": false
 }

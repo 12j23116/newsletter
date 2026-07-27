@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783843142303-2",
+  "id": "energy-1785144572109-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Study finds heatwaves cause hourly losses of up to 90% in... | Energy Storage News",
-  "excerpt": "Researchers in Portugal found that Iberian heatwaves can cause sharp but short-lived PV yield losses, mainly during peak temperature hours due to module heating and inverter derating.\nThe post Study f",
-  "date": "2026-07-12",
+  "title": "HyperStrong introduces C'I energy storage solutions at Th... | Energy Storage News",
+  "excerpt": "The company emphasizes that its innovative configuration – splitting the standard 20-foot container in two – addresses weight and transportation issues common to traditional energy storage solutions.\n",
+  "date": "2026-07-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "study-finds-heatwaves-cause-hourly-losses-of-up-to-90-in-pv-plants-in-",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/11/study-finds-heatwaves-cause-hourly-losses-of-up-to-90-in-pv-plants-in-iberian-peninsula/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "hyperstrong-introduces-c038i-energy-storage-solutions-at-the-smarter-e",
+  "sourceLink": "https://www.pv-magazine.com/2026/07/27/hyperstrong-introduces-ci-energy-storage-solutions-at-the-smarter-e-2026/",
+  "sourceName": "Bernadette Geyer",
   "body": [
     {
       "type": "p",
-      "text": "Researchers in Portugal found that Iberian heatwaves can cause sharp but short-lived PV yield losses, mainly during peak temperature hours due to module heating and inverter derating. \nThe post Study finds heatwaves cause hourly losses of up to 90% in PV plants in Iberian peninsula appeared first on pv magazine Global."
+      "text": "The company emphasizes that its innovative configuration – splitting the standard 20-foot container in two – addresses weight and transportation issues common to traditional energy storage solutions. \nThe post HyperStrong introduces C&I energy storage solutions at The smarter E 2026 appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Emiliano Bellini, Researchers in Portugal found that Iberian heatwaves can cause sharp but short-lived PV yield losses, mainly during peak temperature hours due to module heating and inverter derating.\nThe post Study finds heatwaves cause hourly losses of up to 90% in PV plants in Iberian peninsula appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Bernadette Geyer, The company emphasizes that its innovative configuration – splitting the standard 20-foot container in two – addresses weight and transportation issues common to traditional energy storage solutions.\nThe post HyperStrong introduces C&I energy storage solutions at The smarter E 2026 appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Study finds heatwaves cause hourly losses of up to 90% in PV plants in Iberian p — a notable development in Energy Storage",
+    "HyperStrong introduces C'I energy storage solutions at The smarter E 2026 — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Bernadette Geyer",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "Study finds heatwaves cause hourly losses of up to 90% in PV plants in Iberian p",
+      "date": "2026-07-27",
+      "event": "HyperStrong introduces C'I energy storage solutions at The smarter E 2026",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "study",
-    "finds",
+    "hyperstrong",
+    "introduces",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Study finds heatwaves cause hourly losses of up to 90% in... | Energy Storage News",
-  "metaDescription": "Researchers in Portugal found that Iberian heatwaves can cause sharp but short-lived PV yield losses, mainly during peak temperature hours due to module heat...",
-  "keywords": "energy storage, battery, solid-state, grid storage, study, finds, heatwaves, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "HyperStrong introduces C'I energy storage solutions at Th... | Energy Storage News",
+  "metaDescription": "The company emphasizes that its innovative configuration – splitting the standard 20-foot container in two – addresses weight and transportation issues commo...",
+  "keywords": "energy storage, battery, solid-state, grid storage, hyperstrong, introduces, energy, TechNanoAI, emerging tech news",
+  "featured": true
 }

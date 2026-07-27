@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783843142302-0",
+  "id": "energy-1785144572110-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "This electric field trick boosted heat flow by nearly 300% | Energy Storage News",
-  "excerpt": "Researchers discovered that electricity can dramatically reshape how heat flows through certain ceramic materials, increasing heat conduction by almost threefold in a preferred direction. The unexpect",
-  "date": "2026-07-12",
+  "title": "India's Advait Greenergy, China's GuofuHee showcase 5 MW ... | Energy Storage News",
+  "excerpt": "The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate the electrolyzer under real operating cond",
+  "date": "2026-07-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "this-electric-field-trick-boosted-heat-flow-by-nearly-300",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/07/260709160651.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "india8217s-advait-greenergy-china8217s-guofuhee-showcase-5-mw-alkaline",
+  "sourceLink": "https://www.pv-magazine.com/2026/07/27/advait-greenergy-guofuhee-showcase-5-mw-alkaline-electrolyser-in-live-factory-acceptance-testing-ahead-of-india-deployment/",
+  "sourceName": "Uma Gupta",
   "body": [
     {
       "type": "p",
-      "text": "Researchers discovered that electricity can dramatically reshape how heat flows through certain ceramic materials, increasing heat conduction by almost threefold in a preferred direction.  The unexpected result could lead to much more efficient cooling technologies and energy-saving devices."
+      "text": "The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate the electrolyzer under real operating conditions. \nThe post India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Researchers discovered that electricity can dramatically reshape how heat flows through certain ceramic materials, increasing heat conduction by almost threefold in a preferred direction. The unexpected result could lead to much more efficient cooling technologies and energy-saving devices.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Uma Gupta, The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate the electrolyzer under real operating conditions.\nThe post India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "This electric field trick boosted heat flow by nearly 300% — a notable development in Energy Storage",
+    "India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Uma Gupta",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "This electric field trick boosted heat flow by nearly 300%",
+      "date": "2026-07-27",
+      "event": "India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "electric",
-    "field",
+    "india",
+    "advait",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "This electric field trick boosted heat flow by nearly 300% | Energy Storage News",
-  "metaDescription": "Researchers discovered that electricity can dramatically reshape how heat flows through certain ceramic materials, increasing heat conduction by almost three...",
-  "keywords": "energy storage, battery, solid-state, grid storage, this, electric, field, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "India's Advait Greenergy, China's GuofuHee showcase 5 MW ... | Energy Storage News",
+  "metaDescription": "The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate...",
+  "keywords": "energy storage, battery, solid-state, grid storage, india, advait, greenergy, TechNanoAI, emerging tech news",
+  "featured": false
 }

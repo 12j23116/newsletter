@@ -1,21 +1,21 @@
 {
-  "id": "space-1783843138693-0",
+  "id": "space-1785144567964-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Parabilis tests propulsion system for maneuverable cubesats | Space Exploration News",
-  "excerpt": "The Space Force is backing the development of the company’s hybrid engine technology for small satellites\nThe post Parabilis tests propulsion system for maneuverable cubesats appeared first on SpaceNe",
-  "date": "2026-07-12",
+  "title": "Juno reveals surprising subsurface tempertures at Io, rem... | Space Exploration News",
+  "excerpt": "Following two flybys of Jupiter's innermost Galilean moon Io, teams using data from NASA's Juno'\nThe post Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface appeared first",
+  "date": "2026-07-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "parabilis-tests-propulsion-system-for-maneuverable-cubesats",
-  "sourceLink": "https://spacenews.com/parabilis-tests-propulsion-system-for-maneuverable-cubesats/",
-  "sourceName": "Sandra Erwin",
+  "slug": "juno-reveals-surprising-subsurface-tempertures-at-io-remarkably-smooth",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/07/juno-io-subsurface-temps/",
+  "sourceName": "Haygen Warren",
   "body": [
     {
       "type": "p",
-      "text": "The Space Force is backing the development of the company’s hybrid engine technology for small satellites\nThe post Parabilis tests propulsion system for maneuverable cubesats appeared first on SpaceNews."
+      "text": "Following two flybys of Jupiter's innermost Galilean moon Io, teams using data from NASA's Juno'\nThe post Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sandra Erwin, The Space Force is backing the development of the company’s hybrid engine technology for small satellites\nThe post Parabilis tests propulsion system for maneuverable cubesats appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Haygen Warren, Following two flybys of Jupiter's innermost Galilean moon Io, teams using data from NASA's Juno'\nThe post Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Parabilis tests propulsion system for maneuverable cubesats — a notable development in Space Exploration",
+    "Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Sandra Erwin",
+      "value": "Haygen Warren",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "Parabilis tests propulsion system for maneuverable cubesats",
+      "date": "2026-07-27",
+      "event": "Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "parabilis",
-    "tests",
+    "reveals",
+    "surprising",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Parabilis tests propulsion system for maneuverable cubesats | Space Exploration News",
-  "metaDescription": "The Space Force is backing the development of the company’s hybrid engine technology for small satellites\nThe post Parabilis tests propulsion system for mane...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, parabilis, tests, propulsion, TechNanoAI, emerging tech news",
+  "metaTitle": "Juno reveals surprising subsurface tempertures at Io, rem... | Space Exploration News",
+  "metaDescription": "Following two flybys of Jupiter's innermost Galilean moon Io, teams using data from NASA's Juno'\nThe post Juno reveals surprising subsurface tempertures at I...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, juno, reveals, surprising, TechNanoAI, emerging tech news",
   "featured": true
 }

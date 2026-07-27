@@ -1,21 +1,21 @@
 {
-  "id": "ai-1783843137268-2",
+  "id": "ai-1785144566604-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI bets on families as ChatGPT goes deeper into house... | AI News",
-  "excerpt": "ChatGPT is hiring a dedicated product manager to build experiences for families, caregivers, and older adults, according to a job posting.",
-  "date": "2026-07-12",
+  "title": "Hugging Face CEO calls for ‘radical transparency’ after ‘... | AI News",
+  "excerpt": "\"The first autonomous agent cyberattack is an unprecedented event. It deserves an unprecedented response!\"",
+  "date": "2026-07-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai-bets-on-families-as-chatgpt-goes-deeper-into-households",
-  "sourceLink": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
-  "sourceName": "Jagmeet Singh",
+  "slug": "hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-op",
+  "sourceLink": "https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "ChatGPT is hiring a dedicated product manager to build experiences for families, caregivers, and older adults, according to a job posting."
+      "text": "\"The first autonomous agent cyberattack is an unprecedented event.  It deserves an unprecedented response!"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jagmeet Singh, ChatGPT is hiring a dedicated product manager to build experiences for families, caregivers, and older adults, according to a job posting.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, \"The first autonomous agent cyberattack is an unprecedented event. It deserves an unprecedented response!\". The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI bets on families as ChatGPT goes deeper into households — a notable development in AI",
+    "Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI h — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Jagmeet Singh",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "OpenAI bets on families as ChatGPT goes deeper into households",
+      "date": "2026-07-27",
+      "event": "Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI h",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "families",
+    "hugging",
+    "calls",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI bets on families as ChatGPT goes deeper into house... | AI News",
-  "metaDescription": "ChatGPT is hiring a dedicated product manager to build experiences for families, caregivers, and older adults, according to a job posting.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, bets, families, TechNanoAI, emerging tech news",
+  "metaTitle": "Hugging Face CEO calls for ‘radical transparency’ after ‘... | AI News",
+  "metaDescription": "\"The first autonomous agent cyberattack is an unprecedented event. It deserves an unprecedented response!\" LLMs, agents & the race to AGI. Latest AI development",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, hugging, face, calls, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1783843137267-1",
+  "id": "ai-1785144566603-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hackers Weaponize Balochistan Police Portal in Multi-Grou... | AI News",
-  "excerpt": "Cybersecurity researchers have disclosed details of sustained cyber espionage activity against several Pakistani law enforcement organizations undertaken by suspected China- and India-aligned threat a",
-  "date": "2026-07-12",
+  "title": "Making sense of the panic over Chinese AI | AI News",
+  "excerpt": "On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street.",
+  "date": "2026-07-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hackers-weaponize-balochistan-police-portal-in-multi-group-espionage-c",
-  "sourceLink": "https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "making-sense-of-the-panic-over-chinese-ai",
+  "sourceLink": "https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have disclosed details of sustained cyber espionage activity against several Pakistani law enforcement organizations undertaken by suspected China- and India-aligned threat actors between February 2024 and April 2026."
+      "text": "On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have disclosed details of sustained cyber espionage activity against several Pakistani law enforcement organizations undertaken by suspected China- and India-aligned threat actors between February 2024 and April 2026.\n\n\"At Balochistan Police, the compromised assets included servers hosting web applications that manage police and citizen data, such as criminal and. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns — a notable development in AI",
+    "Making sense of the panic over Chinese AI — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns",
+      "date": "2026-07-27",
+      "event": "Making sense of the panic over Chinese AI",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hackers",
-    "weaponize",
+    "making",
+    "sense",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hackers Weaponize Balochistan Police Portal in Multi-Grou... | AI News",
-  "metaDescription": "Cybersecurity researchers have disclosed details of sustained cyber espionage activity against several Pakistani law enforcement organizations undertaken by ...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hackers, weaponize, balochistan, TechNanoAI, emerging tech news",
+  "metaTitle": "Making sense of the panic over Chinese AI | AI News",
+  "metaDescription": "On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street. LLMs, agents & the race to AGI. Latest AI d",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, making, sense, panic, TechNanoAI, emerging tech news",
   "featured": false
 }

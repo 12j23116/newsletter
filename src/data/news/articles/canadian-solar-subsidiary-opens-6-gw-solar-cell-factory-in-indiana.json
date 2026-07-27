@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783843142302-1",
+  "id": "energy-1785144572110-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "China could produce more batteries than global demand by ... | Energy Storage News",
-  "excerpt": "China’s battery cell manufacturing capacity could exceed projected global demand by 2030, according to a new Carnegie Endowment report, which recommends selective cooperation with Chinese companies to",
-  "date": "2026-07-12",
+  "title": "Canadian Solar subsidiary opens 6 GW solar cell factory i... | Energy Storage News",
+  "excerpt": "Canadian Solar subsidiary CS PowerTech officially opened phase one of its solar cell manufacturing plant in Jeffersonville, Indiana, targeting over 6 GW of annual capacity at full buildout.\nThe post C",
+  "date": "2026-07-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "china-could-produce-more-batteries-than-global-demand-by-2030-says-us-",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/11/china-could-produce-more-batteries-than-global-demand-by-2030-says-us-think-tank/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "canadian-solar-subsidiary-opens-6-gw-solar-cell-factory-in-indiana",
+  "sourceLink": "https://www.pv-magazine.com/2026/07/27/canadian-solar-subsidiary-opens-6-gw-solar-cell-factory-in-indiana/",
+  "sourceName": "Ryan Kennedy",
   "body": [
     {
       "type": "p",
-      "text": "China’s battery cell manufacturing capacity could exceed projected global demand by 2030, according to a new Carnegie Endowment report, which recommends selective cooperation with Chinese companies to reduce supply chain risks.  \nThe post China could produce more batteries than global demand by 2030, says US think tank appeared first on pv magazine Global."
+      "text": "Canadian Solar subsidiary CS PowerTech officially opened phase one of its solar cell manufacturing plant in Jeffersonville, Indiana, targeting over 6 GW of annual capacity at full buildout. \nThe post Canadian Solar subsidiary opens 6 GW solar cell factory in Indiana appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Emiliano Bellini, China’s battery cell manufacturing capacity could exceed projected global demand by 2030, according to a new Carnegie Endowment report, which recommends selective cooperation with Chinese companies to reduce supply chain risks. \nThe post China could produce more batteries than global demand by 2030, says US think tank appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ryan Kennedy, Canadian Solar subsidiary CS PowerTech officially opened phase one of its solar cell manufacturing plant in Jeffersonville, Indiana, targeting over 6 GW of annual capacity at full buildout.\nThe post Canadian Solar subsidiary opens 6 GW solar cell factory in Indiana appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "China could produce more batteries than global demand by 2030, says US think tan — a notable development in Energy Storage",
+    "Canadian Solar subsidiary opens 6 GW solar cell factory in Indiana — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Ryan Kennedy",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-12",
-      "event": "China could produce more batteries than global demand by 2030, says US think tan",
+      "date": "2026-07-27",
+      "event": "Canadian Solar subsidiary opens 6 GW solar cell factory in Indiana",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "china",
-    "could",
+    "canadian",
+    "solar",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "China could produce more batteries than global demand by ... | Energy Storage News",
-  "metaDescription": "China’s battery cell manufacturing capacity could exceed projected global demand by 2030, according to a new Carnegie Endowment report, which recommends sele...",
-  "keywords": "energy storage, battery, solid-state, grid storage, china, could, produce, TechNanoAI, emerging tech news",
+  "metaTitle": "Canadian Solar subsidiary opens 6 GW solar cell factory i... | Energy Storage News",
+  "metaDescription": "Canadian Solar subsidiary CS PowerTech officially opened phase one of its solar cell manufacturing plant in Jeffersonville, Indiana, targeting over 6 GW of a...",
+  "keywords": "energy storage, battery, solid-state, grid storage, canadian, solar, subsidiary, TechNanoAI, emerging tech news",
   "featured": false
 }
