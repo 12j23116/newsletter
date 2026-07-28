@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783932453961-0",
+  "id": "energy-1785226427335-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Germany energy provider builds 50 MW power-to-heat system | Energy Storage News",
-  "excerpt": "Enercity is building a 50 MW power-to-heat plant in Hanover to support its coal phase-out, decarbonize district heating, and absorb surplus renewable electricity. The facility will expand the utility’",
-  "date": "2026-07-13",
+  "title": "Floating PV economically viable at Moroccan dams | Energy Storage News",
+  "excerpt": "Research from Morocco assessing the techno-economic potential of floating PV at a Moroccan dam finds such installations can help to mitigate water stress while increasing the country's renewable energ",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "germany-energy-provider-builds-50-mw-power-to-heat-system",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/13/germany-energy-provider-builds-50-mw-power-to-heat-system/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "floating-pv-economically-viable-at-moroccan-dams",
+  "sourceLink": "https://www.pv-magazine.com/2026/07/28/floating-pv-economically-viable-at-moroccan-dams/",
+  "sourceName": "Patrick Jowett",
   "body": [
     {
       "type": "p",
-      "text": "Enercity is building a 50 MW power-to-heat plant in Hanover to support its coal phase-out, decarbonize district heating, and absorb surplus renewable electricity.  The facility will expand the utility’s flexibility by converting excess power into heat for the district heating network and storage systems."
+      "text": "Research from Morocco assessing the techno-economic potential of floating PV at a Moroccan dam finds such installations can help to mitigate water stress while increasing the country's renewable energy generation.  \nThe post Floating PV economically viable at Moroccan dams appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Germany energy provider builds 50 MW power-to-heat system appeared first on pv magazine Global."
+      "text": "According to reporting from Patrick Jowett, Research from Morocco assessing the techno-economic potential of floating PV at a Moroccan dam finds such installations can help to mitigate water stress while increasing the country's renewable energy generation. \nThe post Floating PV economically viable at Moroccan dams appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Germany energy provider builds 50 MW power-to-heat system — a notable development in Energy Storage",
+    "Floating PV economically viable at Moroccan dams — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Patrick Jowett",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "Germany energy provider builds 50 MW power-to-heat system",
+      "date": "2026-07-28",
+      "event": "Floating PV economically viable at Moroccan dams",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "germany",
-    "energy",
+    "floating",
+    "economically",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Germany energy provider builds 50 MW power-to-heat system | Energy Storage News",
-  "metaDescription": "Enercity is building a 50 MW power-to-heat plant in Hanover to support its coal phase-out, decarbonize district heating, and absorb surplus renewable electri...",
-  "keywords": "energy storage, battery, solid-state, grid storage, germany, energy, provider, TechNanoAI, emerging tech news",
+  "metaTitle": "Floating PV economically viable at Moroccan dams | Energy Storage News",
+  "metaDescription": "Research from Morocco assessing the techno-economic potential of floating PV at a Moroccan dam finds such installations can help to mitigate water stress whi...",
+  "keywords": "energy storage, battery, solid-state, grid storage, floating, economically, viable, TechNanoAI, emerging tech news",
   "featured": true
 }

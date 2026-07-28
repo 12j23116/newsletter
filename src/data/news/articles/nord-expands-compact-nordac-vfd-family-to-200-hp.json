@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1783932454669-0",
+  "id": "robotics-1785226427654-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Physicists recreate black hole energy extraction in the lab | Robotics News",
-  "excerpt": "Researchers have recreated the physics of extracting energy from a spinning black hole using a stationary device that produces synthetic ultrafast rotation. The achievement transforms a long-standing ",
-  "date": "2026-07-13",
+  "title": "NORD expands compact NORDAC VFD family to 200 hp | Robotics News",
+  "excerpt": "NORD Drivesystems said its NORDAC PRO VFDs are adaptable to individual application requirements across industries.\nThe post NORD expands compact NORDAC VFD family to 200 hp appeared first on The Robot",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "physicists-recreate-black-hole-energy-extraction-in-the-lab",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/07/260711010120.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "nord-expands-compact-nordac-vfd-family-to-200-hp",
+  "sourceLink": "https://www.therobotreport.com/nord-expands-nordac-compact-vfd-family-to-200-hp/",
+  "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Researchers have recreated the physics of extracting energy from a spinning black hole using a stationary device that produces synthetic ultrafast rotation.  The achievement transforms a long-standing theoretical idea into a practical experiment and could inspire new advances in optics, wireless communications, and quantum science."
+      "text": "NORD Drivesystems said its NORDAC PRO VFDs are adaptable to individual application requirements across industries. \nThe post NORD expands compact NORDAC VFD family to 200 hp appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Researchers have recreated the physics of extracting energy from a spinning black hole using a stationary device that produces synthetic ultrafast rotation. The achievement transforms a long-standing theoretical idea into a practical experiment and could inspire new advances in optics, wireless communications, and quantum science.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from The Robot Report Staff, NORD Drivesystems said its NORDAC PRO VFDs are adaptable to individual application requirements across industries.\nThe post NORD expands compact NORDAC VFD family to 200 hp appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Physicists recreate black hole energy extraction in the lab — a notable development in Robotics",
+    "NORD expands compact NORDAC VFD family to 200 hp — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "The Robot Report Staff",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "Physicists recreate black hole energy extraction in the lab",
+      "date": "2026-07-28",
+      "event": "NORD expands compact NORDAC VFD family to 200 hp",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "physicists",
-    "recreate",
+    "expands",
+    "compact",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Physicists recreate black hole energy extraction in the lab | Robotics News",
-  "metaDescription": "Researchers have recreated the physics of extracting energy from a spinning black hole using a stationary device that produces synthetic ultrafast rotation. ...",
-  "keywords": "robotics, humanoid robot, automation, drones, physicists, recreate, black, TechNanoAI, emerging tech news",
+  "metaTitle": "NORD expands compact NORDAC VFD family to 200 hp | Robotics News",
+  "metaDescription": "NORD Drivesystems said its NORDAC PRO VFDs are adaptable to individual application requirements across industries.\nThe post NORD expands compact NORDAC VFD f...",
+  "keywords": "robotics, humanoid robot, automation, drones, nord, expands, compact, TechNanoAI, emerging tech news",
   "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1783932454669-1",
+  "id": "robotics-1785226427654-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "STEM education in the classroom, introducing BotBall | Robotics News",
-  "excerpt": "Botball addresses STEM education with autonomous robotics, real coding, and a level playing field driven entirely by students.\nThe post STEM education in the classroom, introducing BotBall appeared fi",
-  "date": "2026-07-13",
+  "title": "Kraken Technology raises Series B funding for autonomous ... | Robotics News",
+  "excerpt": "Kraken Technology plans to use its funding to continue developing uncrewed surface vessels and localizing manufacturing around the world.\nThe post Kraken Technology raises Series B funding for autonom",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "stem-education-in-the-classroom-introducing-botball",
-  "sourceLink": "https://www.therobotreport.com/stem-education-classroom-introducing-botball/",
-  "sourceName": "Mike Oitzman",
+  "slug": "kraken-technology-raises-series-b-funding-for-autonomous-vessels",
+  "sourceLink": "https://www.therobotreport.com/kraken-technology-raises-series-b-funding-autonomous-vessels/",
+  "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Botball addresses STEM education with autonomous robotics, real coding, and a level playing field driven entirely by students. \nThe post STEM education in the classroom, introducing BotBall appeared first on The Robot Report."
+      "text": "Kraken Technology plans to use its funding to continue developing uncrewed surface vessels and localizing manufacturing around the world. \nThe post Kraken Technology raises Series B funding for autonomous vessels appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mike Oitzman, Botball addresses STEM education with autonomous robotics, real coding, and a level playing field driven entirely by students.\nThe post STEM education in the classroom, introducing BotBall appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from The Robot Report Staff, Kraken Technology plans to use its funding to continue developing uncrewed surface vessels and localizing manufacturing around the world.\nThe post Kraken Technology raises Series B funding for autonomous vessels appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "STEM education in the classroom, introducing BotBall — a notable development in Robotics",
+    "Kraken Technology raises Series B funding for autonomous vessels — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Mike Oitzman",
+      "value": "The Robot Report Staff",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "STEM education in the classroom, introducing BotBall",
+      "date": "2026-07-28",
+      "event": "Kraken Technology raises Series B funding for autonomous vessels",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "education",
-    "classroom",
+    "kraken",
+    "technology",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "STEM education in the classroom, introducing BotBall | Robotics News",
-  "metaDescription": "Botball addresses STEM education with autonomous robotics, real coding, and a level playing field driven entirely by students.\nThe post STEM education in the...",
-  "keywords": "robotics, humanoid robot, automation, drones, stem, education, classroom, TechNanoAI, emerging tech news",
+  "metaTitle": "Kraken Technology raises Series B funding for autonomous ... | Robotics News",
+  "metaDescription": "Kraken Technology plans to use its funding to continue developing uncrewed surface vessels and localizing manufacturing around the world.\nThe post Kraken Tec...",
+  "keywords": "robotics, humanoid robot, automation, drones, kraken, technology, raises, TechNanoAI, emerging tech news",
   "featured": false
 }

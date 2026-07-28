@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1783932449994-5",
+  "id": "cybersecurity-1785226423692-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Claude Fable 5 stays free for paid users until July 19 as... | Cybersecurity News",
-  "excerpt": "Anthropic has just extended access to Claude Fable 5 for paid subscribers until July 19, giving you another week to keep using the most powerful model. [...]",
-  "date": "2026-07-13",
+  "title": "For Some, So-Called ‘Skynet Day’ Came too Close to Sci-Fi... | Cybersecurity News",
+  "excerpt": "Decades after it appeared in “The Terminator,” Skynet looks more like a forecast of the cyber incident in which a rogue AI system hacked into another AI company on its own.\nThe post For Some, So-Calle",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-bu",
-  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/",
-  "sourceName": "Mayank Parmar",
+  "slug": "for-some-so-called-skynet-day-came-too-close-to-sci-fi-after-a-rogue-a",
+  "sourceLink": "https://www.securityweek.com/for-some-so-called-skynet-day-came-too-close-to-sci-fi-after-a-rogue-agent-hacked-into-a-startup/",
+  "sourceName": "Associated Press",
   "body": [
     {
       "type": "p",
-      "text": "Anthropic has just extended access to Claude Fable 5 for paid subscribers until July 19, giving you another week to keep using the most powerful model.  [..."
+      "text": "Decades after it appeared in “The Terminator,” Skynet looks more like a forecast of the cyber incident in which a rogue AI system hacked into another AI company on its own. \nThe post For Some, So-Called ‘Skynet Day’ Came too Close to Sci-Fi After a Rogue Agent Hacked Into a Startup appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mayank Parmar, Anthropic has just extended access to Claude Fable 5 for paid subscribers until July 19, giving you another week to keep using the most powerful model. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Associated Press, Decades after it appeared in “The Terminator,” Skynet looks more like a forecast of the cyber incident in which a rogue AI system hacked into another AI company on its own.\nThe post For Some, So-Called ‘Skynet Day’ Came too Close to Sci-Fi After a Rogue Agent Hacked Into a Startup appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more ti — a notable development in Cybersecurity",
+    "For Some, So-Called ‘Skynet Day’ Came too Close to Sci-Fi After a Rogue Agent Ha — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Mayank Parmar",
+      "value": "Associated Press",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more ti",
+      "date": "2026-07-28",
+      "event": "For Some, So-Called ‘Skynet Day’ Came too Close to Sci-Fi After a Rogue Agent Ha",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "claude",
-    "fable",
+    "called",
+    "skynet",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Claude Fable 5 stays free for paid users until July 19 as... | Cybersecurity News",
-  "metaDescription": "Anthropic has just extended access to Claude Fable 5 for paid subscribers until July 19, giving you another week to keep using the most powerful model. [...]",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, claude, fable, stays, TechNanoAI, emerging tech news",
+  "metaTitle": "For Some, So-Called ‘Skynet Day’ Came too Close to Sci-Fi... | Cybersecurity News",
+  "metaDescription": "Decades after it appeared in “The Terminator,” Skynet looks more like a forecast of the cyber incident in which a rogue AI system hacked into another AI comp...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, some, called, skynet, TechNanoAI, emerging tech news",
   "featured": false
 }

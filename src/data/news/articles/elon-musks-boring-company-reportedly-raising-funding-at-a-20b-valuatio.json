@@ -1,21 +1,21 @@
 {
-  "id": "av-1783932455081-0",
+  "id": "av-1785226428009-2",
   "topic": "av",
   "topicLabel": "Autonomous Vehicles",
   "topicColor": "#8b5cf6",
-  "title": "TechCrunch Mobility: A robotaxi ultimatum | Autonomous Vehicles News",
-  "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
-  "date": "2026-07-13",
+  "title": "Elon Musk’s Boring Company reportedly raising funding at ... | Autonomous Vehicles News",
+  "excerpt": "Elon Musk's tunneling startup is reportedly in talks for a major new funding round.",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/006-av-autonomous-vehicle.webp",
-  "slug": "techcrunch-mobility-a-robotaxi-ultimatum",
-  "sourceLink": "https://techcrunch.com/2026/07/12/techcrunch-mobility-a-robotaxi-ultimatum/",
-  "sourceName": "Kirsten Korosec",
+  "slug": "elon-musks-boring-company-reportedly-raising-funding-at-a-20b-valuatio",
+  "sourceLink": "https://techcrunch.com/2026/07/25/elon-musks-boring-company-reportedly-raising-funding-at-a-20-billion-valuation/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part."
+      "text": "Elon Musk's tunneling startup is reportedly in talks for a major new funding round."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kirsten Korosec, Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Elon Musk's tunneling startup is reportedly in talks for a major new funding round.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "TechCrunch Mobility: A robotaxi ultimatum — a notable development in Autonomous Vehicles",
+    "Elon Musk’s Boring Company reportedly raising funding at a $20B valuation — a notable development in Autonomous Vehicles",
     "The autonomous vehicles sector continues to accelerate, with robotaxis & level 4 autonomy driving rapid progress",
     "Industry context: Autonomous vehicles are scaling commercially, with robotaxi services operating in 40+ cities and Lev...",
     "Challenges remain: Edge case handling in dense urban environments, regulatory frameworks for driver...",
@@ -120,7 +120,7 @@
       "change": "Robotaxis & Level 4 autonomy"
     },
     {
-      "value": "Kirsten Korosec",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "TechCrunch Mobility: A robotaxi ultimatum",
+      "date": "2026-07-28",
+      "event": "Elon Musk’s Boring Company reportedly raising funding at a $20B valuation",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "autonomous vehicles",
     "self-driving",
-    "techcrunch",
-    "mobility",
+    "boring",
+    "company",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "TechCrunch Mobility: A robotaxi ultimatum | Autonomous Vehicles News",
-  "metaDescription": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
-  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, techcrunch, mobility, robotaxi, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Elon Musk’s Boring Company reportedly raising funding at ... | Autonomous Vehicles News",
+  "metaDescription": "Elon Musk's tunneling startup is reportedly in talks for a major new funding round. Robotaxis & Level 4 autonomy. Latest Autonomous Vehicles developments and an",
+  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, elon, musk, boring, TechNanoAI, emerging tech news",
+  "featured": false
 }

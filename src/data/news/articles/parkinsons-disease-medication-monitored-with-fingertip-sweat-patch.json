@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1783932451509-1",
+  "id": "biotech-1785226425017-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/how-did-they-get-there-first-biotechs-f... | Biotechnology News",
-  "excerpt": "For a biotech, your intellectual property is your most prized asset. But a new era of increased global competition means that strong patents, longer stealth periods and even some misdirection can be r",
-  "date": "2026-07-13",
+  "title": "Parkinson’s Disease Medication Monitored with Fingertip S... | Biotechnology News",
+  "excerpt": "Researchers developed a soft, wearable fingertip patch that continuously tracks a Parkinson's disease patient’s levodopa medication levels by measuring chemicals in their sweat, with no batteries requ",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechhow-did-they-get-there-first-biotechs-forced-learn-new-tr",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/how-did-they-get-there-first-biotechs-forced-learn-new-tricks-protect-pipelines",
-  "sourceName": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+  "slug": "parkinsons-disease-medication-monitored-with-fingertip-sweat-patch",
+  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/parkinsons-disease-medication-monitored-with-fingertip-sweat-patch/",
+  "sourceName": "Sophia Ktori",
   "body": [
     {
       "type": "p",
-      "text": "For a biotech, your intellectual property is your most prized asset.  But a new era of increased global competition means that strong patents, longer stealth periods and even some misdirection can be required to ensure drug developers retain an edge."
+      "text": "Researchers developed a soft, wearable fingertip patch that continuously tracks a Parkinson's disease patient’s levodopa medication levels by measuring chemicals in their sweat, with no batteries required. \nThe post Parkinson’s Disease Medication Monitored with Fingertip Sweat Patch appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, For a biotech, your intellectual property is your most prized asset. But a new era of increased global competition means that strong patents, longer stealth periods and even some misdirection can be required to ensure drug developers retain an edge.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sophia Ktori, Researchers developed a soft, wearable fingertip patch that continuously tracks a Parkinson's disease patient’s levodopa medication levels by measuring chemicals in their sweat, with no batteries required.\nThe post Parkinson’s Disease Medication Monitored with Fingertip Sweat Patch appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/how-did-they-get-there-first-biotechs-forced-learn-new-tricks- — a notable development in Biotechnology",
+    "Parkinson’s Disease Medication Monitored with Fingertip Sweat Patch — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+      "value": "Sophia Ktori",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "<a href=\"/biotech/how-did-they-get-there-first-biotechs-forced-learn-new-tricks-",
+      "date": "2026-07-28",
+      "event": "Parkinson’s Disease Medication Monitored with Fingertip Sweat Patch",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "there",
+    "parkinson",
+    "disease",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/how-did-they-get-there-first-biotechs-f... | Biotechnology News",
-  "metaDescription": "For a biotech, your intellectual property is your most prized asset. But a new era of increased global competition means that strong patents, longer stealth ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, they, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Parkinson’s Disease Medication Monitored with Fingertip S... | Biotechnology News",
+  "metaDescription": "Researchers developed a soft, wearable fingertip patch that continuously tracks a Parkinson's disease patient’s levodopa medication levels by measuring chemi...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, parkinson, disease, medication, TechNanoAI, emerging tech news",
+  "featured": true
 }

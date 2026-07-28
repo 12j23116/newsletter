@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783932453962-2",
+  "id": "energy-1785226427337-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "‘Australian first’ compressed CO2 battery project takes s... | Energy Storage News",
-  "excerpt": "The Victorian government and Italian clean technology company Energy Dome have announced plans to develop Australia’s first long-duration compressed carbon dioxide battery energy storage facility in t",
-  "date": "2026-07-13",
+  "title": "Malaysia launches tender for 2.5GW of solar PV with co-lo... | Energy Storage News",
+  "excerpt": "The government of Malaysia has unveiled the next round of its Large-scale solar (LSS) program tender seeking 2.5GW of solar PV co-located with 1.25GW of battery energy storage system (BESS) capacity.",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "australian-first-compressed-co2-battery-project-takes-shape",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/13/sec-plans-australian-first-compressed-co2-battery-in-victorian-coal-country/",
-  "sourceName": "David Carroll",
+  "slug": "malaysia-launches-tender-for-25gw-of-solar-pv-with-co-located-battery-",
+  "sourceLink": "https://www.energy-storage.news/malaysia-launches-tender-for-2-5gw-of-solar-pv-with-co-located-battery-storage/",
+  "sourceName": "Jonathan Touriño Jacobo",
   "body": [
     {
       "type": "p",
-      "text": "The Victorian government and Italian clean technology company Energy Dome have announced plans to develop Australia’s first long-duration compressed carbon dioxide battery energy storage facility in the heart of the state's coal country. \nThe post ‘Australian first’ compressed CO2 battery project takes shape appeared first on pv magazine Global."
+      "text": "The government of Malaysia has unveiled the next round of its Large-scale solar (LSS) program tender seeking 2. 5GW of solar PV co-located with 1."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from David Carroll, The Victorian government and Italian clean technology company Energy Dome have announced plans to develop Australia’s first long-duration compressed carbon dioxide battery energy storage facility in the heart of the state's coal country.\nThe post ‘Australian first’ compressed CO2 battery project takes shape appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "25GW of battery energy storage system (BESS) capacity."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "‘Australian first’ compressed CO2 battery project takes shape — a notable development in Energy Storage",
+    "Malaysia launches tender for 2.5GW of solar PV with co-located battery storage — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "David Carroll",
+      "value": "Jonathan Touriño Jacobo",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "‘Australian first’ compressed CO2 battery project takes shape",
+      "date": "2026-07-28",
+      "event": "Malaysia launches tender for 2.5GW of solar PV with co-located battery storage",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "australian",
-    "first",
+    "malaysia",
+    "launches",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "‘Australian first’ compressed CO2 battery project takes s... | Energy Storage News",
-  "metaDescription": "The Victorian government and Italian clean technology company Energy Dome have announced plans to develop Australia’s first long-duration compressed carbon d...",
-  "keywords": "energy storage, battery, solid-state, grid storage, australian, first, compressed, TechNanoAI, emerging tech news",
+  "metaTitle": "Malaysia launches tender for 2.5GW of solar PV with co-lo... | Energy Storage News",
+  "metaDescription": "The government of Malaysia has unveiled the next round of its Large-scale solar (LSS) program tender seeking 2.5GW of solar PV co-located with 1.25GW of batt...",
+  "keywords": "energy storage, battery, solid-state, grid storage, malaysia, launches, tender, TechNanoAI, emerging tech news",
   "featured": false
 }

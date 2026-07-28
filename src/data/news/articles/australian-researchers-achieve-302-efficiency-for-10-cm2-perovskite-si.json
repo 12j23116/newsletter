@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783932453962-4",
+  "id": "energy-1785226427337-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Spain targets wafer production | Energy Storage News",
-  "excerpt": "Spain-based Sunwafe is planning a 20 GW ingot and wafer factory. The project is progressing quickly, with a site secured in northern Spain and a €200 million ($232.6 million) grant, newly appointed CE",
-  "date": "2026-07-13",
+  "title": "Australian researchers achieve 30.2% efficiency for 10 cm... | Energy Storage News",
+  "excerpt": "The result was confirmed by the PV Performance Lab at the Commonwealth Scientific and Industrial Research Organisation (CSIRO).\nThe post Australian researchers achieve 30.2% efficiency for 10 cm2 pero",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "spain-targets-wafer-production",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/13/spain-targets-wafer-production/",
-  "sourceName": "Mark Hutchins",
+  "slug": "australian-researchers-achieve-302-efficiency-for-10-cm2-perovskite-si",
+  "sourceLink": "https://www.pv-magazine.com/2026/07/28/australian-researchers-achieve-30-2-efficiency-for-10-cm2-perovskite-silicon-tandem-solar-cell/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Spain-based Sunwafe is planning a 20 GW ingot and wafer factory.  The project is progressing quickly, with a site secured in northern Spain and a €200 million ($232."
+      "text": "The result was confirmed by the PV Performance Lab at the Commonwealth Scientific and Industrial Research Organisation (CSIRO). \nThe post Australian researchers achieve 30."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "6 million) grant, newly appointed CEO Michael Pinto tells pv magazine.  \nThe post Spain targets wafer production appeared first on pv magazine Global."
+      "text": "2% efficiency for 10 cm2 perovskite-silicon tandem solar cell appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Spain targets wafer production — a notable development in Energy Storage",
+    "Australian researchers achieve 30.2% efficiency for 10 cm2 perovskite-silicon ta — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Mark Hutchins",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "Spain targets wafer production",
+      "date": "2026-07-28",
+      "event": "Australian researchers achieve 30.2% efficiency for 10 cm2 perovskite-silicon ta",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "spain",
-    "targets",
+    "australian",
+    "researchers",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Spain targets wafer production | Energy Storage News",
-  "metaDescription": "Spain-based Sunwafe is planning a 20 GW ingot and wafer factory. The project is progressing quickly, with a site secured in northern Spain and a €200 million...",
-  "keywords": "energy storage, battery, solid-state, grid storage, spain, targets, wafer, TechNanoAI, emerging tech news",
+  "metaTitle": "Australian researchers achieve 30.2% efficiency for 10 cm... | Energy Storage News",
+  "metaDescription": "The result was confirmed by the PV Performance Lab at the Commonwealth Scientific and Industrial Research Organisation (CSIRO).\nThe post Australian researche...",
+  "keywords": "energy storage, battery, solid-state, grid storage, australian, researchers, achieve, TechNanoAI, emerging tech news",
   "featured": false
 }

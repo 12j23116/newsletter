@@ -1,21 +1,21 @@
 {
-  "id": "space-1783932450936-0",
+  "id": "space-1785226424514-5",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "China lines up methalox Long March 10C as commercial work... | Space Exploration News",
-  "excerpt": "HELSINKI — China confirmed a methalox Long March 10C as its commercial workhorse following its first successful booster recovery, while injecting fresh capital into commercial rocket ventures. The Chi",
-  "date": "2026-07-13",
+  "title": "NASA Science Soars During August Total Solar Eclipse | Space Exploration News",
+  "excerpt": "Each time the Moon covers the Sun during a total solar eclipse — darkening daytime skies and briefly revealing the Sun’s ethereal outer atmosphere, the corona — it presents new opportunities to better",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "china-lines-up-methalox-long-march-10c-as-commercial-workhorse-after-f",
-  "sourceLink": "https://spacenews.com/china-lines-up-methalox-long-march-10c-as-commercial-workhorse-after-first-booster-recovery/",
-  "sourceName": "Andrew Jones",
+  "slug": "nasa-science-soars-during-august-total-solar-eclipse",
+  "sourceLink": "https://science.nasa.gov/science-research/heliophysics/nasa-science-soars-during-august-total-solar-eclipse/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "HELSINKI — China confirmed a methalox Long March 10C as its commercial workhorse following its first successful booster recovery, while injecting fresh capital into commercial rocket ventures.  The China Academy [']\nThe post China lines up methalox Long March 10C as commercial workhorse after first booster recovery appeared first on SpaceNews."
+      "text": "Each time the Moon covers the Sun during a total solar eclipse — darkening daytime skies and briefly revealing the Sun’s ethereal outer atmosphere, the corona — it presents new opportunities to better understand our star and its influence on Earth.  On Wednesday, Aug."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Andrew Jones, HELSINKI — China confirmed a methalox Long March 10C as its commercial workhorse following its first successful booster recovery, while injecting fresh capital into commercial rocket ventures. The China Academy [']\nThe post China lines up methalox Long March 10C as commercial workhorse after first booster recovery appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, Each time the Moon covers the Sun during a total solar eclipse — darkening daytime skies and briefly revealing the Sun’s ethereal outer atmosphere, the corona — it presents new opportunities to better understand our star and its influence on Earth. On Wednesday, Aug. 12, as the next total solar eclipse sweeps over Greenland, Iceland, […]. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "China lines up methalox Long March 10C as commercial workhorse after first boost — a notable development in Space Exploration",
+    "NASA Science Soars During August Total Solar Eclipse — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Andrew Jones",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "China lines up methalox Long March 10C as commercial workhorse after first boost",
+      "date": "2026-07-28",
+      "event": "NASA Science Soars During August Total Solar Eclipse",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "china",
-    "lines",
+    "science",
+    "soars",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "China lines up methalox Long March 10C as commercial work... | Space Exploration News",
-  "metaDescription": "HELSINKI — China confirmed a methalox Long March 10C as its commercial workhorse following its first successful booster recovery, while injecting fresh capit...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, china, lines, methalox, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "NASA Science Soars During August Total Solar Eclipse | Space Exploration News",
+  "metaDescription": "Each time the Moon covers the Sun during a total solar eclipse — darkening daytime skies and briefly revealing the Sun’s ethereal outer atmosphere, the coron...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, science, soars, TechNanoAI, emerging tech news",
+  "featured": false
 }

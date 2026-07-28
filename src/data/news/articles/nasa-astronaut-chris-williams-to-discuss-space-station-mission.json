@@ -1,21 +1,21 @@
 {
-  "id": "space-1783932450936-1",
+  "id": "space-1785226424514-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX gears up for Starship Flight 13 | Space Exploration News",
-  "excerpt": "SpaceX plans to conduct its next Starship launch as soon as July 16 to test fixes to issues from the previous flight and deploy functioning Starlink satellites.\nThe post SpaceX gears up for Starship F",
-  "date": "2026-07-13",
+  "title": "NASA Astronaut Chris Williams to Discuss Space Station Mi... | Space Exploration News",
+  "excerpt": "NASA astronaut Chris Williams will recap his recent eight-month mission aboard the International Space Station during a news conference at 2:45 p.m. EDT Tuesday, Aug. 4, from the agency’s Johnson Spac",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-gears-up-for-starship-flight-13",
-  "sourceLink": "https://spacenews.com/spacex-gears-up-for-starship-flight-13/",
-  "sourceName": "Jeff Foust",
+  "slug": "nasa-astronaut-chris-williams-to-discuss-space-station-mission",
+  "sourceLink": "https://www.nasa.gov/news-release/nasa-astronaut-chris-williams-to-discuss-space-station-mission/",
+  "sourceName": "Gerelle Q. Dodson",
   "body": [
     {
       "type": "p",
-      "text": "SpaceX plans to conduct its next Starship launch as soon as July 16 to test fixes to issues from the previous flight and deploy functioning Starlink satellites. \nThe post SpaceX gears up for Starship Flight 13 appeared first on SpaceNews."
+      "text": "NASA astronaut Chris Williams will recap his recent eight-month mission aboard the International Space Station during a news conference at 2:45 p. m."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jeff Foust, SpaceX plans to conduct its next Starship launch as soon as July 16 to test fixes to issues from the previous flight and deploy functioning Starlink satellites.\nThe post SpaceX gears up for Starship Flight 13 appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "EDT Tuesday, Aug.  4, from the agency’s Johnson Space Center in Houston."
+    },
+    {
+      "type": "p",
+      "text": "NASA will stream this event live through a variety of platforms.  Learn where to watch online: https://www."
+    },
+    {
+      "type": "p",
+      "text": "nasa."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX gears up for Starship Flight 13 — a notable development in Space Exploration",
+    "NASA Astronaut Chris Williams to Discuss Space Station Mission — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +128,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jeff Foust",
+      "value": "Gerelle Q. Dodson",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "SpaceX gears up for Starship Flight 13",
+      "date": "2026-07-28",
+      "event": "NASA Astronaut Chris Williams to Discuss Space Station Mission",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "gears",
+    "astronaut",
+    "chris",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX gears up for Starship Flight 13 | Space Exploration News",
-  "metaDescription": "SpaceX plans to conduct its next Starship launch as soon as July 16 to test fixes to issues from the previous flight and deploy functioning Starlink satellit...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, gears, starship, TechNanoAI, emerging tech news",
+  "metaTitle": "NASA Astronaut Chris Williams to Discuss Space Station Mi... | Space Exploration News",
+  "metaDescription": "NASA astronaut Chris Williams will recap his recent eight-month mission aboard the International Space Station during a news conference at 2:45 p.m. EDT Tues...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, astronaut, chris, TechNanoAI, emerging tech news",
   "featured": false
 }

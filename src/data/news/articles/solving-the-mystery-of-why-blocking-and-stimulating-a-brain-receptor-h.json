@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1783932451510-3",
+  "id": "biotech-1785226425018-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/medtech/ihealthscreen-garners-fda-nod-ai-backed... | Biotechnology News",
-  "excerpt": "IHealthScreen hauled in FDA 510(k) clearance for its AI-powered diagnostic that detects mild diabetic retinopathy in diabetic adults who have gone undiagnosed with the condition.",
-  "date": "2026-07-13",
-  "readTime": "3 min",
+  "title": "Solving the Mystery of Why Blocking and Stimulating a Bra... | Biotechnology News",
+  "excerpt": "Researchers solved the mystery of why stimulating and blocking a receptor in the brain can help people lose weight, and suggested that the results of their mouse studies could aid the design of drugs ",
+  "date": "2026-07-28",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefmedtechihealthscreen-garners-fda-nod-ai-backed-dx-spot-mild-diab",
-  "sourceLink": "https://www.fiercebiotech.com/medtech/ihealthscreen-garners-fda-nod-ai-backed-dx-spot-mild-diabetic-retinopathy",
-  "sourceName": "<a href=\"/person/joseph-keenan\" hreflang=\"en\">Joseph Keenan</a>",
+  "slug": "solving-the-mystery-of-why-blocking-and-stimulating-a-brain-receptor-h",
+  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/solving-the-mystery-of-why-blocking-and-stimulating-a-brain-receptor-helps-weight-loss/",
+  "sourceName": "Sophia Ktori",
   "body": [
     {
       "type": "p",
-      "text": "IHealthScreen hauled in FDA 510(k) clearance for its AI-powered diagnostic that detects mild diabetic retinopathy in diabetic adults who have gone undiagnosed with the condition."
+      "text": "Researchers solved the mystery of why stimulating and blocking a receptor in the brain can help people lose weight, and suggested that the results of their mouse studies could aid the design of drugs that stimulate more weight loss with fewer side effects.  \nThe post Solving the Mystery of Why Blocking and Stimulating a Brain Receptor Helps Weight Loss appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/joseph-keenan\" hreflang=\"en\">Joseph Keenan</a>, IHealthScreen hauled in FDA 510(k) clearance for its AI-powered diagnostic that detects mild diabetic retinopathy in diabetic adults who have gone undiagnosed with the condition.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sophia Ktori, Researchers solved the mystery of why stimulating and blocking a receptor in the brain can help people lose weight, and suggested that the results of their mouse studies could aid the design of drugs that stimulate more weight loss with fewer side effects. \nThe post Solving the Mystery of Why Blocking and Stimulating a Brain Receptor Helps Weight Loss appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/medtech/ihealthscreen-garners-fda-nod-ai-backed-dx-spot-mild-diabetic- — a notable development in Biotechnology",
+    "Solving the Mystery of Why Blocking and Stimulating a Brain Receptor Helps Weigh — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/joseph-keenan\" hreflang=\"en\">Joseph Keenan</a>",
+      "value": "Sophia Ktori",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "<a href=\"/medtech/ihealthscreen-garners-fda-nod-ai-backed-dx-spot-mild-diabetic-",
+      "date": "2026-07-28",
+      "event": "Solving the Mystery of Why Blocking and Stimulating a Brain Receptor Helps Weigh",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "medtech",
-    "ihealthscreen",
+    "solving",
+    "mystery",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/medtech/ihealthscreen-garners-fda-nod-ai-backed... | Biotechnology News",
-  "metaDescription": "IHealthScreen hauled in FDA 510(k) clearance for its AI-powered diagnostic that detects mild diabetic retinopathy in diabetic adults who have gone undiagnose...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, ihealthscreen, TechNanoAI, emerging tech news",
+  "metaTitle": "Solving the Mystery of Why Blocking and Stimulating a Bra... | Biotechnology News",
+  "metaDescription": "Researchers solved the mystery of why stimulating and blocking a receptor in the brain can help people lose weight, and suggested that the results of their m...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, solving, mystery, blocking, TechNanoAI, emerging tech news",
   "featured": false
 }

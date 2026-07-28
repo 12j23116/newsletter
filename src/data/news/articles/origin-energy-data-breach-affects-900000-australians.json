@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1783932449993-0",
+  "id": "cybersecurity-1785226423691-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Progress Prompts ShareFile Storage Zone Controller Shutdo... | Cybersecurity News",
-  "excerpt": "The company notified customers to manually shut down their servers while it is investigating a credible threat.\nThe post Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Conce",
-  "date": "2026-07-13",
+  "title": "Origin Energy Data Breach Affects 900,000 Australians | Cybersecurity News",
+  "excerpt": "The hacker claimed to have stolen the information of 2 million Origin Energy customers after breaching its systems.\nThe post Origin Energy Data Breach Affects 900,000 Australians appeared first on Sec",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "progress-prompts-sharefile-storage-zone-controller-shutdown-amid-secur",
-  "sourceLink": "https://www.securityweek.com/progress-prompts-sharefile-storage-zone-controller-shutdown-amid-security-concerns/",
-  "sourceName": "Ionut Arghire",
+  "slug": "origin-energy-data-breach-affects-900000-australians",
+  "sourceLink": "https://www.securityweek.com/origin-energy-data-breach-affects-900000-australians/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "The company notified customers to manually shut down their servers while it is investigating a credible threat. \nThe post Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Concerns appeared first on SecurityWeek."
+      "text": "The hacker claimed to have stolen the information of 2 million Origin Energy customers after breaching its systems. \nThe post Origin Energy Data Breach Affects 900,000 Australians appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The company notified customers to manually shut down their servers while it is investigating a credible threat.\nThe post Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Concerns appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eduard Kovacs, The hacker claimed to have stolen the information of 2 million Origin Energy customers after breaching its systems.\nThe post Origin Energy Data Breach Affects 900,000 Australians appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Concer — a notable development in Cybersecurity",
+    "Origin Energy Data Breach Affects 900,000 Australians — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Concer",
+      "date": "2026-07-28",
+      "event": "Origin Energy Data Breach Affects 900,000 Australians",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "progress",
-    "prompts",
+    "origin",
+    "energy",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Progress Prompts ShareFile Storage Zone Controller Shutdo... | Cybersecurity News",
-  "metaDescription": "The company notified customers to manually shut down their servers while it is investigating a credible threat.\nThe post Progress Prompts ShareFile Storage Z...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, progress, prompts, sharefile, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Origin Energy Data Breach Affects 900,000 Australians | Cybersecurity News",
+  "metaDescription": "The hacker claimed to have stolen the information of 2 million Origin Energy customers after breaching its systems.\nThe post Origin Energy Data Breach Affect...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, origin, energy, data, TechNanoAI, emerging tech news",
+  "featured": false
 }

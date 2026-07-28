@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1783932451508-0",
+  "id": "biotech-1785226425019-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/apnimed-dreams-ipo-fund-launch-sleep-ap... | Biotechnology News",
-  "excerpt": "Apnimed is having sweet dreams of an IPO that could fund the planned commercial launch of an obstructive sleep apnea therapy that is currently awaiting an FDA approval decision.",
-  "date": "2026-07-13",
+  "title": "ALS Could Be Predicted Years Before Symptoms, Proteomics ... | Biotechnology News",
+  "excerpt": "Proteomics study identifies a 19-protein blood signature that predicts ALS symptom onset up to five years before clinical diagnosis, offering a potential tool to guide earlier intervention and prevent",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechapnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/apnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-fda-approval-decision",
-  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+  "slug": "als-could-be-predicted-years-before-symptoms-proteomics-study-finds",
+  "sourceLink": "https://www.genengnews.com/topics/omics/als-could-be-predicted-years-before-symptoms-proteomics-study-finds/",
+  "sourceName": "Julianna LeMieux, PhD",
   "body": [
     {
       "type": "p",
-      "text": "Apnimed is having sweet dreams of an IPO that could fund the planned commercial launch of an obstructive sleep apnea therapy that is currently awaiting an FDA approval decision."
+      "text": "Proteomics study identifies a 19-protein blood signature that predicts ALS symptom onset up to five years before clinical diagnosis, offering a potential tool to guide earlier intervention and preventive treatment before irreversible nerve damage occurs. \nThe post ALS Could Be Predicted Years Before Symptoms, Proteomics Study Finds appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Apnimed is having sweet dreams of an IPO that could fund the planned commercial launch of an obstructive sleep apnea therapy that is currently awaiting an FDA approval decision.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Julianna LeMieux, PhD, Proteomics study identifies a 19-protein blood signature that predicts ALS symptom onset up to five years before clinical diagnosis, offering a potential tool to guide earlier intervention and preventive treatment before irreversible nerve damage occurs.\nThe post ALS Could Be Predicted Years Before Symptoms, Proteomics Study Finds appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/apnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-fda-a — a notable development in Biotechnology",
+    "ALS Could Be Predicted Years Before Symptoms, Proteomics Study Finds — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+      "value": "Julianna LeMieux, PhD",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "<a href=\"/biotech/apnimed-dreams-ipo-fund-launch-sleep-apnea-pill-awaiting-fda-a",
+      "date": "2026-07-28",
+      "event": "ALS Could Be Predicted Years Before Symptoms, Proteomics Study Finds",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "apnimed",
+    "could",
+    "predicted",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/apnimed-dreams-ipo-fund-launch-sleep-ap... | Biotechnology News",
-  "metaDescription": "Apnimed is having sweet dreams of an IPO that could fund the planned commercial launch of an obstructive sleep apnea therapy that is currently awaiting an FD...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, apnimed, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "ALS Could Be Predicted Years Before Symptoms, Proteomics ... | Biotechnology News",
+  "metaDescription": "Proteomics study identifies a 19-protein blood signature that predicts ALS symptom onset up to five years before clinical diagnosis, offering a potential too...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, could, predicted, years, TechNanoAI, emerging tech news",
+  "featured": false
 }

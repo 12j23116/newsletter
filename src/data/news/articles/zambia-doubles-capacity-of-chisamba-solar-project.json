@@ -1,21 +1,21 @@
 {
-  "id": "energy-1783932453961-1",
+  "id": "energy-1785226427336-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Daikin unveils inverter-driven rooftop heat pump for ligh... | Energy Storage News",
-  "excerpt": "Daikin has unveiled an inverter-driven rooftop heat pump offering 7.5-ton to 10-ton capacities. The system uses difluoromethane refrigerant and reportedly achieves a coefficient of performance of up t",
-  "date": "2026-07-13",
+  "title": "Zambia doubles capacity of Chisamba solar project | Energy Storage News",
+  "excerpt": "Zambia has added 100 MW to its Chisamba solar plant, with construction of the second phase taking just seven months.\nThe post Zambia doubles capacity of Chisamba solar project appeared first on pv mag",
+  "date": "2026-07-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "daikin-unveils-inverter-driven-rooftop-heat-pump-for-light-commercial-",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/13/daikin-unveils-inverter-driven-rooftop-heat-pump-for-light-commercial-buildings/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "zambia-doubles-capacity-of-chisamba-solar-project",
+  "sourceLink": "https://www.pv-magazine.com/2026/07/28/zambia-doubles-capacity-of-chisamba-solar-project/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "Daikin has unveiled an inverter-driven rooftop heat pump offering 7. 5-ton to 10-ton capacities."
+      "text": "Zambia has added 100 MW to its Chisamba solar plant, with construction of the second phase taking just seven months. \nThe post Zambia doubles capacity of Chisamba solar project appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The system uses difluoromethane refrigerant and reportedly achieves a coefficient of performance of up to 3. 85 at 8."
-    },
-    {
-      "type": "p",
-      "text": "3 C\nThe post Daikin unveils inverter-driven rooftop heat pump for light commercial buildings appeared first on pv magazine Global."
+      "text": "According to reporting from Lior Kahana, Zambia has added 100 MW to its Chisamba solar plant, with construction of the second phase taking just seven months.\nThe post Zambia doubles capacity of Chisamba solar project appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Daikin unveils inverter-driven rooftop heat pump for light commercial buildings — a notable development in Energy Storage",
+    "Zambia doubles capacity of Chisamba solar project — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -124,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-13",
-      "event": "Daikin unveils inverter-driven rooftop heat pump for light commercial buildings",
+      "date": "2026-07-28",
+      "event": "Zambia doubles capacity of Chisamba solar project",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "daikin",
-    "unveils",
+    "zambia",
+    "doubles",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Daikin unveils inverter-driven rooftop heat pump for ligh... | Energy Storage News",
-  "metaDescription": "Daikin has unveiled an inverter-driven rooftop heat pump offering 7.5-ton to 10-ton capacities. The system uses difluoromethane refrigerant and reportedly ac...",
-  "keywords": "energy storage, battery, solid-state, grid storage, daikin, unveils, inverter, TechNanoAI, emerging tech news",
+  "metaTitle": "Zambia doubles capacity of Chisamba solar project | Energy Storage News",
+  "metaDescription": "Zambia has added 100 MW to its Chisamba solar plant, with construction of the second phase taking just seven months.\nThe post Zambia doubles capacity of Chis...",
+  "keywords": "energy storage, battery, solid-state, grid storage, zambia, doubles, capacity, TechNanoAI, emerging tech news",
   "featured": false
 }
