@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1785313172034-5",
+  "id": "quantum-1785313172033-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IQT Sunday Edition | Quantum Computing News",
-  "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
+  "title": "C12 Unveils Roadmap to Useful Fault-Tolerant Quantum Comp... | Quantum Computing News",
+  "excerpt": "C12, a Paris-based quantum computing company developing processors based on carbon nanotube spin qubits, recently unveiled its technology roadmap towards commercial fault-tolerant quantum computing. T",
   "date": "2026-07-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "iqt-sunday-edition",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/iqt-sunday-edition-july-27-2026/",
-  "sourceName": "Brian Siegelwax",
+  "slug": "c12-unveils-roadmap-to-useful-fault-tolerant-quantum-computing-by-2033",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/c12-unveils-roadmap-to-useful-fault-tolerant-quantum-computing-by-2033/",
+  "sourceName": "IQT News",
   "body": [
     {
       "type": "p",
-      "text": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies.  Reuters “Amazon cuts jobs in its artificial general intellige..."
+      "text": "C12, a Paris-based quantum computing company developing processors based on carbon nanotube spin qubits, recently unveiled its technology roadmap towards commercial fault-tolerant quantum computing.  The roadmap outlines four generations of systems, from Aïdôs (2027) to Panopeia (2033), designed t..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Siegelwax, Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies. Reuters “Amazon cuts jobs in its artificial general intellige.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from IQT News, C12, a Paris-based quantum computing company developing processors based on carbon nanotube spin qubits, recently unveiled its technology roadmap towards commercial fault-tolerant quantum computing. The roadmap outlines four generations of systems, from Aïdôs (2027) to Panopeia (2033), designed t.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IQT Sunday Edition — a notable development in Quantum Computing",
+    "C12 Unveils Roadmap to Useful Fault-Tolerant Quantum Computing by 2033 — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Brian Siegelwax",
+      "value": "IQT News",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -158,7 +158,7 @@
     },
     {
       "date": "2026-07-29",
-      "event": "IQT Sunday Edition",
+      "event": "C12 Unveils Roadmap to Useful Fault-Tolerant Quantum Computing by 2033",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "sunday",
-    "edition",
+    "unveils",
+    "roadmap",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IQT Sunday Edition | Quantum Computing News",
-  "metaDescription": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of nationa...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, sunday, edition, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "C12 Unveils Roadmap to Useful Fault-Tolerant Quantum Comp... | Quantum Computing News",
+  "metaDescription": "C12, a Paris-based quantum computing company developing processors based on carbon nanotube spin qubits, recently unveiled its technology roadmap towards com...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, unveils, roadmap, useful, TechNanoAI, emerging tech news",
+  "featured": true
 }

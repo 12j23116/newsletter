@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1785313172034-5",
+  "id": "quantum-1785313172034-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IQT Sunday Edition | Quantum Computing News",
-  "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
+  "title": "Quantum Ready Solutions went gold! | Quantum Computing News",
+  "excerpt": "The Quantum Dragon welcomes Quantum Ready Solutions as a Gold Sponsor of Q+AI 2026 (3.0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, alongsid",
   "date": "2026-07-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "iqt-sunday-edition",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/iqt-sunday-edition-july-27-2026/",
+  "slug": "quantum-ready-solutions-went-gold",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/quantum-ready-solutions-went-gold/",
   "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies.  Reuters “Amazon cuts jobs in its artificial general intellige..."
+      "text": "The Quantum Dragon welcomes Quantum Ready Solutions as a Gold Sponsor of Q+AI 2026 (3. 0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, alongside its companion PQC+IQT conference on October 25-26."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Siegelwax, Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies. Reuters “Amazon cuts jobs in its artificial general intellige.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "Quantum Ready Solutions is developing qCoder..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IQT Sunday Edition — a notable development in Quantum Computing",
+    "Quantum Ready Solutions went gold! — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -158,7 +158,7 @@
     },
     {
       "date": "2026-07-29",
-      "event": "IQT Sunday Edition",
+      "event": "Quantum Ready Solutions went gold!",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "sunday",
-    "edition",
+    "quantum",
+    "ready",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IQT Sunday Edition | Quantum Computing News",
-  "metaDescription": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of nationa...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, sunday, edition, TechNanoAI, emerging tech news",
+  "metaTitle": "Quantum Ready Solutions went gold! | Quantum Computing News",
+  "metaDescription": "The Quantum Dragon welcomes Quantum Ready Solutions as a Gold Sponsor of Q+AI 2026 (3.0): Uncovering the Coming Wave of Quantum + AI, which will be held Octo...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, ready, solutions, TechNanoAI, emerging tech news",
   "featured": false
 }
