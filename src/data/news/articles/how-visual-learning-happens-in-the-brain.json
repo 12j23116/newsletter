@@ -1,11 +1,11 @@
 {
-  "id": "bci-1784101812901-0",
+  "id": "bci-1785398828186-3",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "How visual learning happens in the brain | Brain-Computer Interfaces News",
   "excerpt": "Scientists find that learning to identify a new object subtly reshapes visual processing in the brain.",
-  "date": "2026-07-15",
+  "date": "2026-07-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-15",
+      "date": "2026-07-30",
       "event": "How visual learning happens in the brain",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "How visual learning happens in the brain | Brain-Computer Interfaces News",
   "metaDescription": "Scientists find that learning to identify a new object subtly reshapes visual processing in the brain. Neural implants & EEG control. Latest Brain-Computer Inte",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, visual, learning, happens, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
