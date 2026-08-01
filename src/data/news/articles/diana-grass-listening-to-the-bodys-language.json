@@ -1,11 +1,11 @@
 {
-  "id": "bci-1784274713018-0",
+  "id": "bci-1785571382856-0",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Diana Grass: Listening to the body’s language | Brain-Computer Interfaces News",
   "excerpt": "The PhD candidate builds soft bioelectronic technologies to decode signals between the brain and the rest of the body.",
-  "date": "2026-07-17",
+  "date": "2026-08-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-17",
+      "date": "2026-08-01",
       "event": "Diana Grass: Listening to the body’s language",
       "current": true
     },
