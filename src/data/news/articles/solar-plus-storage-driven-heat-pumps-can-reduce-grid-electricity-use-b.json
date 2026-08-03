@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784447904960-2",
+  "id": "energy-1785748795113-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "'Inclusion has to move beyond good intentions and symboli... | Energy Storage News",
-  "excerpt": "This week Women in Solar+ Europe gives voice to Floriane de Brabandère. Founding President of the French National Solar Energy Federation (FNES). She says Inclusion is also about providing people with",
-  "date": "2026-07-19",
+  "title": "Solar-plus-storage-driven heat pumps can reduce grid elec... | Energy Storage News",
+  "excerpt": "Researchers in Italy found that combining demand response, thermal storage, insulation, and PV-battery systems can significantly improve building energy performance. The optimized strategy increased c",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "8216inclusion-has-to-move-beyond-good-intentions-and-symbolic-actions8",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/18/inclusion-has-to-move-beyond-good-intentions-and-symbolic-actions/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "solar-plus-storage-driven-heat-pumps-can-reduce-grid-electricity-use-b",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/03/solar-plus-storage-driven-heat-pumps-can-reduce-grid-electricity-use-by-59-89/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "This week Women in Solar+ Europe gives voice to Floriane de Brabandère.  Founding President of the French National Solar Energy Federation (FNES)."
+      "text": "Researchers in Italy found that combining demand response, thermal storage, insulation, and PV-battery systems can significantly improve building energy performance.  The optimized strategy increased comfort compliance to 81."
     },
     {
       "type": "p",
@@ -27,11 +27,11 @@
     },
     {
       "type": "p",
-      "text": "She says Inclusion is also about providing people with the practical means to succeed.  \"You cannot retain talent that is poorly equipped,\" she states."
+      "text": "22% and reduced electricity consumption by up to 28. 22%, with PV-battery integration boosting grid savings by nearly 60%."
     },
     {
       "type": "p",
-      "text": "The post 'Inclusion has to move beyond good intentions and symbolic actions' appeared first on pv magazine Global."
+      "text": "The post Solar-plus-storage-driven heat pumps can reduce grid electricity use by 59. 89% appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -101,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "'Inclusion has to move beyond good intentions and symbolic actions' — a notable development in Energy Storage",
+    "Solar-plus-storage-driven heat pumps can reduce grid electricity use by 59.89% — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -124,7 +124,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "'Inclusion has to move beyond good intentions and symbolic actions'",
+      "date": "2026-08-03",
+      "event": "Solar-plus-storage-driven heat pumps can reduce grid electricity use by 59.89%",
       "current": true
     },
     {
@@ -195,8 +195,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "inclusion",
-    "beyond",
+    "solar",
+    "storage",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "'Inclusion has to move beyond good intentions and symboli... | Energy Storage News",
-  "metaDescription": "This week Women in Solar+ Europe gives voice to Floriane de Brabandère. Founding President of the French National Solar Energy Federation (FNES). She says In...",
-  "keywords": "energy storage, battery, solid-state, grid storage, inclusion, move, beyond, TechNanoAI, emerging tech news",
+  "metaTitle": "Solar-plus-storage-driven heat pumps can reduce grid elec... | Energy Storage News",
+  "metaDescription": "Researchers in Italy found that combining demand response, thermal storage, insulation, and PV-battery systems can significantly improve building energy perf...",
+  "keywords": "energy storage, battery, solid-state, grid storage, solar, plus, storage, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1784447900541-0",
+  "id": "space-1785748790548-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Mauritius becomes 70th nation to sign the Artemis Accords | Space Exploration News",
-  "excerpt": "The island nation of Mauritius signed the Artemis Accords July 17, becoming the 70th nation to do so in less than six years.\nThe post Mauritius becomes 70th nation to sign the Artemis Accords appeared",
-  "date": "2026-07-19",
+  "title": "APOD: 2026 August 3 – Vaporizing Meteor Photobombs the La... | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 August 3 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differen",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "mauritius-becomes-70th-nation-to-sign-the-artemis-accords",
-  "sourceLink": "https://spacenews.com/mauritius-becomes-70th-nation-to-sign-the-artemis-accords/",
-  "sourceName": "Jeff Foust",
+  "slug": "apod-2026-august-3-vaporizing-meteor-photobombs-the-lacerta-nebula",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-august-3-vaporizing-meteor-photobombs-the-lacerta-nebula/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "The island nation of Mauritius signed the Artemis Accords July 17, becoming the 70th nation to do so in less than six years. \nThe post Mauritius becomes 70th nation to sign the Artemis Accords appeared first on SpaceNews."
+      "text": "APOD Science APOD APOD: 2026 August 3 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jeff Foust, The island nation of Mauritius signed the Artemis Accords July 17, becoming the 70th nation to do so in less than six years.\nThe post Mauritius becomes 70th nation to sign the Artemis Accords appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 August 3 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Vaporizing Meteor Photobombs [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Mauritius becomes 70th nation to sign the Artemis Accords — a notable development in Space Exploration",
+    "APOD: 2026 August 3 – Vaporizing Meteor Photobombs the Lacerta Nebula — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jeff Foust",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "Mauritius becomes 70th nation to sign the Artemis Accords",
+      "date": "2026-08-03",
+      "event": "APOD: 2026 August 3 – Vaporizing Meteor Photobombs the Lacerta Nebula",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "mauritius",
-    "becomes",
+    "august",
+    "vaporizing",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Mauritius becomes 70th nation to sign the Artemis Accords | Space Exploration News",
-  "metaDescription": "The island nation of Mauritius signed the Artemis Accords July 17, becoming the 70th nation to do so in less than six years.\nThe post Mauritius becomes 70th ...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, mauritius, becomes, nation, TechNanoAI, emerging tech news",
+  "metaTitle": "APOD: 2026 August 3 – Vaporizing Meteor Photobombs the La... | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 August 3 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the D...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, august, vaporizing, TechNanoAI, emerging tech news",
   "featured": true
 }

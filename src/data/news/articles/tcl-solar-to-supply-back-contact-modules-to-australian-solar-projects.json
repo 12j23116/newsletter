@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784447904959-0",
+  "id": "energy-1785748795112-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "APsystems introduces plug-in microinverter for U.S. balco... | Energy Storage News",
-  "excerpt": "The new EZ1-LV dual microinverter delivers 900 VA of continuous AC output, features integrated safety relays, and offers direct-to-socket plug-and-play installation for non-rooftop residential solar p",
-  "date": "2026-07-19",
+  "title": "TCL Solar to supply back-contact modules to Australian so... | Energy Storage News",
+  "excerpt": "The company says the Smoky Creek and Guthrie’s Gap solar projects, to be built in Queensland, will be the biggest in the world to utilize back-contact technology.\nThe post TCL Solar to supply back-con",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "apsystems-introduces-plug-in-microinverter-for-us-balcony-solar",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/18/apsystems-introduces-plug-in-microinverter-for-u-s-balcony-and-diy-solar-markets/",
-  "sourceName": "Ryan Kennedy",
+  "slug": "tcl-solar-to-supply-back-contact-modules-to-australian-solar-projects",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/03/tcl-to-supply-modules-for-worlds-largest-back-contact-solar-power-station/",
+  "sourceName": "David Carroll",
   "body": [
     {
       "type": "p",
-      "text": "The new EZ1-LV dual microinverter delivers 900 VA of continuous AC output, features integrated safety relays, and offers direct-to-socket plug-and-play installation for non-rooftop residential solar projects. \nThe post APsystems introduces plug-in microinverter for U."
+      "text": "The company says the Smoky Creek and Guthrie’s Gap solar projects, to be built in Queensland, will be the biggest in the world to utilize back-contact technology. \nThe post TCL Solar to supply back-contact modules to Australian solar projects appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "S.  balcony solar appeared first on pv magazine Global."
+      "text": "According to reporting from David Carroll, The company says the Smoky Creek and Guthrie’s Gap solar projects, to be built in Queensland, will be the biggest in the world to utilize back-contact technology.\nThe post TCL Solar to supply back-contact modules to Australian solar projects appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "APsystems introduces plug-in microinverter for U.S. balcony solar — a notable development in Energy Storage",
+    "TCL Solar to supply back-contact modules to Australian solar projects — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Ryan Kennedy",
+      "value": "David Carroll",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "APsystems introduces plug-in microinverter for U.S. balcony solar",
+      "date": "2026-08-03",
+      "event": "TCL Solar to supply back-contact modules to Australian solar projects",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "apsystems",
-    "introduces",
+    "solar",
+    "supply",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "APsystems introduces plug-in microinverter for U.S. balco... | Energy Storage News",
-  "metaDescription": "The new EZ1-LV dual microinverter delivers 900 VA of continuous AC output, features integrated safety relays, and offers direct-to-socket plug-and-play insta...",
-  "keywords": "energy storage, battery, solid-state, grid storage, apsystems, introduces, plug, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "TCL Solar to supply back-contact modules to Australian so... | Energy Storage News",
+  "metaDescription": "The company says the Smoky Creek and Guthrie’s Gap solar projects, to be built in Queensland, will be the biggest in the world to utilize back-contact techno...",
+  "keywords": "energy storage, battery, solid-state, grid storage, solar, supply, back, TechNanoAI, emerging tech news",
+  "featured": false
 }

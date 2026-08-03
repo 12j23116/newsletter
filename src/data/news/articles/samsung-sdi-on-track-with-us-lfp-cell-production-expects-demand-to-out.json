@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784447904960-1",
+  "id": "energy-1785748795111-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "How to protect residential batteries from heat waves | Energy Storage News",
-  "excerpt": "An expert from Kiwa PI Berlin recommends installing batteries in thermally stable locations, ensuring proper ventilation, following manufacturer guidelines, and using certified equipment to reduce hea",
-  "date": "2026-07-19",
+  "title": "Samsung SDI on track with US LFP cell production, expects... | Energy Storage News",
+  "excerpt": "Samsung SDI is on track to begin production of lithium iron phosphate (LFP) battery cells in the US in the third quarter of this year.",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "how-to-protect-residential-batteries-from-heat-waves",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/18/how-to-protect-residential-batteries-from-heat-waves/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand-to-out",
+  "sourceLink": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand-to-outstrip-production/",
+  "sourceName": "Andy Colthorpe",
   "body": [
     {
       "type": "p",
-      "text": "An expert from Kiwa PI Berlin recommends installing batteries in thermally stable locations, ensuring proper ventilation, following manufacturer guidelines, and using certified equipment to reduce heat-related risks.  During heatwaves, shifting daytime electricity consumption to direct solar use can help limit battery stress and prevent overheating."
+      "text": "Samsung SDI is on track to begin production of lithium iron phosphate (LFP) battery cells in the US in the third quarter of this year."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post How to protect residential batteries from heat waves appeared first on pv magazine Global."
+      "text": "According to reporting from Andy Colthorpe, Samsung SDI is on track to begin production of lithium iron phosphate (LFP) battery cells in the US in the third quarter of this year.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "How to protect residential batteries from heat waves — a notable development in Energy Storage",
+    "Samsung SDI on track with US LFP cell production, expects demand to outstrip pro — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Andy Colthorpe",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "How to protect residential batteries from heat waves",
+      "date": "2026-08-03",
+      "event": "Samsung SDI on track with US LFP cell production, expects demand to outstrip pro",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "protect",
-    "residential",
+    "samsung",
+    "track",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "How to protect residential batteries from heat waves | Energy Storage News",
-  "metaDescription": "An expert from Kiwa PI Berlin recommends installing batteries in thermally stable locations, ensuring proper ventilation, following manufacturer guidelines, ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, protect, residential, batteries, TechNanoAI, emerging tech news",
+  "metaTitle": "Samsung SDI on track with US LFP cell production, expects... | Energy Storage News",
+  "metaDescription": "Samsung SDI is on track to begin production of lithium iron phosphate (LFP) battery cells in the US in the third quarter of this year.",
+  "keywords": "energy storage, battery, solid-state, grid storage, samsung, track, with, TechNanoAI, emerging tech news",
   "featured": false
 }

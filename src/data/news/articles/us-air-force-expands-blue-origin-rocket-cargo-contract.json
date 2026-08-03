@@ -1,21 +1,21 @@
 {
-  "id": "space-1784447900542-2",
+  "id": "space-1785748790549-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Pentagon awards $7.1 million to expand U.S. production of... | Space Exploration News",
-  "excerpt": "Defense Production Act funding was awarded to Martin Materials Solutions, a small business that makes radiation-resistant cover glass used on spacecraft solar arrays and thermal-control systems\nThe po",
-  "date": "2026-07-19",
+  "title": "U.S. Air Force expands Blue Origin rocket cargo contract | Space Exploration News",
+  "excerpt": "The Air Force Research Laboratory increased by $11.7 million Blue Origin’s contract to study the use of space rockets for point-to-point deliveries \nThe post U.S. Air Force expands Blue Origin rocket ",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "pentagon-awards-71-million-to-expand-us-production-of-cover-glass-for-",
-  "sourceLink": "https://spacenews.com/pentagon-awards-7-1-million-to-expand-u-s-production-of-cover-glass-for-satellites/",
+  "slug": "us-air-force-expands-blue-origin-rocket-cargo-contract",
+  "sourceLink": "https://spacenews.com/u-s-air-force-expands-blue-origin-rocket-cargo-contract/",
   "sourceName": "Sandra Erwin",
   "body": [
     {
       "type": "p",
-      "text": "Defense Production Act funding was awarded to Martin Materials Solutions, a small business that makes radiation-resistant cover glass used on spacecraft solar arrays and thermal-control systems\nThe post Pentagon awards $7. 1 million to expand U."
+      "text": "The Air Force Research Laboratory increased by $11. 7 million Blue Origin’s contract to study the use of space rockets for point-to-point deliveries \nThe post U."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "S.  production of cover glass for satellites appeared first on SpaceNews."
+      "text": "S.  Air Force expands Blue Origin rocket cargo contract  appeared first on SpaceNews."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Pentagon awards $7.1 million to expand U.S. production of cover glass for satell — a notable development in Space Exploration",
+    "U.S. Air Force expands Blue Origin rocket cargo contract — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "Pentagon awards $7.1 million to expand U.S. production of cover glass for satell",
+      "date": "2026-08-03",
+      "event": "U.S. Air Force expands Blue Origin rocket cargo contract",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "pentagon",
-    "awards",
+    "force",
+    "expands",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Pentagon awards $7.1 million to expand U.S. production of... | Space Exploration News",
-  "metaDescription": "Defense Production Act funding was awarded to Martin Materials Solutions, a small business that makes radiation-resistant cover glass used on spacecraft sola...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, pentagon, awards, million, TechNanoAI, emerging tech news",
+  "metaTitle": "U.S. Air Force expands Blue Origin rocket cargo contract | Space Exploration News",
+  "metaDescription": "The Air Force Research Laboratory increased by $11.7 million Blue Origin’s contract to study the use of space rockets for point-to-point deliveries \nThe post...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, force, expands, blue, TechNanoAI, emerging tech news",
   "featured": false
 }

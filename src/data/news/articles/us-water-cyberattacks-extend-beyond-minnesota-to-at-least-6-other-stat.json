@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1784447899687-3",
+  "id": "cybersecurity-1785748789731-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "The Future of Age Verification: Your Face Never Leaves Yo... | Cybersecurity News",
-  "excerpt": "As age verification laws expand worldwide, organizations face growing pressure to protect users' privacy while meeting regulatory requirements. Incode explains how on-device age estimation verifies ag",
-  "date": "2026-07-19",
+  "title": "US Water Cyberattacks Extend Beyond Minnesota to at Least... | Cybersecurity News",
+  "excerpt": "Michigan, South Dakota, and Georgia are reportedly on the list of states whose water systems have been targeted by Iran-linked hackers.\nThe post US Water Cyberattacks Extend Beyond Minnesota to at Lea",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "the-future-of-age-verification-your-face-never-leaves-your-device",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/the-future-of-age-verification-your-face-never-leaves-your-device/",
-  "sourceName": "Sponsored by Incode",
+  "slug": "us-water-cyberattacks-extend-beyond-minnesota-to-at-least-6-other-stat",
+  "sourceLink": "https://www.securityweek.com/us-water-cyberattacks-extend-beyond-minnesota-to-at-least-6-other-states/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "As age verification laws expand worldwide, organizations face growing pressure to protect users' privacy while meeting regulatory requirements.  Incode explains how on-device age estimation verifies age without transmitting or storing facial images, reducing biometric privacy risks while supporting compliance."
+      "text": "Michigan, South Dakota, and Georgia are reportedly on the list of states whose water systems have been targeted by Iran-linked hackers. \nThe post US Water Cyberattacks Extend Beyond Minnesota to at Least 6 Other States appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "[..."
+      "text": "According to reporting from Eduard Kovacs, Michigan, South Dakota, and Georgia are reportedly on the list of states whose water systems have been targeted by Iran-linked hackers.\nThe post US Water Cyberattacks Extend Beyond Minnesota to at Least 6 Other States appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The Future of Age Verification: Your Face Never Leaves Your Device — a notable development in Cybersecurity",
+    "US Water Cyberattacks Extend Beyond Minnesota to at Least 6 Other States — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Sponsored by Incode",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "The Future of Age Verification: Your Face Never Leaves Your Device",
+      "date": "2026-08-03",
+      "event": "US Water Cyberattacks Extend Beyond Minnesota to at Least 6 Other States",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "future",
-    "verification",
+    "water",
+    "cyberattacks",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The Future of Age Verification: Your Face Never Leaves Yo... | Cybersecurity News",
-  "metaDescription": "As age verification laws expand worldwide, organizations face growing pressure to protect users' privacy while meeting regulatory requirements. Incode explai...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, future, verification, your, TechNanoAI, emerging tech news",
+  "metaTitle": "US Water Cyberattacks Extend Beyond Minnesota to at Least... | Cybersecurity News",
+  "metaDescription": "Michigan, South Dakota, and Georgia are reportedly on the list of states whose water systems have been targeted by Iran-linked hackers.\nThe post US Water Cyb...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, water, cyberattacks, extend, TechNanoAI, emerging tech news",
   "featured": false
 }

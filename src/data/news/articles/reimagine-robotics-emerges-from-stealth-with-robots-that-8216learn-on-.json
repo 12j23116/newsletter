@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1784447905199-0",
+  "id": "robotics-1785748796431-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Palm Garden AI develops Coherence Guard relational decisi... | Robotics News",
-  "excerpt": "Palm Garden AI is developing a hardware-agnostic software layer, including Coherence Guard, for human-robot interaction and relationships.\nThe post Palm Garden AI develops Coherence Guard relational d",
-  "date": "2026-07-19",
+  "title": "Reimagine Robotics emerges from stealth with robots that ... | Robotics News",
+  "excerpt": "Reimagine Robotics, founded by former Google DeepMind Applied Robotics leaders, is developing systems that do not require specialized programmers.\nThe post Reimagine Robotics emerges from stealth with",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "palm-garden-ai-develops-coherence-guard-relational-decision-layer-for-",
-  "sourceLink": "https://www.therobotreport.com/palm-garden-ai-develops-coherence-guard-relational-decision-layer-human-facing-robots/",
-  "sourceName": "Eugene Demaitre",
+  "slug": "reimagine-robotics-emerges-from-stealth-with-robots-that-8216learn-on-",
+  "sourceLink": "https://www.therobotreport.com/reimagine-robotics-emerges-stealth-with-robotslearn-on-the-job/",
+  "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Palm Garden AI is developing a hardware-agnostic software layer, including Coherence Guard, for human-robot interaction and relationships. \nThe post Palm Garden AI develops Coherence Guard relational decision layer for human-facing robots appeared first on The Robot Report."
+      "text": "Reimagine Robotics, founded by former Google DeepMind Applied Robotics leaders, is developing systems that do not require specialized programmers. \nThe post Reimagine Robotics emerges from stealth with robots that 'learn on the job' appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Eugene Demaitre, Palm Garden AI is developing a hardware-agnostic software layer, including Coherence Guard, for human-robot interaction and relationships.\nThe post Palm Garden AI develops Coherence Guard relational decision layer for human-facing robots appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from The Robot Report Staff, Reimagine Robotics, founded by former Google DeepMind Applied Robotics leaders, is developing systems that do not require specialized programmers.\nThe post Reimagine Robotics emerges from stealth with robots that 'learn on the job' appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Palm Garden AI develops Coherence Guard relational decision layer for human-faci — a notable development in Robotics",
+    "Reimagine Robotics emerges from stealth with robots that 'learn on the job' — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Eugene Demaitre",
+      "value": "The Robot Report Staff",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "Palm Garden AI develops Coherence Guard relational decision layer for human-faci",
+      "date": "2026-08-03",
+      "event": "Reimagine Robotics emerges from stealth with robots that 'learn on the job'",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "garden",
-    "develops",
+    "reimagine",
+    "robotics",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Palm Garden AI develops Coherence Guard relational decisi... | Robotics News",
-  "metaDescription": "Palm Garden AI is developing a hardware-agnostic software layer, including Coherence Guard, for human-robot interaction and relationships.\nThe post Palm Gard...",
-  "keywords": "robotics, humanoid robot, automation, drones, palm, garden, develops, TechNanoAI, emerging tech news",
+  "metaTitle": "Reimagine Robotics emerges from stealth with robots that ... | Robotics News",
+  "metaDescription": "Reimagine Robotics, founded by former Google DeepMind Applied Robotics leaders, is developing systems that do not require specialized programmers.\nThe post R...",
+  "keywords": "robotics, humanoid robot, automation, drones, reimagine, robotics, emerges, TechNanoAI, emerging tech news",
   "featured": true
 }

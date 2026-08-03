@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1784447901151-0",
+  "id": "biotech-1785748791148-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Organ Aging Linked to Breakdown in Immune Cell Interactio... | Biotechnology News",
-  "excerpt": "A study in mice and in human cells found that blocking a single receptor on tissue-resident macrophages promoted clearance of accumulating senescent neutrophils, preserved the youthfulness of multiple",
-  "date": "2026-07-19",
+  "title": "<a href=\"/biotech/three-regions-fighting-their-place-futu... | Biotechnology News",
+  "excerpt": "Whether it's looming tariff threats or the rise of China, you need a truly global view to navigate today's biopharma industry.",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "organ-aging-linked-to-breakdown-in-immune-cell-interaction-and-senesce",
-  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/organ-aging-linked-to-breakdown-in-immune-cell-interaction-and-senescent-neutrophil-clearance/",
-  "sourceName": "Sophia Ktori",
+  "slug": "a-hrefbiotechthree-regions-fighting-their-place-future-biotech-hreflan",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/three-regions-fighting-their-place-future-biotech",
+  "sourceName": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
   "body": [
     {
       "type": "p",
-      "text": "A study in mice and in human cells found that blocking a single receptor on tissue-resident macrophages promoted clearance of accumulating senescent neutrophils, preserved the youthfulness of multiple organs in mice, and substantially slowed cognitive decline. \nThe post Organ Aging Linked to Breakdown in Immune Cell Interaction and Senescent Neutrophil Clearance appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Whether it's looming tariff threats or the rise of China, you need a truly global view to navigate today's biopharma industry."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sophia Ktori, A study in mice and in human cells found that blocking a single receptor on tissue-resident macrophages promoted clearance of accumulating senescent neutrophils, preserved the youthfulness of multiple organs in mice, and substantially slowed cognitive decline.\nThe post Organ Aging Linked to Breakdown in Immune Cell Interaction and Senescent Neutrophil Clearance appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, Whether it's looming tariff threats or the rise of China, you need a truly global view to navigate today's biopharma industry.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Organ Aging Linked to Breakdown in Immune Cell Interaction and Senescent Neutrop — a notable development in Biotechnology",
+    "<a href=\"/biotech/three-regions-fighting-their-place-future-biotech\" hreflang=\"e — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Sophia Ktori",
+      "value": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "Organ Aging Linked to Breakdown in Immune Cell Interaction and Senescent Neutrop",
+      "date": "2026-08-03",
+      "event": "<a href=\"/biotech/three-regions-fighting-their-place-future-biotech\" hreflang=\"e",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "organ",
-    "aging",
+    "biotech",
+    "three",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Organ Aging Linked to Breakdown in Immune Cell Interactio... | Biotechnology News",
-  "metaDescription": "A study in mice and in human cells found that blocking a single receptor on tissue-resident macrophages promoted clearance of accumulating senescent neutroph...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, organ, aging, linked, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/three-regions-fighting-their-place-futu... | Biotechnology News",
+  "metaDescription": "Whether it's looming tariff threats or the rise of China, you need a truly global view to navigate today's biopharma industry.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, three, TechNanoAI, emerging tech news",
+  "featured": false
 }

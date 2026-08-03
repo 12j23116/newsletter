@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1784447899686-1",
+  "id": "cybersecurity-1785748789732-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "WordPress Core \"wp2shell\" RCE flaws get public exploits, ... | Cybersecurity News",
-  "excerpt": "Public exploits have been released for the critical \"wp2shell\" remote code execution vulnerabilities affecting WordPress Core, making it imperative that administrators patch their sites immediately. [",
-  "date": "2026-07-19",
+  "title": "OpenAI teases Astra, its next major AI model, after it so... | Cybersecurity News",
+  "excerpt": "OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in mathematics and theoretical computer scien",
+  "date": "2026-08-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-st",
+  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-standing-math-problems/",
+  "sourceName": "Mayank Parmar",
   "body": [
     {
       "type": "p",
-      "text": "Public exploits have been released for the critical \"wp2shell\" remote code execution vulnerabilities affecting WordPress Core, making it imperative that administrators patch their sites immediately.  [..."
+      "text": "OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in mathematics and theoretical computer science.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, Public exploits have been released for the critical \"wp2shell\" remote code execution vulnerabilities affecting WordPress Core, making it imperative that administrators patch their sites immediately. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mayank Parmar, OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in mathematics and theoretical computer science. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "WordPress Core \"wp2shell\" RCE flaws get public exploits, patch now — a notable development in Cybersecurity",
+    "OpenAI teases Astra, its next major AI model, after it solves 10 long-standing m — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "Mayank Parmar",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-19",
-      "event": "WordPress Core \"wp2shell\" RCE flaws get public exploits, patch now",
+      "date": "2026-08-03",
+      "event": "OpenAI teases Astra, its next major AI model, after it solves 10 long-standing m",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "wordpress",
-    "shell",
+    "openai",
+    "teases",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "WordPress Core \"wp2shell\" RCE flaws get public exploits, ... | Cybersecurity News",
-  "metaDescription": "Public exploits have been released for the critical \"wp2shell\" remote code execution vulnerabilities affecting WordPress Core, making it imperative that admi...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, wordpress, core, shell, TechNanoAI, emerging tech news",
+  "metaTitle": "OpenAI teases Astra, its next major AI model, after it so... | Cybersecurity News",
+  "metaDescription": "OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, openai, teases, astra, TechNanoAI, emerging tech news",
   "featured": false
 }
