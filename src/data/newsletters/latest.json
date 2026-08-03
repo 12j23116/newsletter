@@ -1,113 +1,112 @@
 {
-  "issue": 82,
-  "date": "2026-07-27",
-  "subject": "This Week: Space, Energy Storage & more — July 27, 2026",
+  "issue": 83,
+  "date": "2026-08-03",
+  "subject": "This Week: Robotics, Biotech & more — August 3, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "space",
-    "energy",
-    "ai",
     "robotics",
-    "av",
+    "biotech",
+    "ai",
+    "energy",
     "cybersecurity",
-    "biotech"
+    "space"
   ],
   "articles": [
     {
-      "title": "Juno reveals surprising subsurface tempertures at Io, rem... | Space Exploration News",
-      "slug": "juno-reveals-surprising-subsurface-tempertures-at-io-remarkably-smooth",
+      "title": "Google DeepMind says Gemini Robotics 2 enables full body ... | Robotics News",
+      "slug": "google-deepmind-says-gemini-robotics-2-enables-full-body-control",
+      "topic": "robotics",
+      "excerpt": "Gemini Robotics 2 enables robots to reason through every movement, unlocking a broad range of tasks, DeepMind said. \nThe post Google DeepMind says Gemini Robotics 2 enables full body control appeared ",
+      "url": "https://technanoai.com/news/google-deepmind-says-gemini-robotics-2-enables-full-body-control",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "Reimagine Robotics emerges from stealth with robots that ... | Robotics News",
+      "slug": "reimagine-robotics-emerges-from-stealth-with-robots-that-8216learn-on-",
+      "topic": "robotics",
+      "excerpt": "Reimagine Robotics, founded by former Google DeepMind Applied Robotics leaders, is developing systems that do not require specialized programmers.\nThe post Reimagine Robotics emerges from stealth with",
+      "url": "https://technanoai.com/news/reimagine-robotics-emerges-from-stealth-with-robots-that-8216learn-on-",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "<a href=\"/biotech/apnimeds-ipo-dream-comes-true-upsized-1... | Biotechnology News",
+      "slug": "a-hrefbiotechapnimeds-ipo-dream-comes-true-upsized-192m-ipo-fund-sleep",
+      "topic": "biotech",
+      "excerpt": "Apnimed has raised $192 million for its upsized IPO, with the proceeds earmarked to fund the launch of its sleep apnea pill.",
+      "url": "https://technanoai.com/news/a-hrefbiotechapnimeds-ipo-dream-comes-true-upsized-192m-ipo-fund-sleep",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "<a href=\"/biotech/chutes-ladders-legend-biotech-ceo-depar... | Biotechnology News",
+      "slug": "a-hrefbiotechchutes-ladders-legend-biotech-ceo-departs-without-success",
+      "topic": "biotech",
+      "excerpt": "Legend Biotech CEO Ying Huang, Ph.D., has left the company suddenly, without a predecessor in place. Huang was elevated from CFO to CEO in 2020 after a Chinese customs investigation was opened on foun",
+      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-legend-biotech-ceo-departs-without-success",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "Hugging Face Diffusers Flaws Could Let Model Repositories... | AI News",
+      "slug": "hugging-face-diffusers-flaws-could-let-model-repositories-execute-arbi",
+      "topic": "ai",
+      "excerpt": "Three high-severity security flaws have been disclosed in Hugging Face's Diffusers library that could allow crafted model repositories to stealthily execute arbitrary code on machines that load it, op",
+      "url": "https://technanoai.com/news/hugging-face-diffusers-flaws-could-let-model-repositories-execute-arbi",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "N-able Says Attackers Take Over N-central Servers After I... | AI News",
+      "slug": "n-able-says-attackers-take-over-n-central-servers-after-initial-fix-pr",
+      "topic": "ai",
+      "excerpt": "N-able said attackers exploited an authentication bypass in N-central to gain remote administrative access and reach the customer systems managed through those servers.\n\nIts first fix was incomplete. ",
+      "url": "https://technanoai.com/news/n-able-says-attackers-take-over-n-central-servers-after-initial-fix-pr",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "Germany reduces solar feed-in tariffs by 1% | Energy Storage News",
+      "slug": "germany-reduces-solar-feed-in-tariffs-by-1",
+      "topic": "energy",
+      "excerpt": "Fixed feed-in tariffs for solar systems under the partial feed-in model will now range from €0.0544 ($0.063)/kWh to €0.0770/kWh, while systems operating under the full feed-in model will receive betwe",
+      "url": "https://technanoai.com/news/germany-reduces-solar-feed-in-tariffs-by-1",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "Peruvian researchers develop foldable solar panels for na... | Energy Storage News",
+      "slug": "peruvian-researchers-develop-foldable-solar-panels-for-naval-mining-ap",
+      "topic": "energy",
+      "excerpt": "The technology uses a pattern inspired by Japanese origami to fold the photovoltaic panels in a single movement. A prototype weighs around 6 kg and can be transported in a suitcase.\nThe post Peruvian ",
+      "url": "https://technanoai.com/news/peruvian-researchers-develop-foldable-solar-panels-for-naval-mining-ap",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "OpenAI teases Astra, its next major AI model, after it so... | Cybersecurity News",
+      "slug": "openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-st",
+      "topic": "cybersecurity",
+      "excerpt": "OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in mathematics and theoretical computer scien",
+      "url": "https://technanoai.com/news/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-st",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "Russian State APT Linked to Recent Public Wi-Fi Gateway H... | Cybersecurity News",
+      "slug": "russian-state-apt-linked-to-recent-public-wi-fi-gateway-hacking",
+      "topic": "cybersecurity",
+      "excerpt": "Midnight Blizzard has been stealing Microsoft account credentials via compromised Wi-Fi networks at hospitality organizations.\nThe post Russian State APT Linked to Recent Public Wi-Fi Gateway Hacking ",
+      "url": "https://technanoai.com/news/russian-state-apt-linked-to-recent-public-wi-fi-gateway-hacking",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "APOD: 2026 August 2 – A Fire Rainbow over West Virginia | Space Exploration News",
+      "slug": "apod-2026-august-2-a-fire-rainbow-over-west-virginia",
       "topic": "space",
-      "excerpt": "Following two flybys of Jupiter's innermost Galilean moon Io, teams using data from NASA's Juno'\nThe post Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface appeared first",
-      "url": "https://technanoai.com/news/juno-reveals-surprising-subsurface-tempertures-at-io-remarkably-smooth",
-      "date": "2026-07-27"
+      "excerpt": "APOD Science APOD APOD: 2026 August 2 – A Fire… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
+      "url": "https://technanoai.com/news/apod-2026-august-2-a-fire-rainbow-over-west-virginia",
+      "date": "2026-08-03"
     },
     {
-      "title": "Albanian government approves agrivoltaics | Energy Storage News",
-      "slug": "albanian-government-approves-agrivoltaics",
-      "topic": "energy",
-      "excerpt": "Albania is set to allow agrivoltaics under certain conditions following approved amendments to its law governing agricultural land, with its council of ministers tasked with determining the applicable",
-      "url": "https://technanoai.com/news/albanian-government-approves-agrivoltaics",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "Canadian Solar subsidiary opens 6 GW solar cell factory i... | Energy Storage News",
-      "slug": "canadian-solar-subsidiary-opens-6-gw-solar-cell-factory-in-indiana",
-      "topic": "energy",
-      "excerpt": "Canadian Solar subsidiary CS PowerTech officially opened phase one of its solar cell manufacturing plant in Jeffersonville, Indiana, targeting over 6 GW of annual capacity at full buildout.\nThe post C",
-      "url": "https://technanoai.com/news/canadian-solar-subsidiary-opens-6-gw-solar-cell-factory-in-indiana",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "America's AI Investment Boom Is Reshaping the Economy | AI News",
-      "slug": "america8217s-ai-investment-boom-is-reshaping-the-economy",
-      "topic": "ai",
-      "excerpt": "America's AI Investment Boom Is Reshaping the Economy Artificial intelligence has become one of the defining investment stories in the United States, and the numbers continue to grow. Microsoft, Meta,",
-      "url": "https://technanoai.com/news/america8217s-ai-investment-boom-is-reshaping-the-economy",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "Are brain waves the next unlock for physical AI? | AI News",
-      "slug": "are-brain-waves-the-next-unlock-for-physical-ai",
-      "topic": "ai",
-      "excerpt": "Forget YouTube videos—frontier physical AI models need multiple camera angles, dense annotation, and soon, brain wave readings.",
-      "url": "https://technanoai.com/news/are-brain-waves-the-next-unlock-for-physical-ai",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "Magmotor makes motors for a changing world for 150+ years | Robotics News",
-      "slug": "magmotor-makes-motors-for-a-changing-world-for-150-years",
-      "topic": "robotics",
-      "excerpt": "Magmotor has been providing motors for demanding use cases for decades and offers custom systems for robotics.\nThe post Magmotor makes motors for a changing world for 150+ years appeared first on The ",
-      "url": "https://technanoai.com/news/magmotor-makes-motors-for-a-changing-world-for-150-years",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "Optical Tech Would Update a Robot’s AI on the Fly | Robotics News",
-      "slug": "optical-tech-would-update-a-robots-ai-on-the-fly",
-      "topic": "robotics",
-      "excerpt": "Atop a lab bench, Cornell Tech postdoctoral researcher Yifan He positions the lens of an optical receiver almost a meter away from an LED emitting a beam of red light. The computer monitor attached to",
-      "url": "https://technanoai.com/news/optical-tech-would-update-a-robots-ai-on-the-fly",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "TechCrunch Mobility: Uber bets on its former CEO | Autonomous Vehicles News",
-      "slug": "techcrunch-mobility-uber-bets-on-its-former-ceo",
-      "topic": "av",
-      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
-      "url": "https://technanoai.com/news/techcrunch-mobility-uber-bets-on-its-former-ceo",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "GitHub, PyPI add time-based defenses against supply chain... | Cybersecurity News",
-      "slug": "github-pypi-add-time-based-defenses-against-supply-chain-attacks",
-      "topic": "cybersecurity",
-      "excerpt": "GitHub and PyPI (Python Package Index) have introduced a time-based mechanism in the Dependabot dependency management tool to protect against supply-chain attacks and to limit their impact. [...]",
-      "url": "https://technanoai.com/news/github-pypi-add-time-based-defenses-against-supply-chain-attacks",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "MCBS Data Breach Affects 1.2 Million Individuals | Cybersecurity News",
-      "slug": "mcbs-data-breach-affects-12-million-individuals",
-      "topic": "cybersecurity",
-      "excerpt": "The PEAR ransomware group claimed to have stolen 3 TB of information from the medical business management company.\nThe post MCBS Data Breach Affects 1.2 Million Individuals appeared first on SecurityW",
-      "url": "https://technanoai.com/news/mcbs-data-breach-affects-12-million-individuals",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "<a href=\"/biotech/amgen-sheds-around-40-staffers-struggle... | Biotechnology News",
-      "slug": "a-hrefbiotechamgen-sheds-around-40-staffers-struggles-pile-tavneos-pip",
-      "topic": "biotech",
-      "excerpt": "Amgen has laid off around 40 employees as part of “organizational changes” meant to better align operations with the company’s strategic objectives, Fierce has learned.",
-      "url": "https://technanoai.com/news/a-hrefbiotechamgen-sheds-around-40-staffers-struggles-pile-tavneos-pip",
-      "date": "2026-07-26"
-    },
-    {
-      "title": "<a href=\"/biotech/chutes-ladders-biogen-rd-vet-gets-forma... | Biotechnology News",
-      "slug": "a-hrefbiotechchutes-ladders-biogen-rd-vet-gets-formation-hreflangenchu",
-      "topic": "biotech",
-      "excerpt": "AI-focused Formation Bio has found a new chief scientist with extensive experience in biotech, Big Pharma and academia. Michael Ehlers, M.D., Ph.D., is joining the 2025 Fierce 15 honoree as chief scie",
-      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-biogen-rd-vet-gets-formation-hreflangenchu",
-      "date": "2026-07-26"
+      "title": "APOD: 2026 August 3 – Vaporizing Meteor Photobombs the La... | Space Exploration News",
+      "slug": "apod-2026-august-3-vaporizing-meteor-photobombs-the-lacerta-nebula",
+      "topic": "space",
+      "excerpt": "APOD Science APOD APOD: 2026 August 3 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differen",
+      "url": "https://technanoai.com/news/apod-2026-august-3-vaporizing-meteor-photobombs-the-lacerta-nebula",
+      "date": "2026-08-03"
     }
   ]
 }
