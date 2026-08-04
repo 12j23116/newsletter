@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784536769614-3",
+  "id": "energy-1785831563521-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Australia adds 9.1GW of new generation and storage in FY2... | Energy Storage News",
-  "excerpt": "Australia's NEM connected 9.1GW of new generation and energy storage to full output in FY26, more than double the result achieved in FY25.",
-  "date": "2026-07-20",
+  "title": "Concerns over lack of clarity, transparency as US bans fo... | Energy Storage News",
+  "excerpt": "The Public Safety and Homeland Security Bureau (PSHSB) of the US Federal Communications Commission (FCC) has classified foreign-produced power inverters and \"advanced robotic devices\" as national secu",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "australia-adds-91gw-of-new-generation-and-storage-in-fy26-with-battery",
-  "sourceLink": "https://www.energy-storage.news/australia-adds-9-1gw-of-new-generation-and-storage-in-fy26-with-battery-storage-dominating/",
-  "sourceName": "George Heynes",
+  "slug": "concerns-over-lack-of-clarity-transparency-as-us-bans-foreign-power-in",
+  "sourceLink": "https://www.energy-storage.news/concerns-over-lack-of-clarity-transparency-as-us-bans-foreign-power-inverters/",
+  "sourceName": "April Bonner",
   "body": [
     {
       "type": "p",
-      "text": "Australia's NEM connected 9. 1GW of new generation and energy storage to full output in FY26, more than double the result achieved in FY25."
+      "text": "The Public Safety and Homeland Security Bureau (PSHSB) of the US Federal Communications Commission (FCC) has classified foreign-produced power inverters and \"advanced robotic devices\" as national security threats."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from George Heynes, Australia's NEM connected 9.1GW of new generation and energy storage to full output in FY26, more than double the result achieved in FY25.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from April Bonner, The Public Safety and Homeland Security Bureau (PSHSB) of the US Federal Communications Commission (FCC) has classified foreign-produced power inverters and \"advanced robotic devices\" as national security threats.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Australia adds 9.1GW of new generation and storage in FY26 with battery storage  — a notable development in Energy Storage",
+    "Concerns over lack of clarity, transparency as US bans foreign power inverters — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "George Heynes",
+      "value": "April Bonner",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Australia adds 9.1GW of new generation and storage in FY26 with battery storage ",
+      "date": "2026-08-04",
+      "event": "Concerns over lack of clarity, transparency as US bans foreign power inverters",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "australia",
-    "generation",
+    "concerns",
+    "clarity",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Australia adds 9.1GW of new generation and storage in FY2... | Energy Storage News",
-  "metaDescription": "Australia's NEM connected 9.1GW of new generation and energy storage to full output in FY26, more than double the result achieved in FY25.",
-  "keywords": "energy storage, battery, solid-state, grid storage, australia, adds, generation, TechNanoAI, emerging tech news",
+  "metaTitle": "Concerns over lack of clarity, transparency as US bans fo... | Energy Storage News",
+  "metaDescription": "The Public Safety and Homeland Security Bureau (PSHSB) of the US Federal Communications Commission (FCC) has classified foreign-produced power inverters and ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, concerns, over, lack, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784536769614-2",
+  "id": "energy-1785831563519-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "CHINT: Bridging AI infrastructure and energy transition t... | Energy Storage News",
-  "excerpt": "CHINT Global's Beibei Zheng discusses how the company is responding to Europe's dual challenge of AI sovereignty and energy security.",
-  "date": "2026-07-20",
+  "title": "Waste solar silicon repurposed as support for palladium n... | Energy Storage News",
+  "excerpt": "Italian researchers have developed a palladium-on-silicon catalyst using recycled PV module silicon, enabling efficient microwave-assisted biaryl synthesis. The catalyst achieved high yields, recyclab",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "chint-bridging-ai-infrastructure-and-energy-transition-through-integra",
-  "sourceLink": "https://www.energy-storage.news/chint-bridging-ai-infrastructure-and-energy-transition-through-integrated-power-solutions/",
-  "sourceName": "Cameron Murray",
+  "slug": "waste-solar-silicon-repurposed-as-support-for-palladium-nanoparticle-c",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/04/waste-solar-silicon-repurposed-as-support-for-palladium-nanoparticle-catalysts/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "CHINT Global's Beibei Zheng discusses how the company is responding to Europe's dual challenge of AI sovereignty and energy security."
+      "text": "Italian researchers have developed a palladium-on-silicon catalyst using recycled PV module silicon, enabling efficient microwave-assisted biaryl synthesis.  The catalyst achieved high yields, recyclability, and lower environmental impact compared with conventional silicon and carbon-based supports."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Cameron Murray, CHINT Global's Beibei Zheng discusses how the company is responding to Europe's dual challenge of AI sovereignty and energy security.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post Waste solar silicon repurposed as support for palladium nanoparticle catalysts appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "CHINT: Bridging AI infrastructure and energy transition through integrated power — a notable development in Energy Storage",
+    "Waste solar silicon repurposed as support for palladium nanoparticle catalysts — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Cameron Murray",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "CHINT: Bridging AI infrastructure and energy transition through integrated power",
+      "date": "2026-08-04",
+      "event": "Waste solar silicon repurposed as support for palladium nanoparticle catalysts",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "chint",
-    "bridging",
+    "waste",
+    "solar",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "CHINT: Bridging AI infrastructure and energy transition t... | Energy Storage News",
-  "metaDescription": "CHINT Global's Beibei Zheng discusses how the company is responding to Europe's dual challenge of AI sovereignty and energy security.",
-  "keywords": "energy storage, battery, solid-state, grid storage, chint, bridging, infrastructure, TechNanoAI, emerging tech news",
+  "metaTitle": "Waste solar silicon repurposed as support for palladium n... | Energy Storage News",
+  "metaDescription": "Italian researchers have developed a palladium-on-silicon catalyst using recycled PV module silicon, enabling efficient microwave-assisted biaryl synthesis. ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, waste, solar, silicon, TechNanoAI, emerging tech news",
   "featured": false
 }

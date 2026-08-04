@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784536769614-5",
+  "id": "energy-1785831563520-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Australia sees record surge in solar, wind and battery pr... | Energy Storage News",
-  "excerpt": "Australia’s energy market operator says the past financial year was the best yet for the completion of large-scale renewable energy projects in the country, with a record 9.1 GW of new generation and ",
-  "date": "2026-07-20",
+  "title": "Habitat Energy appointed to optimise DC-coupled 614MWh so... | Energy Storage News",
+  "excerpt": "Habitat Energy has been appointed by Octopus Australia to provide optimisation services for two DC-coupled solar-plus-storage sites.",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "australia-sees-record-surge-in-solar-wind-and-battery-projects",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/20/solar-wind-and-battery-projects-surge-to-record-high/",
-  "sourceName": "David Carroll",
+  "slug": "habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-stor",
+  "sourceLink": "https://www.energy-storage.news/habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-storage-portfolio-for-octopus-australia/",
+  "sourceName": "George Heynes",
   "body": [
     {
       "type": "p",
-      "text": "Australia’s energy market operator says the past financial year was the best yet for the completion of large-scale renewable energy projects in the country, with a record 9. 1 GW of new generation and storage capacity reaching full output."
+      "text": "Habitat Energy has been appointed by Octopus Australia to provide optimisation services for two DC-coupled solar-plus-storage sites."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Australia sees record surge in solar, wind and battery projects appeared first on pv magazine Global."
+      "text": "According to reporting from George Heynes, Habitat Energy has been appointed by Octopus Australia to provide optimisation services for two DC-coupled solar-plus-storage sites.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Australia sees record surge in solar, wind and battery projects — a notable development in Energy Storage",
+    "Habitat Energy appointed to optimise DC-coupled 614MWh solar-plus-storage portfo — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "David Carroll",
+      "value": "George Heynes",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Australia sees record surge in solar, wind and battery projects",
+      "date": "2026-08-04",
+      "event": "Habitat Energy appointed to optimise DC-coupled 614MWh solar-plus-storage portfo",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "australia",
-    "record",
+    "habitat",
+    "energy",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Australia sees record surge in solar, wind and battery pr... | Energy Storage News",
-  "metaDescription": "Australia’s energy market operator says the past financial year was the best yet for the completion of large-scale renewable energy projects in the country, ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, australia, sees, record, TechNanoAI, emerging tech news",
+  "metaTitle": "Habitat Energy appointed to optimise DC-coupled 614MWh so... | Energy Storage News",
+  "metaDescription": "Habitat Energy has been appointed by Octopus Australia to provide optimisation services for two DC-coupled solar-plus-storage sites.",
+  "keywords": "energy storage, battery, solid-state, grid storage, habitat, energy, appointed, TechNanoAI, emerging tech news",
   "featured": false
 }

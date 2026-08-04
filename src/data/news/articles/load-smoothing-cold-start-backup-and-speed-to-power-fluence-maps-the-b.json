@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784536769614-4",
+  "id": "energy-1785831563519-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Electrification action plan aims to make Europe world's f... | Energy Storage News",
-  "excerpt": "The European Commission's Electrification Action Plan aims to raise electrification of final energy demand from 23% to 46% by 2040, cutting annual fossil fuel import costs by an estimated €240 billion",
-  "date": "2026-07-20",
+  "title": "Load smoothing, cold-start backup and speed-to-power: Flu... | Energy Storage News",
+  "excerpt": "ESN Premium speaks with Fluence's Jeff Monday and Sam Markham on the opportunity battery energy storage could provide data centres in Australia.",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "electrification-action-plan-aims-to-make-europe-world8217s-first-elect",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/20/electrification-action-plan-aims-to-make-europe-worlds-first-electric-powered-continent/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "load-smoothing-cold-start-backup-and-speed-to-power-fluence-maps-the-b",
+  "sourceLink": "https://www.energy-storage.news/load-smoothing-cold-start-backup-and-speed-to-power-fluence-maps-the-battery-storage-opportunity-for-australian-data-centres/",
+  "sourceName": "George Heynes",
   "body": [
     {
       "type": "p",
-      "text": "The European Commission's Electrification Action Plan aims to raise electrification of final energy demand from 23% to 46% by 2040, cutting annual fossil fuel import costs by an estimated €240 billion while accelerating the deployment of clean energy technologies. \nThe post Electrification action plan aims to make Europe world's first electric-powered continent appeared first on pv magazine Global."
+      "text": "ESN Premium speaks with Fluence's Jeff Monday and Sam Markham on the opportunity battery energy storage could provide data centres in Australia."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Emiliano Bellini, The European Commission's Electrification Action Plan aims to raise electrification of final energy demand from 23% to 46% by 2040, cutting annual fossil fuel import costs by an estimated €240 billion while accelerating the deployment of clean energy technologies.\nThe post Electrification action plan aims to make Europe world's first electric-powered continent appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from George Heynes, ESN Premium speaks with Fluence's Jeff Monday and Sam Markham on the opportunity battery energy storage could provide data centres in Australia.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Electrification action plan aims to make Europe world's first electric-powered c — a notable development in Energy Storage",
+    "Load smoothing, cold-start backup and speed-to-power: Fluence maps the battery s — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "George Heynes",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Electrification action plan aims to make Europe world's first electric-powered c",
+      "date": "2026-08-04",
+      "event": "Load smoothing, cold-start backup and speed-to-power: Fluence maps the battery s",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "electrification",
-    "action",
+    "smoothing",
+    "start",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Electrification action plan aims to make Europe world's f... | Energy Storage News",
-  "metaDescription": "The European Commission's Electrification Action Plan aims to raise electrification of final energy demand from 23% to 46% by 2040, cutting annual fossil fue...",
-  "keywords": "energy storage, battery, solid-state, grid storage, electrification, action, plan, TechNanoAI, emerging tech news",
+  "metaTitle": "Load smoothing, cold-start backup and speed-to-power: Flu... | Energy Storage News",
+  "metaDescription": "ESN Premium speaks with Fluence's Jeff Monday and Sam Markham on the opportunity battery energy storage could provide data centres in Australia.",
+  "keywords": "energy storage, battery, solid-state, grid storage, load, smoothing, cold, TechNanoAI, emerging tech news",
   "featured": false
 }

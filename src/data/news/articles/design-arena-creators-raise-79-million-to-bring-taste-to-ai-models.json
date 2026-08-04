@@ -1,21 +1,21 @@
 {
-  "id": "ai-1784536763039-3",
+  "id": "ai-1785831558053-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Critical NGINX Vulnerability Can Crash Workers and May Al... | AI News",
-  "excerpt": "F5 has shipped fixes for a critical nginx flaw that lets a remote, unauthenticated attacker trigger a heap buffer overflow in the worker process with crafted HTTP requests. CVE-2026-42533 was patched ",
-  "date": "2026-07-20",
+  "title": "Design Arena creators raise $7.9 million to bring taste t... | AI News",
+  "excerpt": "Design Arena is used by 5.3 million people around the world, providing critical human evaluations to frontier labs.",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "critical-nginx-vulnerability-can-crash-workers-and-may-allow-remote-co",
-  "sourceLink": "https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "design-arena-creators-raise-79-million-to-bring-taste-to-ai-models",
+  "sourceLink": "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models/",
+  "sourceName": "Russell Brandom",
   "body": [
     {
       "type": "p",
-      "text": "F5 has shipped fixes for a critical nginx flaw that lets a remote, unauthenticated attacker trigger a heap buffer overflow in the worker process with crafted HTTP requests.  CVE-2026-42533 was patched on July 15 in nginx 1."
+      "text": "Design Arena is used by 5. 3 million people around the world, providing critical human evaluations to frontier labs."
     },
     {
       "type": "p",
@@ -27,15 +27,7 @@
     },
     {
       "type": "p",
-      "text": "30. 4 (stable) and 1."
-    },
-    {
-      "type": "p",
-      "text": "31. 3 (mainline), and in NGINX Plus 37."
-    },
-    {
-      "type": "p",
-      "text": "0. 3."
+      "text": "According to reporting from Russell Brandom, Design Arena is used by 5.3 million people around the world, providing critical human evaluations to frontier labs.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -105,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Executi — a notable development in AI",
+    "Design Arena creators raise $7.9 million to bring taste to AI models — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -128,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Russell Brandom",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -165,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Executi",
+      "date": "2026-08-04",
+      "event": "Design Arena creators raise $7.9 million to bring taste to AI models",
       "current": true
     },
     {
@@ -199,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "critical",
-    "nginx",
+    "design",
+    "arena",
     "emerging tech"
   ],
   "poll": {
@@ -224,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Critical NGINX Vulnerability Can Crash Workers and May Al... | AI News",
-  "metaDescription": "F5 has shipped fixes for a critical nginx flaw that lets a remote, unauthenticated attacker trigger a heap buffer overflow in the worker process with crafted...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, critical, nginx, vulnerability, TechNanoAI, emerging tech news",
+  "metaTitle": "Design Arena creators raise $7.9 million to bring taste t... | AI News",
+  "metaDescription": "Design Arena is used by 5.3 million people around the world, providing critical human evaluations to frontier labs. LLMs, agents & the race to AGI. Latest AI de",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, design, arena, creators, TechNanoAI, emerging tech news",
   "featured": false
 }

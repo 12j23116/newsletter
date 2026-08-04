@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1784536766130-5",
+  "id": "biotech-1785831560256-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/blossomhill-eyes-ipo-fertilizer-grow-ta... | Biotechnology News",
-  "excerpt": "Another biotech is squeezing into the crowded IPO waiting room just in time for the weekend. BlossomHill Therapeutics, a San Diego-based oncology outfit focused on small molecules, has filed paperwork",
-  "date": "2026-07-20",
+  "title": "Combined Phage Therapy and FMT Reduces Recurrent UTIs and... | Biotechnology News",
+  "excerpt": "The first use of combined phage therapy and fecal microbiota transplantation for recurrent urinary tract infections reduced antibiotic use and improved quality of life in three women, supporting futur",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechblossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cance",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/blossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cancer-fields",
-  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "slug": "combined-phage-therapy-and-fmt-reduces-recurrent-utis-and-antibiotic-u",
+  "sourceLink": "https://www.genengnews.com/topics/infectious-diseases/combined-phage-therapy-and-fmt-reduces-recurrent-utis-and-antibiotic-use-in-first-human-case-series/",
+  "sourceName": "Julianna LeMieux, PhD",
   "body": [
     {
       "type": "p",
-      "text": "Another biotech is squeezing into the crowded IPO waiting room just in time for the weekend.  BlossomHill Therapeutics, a San Diego-based oncology outfit focused on small molecules, has filed paperwork with the Securities and Exchange Commission to publicly offer stock for the first time."
+      "text": "The first use of combined phage therapy and fecal microbiota transplantation for recurrent urinary tract infections reduced antibiotic use and improved quality of life in three women, supporting future clinical trials. \nThe post Combined Phage Therapy and FMT Reduces Recurrent UTIs and Antibiotic Use in First Human Case Series appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, Another biotech is squeezing into the crowded IPO waiting room just in time for the weekend. BlossomHill Therapeutics, a San Diego-based oncology outfit focused on small molecules, has filed paperwork with the Securities and Exchange Commission to publicly offer stock for the first time.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Julianna LeMieux, PhD, The first use of combined phage therapy and fecal microbiota transplantation for recurrent urinary tract infections reduced antibiotic use and improved quality of life in three women, supporting future clinical trials.\nThe post Combined Phage Therapy and FMT Reduces Recurrent UTIs and Antibiotic Use in First Human Case Series appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/blossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cancer-fie — a notable development in Biotechnology",
+    "Combined Phage Therapy and FMT Reduces Recurrent UTIs and Antibiotic Use in Firs — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "Julianna LeMieux, PhD",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "<a href=\"/biotech/blossomhill-eyes-ipo-fertilizer-grow-taller-crowded-cancer-fie",
+      "date": "2026-08-04",
+      "event": "Combined Phage Therapy and FMT Reduces Recurrent UTIs and Antibiotic Use in Firs",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "blossomhill",
+    "combined",
+    "phage",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/blossomhill-eyes-ipo-fertilizer-grow-ta... | Biotechnology News",
-  "metaDescription": "Another biotech is squeezing into the crowded IPO waiting room just in time for the weekend. BlossomHill Therapeutics, a San Diego-based oncology outfit focu...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, blossomhill, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Combined Phage Therapy and FMT Reduces Recurrent UTIs and... | Biotechnology News",
+  "metaDescription": "The first use of combined phage therapy and fecal microbiota transplantation for recurrent urinary tract infections reduced antibiotic use and improved quali...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, combined, phage, therapy, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1784536763038-1",
+  "id": "ai-1785831558053-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "SleeperGem Uses Three Malicious RubyGems Packages to Targ... | AI News",
-  "excerpt": "Cybersecurity researchers have flagged a new software supply chain attack codenamed SleeperGem targeting the Ruby ecosystem after three malicious gems were published to RubyGems with the end goal of s",
-  "date": "2026-07-20",
+  "title": "Influencers draw backlash for attending OpenAI's first lu... | AI News",
+  "excerpt": "OpenAI’s first-ever influencer brand trip is sparking online backlash as tensions over the use of AI continue.",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "sleepergem-uses-three-malicious-rubygems-packages-to-target-developer-",
-  "sourceLink": "https://thehackernews.com/2026/07/sleepergem-uses-three-malicious.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "influencers-draw-backlash-for-attending-openai8217s-first-luxury-trip",
+  "sourceLink": "https://techcrunch.com/2026/08/03/influencers-draw-backlash-for-attending-openais-first-luxury-trip/",
+  "sourceName": "Dominic-Madori Davis",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have flagged a new software supply chain attack codenamed SleeperGem targeting the Ruby ecosystem after three malicious gems were published to RubyGems with the end goal of serving additional payloads. \n\nThe rogue gems are listed below -\n\n\n  git_credential_manager (versions 2."
+      "text": "OpenAI’s first-ever influencer brand trip is sparking online backlash as tensions over the use of AI continue."
     },
     {
       "type": "p",
@@ -27,15 +27,7 @@
     },
     {
       "type": "p",
-      "text": "8. 0, 2."
-    },
-    {
-      "type": "p",
-      "text": "8. 1, 2."
-    },
-    {
-      "type": "p",
-      "text": "8. 2, 2."
+      "text": "According to reporting from Dominic-Madori Davis, OpenAI’s first-ever influencer brand trip is sparking online backlash as tensions over the use of AI continue.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -105,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SleeperGem Uses Three Malicious RubyGems Packages to Target Developer Machines — a notable development in AI",
+    "Influencers draw backlash for attending OpenAI's first luxury trip — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -128,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Dominic-Madori Davis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -165,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "SleeperGem Uses Three Malicious RubyGems Packages to Target Developer Machines",
+      "date": "2026-08-04",
+      "event": "Influencers draw backlash for attending OpenAI's first luxury trip",
       "current": true
     },
     {
@@ -199,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "sleepergem",
-    "three",
+    "influencers",
+    "backlash",
     "emerging tech"
   ],
   "poll": {
@@ -224,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SleeperGem Uses Three Malicious RubyGems Packages to Targ... | AI News",
-  "metaDescription": "Cybersecurity researchers have flagged a new software supply chain attack codenamed SleeperGem targeting the Ruby ecosystem after three malicious gems were p...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, sleepergem, uses, three, TechNanoAI, emerging tech news",
+  "metaTitle": "Influencers draw backlash for attending OpenAI's first lu... | AI News",
+  "metaDescription": "OpenAI’s first-ever influencer brand trip is sparking online backlash as tensions over the use of AI continue. LLMs, agents & the race to AGI. Latest AI develop",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, influencers, draw, backlash, TechNanoAI, emerging tech news",
   "featured": false
 }

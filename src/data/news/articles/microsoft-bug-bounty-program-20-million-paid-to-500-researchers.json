@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1784536763979-0",
+  "id": "cybersecurity-1785831558636-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Chrome 150 Update Patches Severe Memory Safety Bugs | Cybersecurity News",
-  "excerpt": "The fresh security update resolves six critical and high-severity use-after-free vulnerabilities.\nThe post Chrome 150 Update Patches Severe Memory Safety Bugs appeared first on SecurityWeek.",
-  "date": "2026-07-20",
+  "title": "Microsoft Bug Bounty Program: $20 Million Paid to 500 Res... | Cybersecurity News",
+  "excerpt": "The biggest single reward paid out by Microsoft between July 1, 2025, and June 30, 2026, was $200,000.\nThe post Microsoft Bug Bounty Program: $20 Million Paid to 500 Researchers appeared first on Secu",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "chrome-150-update-patches-severe-memory-safety-bugs",
-  "sourceLink": "https://www.securityweek.com/chrome-150-update-patches-severe-memory-safety-bugs/",
-  "sourceName": "Ionut Arghire",
+  "slug": "microsoft-bug-bounty-program-20-million-paid-to-500-researchers",
+  "sourceLink": "https://www.securityweek.com/microsoft-bug-bounty-program-20-million-paid-to-500-researchers/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "The fresh security update resolves six critical and high-severity use-after-free vulnerabilities. \nThe post Chrome 150 Update Patches Severe Memory Safety Bugs appeared first on SecurityWeek."
+      "text": "The biggest single reward paid out by Microsoft between July 1, 2025, and June 30, 2026, was $200,000. \nThe post Microsoft Bug Bounty Program: $20 Million Paid to 500 Researchers appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The fresh security update resolves six critical and high-severity use-after-free vulnerabilities.\nThe post Chrome 150 Update Patches Severe Memory Safety Bugs appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eduard Kovacs, The biggest single reward paid out by Microsoft between July 1, 2025, and June 30, 2026, was $200,000.\nThe post Microsoft Bug Bounty Program: $20 Million Paid to 500 Researchers appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Chrome 150 Update Patches Severe Memory Safety Bugs — a notable development in Cybersecurity",
+    "Microsoft Bug Bounty Program: $20 Million Paid to 500 Researchers — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Chrome 150 Update Patches Severe Memory Safety Bugs",
+      "date": "2026-08-04",
+      "event": "Microsoft Bug Bounty Program: $20 Million Paid to 500 Researchers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "chrome",
-    "update",
+    "microsoft",
+    "bounty",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Chrome 150 Update Patches Severe Memory Safety Bugs | Cybersecurity News",
-  "metaDescription": "The fresh security update resolves six critical and high-severity use-after-free vulnerabilities.\nThe post Chrome 150 Update Patches Severe Memory Safety Bug...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, chrome, update, patches, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Microsoft Bug Bounty Program: $20 Million Paid to 500 Res... | Cybersecurity News",
+  "metaDescription": "The biggest single reward paid out by Microsoft between July 1, 2025, and June 30, 2026, was $200,000.\nThe post Microsoft Bug Bounty Program: $20 Million Pai...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, microsoft, bounty, program, TechNanoAI, emerging tech news",
+  "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1784536770113-0",
+  "id": "robotics-1785831564012-4",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "How to avoid the teleoperation trap in robotics development | Robotics News",
-  "excerpt": "Teleoperation is necessary for training humanoid robots, but reinforcement learning and simulation are still necessary, says Flexion's CEO.\nThe post How to avoid the teleoperation trap in robotics dev",
-  "date": "2026-07-20",
+  "title": "Scientists twist crystal layers and reshape matter from w... | Robotics News",
+  "excerpt": "Researchers have found a way to build much larger “twisted” oxide materials while precisely controlling how their atomic layers line up. Because these materials can be made over large areas and transf",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "how-to-avoid-the-teleoperation-trap-in-robotics-development",
-  "sourceLink": "https://www.therobotreport.com/how-to-avoid-teleoperation-trap-robotics-development/",
-  "sourceName": "Nikita Rudin",
+  "slug": "scientists-twist-crystal-layers-and-reshape-matter-from-within",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260801042819.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Teleoperation is necessary for training humanoid robots, but reinforcement learning and simulation are still necessary, says Flexion's CEO. \nThe post How to avoid the teleoperation trap in robotics development appeared first on The Robot Report."
+      "text": "Researchers have found a way to build much larger “twisted” oxide materials while precisely controlling how their atomic layers line up.  Because these materials can be made over large areas and transferred onto different surfaces, the technique could help turn twistronics from a laboratory curiosity into a practical platform for next-generation electronics."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Nikita Rudin, Teleoperation is necessary for training humanoid robots, but reinforcement learning and simulation are still necessary, says Flexion's CEO.\nThe post How to avoid the teleoperation trap in robotics development appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, Researchers have found a way to build much larger “twisted” oxide materials while precisely controlling how their atomic layers line up. Because these materials can be made over large areas and transferred onto different surfaces, the technique could help turn twistronics from a laboratory curiosity into a practical platform for next-generation electronics.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "How to avoid the teleoperation trap in robotics development — a notable development in Robotics",
+    "Scientists twist crystal layers and reshape matter from within — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Nikita Rudin",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "How to avoid the teleoperation trap in robotics development",
+      "date": "2026-08-04",
+      "event": "Scientists twist crystal layers and reshape matter from within",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "avoid",
-    "teleoperation",
+    "scientists",
+    "twist",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "How to avoid the teleoperation trap in robotics development | Robotics News",
-  "metaDescription": "Teleoperation is necessary for training humanoid robots, but reinforcement learning and simulation are still necessary, says Flexion's CEO.\nThe post How to a...",
-  "keywords": "robotics, humanoid robot, automation, drones, avoid, teleoperation, trap, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Scientists twist crystal layers and reshape matter from w... | Robotics News",
+  "metaDescription": "Researchers have found a way to build much larger “twisted” oxide materials while precisely controlling how their atomic layers line up. Because these materi...",
+  "keywords": "robotics, humanoid robot, automation, drones, scientists, twist, crystal, TechNanoAI, emerging tech news",
+  "featured": false
 }

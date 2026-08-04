@@ -1,21 +1,21 @@
 {
-  "id": "ai-1784536763039-4",
+  "id": "ai-1785831558051-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Can an Apple lawsuit derail OpenAI’s hardware plans? | AI News",
-  "excerpt": "On the latest episode of Equity, we debate whether Apple's lawsuit will cast over OpenAi's much-discussed plans to get into hardware and go public.",
-  "date": "2026-07-20",
+  "title": "After killer quarter, Palantir CEO Alex Karp calls AI ind... | AI News",
+  "excerpt": "After a quarter that delivered $1 billion in profit, Palantir CEO Alex Karp on Monday once again warned that AI frontier labs are too untrustworthy for enterprises.",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "can-an-apple-lawsuit-derail-openais-hardware-plans",
-  "sourceLink": "https://techcrunch.com/2026/07/19/can-an-apple-lawsuit-derail-openais-hardware-plans/",
-  "sourceName": "Anthony Ha",
+  "slug": "after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-8216marx",
+  "sourceLink": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist/",
+  "sourceName": "Julie Bort",
   "body": [
     {
       "type": "p",
-      "text": "On the latest episode of Equity, we debate whether Apple's lawsuit will cast over OpenAi's much-discussed plans to get into hardware and go public."
+      "text": "After a quarter that delivered $1 billion in profit, Palantir CEO Alex Karp on Monday once again warned that AI frontier labs are too untrustworthy for enterprises."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, On the latest episode of Equity, we debate whether Apple's lawsuit will cast over OpenAi's much-discussed plans to get into hardware and go public.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Julie Bort, After a quarter that delivered $1 billion in profit, Palantir CEO Alex Karp on Monday once again warned that AI frontier labs are too untrustworthy for enterprises.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Can an Apple lawsuit derail OpenAI’s hardware plans? — a notable development in AI",
+    "After killer quarter, Palantir CEO Alex Karp calls AI industry 'Marxist' — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Julie Bort",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Can an Apple lawsuit derail OpenAI’s hardware plans?",
+      "date": "2026-08-04",
+      "event": "After killer quarter, Palantir CEO Alex Karp calls AI industry 'Marxist'",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "apple",
-    "lawsuit",
+    "after",
+    "killer",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Can an Apple lawsuit derail OpenAI’s hardware plans? | AI News",
-  "metaDescription": "On the latest episode of Equity, we debate whether Apple's lawsuit will cast over OpenAi's much-discussed plans to get into hardware and go public.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, apple, lawsuit, derail, TechNanoAI, emerging tech news",
+  "metaTitle": "After killer quarter, Palantir CEO Alex Karp calls AI ind... | AI News",
+  "metaDescription": "After a quarter that delivered $1 billion in profit, Palantir CEO Alex Karp on Monday once again warned that AI frontier labs are too untrustworthy for enter...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, after, killer, quarter, TechNanoAI, emerging tech news",
   "featured": false
 }

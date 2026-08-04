@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1784536766130-4",
+  "id": "biotech-1785831560257-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/latigo-preps-ipo-fund-non-opioid-pain-d... | Biotechnology News",
-  "excerpt": "Latigo Biotherapeutics is preparing to go public in order to bankroll the development of its clinical-stage pipeline of non-opioid pain management drugs.",
-  "date": "2026-07-20",
+  "title": "Receptor.AI and Sethera Plan to Create Closed-Loop Discov... | Biotechnology News",
+  "excerpt": "The collaboration is specifically focused on applying Receptor.AI's computational platform to Sethera's proprietary polymacrocyclic peptide chemistry, encoded screening data, and resulting therapeutic",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechlatigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/latigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-journax",
-  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+  "slug": "receptorai-and-sethera-plan-to-create-closed-loop-discovery-and-optimi",
+  "sourceLink": "https://www.genengnews.com/topics/drug-discovery/receptor-ai-and-sethera-plan-to-create-a-closed-loop-discovery-and-optimization-workflow-for-difficult-therapeutic-targets/",
+  "sourceName": "John Sterling",
   "body": [
     {
       "type": "p",
-      "text": "Latigo Biotherapeutics is preparing to go public in order to bankroll the development of its clinical-stage pipeline of non-opioid pain management drugs."
+      "text": "The collaboration is specifically focused on applying Receptor. AI's computational platform to Sethera's proprietary polymacrocyclic peptide chemistry, encoded screening data, and resulting therapeutic candidates."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Latigo Biotherapeutics is preparing to go public in order to bankroll the development of its clinical-stage pipeline of non-opioid pain management drugs.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "Each company will retain its background platform technologies. \nThe post Receptor."
+    },
+    {
+      "type": "p",
+      "text": "AI and Sethera Plan to Create Closed-Loop Discovery and Optimization Workflow for Difficult Therapeutic Targets appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/latigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-journ — a notable development in Biotechnology",
+    "Receptor.AI and Sethera Plan to Create Closed-Loop Discovery and Optimization Wo — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +124,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+      "value": "John Sterling",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "<a href=\"/biotech/latigo-preps-ipo-fund-non-opioid-pain-drug-rival-vertexs-journ",
+      "date": "2026-08-04",
+      "event": "Receptor.AI and Sethera Plan to Create Closed-Loop Discovery and Optimization Wo",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "latigo",
+    "receptor",
+    "sethera",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/latigo-preps-ipo-fund-non-opioid-pain-d... | Biotechnology News",
-  "metaDescription": "Latigo Biotherapeutics is preparing to go public in order to bankroll the development of its clinical-stage pipeline of non-opioid pain management drugs.",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, latigo, TechNanoAI, emerging tech news",
+  "metaTitle": "Receptor.AI and Sethera Plan to Create Closed-Loop Discov... | Biotechnology News",
+  "metaDescription": "The collaboration is specifically focused on applying Receptor.AI's computational platform to Sethera's proprietary polymacrocyclic peptide chemistry, encode...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, receptor, sethera, plan, TechNanoAI, emerging tech news",
   "featured": false
 }

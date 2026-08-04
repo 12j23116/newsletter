@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1784536766129-1",
+  "id": "biotech-1785831560257-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/sponsored/understanding-agentic-ai-clinical-dev... | Biotechnology News",
-  "excerpt": "Earlier this year, my colleague Matt Harrington suggested that clinical leaders should stop asking whether their organizations have an “AI strategy”, not because strategy doesn’t matter, but because t",
-  "date": "2026-07-20",
+  "title": "StockWatch: Capricor Plunges as FDA Panel, Staff Question... | Biotechnology News",
+  "excerpt": "After seeing its lead candidate rejected by the FDA last year, Capricor Therapeutics is hoping for a better outcome for its resubmitted BLA for its lead pipeline candidate Deramiocel.\nThe post StockWa",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefsponsoredunderstanding-agentic-ai-clinical-development-hreflange",
-  "sourceLink": "https://www.fiercebiotech.com/sponsored/understanding-agentic-ai-clinical-development",
-  "sourceName": "<a href=\"/person/questex-partner\" hreflang=\"en\">Questex Partner</a>",
+  "slug": "stockwatch-capricor-plunges-as-fda-panel-staff-question-effectiveness-",
+  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/stockwatch-capricor-plunges-as-fda-panel-staff-question-effectiveness-of-lead-candidate-deramiocel/",
+  "sourceName": "Alex Philippidis",
   "body": [
     {
       "type": "p",
-      "text": "Earlier this year, my colleague Matt Harrington suggested that clinical leaders should stop asking whether their organizations have an “AI strategy”, not because strategy doesn’t matter, but because the question often produces the wrong conversation."
+      "text": "After seeing its lead candidate rejected by the FDA last year, Capricor Therapeutics is hoping for a better outcome for its resubmitted BLA for its lead pipeline candidate Deramiocel. \nThe post StockWatch: Capricor Plunges as FDA Panel, Staff Question Effectiveness of Lead Candidate Deramiocel appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/questex-partner\" hreflang=\"en\">Questex Partner</a>, Earlier this year, my colleague Matt Harrington suggested that clinical leaders should stop asking whether their organizations have an “AI strategy”, not because strategy doesn’t matter, but because the question often produces the wrong conversation.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alex Philippidis, After seeing its lead candidate rejected by the FDA last year, Capricor Therapeutics is hoping for a better outcome for its resubmitted BLA for its lead pipeline candidate Deramiocel.\nThe post StockWatch: Capricor Plunges as FDA Panel, Staff Question Effectiveness of Lead Candidate Deramiocel appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/sponsored/understanding-agentic-ai-clinical-development\" hreflang=\"en\" — a notable development in Biotechnology",
+    "StockWatch: Capricor Plunges as FDA Panel, Staff Question Effectiveness of Lead  — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/questex-partner\" hreflang=\"en\">Questex Partner</a>",
+      "value": "Alex Philippidis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "<a href=\"/sponsored/understanding-agentic-ai-clinical-development\" hreflang=\"en\"",
+      "date": "2026-08-04",
+      "event": "StockWatch: Capricor Plunges as FDA Panel, Staff Question Effectiveness of Lead ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "sponsored",
-    "understanding",
+    "stockwatch",
+    "capricor",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/sponsored/understanding-agentic-ai-clinical-dev... | Biotechnology News",
-  "metaDescription": "Earlier this year, my colleague Matt Harrington suggested that clinical leaders should stop asking whether their organizations have an “AI strategy”, not bec...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, sponsored, understanding, TechNanoAI, emerging tech news",
+  "metaTitle": "StockWatch: Capricor Plunges as FDA Panel, Staff Question... | Biotechnology News",
+  "metaDescription": "After seeing its lead candidate rejected by the FDA last year, Capricor Therapeutics is hoping for a better outcome for its resubmitted BLA for its lead pipe...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, stockwatch, capricor, plunges, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1784536771220-0",
+  "id": "quantum-1785831565160-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "A tiny universe in a bottle reveals clues to the origins ... | Quantum Computing News",
-  "excerpt": "Researchers have created cosmic dust from scratch by recreating space-like conditions inside glass tubes. The dust contains complex carbon-rich molecules built from elements essential to life and prod",
-  "date": "2026-07-20",
+  "title": "Rigetti, HPE, and Pittsburgh Supercomputing Center Partne... | Quantum Computing News",
+  "excerpt": "Quantum computing developer Rigetti Computing (Nasdaq: RGTI) has partnered with Hewlett Packard Enterprise (HPE) and the Pittsburgh Supercomputing Center (PSC)—a joint center of Carnegie Mellon Univer",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "a-tiny-universe-in-a-bottle-reveals-clues-to-the-origins-of-life",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/07/260718010156.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "rigetti-hpe-and-pittsburgh-supercomputing-center-partner-to-build-8220",
+  "sourceLink": "https://quantumcomputingreport.com/rigetti-hpe-and-pittsburgh-supercomputing-center-partner-to-build-tanglelab-hybrid-testbed/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Researchers have created cosmic dust from scratch by recreating space-like conditions inside glass tubes.  The dust contains complex carbon-rich molecules built from elements essential to life and produces infrared signals similar to real material found in space."
+      "text": "Quantum computing developer Rigetti Computing (Nasdaq: RGTI) has partnered with Hewlett Packard Enterprise (HPE) and the Pittsburgh Supercomputing Center (PSC)—a joint center of Carnegie Mellon University and the University of Pittsburgh—to construct TangleLab, a hybrid quantum-classical supercomputing testbed.  Funded by a $5 million grant from the National Science Foundation (NSF) under its Advanced Computing Systems  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "By studying these laboratory samples, scientists can explore how organic chemistry unfolds around stars and how comets, asteroids and meteorites may have carried those ingredients to Earth."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Quantum computing developer Rigetti Computing (Nasdaq: RGTI) has partnered with Hewlett Packard Enterprise (HPE) and the Pittsburgh Supercomputing Center (PSC)—a joint center of Carnegie Mellon University and the University of Pittsburgh—to construct TangleLab, a hybrid quantum-classical supercomputing testbed. Funded by a $5 million grant from the National Science Foundation (NSF) under its Advanced Computing Systems  [...]\nThe post Rigetti, HPE, and Pittsburgh Supercomputing Center Partner to. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "A tiny universe in a bottle reveals clues to the origins of life — a notable development in Quantum Computing",
+    "Rigetti, HPE, and Pittsburgh Supercomputing Center Partner to Build 'TangleLab'  — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "A tiny universe in a bottle reveals clues to the origins of life",
+      "date": "2026-08-04",
+      "event": "Rigetti, HPE, and Pittsburgh Supercomputing Center Partner to Build 'TangleLab' ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "universe",
-    "bottle",
+    "rigetti",
+    "pittsburgh",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "A tiny universe in a bottle reveals clues to the origins ... | Quantum Computing News",
-  "metaDescription": "Researchers have created cosmic dust from scratch by recreating space-like conditions inside glass tubes. The dust contains complex carbon-rich molecules bui...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, tiny, universe, bottle, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Rigetti, HPE, and Pittsburgh Supercomputing Center Partne... | Quantum Computing News",
+  "metaDescription": "Quantum computing developer Rigetti Computing (Nasdaq: RGTI) has partnered with Hewlett Packard Enterprise (HPE) and the Pittsburgh Supercomputing Center (PS...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, rigetti, pittsburgh, supercomputing, TechNanoAI, emerging tech news",
+  "featured": false
 }

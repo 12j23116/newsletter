@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784536769613-1",
+  "id": "energy-1785831563518-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Hithium looks to replicate residential solution ARKVOLT’s... | Energy Storage News",
-  "excerpt": "Hithium, an integrated energy storage solutions provider known for its leadership in long-duration energy storage, is now seeing strong momentum across its residential businesses and C'I. We discussed",
-  "date": "2026-07-20",
+  "title": "Floating PV systems may face lower humidity stress than g... | Energy Storage News",
+  "excerpt": "Researchers found that floating PV systems do not necessarily experience higher humidity-induced stress than ground-mounted systems, with climate conditions and system design often playing a larger ro",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "hithium-looks-to-replicate-residential-solution-arkvolts-asian-success",
-  "sourceLink": "https://www.energy-storage.news/hithium-looks-to-replicate-residential-solution-arkvolts-asian-success-into-europe/",
-  "sourceName": "Cameron Murray",
+  "slug": "floating-pv-systems-may-face-lower-humidity-stress-than-ground-mounted",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/04/floating-pv-systems-may-face-lower-humidity-stress-than-ground-mounted-counterparts/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "Hithium, an integrated energy storage solutions provider known for its leadership in long-duration energy storage, is now seeing strong momentum across its residential businesses and C'I.  We discussed this with the company at the Smarter E Europe trade show in Germany last month."
+      "text": "Researchers found that floating PV systems do not necessarily experience higher humidity-induced stress than ground-mounted systems, with climate conditions and system design often playing a larger role. \nThe post Floating PV systems may face lower humidity stress than ground-mounted counterparts appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Cameron Murray, Hithium, an integrated energy storage solutions provider known for its leadership in long-duration energy storage, is now seeing strong momentum across its residential businesses and C'I. We discussed this with the company at the Smarter E Europe trade show in Germany last month.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lior Kahana, Researchers found that floating PV systems do not necessarily experience higher humidity-induced stress than ground-mounted systems, with climate conditions and system design often playing a larger role.\nThe post Floating PV systems may face lower humidity stress than ground-mounted counterparts appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hithium looks to replicate residential solution ARKVOLT’s Asian success into Eur — a notable development in Energy Storage",
+    "Floating PV systems may face lower humidity stress than ground-mounted counterpa — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Cameron Murray",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Hithium looks to replicate residential solution ARKVOLT’s Asian success into Eur",
+      "date": "2026-08-04",
+      "event": "Floating PV systems may face lower humidity stress than ground-mounted counterpa",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "hithium",
-    "looks",
+    "floating",
+    "systems",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hithium looks to replicate residential solution ARKVOLT’s... | Energy Storage News",
-  "metaDescription": "Hithium, an integrated energy storage solutions provider known for its leadership in long-duration energy storage, is now seeing strong momentum across its r...",
-  "keywords": "energy storage, battery, solid-state, grid storage, hithium, looks, replicate, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Floating PV systems may face lower humidity stress than g... | Energy Storage News",
+  "metaDescription": "Researchers found that floating PV systems do not necessarily experience higher humidity-induced stress than ground-mounted systems, with climate conditions ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, floating, systems, face, TechNanoAI, emerging tech news",
+  "featured": true
 }

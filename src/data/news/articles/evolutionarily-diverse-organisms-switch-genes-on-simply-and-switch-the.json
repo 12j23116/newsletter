@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1784536766129-3",
+  "id": "biotech-1785831560256-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/rising-tide-scenario-why-other-big-phar... | Biotechnology News",
-  "excerpt": "After Eli Lilly dived into the psychedelics space with a $2.8 billion upfront acquisition of AtaiBeckley last week, industry experts told Fierce that the deal would give the space added momentum.",
-  "date": "2026-07-20",
-  "readTime": "3 min",
+  "title": "Evolutionarily Diverse Organisms Switch Genes on Simply a... | Biotechnology News",
+  "excerpt": "A new study has found that the signals cells use to switch genes on have remained almost unchanged across two billion years of evolution, but the ones used to switch genes off vary dramatically from o",
+  "date": "2026-08-04",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechrising-tide-scenario-why-other-big-pharmas-could-follow-l",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/rising-tide-scenario-why-other-big-pharmas-could-follow-lilly-psychedelics",
-  "sourceName": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "slug": "evolutionarily-diverse-organisms-switch-genes-on-simply-and-switch-the",
+  "sourceLink": "https://www.genengnews.com/topics/omics/evolutionarily-diverse-organisms-switch-genes-on-simply-and-switch-them-off-dynamically/",
+  "sourceName": "Sophia Ktori",
   "body": [
     {
       "type": "p",
-      "text": "After Eli Lilly dived into the psychedelics space with a $2. 8 billion upfront acquisition of AtaiBeckley last week, industry experts told Fierce that the deal would give the space added momentum."
+      "text": "A new study has found that the signals cells use to switch genes on have remained almost unchanged across two billion years of evolution, but the ones used to switch genes off vary dramatically from one branch of life to another. \nThe post Evolutionarily Diverse Organisms Switch Genes on Simply and Switch Them off Dynamically appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, After Eli Lilly dived into the psychedelics space with a $2.8 billion upfront acquisition of AtaiBeckley last week, industry experts told Fierce that the deal would give the space added momentum.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sophia Ktori, A new study has found that the signals cells use to switch genes on have remained almost unchanged across two billion years of evolution, but the ones used to switch genes off vary dramatically from one branch of life to another.\nThe post Evolutionarily Diverse Organisms Switch Genes on Simply and Switch Them off Dynamically appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/rising-tide-scenario-why-other-big-pharmas-could-follow-lilly- — a notable development in Biotechnology",
+    "Evolutionarily Diverse Organisms Switch Genes on Simply and Switch Them off Dyna — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "Sophia Ktori",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "<a href=\"/biotech/rising-tide-scenario-why-other-big-pharmas-could-follow-lilly-",
+      "date": "2026-08-04",
+      "event": "Evolutionarily Diverse Organisms Switch Genes on Simply and Switch Them off Dyna",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "rising",
+    "evolutionarily",
+    "diverse",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/rising-tide-scenario-why-other-big-phar... | Biotechnology News",
-  "metaDescription": "After Eli Lilly dived into the psychedelics space with a $2.8 billion upfront acquisition of AtaiBeckley last week, industry experts told Fierce that the dea...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, rising, TechNanoAI, emerging tech news",
+  "metaTitle": "Evolutionarily Diverse Organisms Switch Genes on Simply a... | Biotechnology News",
+  "metaDescription": "A new study has found that the signals cells use to switch genes on have remained almost unchanged across two billion years of evolution, but the ones used t...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, evolutionarily, diverse, organisms, TechNanoAI, emerging tech news",
   "featured": false
 }

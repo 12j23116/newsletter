@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784536769613-0",
+  "id": "energy-1785831563519-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Ukraine recognizes solar installer as official profession | Energy Storage News",
-  "excerpt": "The recognition will serve as a foundation for future education programs, professional certifications and training as Ukraine works to ensure the quality of solar installations is maintained amid rapi",
-  "date": "2026-07-20",
+  "title": "Photovoltaics feed record 12 TWh into Germany's public gr... | Energy Storage News",
+  "excerpt": "Solar generation surpassed the previous monthly high set in June, when photovoltaic systems delivered more than 11 TWh to the grid for the first time.\nThe post Photovoltaics feed record 12 TWh into Ge",
+  "date": "2026-08-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "ukraine-recognizes-solar-installer-as-official-profession",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/20/ukraine-recognizes-solar-installer-as-official-profession/",
+  "slug": "photovoltaics-feed-record-12-twh-into-germany8217s-public-grid-in-july",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/04/photovoltaics-feed-record-12-twh-into-germanys-public-grid-in-july/",
   "sourceName": "Patrick Jowett",
   "body": [
     {
       "type": "p",
-      "text": "The recognition will serve as a foundation for future education programs, professional certifications and training as Ukraine works to ensure the quality of solar installations is maintained amid rapid deployment of distributed systems. \nThe post Ukraine recognizes solar installer as official profession appeared first on pv magazine Global."
+      "text": "Solar generation surpassed the previous monthly high set in June, when photovoltaic systems delivered more than 11 TWh to the grid for the first time. \nThe post Photovoltaics feed record 12 TWh into Germany's public grid in July appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Patrick Jowett, The recognition will serve as a foundation for future education programs, professional certifications and training as Ukraine works to ensure the quality of solar installations is maintained amid rapid deployment of distributed systems.\nThe post Ukraine recognizes solar installer as official profession appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Patrick Jowett, Solar generation surpassed the previous monthly high set in June, when photovoltaic systems delivered more than 11 TWh to the grid for the first time.\nThe post Photovoltaics feed record 12 TWh into Germany's public grid in July appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Ukraine recognizes solar installer as official profession — a notable development in Energy Storage",
+    "Photovoltaics feed record 12 TWh into Germany's public grid in July — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-20",
-      "event": "Ukraine recognizes solar installer as official profession",
+      "date": "2026-08-04",
+      "event": "Photovoltaics feed record 12 TWh into Germany's public grid in July",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "ukraine",
-    "recognizes",
+    "photovoltaics",
+    "record",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Ukraine recognizes solar installer as official profession | Energy Storage News",
-  "metaDescription": "The recognition will serve as a foundation for future education programs, professional certifications and training as Ukraine works to ensure the quality of ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, ukraine, recognizes, solar, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Photovoltaics feed record 12 TWh into Germany's public gr... | Energy Storage News",
+  "metaDescription": "Solar generation surpassed the previous monthly high set in June, when photovoltaic systems delivered more than 11 TWh to the grid for the first time.\nThe po...",
+  "keywords": "energy storage, battery, solid-state, grid storage, photovoltaics, feed, record, TechNanoAI, emerging tech news",
+  "featured": false
 }
