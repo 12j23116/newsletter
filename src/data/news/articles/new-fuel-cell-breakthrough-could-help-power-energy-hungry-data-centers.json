@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784965830922-3",
+  "id": "energy-1786257454549-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Chinese PV Industry Brief: H1 solar additions total just ... | Energy Storage News",
-  "excerpt": "In other news, Shenzhen Energy’s subsidiary Sunon Asogli Power (Ghana) Ltd. plans to invest $34 million in a 50 MW solar project in Ghana’s Savannah Region, marking the company’s first overseas solar ",
-  "date": "2026-07-25",
+  "title": "New fuel cell breakthrough could help power energy-hungry... | Energy Storage News",
+  "excerpt": "A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient. The breakthrough could help hydrogen fuel cells become a more ",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "chinese-pv-industry-brief-h1-solar-additions-total-just-72-gw",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/24/chinese-pv-industry-brief-h1-solar-additions-total-just-72-gw/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "new-fuel-cell-breakthrough-could-help-power-energy-hungry-data-centers",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260807035140.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "In other news, Shenzhen Energy’s subsidiary Sunon Asogli Power (Ghana) Ltd.  plans to invest $34 million in a 50 MW solar project in Ghana’s Savannah Region, marking the company’s first overseas solar investment."
+      "text": "A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient.  The breakthrough could help hydrogen fuel cells become a more practical way to power data centers, vehicles, and other energy-intensive technologies."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Meanwhile, Dinto Solar secured a 1 GW HJT module supply lot in China Datang Group’s 11 GW PV module framework tender."
+      "text": "According to reporting from sciencedaily.com, A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient. The breakthrough could help hydrogen fuel cells become a more practical way to power data centers, vehicles, and other energy-intensive technologies.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Chinese PV Industry Brief: H1 solar additions total just 72 GW — a notable development in Energy Storage",
+    "New fuel cell breakthrough could help power energy-hungry data centers — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "Chinese PV Industry Brief: H1 solar additions total just 72 GW",
+      "date": "2026-08-09",
+      "event": "New fuel cell breakthrough could help power energy-hungry data centers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "chinese",
-    "industry",
+    "breakthrough",
+    "could",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Chinese PV Industry Brief: H1 solar additions total just ... | Energy Storage News",
-  "metaDescription": "In other news, Shenzhen Energy’s subsidiary Sunon Asogli Power (Ghana) Ltd. plans to invest $34 million in a 50 MW solar project in Ghana’s Savannah Region, ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, chinese, industry, brief, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "New fuel cell breakthrough could help power energy-hungry... | Energy Storage News",
+  "metaDescription": "A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient. The breakthrough co...",
+  "keywords": "energy storage, battery, solid-state, grid storage, fuel, cell, breakthrough, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1784965832349-2",
+  "id": "robotics-1786257454866-2",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Video Friday: An Italian Humanoid Comes to Life | Robotics News",
-  "excerpt": "Your weekly selection of awesome robot videosVideo Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of up",
-  "date": "2026-07-25",
+  "title": "Experts look ahead at the next 20 years of robotics at Ro... | Robotics News",
+  "excerpt": "At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years.\nThe post Experts look ahead at the next 20 years of robotics at",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "video-friday-an-italian-humanoid-comes-to-life",
-  "sourceLink": "https://spectrum.ieee.org/video-friday-physical-ai-robotics",
-  "sourceName": "Evan Ackerman",
+  "slug": "experts-look-ahead-at-the-next-20-years-of-robotics-at-robobusiness",
+  "sourceLink": "https://www.therobotreport.com/experts-look-ahead-at-the-next-20-years-of-robotics-at-robobusiness/",
+  "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Your weekly selection of awesome robot videosVideo Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics.  We also post a weekly calendar of upcoming robotics events for the next few months."
+      "text": "At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years. \nThe post Experts look ahead at the next 20 years of robotics at RoboBusiness appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Please send us your events for inclusion."
+      "text": "According to reporting from The Robot Report Staff, At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years.\nThe post Experts look ahead at the next 20 years of robotics at RoboBusiness appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Video Friday: An Italian Humanoid Comes to Life — a notable development in Robotics",
+    "Experts look ahead at the next 20 years of robotics at RoboBusiness — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Evan Ackerman",
+      "value": "The Robot Report Staff",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "Video Friday: An Italian Humanoid Comes to Life",
+      "date": "2026-08-09",
+      "event": "Experts look ahead at the next 20 years of robotics at RoboBusiness",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "video",
-    "friday",
+    "experts",
+    "ahead",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Video Friday: An Italian Humanoid Comes to Life | Robotics News",
-  "metaDescription": "Your weekly selection of awesome robot videosVideo Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum rob...",
-  "keywords": "robotics, humanoid robot, automation, drones, video, friday, italian, TechNanoAI, emerging tech news",
+  "metaTitle": "Experts look ahead at the next 20 years of robotics at Ro... | Robotics News",
+  "metaDescription": "At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years.\nThe post Experts loo...",
+  "keywords": "robotics, humanoid robot, automation, drones, experts, look, ahead, TechNanoAI, emerging tech news",
   "featured": false
 }

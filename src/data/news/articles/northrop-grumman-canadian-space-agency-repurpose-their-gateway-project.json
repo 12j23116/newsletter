@@ -1,21 +1,21 @@
 {
-  "id": "space-1784965826387-3",
+  "id": "space-1786257450582-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Critical NASA Deep Space ground station in Spain evacuate... | Space Exploration News",
-  "excerpt": "The Madrid Deep Space Communications Complex is one of three critical sites around the world that communicate with spacecraft beyond the reach of near-Earth communications capabilities.",
-  "date": "2026-07-25",
+  "title": "Northrop Grumman, Canadian Space Agency repurpose their G... | Space Exploration News",
+  "excerpt": "Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, albeit with few specifics.\nThe post Northro",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "critical-nasa-deep-space-ground-station-in-spain-evacuated-due-to-wild",
-  "sourceLink": "https://spaceflightnow.com/2026/07/24/critical-nasa-deep-space-ground-station-in-spain-evacuated-due-to-wildfires/",
-  "sourceName": "Will Robinson-Smith",
+  "slug": "northrop-grumman-canadian-space-agency-repurpose-their-gateway-project",
+  "sourceLink": "https://spacenews.com/northrop-grumman-canadian-space-agency-repurpose-their-gateway-projects/",
+  "sourceName": "Jeff Foust",
   "body": [
     {
       "type": "p",
-      "text": "The Madrid Deep Space Communications Complex is one of three critical sites around the world that communicate with spacecraft beyond the reach of near-Earth communications capabilities."
+      "text": "Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, albeit with few specifics. \nThe post Northrop Grumman, Canadian Space Agency repurpose their Gateway projects appeared first on SpaceNews."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Will Robinson-Smith, The Madrid Deep Space Communications Complex is one of three critical sites around the world that communicate with spacecraft beyond the reach of near-Earth communications capabilities.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Jeff Foust, Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, albeit with few specifics.\nThe post Northrop Grumman, Canadian Space Agency repurpose their Gateway projects appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Critical NASA Deep Space ground station in Spain evacuated due to wildfires — a notable development in Space Exploration",
+    "Northrop Grumman, Canadian Space Agency repurpose their Gateway projects — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Will Robinson-Smith",
+      "value": "Jeff Foust",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "Critical NASA Deep Space ground station in Spain evacuated due to wildfires",
+      "date": "2026-08-09",
+      "event": "Northrop Grumman, Canadian Space Agency repurpose their Gateway projects",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "critical",
-    "space",
+    "northrop",
+    "grumman",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Critical NASA Deep Space ground station in Spain evacuate... | Space Exploration News",
-  "metaDescription": "The Madrid Deep Space Communications Complex is one of three critical sites around the world that communicate with spacecraft beyond the reach of near-Earth ...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, critical, nasa, deep, TechNanoAI, emerging tech news",
+  "metaTitle": "Northrop Grumman, Canadian Space Agency repurpose their G... | Space Exploration News",
+  "metaDescription": "Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, northrop, grumman, canadian, TechNanoAI, emerging tech news",
   "featured": false
 }

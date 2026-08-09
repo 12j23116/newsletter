@@ -1,21 +1,21 @@
 {
-  "id": "space-1784965826388-5",
+  "id": "space-1786257450581-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "LatConnect 60 Unveils Proprietary AI Capabilities Followi... | Space Exploration News",
-  "excerpt": "PERTH, Australia ' 24 July 2026 ' LatConnect 60 ('LC60'), an Australian satellite Earth observation and AI company, today unveiled a proprietary intelligence-fusion capability that leverages the lates",
-  "date": "2026-07-25",
+  "title": "Blue Origin working engine resolutions and dual pad future | Space Exploration News",
+  "excerpt": "Blue Origin is nearing the end of its investigation into the catastrophic explosion of a'\nThe post Blue Origin working engine resolutions and dual pad future appeared first on NASASpaceFlight.com.",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "latconnect-60-unveils-proprietary-ai-capabilities-following-growing-in",
-  "sourceLink": "https://spacenews.com/latconnect-60-unveils-proprietary-ai-capabilities-following-growing-indo-pacific-defence-interest-in-swirsat/",
-  "sourceName": "LatConnect 60",
+  "slug": "blue-origin-working-engine-resolutions-and-dual-pad-future",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/blue-origin-engine-resolutions-dual-pad/",
+  "sourceName": "Alejandro Alcantarilla Romera, and Chris Bergin",
   "body": [
     {
       "type": "p",
-      "text": "PERTH, Australia ' 24 July 2026 ' LatConnect 60 ('LC60'), an Australian satellite Earth observation and AI company, today unveiled a proprietary intelligence-fusion capability that leverages the latest advancements in [']\nThe post LatConnect 60 Unveils Proprietary AI Capabilities Following Growing Indo-Pacific Defence Interest in SWIRSAT appeared first on SpaceNews."
+      "text": "Blue Origin is nearing the end of its investigation into the catastrophic explosion of a'\nThe post Blue Origin working engine resolutions and dual pad future appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from LatConnect 60, PERTH, Australia ' 24 July 2026 ' LatConnect 60 ('LC60'), an Australian satellite Earth observation and AI company, today unveiled a proprietary intelligence-fusion capability that leverages the latest advancements in [']\nThe post LatConnect 60 Unveils Proprietary AI Capabilities Following Growing Indo-Pacific Defence Interest in SWIRSAT appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alejandro Alcantarilla Romera, and Chris Bergin, Blue Origin is nearing the end of its investigation into the catastrophic explosion of a'\nThe post Blue Origin working engine resolutions and dual pad future appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "LatConnect 60 Unveils Proprietary AI Capabilities Following Growing Indo-Pacific — a notable development in Space Exploration",
+    "Blue Origin working engine resolutions and dual pad future — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "LatConnect 60",
+      "value": "Alejandro Alcantarilla Romera, and Chris Bergin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "LatConnect 60 Unveils Proprietary AI Capabilities Following Growing Indo-Pacific",
+      "date": "2026-08-09",
+      "event": "Blue Origin working engine resolutions and dual pad future",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "latconnect",
-    "unveils",
+    "origin",
+    "working",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "LatConnect 60 Unveils Proprietary AI Capabilities Followi... | Space Exploration News",
-  "metaDescription": "PERTH, Australia ' 24 July 2026 ' LatConnect 60 ('LC60'), an Australian satellite Earth observation and AI company, today unveiled a proprietary intelligence...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, latconnect, unveils, proprietary, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Blue Origin working engine resolutions and dual pad future | Space Exploration News",
+  "metaDescription": "Blue Origin is nearing the end of its investigation into the catastrophic explosion of a'\nThe post Blue Origin working engine resolutions and dual pad future...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, blue, origin, working, TechNanoAI, emerging tech news",
+  "featured": true
 }

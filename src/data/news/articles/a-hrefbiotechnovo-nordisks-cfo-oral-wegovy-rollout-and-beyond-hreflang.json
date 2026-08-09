@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1784965826828-1",
+  "id": "biotech-1786257451064-5",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Oral Antiviral Blocks Measles-Like Virus Transmission in ... | Biotechnology News",
-  "excerpt": "An oral antiviral candidate prevented airborne and contact transmission of a measles-like virus in ferrets, reduced disease severity and infectious duration, and could complement vaccination strategie",
-  "date": "2026-07-25",
+  "title": "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-a... | Biotechnology News",
+  "excerpt": "Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about CagriSema and more.",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "oral-antiviral-blocks-measles-like-virus-transmission-in-ferrets",
-  "sourceLink": "https://www.genengnews.com/topics/infectious-diseases/oral-antiviral-blocks-measles-like-virus-transmission-in-ferrets/",
-  "sourceName": "Julianna LeMieux, PhD",
+  "slug": "a-hrefbiotechnovo-nordisks-cfo-oral-wegovy-rollout-and-beyond-hreflang",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/novo-nordisks-cfo-oral-wegovy-rollout-and-beyond",
+  "sourceName": "<a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "An oral antiviral candidate prevented airborne and contact transmission of a measles-like virus in ferrets, reduced disease severity and infectious duration, and could complement vaccination strategies to help control future measles outbreaks. \nThe post Oral Antiviral Blocks Measles-Like Virus Transmission in Ferrets appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about CagriSema and more."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julianna LeMieux, PhD, An oral antiviral candidate prevented airborne and contact transmission of a measles-like virus in ferrets, reduced disease severity and infectious duration, and could complement vaccination strategies to help control future measles outbreaks.\nThe post Oral Antiviral Blocks Measles-Like Virus Transmission in Ferrets appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about CagriSema and more.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Oral Antiviral Blocks Measles-Like Virus Transmission in Ferrets — a notable development in Biotechnology",
+    "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-and-beyond\" hreflang=\"en — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Julianna LeMieux, PhD",
+      "value": "<a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "Oral Antiviral Blocks Measles-Like Virus Transmission in Ferrets",
+      "date": "2026-08-09",
+      "event": "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-and-beyond\" hreflang=\"en",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "antiviral",
-    "blocks",
+    "biotech",
+    "nordisks",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Oral Antiviral Blocks Measles-Like Virus Transmission in ... | Biotechnology News",
-  "metaDescription": "An oral antiviral candidate prevented airborne and contact transmission of a measles-like virus in ferrets, reduced disease severity and infectious duration,...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, oral, antiviral, blocks, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-a... | Biotechnology News",
+  "metaDescription": "Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about Ca...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, novo, TechNanoAI, emerging tech news",
   "featured": false
 }

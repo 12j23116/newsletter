@@ -1,21 +1,21 @@
 {
-  "id": "space-1784965826386-0",
+  "id": "space-1786257450582-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Super Heavy-Starship rocket chalks up mostly successful t... | Space Exploration News",
-  "excerpt": "Powered by 33 methane-fueled Raptor engines, the 397-foot-tall two-stage rocket blasted off from SpaceX's \"Starbase,\" Texas, launch site at 5:51 p.m. EDT, putting on a spectacular show for area reside",
-  "date": "2026-07-25",
+  "title": "SpaceX West Coast launch surge continues with Starlink mi... | Space Exploration News",
+  "excerpt": "Liftoff of the Starlink 17-38 mission from Vandenberg Space Force Base in California happened at 9:35 a.m. PDT (12:35 p.m. EDT / 1635 UTC).",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "super-heavy-starship-rocket-chalks-up-mostly-successful-test-flight",
-  "sourceLink": "https://spaceflightnow.com/2026/07/25/super-heavy-starship-rocket-chalks-up-mostly-successful-test-flight/",
-  "sourceName": "William Harwood",
+  "slug": "spacex-west-coast-launch-surge-continues-with-starlink-mission",
+  "sourceLink": "https://spaceflightnow.com/2026/08/08/live-coverage-spacex-west-coast-launch-surge-continues-with-starlink-mission/",
+  "sourceName": "Steven Young",
   "body": [
     {
       "type": "p",
-      "text": "Powered by 33 methane-fueled Raptor engines, the 397-foot-tall two-stage rocket blasted off from SpaceX's \"Starbase,\" Texas, launch site at 5:51 p. m."
+      "text": "Liftoff of the Starlink 17-38 mission from Vandenberg Space Force Base in California happened at 9:35 a. m."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "EDT, putting on a spectacular show for area residents and tourists as it climbed away atop some 16 million pounds of thrust."
+      "text": "PDT (12:35 p. m."
+    },
+    {
+      "type": "p",
+      "text": "EDT / 1635 UTC)."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Super Heavy-Starship rocket chalks up mostly successful test flight — a notable development in Space Exploration",
+    "SpaceX West Coast launch surge continues with Starlink mission — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "William Harwood",
+      "value": "Steven Young",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "Super Heavy-Starship rocket chalks up mostly successful test flight",
+      "date": "2026-08-09",
+      "event": "SpaceX West Coast launch surge continues with Starlink mission",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "super",
-    "heavy",
+    "spacex",
+    "coast",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Super Heavy-Starship rocket chalks up mostly successful t... | Space Exploration News",
-  "metaDescription": "Powered by 33 methane-fueled Raptor engines, the 397-foot-tall two-stage rocket blasted off from SpaceX's \"Starbase,\" Texas, launch site at 5:51 p.m. EDT, pu...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, super, heavy, starship, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "SpaceX West Coast launch surge continues with Starlink mi... | Space Exploration News",
+  "metaDescription": "Liftoff of the Starlink 17-38 mission from Vandenberg Space Force Base in California happened at 9:35 a.m. PDT (12:35 p.m. EDT / 1635 UTC).",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, west, coast, TechNanoAI, emerging tech news",
+  "featured": false
 }

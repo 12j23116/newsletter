@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1784965825404-1",
+  "id": "cybersecurity-1786257449814-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Hermes AI agent used to automate attack on Thai Finance M... | Cybersecurity News",
-  "excerpt": "A threat actor used the open-source Hermes AI agent in unattended \"YOLO\" mode to automate post-exploitation activity during an alleged breach of Thailand's Ministry of Finance. [...]",
-  "date": "2026-07-25",
+  "title": "Hackers breach TrueConf to trojanize client installers wi... | Cybersecurity News",
+  "excerpt": "The Head Mare hacktivist group has been exploiting vulnerabilities in unpatched TrueConf video conferencing servers to replace client installers with malicious versions that deliver backdoors. [...]",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "A threat actor used the open-source Hermes AI agent in unattended \"YOLO\" mode to automate post-exploitation activity during an alleged breach of Thailand's Ministry of Finance.  [..."
+      "text": "The Head Mare hacktivist group has been exploiting vulnerabilities in unpatched TrueConf video conferencing servers to replace client installers with malicious versions that deliver backdoors.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, A threat actor used the open-source Hermes AI agent in unattended \"YOLO\" mode to automate post-exploitation activity during an alleged breach of Thailand's Ministry of Finance. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Bill Toulas, The Head Mare hacktivist group has been exploiting vulnerabilities in unpatched TrueConf video conferencing servers to replace client installers with malicious versions that deliver backdoors. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hermes AI agent used to automate attack on Thai Finance Ministry — a notable development in Cybersecurity",
+    "Hackers breach TrueConf to trojanize client installers with backdoors — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "Hermes AI agent used to automate attack on Thai Finance Ministry",
+      "date": "2026-08-09",
+      "event": "Hackers breach TrueConf to trojanize client installers with backdoors",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "hermes",
-    "agent",
+    "hackers",
+    "breach",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hermes AI agent used to automate attack on Thai Finance M... | Cybersecurity News",
-  "metaDescription": "A threat actor used the open-source Hermes AI agent in unattended \"YOLO\" mode to automate post-exploitation activity during an alleged breach of Thailand's M...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, hermes, agent, used, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Hackers breach TrueConf to trojanize client installers wi... | Cybersecurity News",
+  "metaDescription": "The Head Mare hacktivist group has been exploiting vulnerabilities in unpatched TrueConf video conferencing servers to replace client installers with malicio...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, breach, trueconf, TechNanoAI, emerging tech news",
+  "featured": true
 }

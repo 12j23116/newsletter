@@ -1,11 +1,11 @@
 {
-  "id": "bci-1784965833893-5",
+  "id": "bci-1786257456202-5",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "The brain’s internal ruler | Brain-Computer Interfaces News",
   "excerpt": "A simple brain circuit measures objects’ distance from the body using touch signals from a rodent’s whiskers, MIT scientists find.",
-  "date": "2026-07-25",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
+      "date": "2026-08-09",
       "event": "The brain’s internal ruler",
       "current": true
     },

@@ -1,21 +1,21 @@
 {
-  "id": "energy-1784965830923-5",
+  "id": "energy-1786257454549-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "German startup launches high-voltage sodium-ion battery f... | Energy Storage News",
-  "excerpt": "Revolta has introduced a high-voltage residential sodium-ion battery storage system with modular capacity from 2 kWh to 20 kWh. The system features a 450 V DC nominal voltage, over 95% efficiency, 105",
-  "date": "2026-07-25",
+  "title": "This tiny gold crystal could bring quantum technology out... | Energy Storage News",
+  "excerpt": "Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing the need for bulky, ultra-cold refrigeration ",
+  "date": "2026-08-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "german-startup-launches-high-voltage-sodium-ion-battery-for-residentia",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/24/german-startup-launches-high-voltage-sodium-ion-battery-for-residential-applications/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "this-tiny-gold-crystal-could-bring-quantum-technology-out-of-the-deep-",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260806050706.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Revolta has introduced a high-voltage residential sodium-ion battery storage system with modular capacity from 2 kWh to 20 kWh.  The system features a 450 V DC nominal voltage, over 95% efficiency, 105 Wh/kg energy density, and IP65 protection."
+      "text": "Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing the need for bulky, ultra-cold refrigeration systems.  Built from a gold film carved with hundreds of microscopic structures, the ultrathin “metacrystal” acts like a filter that directs different kinds of quantum light along separate paths while preserving the information they carry."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post German startup launches high-voltage sodium-ion battery for residential applications appeared first on pv magazine Global."
+      "text": "According to reporting from sciencedaily.com, Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing the need for bulky, ultra-cold refrigeration systems. Built from a gold film carved with hundreds of microscopic structures, the ultrathin “metacrystal” acts like a filter that directs different kinds of quantum light along separate paths while preserving the information they carry.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "German startup launches high-voltage sodium-ion battery for residential applicat — a notable development in Energy Storage",
+    "This tiny gold crystal could bring quantum technology out of the deep freeze — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-25",
-      "event": "German startup launches high-voltage sodium-ion battery for residential applicat",
+      "date": "2026-08-09",
+      "event": "This tiny gold crystal could bring quantum technology out of the deep freeze",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "german",
-    "startup",
+    "crystal",
+    "could",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "German startup launches high-voltage sodium-ion battery f... | Energy Storage News",
-  "metaDescription": "Revolta has introduced a high-voltage residential sodium-ion battery storage system with modular capacity from 2 kWh to 20 kWh. The system features a 450 V D...",
-  "keywords": "energy storage, battery, solid-state, grid storage, german, startup, launches, TechNanoAI, emerging tech news",
+  "metaTitle": "This tiny gold crystal could bring quantum technology out... | Energy Storage News",
+  "metaDescription": "Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing th...",
+  "keywords": "energy storage, battery, solid-state, grid storage, this, tiny, gold, TechNanoAI, emerging tech news",
   "featured": false
 }
