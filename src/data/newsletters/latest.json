@@ -1,112 +1,114 @@
 {
-  "issue": 83,
-  "date": "2026-08-03",
-  "subject": "This Week: Robotics, Biotech & more — August 3, 2026",
+  "issue": 84,
+  "date": "2026-08-10",
+  "subject": "This Week: Quantum, AI & more — August 10, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "robotics",
-    "biotech",
+    "quantum",
     "ai",
+    "biotech",
     "energy",
+    "robotics",
+    "space",
     "cybersecurity",
-    "space"
+    "av"
   ],
   "articles": [
     {
-      "title": "Google DeepMind says Gemini Robotics 2 enables full body ... | Robotics News",
-      "slug": "google-deepmind-says-gemini-robotics-2-enables-full-body-control",
-      "topic": "robotics",
-      "excerpt": "Gemini Robotics 2 enables robots to reason through every movement, unlocking a broad range of tasks, DeepMind said. \nThe post Google DeepMind says Gemini Robotics 2 enables full body control appeared ",
-      "url": "https://technanoai.com/news/google-deepmind-says-gemini-robotics-2-enables-full-body-control",
-      "date": "2026-08-03"
+      "title": "Chemists set electrons free and break a decades-old chemi... | Quantum Computing News",
+      "slug": "chemists-set-electrons-free-and-break-a-decades-old-chemistry-barrier",
+      "topic": "quantum",
+      "excerpt": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing electrons directly into solution, the technique ",
+      "url": "https://technanoai.com/news/chemists-set-electrons-free-and-break-a-decades-old-chemistry-barrier",
+      "date": "2026-08-10"
     },
     {
-      "title": "Reimagine Robotics emerges from stealth with robots that ... | Robotics News",
-      "slug": "reimagine-robotics-emerges-from-stealth-with-robots-that-8216learn-on-",
-      "topic": "robotics",
-      "excerpt": "Reimagine Robotics, founded by former Google DeepMind Applied Robotics leaders, is developing systems that do not require specialized programmers.\nThe post Reimagine Robotics emerges from stealth with",
-      "url": "https://technanoai.com/news/reimagine-robotics-emerges-from-stealth-with-robots-that-8216learn-on-",
-      "date": "2026-08-03"
-    },
-    {
-      "title": "<a href=\"/biotech/apnimeds-ipo-dream-comes-true-upsized-1... | Biotechnology News",
-      "slug": "a-hrefbiotechapnimeds-ipo-dream-comes-true-upsized-192m-ipo-fund-sleep",
-      "topic": "biotech",
-      "excerpt": "Apnimed has raised $192 million for its upsized IPO, with the proceeds earmarked to fund the launch of its sleep apnea pill.",
-      "url": "https://technanoai.com/news/a-hrefbiotechapnimeds-ipo-dream-comes-true-upsized-192m-ipo-fund-sleep",
-      "date": "2026-08-03"
-    },
-    {
-      "title": "<a href=\"/biotech/chutes-ladders-legend-biotech-ceo-depar... | Biotechnology News",
-      "slug": "a-hrefbiotechchutes-ladders-legend-biotech-ceo-departs-without-success",
-      "topic": "biotech",
-      "excerpt": "Legend Biotech CEO Ying Huang, Ph.D., has left the company suddenly, without a predecessor in place. Huang was elevated from CFO to CEO in 2020 after a Chinese customs investigation was opened on foun",
-      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-legend-biotech-ceo-departs-without-success",
-      "date": "2026-08-03"
-    },
-    {
-      "title": "Hugging Face Diffusers Flaws Could Let Model Repositories... | AI News",
-      "slug": "hugging-face-diffusers-flaws-could-let-model-repositories-execute-arbi",
+      "title": "Anthropic is turning Claude Code’s auto mode on by default | AI News",
+      "slug": "anthropic-is-turning-claude-codes-auto-mode-on-by-default",
       "topic": "ai",
-      "excerpt": "Three high-severity security flaws have been disclosed in Hugging Face's Diffusers library that could allow crafted model repositories to stealthily execute arbitrary code on machines that load it, op",
-      "url": "https://technanoai.com/news/hugging-face-diffusers-flaws-could-let-model-repositories-execute-arbi",
-      "date": "2026-08-03"
+      "excerpt": "Programming with Claude Code will soon require even less human oversight.",
+      "url": "https://technanoai.com/news/anthropic-is-turning-claude-codes-auto-mode-on-by-default",
+      "date": "2026-08-10"
     },
     {
-      "title": "N-able Says Attackers Take Over N-central Servers After I... | AI News",
-      "slug": "n-able-says-attackers-take-over-n-central-servers-after-initial-fix-pr",
+      "title": "Embattled hedge fund Situational Awareness invests $400M ... | AI News",
+      "slug": "embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startu",
       "topic": "ai",
-      "excerpt": "N-able said attackers exploited an authentication bypass in N-central to gain remote administrative access and reach the customer systems managed through those servers.\n\nIts first fix was incomplete. ",
-      "url": "https://technanoai.com/news/n-able-says-attackers-take-over-n-central-servers-after-initial-fix-pr",
-      "date": "2026-08-03"
+      "excerpt": "The AI-focused hedge fund is still making some big bets.",
+      "url": "https://technanoai.com/news/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startu",
+      "date": "2026-08-10"
     },
     {
-      "title": "Germany reduces solar feed-in tariffs by 1% | Energy Storage News",
-      "slug": "germany-reduces-solar-feed-in-tariffs-by-1",
+      "title": "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hre... | Biotechnology News",
+      "slug": "a-hrefbiotechfierce-biotech-layoff-tracker-2026-hreflangenfierce-biote",
+      "topic": "biotech",
+      "excerpt": "As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team.",
+      "url": "https://technanoai.com/news/a-hrefbiotechfierce-biotech-layoff-tracker-2026-hreflangenfierce-biote",
+      "date": "2026-08-10"
+    },
+    {
+      "title": "India's round-the-clock renewables tender attracts lowest... | Energy Storage News",
+      "slug": "india8217s-round-the-clock-renewables-tender-attracts-lowest-bid-of-00",
       "topic": "energy",
-      "excerpt": "Fixed feed-in tariffs for solar systems under the partial feed-in model will now range from €0.0544 ($0.063)/kWh to €0.0770/kWh, while systems operating under the full feed-in model will receive betwe",
-      "url": "https://technanoai.com/news/germany-reduces-solar-feed-in-tariffs-by-1",
-      "date": "2026-08-03"
+      "excerpt": "The Solar Energy Corp. of India (SECI) has discovered a lowest tariff of INR 5.25/kWh in its tender to procure 1 GW of firm and dispatchable renewable energy (FDRE) on a round-the-clock (RTC) basis fr",
+      "url": "https://technanoai.com/news/india8217s-round-the-clock-renewables-tender-attracts-lowest-bid-of-00",
+      "date": "2026-08-10"
     },
     {
-      "title": "Peruvian researchers develop foldable solar panels for na... | Energy Storage News",
-      "slug": "peruvian-researchers-develop-foldable-solar-panels-for-naval-mining-ap",
+      "title": "PV Progress across Latin America | Energy Storage News",
+      "slug": "pv-progress-across-latin-america",
       "topic": "energy",
-      "excerpt": "The technology uses a pattern inspired by Japanese origami to fold the photovoltaic panels in a single movement. A prototype weighs around 6 kg and can be transported in a suitcase.\nThe post Peruvian ",
-      "url": "https://technanoai.com/news/peruvian-researchers-develop-foldable-solar-panels-for-naval-mining-ap",
-      "date": "2026-08-03"
+      "excerpt": "InfoLink’s Jenny Lin shares the latest analysis on the key markets accounting for nearly 80% of Latin America’s total PV capacity as solar continues to grow its share of regional electricity generatio",
+      "url": "https://technanoai.com/news/pv-progress-across-latin-america",
+      "date": "2026-08-10"
     },
     {
-      "title": "OpenAI teases Astra, its next major AI model, after it so... | Cybersecurity News",
-      "slug": "openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-st",
-      "topic": "cybersecurity",
-      "excerpt": "OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in mathematics and theoretical computer scien",
-      "url": "https://technanoai.com/news/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-st",
-      "date": "2026-08-03"
+      "title": "Analog Devices returns as strategic sponsor to aid MassRo... | Robotics News",
+      "slug": "analog-devices-returns-as-strategic-sponsor-to-aid-massrobotics-startu",
+      "topic": "robotics",
+      "excerpt": "Analog Devices Inc. is supporting MassRobotics startups with Analog Garage and participating in events including RoboBusiness.\nThe post Analog Devices returns as strategic sponsor to aid MassRobotics ",
+      "url": "https://technanoai.com/news/analog-devices-returns-as-strategic-sponsor-to-aid-massrobotics-startu",
+      "date": "2026-08-10"
     },
     {
-      "title": "Russian State APT Linked to Recent Public Wi-Fi Gateway H... | Cybersecurity News",
-      "slug": "russian-state-apt-linked-to-recent-public-wi-fi-gateway-hacking",
-      "topic": "cybersecurity",
-      "excerpt": "Midnight Blizzard has been stealing Microsoft account credentials via compromised Wi-Fi networks at hospitality organizations.\nThe post Russian State APT Linked to Recent Public Wi-Fi Gateway Hacking ",
-      "url": "https://technanoai.com/news/russian-state-apt-linked-to-recent-public-wi-fi-gateway-hacking",
-      "date": "2026-08-03"
-    },
-    {
-      "title": "APOD: 2026 August 2 – A Fire Rainbow over West Virginia | Space Exploration News",
-      "slug": "apod-2026-august-2-a-fire-rainbow-over-west-virginia",
+      "title": "Artemis progress building lunar return roadmap | Space Exploration News",
+      "slug": "artemis-progress-building-lunar-return-roadmap",
       "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 August 2 – A Fire… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
-      "url": "https://technanoai.com/news/apod-2026-august-2-a-fire-rainbow-over-west-virginia",
-      "date": "2026-08-03"
+      "excerpt": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight.com.",
+      "url": "https://technanoai.com/news/artemis-progress-building-lunar-return-roadmap",
+      "date": "2026-08-10"
     },
     {
-      "title": "APOD: 2026 August 3 – Vaporizing Meteor Photobombs the La... | Space Exploration News",
-      "slug": "apod-2026-august-3-vaporizing-meteor-photobombs-the-lacerta-nebula",
+      "title": "Katalyst Space makes progress in restoring control of Swi... | Space Exploration News",
+      "slug": "katalyst-space-makes-progress-in-restoring-control-of-swift-servicing-",
       "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 August 3 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differen",
-      "url": "https://technanoai.com/news/apod-2026-august-3-vaporizing-meteor-photobombs-the-lacerta-nebula",
-      "date": "2026-08-03"
+      "excerpt": "The company that developed a spacecraft to boost the orbit of a NASA observatory says it is making progress in recovering from its own spacecraft’s problems.\nThe post Katalyst Space makes progress in ",
+      "url": "https://technanoai.com/news/katalyst-space-makes-progress-in-restoring-control-of-swift-servicing-",
+      "date": "2026-08-10"
+    },
+    {
+      "title": "Critical Flaws Discovered in Belgian eID Software Used by... | Cybersecurity News",
+      "slug": "critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-pe",
+      "topic": "cybersecurity",
+      "excerpt": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People ",
+      "url": "https://technanoai.com/news/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-pe",
+      "date": "2026-08-10"
+    },
+    {
+      "title": "TechCrunch Mobility: Zoox prepares for launch and Uber’s ... | Autonomous Vehicles News",
+      "slug": "techcrunch-mobility-zoox-prepares-for-launch-and-ubers-av-empire",
+      "topic": "av",
+      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
+      "url": "https://technanoai.com/news/techcrunch-mobility-zoox-prepares-for-launch-and-ubers-av-empire",
+      "date": "2026-08-10"
+    },
+    {
+      "title": "D-Wave Reports Its Q2 2026 Financial Results Showing Book... | Quantum Computing News",
+      "slug": "d-wave-reports-its-q2-2026-financial-results-showing-bookings-surge-te",
+      "topic": "quantum",
+      "excerpt": "D-Wave Quantum Inc. reported its financial results for the second quarter and first half of 2026, highlighting significant commercial momentum and rapid growth in long-term commitments. While quarterl",
+      "url": "https://technanoai.com/news/d-wave-reports-its-q2-2026-financial-results-showing-bookings-surge-te",
+      "date": "2026-08-09"
     }
   ]
 }
