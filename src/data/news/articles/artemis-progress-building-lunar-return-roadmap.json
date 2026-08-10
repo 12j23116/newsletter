@@ -1,21 +1,21 @@
 {
-  "id": "space-1785053240394-0",
+  "id": "space-1786345782230-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA and ESA facilities avoid major damage from wildfires... | Space Exploration News",
-  "excerpt": "Key ground stations in Spain operated by NASA and the European Space Agency have avoided serious damage from major wildfires in the country.\nThe post NASA and ESA facilities avoid major damage from wi",
-  "date": "2026-07-26",
+  "title": "Artemis progress building lunar return roadmap | Space Exploration News",
+  "excerpt": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight.com.",
+  "date": "2026-08-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa-and-esa-facilities-avoid-major-damage-from-wildfires-in-spain",
-  "sourceLink": "https://spacenews.com/nasa-and-esa-facilities-avoid-major-damage-from-wildfires-in-spain/",
-  "sourceName": "Jeff Foust",
+  "slug": "artemis-progress-building-lunar-return-roadmap",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/artemis-progress-lunar-return-roadmap/",
+  "sourceName": "Alejandro Alcantarilla Romera, and Chris Bergin",
   "body": [
     {
       "type": "p",
-      "text": "Key ground stations in Spain operated by NASA and the European Space Agency have avoided serious damage from major wildfires in the country. \nThe post NASA and ESA facilities avoid major damage from wildfires in Spain appeared first on SpaceNews."
+      "text": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jeff Foust, Key ground stations in Spain operated by NASA and the European Space Agency have avoided serious damage from major wildfires in the country.\nThe post NASA and ESA facilities avoid major damage from wildfires in Spain appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alejandro Alcantarilla Romera, and Chris Bergin, NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA and ESA facilities avoid major damage from wildfires in Spain — a notable development in Space Exploration",
+    "Artemis progress building lunar return roadmap — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jeff Foust",
+      "value": "Alejandro Alcantarilla Romera, and Chris Bergin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-26",
-      "event": "NASA and ESA facilities avoid major damage from wildfires in Spain",
+      "date": "2026-08-10",
+      "event": "Artemis progress building lunar return roadmap",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "facilities",
-    "avoid",
+    "artemis",
+    "progress",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA and ESA facilities avoid major damage from wildfires... | Space Exploration News",
-  "metaDescription": "Key ground stations in Spain operated by NASA and the European Space Agency have avoided serious damage from major wildfires in the country.\nThe post NASA an...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, facilities, avoid, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Artemis progress building lunar return roadmap | Space Exploration News",
+  "metaDescription": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appe...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, artemis, progress, building, TechNanoAI, emerging tech news",
+  "featured": false
 }

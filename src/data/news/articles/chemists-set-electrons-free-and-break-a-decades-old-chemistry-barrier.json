@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1785053245520-5",
+  "id": "quantum-1786345787722-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Zero Point Cryogenics and Ability Engineering Technology ... | Quantum Computing News",
-  "excerpt": "Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physical supply-chain tenants: Edmonton-based dilu",
-  "date": "2026-07-26",
+  "title": "Chemists set electrons free and break a decades-old chemi... | Quantum Computing News",
+  "excerpt": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing electrons directly into solution, the technique ",
+  "date": "2026-08-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "zero-point-cryogenics-and-ability-engineering-technology-anchor-iqmp-f",
-  "sourceLink": "https://quantumcomputingreport.com/zero-point-cryogenics-and-ability-engineering-technology-anchor-iqmp-faqtory-in-chicago/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "chemists-set-electrons-free-and-break-a-decades-old-chemistry-barrier",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260807035147.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physical supply-chain tenants: Edmonton-based dilution refrigerator manufacturer Zero Point Cryogenics (ZPC) and Illinois-based precision engineering firm Ability Engineering Technology (AET).  Both companies will establish operational footprints at the IQMP FaQtory—a specialized campus  [..."
+      "text": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions.  By releasing electrons directly into solution, the technique could unlock reactions—and potentially useful new molecules—that were previously out of reach."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physical supply-chain tenants: Edmonton-based dilution refrigerator manufacturer Zero Point Cryogenics (ZPC) and Illinois-based precision engineering firm Ability Engineering Technology (AET). Both companies will establish operational footprints at the IQMP FaQtory—a specialized campus  [...]\nThe post Zero Point Cryogenics and Ability Engineering T. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing electrons directly into solution, the technique could unlock reactions—and potentially useful new molecules—that were previously out of reach.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Zero Point Cryogenics and Ability Engineering Technology Anchor IQMP FaQtory in  — a notable development in Quantum Computing",
+    "Chemists set electrons free and break a decades-old chemistry barrier — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-26",
-      "event": "Zero Point Cryogenics and Ability Engineering Technology Anchor IQMP FaQtory in ",
+      "date": "2026-08-10",
+      "event": "Chemists set electrons free and break a decades-old chemistry barrier",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "point",
-    "cryogenics",
+    "chemists",
+    "electrons",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Zero Point Cryogenics and Ability Engineering Technology ... | Quantum Computing News",
-  "metaDescription": "Following the federal funding rollout for The Bloch Quantum Tech Hub, the Illinois Quantum and Microelectronics Park (IQMP) has secured its first two physica...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, zero, point, cryogenics, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Chemists set electrons free and break a decades-old chemi... | Quantum Computing News",
+  "metaDescription": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing elect...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, chemists, electrons, free, TechNanoAI, emerging tech news",
+  "featured": true
 }

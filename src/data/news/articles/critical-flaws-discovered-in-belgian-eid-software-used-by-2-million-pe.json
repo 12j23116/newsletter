@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1785053239579-0",
+  "id": "cybersecurity-1786345781482-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Steam forum ClickFix attacks infect gamers with XMRig cry... | Cybersecurity News",
-  "excerpt": "Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptominers. [...]",
-  "date": "2026-07-26",
+  "title": "Critical Flaws Discovered in Belgian eID Software Used by... | Cybersecurity News",
+  "excerpt": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People ",
+  "date": "2026-08-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-pe",
+  "sourceLink": "https://www.securityweek.com/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-people/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptominers.  [..."
+      "text": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies. \nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptominers. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eduard Kovacs, The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Steam forum ClickFix attacks infect gamers with XMRig cryptominers — a notable development in Cybersecurity",
+    "Critical Flaws Discovered in Belgian eID Software Used by 2 Million People — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-26",
-      "event": "Steam forum ClickFix attacks infect gamers with XMRig cryptominers",
+      "date": "2026-08-10",
+      "event": "Critical Flaws Discovered in Belgian eID Software Used by 2 Million People",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "steam",
-    "forum",
+    "critical",
+    "flaws",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Steam forum ClickFix attacks infect gamers with XMRig cry... | Cybersecurity News",
-  "metaDescription": "Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptom...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, steam, forum, clickfix, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Critical Flaws Discovered in Belgian eID Software Used by... | Cybersecurity News",
+  "metaDescription": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Bel...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, critical, flaws, discovered, TechNanoAI, emerging tech news",
+  "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1785053240395-1",
+  "id": "space-1786345782229-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX Falcon 9 launches Starlink satellites from West Coast | Space Exploration News",
-  "excerpt": "Liftoff from Vandenberg Space Force Base in California occurred at 8:51 a.m. PDT (11:51 a.m. EDT / 1551 UTC). The Falcon 9 placed 24 Starlink satellites into orbit.",
-  "date": "2026-07-26",
+  "title": "Katalyst Space makes progress in restoring control of Swi... | Space Exploration News",
+  "excerpt": "The company that developed a spacecraft to boost the orbit of a NASA observatory says it is making progress in recovering from its own spacecraft’s problems.\nThe post Katalyst Space makes progress in ",
+  "date": "2026-08-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-falcon-9-launches-starlink-satellites-from-west-coast",
-  "sourceLink": "https://spaceflightnow.com/2026/07/25/live-coverage-spacex-falcon-9-to-launch-starlink-satellites-from-west-coast/",
-  "sourceName": "Steven Young",
+  "slug": "katalyst-space-makes-progress-in-restoring-control-of-swift-servicing-",
+  "sourceLink": "https://spacenews.com/katalyst-space-makes-progress-in-restoring-control-of-swift-servicing-spacecraft/",
+  "sourceName": "Jeff Foust",
   "body": [
     {
       "type": "p",
-      "text": "Liftoff from Vandenberg Space Force Base in California occurred at 8:51 a. m."
+      "text": "The company that developed a spacecraft to boost the orbit of a NASA observatory says it is making progress in recovering from its own spacecraft’s problems. \nThe post Katalyst Space makes progress in restoring control of Swift servicing spacecraft appeared first on SpaceNews."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "PDT (11:51 a. m."
-    },
-    {
-      "type": "p",
-      "text": "EDT / 1551 UTC).  The Falcon 9 placed 24 Starlink satellites into orbit."
+      "text": "According to reporting from Jeff Foust, The company that developed a spacecraft to boost the orbit of a NASA observatory says it is making progress in recovering from its own spacecraft’s problems.\nThe post Katalyst Space makes progress in restoring control of Swift servicing spacecraft appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX Falcon 9 launches Starlink satellites from West Coast — a notable development in Space Exploration",
+    "Katalyst Space makes progress in restoring control of Swift servicing spacecraft — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Steven Young",
+      "value": "Jeff Foust",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-26",
-      "event": "SpaceX Falcon 9 launches Starlink satellites from West Coast",
+      "date": "2026-08-10",
+      "event": "Katalyst Space makes progress in restoring control of Swift servicing spacecraft",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "falcon",
+    "katalyst",
+    "space",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX Falcon 9 launches Starlink satellites from West Coast | Space Exploration News",
-  "metaDescription": "Liftoff from Vandenberg Space Force Base in California occurred at 8:51 a.m. PDT (11:51 a.m. EDT / 1551 UTC). The Falcon 9 placed 24 Starlink satellites into...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, falcon, launches, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Katalyst Space makes progress in restoring control of Swi... | Space Exploration News",
+  "metaDescription": "The company that developed a spacecraft to boost the orbit of a NASA observatory says it is making progress in recovering from its own spacecraft’s problems....",
+  "keywords": "space exploration, rocket launch, satellite, NASA, katalyst, space, makes, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785053239186-3",
+  "id": "ai-1786345781058-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "One fallen power line exposed a growing AI data center pr... | AI News",
-  "excerpt": "A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions. Here's how to fix the problem.",
-  "date": "2026-07-26",
+  "title": "OpenAI's Next AI Model Astra Shows Cyber Performance Stro... | AI News",
+  "excerpt": "OpenAI has announced that it's pausing some \"internal activities\" involving its upcoming artificial intelligence (AI) model Astra after an internal evaluation found it had made significant advancement",
+  "date": "2026-08-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "one-fallen-power-line-exposed-a-growing-ai-data-center-problem-here821",
-  "sourceLink": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
-  "sourceName": "Tim De Chant",
+  "slug": "openais-next-ai-model-astra-shows-cyber-performance-strong-enough-to-t",
+  "sourceLink": "https://thehackernews.com/2026/08/openais-next-ai-model-astra-shows-cyber.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions.  Here's how to fix the problem."
+      "text": "OpenAI has announced that it's pausing some \"internal activities\" involving its upcoming artificial intelligence (AI) model Astra after an internal evaluation found it had made significant advancements in agentic coding and cybersecurity."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Tim De Chant, A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions. Here's how to fix the problem.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), OpenAI has announced that it's pausing some \"internal activities\" involving its upcoming artificial intelligence (AI) model Astra after an internal evaluation found it had made significant advancements in agentic coding and cybersecurity.\n\nIn response to the discovery, the AI upstart said it's implementing security controls for higher-capability models and associated activities, such as isolated. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "One fallen power line exposed a growing AI data center problem. Here's how to fi — a notable development in AI",
+    "OpenAI's Next AI Model Astra Shows Cyber Performance Strong Enough to Trigger Pa — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Tim De Chant",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-26",
-      "event": "One fallen power line exposed a growing AI data center problem. Here's how to fi",
+      "date": "2026-08-10",
+      "event": "OpenAI's Next AI Model Astra Shows Cyber Performance Strong Enough to Trigger Pa",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "fallen",
-    "power",
+    "openai",
+    "model",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "One fallen power line exposed a growing AI data center pr... | AI News",
-  "metaDescription": "A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions. Here's how to fix the problem.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, fallen, power, line, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "OpenAI's Next AI Model Astra Shows Cyber Performance Stro... | AI News",
+  "metaDescription": "OpenAI has announced that it's pausing some \"internal activities\" involving its upcoming artificial intelligence (AI) model Astra after an internal evaluatio...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, next, model, TechNanoAI, emerging tech news",
+  "featured": true
 }

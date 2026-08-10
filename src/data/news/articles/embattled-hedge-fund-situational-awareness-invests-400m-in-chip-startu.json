@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785053239186-2",
+  "id": "ai-1786345781058-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Librarians are hosting viral 'Avoiding AI' workshops for ... | AI News",
-  "excerpt": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand.",
-  "date": "2026-07-26",
+  "title": "Embattled hedge fund Situational Awareness invests $400M ... | AI News",
+  "excerpt": "The AI-focused hedge fund is still making some big bets.",
+  "date": "2026-08-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "librarians-are-hosting-viral-8216avoiding-ai8217-workshops-for-people-",
-  "sourceLink": "https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech/",
-  "sourceName": "Amanda Silberling",
+  "slug": "embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startu",
+  "sourceLink": "https://techcrunch.com/2026/08/09/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startup-source-foundry/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand."
+      "text": "The AI-focused hedge fund is still making some big bets."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Amanda Silberling, At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, The AI-focused hedge fund is still making some big bets.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Librarians are hosting viral 'Avoiding AI' workshops for people who are fed up w — a notable development in AI",
+    "Embattled hedge fund Situational Awareness invests $400M in chip startup Source  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Amanda Silberling",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-26",
-      "event": "Librarians are hosting viral 'Avoiding AI' workshops for people who are fed up w",
+      "date": "2026-08-10",
+      "event": "Embattled hedge fund Situational Awareness invests $400M in chip startup Source ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "librarians",
-    "hosting",
+    "embattled",
+    "hedge",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Librarians are hosting viral 'Avoiding AI' workshops for ... | AI News",
-  "metaDescription": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand. LLMs, agents & the race to AGI. Latest AI developments and analysis",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, librarians, hosting, viral, TechNanoAI, emerging tech news",
+  "metaTitle": "Embattled hedge fund Situational Awareness invests $400M ... | AI News",
+  "metaDescription": "The AI-focused hedge fund is still making some big bets. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, embattled, hedge, fund, TechNanoAI, emerging tech news",
   "featured": false
 }

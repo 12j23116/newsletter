@@ -1,17 +1,17 @@
 {
-  "id": "biotech-1785053240838-1",
+  "id": "biotech-1786345782961-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
   "title": "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hre... | Biotechnology News",
   "excerpt": "As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team.",
-  "date": "2026-07-26",
+  "date": "2026-08-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
   "slug": "a-hrefbiotechfierce-biotech-layoff-tracker-2026-hreflangenfierce-biote",
   "sourceLink": "https://www.fiercebiotech.com/biotech/fierce-biotech-layoff-tracker-2026",
-  "sourceName": "<a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "sourceName": "<a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
   "body": [
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "<a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-26",
+      "date": "2026-08-10",
       "event": "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hreflang=\"en\">Fierce Biote",
       "current": true
     },
