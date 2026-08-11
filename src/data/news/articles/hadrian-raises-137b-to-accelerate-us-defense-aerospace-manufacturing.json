@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1785144572322-0",
+  "id": "robotics-1786430810102-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Optical Tech Would Update a Robot’s AI on the Fly | Robotics News",
-  "excerpt": "Atop a lab bench, Cornell Tech postdoctoral researcher Yifan He positions the lens of an optical receiver almost a meter away from an LED emitting a beam of red light. The computer monitor attached to",
-  "date": "2026-07-27",
+  "title": "Hadrian raises $1.37B to accelerate U.S. defense, aerospa... | Robotics News",
+  "excerpt": "The raise values Hadrian at $7.87 billion. It is Hadrian's second funding round this year, following a round in January 2026.\nThe post Hadrian raises $1.37B to accelerate U.S. defense, aerospace manuf",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "optical-tech-would-update-a-robots-ai-on-the-fly",
-  "sourceLink": "https://spectrum.ieee.org/ai-in-robotics",
-  "sourceName": "Alex Music",
+  "slug": "hadrian-raises-137b-to-accelerate-us-defense-aerospace-manufacturing",
+  "sourceLink": "https://www.therobotreport.com/hadrian-raises-1-37b-accelerate-u-s-manufacturing/",
+  "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Atop a lab bench, Cornell Tech postdoctoral researcher Yifan He positions the lens of an optical receiver almost a meter away from an LED emitting a beam of red light.  The computer monitor attached to the receiver takes a beat to refresh, then displays an array of squares that resemble a QR code."
+      "text": "The raise values Hadrian at $7. 87 billion."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "When you hold your phone camera up to a QR code, light strikes the image sensor as only a first step to revealing the data hidden behind the black and white matrix."
+      "text": "It is Hadrian's second funding round this year, following a round in January 2026. \nThe post Hadrian raises $1."
+    },
+    {
+      "type": "p",
+      "text": "37B to accelerate U. S."
+    },
+    {
+      "type": "p",
+      "text": "defense, aerospace manufacturing appeared first on The Robot Report."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "Optical Tech Would Update a Robot’s AI on the Fly — a notable development in Robotics",
+    "Hadrian raises $1.37B to accelerate U.S. defense, aerospace manufacturing — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +128,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Alex Music",
+      "value": "The Robot Report Staff",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "Optical Tech Would Update a Robot’s AI on the Fly",
+      "date": "2026-08-11",
+      "event": "Hadrian raises $1.37B to accelerate U.S. defense, aerospace manufacturing",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "optical",
-    "would",
+    "hadrian",
+    "raises",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "Optical Tech Would Update a Robot’s AI on the Fly | Robotics News",
-  "metaDescription": "Atop a lab bench, Cornell Tech postdoctoral researcher Yifan He positions the lens of an optical receiver almost a meter away from an LED emitting a beam of ...",
-  "keywords": "robotics, humanoid robot, automation, drones, optical, tech, would, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Hadrian raises $1.37B to accelerate U.S. defense, aerospa... | Robotics News",
+  "metaDescription": "The raise values Hadrian at $7.87 billion. It is Hadrian's second funding round this year, following a round in January 2026.\nThe post Hadrian raises $1.37B ...",
+  "keywords": "robotics, humanoid robot, automation, drones, hadrian, raises, accelerate, TechNanoAI, emerging tech news",
+  "featured": false
 }

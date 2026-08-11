@@ -1,21 +1,21 @@
 {
-  "id": "energy-1785144572110-3",
+  "id": "energy-1786430809661-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "India's Advait Greenergy, China's GuofuHee showcase 5 MW ... | Energy Storage News",
-  "excerpt": "The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate the electrolyzer under real operating cond",
-  "date": "2026-07-27",
+  "title": "Microgrids can have macro impact | Energy Storage News",
+  "excerpt": "Solar microgrids can bring power and prosperity to communities across the Caribbean, according to Kiesha Farnum, head of partnerships and programs at the Caribbean Centre for Renewable Energy and Ener",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "india8217s-advait-greenergy-china8217s-guofuhee-showcase-5-mw-alkaline",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/27/advait-greenergy-guofuhee-showcase-5-mw-alkaline-electrolyser-in-live-factory-acceptance-testing-ahead-of-india-deployment/",
-  "sourceName": "Uma Gupta",
+  "slug": "microgrids-can-have-macro-impact",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/11/microgrids-can-have-macro-impact/",
+  "sourceName": "Mark Hutchins",
   "body": [
     {
       "type": "p",
-      "text": "The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate the electrolyzer under real operating conditions. \nThe post India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer appeared first on pv magazine Global."
+      "text": "Solar microgrids can bring power and prosperity to communities across the Caribbean, according to Kiesha Farnum, head of partnerships and programs at the Caribbean Centre for Renewable Energy and Energy Efficiency (CCREEE).  Modeling work on proposed systems examines how microgrids can impact riverine villages, forest settlements, small islands, fishing communities, and other locations lacking grid infrastructure."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Uma Gupta, The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate the electrolyzer under real operating conditions.\nThe post India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post Microgrids can have macro impact appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer — a notable development in Energy Storage",
+    "Microgrids can have macro impact — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Uma Gupta",
+      "value": "Mark Hutchins",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "India's Advait Greenergy, China's GuofuHee showcase 5 MW alkaline electrolyzer",
+      "date": "2026-08-11",
+      "event": "Microgrids can have macro impact",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "india",
-    "advait",
+    "microgrids",
+    "macro",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "India's Advait Greenergy, China's GuofuHee showcase 5 MW ... | Energy Storage News",
-  "metaDescription": "The live demonstration brought together more than 70 organizations from across the green hydrogen value chain, giving participants an opportunity to evaluate...",
-  "keywords": "energy storage, battery, solid-state, grid storage, india, advait, greenergy, TechNanoAI, emerging tech news",
+  "metaTitle": "Microgrids can have macro impact | Energy Storage News",
+  "metaDescription": "Solar microgrids can bring power and prosperity to communities across the Caribbean, according to Kiesha Farnum, head of partnerships and programs at the Car...",
+  "keywords": "energy storage, battery, solid-state, grid storage, microgrids, have, macro, TechNanoAI, emerging tech news",
   "featured": false
 }

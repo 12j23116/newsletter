@@ -1,21 +1,21 @@
 {
-  "id": "energy-1785144572110-2",
+  "id": "energy-1786430809661-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "New disaggregation methodology quantifies uncertainty in ... | Energy Storage News",
-  "excerpt": "Researchers in Spain have developed a conditional diffusion-based model to improve the visibility of behind-the-meter PV systems using low-resolution smart meter data. The probabilistic approach enabl",
-  "date": "2026-07-27",
+  "title": "SEG Solar opens 4 GW Texas module factory | Energy Storage News",
+  "excerpt": "The company said it plans to have 10.6 GW of operational module assembly capacity by 2027, with a future HJT cell facility also planned for the U.S.\nThe post SEG Solar opens 4 GW Texas module factory ",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "new-disaggregation-methodology-quantifies-uncertainty-in-behind-the-me",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/27/new-disaggregation-methodology-quantifies-uncertainty-in-behind-the-meter-pv-generation-and-heat-pump-demand/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "seg-solar-opens-4-gw-texas-module-factory",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/11/seg-solar-opens-4-gw-texas-facility-announces-plan-to-become-the-nations-largest-crystalline-silicon-module-maker/",
+  "sourceName": "Ben Zientara",
   "body": [
     {
       "type": "p",
-      "text": "Researchers in Spain have developed a conditional diffusion-based model to improve the visibility of behind-the-meter PV systems using low-resolution smart meter data.  The probabilistic approach enables accurate PV reconstruction with uncertainty estimates, helping distribution system operators better manage grid planning and flexibility."
+      "text": "The company said it plans to have 10. 6 GW of operational module assembly capacity by 2027, with a future HJT cell facility also planned for the U."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post New disaggregation methodology quantifies uncertainty in behind-the-meter PV generation appeared first on pv magazine Global."
+      "text": "S. \nThe post SEG Solar opens 4 GW Texas module factory appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "New disaggregation methodology quantifies uncertainty in behind-the-meter PV gen — a notable development in Energy Storage",
+    "SEG Solar opens 4 GW Texas module factory — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Ben Zientara",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "New disaggregation methodology quantifies uncertainty in behind-the-meter PV gen",
+      "date": "2026-08-11",
+      "event": "SEG Solar opens 4 GW Texas module factory",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "disaggregation",
-    "methodology",
+    "solar",
+    "opens",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "New disaggregation methodology quantifies uncertainty in ... | Energy Storage News",
-  "metaDescription": "Researchers in Spain have developed a conditional diffusion-based model to improve the visibility of behind-the-meter PV systems using low-resolution smart m...",
-  "keywords": "energy storage, battery, solid-state, grid storage, disaggregation, methodology, quantifies, TechNanoAI, emerging tech news",
+  "metaTitle": "SEG Solar opens 4 GW Texas module factory | Energy Storage News",
+  "metaDescription": "The company said it plans to have 10.6 GW of operational module assembly capacity by 2027, with a future HJT cell facility also planned for the U.S.\nThe post...",
+  "keywords": "energy storage, battery, solid-state, grid storage, solar, opens, texas, TechNanoAI, emerging tech news",
   "featured": false
 }

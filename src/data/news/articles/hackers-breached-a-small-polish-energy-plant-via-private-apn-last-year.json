@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1785144567117-2",
+  "id": "cybersecurity-1786430802215-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "MCBS Data Breach Affects 1.2 Million Individuals | Cybersecurity News",
-  "excerpt": "The PEAR ransomware group claimed to have stolen 3 TB of information from the medical business management company.\nThe post MCBS Data Breach Affects 1.2 Million Individuals appeared first on SecurityW",
-  "date": "2026-07-27",
+  "title": "Hackers breached a small Polish energy plant via private ... | Cybersecurity News",
+  "excerpt": "Hackers breached a heat-and-power plant facility in Poland, which supplies heat to about 50,000 residents, using a private APN (Access Point Name) to access an OT (Operational Technology) network. [..",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "mcbs-data-breach-affects-12-million-individuals",
-  "sourceLink": "https://www.securityweek.com/mcbs-data-breach-affects-1-2-million-individuals/",
-  "sourceName": "Eduard Kovacs",
+  "slug": "hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "The PEAR ransomware group claimed to have stolen 3 TB of information from the medical business management company. \nThe post MCBS Data Breach Affects 1."
+      "text": "Hackers breached a heat-and-power plant facility in Poland, which supplies heat to about 50,000 residents, using a private APN (Access Point Name) to access an OT (Operational Technology) network.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "2 Million Individuals appeared first on SecurityWeek."
+      "text": "According to reporting from Bill Toulas, Hackers breached a heat-and-power plant facility in Poland, which supplies heat to about 50,000 residents, using a private APN (Access Point Name) to access an OT (Operational Technology) network. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "MCBS Data Breach Affects 1.2 Million Individuals — a notable development in Cybersecurity",
+    "Hackers breached a small Polish energy plant via private APN last year — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Eduard Kovacs",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "MCBS Data Breach Affects 1.2 Million Individuals",
+      "date": "2026-08-11",
+      "event": "Hackers breached a small Polish energy plant via private APN last year",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "breach",
-    "affects",
+    "hackers",
+    "breached",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "MCBS Data Breach Affects 1.2 Million Individuals | Cybersecurity News",
-  "metaDescription": "The PEAR ransomware group claimed to have stolen 3 TB of information from the medical business management company.\nThe post MCBS Data Breach Affects 1.2 Mill...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, mcbs, data, breach, TechNanoAI, emerging tech news",
+  "metaTitle": "Hackers breached a small Polish energy plant via private ... | Cybersecurity News",
+  "metaDescription": "Hackers breached a heat-and-power plant facility in Poland, which supplies heat to about 50,000 residents, using a private APN (Access Point Name) to access ...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, breached, small, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785144566603-4",
+  "id": "ai-1786430801792-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Making sense of the panic over Chinese AI | AI News",
-  "excerpt": "On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street.",
-  "date": "2026-07-27",
+  "title": "Mark Zuckerberg's AI manifesto is exactly why people don'... | AI News",
+  "excerpt": "On Monday, Mark Zuckerberg published a 6,500-word manifesto about personal AI, largely about the possibilities for the \"personal superintelligence\" systems Meta AI is building.",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "making-sense-of-the-panic-over-chinese-ai",
-  "sourceLink": "https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/",
-  "sourceName": "Anthony Ha",
+  "slug": "mark-zuckerberg8217s-ai-manifesto-is-exactly-why-people-don8217t-like-",
+  "sourceLink": "https://techcrunch.com/2026/08/10/mark-zuckerbergs-ai-manifesto-is-exactly-why-people-dont-like-ai/",
+  "sourceName": "Russell Brandom",
   "body": [
     {
       "type": "p",
-      "text": "On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street."
+      "text": "On Monday, Mark Zuckerberg published a 6,500-word manifesto about personal AI, largely about the possibilities for the \"personal superintelligence\" systems Meta AI is building."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Russell Brandom, On Monday, Mark Zuckerberg published a 6,500-word manifesto about personal AI, largely about the possibilities for the \"personal superintelligence\" systems Meta AI is building.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Making sense of the panic over Chinese AI — a notable development in AI",
+    "Mark Zuckerberg's AI manifesto is exactly why people don't like AI — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Russell Brandom",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "Making sense of the panic over Chinese AI",
+      "date": "2026-08-11",
+      "event": "Mark Zuckerberg's AI manifesto is exactly why people don't like AI",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "making",
-    "sense",
+    "zuckerberg",
+    "manifesto",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Making sense of the panic over Chinese AI | AI News",
-  "metaDescription": "On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street. LLMs, agents & the race to AGI. Latest AI d",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, making, sense, panic, TechNanoAI, emerging tech news",
+  "metaTitle": "Mark Zuckerberg's AI manifesto is exactly why people don'... | AI News",
+  "metaDescription": "On Monday, Mark Zuckerberg published a 6,500-word manifesto about personal AI, largely about the possibilities for the \"personal superintelligence\" systems M...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, mark, zuckerberg, manifesto, TechNanoAI, emerging tech news",
   "featured": false
 }

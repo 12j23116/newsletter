@@ -1,21 +1,21 @@
 {
-  "id": "energy-1785144572109-1",
+  "id": "energy-1786430809662-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Albanian government approves agrivoltaics | Energy Storage News",
-  "excerpt": "Albania is set to allow agrivoltaics under certain conditions following approved amendments to its law governing agricultural land, with its council of ministers tasked with determining the applicable",
-  "date": "2026-07-27",
+  "title": "Bangladesh reinstates payment guarantees to attract renew... | Energy Storage News",
+  "excerpt": "Bangladesh has reinstated payment guarantees for renewable energy projects to boost investor confidence and attract local and international financing. Industry stakeholders say the move could improve ",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "albanian-government-approves-agrivoltaics",
-  "sourceLink": "https://www.pv-magazine.com/2026/07/27/albanian-government-approves-agrivoltaics/",
-  "sourceName": "Patrick Jowett",
+  "slug": "bangladesh-reinstates-payment-guarantees-to-attract-renewable-energy-i",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/10/bangladesh-reinstates-payment-guarantees-to-attract-renewable-energy-investment/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Albania is set to allow agrivoltaics under certain conditions following approved amendments to its law governing agricultural land, with its council of ministers tasked with determining the applicable criteria. \nThe post Albanian government approves agrivoltaics appeared first on pv magazine Global."
+      "text": "Bangladesh has reinstated payment guarantees for renewable energy projects to boost investor confidence and attract local and international financing.  Industry stakeholders say the move could improve project bankability, unlock new solar projects and help ease the country’s ongoing power crisis."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Patrick Jowett, Albania is set to allow agrivoltaics under certain conditions following approved amendments to its law governing agricultural land, with its council of ministers tasked with determining the applicable criteria.\nThe post Albanian government approves agrivoltaics appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post Bangladesh reinstates payment guarantees to attract renewable energy investment appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Albanian government approves agrivoltaics — a notable development in Energy Storage",
+    "Bangladesh reinstates payment guarantees to attract renewable energy investment — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "Albanian government approves agrivoltaics",
+      "date": "2026-08-11",
+      "event": "Bangladesh reinstates payment guarantees to attract renewable energy investment",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "albanian",
-    "government",
+    "bangladesh",
+    "reinstates",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Albanian government approves agrivoltaics | Energy Storage News",
-  "metaDescription": "Albania is set to allow agrivoltaics under certain conditions following approved amendments to its law governing agricultural land, with its council of minis...",
-  "keywords": "energy storage, battery, solid-state, grid storage, albanian, government, approves, TechNanoAI, emerging tech news",
+  "metaTitle": "Bangladesh reinstates payment guarantees to attract renew... | Energy Storage News",
+  "metaDescription": "Bangladesh has reinstated payment guarantees for renewable energy projects to boost investor confidence and attract local and international financing. Indust...",
+  "keywords": "energy storage, battery, solid-state, grid storage, bangladesh, reinstates, payment, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785144566602-1",
+  "id": "ai-1786430801792-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "TELESHIM Abuses Telegram for C2 in Attacks Against Middle... | AI News",
-  "excerpt": "Cybersecurity researchers have flagged fresh malicious cyber activity by a threat actor with ties to East Asia targeting government entities in the Middle East.\n\nThe intrusions have resulted in the de",
-  "date": "2026-07-27",
+  "title": "As AI-led attacks multiply, OpenAI launches a new cyber m... | AI News",
+  "excerpt": "OpenAI is expanding its AI cybersecurity defense program Daybreak, and rolling out a new cyber-trained AI model with it.",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "teleshim-abuses-telegram-for-c2-in-attacks-against-middle-east-governm",
-  "sourceLink": "https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model",
+  "sourceLink": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/",
+  "sourceName": "Lucas Ropek",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have flagged fresh malicious cyber activity by a threat actor with ties to East Asia targeting government entities in the Middle East. \n\nThe intrusions have resulted in the deployment of previously unreported malware families dubbed TELESHIM, MIXEDKEY, and BINDCLOAK, according to Zscaler ThreatLabz."
+      "text": "OpenAI is expanding its AI cybersecurity defense program Daybreak, and rolling out a new cyber-trained AI model with it."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The cybersecurity firm said it detected the campaign earlier this month."
+      "text": "According to reporting from Lucas Ropek, OpenAI is expanding its AI cybersecurity defense program Daybreak, and rolling out a new cyber-trained AI model with it.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "TELESHIM Abuses Telegram for C2 in Attacks Against Middle East Governments — a notable development in AI",
+    "As AI-led attacks multiply, OpenAI launches a new cyber model — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Lucas Ropek",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "TELESHIM Abuses Telegram for C2 in Attacks Against Middle East Governments",
+      "date": "2026-08-11",
+      "event": "As AI-led attacks multiply, OpenAI launches a new cyber model",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "teleshim",
-    "abuses",
+    "attacks",
+    "multiply",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "TELESHIM Abuses Telegram for C2 in Attacks Against Middle... | AI News",
-  "metaDescription": "Cybersecurity researchers have flagged fresh malicious cyber activity by a threat actor with ties to East Asia targeting government entities in the Middle Ea...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, teleshim, abuses, telegram, TechNanoAI, emerging tech news",
+  "metaTitle": "As AI-led attacks multiply, OpenAI launches a new cyber m... | AI News",
+  "metaDescription": "OpenAI is expanding its AI cybersecurity defense program Daybreak, and rolling out a new cyber-trained AI model with it.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, attacks, multiply, openai, TechNanoAI, emerging tech news",
   "featured": false
 }

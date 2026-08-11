@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1785144567117-3",
+  "id": "cybersecurity-1786430802216-4",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "GitHub, PyPI add time-based defenses against supply chain... | Cybersecurity News",
-  "excerpt": "GitHub and PyPI (Python Package Index) have introduced a time-based mechanism in the Dependabot dependency management tool to protect against supply-chain attacks and to limit their impact. [...]",
-  "date": "2026-07-27",
+  "title": "OpenAI releases ChatGPT 5.6 Cyber, but it's only for appr... | Cybersecurity News",
+  "excerpt": "OpenAI has developed a new model called \"GPT 5.6 Cyber,\" designed for vulnerability research, penetration testing, incident response, and remediation. [...]",
+  "date": "2026-08-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "github-pypi-add-time-based-defenses-against-supply-chain-attacks",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/",
-  "sourceName": "Bill Toulas",
+  "slug": "openai-releases-chatgpt-56-cyber-but-its-only-for-approved-users",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/openai-releases-chatgpt-56-cyber-but-its-only-for-approved-users/",
+  "sourceName": "Mayank Parmar",
   "body": [
     {
       "type": "p",
-      "text": "GitHub and PyPI (Python Package Index) have introduced a time-based mechanism in the Dependabot dependency management tool to protect against supply-chain attacks and to limit their impact.  [..."
+      "text": "OpenAI has developed a new model called \"GPT 5. 6 Cyber,\" designed for vulnerability research, penetration testing, incident response, and remediation."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, GitHub and PyPI (Python Package Index) have introduced a time-based mechanism in the Dependabot dependency management tool to protect against supply-chain attacks and to limit their impact. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "[..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "GitHub, PyPI add time-based defenses against supply chain attacks — a notable development in Cybersecurity",
+    "OpenAI releases ChatGPT 5.6 Cyber, but it's only for approved users — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "Mayank Parmar",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "GitHub, PyPI add time-based defenses against supply chain attacks",
+      "date": "2026-08-11",
+      "event": "OpenAI releases ChatGPT 5.6 Cyber, but it's only for approved users",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "github",
-    "based",
+    "openai",
+    "releases",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "GitHub, PyPI add time-based defenses against supply chain... | Cybersecurity News",
-  "metaDescription": "GitHub and PyPI (Python Package Index) have introduced a time-based mechanism in the Dependabot dependency management tool to protect against supply-chain at...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, github, pypi, time, TechNanoAI, emerging tech news",
+  "metaTitle": "OpenAI releases ChatGPT 5.6 Cyber, but it's only for appr... | Cybersecurity News",
+  "metaDescription": "OpenAI has developed a new model called \"GPT 5.6 Cyber,\" designed for vulnerability research, penetration testing, incident response, and remediation. [...]",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, openai, releases, chatgpt, TechNanoAI, emerging tech news",
   "featured": false
 }

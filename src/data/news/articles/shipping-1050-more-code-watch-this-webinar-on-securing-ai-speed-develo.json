@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785144566601-0",
+  "id": "ai-1786430801793-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "America's AI Investment Boom Is Reshaping the Economy | AI News",
-  "excerpt": "America's AI Investment Boom Is Reshaping the Economy Artificial intelligence has become one of the defining investment stories in the United States, and the numbers continue to grow. Microsoft, Meta,",
-  "date": "2026-07-27",
-  "readTime": "4 min",
+  "title": "Shipping 10–50× More Code? Watch This Webinar on Securing... | AI News",
+  "excerpt": "AI is helping development teams produce far more code, far faster. But security teams still have to review vulnerabilities, manage dependencies, prioritize fixes, and control risk at human speed.\n\nWhe",
+  "date": "2026-08-11",
+  "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "america8217s-ai-investment-boom-is-reshaping-the-economy",
-  "sourceLink": "https://www.artificialintelligence-news.com/news/americas-ai-investment-boom-is-reshaping-the-economy/",
-  "sourceName": "Bazoom",
+  "slug": "shipping-1050-more-code-watch-this-webinar-on-securing-ai-speed-develo",
+  "sourceLink": "https://thehackernews.com/2026/08/shipping-1050-more-code-watch-this.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "America's AI Investment Boom Is Reshaping the Economy Artificial intelligence has become one of the defining investment stories in the United States, and the numbers continue to grow.  Microsoft, Meta, Amazon and Alphabet are collectively committing hundreds of billions of dollars to AI infrastructure, while demand for advanced chips has turned NVIDIA into one of [']\nThe post America's AI Investment Boom Is Reshaping the Economy appeared first on AI News."
+      "text": "AI is helping development teams produce far more code, far faster.  But security teams still have to review vulnerabilities, manage dependencies, prioritize fixes, and control risk at human speed."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bazoom, America's AI Investment Boom Is Reshaping the Economy Artificial intelligence has become one of the defining investment stories in the United States, and the numbers continue to grow. Microsoft, Meta, Amazon and Alphabet are collectively committing hundreds of billions of dollars to AI infrastructure, while demand for advanced chips has turned NVIDIA into one of [']\nThe post America's AI Investment Boom Is Reshaping the Economy appeared first on AI News.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "When software output jumps 10 to 50 times, the problem is no longer just finding vulnerabilities.  It is keeping security from becoming the bottleneck, or worse, losing control of what gets shipped."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "America's AI Investment Boom Is Reshaping the Economy — a notable development in AI",
+    "Shipping 10–50× More Code? Watch This Webinar on Securing AI-Speed Development — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Bazoom",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-27",
-      "event": "America's AI Investment Boom Is Reshaping the Economy",
+      "date": "2026-08-11",
+      "event": "Shipping 10–50× More Code? Watch This Webinar on Securing AI-Speed Development",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "america",
-    "investment",
+    "shipping",
+    "watch",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "America's AI Investment Boom Is Reshaping the Economy | AI News",
-  "metaDescription": "America's AI Investment Boom Is Reshaping the Economy Artificial intelligence has become one of the defining investment stories in the United States, and the...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, america, investment, boom, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Shipping 10–50× More Code? Watch This Webinar on Securing... | AI News",
+  "metaDescription": "AI is helping development teams produce far more code, far faster. But security teams still have to review vulnerabilities, manage dependencies, prioritize f...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, shipping, more, code, TechNanoAI, emerging tech news",
+  "featured": false
 }
