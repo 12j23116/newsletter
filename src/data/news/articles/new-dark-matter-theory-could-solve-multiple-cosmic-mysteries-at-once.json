@@ -1,11 +1,11 @@
 {
-  "id": "fusion-1785313172678-0",
+  "id": "fusion-1786605108125-2",
   "topic": "fusion",
   "topicLabel": "Nuclear Fusion",
   "topicColor": "#fb923c",
   "title": "New dark matter theory could solve multiple cosmic myster... | Nuclear Fusion News",
   "excerpt": "Dark matter may be far more complicated than scientists once believed. A new study suggests it could consist of at least two different kinds of particles that slowly separate over time, with heavier p",
-  "date": "2026-07-29",
+  "date": "2026-08-13",
   "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/003-fusion-tokamak-reactor.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-29",
+      "date": "2026-08-13",
       "event": "New dark matter theory could solve multiple cosmic mysteries at once",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "New dark matter theory could solve multiple cosmic myster... | Nuclear Fusion News",
   "metaDescription": "Dark matter may be far more complicated than scientists once believed. A new study suggests it could consist of at least two different kinds of particles tha...",
   "keywords": "nuclear fusion, tokamak, fusion energy, plasma confinement, dark, matter, theory, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
