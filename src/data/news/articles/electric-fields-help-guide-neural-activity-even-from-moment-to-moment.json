@@ -1,11 +1,11 @@
 {
-  "id": "bci-1785486807050-2",
+  "id": "bci-1786774783057-2",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Electric fields help guide neural activity, even from mom... | Brain-Computer Interfaces News",
   "excerpt": "A new study adds evidence that electric fields in the brain help to organize and shape underlying neural activity via “ephaptic coupling.”",
-  "date": "2026-07-31",
+  "date": "2026-08-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-07-31",
+      "date": "2026-08-15",
       "event": "Electric fields help guide neural activity, even from moment to moment",
       "current": true
     },
