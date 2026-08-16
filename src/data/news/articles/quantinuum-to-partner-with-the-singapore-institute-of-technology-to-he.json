@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1785571381968-1",
+  "id": "quantum-1786861337425-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Snake oil for sale! | Quantum Computing News",
-  "excerpt": "Marin Ivezic re-shared “Quantum Snake Oil: A Field Guide to Misleading Quantum Technology Marketing” from May 5, 2026. That inspired me to re-share this week’s featured image, which long-time readers ",
-  "date": "2026-08-01",
+  "title": "Quantinuum to Partner with the Singapore Institute of Tec... | Quantum Computing News",
+  "excerpt": "Quantinuum has signed a Memorandum of Understanding (MoU) with the Singapore Institute of Technology (SIT) to train and expand Singapore’s quantum workforce. Building on Quantinuum’s existing R&D foot",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "snake-oil-for-sale",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/snake-oil-for-sale/",
-  "sourceName": "Brian Siegelwax",
+  "slug": "quantinuum-to-partner-with-the-singapore-institute-of-technology-to-he",
+  "sourceLink": "https://quantumcomputingreport.com/quantinuum-to-partner-with-the-singapore-institute-of-technology-to-help-develop-singapores-future-quantum-workforce/",
+  "sourceName": "dougfinke",
   "body": [
     {
       "type": "p",
-      "text": "Marin Ivezic re-shared “Quantum Snake Oil: A Field Guide to Misleading Quantum Technology Marketing” from May 5, 2026.  That inspired me to re-share this week’s featured image, which long-time readers no doubt remember from March 21, 2025."
+      "text": "Quantinuum has signed a Memorandum of Understanding (MoU) with the Singapore Institute of Technology (SIT) to train and expand Singapore’s quantum workforce.  Building on Quantinuum’s existing R&D footprint and the planned deployment of its Helios quantum processor in Singapore, the collaboration aims to prepare an industry-ready workforce across engineering, systems development, and applied technologies."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "He’s got me beat, though, posting the term as far back as ..."
+      "text": "Key  [..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Snake oil for sale! — a notable development in Quantum Computing",
+    "Quantinuum to Partner with the Singapore Institute of Technology to Help Develop — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Brian Siegelwax",
+      "value": "dougfinke",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "Snake oil for sale!",
+      "date": "2026-08-16",
+      "event": "Quantinuum to Partner with the Singapore Institute of Technology to Help Develop",
       "current": true
     },
     {
@@ -191,7 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "snake",
+    "quantinuum",
+    "partner",
     "emerging tech"
   ],
   "poll": {
@@ -215,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Snake oil for sale! | Quantum Computing News",
-  "metaDescription": "Marin Ivezic re-shared “Quantum Snake Oil: A Field Guide to Misleading Quantum Technology Marketing” from May 5, 2026. That inspired me to re-share this week...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, snake, sale, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Quantinuum to Partner with the Singapore Institute of Tec... | Quantum Computing News",
+  "metaDescription": "Quantinuum has signed a Memorandum of Understanding (MoU) with the Singapore Institute of Technology (SIT) to train and expand Singapore’s quantum workforce....",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantinuum, partner, with, TechNanoAI, emerging tech news",
+  "featured": true
 }

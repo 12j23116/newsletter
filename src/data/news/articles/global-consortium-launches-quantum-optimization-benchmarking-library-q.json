@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1785571381967-0",
+  "id": "quantum-1786861337426-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IonQ Completes Acquisition of SkyWater Technology, Establ... | Quantum Computing News",
-  "excerpt": "Trapped-ion quantum computing developer IonQ (NYSE: IONQ) has officially completed its acquisition of SkyWater Technology (NASDAQ: SKYT), the largest exclusively U.S.-based semiconductor foundry. Foll",
-  "date": "2026-08-01",
+  "title": "Global Consortium Launches Quantum Optimization Benchmark... | Quantum Computing News",
+  "excerpt": "An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global academic and industrial partners—has introdu",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "ionq-completes-acquisition-of-skywater-technology-establishing-vertica",
-  "sourceLink": "https://quantumcomputingreport.com/ionq-completes-acquisition-of-skywater-technology-establishing-vertically-integrated-quantum-platform/",
+  "slug": "global-consortium-launches-quantum-optimization-benchmarking-library-q",
+  "sourceLink": "https://quantumcomputingreport.com/global-consortium-launches-quantum-optimization-benchmarking-library-qoblib-to-track-path-to-quantum-advantage/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Trapped-ion quantum computing developer IonQ (NYSE: IONQ) has officially completed its acquisition of SkyWater Technology (NASDAQ: SKYT), the largest exclusively U. S."
+      "text": "An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global academic and industrial partners—has introduced the Quantum Optimization Benchmarking Library (QOBLIB).  Published in Nature Computational Science (\"The Quantum Optimization Benchmarking Library\"), the open-source initiative establishes a standardized, model-independent benchmarking framework to evaluate quantum, classical, and hybrid  [..."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "-based semiconductor foundry.  Following final regulatory approvals, the transaction closed on July 31, 2026, establishing IonQ as a vertically integrated quantum platform company with internal ownership of design, wafer fabrication, advanced packaging, and system-level deployment."
-    },
-    {
-      "type": "p",
-      "text": "[..."
+      "text": "According to reporting from Mohamed Abdel-Kareem, An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global academic and industrial partners—has introduced the Quantum Optimization Benchmarking Library (QOBLIB). Published in Nature Computational Science (\"The Quantum Optimization Benchmarking Library\"), the open-source initiative establishes a standardized, model-independent benchmarking framework to evaluate quantum, classical, and hybrid  [...]\nT. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IonQ Completes Acquisition of SkyWater Technology, Establishing Vertically Integ — a notable development in Quantum Computing",
+    "Global Consortium Launches Quantum Optimization Benchmarking Library (QOBLIB) to — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "IonQ Completes Acquisition of SkyWater Technology, Establishing Vertically Integ",
+      "date": "2026-08-16",
+      "event": "Global Consortium Launches Quantum Optimization Benchmarking Library (QOBLIB) to",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "completes",
-    "acquisition",
+    "global",
+    "consortium",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IonQ Completes Acquisition of SkyWater Technology, Establ... | Quantum Computing News",
-  "metaDescription": "Trapped-ion quantum computing developer IonQ (NYSE: IONQ) has officially completed its acquisition of SkyWater Technology (NASDAQ: SKYT), the largest exclusi...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, ionq, completes, acquisition, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Global Consortium Launches Quantum Optimization Benchmark... | Quantum Computing News",
+  "metaDescription": "An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global a...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, global, consortium, launches, TechNanoAI, emerging tech news",
+  "featured": false
 }

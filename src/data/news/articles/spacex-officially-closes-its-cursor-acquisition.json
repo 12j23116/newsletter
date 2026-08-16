@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785571374252-1",
+  "id": "ai-1786861329843-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surve... | AI News",
-  "excerpt": "A fake browser update served over hijacked hotel Wi-Fi has been used to deliver CornFlake, a remote access trojan (RAT) that can capture webcam images, microphone audio, and keystrokes, Microsoft said",
-  "date": "2026-08-01",
+  "title": "SpaceX officially closes its Cursor acquisition | AI News",
+  "excerpt": "AI coding startup Cursor is now officially a part of SpaceX.",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hijacked-hotel-wi-fi-pushes-fake-updates-to-deliver-surveillance-malwa",
-  "sourceLink": "https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "spacex-officially-closes-its-cursor-acquisition",
+  "sourceLink": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "A fake browser update served over hijacked hotel Wi-Fi has been used to deliver CornFlake, a remote access trojan (RAT) that can capture webcam images, microphone audio, and keystrokes, Microsoft said in its latest report. \n\nResearchers track the operation as CaptiveCrunch and attribute it to Storm-2945."
+      "text": "AI coding startup Cursor is now officially a part of SpaceX."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), A fake browser update served over hijacked hotel Wi-Fi has been used to deliver CornFlake, a remote access trojan (RAT) that can capture webcam images, microphone audio, and keystrokes, Microsoft said in its latest report.\n\nResearchers track the operation as CaptiveCrunch and attribute it to Storm-2945. It assesses Storm-2945 to be an operational sub-cluster of Midnight Blizzard, also known as. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, AI coding startup Cursor is now officially a part of SpaceX.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surveillance Malware — a notable development in AI",
+    "SpaceX officially closes its Cursor acquisition — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surveillance Malware",
+      "date": "2026-08-16",
+      "event": "SpaceX officially closes its Cursor acquisition",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hijacked",
-    "hotel",
+    "spacex",
+    "officially",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surve... | AI News",
-  "metaDescription": "A fake browser update served over hijacked hotel Wi-Fi has been used to deliver CornFlake, a remote access trojan (RAT) that can capture webcam images, micro...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hijacked, hotel, pushes, TechNanoAI, emerging tech news",
+  "metaTitle": "SpaceX officially closes its Cursor acquisition | AI News",
+  "metaDescription": "AI coding startup Cursor is now officially a part of SpaceX. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, spacex, officially, closes, TechNanoAI, emerging tech news",
   "featured": false
 }

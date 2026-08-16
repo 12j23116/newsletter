@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1785571374795-5",
+  "id": "cybersecurity-1786861330434-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "OpenAI says its new GPT 5.6 models are becoming more cost... | Cybersecurity News",
-  "excerpt": "OpenAI says it has reduced the price of two GPT-5.6 models, cutting Luna's API price by 80% and Terra's by 20% as it works to make its models more efficient. [...]",
-  "date": "2026-08-01",
+  "title": "New Evooo1Bot Linux botnet turns routers into traffic rel... | Cybersecurity News",
+  "excerpt": "A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay nodes. [...]",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "openai-says-its-new-gpt-56-models-are-becoming-more-cost-efficient",
-  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-new-gpt-56-models-are-becoming-more-cost-efficient/",
-  "sourceName": "Mayank Parmar",
+  "slug": "new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "OpenAI says it has reduced the price of two GPT-5. 6 models, cutting Luna's API price by 80% and Terra's by 20% as it works to make its models more efficient."
+      "text": "A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay nodes.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "[..."
+      "text": "According to reporting from Bill Toulas, A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay nodes. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI says its new GPT 5.6 models are becoming more cost-efficient — a notable development in Cybersecurity",
+    "New Evooo1Bot Linux botnet turns routers into traffic relay nodes — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Mayank Parmar",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "OpenAI says its new GPT 5.6 models are becoming more cost-efficient",
+      "date": "2026-08-16",
+      "event": "New Evooo1Bot Linux botnet turns routers into traffic relay nodes",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "openai",
-    "models",
+    "evooo",
+    "linux",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI says its new GPT 5.6 models are becoming more cost... | Cybersecurity News",
-  "metaDescription": "OpenAI says it has reduced the price of two GPT-5.6 models, cutting Luna's API price by 80% and Terra's by 20% as it works to make its models more efficient....",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, openai, says, models, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "New Evooo1Bot Linux botnet turns routers into traffic rel... | Cybersecurity News",
+  "metaDescription": "A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay no...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, evooo, linux, botnet, TechNanoAI, emerging tech news",
+  "featured": true
 }

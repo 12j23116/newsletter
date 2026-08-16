@@ -1,21 +1,21 @@
 {
-  "id": "space-1785571375905-0",
+  "id": "space-1786861331452-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Starbase Pad 1 Retrofits Progress as Block 3 Flights Start | Space Exploration News",
-  "excerpt": "While SpaceX has now flown two flights out of the newly designed Pad 2, crews'\nThe post Starbase Pad 1 Retrofits Progress as Block 3 Flights Start appeared first on NASASpaceFlight.com.",
-  "date": "2026-08-01",
+  "title": "SpaceX launches record-breaking back-to-back Falcon 9 roc... | Space Exploration News",
+  "excerpt": "The batch of eight Globalstar satellites will help refresh the company’s low Earth orbit constellation. Liftoff from pad 40 at Cape Canaveral Space Force Station is scheduled for 9:12 p.m. EDT (0112 U",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "starbase-pad-1-retrofits-progress-as-block-3-flights-start",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/07/pad-1-retrofits-block-3-flights/",
-  "sourceName": "Ryan Weber",
+  "slug": "spacex-launches-record-breaking-back-to-back-falcon-9-rockets-for-glob",
+  "sourceLink": "https://spaceflightnow.com/2026/08/15/live-coverage-spacex-to-launch-satellite-replenishment-mission-for-globalstar-from-cape-canaveral/",
+  "sourceName": "Will Robinson-Smith",
   "body": [
     {
       "type": "p",
-      "text": "While SpaceX has now flown two flights out of the newly designed Pad 2, crews'\nThe post Starbase Pad 1 Retrofits Progress as Block 3 Flights Start appeared first on NASASpaceFlight. com."
+      "text": "The batch of eight Globalstar satellites will help refresh the company’s low Earth orbit constellation.  Liftoff from pad 40 at Cape Canaveral Space Force Station is scheduled for 9:12 p."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ryan Weber, While SpaceX has now flown two flights out of the newly designed Pad 2, crews'\nThe post Starbase Pad 1 Retrofits Progress as Block 3 Flights Start appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "m.  EDT (0112 UTC)."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Starbase Pad 1 Retrofits Progress as Block 3 Flights Start — a notable development in Space Exploration",
+    "SpaceX launches record-breaking back-to-back Falcon 9 rockets for Globalstar, U. — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Ryan Weber",
+      "value": "Will Robinson-Smith",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "Starbase Pad 1 Retrofits Progress as Block 3 Flights Start",
+      "date": "2026-08-16",
+      "event": "SpaceX launches record-breaking back-to-back Falcon 9 rockets for Globalstar, U.",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "starbase",
-    "retrofits",
+    "spacex",
+    "launches",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Starbase Pad 1 Retrofits Progress as Block 3 Flights Start | Space Exploration News",
-  "metaDescription": "While SpaceX has now flown two flights out of the newly designed Pad 2, crews'\nThe post Starbase Pad 1 Retrofits Progress as Block 3 Flights Start appeared f...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, starbase, retrofits, progress, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "SpaceX launches record-breaking back-to-back Falcon 9 roc... | Space Exploration News",
+  "metaDescription": "The batch of eight Globalstar satellites will help refresh the company’s low Earth orbit constellation. Liftoff from pad 40 at Cape Canaveral Space Force Sta...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, launches, record, TechNanoAI, emerging tech news",
+  "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1785571376780-0",
+  "id": "biotech-1786861332079-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Ketamine Triggers Sex-Specific Brain Recovery Responses | Biotechnology News",
-  "excerpt": "A study in mice has shown how shown that microglia immune cells in the brain play a critical role in how the brain recovers from ketamine anesthesia, and indicates that there are differences between f",
-  "date": "2026-08-01",
+  "title": "CDMOs Expand and Build for Future Growth | Biotechnology News",
+  "excerpt": "Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent service expansions and new facilities in intervie",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "ketamine-triggers-sex-specific-brain-recovery-responses",
-  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/ketamine-triggers-sex-specific-brain-recovery-responses/",
-  "sourceName": "Sophia Ktori",
+  "slug": "cdmos-expand-and-build-for-future-growth",
+  "sourceLink": "https://www.genengnews.com/topics/bioprocessing/cdmos-expand-and-build-for-future-growth/",
+  "sourceName": "Alex Philippidis",
   "body": [
     {
       "type": "p",
-      "text": "A study in mice has shown how shown that microglia immune cells in the brain play a critical role in how the brain recovers from ketamine anesthesia, and indicates that there are differences between female and male brains. \nThe post Ketamine Triggers Sex-Specific Brain Recovery Responses appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent service expansions and new facilities in interviews with GEN. \nThe post CDMOs Expand and Build for Future Growth appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sophia Ktori, A study in mice has shown how shown that microglia immune cells in the brain play a critical role in how the brain recovers from ketamine anesthesia, and indicates that there are differences between female and male brains.\nThe post Ketamine Triggers Sex-Specific Brain Recovery Responses appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alex Philippidis, Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent service expansions and new facilities in interviews with GEN.\nThe post CDMOs Expand and Build for Future Growth appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Ketamine Triggers Sex-Specific Brain Recovery Responses — a notable development in Biotechnology",
+    "CDMOs Expand and Build for Future Growth — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Sophia Ktori",
+      "value": "Alex Philippidis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "Ketamine Triggers Sex-Specific Brain Recovery Responses",
+      "date": "2026-08-16",
+      "event": "CDMOs Expand and Build for Future Growth",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "ketamine",
-    "triggers",
+    "cdmos",
+    "expand",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Ketamine Triggers Sex-Specific Brain Recovery Responses | Biotechnology News",
-  "metaDescription": "A study in mice has shown how shown that microglia immune cells in the brain play a critical role in how the brain recovers from ketamine anesthesia, and ind...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, ketamine, triggers, specific, TechNanoAI, emerging tech news",
+  "metaTitle": "CDMOs Expand and Build for Future Growth | Biotechnology News",
+  "metaDescription": "Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent servic...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, cdmos, expand, build, TechNanoAI, emerging tech news",
   "featured": true
 }

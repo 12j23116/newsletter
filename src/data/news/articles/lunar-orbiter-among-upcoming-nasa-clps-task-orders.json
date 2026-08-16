@@ -1,21 +1,21 @@
 {
-  "id": "space-1785571375906-2",
+  "id": "space-1786861331452-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX launches 24 Starlink satellites on Falcon 9 rocket... | Space Exploration News",
-  "excerpt": "The Starlink 17-52 mission is SpaceX’s 90th orbital launch of the year so far. Liftoff from pad 4E at Vandenberg Space Force Base occurred at 8:08 p.m. PDT (11:08 p.m. EDT / 0308 UTC).",
-  "date": "2026-08-01",
+  "title": "Lunar orbiter among upcoming NASA CLPS task orders | Space Exploration News",
+  "excerpt": "NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissance Orbiter\nThe post Lunar orbiter among upc",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-launches-24-starlink-satellites-on-falcon-9-rocket-from-vandenb",
-  "sourceLink": "https://spaceflightnow.com/2026/07/31/live-coverage-spacex-to-launch-24-starlink-satellites-on-falcon-9-rocket-from-vandenberg-sfb-12/",
-  "sourceName": "Will Robinson-Smith",
+  "slug": "lunar-orbiter-among-upcoming-nasa-clps-task-orders",
+  "sourceLink": "https://spacenews.com/lunar-orbiter-among-upcoming-nasa-clps-task-orders/",
+  "sourceName": "Jeff Foust",
   "body": [
     {
       "type": "p",
-      "text": "The Starlink 17-52 mission is SpaceX’s 90th orbital launch of the year so far.  Liftoff from pad 4E at Vandenberg Space Force Base occurred at 8:08 p."
+      "text": "NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissance Orbiter\nThe post Lunar orbiter among upcoming NASA CLPS task orders appeared first on SpaceNews."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "m.  PDT (11:08 p."
-    },
-    {
-      "type": "p",
-      "text": "m.  EDT / 0308 UTC)."
+      "text": "According to reporting from Jeff Foust, NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissance Orbiter\nThe post Lunar orbiter among upcoming NASA CLPS task orders appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX launches 24 Starlink satellites on Falcon 9 rocket from Vandenberg SFB — a notable development in Space Exploration",
+    "Lunar orbiter among upcoming NASA CLPS task orders — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Will Robinson-Smith",
+      "value": "Jeff Foust",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "SpaceX launches 24 Starlink satellites on Falcon 9 rocket from Vandenberg SFB",
+      "date": "2026-08-16",
+      "event": "Lunar orbiter among upcoming NASA CLPS task orders",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "launches",
+    "lunar",
+    "orbiter",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX launches 24 Starlink satellites on Falcon 9 rocket... | Space Exploration News",
-  "metaDescription": "The Starlink 17-52 mission is SpaceX’s 90th orbital launch of the year so far. Liftoff from pad 4E at Vandenberg Space Force Base occurred at 8:08 p.m. PDT (...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, launches, starlink, TechNanoAI, emerging tech news",
+  "metaTitle": "Lunar orbiter among upcoming NASA CLPS task orders | Space Exploration News",
+  "metaDescription": "NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissan...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, lunar, orbiter, among, TechNanoAI, emerging tech news",
   "featured": false
 }

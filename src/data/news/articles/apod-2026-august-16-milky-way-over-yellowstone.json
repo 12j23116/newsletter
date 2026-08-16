@@ -1,21 +1,21 @@
 {
-  "id": "space-1785571375906-3",
+  "id": "space-1786861331451-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Spain commits up to $2.3 billion for national military co... | Space Exploration News",
-  "excerpt": "WARSAW, Poland — The Spanish government announced it will allocate between 1.6 billion and 2 billion euros ($1.8 to $2.3 billion) to develop a national military satellite communications constellation ",
-  "date": "2026-08-01",
+  "title": "APOD: 2026 August 16 – Milky Way over Yellowstone | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 August 16 – Milky… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spain-commits-up-to-23-billion-for-national-military-communications-fo",
-  "sourceLink": "https://spacenews.com/spain-commits-up-to-2-3-billion-for-national-military-communications-for-iris%c2%b2/",
-  "sourceName": "Jarosław Adamowski",
+  "slug": "apod-2026-august-16-milky-way-over-yellowstone",
+  "sourceLink": "https://science.nasa.gov/image-article/apod/apod-2026-august-16-milky-way-over-yellowstone/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "WARSAW, Poland — The Spanish government announced it will allocate between 1. 6 billion and 2 billion euros ($1."
+      "text": "APOD Science APOD APOD: 2026 August 16 – Milky… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "8 to $2. 3 billion) to develop a national military satellite communications constellation that [']\nThe post Spain commits up to $2."
-    },
-    {
-      "type": "p",
-      "text": "3 billion for national military communications for IRIS² appeared first on SpaceNews."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 August 16 – Milky… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Milky Way [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Spain commits up to $2.3 billion for national military communications for IRIS² — a notable development in Space Exploration",
+    "APOD: 2026 August 16 – Milky Way over Yellowstone — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jarosław Adamowski",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "Spain commits up to $2.3 billion for national military communications for IRIS²",
+      "date": "2026-08-16",
+      "event": "APOD: 2026 August 16 – Milky Way over Yellowstone",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spain",
-    "commits",
+    "august",
+    "milky",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Spain commits up to $2.3 billion for national military co... | Space Exploration News",
-  "metaDescription": "WARSAW, Poland — The Spanish government announced it will allocate between 1.6 billion and 2 billion euros ($1.8 to $2.3 billion) to develop a national milit...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spain, commits, billion, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "APOD: 2026 August 16 – Milky Way over Yellowstone | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 August 16 – Milky… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture o...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, august, milky, TechNanoAI, emerging tech news",
+  "featured": true
 }

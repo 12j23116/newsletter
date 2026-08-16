@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785571374252-2",
+  "id": "ai-1786861329842-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI reportedly finds evidence that more of its agents ... | AI News",
-  "excerpt": "OpenAI has reportedly found evidence of additional agent misbehavior as it looks into the incident that occurred with Hugging Face.",
-  "date": "2026-08-01",
+  "title": "Anthropic shares more details about how Claude’s new wate... | AI News",
+  "excerpt": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
+  "date": "2026-08-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok",
-  "sourceLink": "https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/",
-  "sourceName": "Lucas Ropek",
+  "slug": "anthropic-shares-more-details-about-how-claudes-new-watermarks-will-wo",
+  "sourceLink": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "OpenAI has reportedly found evidence of additional agent misbehavior as it looks into the incident that occurred with Hugging Face."
+      "text": "How will the watermarking actually work?  Can it be hidden with editing?"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, OpenAI has reportedly found evidence of additional agent misbehavior as it looks into the incident that occurred with Hugging Face.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "And how does this affect code?"
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI reportedly finds evidence that more of its agents ran amok — a notable development in AI",
+    "Anthropic shares more details about how Claude’s new watermarks will work — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-01",
-      "event": "OpenAI reportedly finds evidence that more of its agents ran amok",
+      "date": "2026-08-16",
+      "event": "Anthropic shares more details about how Claude’s new watermarks will work",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "reportedly",
+    "anthropic",
+    "shares",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI reportedly finds evidence that more of its agents ... | AI News",
-  "metaDescription": "OpenAI has reportedly found evidence of additional agent misbehavior as it looks into the incident that occurred with Hugging Face.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, reportedly, finds, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic shares more details about how Claude’s new wate... | AI News",
+  "metaDescription": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code? LLMs, agents & the race to AGI. Latest AI developments an",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, shares, more, TechNanoAI, emerging tech news",
   "featured": false
 }
