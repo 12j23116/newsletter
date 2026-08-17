@@ -1,114 +1,113 @@
 {
-  "issue": 84,
-  "date": "2026-08-10",
-  "subject": "This Week: Quantum, AI & more — August 10, 2026",
+  "issue": 85,
+  "date": "2026-08-17",
+  "subject": "This Week: Biotech, AI & more — August 17, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "quantum",
-    "ai",
     "biotech",
-    "energy",
-    "robotics",
-    "space",
+    "ai",
     "cybersecurity",
-    "av"
+    "space",
+    "robotics",
+    "av",
+    "energy"
   ],
   "articles": [
     {
-      "title": "Chemists set electrons free and break a decades-old chemi... | Quantum Computing News",
-      "slug": "chemists-set-electrons-free-and-break-a-decades-old-chemistry-barrier",
-      "topic": "quantum",
-      "excerpt": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing electrons directly into solution, the technique ",
-      "url": "https://technanoai.com/news/chemists-set-electrons-free-and-break-a-decades-old-chemistry-barrier",
-      "date": "2026-08-10"
-    },
-    {
-      "title": "Anthropic is turning Claude Code’s auto mode on by default | AI News",
-      "slug": "anthropic-is-turning-claude-codes-auto-mode-on-by-default",
-      "topic": "ai",
-      "excerpt": "Programming with Claude Code will soon require even less human oversight.",
-      "url": "https://technanoai.com/news/anthropic-is-turning-claude-codes-auto-mode-on-by-default",
-      "date": "2026-08-10"
-    },
-    {
-      "title": "Embattled hedge fund Situational Awareness invests $400M ... | AI News",
-      "slug": "embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startu",
-      "topic": "ai",
-      "excerpt": "The AI-focused hedge fund is still making some big bets.",
-      "url": "https://technanoai.com/news/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startu",
-      "date": "2026-08-10"
-    },
-    {
-      "title": "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hre... | Biotechnology News",
-      "slug": "a-hrefbiotechfierce-biotech-layoff-tracker-2026-hreflangenfierce-biote",
+      "title": "<a href=\"/biotech/capricor-soars-plan-amend-dmd-filing-af... | Biotechnology News",
+      "slug": "a-hrefbiotechcapricor-soars-plan-amend-dmd-filing-after-adcomm-setback",
       "topic": "biotech",
-      "excerpt": "As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team.",
-      "url": "https://technanoai.com/news/a-hrefbiotechfierce-biotech-layoff-tracker-2026-hreflangenfierce-biote",
-      "date": "2026-08-10"
+      "excerpt": "Capricor Therapeutics has bounced back from a bruising FDA advisory committee meeting by securing a green light to file an amendment to its approval application, raising hopes that the biotech can res",
+      "url": "https://technanoai.com/news/a-hrefbiotechcapricor-soars-plan-amend-dmd-filing-after-adcomm-setback",
+      "date": "2026-08-17"
     },
     {
-      "title": "India's round-the-clock renewables tender attracts lowest... | Energy Storage News",
-      "slug": "india8217s-round-the-clock-renewables-tender-attracts-lowest-bid-of-00",
-      "topic": "energy",
-      "excerpt": "The Solar Energy Corp. of India (SECI) has discovered a lowest tariff of INR 5.25/kWh in its tender to procure 1 GW of firm and dispatchable renewable energy (FDRE) on a round-the-clock (RTC) basis fr",
-      "url": "https://technanoai.com/news/india8217s-round-the-clock-renewables-tender-attracts-lowest-bid-of-00",
-      "date": "2026-08-10"
+      "title": "<a href=\"/biotech/chutes-ladders-former-legend-ceo-lands-... | Biotechnology News",
+      "slug": "a-hrefbiotechchutes-ladders-former-legend-ceo-lands-role-k2-therapeuti",
+      "topic": "biotech",
+      "excerpt": "Just weeks after Legend Biotech announced the departure of its CEO, Ying Huang, K2 Therapeutics has announced that Wang will now lead the startup, which was founded in 2024 with a $50 million seed rou",
+      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-former-legend-ceo-lands-role-k2-therapeuti",
+      "date": "2026-08-17"
     },
     {
-      "title": "PV Progress across Latin America | Energy Storage News",
-      "slug": "pv-progress-across-latin-america",
-      "topic": "energy",
-      "excerpt": "InfoLink’s Jenny Lin shares the latest analysis on the key markets accounting for nearly 80% of Latin America’s total PV capacity as solar continues to grow its share of regional electricity generatio",
-      "url": "https://technanoai.com/news/pv-progress-across-latin-america",
-      "date": "2026-08-10"
+      "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis... | AI News",
+      "slug": "anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust",
+      "topic": "ai",
+      "excerpt": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
+      "url": "https://technanoai.com/news/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust",
+      "date": "2026-08-17"
     },
     {
-      "title": "Analog Devices returns as strategic sponsor to aid MassRo... | Robotics News",
-      "slug": "analog-devices-returns-as-strategic-sponsor-to-aid-massrobotics-startu",
-      "topic": "robotics",
-      "excerpt": "Analog Devices Inc. is supporting MassRobotics startups with Analog Garage and participating in events including RoboBusiness.\nThe post Analog Devices returns as strategic sponsor to aid MassRobotics ",
-      "url": "https://technanoai.com/news/analog-devices-returns-as-strategic-sponsor-to-aid-massrobotics-startu",
-      "date": "2026-08-10"
+      "title": "Stripe will reportedly acquire AI gateway startup OpenRou... | AI News",
+      "slug": "stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b",
+      "topic": "ai",
+      "excerpt": "OpenRouter's CEO recently described the startup as Stripe for AI.",
+      "url": "https://technanoai.com/news/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b",
+      "date": "2026-08-17"
     },
     {
-      "title": "Artemis progress building lunar return roadmap | Space Exploration News",
-      "slug": "artemis-progress-building-lunar-return-roadmap",
-      "topic": "space",
-      "excerpt": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight.com.",
-      "url": "https://technanoai.com/news/artemis-progress-building-lunar-return-roadmap",
-      "date": "2026-08-10"
-    },
-    {
-      "title": "Katalyst Space makes progress in restoring control of Swi... | Space Exploration News",
-      "slug": "katalyst-space-makes-progress-in-restoring-control-of-swift-servicing-",
-      "topic": "space",
-      "excerpt": "The company that developed a spacecraft to boost the orbit of a NASA observatory says it is making progress in recovering from its own spacecraft’s problems.\nThe post Katalyst Space makes progress in ",
-      "url": "https://technanoai.com/news/katalyst-space-makes-progress-in-restoring-control-of-swift-servicing-",
-      "date": "2026-08-10"
-    },
-    {
-      "title": "Critical Flaws Discovered in Belgian eID Software Used by... | Cybersecurity News",
-      "slug": "critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-pe",
+      "title": "Anthropic confirms Claude is down in major outage affecti... | Cybersecurity News",
+      "slug": "anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-s",
       "topic": "cybersecurity",
-      "excerpt": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People ",
-      "url": "https://technanoai.com/news/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-pe",
-      "date": "2026-08-10"
+      "excerpt": "Claude is experiencing a major outage, with users reporting login problems and degraded performance across several Anthropic services. [...]",
+      "url": "https://technanoai.com/news/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-s",
+      "date": "2026-08-17"
     },
     {
-      "title": "TechCrunch Mobility: Zoox prepares for launch and Uber’s ... | Autonomous Vehicles News",
-      "slug": "techcrunch-mobility-zoox-prepares-for-launch-and-ubers-av-empire",
+      "title": "Large-scale DDoS attacks disrupted Threema secure messagi... | Cybersecurity News",
+      "slug": "large-scale-ddos-attacks-disrupted-threema-secure-messaging-service",
+      "topic": "cybersecurity",
+      "excerpt": "Multiple distributed denial-of-service (DDoS) attacks targeted the Threema secure messaging service earlier this week, causing severe disruptions to communications. [...]",
+      "url": "https://technanoai.com/news/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service",
+      "date": "2026-08-17"
+    },
+    {
+      "title": "APOD: 2026 August 17 – A Golden Corona Eclipse | Space Exploration News",
+      "slug": "apod-2026-august-17-a-golden-corona-eclipse",
+      "topic": "space",
+      "excerpt": "APOD Science APOD APOD: 2026 August 17 – A… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diffe",
+      "url": "https://technanoai.com/news/apod-2026-august-17-a-golden-corona-eclipse",
+      "date": "2026-08-17"
+    },
+    {
+      "title": "Firefly promote next block of Alpha amid Eclipse progress | Space Exploration News",
+      "slug": "firefly-promote-next-block-of-alpha-amid-eclipse-progress",
+      "topic": "space",
+      "excerpt": "Firefly Aerospace is advancing on two fronts this month, pushing development of its next-generation medium-lift'\nThe post Firefly promote next block of Alpha amid Eclipse progress appeared first on NA",
+      "url": "https://technanoai.com/news/firefly-promote-next-block-of-alpha-amid-eclipse-progress",
+      "date": "2026-08-17"
+    },
+    {
+      "title": "How robotics is revolutionizing stroke rehabilitation | Robotics News",
+      "slug": "how-robotics-is-revolutionizing-stroke-rehabilitation",
+      "topic": "robotics",
+      "excerpt": "Eyal Samuel Shachar, the CEO of Bioxtreme, says the growing synergy of robotics, AI, and human-centered care will improve patient outcomes.\nThe post How robotics is revolutionizing stroke rehabilitati",
+      "url": "https://technanoai.com/news/how-robotics-is-revolutionizing-stroke-rehabilitation",
+      "date": "2026-08-17"
+    },
+    {
+      "title": "TechCrunch Mobility: The shifting flight path of electric... | Autonomous Vehicles News",
+      "slug": "techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis",
       "topic": "av",
-      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
-      "url": "https://technanoai.com/news/techcrunch-mobility-zoox-prepares-for-launch-and-ubers-av-empire",
-      "date": "2026-08-10"
+      "excerpt": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
+      "url": "https://technanoai.com/news/techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis",
+      "date": "2026-08-17"
     },
     {
-      "title": "D-Wave Reports Its Q2 2026 Financial Results Showing Book... | Quantum Computing News",
-      "slug": "d-wave-reports-its-q2-2026-financial-results-showing-bookings-surge-te",
-      "topic": "quantum",
-      "excerpt": "D-Wave Quantum Inc. reported its financial results for the second quarter and first half of 2026, highlighting significant commercial momentum and rapid growth in long-term commitments. While quarterl",
-      "url": "https://technanoai.com/news/d-wave-reports-its-q2-2026-financial-results-showing-bookings-surge-te",
-      "date": "2026-08-09"
+      "title": "Australia's Cheaper Home Batteries Program officially pas... | Energy Storage News",
+      "slug": "australia8217s-cheaper-home-batteries-program-officially-passes-500000",
+      "topic": "energy",
+      "excerpt": "More than 507,000 households, small businesses and community organisations have installed a home battery storage system under Australia's Cheaper Home Batteries Program, according to figures announced",
+      "url": "https://technanoai.com/news/australia8217s-cheaper-home-batteries-program-officially-passes-500000",
+      "date": "2026-08-17"
+    },
+    {
+      "title": "Australian Renewable Energy Agency backs UNSW research in... | Energy Storage News",
+      "slug": "australian-renewable-energy-agency-backs-unsw-research-into-grid-formi",
+      "topic": "energy",
+      "excerpt": "UNSW receives AU$6.52 million to study how solar, wind and battery storage interact with grid protection systems as Australia transitions to renewables.",
+      "url": "https://technanoai.com/news/australian-renewable-energy-agency-backs-unsw-research-into-grid-formi",
+      "date": "2026-08-17"
     }
   ]
 }
