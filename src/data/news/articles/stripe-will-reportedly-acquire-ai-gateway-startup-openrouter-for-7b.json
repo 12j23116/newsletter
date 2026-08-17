@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785657865144-5",
+  "id": "ai-1786948358786-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hackers Poison Adform Script to Swap Crypto Wallet Addres... | AI News",
-  "excerpt": "Attackers modified a JavaScript file served by advertising technology company Adform, turning it into a browser-side tool that rewrites cryptocurrency wallet addresses.\n\nAdform detected the incident o",
-  "date": "2026-08-02",
+  "title": "Stripe will reportedly acquire AI gateway startup OpenRou... | AI News",
+  "excerpt": "OpenRouter's CEO recently described the startup as Stripe for AI.",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hackers-poison-adform-script-to-swap-crypto-wallet-addresses-across-cu",
-  "sourceLink": "https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b",
+  "sourceLink": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Attackers modified a JavaScript file served by advertising technology company Adform, turning it into a browser-side tool that rewrites cryptocurrency wallet addresses. \n\nAdform detected the incident on July 27, 2026, removed the malicious code, notified affected clients, and reported it to authorities."
+      "text": "OpenRouter's CEO recently described the startup as Stripe for AI."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Attackers modified a JavaScript file served by advertising technology company Adform, turning it into a browser-side tool that rewrites cryptocurrency wallet addresses.\n\nAdform detected the incident on July 27, 2026, removed the malicious code, notified affected clients, and reported it to authorities.\n\nAnyone who visited a site carrying the affected script on July 27 and copied a Bitcoin,. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, OpenRouter's CEO recently described the startup as Stripe for AI.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hackers Poison Adform Script to Swap Crypto Wallet Addresses Across Customer Sit — a notable development in AI",
+    "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+ — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Hackers Poison Adform Script to Swap Crypto Wallet Addresses Across Customer Sit",
+      "date": "2026-08-17",
+      "event": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hackers",
-    "poison",
+    "stripe",
+    "reportedly",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hackers Poison Adform Script to Swap Crypto Wallet Addres... | AI News",
-  "metaDescription": "Attackers modified a JavaScript file served by advertising technology company Adform, turning it into a browser-side tool that rewrites cryptocurrency wallet...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hackers, poison, adform, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Stripe will reportedly acquire AI gateway startup OpenRou... | AI News",
+  "metaDescription": "OpenRouter's CEO recently described the startup as Stripe for AI. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, stripe, will, reportedly, TechNanoAI, emerging tech news",
+  "featured": true
 }

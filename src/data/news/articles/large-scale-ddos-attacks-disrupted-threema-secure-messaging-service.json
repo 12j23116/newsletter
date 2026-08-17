@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1785657865689-1",
+  "id": "cybersecurity-1786948359244-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Rails patches critical Active Storage flaw with RCE poten... | Cybersecurity News",
-  "excerpt": "A critical vulnerability in the Active Storage framework can allow an unauthenticated attacker to read arbitrary files from a Rails application, and potentially escalate to remote code execution (RCE)",
-  "date": "2026-08-02",
+  "title": "Large-scale DDoS attacks disrupted Threema secure messagi... | Cybersecurity News",
+  "excerpt": "Multiple distributed denial-of-service (DDoS) attacks targeted the Threema secure messaging service earlier this week, causing severe disruptions to communications. [...]",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "rails-patches-critical-active-storage-flaw-with-rce-potential",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/",
-  "sourceName": "Bill Toulas",
+  "slug": "large-scale-ddos-attacks-disrupted-threema-secure-messaging-service",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/",
+  "sourceName": "Ionut Ilascu",
   "body": [
     {
       "type": "p",
-      "text": "A critical vulnerability in the Active Storage framework can allow an unauthenticated attacker to read arbitrary files from a Rails application, and potentially escalate to remote code execution (RCE).  [..."
+      "text": "Multiple distributed denial-of-service (DDoS) attacks targeted the Threema secure messaging service earlier this week, causing severe disruptions to communications.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, A critical vulnerability in the Active Storage framework can allow an unauthenticated attacker to read arbitrary files from a Rails application, and potentially escalate to remote code execution (RCE). [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ionut Ilascu, Multiple distributed denial-of-service (DDoS) attacks targeted the Threema secure messaging service earlier this week, causing severe disruptions to communications. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Rails patches critical Active Storage flaw with RCE potential — a notable development in Cybersecurity",
+    "Large-scale DDoS attacks disrupted Threema secure messaging service — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "Ionut Ilascu",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Rails patches critical Active Storage flaw with RCE potential",
+      "date": "2026-08-17",
+      "event": "Large-scale DDoS attacks disrupted Threema secure messaging service",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "rails",
-    "patches",
+    "large",
+    "scale",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Rails patches critical Active Storage flaw with RCE poten... | Cybersecurity News",
-  "metaDescription": "A critical vulnerability in the Active Storage framework can allow an unauthenticated attacker to read arbitrary files from a Rails application, and potentia...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, rails, patches, critical, TechNanoAI, emerging tech news",
+  "metaTitle": "Large-scale DDoS attacks disrupted Threema secure messagi... | Cybersecurity News",
+  "metaDescription": "Multiple distributed denial-of-service (DDoS) attacks targeted the Threema secure messaging service earlier this week, causing severe disruptions to communic...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, large, scale, ddos, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785657865141-1",
+  "id": "ai-1786948358786-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "YouTuber Hank Green says his AI usage is ‘not healthy’ | AI News",
-  "excerpt": "Green offered a remarkable apology, saying that \"the level of dopamine that I've been getting from interacting with LLMs ... is not healthy for me or good for the world.\"",
-  "date": "2026-08-02",
+  "title": "Why people aren't buying Mark Zuckerberg’s AI future | AI News",
+  "excerpt": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision.",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "youtuber-hank-green-says-his-ai-usage-is-not-healthy",
-  "sourceLink": "https://techcrunch.com/2026/08/01/youtuber-hank-green-says-his-ai-usage-is-not-healthy/",
+  "slug": "why-people-aren8217t-buying-mark-zuckerbergs-ai-future",
+  "sourceLink": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
   "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Green offered a remarkable apology, saying that \"the level of dopamine that I've been getting from interacting with LLMs ...  is not healthy for me or good for the world."
+      "text": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, Green offered a remarkable apology, saying that \"the level of dopamine that I've been getting from interacting with LLMs ... is not healthy for me or good for the world.\". The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "YouTuber Hank Green says his AI usage is ‘not healthy’ — a notable development in AI",
+    "Why people aren't buying Mark Zuckerberg’s AI future — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "YouTuber Hank Green says his AI usage is ‘not healthy’",
+      "date": "2026-08-17",
+      "event": "Why people aren't buying Mark Zuckerberg’s AI future",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "youtuber",
-    "green",
+    "people",
+    "buying",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "YouTuber Hank Green says his AI usage is ‘not healthy’ | AI News",
-  "metaDescription": "Green offered a remarkable apology, saying that \"the level of dopamine that I've been getting from interacting with LLMs ... is not healthy for me or good fo...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, youtuber, hank, green, TechNanoAI, emerging tech news",
+  "metaTitle": "Why people aren't buying Mark Zuckerberg’s AI future | AI News",
+  "metaDescription": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision. LLMs, agents & the race to AGI. Latest AI developments and a",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, people, aren, buying, TechNanoAI, emerging tech news",
   "featured": false
 }

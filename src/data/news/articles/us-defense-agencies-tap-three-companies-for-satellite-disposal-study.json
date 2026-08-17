@@ -1,21 +1,21 @@
 {
-  "id": "space-1785657866746-0",
+  "id": "space-1786948360110-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Boeing's Starliner set for potential 2026 cargo run to ISS | Space Exploration News",
-  "excerpt": "Boeing CEO Kelly Ortberg has noted redesign work on the company’s CST-100 Starliner spacecraft is'\nThe post Boeing's Starliner set for potential 2026 cargo run to ISS appeared first on NASASpaceFlight",
-  "date": "2026-08-02",
+  "title": "U.S. defense agencies tap three companies for satellite d... | Space Exploration News",
+  "excerpt": "Firefly, D-Orbit USA and Katalyst will compete to show how commercial operators could capture and remove aging spacecraft\nThe post U.S. defense agencies tap three companies for satellite disposal stud",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "boeing8217s-starliner-set-for-potential-2026-cargo-run-to-iss",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/boeing-starliner-2026-iss/",
-  "sourceName": "Martijn Luinstra and Chris Bergin",
+  "slug": "us-defense-agencies-tap-three-companies-for-satellite-disposal-study",
+  "sourceLink": "https://spacenews.com/u-s-defense-agencies-tap-three-companies-for-satellite-disposal-study/",
+  "sourceName": "Sandra Erwin",
   "body": [
     {
       "type": "p",
-      "text": "Boeing CEO Kelly Ortberg has noted redesign work on the company’s CST-100 Starliner spacecraft is'\nThe post Boeing's Starliner set for potential 2026 cargo run to ISS appeared first on NASASpaceFlight. com."
+      "text": "Firefly, D-Orbit USA and Katalyst will compete to show how commercial operators could capture and remove aging spacecraft\nThe post U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Martijn Luinstra and Chris Bergin, Boeing CEO Kelly Ortberg has noted redesign work on the company’s CST-100 Starliner spacecraft is'\nThe post Boeing's Starliner set for potential 2026 cargo run to ISS appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "defense agencies tap three companies for satellite disposal study appeared first on SpaceNews."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Boeing's Starliner set for potential 2026 cargo run to ISS — a notable development in Space Exploration",
+    "U.S. defense agencies tap three companies for satellite disposal study — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Martijn Luinstra and Chris Bergin",
+      "value": "Sandra Erwin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Boeing's Starliner set for potential 2026 cargo run to ISS",
+      "date": "2026-08-17",
+      "event": "U.S. defense agencies tap three companies for satellite disposal study",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "boeing",
-    "starliner",
+    "defense",
+    "agencies",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Boeing's Starliner set for potential 2026 cargo run to ISS | Space Exploration News",
-  "metaDescription": "Boeing CEO Kelly Ortberg has noted redesign work on the company’s CST-100 Starliner spacecraft is'\nThe post Boeing's Starliner set for potential 2026 cargo r...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, boeing, starliner, potential, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "U.S. defense agencies tap three companies for satellite d... | Space Exploration News",
+  "metaDescription": "Firefly, D-Orbit USA and Katalyst will compete to show how commercial operators could capture and remove aging spacecraft\nThe post U.S. defense agencies tap ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, defense, agencies, three, TechNanoAI, emerging tech news",
+  "featured": false
 }

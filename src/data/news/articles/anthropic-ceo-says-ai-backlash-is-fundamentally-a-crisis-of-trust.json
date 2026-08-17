@@ -1,21 +1,21 @@
 {
-  "id": "ai-1785657865143-3",
+  "id": "ai-1786948358787-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Sam Altman is still making the case for parenting via Cha... | AI News",
-  "excerpt": "OpenAI's CEO seemed excited to share a \"cool use case\" for parents.",
-  "date": "2026-08-02",
+  "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis... | AI News",
+  "excerpt": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "sam-altman-is-still-making-the-case-for-parenting-via-chatgpt",
-  "sourceLink": "https://techcrunch.com/2026/08/01/sam-altman-is-still-making-the-case-for-parenting-via-chatgpt/",
+  "slug": "anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust",
+  "sourceLink": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
   "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "OpenAI's CEO seemed excited to share a \"cool use case\" for parents."
+      "text": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, OpenAI's CEO seemed excited to share a \"cool use case\" for parents.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Sam Altman is still making the case for parenting via ChatGPT — a notable development in AI",
+    "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’ — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Sam Altman is still making the case for parenting via ChatGPT",
+      "date": "2026-08-17",
+      "event": "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "altman",
-    "still",
+    "anthropic",
+    "backlash",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Sam Altman is still making the case for parenting via Cha... | AI News",
-  "metaDescription": "OpenAI's CEO seemed excited to share a \"cool use case\" for parents. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, altman, still, making, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic CEO says AI backlash is ‘fundamentally a crisis... | AI News",
+  "metaDescription": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI. LLMs, agents & the race to AGI. Latest AI development",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, says, backlash, TechNanoAI, emerging tech news",
   "featured": false
 }

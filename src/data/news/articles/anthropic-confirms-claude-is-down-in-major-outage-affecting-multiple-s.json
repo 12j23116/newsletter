@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1785657865689-2",
+  "id": "cybersecurity-1786948359244-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Balance Theory Raises $19 Million to Help Enterprises Man... | Cybersecurity News",
-  "excerpt": "The funding round was led by SYN Ventures, with participation from existing investors DataTribe and TEDCO. \nThe post Balance Theory Raises $19 Million to Help Enterprises Manage Cybersecurity Investme",
-  "date": "2026-08-02",
+  "title": "Anthropic confirms Claude is down in major outage affecti... | Cybersecurity News",
+  "excerpt": "Claude is experiencing a major outage, with users reporting login problems and degraded performance across several Anthropic services. [...]",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "balance-theory-raises-19-million-to-help-enterprises-manage-cybersecur",
-  "sourceLink": "https://www.securityweek.com/balance-theory-raises-19-million-to-help-enterprises-manage-cybersecurity-investments/",
-  "sourceName": "Mike Lennon",
+  "slug": "anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-s",
+  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/",
+  "sourceName": "Mayank Parmar",
   "body": [
     {
       "type": "p",
-      "text": "The funding round was led by SYN Ventures, with participation from existing investors DataTribe and TEDCO.  \nThe post Balance Theory Raises $19 Million to Help Enterprises Manage Cybersecurity Investments appeared first on SecurityWeek."
+      "text": "Claude is experiencing a major outage, with users reporting login problems and degraded performance across several Anthropic services.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mike Lennon, The funding round was led by SYN Ventures, with participation from existing investors DataTribe and TEDCO. \nThe post Balance Theory Raises $19 Million to Help Enterprises Manage Cybersecurity Investments appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mayank Parmar, Claude is experiencing a major outage, with users reporting login problems and degraded performance across several Anthropic services. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Balance Theory Raises $19 Million to Help Enterprises Manage Cybersecurity Inves — a notable development in Cybersecurity",
+    "Anthropic confirms Claude is down in major outage affecting multiple services — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Mike Lennon",
+      "value": "Mayank Parmar",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Balance Theory Raises $19 Million to Help Enterprises Manage Cybersecurity Inves",
+      "date": "2026-08-17",
+      "event": "Anthropic confirms Claude is down in major outage affecting multiple services",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "balance",
-    "theory",
+    "anthropic",
+    "confirms",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Balance Theory Raises $19 Million to Help Enterprises Man... | Cybersecurity News",
-  "metaDescription": "The funding round was led by SYN Ventures, with participation from existing investors DataTribe and TEDCO. \nThe post Balance Theory Raises $19 Million to Hel...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, balance, theory, raises, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic confirms Claude is down in major outage affecti... | Cybersecurity News",
+  "metaDescription": "Claude is experiencing a major outage, with users reporting login problems and degraded performance across several Anthropic services. [...]",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, anthropic, confirms, claude, TechNanoAI, emerging tech news",
   "featured": false
 }

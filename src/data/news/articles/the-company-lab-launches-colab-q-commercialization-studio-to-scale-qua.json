@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1785657871221-3",
+  "id": "quantum-1786948364461-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Vexlum Establishes UK Operations and Appoints Dr. Stefan ... | Quantum Computing News",
-  "excerpt": "High-power semiconductor laser developer Vexlum has announced the establishment of a dedicated R&D laboratory in London alongside the appointment of Dr. Stefan Truppe as Managing Director of Vexlum UK",
-  "date": "2026-08-02",
+  "title": "The Company Lab Launches CO.LAB Q Commercialization Studi... | Quantum Computing News",
+  "excerpt": "Chattanooga-based startup accelerator The Company Lab (CO.LAB) has launched CO.LAB Q, a 12-month quantum commercialization studio designed to translate early-stage quantum research into market-ready c",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "vexlum-establishes-uk-operations-and-appoints-dr-stefan-truppe-as-mana",
-  "sourceLink": "https://quantumcomputingreport.com/vexlum-establishes-uk-operations-and-appoints-dr-stefan-truppe-as-managing-director/",
+  "slug": "the-company-lab-launches-colab-q-commercialization-studio-to-scale-qua",
+  "sourceLink": "https://quantumcomputingreport.com/the-company-lab-launches-co-lab-q-commercialization-studio-to-scale-quantum-startups/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "High-power semiconductor laser developer Vexlum has announced the establishment of a dedicated R&D laboratory in London alongside the appointment of Dr.  Stefan Truppe as Managing Director of Vexlum UK."
+      "text": "Chattanooga-based startup accelerator The Company Lab (CO. LAB) has launched CO."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "Spun out from Tampere University in Finland, the company specializes in Vertical-External-Cavity Surface-Emitting Laser (VECSEL) technology, producing high-power, single-frequency laser engines across visible and deep-ultraviolet (UV)  [..."
+      "text": "LAB Q, a 12-month quantum commercialization studio designed to translate early-stage quantum research into market-ready companies.  Set to begin its inaugural cohort in November 2026, the program offers individualized commercialization pathways, pilot access, and technical infrastructure across quantum computing, networking, cybersecurity, sensing, and control hardware."
+    },
+    {
+      "type": "p",
+      "text": "[  [... ]\nThe post The Company Lab Launches CO."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Vexlum Establishes UK Operations and Appoints Dr. Stefan Truppe as Managing Dire — a notable development in Quantum Computing",
+    "The Company Lab Launches CO.LAB Q Commercialization Studio to Scale Quantum Star — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Vexlum Establishes UK Operations and Appoints Dr. Stefan Truppe as Managing Dire",
+      "date": "2026-08-17",
+      "event": "The Company Lab Launches CO.LAB Q Commercialization Studio to Scale Quantum Star",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "vexlum",
-    "establishes",
+    "company",
+    "launches",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Vexlum Establishes UK Operations and Appoints Dr. Stefan ... | Quantum Computing News",
-  "metaDescription": "High-power semiconductor laser developer Vexlum has announced the establishment of a dedicated R&D laboratory in London alongside the appointment of Dr. Stef...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, vexlum, establishes, operations, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "The Company Lab Launches CO.LAB Q Commercialization Studi... | Quantum Computing News",
+  "metaDescription": "Chattanooga-based startup accelerator The Company Lab (CO.LAB) has launched CO.LAB Q, a 12-month quantum commercialization studio designed to translate early...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, company, launches, commercialization, TechNanoAI, emerging tech news",
+  "featured": true
 }

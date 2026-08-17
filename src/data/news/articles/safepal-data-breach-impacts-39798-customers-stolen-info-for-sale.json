@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1785657865690-3",
+  "id": "cybersecurity-1786948359243-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Ruby on Rails Patches Critical Vulnerability | Cybersecurity News",
-  "excerpt": "The flaw can be exploited by unauthenticated attackers to read arbitrary files and potentially achieve remote code execution (RCE).\nThe post Ruby on Rails Patches Critical Vulnerability appeared first",
-  "date": "2026-08-02",
+  "title": "SafePal data breach impacts 39,798 customers, stolen info... | Cybersecurity News",
+  "excerpt": "Cryptocurrency hardware wallet provider SafePal is warning of a data breach affecting about 39,798 customers after a flaw was exploited to steal customer order information, and a threat actor is now c",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "ruby-on-rails-patches-critical-vulnerability",
-  "sourceLink": "https://www.securityweek.com/ruby-on-rails-patches-critical-vulnerability/",
-  "sourceName": "Ionut Arghire",
+  "slug": "safepal-data-breach-impacts-39798-customers-stolen-info-for-sale",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/",
+  "sourceName": "Lawrence Abrams",
   "body": [
     {
       "type": "p",
-      "text": "The flaw can be exploited by unauthenticated attackers to read arbitrary files and potentially achieve remote code execution (RCE). \nThe post Ruby on Rails Patches Critical Vulnerability appeared first on SecurityWeek."
+      "text": "Cryptocurrency hardware wallet provider SafePal is warning of a data breach affecting about 39,798 customers after a flaw was exploited to steal customer order information, and a threat actor is now claiming to be selling the stolen data.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The flaw can be exploited by unauthenticated attackers to read arbitrary files and potentially achieve remote code execution (RCE).\nThe post Ruby on Rails Patches Critical Vulnerability appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lawrence Abrams, Cryptocurrency hardware wallet provider SafePal is warning of a data breach affecting about 39,798 customers after a flaw was exploited to steal customer order information, and a threat actor is now claiming to be selling the stolen data. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Ruby on Rails Patches Critical Vulnerability — a notable development in Cybersecurity",
+    "SafePal data breach impacts 39,798 customers, stolen info for sale — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Lawrence Abrams",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Ruby on Rails Patches Critical Vulnerability",
+      "date": "2026-08-17",
+      "event": "SafePal data breach impacts 39,798 customers, stolen info for sale",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "rails",
-    "patches",
+    "safepal",
+    "breach",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Ruby on Rails Patches Critical Vulnerability | Cybersecurity News",
-  "metaDescription": "The flaw can be exploited by unauthenticated attackers to read arbitrary files and potentially achieve remote code execution (RCE).\nThe post Ruby on Rails Pa...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, ruby, rails, patches, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "SafePal data breach impacts 39,798 customers, stolen info... | Cybersecurity News",
+  "metaDescription": "Cryptocurrency hardware wallet provider SafePal is warning of a data breach affecting about 39,798 customers after a flaw was exploited to steal customer ord...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, safepal, data, breach, TechNanoAI, emerging tech news",
+  "featured": true
 }

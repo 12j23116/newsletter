@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1785657871220-2",
+  "id": "quantum-1786948364462-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "EY Expands In-House Capabilities with On-Site Quantum Com... | Quantum Computing News",
-  "excerpt": "Global professional services firm Ernst & Young (EY) has announced the addition of an on-site quantum computer to its in-house technology stack. Led by EY Canada, the deployment serves as a key innova",
-  "date": "2026-08-02",
+  "title": "Quantinuum and Quanta Computer Partner to Industrialize F... | Quantum Computing News",
+  "excerpt": "The post Quantinuum and Quanta Computer Partner to Industrialize Fault-Tolerant Trapped-Ion Hardware Manufacturing appeared first on Quantum Computing Report.",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "ey-expands-in-house-capabilities-with-on-site-quantum-computer-hub-in-",
-  "sourceLink": "https://quantumcomputingreport.com/ey-expands-in-house-capabilities-with-on-site-quantum-computer-hub-in-canada/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "quantinuum-and-quanta-computer-partner-to-industrialize-fault-tolerant",
+  "sourceLink": "https://quantumcomputingreport.com/quantinuum-and-quanta-computer-partner-to-industrialize-fault-tolerant-trapped-ion-hardware-manufacturing/",
+  "sourceName": "dougfinke",
   "body": [
     {
       "type": "p",
-      "text": "Global professional services firm Ernst & Young (EY) has announced the addition of an on-site quantum computer to its in-house technology stack.  Led by EY Canada, the deployment serves as a key innovation hub within EY's global enterprise tech strategy."
+      "text": "The post Quantinuum and Quanta Computer Partner to Industrialize Fault-Tolerant Trapped-Ion Hardware Manufacturing appeared first on Quantum Computing Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The hardware installation forms part of a broader $3 billion global investment in artificial intelligence  [... ]\nThe post EY Expands In-House Capabilities with On-Site Quantum Computer Hub in Canada appeared first on Quantum Computing Report."
+      "text": "According to reporting from dougfinke, The post Quantinuum and Quanta Computer Partner to Industrialize Fault-Tolerant Trapped-Ion Hardware Manufacturing appeared first on Quantum Computing Report.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "EY Expands In-House Capabilities with On-Site Quantum Computer Hub in Canada — a notable development in Quantum Computing",
+    "Quantinuum and Quanta Computer Partner to Industrialize Fault-Tolerant Trapped-I — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "dougfinke",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "EY Expands In-House Capabilities with On-Site Quantum Computer Hub in Canada",
+      "date": "2026-08-17",
+      "event": "Quantinuum and Quanta Computer Partner to Industrialize Fault-Tolerant Trapped-I",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "expands",
-    "house",
+    "quantinuum",
+    "quanta",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "EY Expands In-House Capabilities with On-Site Quantum Com... | Quantum Computing News",
-  "metaDescription": "Global professional services firm Ernst & Young (EY) has announced the addition of an on-site quantum computer to its in-house technology stack. Led by EY Ca...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, expands, house, capabilities, TechNanoAI, emerging tech news",
+  "metaTitle": "Quantinuum and Quanta Computer Partner to Industrialize F... | Quantum Computing News",
+  "metaDescription": "The post Quantinuum and Quanta Computer Partner to Industrialize Fault-Tolerant Trapped-Ion Hardware Manufacturing appeared first on Quantum Computing Report.",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantinuum, quanta, computer, TechNanoAI, emerging tech news",
   "featured": false
 }

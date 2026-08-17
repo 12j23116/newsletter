@@ -1,21 +1,21 @@
 {
-  "id": "av-1785657870706-0",
+  "id": "av-1786948364087-0",
   "topic": "av",
   "topicLabel": "Autonomous Vehicles",
   "topicColor": "#8b5cf6",
-  "title": "Uber is building an autonomous vehicle empire, and here's... | Autonomous Vehicles News",
-  "excerpt": "Uber has partnered with — and in some cases made direct investments in — about 30 autonomous vehicle companies over the past two years. Here's the list and the latest on the partnerships.",
-  "date": "2026-08-02",
+  "title": "TechCrunch Mobility: The shifting flight path of electric... | Autonomous Vehicles News",
+  "excerpt": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
+  "date": "2026-08-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/006-av-autonomous-vehicle.webp",
-  "slug": "uber-is-building-an-autonomous-vehicle-empire-and-here8217s-every-comp",
-  "sourceLink": "https://techcrunch.com/2026/08/01/ubers-autonomous-vehicle-deal-tracker/",
+  "slug": "techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis",
+  "sourceLink": "https://techcrunch.com/2026/08/16/techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis/",
   "sourceName": "Kirsten Korosec",
   "body": [
     {
       "type": "p",
-      "text": "Uber has partnered with — and in some cases made direct investments in — about 30 autonomous vehicle companies over the past two years.  Here's the list and the latest on the partnerships."
+      "text": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kirsten Korosec, Uber has partnered with — and in some cases made direct investments in — about 30 autonomous vehicle companies over the past two years. Here's the list and the latest on the partnerships.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Kirsten Korosec, Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Uber is building an autonomous vehicle empire, and here's every company it's usi — a notable development in Autonomous Vehicles",
+    "TechCrunch Mobility: The shifting flight path of electric air taxis — a notable development in Autonomous Vehicles",
     "The autonomous vehicles sector continues to accelerate, with robotaxis & level 4 autonomy driving rapid progress",
     "Industry context: Autonomous vehicles are scaling commercially, with robotaxi services operating in 40+ cities and Lev...",
     "Challenges remain: Edge case handling in dense urban environments, regulatory frameworks for driver...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-02",
-      "event": "Uber is building an autonomous vehicle empire, and here's every company it's usi",
+      "date": "2026-08-17",
+      "event": "TechCrunch Mobility: The shifting flight path of electric air taxis",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "autonomous vehicles",
     "self-driving",
-    "building",
-    "autonomous",
+    "techcrunch",
+    "mobility",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Uber is building an autonomous vehicle empire, and here's... | Autonomous Vehicles News",
-  "metaDescription": "Uber has partnered with — and in some cases made direct investments in — about 30 autonomous vehicle companies over the past two years. Here's the list and t...",
-  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, uber, building, autonomous, TechNanoAI, emerging tech news",
+  "metaTitle": "TechCrunch Mobility: The shifting flight path of electric... | Autonomous Vehicles News",
+  "metaDescription": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation. Robotaxis & Level 4 autonomy. Latest Autonomous Ve",
+  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, techcrunch, mobility, shifting, TechNanoAI, emerging tech news",
   "featured": true
 }
