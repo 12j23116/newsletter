@@ -1,21 +1,21 @@
 {
-  "id": "space-1786170857386-1",
+  "id": "space-1787466165348-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Senate installs new chiefs for U.S. military space acquis... | Space Exploration News",
-  "excerpt": "Erich Hernandez-Baquero will take over military space acquisition; Roger Mason will lead the National Reconnaissance Office\nThe post Senate installs new chiefs for U.S. military space acquisition, spy",
-  "date": "2026-08-08",
+  "title": "What's next for ISR in space | Space Exploration News",
+  "excerpt": "In this episode, SpaceNews correspondent Debra Werner leads a panel of experts to discuss the role of ISR in space and what comes next. This session was recorded in May [']\nThe post What's next for IS",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "senate-installs-new-chiefs-for-us-military-space-acquisition-spy-satel",
-  "sourceLink": "https://spacenews.com/senate-installs-new-chiefs-for-u-s-military-space-acquisition-spy-satellites/",
-  "sourceName": "Sandra Erwin",
+  "slug": "what8217s-next-for-isr-in-space",
+  "sourceLink": "https://spacenews.com/whats-next-for-isr-in-space/",
+  "sourceName": "SpaceNews Editor",
   "body": [
     {
       "type": "p",
-      "text": "Erich Hernandez-Baquero will take over military space acquisition; Roger Mason will lead the National Reconnaissance Office\nThe post Senate installs new chiefs for U. S."
+      "text": "In this episode, SpaceNews correspondent Debra Werner leads a panel of experts to discuss the role of ISR in space and what comes next.  This session was recorded in May [']\nThe post What's next for ISR in space appeared first on SpaceNews."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "military space acquisition, spy satellites appeared first on SpaceNews."
+      "text": "According to reporting from SpaceNews Editor, In this episode, SpaceNews correspondent Debra Werner leads a panel of experts to discuss the role of ISR in space and what comes next. This session was recorded in May [']\nThe post What's next for ISR in space appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Senate installs new chiefs for U.S. military space acquisition, spy satellites — a notable development in Space Exploration",
+    "What's next for ISR in space — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Sandra Erwin",
+      "value": "SpaceNews Editor",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "Senate installs new chiefs for U.S. military space acquisition, spy satellites",
+      "date": "2026-08-23",
+      "event": "What's next for ISR in space",
       "current": true
     },
     {
@@ -191,8 +191,7 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "senate",
-    "installs",
+    "space",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +215,8 @@
       }
     ]
   },
-  "metaTitle": "Senate installs new chiefs for U.S. military space acquis... | Space Exploration News",
-  "metaDescription": "Erich Hernandez-Baquero will take over military space acquisition; Roger Mason will lead the National Reconnaissance Office\nThe post Senate installs new chie...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, senate, installs, chiefs, TechNanoAI, emerging tech news",
+  "metaTitle": "What's next for ISR in space | Space Exploration News",
+  "metaDescription": "In this episode, SpaceNews correspondent Debra Werner leads a panel of experts to discuss the role of ISR in space and what comes next. This session was reco...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, what, next, space, TechNanoAI, emerging tech news",
   "featured": false
 }

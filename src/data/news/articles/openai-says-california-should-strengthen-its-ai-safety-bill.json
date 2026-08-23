@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786170855778-4",
+  "id": "ai-1787466163731-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "UNC6671 Vishing Attacks Target Personal Phones to Steal S... | AI News",
-  "excerpt": "A recent wave of cyber attacks targeting financial services, private equity, and professional services is attributed to a data extortion group known as UNC6671.\n\n\"UNC6671 continues to rely on voice ph",
-  "date": "2026-08-08",
+  "title": "OpenAI says California should strengthen its AI safety bill | AI News",
+  "excerpt": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed.",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "unc6671-vishing-attacks-target-personal-phones-to-steal-saas-data",
-  "sourceLink": "https://thehackernews.com/2026/08/unc6671-vishing-attacks-target-personal.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "openai-says-california-should-strengthen-its-ai-safety-bill",
+  "sourceLink": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "A recent wave of cyber attacks targeting financial services, private equity, and professional services is attributed to a data extortion group known as UNC6671. \n\n\"UNC6671 continues to rely on voice phishing (vishing) to target enterprise employees, posing as IT help desk staff facilitating mandatory, urgent security migrations."
+      "text": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), A recent wave of cyber attacks targeting financial services, private equity, and professional services is attributed to a data extortion group known as UNC6671.\n\n\"UNC6671 continues to rely on voice phishing (vishing) to target enterprise employees, posing as IT help desk staff facilitating mandatory, urgent security migrations. Significantly, the threat actor often contacts employees via their. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "UNC6671 Vishing Attacks Target Personal Phones to Steal SaaS Data — a notable development in AI",
+    "OpenAI says California should strengthen its AI safety bill — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "UNC6671 Vishing Attacks Target Personal Phones to Steal SaaS Data",
+      "date": "2026-08-23",
+      "event": "OpenAI says California should strengthen its AI safety bill",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "vishing",
-    "attacks",
+    "openai",
+    "california",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "UNC6671 Vishing Attacks Target Personal Phones to Steal S... | AI News",
-  "metaDescription": "A recent wave of cyber attacks targeting financial services, private equity, and professional services is attributed to a data extortion group known as UNC66...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, vishing, attacks, target, TechNanoAI, emerging tech news",
+  "metaTitle": "OpenAI says California should strengthen its AI safety bill | AI News",
+  "metaDescription": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed. LLMs, agents & the race to AGI. Latest AI developme",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, says, california, TechNanoAI, emerging tech news",
   "featured": false
 }

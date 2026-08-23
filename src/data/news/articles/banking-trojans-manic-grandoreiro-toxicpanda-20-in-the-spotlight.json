@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786170856504-0",
+  "id": "cybersecurity-1787466164584-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Metabase SQLi zero-day exploited in customer data-theft a... | Cybersecurity News",
-  "excerpt": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
-  "date": "2026-08-08",
+  "title": "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the... | Cybersecurity News",
+  "excerpt": "The spyware-equipped Manic, a persistent Grandoreiro campaign in Latin America and Europe, and an expanded ToxicPanda 2.0 malware.\nThe post Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Sp",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "metabase-sqli-zero-day-exploited-in-customer-data-theft-attacks",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
-  "sourceName": "Mayank Parmar",
+  "slug": "banking-trojans-manic-grandoreiro-toxicpanda-20-in-the-spotlight",
+  "sourceLink": "https://www.securityweek.com/banking-trojans-manic-grandoreiro-toxicpanda-2-0-in-the-spotlight/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally.  [..."
+      "text": "The spyware-equipped Manic, a persistent Grandoreiro campaign in Latin America and Europe, and an expanded ToxicPanda 2. 0 malware."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mayank Parmar, A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post Banking Trojans Manic, Grandoreiro, ToxicPanda 2. 0 in the Spotlight appeared first on SecurityWeek."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Metabase SQLi zero-day exploited in customer data-theft attacks — a notable development in Cybersecurity",
+    "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Spotlight — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Mayank Parmar",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "Metabase SQLi zero-day exploited in customer data-theft attacks",
+      "date": "2026-08-23",
+      "event": "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Spotlight",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "metabase",
-    "exploited",
+    "banking",
+    "trojans",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Metabase SQLi zero-day exploited in customer data-theft a... | Cybersecurity News",
-  "metaDescription": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framewo...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, metabase, sqli, zero, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the... | Cybersecurity News",
+  "metaDescription": "The spyware-equipped Manic, a persistent Grandoreiro campaign in Latin America and Europe, and an expanded ToxicPanda 2.0 malware.\nThe post Banking Trojans M...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, banking, trojans, manic, TechNanoAI, emerging tech news",
+  "featured": false
 }

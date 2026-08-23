@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786170855777-2",
+  "id": "ai-1787466163731-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Nearly 800 Malicious npm Packages Deliver Cross-Platform ... | AI News",
-  "excerpt": "A cluster of nearly 800 malicious packages has been published to the npm registry as part of a new campaign designed to deliver cross-platform malware targeting Windows, Mac, and Linux systems.\n\n\"Thes",
-  "date": "2026-08-08",
+  "title": "TikTok Agrees to $400 Million Settlement in U.S. Child Pr... | AI News",
+  "excerpt": "The U.S. Department of Justice (DoJ) announced on Friday that ByteDance-owned TikTok will pay $400 million to settle a 2024 lawsuit accusing the company of violating child privacy laws in the country.",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "nearly-800-malicious-npm-packages-deliver-cross-platform-rat-and-infos",
-  "sourceLink": "https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html",
+  "slug": "tiktok-agrees-to-400-million-settlement-in-us-child-privacy-lawsuit",
+  "sourceLink": "https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "A cluster of nearly 800 malicious packages has been published to the npm registry as part of a new campaign designed to deliver cross-platform malware targeting Windows, Mac, and Linux systems."
+      "text": "The U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), A cluster of nearly 800 malicious packages has been published to the npm registry as part of a new campaign designed to deliver cross-platform malware targeting Windows, Mac, and Linux systems.\n\n\"These packages appear to use AI slop squatted, or randomly generated typo-squatting package names, but all of them deliver a powerful RAT and infostealer payload,\" OpenSourceMalware researcher Paul. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "Department of Justice (DoJ) announced on Friday that ByteDance-owned TikTok will pay $400 million to settle a 2024 lawsuit accusing the company of violating child privacy laws in the country."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Nearly 800 Malicious npm Packages Deliver Cross-Platform RAT and Infostealer — a notable development in AI",
+    "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "Nearly 800 Malicious npm Packages Deliver Cross-Platform RAT and Infostealer",
+      "date": "2026-08-23",
+      "event": "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "nearly",
-    "malicious",
+    "tiktok",
+    "agrees",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Nearly 800 Malicious npm Packages Deliver Cross-Platform ... | AI News",
-  "metaDescription": "A cluster of nearly 800 malicious packages has been published to the npm registry as part of a new campaign designed to deliver cross-platform malware target...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, nearly, malicious, packages, TechNanoAI, emerging tech news",
+  "metaTitle": "TikTok Agrees to $400 Million Settlement in U.S. Child Pr... | AI News",
+  "metaDescription": "The U.S. Department of Justice (DoJ) announced on Friday that ByteDance-owned TikTok will pay $400 million to settle a 2024 lawsuit accusing the company of v...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, tiktok, agrees, million, TechNanoAI, emerging tech news",
   "featured": false
 }

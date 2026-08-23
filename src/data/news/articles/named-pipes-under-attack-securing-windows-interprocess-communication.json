@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786170856504-1",
+  "id": "cybersecurity-1787466164584-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Unlimited Technology Systems breach impacts 3.8 million p... | Cybersecurity News",
-  "excerpt": "Healthcare software company Unlimited Technology Systems reported that more than 3.8 million people were impacted by a data breach incident that occurred in October 2025. [...]",
-  "date": "2026-08-08",
+  "title": "Named Pipes Under Attack: Securing Windows Interprocess C... | Cybersecurity News",
+  "excerpt": "Windows named pipes provide fast interprocess communication, but weak access controls can expose privileged services to untrusted processes. ThreatLocker explains how endpoint verification, command au",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "unlimited-technology-systems-breach-impacts-38-million-people",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/unlimited-technology-systems-breach-impacts-38-million-people/",
-  "sourceName": "Bill Toulas",
+  "slug": "named-pipes-under-attack-securing-windows-interprocess-communication",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/named-pipes-under-attack-securing-windows-interprocess-communication/",
+  "sourceName": "Sponsored by ThreatLocker",
   "body": [
     {
       "type": "p",
-      "text": "Healthcare software company Unlimited Technology Systems reported that more than 3. 8 million people were impacted by a data breach incident that occurred in October 2025."
+      "text": "Windows named pipes provide fast interprocess communication, but weak access controls can expose privileged services to untrusted processes.  ThreatLocker explains how endpoint verification, command authorization, strict input validation, and narrowly scoped privileges can help secure named-pipe communication."
     },
     {
       "type": "p",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Unlimited Technology Systems breach impacts 3.8 million people — a notable development in Cybersecurity",
+    "Named Pipes Under Attack: Securing Windows Interprocess Communication — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "Sponsored by ThreatLocker",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "Unlimited Technology Systems breach impacts 3.8 million people",
+      "date": "2026-08-23",
+      "event": "Named Pipes Under Attack: Securing Windows Interprocess Communication",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "unlimited",
-    "technology",
+    "named",
+    "pipes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Unlimited Technology Systems breach impacts 3.8 million p... | Cybersecurity News",
-  "metaDescription": "Healthcare software company Unlimited Technology Systems reported that more than 3.8 million people were impacted by a data breach incident that occurred in ...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, unlimited, technology, systems, TechNanoAI, emerging tech news",
+  "metaTitle": "Named Pipes Under Attack: Securing Windows Interprocess C... | Cybersecurity News",
+  "metaDescription": "Windows named pipes provide fast interprocess communication, but weak access controls can expose privileged services to untrusted processes. ThreatLocker exp...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, named, pipes, under, TechNanoAI, emerging tech news",
   "featured": false
 }

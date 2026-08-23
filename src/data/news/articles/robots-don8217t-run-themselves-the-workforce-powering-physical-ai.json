@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786170861030-3",
+  "id": "robotics-1787466168931-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Video Friday: Drones Go Heavy in DARPA Lift Challenge | Robotics News",
-  "excerpt": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few month",
-  "date": "2026-08-08",
+  "title": "Robots don't run themselves: The workforce powering physi... | Robotics News",
+  "excerpt": "The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt.\nThe post Robots don't run themselves: The workforce poweri",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "video-friday-drones-go-heavy-in-darpa-lift-challenge",
-  "sourceLink": "https://spectrum.ieee.org/video-friday-heavy-lift-drone",
-  "sourceName": "Evan Ackerman",
+  "slug": "robots-don8217t-run-themselves-the-workforce-powering-physical-ai",
+  "sourceLink": "https://www.therobotreport.com/robots-dont-run-themselves-workforce-powering-physical-ai/",
+  "sourceName": "Christopher Bower",
   "body": [
     {
       "type": "p",
-      "text": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics.  We also post a weekly calendar of upcoming robotics events for the next few months."
+      "text": "The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt. \nThe post Robots don't run themselves: The workforce powering physical AI appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Please send us your events for inclusion. Actuate 2026: 18–19 August 2026, SAN FRANCISCOIROS 2026: 27 September–1 October 2026, PITTSBURGHHumanoids Summit Seoul: 22–23 September 2026, SEOULEnjoy today’s videos!"
-    },
-    {
-      "type": "p",
-      "text": "The DARPA Lift Challenge is taking place through this weekend."
+      "text": "According to reporting from Christopher Bower, The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt.\nThe post Robots don't run themselves: The workforce powering physical AI appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Video Friday: Drones Go Heavy in DARPA Lift Challenge — a notable development in Robotics",
+    "Robots don't run themselves: The workforce powering physical AI — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -124,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Evan Ackerman",
+      "value": "Christopher Bower",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "Video Friday: Drones Go Heavy in DARPA Lift Challenge",
+      "date": "2026-08-23",
+      "event": "Robots don't run themselves: The workforce powering physical AI",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "video",
-    "friday",
+    "robots",
+    "themselves",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Video Friday: Drones Go Heavy in DARPA Lift Challenge | Robotics News",
-  "metaDescription": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upco...",
-  "keywords": "robotics, humanoid robot, automation, drones, video, friday, drones, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Robots don't run themselves: The workforce powering physi... | Robotics News",
+  "metaDescription": "The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt.\nThe post Robots...",
+  "keywords": "robotics, humanoid robot, automation, drones, robots, themselves, workforce, TechNanoAI, emerging tech news",
+  "featured": true
 }

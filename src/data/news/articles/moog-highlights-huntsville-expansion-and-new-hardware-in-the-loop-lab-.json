@@ -1,21 +1,21 @@
 {
-  "id": "space-1786170857387-3",
+  "id": "space-1787466165348-5",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "U.S. Senate confirms Schiess to lead Space Force | Space Exploration News",
-  "excerpt": "New chief takes command as the Space Force prepares for rapid growth, acquisition reforms and Golden Dome\nThe post U.S. Senate confirms Schiess to lead Space Force  appeared first on SpaceNews.",
-  "date": "2026-08-08",
+  "title": "Moog Highlights Huntsville Expansion and New Hardware-in-... | Space Exploration News",
+  "excerpt": "Huntsville, AL ' Moog Inc. (NYSE: MOG.A and MOG.B) announces a significant expansion at its Huntsville, AL facility that now includes a new secure Hypersonic/Interceptor Hardware-in-the-Loop (HWIL) la",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "us-senate-confirms-schiess-to-lead-space-force",
-  "sourceLink": "https://spacenews.com/u-s-senate-confirms-schiess-to-lead-space-force/",
-  "sourceName": "Sandra Erwin",
+  "slug": "moog-highlights-huntsville-expansion-and-new-hardware-in-the-loop-lab-",
+  "sourceLink": "https://spacenews.com/moog-highlights-huntsville-expansion-and-new-hardware-in-the-loop-lab-during-space-and-missile-defense-symposium/",
+  "sourceName": "Moog Inc.",
   "body": [
     {
       "type": "p",
-      "text": "New chief takes command as the Space Force prepares for rapid growth, acquisition reforms and Golden Dome\nThe post U. S."
+      "text": "Huntsville, AL ' Moog Inc.  (NYSE: MOG."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "Senate confirms Schiess to lead Space Force  appeared first on SpaceNews."
+      "text": "A and MOG. B) announces a significant expansion at its Huntsville, AL facility that now includes a new secure Hypersonic/Interceptor Hardware-in-the-Loop (HWIL) lab."
+    },
+    {
+      "type": "p",
+      "text": "It is [']\nThe post Moog Highlights Huntsville Expansion and New Hardware-in-the-Loop Lab During Space and Missile Defense Symposium  appeared first on SpaceNews."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "U.S. Senate confirms Schiess to lead Space Force — a notable development in Space Exploration",
+    "Moog Highlights Huntsville Expansion and New Hardware-in-the-Loop Lab During Spa — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Sandra Erwin",
+      "value": "Moog Inc.",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "U.S. Senate confirms Schiess to lead Space Force",
+      "date": "2026-08-23",
+      "event": "Moog Highlights Huntsville Expansion and New Hardware-in-the-Loop Lab During Spa",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "senate",
-    "confirms",
+    "highlights",
+    "huntsville",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "U.S. Senate confirms Schiess to lead Space Force | Space Exploration News",
-  "metaDescription": "New chief takes command as the Space Force prepares for rapid growth, acquisition reforms and Golden Dome\nThe post U.S. Senate confirms Schiess to lead Space...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, senate, confirms, schiess, TechNanoAI, emerging tech news",
+  "metaTitle": "Moog Highlights Huntsville Expansion and New Hardware-in-... | Space Exploration News",
+  "metaDescription": "Huntsville, AL ' Moog Inc. (NYSE: MOG.A and MOG.B) announces a significant expansion at its Huntsville, AL facility that now includes a new secure Hypersonic...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, moog, highlights, huntsville, TechNanoAI, emerging tech news",
   "featured": false
 }

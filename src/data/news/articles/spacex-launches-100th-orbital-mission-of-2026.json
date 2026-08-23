@@ -1,21 +1,21 @@
 {
-  "id": "space-1786170857386-0",
+  "id": "space-1787466165347-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Relativity Space engine integration milestone for Terran-... | Space Exploration News",
-  "excerpt": "Relativity Space has marked another significant step forward in the development of its reusable Terran'\nThe post Relativity Space engine integration milestone for Terran-R first stage appeared first o",
-  "date": "2026-08-08",
+  "title": "SpaceX launches 100th orbital mission of 2026 | Space Exploration News",
+  "excerpt": "The Starlink 15-20 mission represented the 99th Falcon 9 rocket launch of the year. Liftoff from pad 4 East happened at 12:25 a.m. PDT (3:25 a.m. EDT / 0725 UTC).",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "relativity-space-engine-integration-milestone-for-terran-r-first-stage",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/relativity-engine-integration-milestone-terran-r/",
-  "sourceName": "Martin Smith and Chris Bergin",
+  "slug": "spacex-launches-100th-orbital-mission-of-2026",
+  "sourceLink": "https://spaceflightnow.com/2026/08/21/live-coverage-spacex-to-launch-100th-orbital-mission-of-2026/",
+  "sourceName": "Will Robinson-Smith",
   "body": [
     {
       "type": "p",
-      "text": "Relativity Space has marked another significant step forward in the development of its reusable Terran'\nThe post Relativity Space engine integration milestone for Terran-R first stage appeared first on NASASpaceFlight. com."
+      "text": "The Starlink 15-20 mission represented the 99th Falcon 9 rocket launch of the year.  Liftoff from pad 4 East happened at 12:25 a."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Martin Smith and Chris Bergin, Relativity Space has marked another significant step forward in the development of its reusable Terran'\nThe post Relativity Space engine integration milestone for Terran-R first stage appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "m.  PDT (3:25 a."
+    },
+    {
+      "type": "p",
+      "text": "m.  EDT / 0725 UTC)."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Relativity Space engine integration milestone for Terran-R first stage — a notable development in Space Exploration",
+    "SpaceX launches 100th orbital mission of 2026 — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Martin Smith and Chris Bergin",
+      "value": "Will Robinson-Smith",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "Relativity Space engine integration milestone for Terran-R first stage",
+      "date": "2026-08-23",
+      "event": "SpaceX launches 100th orbital mission of 2026",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "relativity",
-    "space",
+    "spacex",
+    "launches",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Relativity Space engine integration milestone for Terran-... | Space Exploration News",
-  "metaDescription": "Relativity Space has marked another significant step forward in the development of its reusable Terran'\nThe post Relativity Space engine integration mileston...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, relativity, space, engine, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "SpaceX launches 100th orbital mission of 2026 | Space Exploration News",
+  "metaDescription": "The Starlink 15-20 mission represented the 99th Falcon 9 rocket launch of the year. Liftoff from pad 4 East happened at 12:25 a.m. PDT (3:25 a.m. EDT / 0725 ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, launches, orbital, TechNanoAI, emerging tech news",
+  "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786170862291-1",
+  "id": "quantum-1787466169552-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IonQ Reports Record Q2 2026 Financial Results: Revenue So... | Quantum Computing News",
-  "excerpt": "IonQ, Inc. (NYSE: IONQ) has reported its financial results for the second quarter ended June 30, 2026. The College Park-based trapped-ion leader delivered its fifth consecutive quarter of record resul",
-  "date": "2026-08-08",
+  "title": "Who’s News: Strategic Appointments at D-Wave, BTQ Technol... | Quantum Computing News",
+  "excerpt": "D-Wave Quantum Inc. has appointed Kevan P. Krysler to its Board of Directors and Audit Committee. Krysler currently serves as Chief Financial Officer of Carbon Robotics and brings over two decades of ",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "ionq-reports-record-q2-2026-financial-results-revenue-soars-287-to-801",
-  "sourceLink": "https://quantumcomputingreport.com/ionq-reports-record-q2-2026-financial-results-revenue-soars-287-to-80-1m-full-year-guidance-raised-to-290m/",
+  "slug": "whos-news-strategic-appointments-at-d-wave-btq-technologies-symmatrics",
+  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-d-wave-btq-technologies-symmatrics-and-rigetti-computing/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "IonQ, Inc.  (NYSE: IONQ) has reported its financial results for the second quarter ended June 30, 2026."
+      "text": "D-Wave Quantum Inc.  has appointed Kevan P."
     },
     {
       "type": "p",
@@ -27,11 +27,11 @@
     },
     {
       "type": "p",
-      "text": "The College Park-based trapped-ion leader delivered its fifth consecutive quarter of record results, driven by global deployments of its IonQ Tempo systems, accelerating cloud utilization, and the recent closing of its acquisition of SkyWater Technology.  The table below  [..."
+      "text": "Krysler to its Board of Directors and Audit Committee.  Krysler currently serves as Chief Financial Officer of Carbon Robotics and brings over two decades of financial leadership experience from previous executive roles, including Chief Financial Officer of Everpure, Inc."
     },
     {
       "type": "p",
-      "text": "]\nThe post IonQ Reports Record Q2 2026 Financial Results: Revenue Soars 287% to $80."
+      "text": ", and Senior Vice President of Finance and Chief Accounting  [..."
     },
     {
       "type": "h2",
@@ -101,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "IonQ Reports Record Q2 2026 Financial Results: Revenue Soars 287% to $80.1M, Ful — a notable development in Quantum Computing",
+    "Who’s News: Strategic Appointments at D-Wave, BTQ Technologies, Symmatrics, and  — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -161,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "IonQ Reports Record Q2 2026 Financial Results: Revenue Soars 287% to $80.1M, Ful",
+      "date": "2026-08-23",
+      "event": "Who’s News: Strategic Appointments at D-Wave, BTQ Technologies, Symmatrics, and ",
       "current": true
     },
     {
@@ -195,8 +195,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "reports",
-    "record",
+    "strategic",
+    "appointments",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "IonQ Reports Record Q2 2026 Financial Results: Revenue So... | Quantum Computing News",
-  "metaDescription": "IonQ, Inc. (NYSE: IONQ) has reported its financial results for the second quarter ended June 30, 2026. The College Park-based trapped-ion leader delivered it...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, ionq, reports, record, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Who’s News: Strategic Appointments at D-Wave, BTQ Technol... | Quantum Computing News",
+  "metaDescription": "D-Wave Quantum Inc. has appointed Kevan P. Krysler to its Board of Directors and Audit Committee. Krysler currently serves as Chief Financial Officer of Carb...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
+  "featured": true
 }

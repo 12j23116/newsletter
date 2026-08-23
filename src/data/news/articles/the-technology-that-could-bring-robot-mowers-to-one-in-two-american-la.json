@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786170861029-2",
+  "id": "robotics-1787466168932-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Avatar Robotics raises seed round to address industrial l... | Robotics News",
-  "excerpt": "Avatar Robotics raised $6.5 million in funding to scale humanoid robots and remote teleoperation across industrial supply chains.\nThe post Avatar Robotics raises seed round to address industrial labor",
-  "date": "2026-08-08",
+  "title": "The technology that could bring robot mowers to one in tw... | Robotics News",
+  "excerpt": "Improvements in AI, satellite navigation, and machine vision are helping robotic lawn mowers spread in the U.S., writes Sunseeker's founder.\nThe post The technology that could bring robot mowers to on",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "avatar-robotics-raises-seed-round-to-address-industrial-labor-constrai",
-  "sourceLink": "https://www.therobotreport.com/avatar-robotics-raises-6-5-m-seed-round-address-industrial-labor-constraints/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "the-technology-that-could-bring-robot-mowers-to-one-in-two-american-la",
+  "sourceLink": "https://www.therobotreport.com/technology-could-bring-robot-mowers-one-half-american-lawns/",
+  "sourceName": "Terry Ma",
   "body": [
     {
       "type": "p",
-      "text": "Avatar Robotics raised $6. 5 million in funding to scale humanoid robots and remote teleoperation across industrial supply chains."
+      "text": "Improvements in AI, satellite navigation, and machine vision are helping robotic lawn mowers spread in the U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Avatar Robotics raises seed round to address industrial labor constraints appeared first on The Robot Report."
+      "text": ", writes Sunseeker's founder. \nThe post The technology that could bring robot mowers to one in two American lawns appeared first on The Robot Report."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Avatar Robotics raises seed round to address industrial labor constraints — a notable development in Robotics",
+    "The technology that could bring robot mowers to one in two American lawns — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Terry Ma",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "Avatar Robotics raises seed round to address industrial labor constraints",
+      "date": "2026-08-23",
+      "event": "The technology that could bring robot mowers to one in two American lawns",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "avatar",
-    "robotics",
+    "technology",
+    "could",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Avatar Robotics raises seed round to address industrial l... | Robotics News",
-  "metaDescription": "Avatar Robotics raised $6.5 million in funding to scale humanoid robots and remote teleoperation across industrial supply chains.\nThe post Avatar Robotics ra...",
-  "keywords": "robotics, humanoid robot, automation, drones, avatar, robotics, raises, TechNanoAI, emerging tech news",
+  "metaTitle": "The technology that could bring robot mowers to one in tw... | Robotics News",
+  "metaDescription": "Improvements in AI, satellite navigation, and machine vision are helping robotic lawn mowers spread in the U.S., writes Sunseeker's founder.\nThe post The tec...",
+  "keywords": "robotics, humanoid robot, automation, drones, technology, that, could, TechNanoAI, emerging tech news",
   "featured": false
 }

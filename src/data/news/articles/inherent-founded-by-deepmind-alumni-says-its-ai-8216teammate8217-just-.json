@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786170855776-1",
+  "id": "ai-1787466163729-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "After Rippling blew millions on AI in months, it built an... | AI News",
-  "excerpt": "After its own AI usage wake-up call, Rippling this week unveiled AI Spend Console, a product that tracks individual and team employee AI spending.",
-  "date": "2026-08-08",
+  "title": "Inherent, founded by DeepMind alumni, says its AI 'teamma... | AI News",
+  "excerpt": "Built by DeepMind alumni, British AI lab Inherent released Faraday, an AI agent whose ability to replicate scientific papers could be a stepping stone for innovation.",
+  "date": "2026-08-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-",
-  "sourceLink": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
-  "sourceName": "Julie Bort",
+  "slug": "inherent-founded-by-deepmind-alumni-says-its-ai-8216teammate8217-just-",
+  "sourceLink": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+  "sourceName": "Anna Heim",
   "body": [
     {
       "type": "p",
-      "text": "After its own AI usage wake-up call, Rippling this week unveiled AI Spend Console, a product that tracks individual and team employee AI spending."
+      "text": "Built by DeepMind alumni, British AI lab Inherent released Faraday, an AI agent whose ability to replicate scientific papers could be a stepping stone for innovation."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julie Bort, After its own AI usage wake-up call, Rippling this week unveiled AI Spend Console, a product that tracks individual and team employee AI spending.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anna Heim, Built by DeepMind alumni, British AI lab Inherent released Faraday, an AI agent whose ability to replicate scientific papers could be a stepping stone for innovation.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "After Rippling blew millions on AI in months, it built an employee ROI tool — a notable development in AI",
+    "Inherent, founded by DeepMind alumni, says its AI 'teammate' just outperformed A — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Julie Bort",
+      "value": "Anna Heim",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-08",
-      "event": "After Rippling blew millions on AI in months, it built an employee ROI tool",
+      "date": "2026-08-23",
+      "event": "Inherent, founded by DeepMind alumni, says its AI 'teammate' just outperformed A",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "after",
-    "rippling",
+    "inherent",
+    "founded",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "After Rippling blew millions on AI in months, it built an... | AI News",
-  "metaDescription": "After its own AI usage wake-up call, Rippling this week unveiled AI Spend Console, a product that tracks individual and team employee AI spending.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, after, rippling, blew, TechNanoAI, emerging tech news",
+  "metaTitle": "Inherent, founded by DeepMind alumni, says its AI 'teamma... | AI News",
+  "metaDescription": "Built by DeepMind alumni, British AI lab Inherent released Faraday, an AI agent whose ability to replicate scientific papers could be a stepping stone for in...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, inherent, founded, deepmind, TechNanoAI, emerging tech news",
   "featured": false
 }
