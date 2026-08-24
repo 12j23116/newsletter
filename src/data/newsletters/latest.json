@@ -1,113 +1,113 @@
 {
-  "issue": 85,
-  "date": "2026-08-17",
-  "subject": "This Week: Biotech, AI & more — August 17, 2026",
+  "issue": 86,
+  "date": "2026-08-24",
+  "subject": "This Week: AI, Energy Storage & more — August 24, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "biotech",
     "ai",
-    "cybersecurity",
-    "space",
+    "energy",
+    "biotech",
+    "quantum",
     "robotics",
-    "av",
-    "energy"
+    "cybersecurity",
+    "av"
   ],
   "articles": [
     {
-      "title": "<a href=\"/biotech/capricor-soars-plan-amend-dmd-filing-af... | Biotechnology News",
-      "slug": "a-hrefbiotechcapricor-soars-plan-amend-dmd-filing-after-adcomm-setback",
-      "topic": "biotech",
-      "excerpt": "Capricor Therapeutics has bounced back from a bruising FDA advisory committee meeting by securing a green light to file an amendment to its approval application, raising hopes that the biotech can res",
-      "url": "https://technanoai.com/news/a-hrefbiotechcapricor-soars-plan-amend-dmd-filing-after-adcomm-setback",
-      "date": "2026-08-17"
-    },
-    {
-      "title": "<a href=\"/biotech/chutes-ladders-former-legend-ceo-lands-... | Biotechnology News",
-      "slug": "a-hrefbiotechchutes-ladders-former-legend-ceo-lands-role-k2-therapeuti",
-      "topic": "biotech",
-      "excerpt": "Just weeks after Legend Biotech announced the departure of its CEO, Ying Huang, K2 Therapeutics has announced that Wang will now lead the startup, which was founded in 2024 with a $50 million seed rou",
-      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-former-legend-ceo-lands-role-k2-therapeuti",
-      "date": "2026-08-17"
-    },
-    {
-      "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis... | AI News",
-      "slug": "anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust",
+      "title": "Flock CEO calls for ‘compromise’ as surveillance company ... | AI News",
+      "slug": "flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-b",
       "topic": "ai",
-      "excerpt": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
-      "url": "https://technanoai.com/news/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust",
-      "date": "2026-08-17"
+      "excerpt": "Flock Safety faces a growing public outcry over concerns that its surveillance technology could be misused.",
+      "url": "https://technanoai.com/news/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-b",
+      "date": "2026-08-24"
     },
     {
-      "title": "Stripe will reportedly acquire AI gateway startup OpenRou... | AI News",
-      "slug": "stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b",
+      "title": "Is it legal to train AI models on copyrighted books? It’s... | AI News",
+      "slug": "is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated",
       "topic": "ai",
-      "excerpt": "OpenRouter's CEO recently described the startup as Stripe for AI.",
-      "url": "https://technanoai.com/news/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b",
-      "date": "2026-08-17"
+      "excerpt": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods. That seems illegal, right?",
+      "url": "https://technanoai.com/news/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated",
+      "date": "2026-08-24"
     },
     {
-      "title": "Anthropic confirms Claude is down in major outage affecti... | Cybersecurity News",
-      "slug": "anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-s",
-      "topic": "cybersecurity",
-      "excerpt": "Claude is experiencing a major outage, with users reporting login problems and degraded performance across several Anthropic services. [...]",
-      "url": "https://technanoai.com/news/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-s",
-      "date": "2026-08-17"
+      "title": "India hits $0.068/kWh tariff in 4-hour peak renewable pow... | Energy Storage News",
+      "slug": "india-hits-0068kwh-tariff-in-4-hour-peak-renewable-power-tender",
+      "topic": "energy",
+      "excerpt": "SECI has discovered a lowest tariff of INR 5.99 ($0.068)/kWh in its 1.5 GW tender for four-hour assured peak renewable power. Waaree Energies secured 700 MW, while NTPC REL and ACME Solar won 500 MW a",
+      "url": "https://technanoai.com/news/india-hits-0068kwh-tariff-in-4-hour-peak-renewable-power-tender",
+      "date": "2026-08-24"
     },
     {
-      "title": "Large-scale DDoS attacks disrupted Threema secure messagi... | Cybersecurity News",
-      "slug": "large-scale-ddos-attacks-disrupted-threema-secure-messaging-service",
-      "topic": "cybersecurity",
-      "excerpt": "Multiple distributed denial-of-service (DDoS) attacks targeted the Threema secure messaging service earlier this week, causing severe disruptions to communications. [...]",
-      "url": "https://technanoai.com/news/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service",
-      "date": "2026-08-17"
+      "title": "Quinbrook advances plans for polysilicon factory in Austr... | Energy Storage News",
+      "slug": "quinbrook-advances-plans-for-polysilicon-factory-in-australia",
+      "topic": "energy",
+      "excerpt": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement wit",
+      "url": "https://technanoai.com/news/quinbrook-advances-plans-for-polysilicon-factory-in-australia",
+      "date": "2026-08-24"
     },
     {
-      "title": "APOD: 2026 August 17 – A Golden Corona Eclipse | Space Exploration News",
-      "slug": "apod-2026-august-17-a-golden-corona-eclipse",
-      "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 August 17 – A… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diffe",
-      "url": "https://technanoai.com/news/apod-2026-august-17-a-golden-corona-eclipse",
-      "date": "2026-08-17"
+      "title": "<a href=\"/biotech/boehringer-benches-phase-1-study-safety... | Biotechnology News",
+      "slug": "a-hrefbiotechboehringer-benches-phase-1-study-safety-event-hreflangenb",
+      "topic": "biotech",
+      "excerpt": "Boehringer Ingelheim has suspended a phase 1 trial of an investigational small molecule drug while it seeks to understand a “safety event,” although the German pharma isn't shedding light on the natur",
+      "url": "https://technanoai.com/news/a-hrefbiotechboehringer-benches-phase-1-study-safety-event-hreflangenb",
+      "date": "2026-08-24"
     },
     {
-      "title": "Firefly promote next block of Alpha amid Eclipse progress | Space Exploration News",
-      "slug": "firefly-promote-next-block-of-alpha-amid-eclipse-progress",
-      "topic": "space",
-      "excerpt": "Firefly Aerospace is advancing on two fronts this month, pushing development of its next-generation medium-lift'\nThe post Firefly promote next block of Alpha amid Eclipse progress appeared first on NA",
-      "url": "https://technanoai.com/news/firefly-promote-next-block-of-alpha-amid-eclipse-progress",
-      "date": "2026-08-17"
+      "title": "<a href=\"/biotech/chutes-ladders-neumora-shuffles-leaders... | Biotechnology News",
+      "slug": "a-hrefbiotechchutes-ladders-neumora-shuffles-leadership-ahead-ind-href",
+      "topic": "biotech",
+      "excerpt": "Joshua Pinto, Ph.D., has been appointed chief executive officer of Neumora Therapeutics, a clinical-stage biotech with obesity and neuro assets.",
+      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-neumora-shuffles-leadership-ahead-ind-href",
+      "date": "2026-08-24"
     },
     {
-      "title": "How robotics is revolutionizing stroke rehabilitation | Robotics News",
-      "slug": "how-robotics-is-revolutionizing-stroke-rehabilitation",
+      "title": "Scientists turn tiny “defects” into a 5.5x heat transfer ... | Quantum Computing News",
+      "slug": "scientists-turn-tiny-defects-into-a-55x-heat-transfer-boost",
+      "topic": "quantum",
+      "excerpt": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation. By turning tiny polymer structures once considered “defects” int",
+      "url": "https://technanoai.com/news/scientists-turn-tiny-defects-into-a-55x-heat-transfer-boost",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "Physicists create a tiny “Big Bang” with surprisingly sma... | Robotics News",
+      "slug": "physicists-create-a-tiny-big-bang-with-surprisingly-small-atomic-nucle",
       "topic": "robotics",
-      "excerpt": "Eyal Samuel Shachar, the CEO of Bioxtreme, says the growing synergy of robotics, AI, and human-centered care will improve patient outcomes.\nThe post How robotics is revolutionizing stroke rehabilitati",
-      "url": "https://technanoai.com/news/how-robotics-is-revolutionizing-stroke-rehabilitation",
-      "date": "2026-08-17"
+      "excerpt": "Researchers at CERN have created microscopic versions of the early Universe by colliding surprisingly small atomic nuclei at nearly the speed of light. The collisions produced quark-gluon plasma, the ",
+      "url": "https://technanoai.com/news/physicists-create-a-tiny-big-bang-with-surprisingly-small-atomic-nucle",
+      "date": "2026-08-24"
     },
     {
-      "title": "TechCrunch Mobility: The shifting flight path of electric... | Autonomous Vehicles News",
-      "slug": "techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis",
+      "title": "Use a digital twin to explore automation before committin... | Robotics News",
+      "slug": "use-a-digital-twin-to-explore-automation-before-committing-capital",
+      "topic": "robotics",
+      "excerpt": "While a digital twin does not necessarily replace a systems integrator, it can help manufacturers evaluate robots and plan applications, says RoboDK.\nThe post Use a digital twin to explore automation ",
+      "url": "https://technanoai.com/news/use-a-digital-twin-to-explore-automation-before-committing-capital",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "ToxicPanda Android malware uses VPN permissions to block ... | Cybersecurity News",
+      "slug": "toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play",
+      "topic": "cybersecurity",
+      "excerpt": "The ToxicPanda Android malware has evolved with new malicious functionality, expanding its targeting to 349 applications and adding support for 167 remote commands. [...]",
+      "url": "https://technanoai.com/news/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "TechCrunch Mobility: The custom chip driving Waymo’s robo... | Autonomous Vehicles News",
+      "slug": "techcrunch-mobility-the-custom-chip-driving-waymos-robotaxi-ambitions",
       "topic": "av",
       "excerpt": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
-      "url": "https://technanoai.com/news/techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis",
-      "date": "2026-08-17"
+      "url": "https://technanoai.com/news/techcrunch-mobility-the-custom-chip-driving-waymos-robotaxi-ambitions",
+      "date": "2026-08-24"
     },
     {
-      "title": "Australia's Cheaper Home Batteries Program officially pas... | Energy Storage News",
-      "slug": "australia8217s-cheaper-home-batteries-program-officially-passes-500000",
-      "topic": "energy",
-      "excerpt": "More than 507,000 households, small businesses and community organisations have installed a home battery storage system under Australia's Cheaper Home Batteries Program, according to figures announced",
-      "url": "https://technanoai.com/news/australia8217s-cheaper-home-batteries-program-officially-passes-500000",
-      "date": "2026-08-17"
-    },
-    {
-      "title": "Australian Renewable Energy Agency backs UNSW research in... | Energy Storage News",
-      "slug": "australian-renewable-energy-agency-backs-unsw-research-into-grid-formi",
-      "topic": "energy",
-      "excerpt": "UNSW receives AU$6.52 million to study how solar, wind and battery storage interact with grid protection systems as Australia transitions to renewables.",
-      "url": "https://technanoai.com/news/australian-renewable-energy-agency-backs-unsw-research-into-grid-formi",
-      "date": "2026-08-17"
+      "title": "Uber faces fine of nearly $1B over automated driver suspe... | Autonomous Vehicles News",
+      "slug": "uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions",
+      "topic": "av",
+      "excerpt": "The Dutch Data Protection Authority is fining Uber €825 million in the second largest penalty issued under Europe’s GDPR.",
+      "url": "https://technanoai.com/news/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions",
+      "date": "2026-08-24"
     }
   ]
 }
