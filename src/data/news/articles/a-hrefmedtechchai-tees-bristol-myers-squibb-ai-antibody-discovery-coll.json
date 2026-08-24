@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1786257451063-1",
+  "id": "biotech-1787553321814-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/blossomhill-latigo-outshine-ipo-expecta... | Biotechnology News",
-  "excerpt": "Two growing biotechs blasted through their IPO expectations Friday, with Blossom Hill Therapeutics and Latigo Biotherapeutics each raising at least 30% more than expected in their stock market debuts.",
-  "date": "2026-08-09",
+  "title": "<a href=\"/medtech/chai-tees-bristol-myers-squibb-ai-antib... | Biotechnology News",
+  "excerpt": "A month after Chai Discovery tied up a major $400 million series C funding round, the AI drug discovery firm has teamed up with Bristol Myers Squibb.",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechblossomhill-latigo-outshine-ipo-expectations-oversubscrib",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/blossomhill-latigo-outshine-ipo-expectations-oversubscribed-debuts",
-  "sourceName": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+  "slug": "a-hrefmedtechchai-tees-bristol-myers-squibb-ai-antibody-discovery-coll",
+  "sourceLink": "https://www.fiercebiotech.com/medtech/chai-tees-bristol-myers-squibb-ai-antibody-discovery-collab-deal",
+  "sourceName": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
   "body": [
     {
       "type": "p",
-      "text": "Two growing biotechs blasted through their IPO expectations Friday, with Blossom Hill Therapeutics and Latigo Biotherapeutics each raising at least 30% more than expected in their stock market debuts."
+      "text": "A month after Chai Discovery tied up a major $400 million series C funding round, the AI drug discovery firm has teamed up with Bristol Myers Squibb."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, Two growing biotechs blasted through their IPO expectations Friday, with Blossom Hill Therapeutics and Latigo Biotherapeutics each raising at least 30% more than expected in their stock market debuts.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>, A month after Chai Discovery tied up a major $400 million series C funding round, the AI drug discovery firm has teamed up with Bristol Myers Squibb.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/blossomhill-latigo-outshine-ipo-expectations-oversubscribed-de — a notable development in Biotechnology",
+    "<a href=\"/medtech/chai-tees-bristol-myers-squibb-ai-antibody-discovery-collab-de — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+      "value": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "<a href=\"/biotech/blossomhill-latigo-outshine-ipo-expectations-oversubscribed-de",
+      "date": "2026-08-24",
+      "event": "<a href=\"/medtech/chai-tees-bristol-myers-squibb-ai-antibody-discovery-collab-de",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "blossomhill",
+    "medtech",
+    "bristol",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/blossomhill-latigo-outshine-ipo-expecta... | Biotechnology News",
-  "metaDescription": "Two growing biotechs blasted through their IPO expectations Friday, with Blossom Hill Therapeutics and Latigo Biotherapeutics each raising at least 30% more ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, blossomhill, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/medtech/chai-tees-bristol-myers-squibb-ai-antib... | Biotechnology News",
+  "metaDescription": "A month after Chai Discovery tied up a major $400 million series C funding round, the AI drug discovery firm has teamed up with Bristol Myers Squibb.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, chai, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786257454866-2",
+  "id": "robotics-1787553326491-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Experts look ahead at the next 20 years of robotics at Ro... | Robotics News",
-  "excerpt": "At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years.\nThe post Experts look ahead at the next 20 years of robotics at",
-  "date": "2026-08-09",
+  "title": "Physicists create a tiny “Big Bang” with surprisingly sma... | Robotics News",
+  "excerpt": "Researchers at CERN have created microscopic versions of the early Universe by colliding surprisingly small atomic nuclei at nearly the speed of light. The collisions produced quark-gluon plasma, the ",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "experts-look-ahead-at-the-next-20-years-of-robotics-at-robobusiness",
-  "sourceLink": "https://www.therobotreport.com/experts-look-ahead-at-the-next-20-years-of-robotics-at-robobusiness/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "physicists-create-a-tiny-big-bang-with-surprisingly-small-atomic-nucle",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260822015143.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years. \nThe post Experts look ahead at the next 20 years of robotics at RoboBusiness appeared first on The Robot Report."
+      "text": "Researchers at CERN have created microscopic versions of the early Universe by colliding surprisingly small atomic nuclei at nearly the speed of light.  The collisions produced quark-gluon plasma, the ultra-hot matter believed to have filled the cosmos shortly after the Big Bang."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years.\nThe post Experts look ahead at the next 20 years of robotics at RoboBusiness appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "Even more intriguingly, the particles left behind reveal the shape of the nuclei that created them, offering a new way to probe both nuclear physics and the Universe’s earliest moments."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Experts look ahead at the next 20 years of robotics at RoboBusiness — a notable development in Robotics",
+    "Physicists create a tiny “Big Bang” with surprisingly small atomic nuclei — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "Experts look ahead at the next 20 years of robotics at RoboBusiness",
+      "date": "2026-08-24",
+      "event": "Physicists create a tiny “Big Bang” with surprisingly small atomic nuclei",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "experts",
-    "ahead",
+    "physicists",
+    "create",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Experts look ahead at the next 20 years of robotics at Ro... | Robotics News",
-  "metaDescription": "At Robobusiness, leaders in robotics will explore the technologies, opportunities, and challenges that will shape the next twenty years.\nThe post Experts loo...",
-  "keywords": "robotics, humanoid robot, automation, drones, experts, look, ahead, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Physicists create a tiny “Big Bang” with surprisingly sma... | Robotics News",
+  "metaDescription": "Researchers at CERN have created microscopic versions of the early Universe by colliding surprisingly small atomic nuclei at nearly the speed of light. The c...",
+  "keywords": "robotics, humanoid robot, automation, drones, physicists, create, tiny, TechNanoAI, emerging tech news",
+  "featured": true
 }

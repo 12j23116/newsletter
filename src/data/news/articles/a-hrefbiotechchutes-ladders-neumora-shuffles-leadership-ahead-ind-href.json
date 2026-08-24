@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1786257451064-5",
+  "id": "biotech-1787553321812-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-a... | Biotechnology News",
-  "excerpt": "Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about CagriSema and more.",
-  "date": "2026-08-09",
+  "title": "<a href=\"/biotech/chutes-ladders-neumora-shuffles-leaders... | Biotechnology News",
+  "excerpt": "Joshua Pinto, Ph.D., has been appointed chief executive officer of Neumora Therapeutics, a clinical-stage biotech with obesity and neuro assets.",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechnovo-nordisks-cfo-oral-wegovy-rollout-and-beyond-hreflang",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/novo-nordisks-cfo-oral-wegovy-rollout-and-beyond",
-  "sourceName": "<a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+  "slug": "a-hrefbiotechchutes-ladders-neumora-shuffles-leadership-ahead-ind-href",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/chutes-ladders-neumora-shuffles-leadership-ahead-ind",
+  "sourceName": "<a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
   "body": [
     {
       "type": "p",
-      "text": "Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about CagriSema and more."
+      "text": "Joshua Pinto, Ph. D."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about CagriSema and more.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": ", has been appointed chief executive officer of Neumora Therapeutics, a clinical-stage biotech with obesity and neuro assets."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-and-beyond\" hreflang=\"en — a notable development in Biotechnology",
+    "<a href=\"/biotech/chutes-ladders-neumora-shuffles-leadership-ahead-ind\" hreflang — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+      "value": "<a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-and-beyond\" hreflang=\"en",
+      "date": "2026-08-24",
+      "event": "<a href=\"/biotech/chutes-ladders-neumora-shuffles-leadership-ahead-ind\" hreflang",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "nordisks",
+    "chutes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/novo-nordisks-cfo-oral-wegovy-rollout-a... | Biotechnology News",
-  "metaDescription": "Novo Nordisk CFO Karsten Munk Knudsen joins “The Top Line” to discuss oral Wegovy’s rollout, the company’s raised outlook, why he’s still optimistic about Ca...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, novo, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/chutes-ladders-neumora-shuffles-leaders... | Biotechnology News",
+  "metaDescription": "Joshua Pinto, Ph.D., has been appointed chief executive officer of Neumora Therapeutics, a clinical-stage biotech with obesity and neuro assets.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, chutes, TechNanoAI, emerging tech news",
   "featured": false
 }

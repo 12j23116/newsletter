@@ -1,21 +1,21 @@
 {
-  "id": "energy-1786257454549-0",
+  "id": "energy-1787553326103-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "New fuel cell breakthrough could help power energy-hungry... | Energy Storage News",
-  "excerpt": "A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient. The breakthrough could help hydrogen fuel cells become a more ",
-  "date": "2026-08-09",
+  "title": "US updates foreign inverter ban to include wired devices | Energy Storage News",
+  "excerpt": "The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligible domestic manufacturing.\nThe post US upd",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "new-fuel-cell-breakthrough-could-help-power-energy-hungry-data-centers",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260807035140.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "us-updates-foreign-inverter-ban-to-include-wired-devices",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/24/fcc-updates-foreign-inverter-ban-to-include-wired-devices-adds-45x-safe-harbor/",
+  "sourceName": "Ryan Kennedy",
   "body": [
     {
       "type": "p",
-      "text": "A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient.  The breakthrough could help hydrogen fuel cells become a more practical way to power data centers, vehicles, and other energy-intensive technologies."
+      "text": "The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligible domestic manufacturing. \nThe post US updates foreign inverter ban to include wired devices appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient. The breakthrough could help hydrogen fuel cells become a more practical way to power data centers, vehicles, and other energy-intensive technologies.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ryan Kennedy, The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligible domestic manufacturing.\nThe post US updates foreign inverter ban to include wired devices appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "New fuel cell breakthrough could help power energy-hungry data centers — a notable development in Energy Storage",
+    "US updates foreign inverter ban to include wired devices — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Ryan Kennedy",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "New fuel cell breakthrough could help power energy-hungry data centers",
+      "date": "2026-08-24",
+      "event": "US updates foreign inverter ban to include wired devices",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "breakthrough",
-    "could",
+    "updates",
+    "foreign",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "New fuel cell breakthrough could help power energy-hungry... | Energy Storage News",
-  "metaDescription": "A new nanostructured carbon design lets fuel-cell catalysts use tiny amounts of platinum while remaining remarkably stable and efficient. The breakthrough co...",
-  "keywords": "energy storage, battery, solid-state, grid storage, fuel, cell, breakthrough, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "US updates foreign inverter ban to include wired devices | Energy Storage News",
+  "metaDescription": "The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligi...",
+  "keywords": "energy storage, battery, solid-state, grid storage, updates, foreign, inverter, TechNanoAI, emerging tech news",
+  "featured": false
 }

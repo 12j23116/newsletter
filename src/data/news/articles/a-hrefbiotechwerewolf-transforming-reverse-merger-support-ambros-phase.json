@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1786257451063-2",
+  "id": "biotech-1787553321812-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/biomarin-axes-270m-rare-disease-asset-a... | Biotechnology News",
-  "excerpt": "BioMarin Pharmaceutical has ended development of BMN 401 in all indications months after reporting mixed phase 3 data on the rare disease prospect.",
-  "date": "2026-08-09",
+  "title": "<a href=\"/biotech/werewolf-transforming-reverse-merger-su... | Biotechnology News",
+  "excerpt": "Werewolf Therapeutics’ hunt for strategic alternatives has ended. Ambros Therapeutics has agreed to merge with Werewolf in an all-stock deal and has raised $150 million, positioning the biotech to tak",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechbiomarin-axes-270m-rare-disease-asset-after-missing-phase",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/biomarin-axes-270m-rare-disease-asset-after-missing-phase-3-endpoint",
+  "slug": "a-hrefbiotechwerewolf-transforming-reverse-merger-support-ambros-phase",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/werewolf-transforming-reverse-merger-support-ambros-phase-3-push",
   "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "BioMarin Pharmaceutical has ended development of BMN 401 in all indications months after reporting mixed phase 3 data on the rare disease prospect."
+      "text": "Werewolf Therapeutics’ hunt for strategic alternatives has ended.  Ambros Therapeutics has agreed to merge with Werewolf in an all-stock deal and has raised $150 million, positioning the biotech to take its lead rare disease drug candidate through to a filing for approval."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, BioMarin Pharmaceutical has ended development of BMN 401 in all indications months after reporting mixed phase 3 data on the rare disease prospect.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, Werewolf Therapeutics’ hunt for strategic alternatives has ended. Ambros Therapeutics has agreed to merge with Werewolf in an all-stock deal and has raised $150 million, positioning the biotech to take its lead rare disease drug candidate through to a filing for approval.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/biomarin-axes-270m-rare-disease-asset-after-missing-phase-3-en — a notable development in Biotechnology",
+    "<a href=\"/biotech/werewolf-transforming-reverse-merger-support-ambros-phase-3-pu — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "<a href=\"/biotech/biomarin-axes-270m-rare-disease-asset-after-missing-phase-3-en",
+      "date": "2026-08-24",
+      "event": "<a href=\"/biotech/werewolf-transforming-reverse-merger-support-ambros-phase-3-pu",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "biomarin",
+    "werewolf",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/biomarin-axes-270m-rare-disease-asset-a... | Biotechnology News",
-  "metaDescription": "BioMarin Pharmaceutical has ended development of BMN 401 in all indications months after reporting mixed phase 3 data on the rare disease prospect.",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, biomarin, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "<a href=\"/biotech/werewolf-transforming-reverse-merger-su... | Biotechnology News",
+  "metaDescription": "Werewolf Therapeutics’ hunt for strategic alternatives has ended. Ambros Therapeutics has agreed to merge with Werewolf in an all-stock deal and has raised $...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, werewolf, TechNanoAI, emerging tech news",
+  "featured": true
 }

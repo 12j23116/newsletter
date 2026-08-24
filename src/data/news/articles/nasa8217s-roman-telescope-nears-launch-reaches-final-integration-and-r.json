@@ -1,21 +1,21 @@
 {
-  "id": "space-1786257450582-1",
+  "id": "space-1787553321134-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Northrop Grumman, Canadian Space Agency repurpose their G... | Space Exploration News",
-  "excerpt": "Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, albeit with few specifics.\nThe post Northro",
-  "date": "2026-08-09",
+  "title": "NASA's Roman telescope nears launch, reaches final integr... | Space Exploration News",
+  "excerpt": "With a scheduled launch date of Aug. 30, NASA's Nancy Grace Roman Space Telescope is'\nThe post NASA's Roman telescope nears launch, reaches final integration and rehearsal milestones appeared first on",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "northrop-grumman-canadian-space-agency-repurpose-their-gateway-project",
-  "sourceLink": "https://spacenews.com/northrop-grumman-canadian-space-agency-repurpose-their-gateway-projects/",
-  "sourceName": "Jeff Foust",
+  "slug": "nasa8217s-roman-telescope-nears-launch-reaches-final-integration-and-r",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/roman-update-082326/",
+  "sourceName": "Haygen Warren",
   "body": [
     {
       "type": "p",
-      "text": "Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, albeit with few specifics. \nThe post Northrop Grumman, Canadian Space Agency repurpose their Gateway projects appeared first on SpaceNews."
+      "text": "With a scheduled launch date of Aug.  30, NASA's Nancy Grace Roman Space Telescope is'\nThe post NASA's Roman telescope nears launch, reaches final integration and rehearsal milestones appeared first on NASASpaceFlight."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jeff Foust, Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, albeit with few specifics.\nThe post Northrop Grumman, Canadian Space Agency repurpose their Gateway projects appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "com."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Northrop Grumman, Canadian Space Agency repurpose their Gateway projects — a notable development in Space Exploration",
+    "NASA's Roman telescope nears launch, reaches final integration and rehearsal mil — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jeff Foust",
+      "value": "Haygen Warren",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "Northrop Grumman, Canadian Space Agency repurpose their Gateway projects",
+      "date": "2026-08-24",
+      "event": "NASA's Roman telescope nears launch, reaches final integration and rehearsal mil",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "northrop",
-    "grumman",
+    "roman",
+    "telescope",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Northrop Grumman, Canadian Space Agency repurpose their G... | Space Exploration News",
-  "metaDescription": "Northrop Grumman and the Canadian Space Agency will adapt what they had been working on for NASA’s lunar Gateway into applications for a planned lunar base, ...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, northrop, grumman, canadian, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "NASA's Roman telescope nears launch, reaches final integr... | Space Exploration News",
+  "metaDescription": "With a scheduled launch date of Aug. 30, NASA's Nancy Grace Roman Space Telescope is'\nThe post NASA's Roman telescope nears launch, reaches final integration...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, roman, telescope, TechNanoAI, emerging tech news",
+  "featured": true
 }

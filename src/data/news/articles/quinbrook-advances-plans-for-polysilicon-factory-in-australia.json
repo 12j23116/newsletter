@@ -1,21 +1,21 @@
 {
-  "id": "energy-1786257454549-1",
+  "id": "energy-1787553326103-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "This tiny gold crystal could bring quantum technology out... | Energy Storage News",
-  "excerpt": "Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing the need for bulky, ultra-cold refrigeration ",
-  "date": "2026-08-09",
+  "title": "Quinbrook advances plans for polysilicon factory in Austr... | Energy Storage News",
+  "excerpt": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement wit",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "this-tiny-gold-crystal-could-bring-quantum-technology-out-of-the-deep-",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260806050706.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "quinbrook-advances-plans-for-polysilicon-factory-in-australia",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/24/quinbrook-advances-plans-for-polysilicon-production-plant/",
+  "sourceName": "David Carroll",
   "body": [
     {
       "type": "p",
-      "text": "Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing the need for bulky, ultra-cold refrigeration systems.  Built from a gold film carved with hundreds of microscopic structures, the ultrathin “metacrystal” acts like a filter that directs different kinds of quantum light along separate paths while preserving the information they carry."
+      "text": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement with the local government authority. \nThe post Quinbrook advances plans for polysilicon factory in Australia appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing the need for bulky, ultra-cold refrigeration systems. Built from a gold film carved with hundreds of microscopic structures, the ultrathin “metacrystal” acts like a filter that directs different kinds of quantum light along separate paths while preserving the information they carry.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from David Carroll, Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement with the local government authority.\nThe post Quinbrook advances plans for polysilicon factory in Australia appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "This tiny gold crystal could bring quantum technology out of the deep freeze — a notable development in Energy Storage",
+    "Quinbrook advances plans for polysilicon factory in Australia — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "David Carroll",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "This tiny gold crystal could bring quantum technology out of the deep freeze",
+      "date": "2026-08-24",
+      "event": "Quinbrook advances plans for polysilicon factory in Australia",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "crystal",
-    "could",
+    "quinbrook",
+    "advances",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "This tiny gold crystal could bring quantum technology out... | Energy Storage News",
-  "metaDescription": "Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing th...",
-  "keywords": "energy storage, battery, solid-state, grid storage, this, tiny, gold, TechNanoAI, emerging tech news",
+  "metaTitle": "Quinbrook advances plans for polysilicon factory in Austr... | Energy Storage News",
+  "metaDescription": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward follo...",
+  "keywords": "energy storage, battery, solid-state, grid storage, quinbrook, advances, plans, TechNanoAI, emerging tech news",
   "featured": false
 }

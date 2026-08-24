@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1786257451064-3",
+  "id": "biotech-1787553321813-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/its-been-rollercoaster-novo-nordisks-cf... | Biotechnology News",
-  "excerpt": "Novo Nordisk CFO Karsten Munk Knudsen spoke to Fierce the morning the company unveiled its second-quarter earnings, reflecting on Novo’s “roller coaster” financial journey, the pressure of navigating ",
-  "date": "2026-08-09",
+  "title": "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-tr... | Biotechnology News",
+  "excerpt": "Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology startup is so far sticking to its transpare",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechits-been-rollercoaster-novo-nordisks-cfo-reflects-pressur",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/its-been-rollercoaster-novo-nordisks-cfo-reflects-pressure-drive-growth",
-  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+  "slug": "a-hrefbiotechwhy-pheasts-ceo-has-no-regrets-about-transparent-approach",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/why-pheasts-ceo-has-no-regrets-about-transparent-approach-despite-competitors-circling",
+  "sourceName": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
   "body": [
     {
       "type": "p",
-      "text": "Novo Nordisk CFO Karsten Munk Knudsen spoke to Fierce the morning the company unveiled its second-quarter earnings, reflecting on Novo’s “roller coaster” financial journey, the pressure of navigating its shifting fortunes and why he remains optimistic about CagriSema."
+      "text": "Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology startup is so far sticking to its transparent approach."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Novo Nordisk CFO Karsten Munk Knudsen spoke to Fierce the morning the company unveiled its second-quarter earnings, reflecting on Novo’s “roller coaster” financial journey, the pressure of navigating its shifting fortunes and why he remains optimistic about CagriSema.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology startup is so far sticking to its transparent approach.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/its-been-rollercoaster-novo-nordisks-cfo-reflects-pressure-dri — a notable development in Biotechnology",
+    "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-transparent-approach-desp — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+      "value": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "<a href=\"/biotech/its-been-rollercoaster-novo-nordisks-cfo-reflects-pressure-dri",
+      "date": "2026-08-24",
+      "event": "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-transparent-approach-desp",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "rollercoaster",
+    "pheasts",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/its-been-rollercoaster-novo-nordisks-cf... | Biotechnology News",
-  "metaDescription": "Novo Nordisk CFO Karsten Munk Knudsen spoke to Fierce the morning the company unveiled its second-quarter earnings, reflecting on Novo’s “roller coaster” fin...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, been, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-tr... | Biotechnology News",
+  "metaDescription": "Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology ...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, pheasts, TechNanoAI, emerging tech news",
   "featured": false
 }

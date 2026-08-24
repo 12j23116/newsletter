@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786257455750-0",
+  "id": "quantum-1787553327359-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "D-Wave Reports Its Q2 2026 Financial Results Showing Book... | Quantum Computing News",
-  "excerpt": "D-Wave Quantum Inc. reported its financial results for the second quarter and first half of 2026, highlighting significant commercial momentum and rapid growth in long-term commitments. While quarterl",
-  "date": "2026-08-09",
+  "title": "Scientists turn tiny “defects” into a 5.5x heat transfer ... | Quantum Computing News",
+  "excerpt": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation. By turning tiny polymer structures once considered “defects” int",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "d-wave-reports-its-q2-2026-financial-results-showing-bookings-surge-te",
-  "sourceLink": "https://quantumcomputingreport.com/d-wave-reports-its-q2-2026-financial-results-showing-bookings-surge-technical-progress-and-qci-acquisition-impact/",
-  "sourceName": "dougfinke",
+  "slug": "scientists-turn-tiny-defects-into-a-55x-heat-transfer-boost",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260823014940.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "D-Wave Quantum Inc.  reported its financial results for the second quarter and first half of 2026, highlighting significant commercial momentum and rapid growth in long-term commitments."
+      "text": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation.  By turning tiny polymer structures once considered “defects” into places where water droplets can form, then helping those droplets detach quickly, the new surface keeps exposing fresh areas for condensation."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "While quarterly revenue remained flat due to system sale timing, the company saw dramatic expansion in its backlog, enterprise engagements, and technical roadmaps across both annealing and gate-model quantum  [..."
+      "text": "In tests on copper tubes, it transferred heat up to 5."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "D-Wave Reports Its Q2 2026 Financial Results Showing Bookings Surge, Technical P — a notable development in Quantum Computing",
+    "Scientists turn tiny “defects” into a 5.5x heat transfer boost — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "dougfinke",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "D-Wave Reports Its Q2 2026 Financial Results Showing Bookings Surge, Technical P",
+      "date": "2026-08-24",
+      "event": "Scientists turn tiny “defects” into a 5.5x heat transfer boost",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "reports",
-    "financial",
+    "scientists",
+    "defects",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "D-Wave Reports Its Q2 2026 Financial Results Showing Book... | Quantum Computing News",
-  "metaDescription": "D-Wave Quantum Inc. reported its financial results for the second quarter and first half of 2026, highlighting significant commercial momentum and rapid grow...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, wave, reports, financial, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Scientists turn tiny “defects” into a 5.5x heat transfer ... | Quantum Computing News",
+  "metaDescription": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation. By turning tiny polym...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, scientists, turn, tiny, TechNanoAI, emerging tech news",
+  "featured": false
 }

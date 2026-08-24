@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1786257451062-0",
+  "id": "biotech-1787553321814-5",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/ensoma-sheds-more-staff-pauses-preclini... | Biotechnology News",
-  "excerpt": "Boston biotech Ensoma is doubling down on its lead gene therapy for a rare immune disease, laying off another round of employees after previously halving its workforce last November.",
-  "date": "2026-08-09",
+  "title": "<a href=\"/biotech/lilly-licenses-amplitudes-rna-vaccine-p... | Biotechnology News",
+  "excerpt": "Eli Lilly has turned to one of its Gateway Labs residents to help the Big Pharma develop trans-amplifying RNA (taRNA) vaccines for infectious diseases.",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechensoma-sheds-more-staff-pauses-preclinical-programs-home-",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/ensoma-sheds-more-staff-pauses-preclinical-programs-home-lead-gene-therapy",
-  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "slug": "a-hrefbiotechlilly-licenses-amplitudes-rna-vaccine-platform-infectious",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/lilly-licenses-amplitudes-rna-vaccine-platform-infectious-disease",
+  "sourceName": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
   "body": [
     {
       "type": "p",
-      "text": "Boston biotech Ensoma is doubling down on its lead gene therapy for a rare immune disease, laying off another round of employees after previously halving its workforce last November."
+      "text": "Eli Lilly has turned to one of its Gateway Labs residents to help the Big Pharma develop trans-amplifying RNA (taRNA) vaccines for infectious diseases."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, Boston biotech Ensoma is doubling down on its lead gene therapy for a rare immune disease, laying off another round of employees after previously halving its workforce last November.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, Eli Lilly has turned to one of its Gateway Labs residents to help the Big Pharma develop trans-amplifying RNA (taRNA) vaccines for infectious diseases.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/ensoma-sheds-more-staff-pauses-preclinical-programs-home-lead- — a notable development in Biotechnology",
+    "<a href=\"/biotech/lilly-licenses-amplitudes-rna-vaccine-platform-infectious-dise — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "<a href=\"/biotech/ensoma-sheds-more-staff-pauses-preclinical-programs-home-lead-",
+      "date": "2026-08-24",
+      "event": "<a href=\"/biotech/lilly-licenses-amplitudes-rna-vaccine-platform-infectious-dise",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "ensoma",
+    "lilly",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/ensoma-sheds-more-staff-pauses-preclini... | Biotechnology News",
-  "metaDescription": "Boston biotech Ensoma is doubling down on its lead gene therapy for a rare immune disease, laying off another round of employees after previously halving its...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, ensoma, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/lilly-licenses-amplitudes-rna-vaccine-p... | Biotechnology News",
+  "metaDescription": "Eli Lilly has turned to one of its Gateway Labs residents to help the Big Pharma develop trans-amplifying RNA (taRNA) vaccines for infectious diseases.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, lilly, TechNanoAI, emerging tech news",
+  "featured": false
 }

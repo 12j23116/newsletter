@@ -1,21 +1,21 @@
 {
-  "id": "space-1786257450582-2",
+  "id": "space-1787553321134-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX West Coast launch surge continues with Starlink mi... | Space Exploration News",
-  "excerpt": "Liftoff of the Starlink 17-38 mission from Vandenberg Space Force Base in California happened at 9:35 a.m. PDT (12:35 p.m. EDT / 1635 UTC).",
-  "date": "2026-08-09",
+  "title": "LandSpace’s Zhuque-3 topples following milestone landing | Space Exploration News",
+  "excerpt": "LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following milestone landing appeared first on NASASpaceFlight",
+  "date": "2026-08-24",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-west-coast-launch-surge-continues-with-starlink-mission",
-  "sourceLink": "https://spaceflightnow.com/2026/08/08/live-coverage-spacex-west-coast-launch-surge-continues-with-starlink-mission/",
-  "sourceName": "Steven Young",
+  "slug": "landspaces-zhuque-3-topples-following-milestone-landing",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/landspaces-zhuque-3-topples/",
+  "sourceName": "Martin Smith and Chris Bergin",
   "body": [
     {
       "type": "p",
-      "text": "Liftoff of the Starlink 17-38 mission from Vandenberg Space Force Base in California happened at 9:35 a. m."
+      "text": "LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following milestone landing appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "PDT (12:35 p. m."
-    },
-    {
-      "type": "p",
-      "text": "EDT / 1635 UTC)."
+      "text": "According to reporting from Martin Smith and Chris Bergin, LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following milestone landing appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX West Coast launch surge continues with Starlink mission — a notable development in Space Exploration",
+    "LandSpace’s Zhuque-3 topples following milestone landing — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Steven Young",
+      "value": "Martin Smith and Chris Bergin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-09",
-      "event": "SpaceX West Coast launch surge continues with Starlink mission",
+      "date": "2026-08-24",
+      "event": "LandSpace’s Zhuque-3 topples following milestone landing",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "coast",
+    "landspace",
+    "zhuque",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX West Coast launch surge continues with Starlink mi... | Space Exploration News",
-  "metaDescription": "Liftoff of the Starlink 17-38 mission from Vandenberg Space Force Base in California happened at 9:35 a.m. PDT (12:35 p.m. EDT / 1635 UTC).",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, west, coast, TechNanoAI, emerging tech news",
+  "metaTitle": "LandSpace’s Zhuque-3 topples following milestone landing | Space Exploration News",
+  "metaDescription": "LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following mileston...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, landspace, zhuque, topples, TechNanoAI, emerging tech news",
   "featured": false
 }
