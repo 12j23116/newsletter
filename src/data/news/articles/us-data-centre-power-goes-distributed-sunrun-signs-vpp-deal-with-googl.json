@@ -1,21 +1,21 @@
 {
-  "id": "energy-1786345786623-0",
+  "id": "energy-1787639342894-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Samsung, Oak Ridge National Laboratory testing cold clima... | Energy Storage News",
-  "excerpt": "Samsung and Oak Ridge National Laboratory are testing a cold-climate vapor-compression heat pump designed to maintain stable heating performance below −30 C. The system combines a rotary scroll compre",
-  "date": "2026-08-10",
+  "title": "US data centre power goes distributed: Sunrun signs VPP d... | Energy Storage News",
+  "excerpt": "Sunrun has agreed with distributed energy resource platform Voltus to support its Bring Your Own Capacity (BYOC) programmes for AI hyperscalers.",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "samsung-oak-ridge-national-laboratory-testing-cold-climate-vapor-compr",
-  "sourceLink": "https://www.pv-magazine.com/2026/08/10/samsung-oak-ridge-national-laboratory-testing-cold-climate-vapor-compression-heat-pump-tech/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "us-data-centre-power-goes-distributed-sunrun-signs-vpp-deal-with-googl",
+  "sourceLink": "https://www.energy-storage.news/us-data-centre-power-goes-distributed-sunrun-signs-vpp-deal-with-google-supplier-voltus/",
+  "sourceName": "Jonathan Touriño Jacobo",
   "body": [
     {
       "type": "p",
-      "text": "Samsung and Oak Ridge National Laboratory are testing a cold-climate vapor-compression heat pump designed to maintain stable heating performance below −30 C.  The system combines a rotary scroll compressor with flash-injection technology to reduce energy losses, prevent overheating and improve reliability during prolonged operation in extreme cold."
+      "text": "Sunrun has agreed with distributed energy resource platform Voltus to support its Bring Your Own Capacity (BYOC) programmes for AI hyperscalers."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Samsung, Oak Ridge National Laboratory testing cold climate vapor compression heat pump tech appeared first on pv magazine Global."
+      "text": "According to reporting from Jonathan Touriño Jacobo, Sunrun has agreed with distributed energy resource platform Voltus to support its Bring Your Own Capacity (BYOC) programmes for AI hyperscalers.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Samsung, Oak Ridge National Laboratory testing cold climate vapor compression he — a notable development in Energy Storage",
+    "US data centre power goes distributed: Sunrun signs VPP deal with Google supplie — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Jonathan Touriño Jacobo",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "Samsung, Oak Ridge National Laboratory testing cold climate vapor compression he",
+      "date": "2026-08-25",
+      "event": "US data centre power goes distributed: Sunrun signs VPP deal with Google supplie",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "samsung",
-    "ridge",
+    "centre",
+    "power",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Samsung, Oak Ridge National Laboratory testing cold clima... | Energy Storage News",
-  "metaDescription": "Samsung and Oak Ridge National Laboratory are testing a cold-climate vapor-compression heat pump designed to maintain stable heating performance below −30 C....",
-  "keywords": "energy storage, battery, solid-state, grid storage, samsung, ridge, national, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "US data centre power goes distributed: Sunrun signs VPP d... | Energy Storage News",
+  "metaDescription": "Sunrun has agreed with distributed energy resource platform Voltus to support its Bring Your Own Capacity (BYOC) programmes for AI hyperscalers.",
+  "keywords": "energy storage, battery, solid-state, grid storage, data, centre, power, TechNanoAI, emerging tech news",
+  "featured": false
 }

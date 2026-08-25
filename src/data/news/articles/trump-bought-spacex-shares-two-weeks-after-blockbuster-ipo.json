@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786345781059-2",
+  "id": "ai-1787639338467-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Anthropic is turning Claude Code’s auto mode on by default | AI News",
-  "excerpt": "Programming with Claude Code will soon require even less human oversight.",
-  "date": "2026-08-10",
+  "title": "Trump bought SpaceX shares two weeks after blockbuster IPO | AI News",
+  "excerpt": "The president bought when the stock was in the mid-$150 range. SpaceX finished trading on Monday back at its IPO price of $135.",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "anthropic-is-turning-claude-codes-auto-mode-on-by-default",
-  "sourceLink": "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
-  "sourceName": "Anthony Ha",
+  "slug": "trump-bought-spacex-shares-two-weeks-after-blockbuster-ipo",
+  "sourceLink": "https://techcrunch.com/2026/08/24/trump-bought-spacex-shares-two-weeks-after-blockbuster-ipo/",
+  "sourceName": "Sean O'Kane",
   "body": [
     {
       "type": "p",
-      "text": "Programming with Claude Code will soon require even less human oversight."
+      "text": "The president bought when the stock was in the mid-$150 range.  SpaceX finished trading on Monday back at its IPO price of $135."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, Programming with Claude Code will soon require even less human oversight.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sean O'Kane, The president bought when the stock was in the mid-$150 range. SpaceX finished trading on Monday back at its IPO price of $135.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Anthropic is turning Claude Code’s auto mode on by default — a notable development in AI",
+    "Trump bought SpaceX shares two weeks after blockbuster IPO — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Sean O'Kane",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "Anthropic is turning Claude Code’s auto mode on by default",
+      "date": "2026-08-25",
+      "event": "Trump bought SpaceX shares two weeks after blockbuster IPO",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anthropic",
-    "turning",
+    "trump",
+    "bought",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Anthropic is turning Claude Code’s auto mode on by default | AI News",
-  "metaDescription": "Programming with Claude Code will soon require even less human oversight. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, turning, claude, TechNanoAI, emerging tech news",
+  "metaTitle": "Trump bought SpaceX shares two weeks after blockbuster IPO | AI News",
+  "metaDescription": "The president bought when the stock was in the mid-$150 range. SpaceX finished trading on Monday back at its IPO price of $135.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, trump, bought, spacex, TechNanoAI, emerging tech news",
   "featured": false
 }

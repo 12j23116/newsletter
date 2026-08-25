@@ -1,21 +1,21 @@
 {
-  "id": "space-1786345782230-1",
+  "id": "space-1787639339724-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Artemis progress building lunar return roadmap | Space Exploration News",
-  "excerpt": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight.com.",
-  "date": "2026-08-10",
+  "title": "Launch Preview: Falcon Heavy to launch Roman telescope, F... | Space Exploration News",
+  "excerpt": "This week will see five orbital launches from China, the United States, and French Guiana.'\nThe post Launch Preview: Falcon Heavy to launch Roman telescope, Falcon 9 to launch Starlink satellites appe",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "artemis-progress-building-lunar-return-roadmap",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/artemis-progress-lunar-return-roadmap/",
-  "sourceName": "Alejandro Alcantarilla Romera, and Chris Bergin",
+  "slug": "launch-preview-falcon-heavy-to-launch-roman-telescope-falcon-9-to-laun",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/launch-preview-082426/",
+  "sourceName": "Eleanor Day",
   "body": [
     {
       "type": "p",
-      "text": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight. com."
+      "text": "This week will see five orbital launches from China, the United States, and French Guiana. '\nThe post Launch Preview: Falcon Heavy to launch Roman telescope, Falcon 9 to launch Starlink satellites appeared first on NASASpaceFlight."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Alejandro Alcantarilla Romera, and Chris Bergin, NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "com."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Artemis progress building lunar return roadmap — a notable development in Space Exploration",
+    "Launch Preview: Falcon Heavy to launch Roman telescope, Falcon 9 to launch Starl — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Alejandro Alcantarilla Romera, and Chris Bergin",
+      "value": "Eleanor Day",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "Artemis progress building lunar return roadmap",
+      "date": "2026-08-25",
+      "event": "Launch Preview: Falcon Heavy to launch Roman telescope, Falcon 9 to launch Starl",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "artemis",
-    "progress",
+    "launch",
+    "preview",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Artemis progress building lunar return roadmap | Space Exploration News",
-  "metaDescription": "NASA has released a series of updates on the Artemis program, spanning commercial robotic lunar'\nThe post Artemis progress building lunar return roadmap appe...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, artemis, progress, building, TechNanoAI, emerging tech news",
+  "metaTitle": "Launch Preview: Falcon Heavy to launch Roman telescope, F... | Space Exploration News",
+  "metaDescription": "This week will see five orbital launches from China, the United States, and French Guiana.'\nThe post Launch Preview: Falcon Heavy to launch Roman telescope, ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, launch, preview, falcon, TechNanoAI, emerging tech news",
   "featured": false
 }

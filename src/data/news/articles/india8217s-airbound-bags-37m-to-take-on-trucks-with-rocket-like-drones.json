@@ -1,21 +1,21 @@
 {
-  "id": "av-1786345787363-0",
+  "id": "av-1787639344100-0",
   "topic": "av",
   "topicLabel": "Autonomous Vehicles",
   "topicColor": "#8b5cf6",
-  "title": "TechCrunch Mobility: Zoox prepares for launch and Uber’s ... | Autonomous Vehicles News",
-  "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
-  "date": "2026-08-10",
+  "title": "India's Airbound bags $37M to take on trucks with rocket-... | Autonomous Vehicles News",
+  "excerpt": "Airbound's ultra-lightweight approach to drone delivery has attracted backing from Greenoaks, DoorDash, and Silicon Valley investor Lachy Groom.",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/006-av-autonomous-vehicle.webp",
-  "slug": "techcrunch-mobility-zoox-prepares-for-launch-and-ubers-av-empire",
-  "sourceLink": "https://techcrunch.com/2026/08/09/techcrunch-mobility-zoox-prepares-for-launch-and-ubers-av-empire/",
-  "sourceName": "Kirsten Korosec",
+  "slug": "india8217s-airbound-bags-37m-to-take-on-trucks-with-rocket-like-drones",
+  "sourceLink": "https://techcrunch.com/2026/08/24/indias-airbound-bags-37m-to-take-on-trucks-with-rocket-like-drones/",
+  "sourceName": "Jagmeet Singh",
   "body": [
     {
       "type": "p",
-      "text": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it."
+      "text": "Airbound's ultra-lightweight approach to drone delivery has attracted backing from Greenoaks, DoorDash, and Silicon Valley investor Lachy Groom."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kirsten Korosec, Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Jagmeet Singh, Airbound's ultra-lightweight approach to drone delivery has attracted backing from Greenoaks, DoorDash, and Silicon Valley investor Lachy Groom.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "TechCrunch Mobility: Zoox prepares for launch and Uber’s AV empire — a notable development in Autonomous Vehicles",
+    "India's Airbound bags $37M to take on trucks with rocket-like drones — a notable development in Autonomous Vehicles",
     "The autonomous vehicles sector continues to accelerate, with robotaxis & level 4 autonomy driving rapid progress",
     "Industry context: Autonomous vehicles are scaling commercially, with robotaxi services operating in 40+ cities and Lev...",
     "Challenges remain: Edge case handling in dense urban environments, regulatory frameworks for driver...",
@@ -120,7 +120,7 @@
       "change": "Robotaxis & Level 4 autonomy"
     },
     {
-      "value": "Kirsten Korosec",
+      "value": "Jagmeet Singh",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "TechCrunch Mobility: Zoox prepares for launch and Uber’s AV empire",
+      "date": "2026-08-25",
+      "event": "India's Airbound bags $37M to take on trucks with rocket-like drones",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "autonomous vehicles",
     "self-driving",
-    "techcrunch",
-    "mobility",
+    "india",
+    "airbound",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "TechCrunch Mobility: Zoox prepares for launch and Uber’s ... | Autonomous Vehicles News",
-  "metaDescription": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
-  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, techcrunch, mobility, zoox, TechNanoAI, emerging tech news",
+  "metaTitle": "India's Airbound bags $37M to take on trucks with rocket-... | Autonomous Vehicles News",
+  "metaDescription": "Airbound's ultra-lightweight approach to drone delivery has attracted backing from Greenoaks, DoorDash, and Silicon Valley investor Lachy Groom.",
+  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, india, airbound, bags, TechNanoAI, emerging tech news",
   "featured": true
 }

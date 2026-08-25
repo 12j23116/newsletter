@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786345781482-1",
+  "id": "cybersecurity-1787639338935-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Critical Flaws Discovered in Belgian eID Software Used by... | Cybersecurity News",
-  "excerpt": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People ",
-  "date": "2026-08-10",
+  "title": "Hackers target WordPress sites in miniOrange auth bypass ... | Cybersecurity News",
+  "excerpt": "Hackers are attempting to exploit two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress that can be used to forge SAML responses and log in ",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-pe",
-  "sourceLink": "https://www.securityweek.com/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-people/",
-  "sourceName": "Eduard Kovacs",
+  "slug": "hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies. \nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People appeared first on SecurityWeek."
+      "text": "Hackers are attempting to exploit two critical authentication bypass vulnerabilities in the miniOrange SAML 2. 0 Single Sign On plugin for WordPress that can be used to forge SAML responses and log in as administrators."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Eduard Kovacs, The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Belgian eID Software Used by 2 Million People appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "[..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Critical Flaws Discovered in Belgian eID Software Used by 2 Million People — a notable development in Cybersecurity",
+    "Hackers target WordPress sites in miniOrange auth bypass attacks — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Eduard Kovacs",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "Critical Flaws Discovered in Belgian eID Software Used by 2 Million People",
+      "date": "2026-08-25",
+      "event": "Hackers target WordPress sites in miniOrange auth bypass attacks",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "critical",
-    "flaws",
+    "hackers",
+    "target",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Critical Flaws Discovered in Belgian eID Software Used by... | Cybersecurity News",
-  "metaDescription": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered in Bel...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, critical, flaws, discovered, TechNanoAI, emerging tech news",
+  "metaTitle": "Hackers target WordPress sites in miniOrange auth bypass ... | Cybersecurity News",
+  "metaDescription": "Hackers are attempting to exploit two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress that can ...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, target, wordpress, TechNanoAI, emerging tech news",
   "featured": false
 }

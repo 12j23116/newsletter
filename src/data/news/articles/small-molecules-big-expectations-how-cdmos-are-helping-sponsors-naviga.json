@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1786345782961-4",
+  "id": "biotech-1787639340538-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hre... | Biotechnology News",
-  "excerpt": "As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team.",
-  "date": "2026-08-10",
+  "title": "Small Molecules, Big Expectations: How CDMOs Are Helping ... | Biotechnology News",
+  "excerpt": "In this sponsoredGEN Podcast – part 2 in a 3-part series -- a trio of experts from SK Pharmteco discuss how CDMOs are helping biopharma companies navigate critical areas including scale-up, technology",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechfierce-biotech-layoff-tracker-2026-hreflangenfierce-biote",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/fierce-biotech-layoff-tracker-2026",
-  "sourceName": "<a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
+  "slug": "small-molecules-big-expectations-how-cdmos-are-helping-sponsors-naviga",
+  "sourceLink": "https://www.genengnews.com/multimedia/podcasts/gencast/small-molecules-big-expectations-how-cdmos-are-helping-sponsors-navigate-complexity-speed-scale-up-and-sustainability/",
+  "sourceName": "Kathy Vuksanaj",
   "body": [
     {
       "type": "p",
-      "text": "As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team."
+      "text": "In this sponsoredGEN Podcast – part 2 in a 3-part series -- a trio of experts from SK Pharmteco discuss how CDMOs are helping biopharma companies navigate critical areas including scale-up, technology transfer, advanced manufacturing, automation, sustainability, the emergence of AI, and supply chain reliability."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Kathy Vuksanaj, In this sponsoredGEN Podcast – part 2 in a 3-part series -- a trio of experts from SK Pharmteco discuss how CDMOs are helping biopharma companies navigate critical areas including scale-up, technology transfer, advanced manufacturing, automation, sustainability, the emergence of AI, and supply chain reliability. \nThe post Small Molecules, Big Expectations: How CDMOs Are Helping Sponsors Navigate Complexity, Speed, Scale-Up, and Sustainability appeared first on GEN - Genetic Engineering and Biote. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hreflang=\"en\">Fierce Biote — a notable development in Biotechnology",
+    "Small Molecules, Big Expectations: How CDMOs Are Helping Sponsors Navigate Compl — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/gabrielle-masson-0\" hreflang=\"en\">Gabrielle Masson</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
+      "value": "Kathy Vuksanaj",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hreflang=\"en\">Fierce Biote",
+      "date": "2026-08-25",
+      "event": "Small Molecules, Big Expectations: How CDMOs Are Helping Sponsors Navigate Compl",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "fierce",
+    "small",
+    "molecules",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/fierce-biotech-layoff-tracker-2026\" hre... | Biotechnology News",
-  "metaDescription": "As always, if you know of layoffs occurring at a biotech, please reach out to the Fierce Biotech editorial team. CRISPR, mRNA & lab-grown organs. Latest Biotech",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, fierce, TechNanoAI, emerging tech news",
+  "metaTitle": "Small Molecules, Big Expectations: How CDMOs Are Helping ... | Biotechnology News",
+  "metaDescription": "In this sponsoredGEN Podcast – part 2 in a 3-part series -- a trio of experts from SK Pharmteco discuss how CDMOs are helping biopharma companies navigate cr...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, small, molecules, expectations, TechNanoAI, emerging tech news",
   "featured": false
 }

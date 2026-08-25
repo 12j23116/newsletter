@@ -1,21 +1,21 @@
 {
-  "id": "energy-1786345786624-1",
+  "id": "energy-1787639342893-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "India's round-the-clock renewables tender attracts lowest... | Energy Storage News",
-  "excerpt": "The Solar Energy Corp. of India (SECI) has discovered a lowest tariff of INR 5.25/kWh in its tender to procure 1 GW of firm and dispatchable renewable energy (FDRE) on a round-the-clock (RTC) basis fr",
-  "date": "2026-08-10",
+  "title": "40 GW project pipeline has Australia’s energy transition ... | Energy Storage News",
+  "excerpt": "A pipeline of about 40 GW of grid-scale renewable generation and energy storage has Australia on track to maintain electricity reliability as ageing coal-fired power stations retire but the market ope",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "india8217s-round-the-clock-renewables-tender-attracts-lowest-bid-of-00",
-  "sourceLink": "https://www.pv-magazine.com/2026/08/10/secis-1-gw-fdre-rtc-power-tender-discovers-inr-5-25-kwh-tariff/",
-  "sourceName": "Uma Gupta",
+  "slug": "40-gw-project-pipeline-has-australias-energy-transition-on-track",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/25/40-gw-project-pipeline-has-australias-energy-transition-on-track/",
+  "sourceName": "David Carroll",
   "body": [
     {
       "type": "p",
-      "text": "The Solar Energy Corp.  of India (SECI) has discovered a lowest tariff of INR 5."
+      "text": "A pipeline of about 40 GW of grid-scale renewable generation and energy storage has Australia on track to maintain electricity reliability as ageing coal-fired power stations retire but the market operator warns the transition depends on these projects being delivered, not just announced. \nThe post 40 GW project pipeline has Australia’s energy transition on track appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "25/kWh in its tender to procure 1 GW of firm and dispatchable renewable energy (FDRE) on a round-the-clock (RTC) basis from ISTS-connected renewable energy projects. \nThe post India's round-the-clock renewables tender attracts lowest bid of $0."
-    },
-    {
-      "type": "p",
-      "text": "055/kWh appeared first on pv magazine Global."
+      "text": "According to reporting from David Carroll, A pipeline of about 40 GW of grid-scale renewable generation and energy storage has Australia on track to maintain electricity reliability as ageing coal-fired power stations retire but the market operator warns the transition depends on these projects being delivered, not just announced.\nThe post 40 GW project pipeline has Australia’s energy transition on track appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "India's round-the-clock renewables tender attracts lowest bid of $0.055/kWh — a notable development in Energy Storage",
+    "40 GW project pipeline has Australia’s energy transition on track — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -124,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Uma Gupta",
+      "value": "David Carroll",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "India's round-the-clock renewables tender attracts lowest bid of $0.055/kWh",
+      "date": "2026-08-25",
+      "event": "40 GW project pipeline has Australia’s energy transition on track",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "india",
-    "round",
+    "project",
+    "pipeline",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "India's round-the-clock renewables tender attracts lowest... | Energy Storage News",
-  "metaDescription": "The Solar Energy Corp. of India (SECI) has discovered a lowest tariff of INR 5.25/kWh in its tender to procure 1 GW of firm and dispatchable renewable energy...",
-  "keywords": "energy storage, battery, solid-state, grid storage, india, round, clock, TechNanoAI, emerging tech news",
+  "metaTitle": "40 GW project pipeline has Australia’s energy transition ... | Energy Storage News",
+  "metaDescription": "A pipeline of about 40 GW of grid-scale renewable generation and energy storage has Australia on track to maintain electricity reliability as ageing coal-fir...",
+  "keywords": "energy storage, battery, solid-state, grid storage, project, pipeline, australia, TechNanoAI, emerging tech news",
   "featured": false
 }

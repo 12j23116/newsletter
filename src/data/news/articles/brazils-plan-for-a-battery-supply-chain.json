@@ -1,21 +1,21 @@
 {
-  "id": "energy-1786345786624-2",
+  "id": "energy-1787639342893-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "PV Progress across Latin America | Energy Storage News",
-  "excerpt": "InfoLink’s Jenny Lin shares the latest analysis on the key markets accounting for nearly 80% of Latin America’s total PV capacity as solar continues to grow its share of regional electricity generatio",
-  "date": "2026-08-10",
+  "title": "Brazil’s plan for a battery supply chain | Energy Storage News",
+  "excerpt": "Battery manufacturing in Brazil is being spurred by local content requirements for country’s December 2026 energy storage auction, as well as the financing terms from Brazilian development bank BNDES ",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "pv-progress-across-latin-america",
-  "sourceLink": "https://www.pv-magazine.com/2026/08/10/pv-progress-across-latin-america/",
+  "slug": "brazils-plan-for-a-battery-supply-chain",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/25/brazils-plan-for-a-battery-supply-chain/",
   "sourceName": "Mark Hutchins",
   "body": [
     {
       "type": "p",
-      "text": "InfoLink’s Jenny Lin shares the latest analysis on the key markets accounting for nearly 80% of Latin America’s total PV capacity as solar continues to grow its share of regional electricity generation.  Following years of accelerating deployment, Latin America is entering a new phase – one requiring investment in energy storage and grid infrastructure."
+      "text": "Battery manufacturing in Brazil is being spurred by local content requirements for country’s December 2026 energy storage auction, as well as the financing terms from Brazilian development bank BNDES that are favorable to locally made products.  Domestic and foreign suppliers are already announcing investments in battery manufacturing facilities."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post PV Progress across Latin America appeared first on pv magazine Global."
+      "text": "The post Brazil’s plan for a battery supply chain appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "PV Progress across Latin America — a notable development in Energy Storage",
+    "Brazil’s plan for a battery supply chain — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "PV Progress across Latin America",
+      "date": "2026-08-25",
+      "event": "Brazil’s plan for a battery supply chain",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "progress",
-    "across",
+    "brazil",
+    "battery",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "PV Progress across Latin America | Energy Storage News",
-  "metaDescription": "InfoLink’s Jenny Lin shares the latest analysis on the key markets accounting for nearly 80% of Latin America’s total PV capacity as solar continues to grow ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, progress, across, latin, TechNanoAI, emerging tech news",
+  "metaTitle": "Brazil’s plan for a battery supply chain | Energy Storage News",
+  "metaDescription": "Battery manufacturing in Brazil is being spurred by local content requirements for country’s December 2026 energy storage auction, as well as the financing t...",
+  "keywords": "energy storage, battery, solid-state, grid storage, brazil, plan, battery, TechNanoAI, emerging tech news",
   "featured": false
 }

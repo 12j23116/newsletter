@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786345787722-0",
+  "id": "quantum-1787639344486-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Chemists set electrons free and break a decades-old chemi... | Quantum Computing News",
-  "excerpt": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing electrons directly into solution, the technique ",
-  "date": "2026-08-10",
+  "title": "Japan Operationalizes First Full-Stack Neutral-Atom Quant... | Quantum Computing News",
+  "excerpt": "The Institute for Molecular Science (IMS), part of Japan's National Institutes of Natural Sciences (NINS), has announced that Japan’s first full-stack neutral-atom quantum computer, named \"Shunkai\" (春",
+  "date": "2026-08-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "chemists-set-electrons-free-and-break-a-decades-old-chemistry-barrier",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260807035147.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "japan-operationalizes-first-full-stack-neutral-atom-quantum-computer-8",
+  "sourceLink": "https://quantumcomputingreport.com/japan-operationalizes-first-full-stack-neutral-atom-quantum-computer-shunkai/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions.  By releasing electrons directly into solution, the technique could unlock reactions—and potentially useful new molecules—that were previously out of reach."
+      "text": "The Institute for Molecular Science (IMS), part of Japan's National Institutes of Natural Sciences (NINS), has announced that Japan’s first full-stack neutral-atom quantum computer, named \"Shunkai\" (春海), is now operational.  Led by Project Manager Professor Kenji Ohmori under Goal 6 of the Japanese Cabinet Office / JST Moonshot Research and Development Program, the platform was  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing electrons directly into solution, the technique could unlock reactions—and potentially useful new molecules—that were previously out of reach.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mohamed Abdel-Kareem, The Institute for Molecular Science (IMS), part of Japan's National Institutes of Natural Sciences (NINS), has announced that Japan’s first full-stack neutral-atom quantum computer, named \"Shunkai\" (春海), is now operational. Led by Project Manager Professor Kenji Ohmori under Goal 6 of the Japanese Cabinet Office / JST Moonshot Research and Development Program, the platform was  [...]\nThe post Japan Operationalizes First Full-Stack Neutral-Atom Quantum Computer 'Shunkai' appeared firs. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Chemists set electrons free and break a decades-old chemistry barrier — a notable development in Quantum Computing",
+    "Japan Operationalizes First Full-Stack Neutral-Atom Quantum Computer 'Shunkai' — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-10",
-      "event": "Chemists set electrons free and break a decades-old chemistry barrier",
+      "date": "2026-08-25",
+      "event": "Japan Operationalizes First Full-Stack Neutral-Atom Quantum Computer 'Shunkai'",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "chemists",
-    "electrons",
+    "japan",
+    "operationalizes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Chemists set electrons free and break a decades-old chemi... | Quantum Computing News",
-  "metaDescription": "Chemists have developed a catalyst that breaks a long-standing rule governing which molecules receive electrons during chemical reactions. By releasing elect...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, chemists, electrons, free, TechNanoAI, emerging tech news",
+  "metaTitle": "Japan Operationalizes First Full-Stack Neutral-Atom Quant... | Quantum Computing News",
+  "metaDescription": "The Institute for Molecular Science (IMS), part of Japan's National Institutes of Natural Sciences (NINS), has announced that Japan’s first full-stack neutra...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, japan, operationalizes, first, TechNanoAI, emerging tech news",
   "featured": true
 }
