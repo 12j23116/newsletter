@@ -1,21 +1,21 @@
 {
-  "id": "space-1786691281376-4",
+  "id": "space-1788004585132-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Maritime Satellite Service Revenues to Reach $3.79 Billio... | Space Exploration News",
-  "excerpt": "Paris, France ' July 2026 — The maritime satellite communications market is entering a new phase of growth as next-generation satellite networks transform connectivity at sea. According to Novaspace’s",
-  "date": "2026-08-14",
+  "title": "NASA's Artemis II Crew Receives Congressional Space Medal... | Space Exploration News",
+  "excerpt": "From left to right: NASA astronauts Victor Glover and Christina Koch, CSA (Canadian Space Agency) astronaut Jeremy Hansen, and NASA astronaut Reid Wiseman receive the Congressional Space Medal of Hono",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "maritime-satellite-service-revenues-to-reach-379-billion-by-2035-as-ng",
-  "sourceLink": "https://spacenews.com/maritime-satellite-service-revenues-to-reach-3-79-billion-by-2035-as-ngso-reshapes-maritime-connectivity/",
-  "sourceName": "Novaspace",
+  "slug": "nasa8217s-artemis-ii-crew-receives-congressional-space-medal-of-honor",
+  "sourceLink": "https://www.nasa.gov/image-article/nasas-artemis-ii-crew-receives-congressional-space-medal-of-honor/",
+  "sourceName": "HQ Web Team",
   "body": [
     {
       "type": "p",
-      "text": "Paris, France ' July 2026 — The maritime satellite communications market is entering a new phase of growth as next-generation satellite networks transform connectivity at sea.  According to Novaspace’s newly [']\nThe post Maritime Satellite Service Revenues to Reach $3."
+      "text": "From left to right: NASA astronauts Victor Glover and Christina Koch, CSA (Canadian Space Agency) astronaut Jeremy Hansen, and NASA astronaut Reid Wiseman receive the Congressional Space Medal of Honor from President Donald J.  Trump on Aug."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "79 Billion by 2035 as NGSO Reshapes Maritime Connectivity appeared first on SpaceNews."
+      "text": "28, 2026, for their service during the Artemis II mission."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Maritime Satellite Service Revenues to Reach $3.79 Billion by 2035 as NGSO Resha — a notable development in Space Exploration",
+    "NASA's Artemis II Crew Receives Congressional Space Medal of Honor — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Novaspace",
+      "value": "HQ Web Team",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Maritime Satellite Service Revenues to Reach $3.79 Billion by 2035 as NGSO Resha",
+      "date": "2026-08-29",
+      "event": "NASA's Artemis II Crew Receives Congressional Space Medal of Honor",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "maritime",
-    "satellite",
+    "artemis",
+    "receives",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Maritime Satellite Service Revenues to Reach $3.79 Billio... | Space Exploration News",
-  "metaDescription": "Paris, France ' July 2026 — The maritime satellite communications market is entering a new phase of growth as next-generation satellite networks transform co...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, maritime, satellite, service, TechNanoAI, emerging tech news",
+  "metaTitle": "NASA's Artemis II Crew Receives Congressional Space Medal... | Space Exploration News",
+  "metaDescription": "From left to right: NASA astronauts Victor Glover and Christina Koch, CSA (Canadian Space Agency) astronaut Jeremy Hansen, and NASA astronaut Reid Wiseman re...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, artemis, crew, TechNanoAI, emerging tech news",
   "featured": false
 }

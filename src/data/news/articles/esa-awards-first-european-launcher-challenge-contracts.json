@@ -1,21 +1,21 @@
 {
-  "id": "space-1786691281376-5",
+  "id": "space-1788004585131-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Paragon lays off staff after Gateway cancellation | Space Exploration News",
-  "excerpt": "A subcontractor for a module that was being developed for NASA’s lunar Gateway has laid off 70 people after NASA halted work on the program.\nThe post Paragon lays off staff after Gateway cancellation ",
-  "date": "2026-08-14",
+  "title": "ESA awards first European Launcher Challenge contracts | Space Exploration News",
+  "excerpt": "The European Space Agency has signed the first contracts under its European Launcher Challenge, committing'\nThe post ESA awards first European Launcher Challenge contracts appeared first on NASASpaceF",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "paragon-lays-off-staff-after-gateway-cancellation",
-  "sourceLink": "https://spacenews.com/paragon-lays-off-staff-after-gateway-cancellation/",
-  "sourceName": "Jeff Foust",
+  "slug": "esa-awards-first-european-launcher-challenge-contracts",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/esa-european-launcher-challenge-contracts/",
+  "sourceName": "Martijn Luinstra and Chris Bergin",
   "body": [
     {
       "type": "p",
-      "text": "A subcontractor for a module that was being developed for NASA’s lunar Gateway has laid off 70 people after NASA halted work on the program. \nThe post Paragon lays off staff after Gateway cancellation appeared first on SpaceNews."
+      "text": "The European Space Agency has signed the first contracts under its European Launcher Challenge, committing'\nThe post ESA awards first European Launcher Challenge contracts appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jeff Foust, A subcontractor for a module that was being developed for NASA’s lunar Gateway has laid off 70 people after NASA halted work on the program.\nThe post Paragon lays off staff after Gateway cancellation appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Martijn Luinstra and Chris Bergin, The European Space Agency has signed the first contracts under its European Launcher Challenge, committing'\nThe post ESA awards first European Launcher Challenge contracts appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Paragon lays off staff after Gateway cancellation — a notable development in Space Exploration",
+    "ESA awards first European Launcher Challenge contracts — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jeff Foust",
+      "value": "Martijn Luinstra and Chris Bergin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Paragon lays off staff after Gateway cancellation",
+      "date": "2026-08-29",
+      "event": "ESA awards first European Launcher Challenge contracts",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "paragon",
-    "staff",
+    "awards",
+    "first",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Paragon lays off staff after Gateway cancellation | Space Exploration News",
-  "metaDescription": "A subcontractor for a module that was being developed for NASA’s lunar Gateway has laid off 70 people after NASA halted work on the program.\nThe post Paragon...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, paragon, lays, staff, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "ESA awards first European Launcher Challenge contracts | Space Exploration News",
+  "metaDescription": "The European Space Agency has signed the first contracts under its European Launcher Challenge, committing'\nThe post ESA awards first European Launcher Chall...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, awards, first, european, TechNanoAI, emerging tech news",
+  "featured": true
 }

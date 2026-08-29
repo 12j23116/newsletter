@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786691286515-1",
+  "id": "robotics-1788004599556-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "ARM Institute calls for defense manufacturing technology ... | Robotics News",
-  "excerpt": "The ARM Institute and the U.S. Department of War are seeking technology project submissions to help rapid U.S. production.\nThe post ARM Institute calls for defense manufacturing technology projects ap",
-  "date": "2026-08-14",
+  "title": "Deere faces headwinds in Q3 update and announces Reservoi... | Robotics News",
+  "excerpt": "Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative.\nThe post Deere faces headwinds in Q3 update and announces Reservoir R'D partnership app",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "arm-institute-calls-for-defense-manufacturing-technology-projects",
-  "sourceLink": "https://www.therobotreport.com/arm-institute-calls-for-defense-manufacturing-technology-project/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "deere-faces-headwinds-in-q3-update-and-announces-reservoir-r038d-partn",
+  "sourceLink": "https://www.therobotreport.com/deere-faces-headwinds-in-q3-update-and-announces-10m-reservoir-rd-partnership/",
+  "sourceName": "Mike Oitzman",
   "body": [
     {
       "type": "p",
-      "text": "The ARM Institute and the U. S."
+      "text": "Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative. \nThe post Deere faces headwinds in Q3 update and announces Reservoir R'D partnership appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Department of War are seeking technology project submissions to help rapid U. S."
-    },
-    {
-      "type": "p",
-      "text": "production. \nThe post ARM Institute calls for defense manufacturing technology projects appeared first on The Robot Report."
+      "text": "According to reporting from Mike Oitzman, Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative.\nThe post Deere faces headwinds in Q3 update and announces Reservoir R'D partnership appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "ARM Institute calls for defense manufacturing technology projects — a notable development in Robotics",
+    "Deere faces headwinds in Q3 update and announces Reservoir R'D partnership — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -124,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Mike Oitzman",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "ARM Institute calls for defense manufacturing technology projects",
+      "date": "2026-08-29",
+      "event": "Deere faces headwinds in Q3 update and announces Reservoir R'D partnership",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "institute",
-    "calls",
+    "deere",
+    "faces",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "ARM Institute calls for defense manufacturing technology ... | Robotics News",
-  "metaDescription": "The ARM Institute and the U.S. Department of War are seeking technology project submissions to help rapid U.S. production.\nThe post ARM Institute calls for d...",
-  "keywords": "robotics, humanoid robot, automation, drones, institute, calls, defense, TechNanoAI, emerging tech news",
+  "metaTitle": "Deere faces headwinds in Q3 update and announces Reservoi... | Robotics News",
+  "metaDescription": "Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative.\nThe post Deere faces headwinds in Q3 update ...",
+  "keywords": "robotics, humanoid robot, automation, drones, deere, faces, headwinds, TechNanoAI, emerging tech news",
   "featured": false
 }

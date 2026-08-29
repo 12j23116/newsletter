@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786691280610-0",
+  "id": "cybersecurity-1788004584023-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Hackers Exploiting Unpatched GeoServer Zero-Day | Cybersecurity News",
-  "excerpt": "The security defect is described as an SQL injection that could allow attackers to achieve remote code execution.\nThe post Hackers Exploiting Unpatched GeoServer Zero-Day appeared first on SecurityWee",
-  "date": "2026-08-14",
+  "title": "Hasbro Data Breach Exposed Employee Personal Information | Cybersecurity News",
+  "excerpt": "A cyberattack caused disruptions at the toy and game giant earlier this year and the company is now disclosing a data breach.\nThe post Hasbro Data Breach Exposed Employee Personal Information appeared",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "hackers-exploiting-unpatched-geoserver-zero-day",
-  "sourceLink": "https://www.securityweek.com/hackers-exploiting-unpatched-geoserver-zero-day/",
-  "sourceName": "Ionut Arghire",
+  "slug": "hasbro-data-breach-exposed-employee-personal-information",
+  "sourceLink": "https://www.securityweek.com/hasbro-data-breach-exposed-employee-personal-information/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "The security defect is described as an SQL injection that could allow attackers to achieve remote code execution. \nThe post Hackers Exploiting Unpatched GeoServer Zero-Day appeared first on SecurityWeek."
+      "text": "A cyberattack caused disruptions at the toy and game giant earlier this year and the company is now disclosing a data breach. \nThe post Hasbro Data Breach Exposed Employee Personal Information appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The security defect is described as an SQL injection that could allow attackers to achieve remote code execution.\nThe post Hackers Exploiting Unpatched GeoServer Zero-Day appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eduard Kovacs, A cyberattack caused disruptions at the toy and game giant earlier this year and the company is now disclosing a data breach.\nThe post Hasbro Data Breach Exposed Employee Personal Information appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hackers Exploiting Unpatched GeoServer Zero-Day — a notable development in Cybersecurity",
+    "Hasbro Data Breach Exposed Employee Personal Information — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Hackers Exploiting Unpatched GeoServer Zero-Day",
+      "date": "2026-08-29",
+      "event": "Hasbro Data Breach Exposed Employee Personal Information",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "hackers",
-    "exploiting",
+    "hasbro",
+    "breach",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hackers Exploiting Unpatched GeoServer Zero-Day | Cybersecurity News",
-  "metaDescription": "The security defect is described as an SQL injection that could allow attackers to achieve remote code execution.\nThe post Hackers Exploiting Unpatched GeoSe...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, exploiting, unpatched, TechNanoAI, emerging tech news",
+  "metaTitle": "Hasbro Data Breach Exposed Employee Personal Information | Cybersecurity News",
+  "metaDescription": "A cyberattack caused disruptions at the toy and game giant earlier this year and the company is now disclosing a data breach.\nThe post Hasbro Data Breach Exp...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, hasbro, data, breach, TechNanoAI, emerging tech news",
   "featured": true
 }

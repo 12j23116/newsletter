@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786691286517-3",
+  "id": "robotics-1788004599556-2",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "BioflexBot robot hand aims to replicate key human hand mo... | Robotics News",
-  "excerpt": "Researchers created the BioflexBot, a novel robot that mimics and even exceeds core motions of the hand with a simple design.\nThe post BioflexBot robot hand aims to replicate key human hand motions ap",
-  "date": "2026-08-14",
+  "title": "EXL acquires physical AI model developer iMerit | Robotics News",
+  "excerpt": "The EXL and iMerit executives explain how their companies' combined expertise and platforms will help developers with reliable physical AI.\nThe post EXL acquires physical AI model developer iMerit app",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "bioflexbot-robot-hand-aims-to-replicate-key-human-hand-motions",
-  "sourceLink": "https://www.therobotreport.com/bioflexbot-robot-hand-aims-to-replicate-key-human-hand-motions/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "exl-acquires-physical-ai-model-developer-imerit",
+  "sourceLink": "https://www.therobotreport.com/exl-acquires-physical-ai-model-developer-imerit/",
+  "sourceName": "Eugene Demaitre",
   "body": [
     {
       "type": "p",
-      "text": "Researchers created the BioflexBot, a novel robot that mimics and even exceeds core motions of the hand with a simple design. \nThe post BioflexBot robot hand aims to replicate key human hand motions appeared first on The Robot Report."
+      "text": "The EXL and iMerit executives explain how their companies' combined expertise and platforms will help developers with reliable physical AI. \nThe post EXL acquires physical AI model developer iMerit appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, Researchers created the BioflexBot, a novel robot that mimics and even exceeds core motions of the hand with a simple design.\nThe post BioflexBot robot hand aims to replicate key human hand motions appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eugene Demaitre, The EXL and iMerit executives explain how their companies' combined expertise and platforms will help developers with reliable physical AI.\nThe post EXL acquires physical AI model developer iMerit appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "BioflexBot robot hand aims to replicate key human hand motions — a notable development in Robotics",
+    "EXL acquires physical AI model developer iMerit — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Eugene Demaitre",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "BioflexBot robot hand aims to replicate key human hand motions",
+      "date": "2026-08-29",
+      "event": "EXL acquires physical AI model developer iMerit",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "bioflexbot",
-    "robot",
+    "acquires",
+    "physical",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "BioflexBot robot hand aims to replicate key human hand mo... | Robotics News",
-  "metaDescription": "Researchers created the BioflexBot, a novel robot that mimics and even exceeds core motions of the hand with a simple design.\nThe post BioflexBot robot hand ...",
-  "keywords": "robotics, humanoid robot, automation, drones, bioflexbot, robot, hand, TechNanoAI, emerging tech news",
+  "metaTitle": "EXL acquires physical AI model developer iMerit | Robotics News",
+  "metaDescription": "The EXL and iMerit executives explain how their companies' combined expertise and platforms will help developers with reliable physical AI.\nThe post EXL acqu...",
+  "keywords": "robotics, humanoid robot, automation, drones, acquires, physical, model, TechNanoAI, emerging tech news",
   "featured": false
 }

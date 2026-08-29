@@ -1,21 +1,21 @@
 {
-  "id": "av-1786691287017-0",
+  "id": "av-1788004600088-0",
   "topic": "av",
   "topicLabel": "Autonomous Vehicles",
   "topicColor": "#8b5cf6",
-  "title": "Ford on track to complete $2B factory overhaul for Fathom... | Autonomous Vehicles News",
-  "excerpt": "Ford expects to begin prototype builds of the Fathom EV in the first quarter of 2027.",
-  "date": "2026-08-14",
+  "title": "Chinese automakers are following Tesla’s bet that robots ... | Autonomous Vehicles News",
+  "excerpt": "Technical progress has encouraged a new batch of companies to jump in on the promise of profits from humanoid robots. And they're all Chinese automakers.",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/006-av-autonomous-vehicle.webp",
-  "slug": "ford-on-track-to-complete-2b-factory-overhaul-for-fathom-ev-truck",
-  "sourceLink": "https://techcrunch.com/2026/08/13/ford-on-track-to-complete-2b-factory-overhaul-for-fathom-ev-truck/",
+  "slug": "chinese-automakers-are-following-teslas-bet-that-robots-are-the-next-b",
+  "sourceLink": "https://techcrunch.com/2026/08/28/chinese-automakers-are-following-teslas-bet-that-robots-are-the-next-big-profit-machine/",
   "sourceName": "Kirsten Korosec",
   "body": [
     {
       "type": "p",
-      "text": "Ford expects to begin prototype builds of the Fathom EV in the first quarter of 2027."
+      "text": "Technical progress has encouraged a new batch of companies to jump in on the promise of profits from humanoid robots.  And they're all Chinese automakers."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kirsten Korosec, Ford expects to begin prototype builds of the Fathom EV in the first quarter of 2027.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Kirsten Korosec, Technical progress has encouraged a new batch of companies to jump in on the promise of profits from humanoid robots. And they're all Chinese automakers.. The development represents a notable step forward in the Autonomous Vehicles landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Ford on track to complete $2B factory overhaul for Fathom EV truck — a notable development in Autonomous Vehicles",
+    "Chinese automakers are following Tesla’s bet that robots are the next big profit — a notable development in Autonomous Vehicles",
     "The autonomous vehicles sector continues to accelerate, with robotaxis & level 4 autonomy driving rapid progress",
     "Industry context: Autonomous vehicles are scaling commercially, with robotaxi services operating in 40+ cities and Lev...",
     "Challenges remain: Edge case handling in dense urban environments, regulatory frameworks for driver...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Ford on track to complete $2B factory overhaul for Fathom EV truck",
+      "date": "2026-08-29",
+      "event": "Chinese automakers are following Tesla’s bet that robots are the next big profit",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "autonomous vehicles",
     "self-driving",
-    "track",
-    "complete",
+    "chinese",
+    "automakers",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Ford on track to complete $2B factory overhaul for Fathom... | Autonomous Vehicles News",
-  "metaDescription": "Ford expects to begin prototype builds of the Fathom EV in the first quarter of 2027. Robotaxis & Level 4 autonomy. Latest Autonomous Vehicles developments and ",
-  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, ford, track, complete, TechNanoAI, emerging tech news",
+  "metaTitle": "Chinese automakers are following Tesla’s bet that robots ... | Autonomous Vehicles News",
+  "metaDescription": "Technical progress has encouraged a new batch of companies to jump in on the promise of profits from humanoid robots. And they're all Chinese automakers.",
+  "keywords": "autonomous vehicles, self-driving, robotaxi, AV, chinese, automakers, following, TechNanoAI, emerging tech news",
   "featured": true
 }

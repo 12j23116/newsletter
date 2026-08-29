@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786691280613-5",
+  "id": "cybersecurity-1788004584025-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Hackers breach govt webmail while running parallel crypto... | Cybersecurity News",
-  "excerpt": "The Jewelbug hacker group has been carrying out espionage operations targeting governments and militaries while also engaging in cryptocurrency fraud. [...]",
-  "date": "2026-08-14",
+  "title": "GiveWP WordPress donation plugin flaw lets hackers execut... | Cybersecurity News",
+  "excerpt": "A maximum-severity vulnerability in the GiveWP plugin for WordPress allows an unauthenticated attacker to execute arbitrary commands on the hosting server. [...]",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "hackers-breach-govt-webmail-while-running-parallel-crypto-fraud",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/",
+  "slug": "givewp-wordpress-donation-plugin-flaw-lets-hackers-execute-server-comm",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/givewp-wordpress-donation-plugin-flaw-lets-hackers-execute-server-commands/",
   "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "The Jewelbug hacker group has been carrying out espionage operations targeting governments and militaries while also engaging in cryptocurrency fraud.  [..."
+      "text": "A maximum-severity vulnerability in the GiveWP plugin for WordPress allows an unauthenticated attacker to execute arbitrary commands on the hosting server.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, The Jewelbug hacker group has been carrying out espionage operations targeting governments and militaries while also engaging in cryptocurrency fraud. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Bill Toulas, A maximum-severity vulnerability in the GiveWP plugin for WordPress allows an unauthenticated attacker to execute arbitrary commands on the hosting server. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hackers breach govt webmail while running parallel crypto fraud — a notable development in Cybersecurity",
+    "GiveWP WordPress donation plugin flaw lets hackers execute server commands — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Hackers breach govt webmail while running parallel crypto fraud",
+      "date": "2026-08-29",
+      "event": "GiveWP WordPress donation plugin flaw lets hackers execute server commands",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "hackers",
-    "breach",
+    "givewp",
+    "wordpress",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hackers breach govt webmail while running parallel crypto... | Cybersecurity News",
-  "metaDescription": "The Jewelbug hacker group has been carrying out espionage operations targeting governments and militaries while also engaging in cryptocurrency fraud. [...]",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, breach, govt, TechNanoAI, emerging tech news",
+  "metaTitle": "GiveWP WordPress donation plugin flaw lets hackers execut... | Cybersecurity News",
+  "metaDescription": "A maximum-severity vulnerability in the GiveWP plugin for WordPress allows an unauthenticated attacker to execute arbitrary commands on the hosting server. [...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, givewp, wordpress, donation, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786691287441-1",
+  "id": "quantum-1788004600619-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "T-SQUARED Begins Construction on Infleqtion’s Quantum Inn... | Quantum Computing News",
-  "excerpt": "Specialized engineering firm T-SQUARED has commenced construction on a new Quantum Innovation Centre at Oxford Technology Park for neutral-atom quantum technology company Infleqtion (NYSE: INFQ). The ",
-  "date": "2026-08-14",
-  "readTime": "3 min",
+  "title": "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Tar... | Quantum Computing News",
+  "excerpt": "The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two major defense and national security quantum ",
+  "date": "2026-08-29",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "t-squared-begins-construction-on-infleqtions-quantum-innovation-centre",
-  "sourceLink": "https://quantumcomputingreport.com/t-squared-begins-construction-on-infleqtions-quantum-innovation-centre-in-oxford/",
+  "slug": "new-mexico-adds-darpa-qbi-stage-c-and-quantumeagle-to-targeted-federal",
+  "sourceLink": "https://quantumcomputingreport.com/new-mexico-adds-darpa-qbi-stage-c-and-quantumeagle-to-targeted-federal-match-grant-program/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Specialized engineering firm T-SQUARED has commenced construction on a new Quantum Innovation Centre at Oxford Technology Park for neutral-atom quantum technology company Infleqtion (NYSE: INFQ).  The facility will triple the capacity of Infleqtion’s UK operations, expanding its research, manufacturing, and systems integration infrastructure for neutral-atom quantum computing, quantum sensing, and precision timing platforms."
+      "text": "The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two major defense and national security quantum initiatives: DARPA’s Quantum Benchmarking Initiative (QBI) Stage C and the Army Research Office/NSA Laboratory for Physical Sciences QuantumEAGLe program.  The expansion offers matching state grants to quantum  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Following the  [..."
+      "text": "According to reporting from Mohamed Abdel-Kareem, The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two major defense and national security quantum initiatives: DARPA’s Quantum Benchmarking Initiative (QBI) Stage C and the Army Research Office/NSA Laboratory for Physical Sciences QuantumEAGLe program. The expansion offers matching state grants to quantum  [...]\nThe post New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Targeted Federal Matc. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "T-SQUARED Begins Construction on Infleqtion’s Quantum Innovation Centre in Oxfor — a notable development in Quantum Computing",
+    "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Targeted Federal Match Gra — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "T-SQUARED Begins Construction on Infleqtion’s Quantum Innovation Centre in Oxfor",
+      "date": "2026-08-29",
+      "event": "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Targeted Federal Match Gra",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "squared",
-    "begins",
+    "mexico",
+    "darpa",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "T-SQUARED Begins Construction on Infleqtion’s Quantum Inn... | Quantum Computing News",
-  "metaDescription": "Specialized engineering firm T-SQUARED has commenced construction on a new Quantum Innovation Centre at Oxford Technology Park for neutral-atom quantum techn...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, squared, begins, construction, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Tar... | Quantum Computing News",
+  "metaDescription": "The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two m...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, mexico, adds, darpa, TechNanoAI, emerging tech news",
+  "featured": true
 }

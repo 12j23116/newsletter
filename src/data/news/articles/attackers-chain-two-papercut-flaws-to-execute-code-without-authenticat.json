@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786691280127-2",
+  "id": "ai-1788004583183-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI introduces 'Ultrafast,' a new mode that makes GPT-... | AI News",
-  "excerpt": "OpenAI is launching a preview of a sped up version of its latest, most powerful model, in an effort to court enterprise users.",
-  "date": "2026-08-14",
+  "title": "Attackers Chain Two PaperCut Flaws to Execute Code Withou... | AI News",
+  "excerpt": "Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company released a fresh emergency fix with additional ha",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai-introduces-8216ultrafast8217-a-new-mode-that-makes-gpt-56-sol-w",
-  "sourceLink": "https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/",
-  "sourceName": "Lucas Ropek",
+  "slug": "attackers-chain-two-papercut-flaws-to-execute-code-without-authenticat",
+  "sourceLink": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "OpenAI is launching a preview of a sped up version of its latest, most powerful model, in an effort to court enterprise users."
+      "text": "Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company released a fresh emergency fix with additional hardening."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, OpenAI is launching a preview of a sped up version of its latest, most powerful model, in an effort to court enterprise users.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company released a fresh emergency fix with additional hardening.\n\n\"This vulnerability gives an unauthenticated attacker remote control over PaperCut's trusted configuration, which could be used to execute arbitrary Java code inside the application's. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI introduces 'Ultrafast,' a new mode that makes GPT-5.6 Sol work at 14x the — a notable development in AI",
+    "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "OpenAI introduces 'Ultrafast,' a new mode that makes GPT-5.6 Sol work at 14x the",
+      "date": "2026-08-29",
+      "event": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "introduces",
+    "attackers",
+    "chain",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI introduces 'Ultrafast,' a new mode that makes GPT-... | AI News",
-  "metaDescription": "OpenAI is launching a preview of a sped up version of its latest, most powerful model, in an effort to court enterprise users.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, introduces, ultrafast, TechNanoAI, emerging tech news",
+  "metaTitle": "Attackers Chain Two PaperCut Flaws to Execute Code Withou... | AI News",
+  "metaDescription": "Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company releas...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, chain, papercut, TechNanoAI, emerging tech news",
   "featured": false
 }

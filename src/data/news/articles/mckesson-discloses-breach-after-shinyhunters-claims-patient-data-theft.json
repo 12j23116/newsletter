@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786691280610-1",
+  "id": "cybersecurity-1788004584024-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "AmnesiaStealer macOS Malware Steals Data, Controls Browse... | Cybersecurity News",
-  "excerpt": "The Rust-based macOS infostealer harvests users’ passwords, keychain information, Chromium-based browser data, and Safari cookies.\nThe post AmnesiaStealer macOS Malware Steals Data, Controls Browser S",
-  "date": "2026-08-14",
+  "title": "McKesson discloses breach after ShinyHunters claims patie... | Cybersecurity News",
+  "excerpt": "Healthcare and pharmaceutical distribution giant McKesson has disclosed a cybersecurity incident involving unauthorized access to third-party applications and data theft, with the ShinyHunters extorti",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "amnesiastealer-macos-malware-steals-data-controls-browser-sessions",
-  "sourceLink": "https://www.securityweek.com/amnesiastealer-macos-malware-steals-data-controls-browser-sessions/",
-  "sourceName": "Ionut Arghire",
+  "slug": "mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft/",
+  "sourceName": "Lawrence Abrams",
   "body": [
     {
       "type": "p",
-      "text": "The Rust-based macOS infostealer harvests users’ passwords, keychain information, Chromium-based browser data, and Safari cookies. \nThe post AmnesiaStealer macOS Malware Steals Data, Controls Browser Sessions appeared first on SecurityWeek."
+      "text": "Healthcare and pharmaceutical distribution giant McKesson has disclosed a cybersecurity incident involving unauthorized access to third-party applications and data theft, with the ShinyHunters extortion group claiming it stole 284 million patient data records.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The Rust-based macOS infostealer harvests users’ passwords, keychain information, Chromium-based browser data, and Safari cookies.\nThe post AmnesiaStealer macOS Malware Steals Data, Controls Browser Sessions appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lawrence Abrams, Healthcare and pharmaceutical distribution giant McKesson has disclosed a cybersecurity incident involving unauthorized access to third-party applications and data theft, with the ShinyHunters extortion group claiming it stole 284 million patient data records. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "AmnesiaStealer macOS Malware Steals Data, Controls Browser Sessions — a notable development in Cybersecurity",
+    "McKesson discloses breach after ShinyHunters claims patient data theft — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Lawrence Abrams",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "AmnesiaStealer macOS Malware Steals Data, Controls Browser Sessions",
+      "date": "2026-08-29",
+      "event": "McKesson discloses breach after ShinyHunters claims patient data theft",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "amnesiastealer",
-    "macos",
+    "mckesson",
+    "discloses",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "AmnesiaStealer macOS Malware Steals Data, Controls Browse... | Cybersecurity News",
-  "metaDescription": "The Rust-based macOS infostealer harvests users’ passwords, keychain information, Chromium-based browser data, and Safari cookies.\nThe post AmnesiaStealer ma...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, amnesiastealer, macos, malware, TechNanoAI, emerging tech news",
+  "metaTitle": "McKesson discloses breach after ShinyHunters claims patie... | Cybersecurity News",
+  "metaDescription": "Healthcare and pharmaceutical distribution giant McKesson has disclosed a cybersecurity incident involving unauthorized access to third-party applications an...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, mckesson, discloses, breach, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786691280127-1",
+  "id": "ai-1788004583182-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Databricks wanted to raise $1B, investors wanted $15B. It... | AI News",
-  "excerpt": "AI is expensive, Ali Ghodsi tells TechCrunch. With so many investors wanting into his latest round, he said yes to more than planned.",
-  "date": "2026-08-14",
+  "title": "Neocloud Lambda secures $1B in debt to buy more chips | AI News",
+  "excerpt": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at",
-  "sourceLink": "https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/",
-  "sourceName": "Julie Bort",
+  "slug": "neocloud-lambda-secures-1b-in-debt-to-buy-more-chips",
+  "sourceLink": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+  "sourceName": "Rebecca Bellan",
   "body": [
     {
       "type": "p",
-      "text": "AI is expensive, Ali Ghodsi tells TechCrunch.  With so many investors wanting into his latest round, he said yes to more than planned."
+      "text": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft.  It's the latest in a string of loans, underscoring the high cost of the AI boom."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julie Bort, AI is expensive, Ali Ghodsi tells TechCrunch. With so many investors wanting into his latest round, he said yes to more than planned.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Rebecca Bellan, Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $1 — a notable development in AI",
+    "Neocloud Lambda secures $1B in debt to buy more chips — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Julie Bort",
+      "value": "Rebecca Bellan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $1",
+      "date": "2026-08-29",
+      "event": "Neocloud Lambda secures $1B in debt to buy more chips",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "databricks",
-    "wanted",
+    "neocloud",
+    "lambda",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Databricks wanted to raise $1B, investors wanted $15B. It... | AI News",
-  "metaDescription": "AI is expensive, Ali Ghodsi tells TechCrunch. With so many investors wanting into his latest round, he said yes to more than planned.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, databricks, wanted, raise, TechNanoAI, emerging tech news",
+  "metaTitle": "Neocloud Lambda secures $1B in debt to buy more chips | AI News",
+  "metaDescription": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the hig...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, neocloud, lambda, secures, TechNanoAI, emerging tech news",
   "featured": false
 }

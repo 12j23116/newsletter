@@ -1,21 +1,21 @@
 {
-  "id": "energy-1786691286239-5",
+  "id": "energy-1788004599056-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Scatec starts full commercial operations at gigawatt-scal... | Energy Storage News",
-  "excerpt": "Scatec has started full commercial operations at its gigawatt-scale Obelisk solar-plus-storage project in Egypt.",
-  "date": "2026-08-14",
+  "title": "Chile’s hybrid heroics | Energy Storage News",
+  "excerpt": "In 2024, Chile passed a law incentivizing battery development paired with utility-scale solar. This move quickly led to a flood of big battery project announcements, as the capacity payments model com",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "scatec-starts-full-commercial-operations-at-gigawatt-scale-obelisk-sol",
-  "sourceLink": "https://www.energy-storage.news/scatec-full-commercial-operations-gigawatt-scale-obelisk-solar-plus-storage-project/",
-  "sourceName": "JP Casey",
+  "slug": "chiles-hybrid-heroics",
+  "sourceLink": "https://www.pv-magazine.com/2026/08/29/chiles-hybrid-heroics/",
+  "sourceName": "Mark Hutchins",
   "body": [
     {
       "type": "p",
-      "text": "Scatec has started full commercial operations at its gigawatt-scale Obelisk solar-plus-storage project in Egypt."
+      "text": "In 2024, Chile passed a law incentivizing battery development paired with utility-scale solar.  This move quickly led to a flood of big battery project announcements, as the capacity payments model combined with arbitrage revenue means hybrid solar and storage is very profitable."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from JP Casey, Scatec has started full commercial operations at its gigawatt-scale Obelisk solar-plus-storage project in Egypt.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "By the end of 2026, Chile is expected to surpass 6 GW of battery energy storage systems (BESS) capacity. \nThe post Chile’s hybrid heroics appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Scatec starts full commercial operations at gigawatt-scale Obelisk solar-plus-st — a notable development in Energy Storage",
+    "Chile’s hybrid heroics — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "JP Casey",
+      "value": "Mark Hutchins",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Scatec starts full commercial operations at gigawatt-scale Obelisk solar-plus-st",
+      "date": "2026-08-29",
+      "event": "Chile’s hybrid heroics",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "scatec",
-    "starts",
+    "chile",
+    "hybrid",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Scatec starts full commercial operations at gigawatt-scal... | Energy Storage News",
-  "metaDescription": "Scatec has started full commercial operations at its gigawatt-scale Obelisk solar-plus-storage project in Egypt. Solid-state batteries & grid storage. Latest En",
-  "keywords": "energy storage, battery, solid-state, grid storage, scatec, starts, full, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Chile’s hybrid heroics | Energy Storage News",
+  "metaDescription": "In 2024, Chile passed a law incentivizing battery development paired with utility-scale solar. This move quickly led to a flood of big battery project announ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, chile, hybrid, heroics, TechNanoAI, emerging tech news",
+  "featured": true
 }

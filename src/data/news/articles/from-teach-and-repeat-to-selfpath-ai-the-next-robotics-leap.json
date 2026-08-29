@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786691286517-2",
+  "id": "robotics-1788004599555-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Experts to discuss the state of humanoid robots at RoboBu... | Robotics News",
-  "excerpt": "The RoboBusiness panel will include insights on humanoid robots from Agility, Apptronik, Persona AI, and PSYONIC experts.\nThe post Experts to discuss the state of humanoid robots at RoboBusiness appea",
-  "date": "2026-08-14",
+  "title": "From teach and repeat to SelfPath AI: The next robotics leap | Robotics News",
+  "excerpt": "John Black, chief technology officer at Brian Corp, shares insights on how to build trust for robotics fleets and AI.\nThe post From teach and repeat to SelfPath AI: The next robotics leap appeared fir",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "experts-to-discuss-the-state-of-humanoid-robots-at-robobusiness",
-  "sourceLink": "https://www.therobotreport.com/experts-discuss-state-humanoid-robots-robobusiness-2026/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "from-teach-and-repeat-to-selfpath-ai-the-next-robotics-leap",
+  "sourceLink": "https://www.therobotreport.com/from-teach-repeat-to-selfpath-ai-next-robotics-leap/",
+  "sourceName": "Mike Oitzman",
   "body": [
     {
       "type": "p",
-      "text": "The RoboBusiness panel will include insights on humanoid robots from Agility, Apptronik, Persona AI, and PSYONIC experts. \nThe post Experts to discuss the state of humanoid robots at RoboBusiness appeared first on The Robot Report."
+      "text": "John Black, chief technology officer at Brian Corp, shares insights on how to build trust for robotics fleets and AI. \nThe post From teach and repeat to SelfPath AI: The next robotics leap appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, The RoboBusiness panel will include insights on humanoid robots from Agility, Apptronik, Persona AI, and PSYONIC experts.\nThe post Experts to discuss the state of humanoid robots at RoboBusiness appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mike Oitzman, John Black, chief technology officer at Brian Corp, shares insights on how to build trust for robotics fleets and AI.\nThe post From teach and repeat to SelfPath AI: The next robotics leap appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Experts to discuss the state of humanoid robots at RoboBusiness — a notable development in Robotics",
+    "From teach and repeat to SelfPath AI: The next robotics leap — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Mike Oitzman",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "Experts to discuss the state of humanoid robots at RoboBusiness",
+      "date": "2026-08-29",
+      "event": "From teach and repeat to SelfPath AI: The next robotics leap",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "experts",
-    "discuss",
+    "teach",
+    "repeat",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Experts to discuss the state of humanoid robots at RoboBu... | Robotics News",
-  "metaDescription": "The RoboBusiness panel will include insights on humanoid robots from Agility, Apptronik, Persona AI, and PSYONIC experts.\nThe post Experts to discuss the sta...",
-  "keywords": "robotics, humanoid robot, automation, drones, experts, discuss, state, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "From teach and repeat to SelfPath AI: The next robotics leap | Robotics News",
+  "metaDescription": "John Black, chief technology officer at Brian Corp, shares insights on how to build trust for robotics fleets and AI.\nThe post From teach and repeat to SelfP...",
+  "keywords": "robotics, humanoid robot, automation, drones, from, teach, repeat, TechNanoAI, emerging tech news",
+  "featured": true
 }

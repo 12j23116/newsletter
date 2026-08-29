@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786691287442-4",
+  "id": "quantum-1788004600619-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "BTQ Technologies Signs MOU with ITCENGLOBAL Subsidiary IT... | Quantum Computing News",
-  "excerpt": "Quantum technology provider BTQ Technologies Corp. (NASDAQ: BTQ) has signed a Memorandum of Understanding (MOU) with ITCENGLOBAL CO., Ltd. (KOSDAQ: 124500) through its listed security platform subsidi",
-  "date": "2026-08-14",
+  "title": "Governor Newsom Awards $9.74M to Scale Southern Californi... | Quantum Computing News",
+  "excerpt": "California Governor Gavin Newsom has announced a $48.5 million state investment under the California Jobs First Regional Investment Initiative (Round II Implementation Phase) to advance high-growth te",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "btq-technologies-signs-mou-with-itcenglobal-subsidiary-itcen-pns-to-de",
-  "sourceLink": "https://quantumcomputingreport.com/btq-technologies-signs-mou-with-itcenglobal-subsidiary-itcen-pns-to-deploy-post-quantum-security-in-south-korea/",
+  "slug": "governor-newsom-awards-974m-to-scale-southern-california-quantum-ecosy",
+  "sourceLink": "https://quantumcomputingreport.com/governor-newsom-awards-9-74m-to-scale-southern-california-quantum-ecosystem/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Quantum technology provider BTQ Technologies Corp.  (NASDAQ: BTQ) has signed a Memorandum of Understanding (MOU) with ITCENGLOBAL CO."
+      "text": "California Governor Gavin Newsom has announced a $48. 5 million state investment under the California Jobs First Regional Investment Initiative (Round II Implementation Phase) to advance high-growth technology sectors and regional workforce infrastructure."
     },
     {
       "type": "p",
@@ -27,15 +27,7 @@
     },
     {
       "type": "p",
-      "text": ", Ltd.  (KOSDAQ: 124500) through its listed security platform subsidiary, ITCEN PNS Co."
-    },
-    {
-      "type": "p",
-      "text": ", Ltd.  (KOSDAQ: 232830)."
-    },
-    {
-      "type": "p",
-      "text": "The partnership establishes a commercial framework to integrate post-quantum cryptography (PQC), quantum-safe authentication, and hardware-rooted security architectures across South Korea’s financial, public-sector,  [..."
+      "text": "Of the total funding allocation, $9,742,070 has been awarded specifically to Regional Cluster #7, focusing on the Quantum subsector to expand regional coordination,  [... ]\nThe post Governor Newsom Awards $9."
     },
     {
       "type": "h2",
@@ -105,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "BTQ Technologies Signs MOU with ITCENGLOBAL Subsidiary ITCEN PNS to Deploy Post- — a notable development in Quantum Computing",
+    "Governor Newsom Awards $9.74M to Scale Southern California Quantum Ecosystem — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -165,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "BTQ Technologies Signs MOU with ITCENGLOBAL Subsidiary ITCEN PNS to Deploy Post-",
+      "date": "2026-08-29",
+      "event": "Governor Newsom Awards $9.74M to Scale Southern California Quantum Ecosystem",
       "current": true
     },
     {
@@ -199,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "technologies",
-    "signs",
+    "governor",
+    "newsom",
     "emerging tech"
   ],
   "poll": {
@@ -224,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "BTQ Technologies Signs MOU with ITCENGLOBAL Subsidiary IT... | Quantum Computing News",
-  "metaDescription": "Quantum technology provider BTQ Technologies Corp. (NASDAQ: BTQ) has signed a Memorandum of Understanding (MOU) with ITCENGLOBAL CO., Ltd. (KOSDAQ: 124500) t...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, technologies, signs, with, TechNanoAI, emerging tech news",
+  "metaTitle": "Governor Newsom Awards $9.74M to Scale Southern Californi... | Quantum Computing News",
+  "metaDescription": "California Governor Gavin Newsom has announced a $48.5 million state investment under the California Jobs First Regional Investment Initiative (Round II Impl...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, governor, newsom, awards, TechNanoAI, emerging tech news",
   "featured": false
 }

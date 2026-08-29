@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786691287441-0",
+  "id": "quantum-1788004600619-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "DARPA Awards Contract to Qunnect to Advance Real-Time Pol... | Quantum Computing News",
-  "excerpt": "The Defense Advanced Research Projects Agency (DARPA) has awarded a research contract to quantum networking hardware startup Qunnect to enhance the signal stability and resilience of entanglement-base",
-  "date": "2026-08-14",
+  "title": "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $89... | Quantum Computing News",
+  "excerpt": "Photonic quantum computing developer Xanadu (NASDAQ/TSX: XNDU) has signed a definitive agreement with the Government of Canada securing CAD $195 million ($140.2 million USD) in federal funding through",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "darpa-awards-contract-to-qunnect-to-advance-real-time-polarization-com",
-  "sourceLink": "https://quantumcomputingreport.com/darpa-awards-contract-to-qunnect-to-advance-real-time-polarization-compensation-for-quantum-networks/",
+  "slug": "canada-commits-cad-195m-1402-m-usd-to-xanadu-for-893m-6422m-usd-8220in",
+  "sourceLink": "https://quantumcomputingreport.com/canada-commits-cad-195m-140-2-m-usd-to-xanadu-for-893m-642-2m-usd-inception-quantum-manufacturing-facility/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "The Defense Advanced Research Projects Agency (DARPA) has awarded a research contract to quantum networking hardware startup Qunnect to enhance the signal stability and resilience of entanglement-based telecom fiber networks.  Associated with DARPA's Quantum Augmented Networks (QuANET) program and Small Business Innovation Research (SBIR) initiatives, the contract provides funding to advance the next generation of  [..."
+      "text": "Photonic quantum computing developer Xanadu (NASDAQ/TSX: XNDU) has signed a definitive agreement with the Government of Canada securing CAD $195 million ($140. 2 million USD) in federal funding through the Strategic Response Fund, administered by Innovation, Science and Economic Development Canada (ISED)."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, The Defense Advanced Research Projects Agency (DARPA) has awarded a research contract to quantum networking hardware startup Qunnect to enhance the signal stability and resilience of entanglement-based telecom fiber networks. Associated with DARPA's Quantum Augmented Networks (QuANET) program and Small Business Innovation Research (SBIR) initiatives, the contract provides funding to advance the next generation of  [...]\nThe post DARPA Awards Contract to Qunnect to Advance Real-Time Polarization. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "The federal commitment anchors a broader CAD $893 ($642. 2 million USD) million project—designated Project  [..."
+    },
+    {
+      "type": "p",
+      "text": "]\nThe post Canada Commits CAD $195M ($140. 2 M USD) to Xanadu for $893M ($642."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "DARPA Awards Contract to Qunnect to Advance Real-Time Polarization Compensation  — a notable development in Quantum Computing",
+    "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $893M ($642.2M USD) 'Incep — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "DARPA Awards Contract to Qunnect to Advance Real-Time Polarization Compensation ",
+      "date": "2026-08-29",
+      "event": "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $893M ($642.2M USD) 'Incep",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "darpa",
-    "awards",
+    "canada",
+    "commits",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "DARPA Awards Contract to Qunnect to Advance Real-Time Pol... | Quantum Computing News",
-  "metaDescription": "The Defense Advanced Research Projects Agency (DARPA) has awarded a research contract to quantum networking hardware startup Qunnect to enhance the signal st...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, darpa, awards, contract, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $89... | Quantum Computing News",
+  "metaDescription": "Photonic quantum computing developer Xanadu (NASDAQ/TSX: XNDU) has signed a definitive agreement with the Government of Canada securing CAD $195 million ($14...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, canada, commits, xanadu, TechNanoAI, emerging tech news",
+  "featured": false
 }

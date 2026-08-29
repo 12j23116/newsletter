@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786691280128-3",
+  "id": "ai-1788004583180-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "IBM partners with OpenAI to bolster enterprise AI push | AI News",
-  "excerpt": "IBM plans to train and certify tens of thousands of consultants on OpenAI's technologies as part of this deal.",
-  "date": "2026-08-14",
+  "title": "Berlin Refuses to Pay Hackers Who Stole Data From the Cit... | AI News",
+  "excerpt": "Berlin's state government has confirmed that it is the target of an extortion attempt following the August compromise of the city's state administrative network, and said it will not meet the extortio",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "ibm-partners-with-openai-to-bolster-enterprise-ai-push",
-  "sourceLink": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
-  "sourceName": "Jagmeet Singh",
+  "slug": "berlin-refuses-to-pay-hackers-who-stole-data-from-the-citys-state-netw",
+  "sourceLink": "https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "IBM plans to train and certify tens of thousands of consultants on OpenAI's technologies as part of this deal."
+      "text": "Berlin's state government has confirmed that it is the target of an extortion attempt following the August compromise of the city's state administrative network, and said it will not meet the extortionists' demands."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jagmeet Singh, IBM plans to train and certify tens of thousands of consultants on OpenAI's technologies as part of this deal.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Berlin's state government has confirmed that it is the target of an extortion attempt following the August compromise of the city's state administrative network, and said it will not meet the extortionists' demands.\n\nThe same statement disclosed that forensic work had found further data outflows in the portfolio of the Senate Department for Mobility, Transport, Climate Protection and Environment. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IBM partners with OpenAI to bolster enterprise AI push — a notable development in AI",
+    "Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Jagmeet Singh",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "IBM partners with OpenAI to bolster enterprise AI push",
+      "date": "2026-08-29",
+      "event": "Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "partners",
-    "openai",
+    "berlin",
+    "refuses",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IBM partners with OpenAI to bolster enterprise AI push | AI News",
-  "metaDescription": "IBM plans to train and certify tens of thousands of consultants on OpenAI's technologies as part of this deal. LLMs, agents & the race to AGI. Latest AI develop",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, partners, with, openai, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Berlin Refuses to Pay Hackers Who Stole Data From the Cit... | AI News",
+  "metaDescription": "Berlin's state government has confirmed that it is the target of an extortion attempt following the August compromise of the city's state administrative netw...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, berlin, refuses, hackers, TechNanoAI, emerging tech news",
+  "featured": true
 }

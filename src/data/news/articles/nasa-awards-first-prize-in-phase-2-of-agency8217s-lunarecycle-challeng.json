@@ -1,21 +1,21 @@
 {
-  "id": "space-1786691281374-0",
+  "id": "space-1788004585132-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "CesiumAstro buys semiconductor specialist to boost conste... | Space Exploration News",
-  "excerpt": "CesiumAstro is acquiring semiconductor specialist Jariet Technologies, adding more in-house capabilities behind the phased-array antenna specialist’s plans for a future communications constellation.\nT",
-  "date": "2026-08-14",
+  "title": "NASA Awards First Prize in Phase 2 of Agency's LunaRecycl... | Space Exploration News",
+  "excerpt": "NASA'named'a team from the'Massachusetts Institute of Technology'(MIT)'as the'first prize'winner'for'Phase 2'of the'agency’s'LunaRecycle'Challenge, which'focused on'developing'solutions for'reducing w",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "cesiumastro-buys-semiconductor-specialist-to-boost-constellation-plans",
-  "sourceLink": "https://spacenews.com/cesiumastro-buys-semiconductor-specialist-to-boost-constellation-plans/",
-  "sourceName": "Jason Rainbow",
+  "slug": "nasa-awards-first-prize-in-phase-2-of-agency8217s-lunarecycle-challeng",
+  "sourceLink": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/centennial-challenges/nasa-awards-first-prize-in-phase-2-of-agencys-lunarecycle-challenge/",
+  "sourceName": "Bailey G. Light",
   "body": [
     {
       "type": "p",
-      "text": "CesiumAstro is acquiring semiconductor specialist Jariet Technologies, adding more in-house capabilities behind the phased-array antenna specialist’s plans for a future communications constellation. \nThe post CesiumAstro buys semiconductor specialist to boost constellation plans appeared first on SpaceNews."
+      "text": "NASA'named'a team from the'Massachusetts Institute of Technology'(MIT)'as the'first prize'winner'for'Phase 2'of the'agency’s'LunaRecycle'Challenge, which'focused on'developing'solutions for'reducing waste'during missions to the Moon or deep space by'recycling common materials,'like fabrics, plastics, foam, and metals."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jason Rainbow, CesiumAstro is acquiring semiconductor specialist Jariet Technologies, adding more in-house capabilities behind the phased-array antenna specialist’s plans for a future communications constellation.\nThe post CesiumAstro buys semiconductor specialist to boost constellation plans appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Bailey G. Light, NASA'named'a team from the'Massachusetts Institute of Technology'(MIT)'as the'first prize'winner'for'Phase 2'of the'agency’s'LunaRecycle'Challenge, which'focused on'developing'solutions for'reducing waste'during missions to the Moon or deep space by'recycling common materials,'like fabrics, plastics, foam, and metals.' The'Composites for Extraterrestrial Recycling'By'Engineerin. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "CesiumAstro buys semiconductor specialist to boost constellation plans — a notable development in Space Exploration",
+    "NASA Awards First Prize in Phase 2 of Agency's LunaRecycle Challenge — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jason Rainbow",
+      "value": "Bailey G. Light",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "CesiumAstro buys semiconductor specialist to boost constellation plans",
+      "date": "2026-08-29",
+      "event": "NASA Awards First Prize in Phase 2 of Agency's LunaRecycle Challenge",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "cesiumastro",
-    "semiconductor",
+    "awards",
+    "first",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "CesiumAstro buys semiconductor specialist to boost conste... | Space Exploration News",
-  "metaDescription": "CesiumAstro is acquiring semiconductor specialist Jariet Technologies, adding more in-house capabilities behind the phased-array antenna specialist’s plans f...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, cesiumastro, buys, semiconductor, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "NASA Awards First Prize in Phase 2 of Agency's LunaRecycl... | Space Exploration News",
+  "metaDescription": "NASA'named'a team from the'Massachusetts Institute of Technology'(MIT)'as the'first prize'winner'for'Phase 2'of the'agency’s'LunaRecycle'Challenge, which'foc...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, awards, first, TechNanoAI, emerging tech news",
+  "featured": false
 }

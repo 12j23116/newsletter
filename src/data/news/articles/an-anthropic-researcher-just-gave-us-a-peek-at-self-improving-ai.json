@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786691280128-5",
+  "id": "ai-1788004583182-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI hires new CRO as executive shake-up continues | AI News",
-  "excerpt": "OpenAI has replaced chief revenue officer Denise Dresser after just nine months on the job, tapping Wiz president and chief operating officer Dali Rajic to take on frontier lab's top sales job.",
-  "date": "2026-08-14",
+  "title": "An Anthropic researcher just gave us a peek at self-impro... | AI News",
+  "excerpt": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
+  "date": "2026-08-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai-hires-new-cro-as-executive-shake-up-continues",
-  "sourceLink": "https://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues/",
-  "sourceName": "Tim Fernholz",
+  "slug": "an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai",
+  "sourceLink": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+  "sourceName": "Russell Brandom",
   "body": [
     {
       "type": "p",
-      "text": "OpenAI has replaced chief revenue officer Denise Dresser after just nine months on the job, tapping Wiz president and chief operating officer Dali Rajic to take on frontier lab's top sales job."
+      "text": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Tim Fernholz, OpenAI has replaced chief revenue officer Denise Dresser after just nine months on the job, tapping Wiz president and chief operating officer Dali Rajic to take on frontier lab's top sales job.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Russell Brandom, Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI hires new CRO as executive shake-up continues — a notable development in AI",
+    "An Anthropic researcher just gave us a peek at self-improving AI — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Tim Fernholz",
+      "value": "Russell Brandom",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-14",
-      "event": "OpenAI hires new CRO as executive shake-up continues",
+      "date": "2026-08-29",
+      "event": "An Anthropic researcher just gave us a peek at self-improving AI",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "hires",
+    "anthropic",
+    "researcher",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI hires new CRO as executive shake-up continues | AI News",
-  "metaDescription": "OpenAI has replaced chief revenue officer Denise Dresser after just nine months on the job, tapping Wiz president and chief operating officer Dali Rajic to t...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, hires, executive, TechNanoAI, emerging tech news",
+  "metaTitle": "An Anthropic researcher just gave us a peek at self-impro... | AI News",
+  "metaDescription": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall p...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, researcher, just, TechNanoAI, emerging tech news",
   "featured": false
 }
