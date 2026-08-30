@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786774782648-4",
+  "id": "quantum-1788087235232-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Scientists detect a nuclear reactor’s ghostly afterglow f... | Quantum Computing News",
-  "excerpt": "Nuclear reactors may go dark, but their fuel continues producing a faint antineutrino “glow” long after shutdown. Researchers have now detected that residual signal for the first time, finding it clos",
-  "date": "2026-08-15",
+  "title": "Who’s News: Strategic Appointments at Quantum Sky, IonQ, ... | Quantum Computing News",
+  "excerpt": "Quantum Sky (formerly Tyto Athene, LLC) has appointed Sean Thompson as Chief Growth Officer (CGO). Thompson brings over 25 years of executive experience across defense and federal technology operation",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "scientists-detect-a-nuclear-reactors-ghostly-afterglow-for-the-first-t",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260814011036.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "whos-news-strategic-appointments-at-quantum-sky-ionq-pasqal-and-global",
+  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-quantum-sky-ionq-pasqal-and-global-quantum-intelligence/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Nuclear reactors may go dark, but their fuel continues producing a faint antineutrino “glow” long after shutdown.  Researchers have now detected that residual signal for the first time, finding it closely matched predictions of radioactive decay inside the reactor and nearby spent-fuel pools."
+      "text": "Quantum Sky (formerly Tyto Athene, LLC) has appointed Sean Thompson as Chief Growth Officer (CGO).  Thompson brings over 25 years of executive experience across defense and federal technology operations."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The breakthrough suggests antineutrino detectors could eventually monitor reactors even when they are offline."
+      "text": "He previously served as Chief Growth Officer at CBRE Government & Defense Services and IDEMIA North America, and led federal sales at Unisys Corporation.  In his  [..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Scientists detect a nuclear reactor’s ghostly afterglow for the first time — a notable development in Quantum Computing",
+    "Who’s News: Strategic Appointments at Quantum Sky, IonQ, Pasqal, and Global Quan — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Scientists detect a nuclear reactor’s ghostly afterglow for the first time",
+      "date": "2026-08-30",
+      "event": "Who’s News: Strategic Appointments at Quantum Sky, IonQ, Pasqal, and Global Quan",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "scientists",
-    "detect",
+    "strategic",
+    "appointments",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Scientists detect a nuclear reactor’s ghostly afterglow f... | Quantum Computing News",
-  "metaDescription": "Nuclear reactors may go dark, but their fuel continues producing a faint antineutrino “glow” long after shutdown. Researchers have now detected that residual...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, scientists, detect, nuclear, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Who’s News: Strategic Appointments at Quantum Sky, IonQ, ... | Quantum Computing News",
+  "metaDescription": "Quantum Sky (formerly Tyto Athene, LLC) has appointed Sean Thompson as Chief Growth Officer (CGO). Thompson brings over 25 years of executive experience acro...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
+  "featured": true
 }

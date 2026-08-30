@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786774776554-3",
+  "id": "ai-1788087228186-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hyperscalers might regret embracing natural gas if new fo... | AI News",
-  "excerpt": "Natural gas prices could triple in some parts of the U.S., which could saddle hyperscalers with massive bills to power their AI data centers.",
-  "date": "2026-08-15",
+  "title": "Five Critical WordPress Plugin and Theme Flaws Enable Sit... | AI News",
+  "excerpt": "Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, that could lead to authentication bypass, a",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves",
-  "sourceLink": "https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/",
-  "sourceName": "Tim De Chant",
+  "slug": "five-critical-wordpress-plugin-and-theme-flaws-enable-site-takeover-or",
+  "sourceLink": "https://thehackernews.com/2026/08/five-critical-wordpress-plugin-and.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Natural gas prices could triple in some parts of the U. S."
+      "text": "Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, that could lead to authentication bypass, account takeover, and arbitrary code execution. \n\nThe vulnerabilities, according to Wordfence and Patchstack, are listed below -\n\n\n  CVE-2026-76581 (CVSS score: 9."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": ", which could saddle hyperscalers with massive bills to power their AI data centers."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, that could lead to authentication bypass, account takeover, and arbitrary code execution.\n\nThe vulnerabilities, according to Wordfence and Patchstack, are listed below -\n\n\n  CVE-2026-76581 (CVSS score: 9.8) - An authentication bypass flaw in. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hyperscalers might regret embracing natural gas if new forecast proves correct — a notable development in AI",
+    "Five Critical WordPress Plugin and Theme Flaws Enable Site Takeover or RCE — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Tim De Chant",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Hyperscalers might regret embracing natural gas if new forecast proves correct",
+      "date": "2026-08-30",
+      "event": "Five Critical WordPress Plugin and Theme Flaws Enable Site Takeover or RCE",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hyperscalers",
-    "might",
+    "critical",
+    "wordpress",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hyperscalers might regret embracing natural gas if new fo... | AI News",
-  "metaDescription": "Natural gas prices could triple in some parts of the U.S., which could saddle hyperscalers with massive bills to power their AI data centers.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hyperscalers, might, regret, TechNanoAI, emerging tech news",
+  "metaTitle": "Five Critical WordPress Plugin and Theme Flaws Enable Sit... | AI News",
+  "metaDescription": "Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, five, critical, wordpress, TechNanoAI, emerging tech news",
   "featured": false
 }

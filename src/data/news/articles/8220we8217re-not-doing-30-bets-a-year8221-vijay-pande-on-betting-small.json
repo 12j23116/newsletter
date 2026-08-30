@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786774776553-0",
+  "id": "ai-1788087228186-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Google will now allow users to remove visible watermark f... | AI News",
-  "excerpt": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file.",
-  "date": "2026-08-15",
-  "readTime": "3 min",
+  "title": "'We're not doing 30 bets a year': Vijay Pande on betting ... | AI News",
+  "excerpt": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"en",
+  "date": "2026-08-30",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-ge",
-  "sourceLink": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
-  "sourceName": "Ivan Mehta",
+  "slug": "8220we8217re-not-doing-30-bets-a-year8221-vijay-pande-on-betting-small",
+  "sourceLink": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
+  "sourceName": "Connie Loizos",
   "body": [
     {
       "type": "p",
-      "text": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file."
+      "text": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-off ones) are what will actually let AI transform medicine."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ivan Mehta, Turning off this setting won't affect invisible benchmarks used to identify an AI generated file.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Connie Loizos, Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-off ones) are what will actually let AI transform medicine.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Google will now allow users to remove visible watermark from its AI generations — a notable development in AI",
+    "'We're not doing 30 bets a year': Vijay Pande on betting small after running $4  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Ivan Mehta",
+      "value": "Connie Loizos",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Google will now allow users to remove visible watermark from its AI generations",
+      "date": "2026-08-30",
+      "event": "'We're not doing 30 bets a year': Vijay Pande on betting small after running $4 ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "google",
-    "allow",
+    "doing",
+    "vijay",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Google will now allow users to remove visible watermark f... | AI News",
-  "metaDescription": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file. LLMs, agents & the race to AGI. Latest AI developments and ana",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, google, will, allow, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "'We're not doing 30 bets a year': Vijay Pande on betting ... | AI News",
+  "metaDescription": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally sh...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, doing, bets, year, TechNanoAI, emerging tech news",
+  "featured": false
 }

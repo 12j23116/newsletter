@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786774782649-5",
+  "id": "quantum-1788087235232-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Quantum dragons are real! | Quantum Computing News",
-  "excerpt": "Thanks to Anthony Lawrence, I discovered “Energy-independent total quantum transmission of electrons through nanodevices with correlated disorder” by M. A. Novotny, which defines quantum dragons as a ",
-  "date": "2026-08-15",
+  "title": "iAccess Partners and QAI Ventures Partner to Lower Entry ... | Quantum Computing News",
+  "excerpt": "Swiss fintech firm iAccess Partners and Basel-headquartered venture capital firm QAI Ventures have established a strategic partnership designed to broaden access to early-stage quantum technology and ",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "quantum-dragons-are-real",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/quantum-dragons-are-real/",
-  "sourceName": "Brian Siegelwax",
+  "slug": "iaccess-partners-and-qai-ventures-partner-to-lower-entry-threshold-for",
+  "sourceLink": "https://quantumcomputingreport.com/iaccess-partners-and-qai-ventures-partner-to-lower-entry-threshold-for-early-stage-quantum-vc-fund/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Thanks to Anthony Lawrence, I discovered “Energy-independent total quantum transmission of electrons through nanodevices with correlated disorder” by M.  A."
+      "text": "Swiss fintech firm iAccess Partners and Basel-headquartered venture capital firm QAI Ventures have established a strategic partnership designed to broaden access to early-stage quantum technology and advanced computing investments.  By leveraging bankable International Securities Identification Numbers (ISINs), the partnership lowers the minimum investment threshold for qualified and professional investors down to USD $25,000."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Novotny, which defines quantum dragons as a “wide class of nanostructures with correlated disorder…, [that] can have strong scattering…, [and..."
+      "text": "[ QAI  [..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Quantum dragons are real! — a notable development in Quantum Computing",
+    "iAccess Partners and QAI Ventures Partner to Lower Entry Threshold for Early-Sta — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Brian Siegelwax",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Quantum dragons are real!",
+      "date": "2026-08-30",
+      "event": "iAccess Partners and QAI Ventures Partner to Lower Entry Threshold for Early-Sta",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "quantum",
-    "dragons",
+    "iaccess",
+    "partners",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Quantum dragons are real! | Quantum Computing News",
-  "metaDescription": "Thanks to Anthony Lawrence, I discovered “Energy-independent total quantum transmission of electrons through nanodevices with correlated disorder” by M. A. N...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, dragons, real, TechNanoAI, emerging tech news",
+  "metaTitle": "iAccess Partners and QAI Ventures Partner to Lower Entry ... | Quantum Computing News",
+  "metaDescription": "Swiss fintech firm iAccess Partners and Basel-headquartered venture capital firm QAI Ventures have established a strategic partnership designed to broaden ac...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, iaccess, partners, ventures, TechNanoAI, emerging tech news",
   "featured": false
 }

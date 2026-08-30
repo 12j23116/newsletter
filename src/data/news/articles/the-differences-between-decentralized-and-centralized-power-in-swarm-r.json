@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786774781816-3",
+  "id": "robotics-1788087234290-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Robots on Wall Street: Non-traditional paths to public ma... | Robotics News",
-  "excerpt": "Agility’s SPAC deal shows there is no one route to a robotics public listing, with SPAC mergers, reverse mergers, and traditional IPOs offering different advantages.\nThe post Robots on Wall Street: No",
-  "date": "2026-08-15",
+  "title": "The differences between decentralized and centralized pow... | Robotics News",
+  "excerpt": "A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both.\nThe post The differences between decentralized and centralized po",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "robots-on-wall-street-non-traditional-paths-to-public-markets-for-robo",
-  "sourceLink": "https://www.therobotreport.com/robots-on-wall-street-non-traditional-paths-public-markets-robotics-companies/",
-  "sourceName": "Marc Mantell and Alok Choksi, Mintz",
+  "slug": "the-differences-between-decentralized-and-centralized-power-in-swarm-r",
+  "sourceLink": "https://www.therobotreport.com/differences-between-decentralized-centralized-power-swarm-robotics/",
+  "sourceName": "Lou Farrell",
   "body": [
     {
       "type": "p",
-      "text": "Agility’s SPAC deal shows there is no one route to a robotics public listing, with SPAC mergers, reverse mergers, and traditional IPOs offering different advantages. \nThe post Robots on Wall Street: Non-traditional paths to public markets for robotics companies appeared first on The Robot Report."
+      "text": "A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both. \nThe post The differences between decentralized and centralized power in swarm robotics appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Marc Mantell and Alok Choksi, Mintz, Agility’s SPAC deal shows there is no one route to a robotics public listing, with SPAC mergers, reverse mergers, and traditional IPOs offering different advantages.\nThe post Robots on Wall Street: Non-traditional paths to public markets for robotics companies appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lou Farrell, A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both.\nThe post The differences between decentralized and centralized power in swarm robotics appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Robots on Wall Street: Non-traditional paths to public markets for robotics comp — a notable development in Robotics",
+    "The differences between decentralized and centralized power in swarm robotics — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Marc Mantell and Alok Choksi, Mintz",
+      "value": "Lou Farrell",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Robots on Wall Street: Non-traditional paths to public markets for robotics comp",
+      "date": "2026-08-30",
+      "event": "The differences between decentralized and centralized power in swarm robotics",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "robots",
-    "street",
+    "differences",
+    "between",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Robots on Wall Street: Non-traditional paths to public ma... | Robotics News",
-  "metaDescription": "Agility’s SPAC deal shows there is no one route to a robotics public listing, with SPAC mergers, reverse mergers, and traditional IPOs offering different adv...",
-  "keywords": "robotics, humanoid robot, automation, drones, robots, wall, street, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "The differences between decentralized and centralized pow... | Robotics News",
+  "metaDescription": "A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both.\nThe post The differenc...",
+  "keywords": "robotics, humanoid robot, automation, drones, differences, between, decentralized, TechNanoAI, emerging tech news",
+  "featured": true
 }

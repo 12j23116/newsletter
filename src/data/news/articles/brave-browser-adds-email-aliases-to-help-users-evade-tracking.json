@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786774777372-0",
+  "id": "cybersecurity-1788087228695-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "How Anthropic plans to watermark Claude's AI-generated text | Cybersecurity News",
-  "excerpt": "It could soon become easier to identify AI-generated content, even if it's not the usual \"It's Not X, it's Y\" type of post you'd come across on LinkedIn and other socials. [...]",
-  "date": "2026-08-15",
+  "title": "Brave browser adds email aliases to help users evade trac... | Cybersecurity News",
+  "excerpt": "The latest version of the Brave browser, 1.94, introduces a feature called 'Email Aliases' that allows users to generate disposable email addresses when signing up to a new service. [...]",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "how-anthropic-plans-to-watermark-claudes-ai-generated-text",
-  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/how-anthropic-plans-to-watermark-claudes-ai-generated-text/",
-  "sourceName": "Mayank Parmar",
+  "slug": "brave-browser-adds-email-aliases-to-help-users-evade-tracking",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/brave-browser-adds-email-aliases-to-help-users-evade-tracking/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "It could soon become easier to identify AI-generated content, even if it's not the usual \"It's Not X, it's Y\" type of post you'd come across on LinkedIn and other socials.  [..."
+      "text": "The latest version of the Brave browser, 1. 94, introduces a feature called 'Email Aliases' that allows users to generate disposable email addresses when signing up to a new service."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mayank Parmar, It could soon become easier to identify AI-generated content, even if it's not the usual \"It's Not X, it's Y\" type of post you'd come across on LinkedIn and other socials. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "[..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "How Anthropic plans to watermark Claude's AI-generated text — a notable development in Cybersecurity",
+    "Brave browser adds email aliases to help users evade tracking — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Mayank Parmar",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "How Anthropic plans to watermark Claude's AI-generated text",
+      "date": "2026-08-30",
+      "event": "Brave browser adds email aliases to help users evade tracking",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "anthropic",
-    "plans",
+    "brave",
+    "browser",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "How Anthropic plans to watermark Claude's AI-generated text | Cybersecurity News",
-  "metaDescription": "It could soon become easier to identify AI-generated content, even if it's not the usual \"It's Not X, it's Y\" type of post you'd come across on LinkedIn and ...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, anthropic, plans, watermark, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Brave browser adds email aliases to help users evade trac... | Cybersecurity News",
+  "metaDescription": "The latest version of the Brave browser, 1.94, introduces a feature called 'Email Aliases' that allows users to generate disposable email addresses when sign...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, brave, browser, adds, TechNanoAI, emerging tech news",
+  "featured": false
 }

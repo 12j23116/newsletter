@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786774776554-1",
+  "id": "ai-1788087228185-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Does Mark Zuckerberg really believe AI is 'for everyone'? | AI News",
-  "excerpt": "Meta released Glimmer this week, an open-weight AI'model'anyone can download and run on their own hardware'— a contrast to'Muse'Spark, the company’s more powerful model that stays locked behind its ow",
-  "date": "2026-08-15",
+  "title": "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Rever... | AI News",
+  "excerpt": "Microsoft has disclosed details of a new ClickFix variant, dubbed TerminalFix, that aims to trick users into running a malicious command in Windows Terminal or PowerShell.\n\n\"While traditional ClickFix",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "does-mark-zuckerberg-really-believe-ai-is-8216for-everyone8217",
-  "sourceLink": "https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/",
-  "sourceName": "Theresa Loconsolo",
+  "slug": "terminalfix-uses-fake-cloudflare-captchas-to-deploy-reverse-tunnel-bac",
+  "sourceLink": "https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Meta released Glimmer this week, an open-weight AI'model'anyone can download and run on their own hardware'— a contrast to'Muse'Spark, the company’s more powerful model that stays locked behind its own APIs."
+      "text": "Microsoft has disclosed details of a new ClickFix variant, dubbed TerminalFix, that aims to trick users into running a malicious command in Windows Terminal or PowerShell."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Theresa Loconsolo, Meta released Glimmer this week, an open-weight AI'model'anyone can download and run on their own hardware'— a contrast to'Muse'Spark, the company’s more powerful model that stays locked behind its own APIs. The release landed alongside'a letter from Mark Zuckerberg'arguing AI should be “for everyone” rather than controlled by a handful of labs, but as Equity’s [']. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Microsoft has disclosed details of a new ClickFix variant, dubbed TerminalFix, that aims to trick users into running a malicious command in Windows Terminal or PowerShell.\n\n\"While traditional ClickFix campaigns direct victims to the Windows Run dialog, TerminalFix campaigns apply the same technique but direct users to Windows Terminal or PowerShell instead, increasing the likelihood that complex. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Does Mark Zuckerberg really believe AI is 'for everyone'? — a notable development in AI",
+    "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Theresa Loconsolo",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Does Mark Zuckerberg really believe AI is 'for everyone'?",
+      "date": "2026-08-30",
+      "event": "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "zuckerberg",
-    "really",
+    "terminalfix",
+    "cloudflare",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Does Mark Zuckerberg really believe AI is 'for everyone'? | AI News",
-  "metaDescription": "Meta released Glimmer this week, an open-weight AI'model'anyone can download and run on their own hardware'— a contrast to'Muse'Spark, the company’s more pow...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, does, mark, zuckerberg, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Rever... | AI News",
+  "metaDescription": "Microsoft has disclosed details of a new ClickFix variant, dubbed TerminalFix, that aims to trick users into running a malicious command in Windows Terminal ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, terminalfix, uses, fake, TechNanoAI, emerging tech news",
+  "featured": true
 }

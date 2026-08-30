@@ -1,21 +1,21 @@
 {
-  "id": "space-1786774778316-4",
+  "id": "space-1788087229474-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Wallops gears up for an increase in launches | Space Exploration News",
-  "excerpt": "With a projected surge in launches from Wallops Island in the coming years, companies and officials say now is the time for infrastructure improvements to benefit companies and their workers.\nThe post",
-  "date": "2026-08-15",
+  "title": "NASA, SpaceX set to launch the Nancy Grace Roman Space Te... | Space Exploration News",
+  "excerpt": "NASA and SpaceX are set for the launch of NASA's next great space observatory ''\nThe post NASA, SpaceX set to launch the Nancy Grace Roman Space Telescope from Florida on Sunday appeared first on NASA",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "wallops-gears-up-for-an-increase-in-launches",
-  "sourceLink": "https://spacenews.com/wallops-gears-up-for-an-increase-in-launches/",
-  "sourceName": "Jeff Foust",
+  "slug": "nasa-spacex-set-to-launch-the-nancy-grace-roman-space-telescope-from-f",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/roman-telescope-launch/",
+  "sourceName": "Haygen Warren",
   "body": [
     {
       "type": "p",
-      "text": "With a projected surge in launches from Wallops Island in the coming years, companies and officials say now is the time for infrastructure improvements to benefit companies and their workers. \nThe post Wallops gears up for an increase in launches appeared first on SpaceNews."
+      "text": "NASA and SpaceX are set for the launch of NASA's next great space observatory ''\nThe post NASA, SpaceX set to launch the Nancy Grace Roman Space Telescope from Florida on Sunday appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jeff Foust, With a projected surge in launches from Wallops Island in the coming years, companies and officials say now is the time for infrastructure improvements to benefit companies and their workers.\nThe post Wallops gears up for an increase in launches appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Haygen Warren, NASA and SpaceX are set for the launch of NASA's next great space observatory ''\nThe post NASA, SpaceX set to launch the Nancy Grace Roman Space Telescope from Florida on Sunday appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Wallops gears up for an increase in launches — a notable development in Space Exploration",
+    "NASA, SpaceX set to launch the Nancy Grace Roman Space Telescope from Florida on — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jeff Foust",
+      "value": "Haygen Warren",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Wallops gears up for an increase in launches",
+      "date": "2026-08-30",
+      "event": "NASA, SpaceX set to launch the Nancy Grace Roman Space Telescope from Florida on",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "wallops",
-    "gears",
+    "spacex",
+    "launch",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Wallops gears up for an increase in launches | Space Exploration News",
-  "metaDescription": "With a projected surge in launches from Wallops Island in the coming years, companies and officials say now is the time for infrastructure improvements to be...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, wallops, gears, increase, TechNanoAI, emerging tech news",
+  "metaTitle": "NASA, SpaceX set to launch the Nancy Grace Roman Space Te... | Space Exploration News",
+  "metaDescription": "NASA and SpaceX are set for the launch of NASA's next great space observatory ''\nThe post NASA, SpaceX set to launch the Nancy Grace Roman Space Telescope fr...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, spacex, launch, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786774782648-3",
+  "id": "quantum-1788087235233-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Florida State University Launches Florida’s First Graduat... | Quantum Computing News",
-  "excerpt": "Florida State University (FSU) has announced the launch of Florida’s first formal graduate credential in quantum information science and engineering: the Graduate Certificate in Quantum Information Sc",
-  "date": "2026-08-15",
+  "title": "The universe is still speeding up, but nobody knows why | Quantum Computing News",
+  "excerpt": "A major new analysis challenges recent claims that the universe's expansion is slowing, finding that the evidence for cosmic acceleration remains strong. The findings preserve the leading role of dark",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "florida-state-university-launches-floridas-first-graduate-certificate-",
-  "sourceLink": "https://quantumcomputingreport.com/florida-state-university-launches-floridas-first-graduate-certificate-in-quantum-information-science-technology/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "the-universe-is-still-speeding-up-but-nobody-knows-why",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260828082325.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Florida State University (FSU) has announced the launch of Florida’s first formal graduate credential in quantum information science and engineering: the Graduate Certificate in Quantum Information Science & Technology (QIST).  Administered by the FSU Quantum Initiative, the 14-credit-hour interdisciplinary program is accepting applications through October 1, 2026, for its inaugural Spring 2027 enrollment cohort."
+      "text": "A major new analysis challenges recent claims that the universe's expansion is slowing, finding that the evidence for cosmic acceleration remains strong.  The findings preserve the leading role of dark energy, while leaving scientists with the enduring mystery of what this strange cosmic force actually is."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The  [..."
+      "text": "According to reporting from sciencedaily.com, A major new analysis challenges recent claims that the universe's expansion is slowing, finding that the evidence for cosmic acceleration remains strong. The findings preserve the leading role of dark energy, while leaving scientists with the enduring mystery of what this strange cosmic force actually is.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Florida State University Launches Florida’s First Graduate Certificate in Quantu — a notable development in Quantum Computing",
+    "The universe is still speeding up, but nobody knows why — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Florida State University Launches Florida’s First Graduate Certificate in Quantu",
+      "date": "2026-08-30",
+      "event": "The universe is still speeding up, but nobody knows why",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "florida",
-    "state",
+    "universe",
+    "still",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Florida State University Launches Florida’s First Graduat... | Quantum Computing News",
-  "metaDescription": "Florida State University (FSU) has announced the launch of Florida’s first formal graduate credential in quantum information science and engineering: the Gra...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, florida, state, university, TechNanoAI, emerging tech news",
+  "metaTitle": "The universe is still speeding up, but nobody knows why | Quantum Computing News",
+  "metaDescription": "A major new analysis challenges recent claims that the universe's expansion is slowing, finding that the evidence for cosmic acceleration remains strong. The...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, universe, still, speeding, TechNanoAI, emerging tech news",
   "featured": false
 }

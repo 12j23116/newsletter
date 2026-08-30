@@ -1,11 +1,11 @@
 {
-  "id": "bci-1786774783056-1",
+  "id": "bci-1788087236066-5",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "MIT Professor Susumu Tonegawa, renowned molecular biologi... | Brain-Computer Interfaces News",
   "excerpt": "Tonegawa made landmark discoveries about how the immune system generates antibody diversity and how the brain forms memories.",
-  "date": "2026-08-15",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
+      "date": "2026-08-30",
       "event": "MIT Professor Susumu Tonegawa, renowned molecular biologist and Nobel laureate, ",
       "current": true
     },

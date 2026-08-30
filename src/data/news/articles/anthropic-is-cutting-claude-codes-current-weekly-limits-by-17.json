@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786774777374-3",
+  "id": "cybersecurity-1788087228694-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "The Modern Attack Chain: Rethinking Google Workspace Secu... | Cybersecurity News",
-  "excerpt": "Google Workspace attacks do not always begin with phishing. Stolen OAuth tokens can provide another path into Gmail, Drive, and connected systems. Material Security explains why organizations need def",
-  "date": "2026-08-15",
+  "title": "Anthropic is cutting Claude Code's current weekly limits ... | Cybersecurity News",
+  "excerpt": "Anthropic is permanently increasing Claude Code's standard weekly usage limits by 25% for Pro, Max, Team, and seat-based Enterprise plans, but it's not as good as it sounds. [...]",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "the-modern-attack-chain-rethinking-google-workspace-security-in-the-ag",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/the-modern-attack-chain-rethinking-google-workspace-security-in-the-age-of-ai/",
-  "sourceName": "Sponsored by Material Security",
+  "slug": "anthropic-is-cutting-claude-codes-current-weekly-limits-by-17",
+  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/",
+  "sourceName": "Mayank Parmar",
   "body": [
     {
       "type": "p",
-      "text": "Google Workspace attacks do not always begin with phishing.  Stolen OAuth tokens can provide another path into Gmail, Drive, and connected systems."
+      "text": "Anthropic is permanently increasing Claude Code's standard weekly usage limits by 25% for Pro, Max, Team, and seat-based Enterprise plans, but it's not as good as it sounds.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Material Security explains why organizations need defenses that cover the entire Workspace attack chain.  [..."
+      "text": "According to reporting from Mayank Parmar, Anthropic is permanently increasing Claude Code's standard weekly usage limits by 25% for Pro, Max, Team, and seat-based Enterprise plans, but it's not as good as it sounds. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The Modern Attack Chain: Rethinking Google Workspace Security in the Age of AI — a notable development in Cybersecurity",
+    "Anthropic is cutting Claude Code's current weekly limits by 17% — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Sponsored by Material Security",
+      "value": "Mayank Parmar",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "The Modern Attack Chain: Rethinking Google Workspace Security in the Age of AI",
+      "date": "2026-08-30",
+      "event": "Anthropic is cutting Claude Code's current weekly limits by 17%",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "modern",
-    "attack",
+    "anthropic",
+    "cutting",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The Modern Attack Chain: Rethinking Google Workspace Secu... | Cybersecurity News",
-  "metaDescription": "Google Workspace attacks do not always begin with phishing. Stolen OAuth tokens can provide another path into Gmail, Drive, and connected systems. Material S...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, modern, attack, chain, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic is cutting Claude Code's current weekly limits ... | Cybersecurity News",
+  "metaDescription": "Anthropic is permanently increasing Claude Code's standard weekly usage limits by 25% for Pro, Max, Team, and seat-based Enterprise plans, but it's not as go...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, anthropic, cutting, claude, TechNanoAI, emerging tech news",
   "featured": false
 }

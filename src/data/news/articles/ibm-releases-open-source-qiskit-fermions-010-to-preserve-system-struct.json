@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786774782647-1",
+  "id": "quantum-1788087235232-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Tamil Nadu Secures MoUs with Four Quantum Computing Ventu... | Quantum Computing News",
-  "excerpt": "The Government of Tamil Nadu has signed Memoranda of Understanding (MoUs) with four quantum technology ventures during the Vetri Tamil Nadu Investment Conclave 2026 in Chennai. The strategic agreement",
-  "date": "2026-08-15",
+  "title": "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserv... | Quantum Computing News",
+  "excerpt": "IBM Quantum has officially launched Qiskit Fermions (v0.1.0), an open-source software library and transpiler extension designed to express fermionic operators, construct domain-specific fermionic circ",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "tamil-nadu-secures-mous-with-four-quantum-computing-ventures-at-vetri-",
-  "sourceLink": "https://quantumcomputingreport.com/tamil-nadu-secures-mous-with-four-quantum-computing-ventures-at-vetri-conclave/",
+  "slug": "ibm-releases-open-source-qiskit-fermions-010-to-preserve-system-struct",
+  "sourceLink": "https://quantumcomputingreport.com/ibm-releases-open-source-qiskit-fermions-0-1-0-to-preserve-system-structure-during-transpilation/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "The Government of Tamil Nadu has signed Memoranda of Understanding (MoUs) with four quantum technology ventures during the Vetri Tamil Nadu Investment Conclave 2026 in Chennai.  The strategic agreements establish operational bases, R&D centers, and control system manufacturing facilities across the state, strengthening India's regional quantum hardware and software ecosystem."
+      "text": "IBM Quantum has officially launched Qiskit Fermions (v0. 1."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "[ Tamil Nadu Quantum Technology  [..."
+      "text": "0), an open-source software library and transpiler extension designed to express fermionic operators, construct domain-specific fermionic circuits, and optimize mappings to qubit architectures.  Built on a high-performance Rust core with Python and C bindings, the package addresses the compilation gap between interacting particle physics—such as quantum chemistry and  [..."
+    },
+    {
+      "type": "p",
+      "text": "]\nThe post IBM Releases Open-Source Qiskit Fermions 0. 1."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Tamil Nadu Secures MoUs with Four Quantum Computing Ventures at Vetri Conclave — a notable development in Quantum Computing",
+    "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserve System Structure Duri — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Tamil Nadu Secures MoUs with Four Quantum Computing Ventures at Vetri Conclave",
+      "date": "2026-08-30",
+      "event": "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserve System Structure Duri",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "tamil",
-    "secures",
+    "releases",
+    "source",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Tamil Nadu Secures MoUs with Four Quantum Computing Ventu... | Quantum Computing News",
-  "metaDescription": "The Government of Tamil Nadu has signed Memoranda of Understanding (MoUs) with four quantum technology ventures during the Vetri Tamil Nadu Investment Concla...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, tamil, nadu, secures, TechNanoAI, emerging tech news",
+  "metaTitle": "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserv... | Quantum Computing News",
+  "metaDescription": "IBM Quantum has officially launched Qiskit Fermions (v0.1.0), an open-source software library and transpiler extension designed to express fermionic operator...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, releases, open, source, TechNanoAI, emerging tech news",
   "featured": false
 }

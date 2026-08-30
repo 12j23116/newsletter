@@ -1,21 +1,21 @@
 {
-  "id": "space-1786774778315-1",
+  "id": "space-1788087229474-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Rocket Lab advances via series of announcements | Space Exploration News",
-  "excerpt": "Rocket Lab has formally established a new subsidiary in Germany and introduced a containerized mobile'\nThe post Rocket Lab advances via series of announcements appeared first on NASASpaceFlight.com.",
-  "date": "2026-08-15",
+  "title": "Roman Space Telescope, NASA's next 'great observatory,' p... | Space Exploration News",
+  "excerpt": "Using a donated Hubble-class mirror originally built for a spy satellite, NASA's Roman Space Telescope is poised for launch Sunday on a $4.3 billion mission to open a new window on the universe. Lifto",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "rocket-lab-advances-via-series-of-announcements",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/rocket-lab-advances-announcements/",
-  "sourceName": "Martin Smith and Chris Bergin",
+  "slug": "roman-space-telescope-nasa8217s-next-8216great-observatory8217-poised-",
+  "sourceLink": "https://spaceflightnow.com/2026/08/29/roman-space-telescope-nasas-next-great-observatory-poised-for-sunday-launch/",
+  "sourceName": "William Harwood",
   "body": [
     {
       "type": "p",
-      "text": "Rocket Lab has formally established a new subsidiary in Germany and introduced a containerized mobile'\nThe post Rocket Lab advances via series of announcements appeared first on NASASpaceFlight. com."
+      "text": "Using a donated Hubble-class mirror originally built for a spy satellite, NASA's Roman Space Telescope is poised for launch Sunday on a $4. 3 billion mission to open a new window on the universe."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Martin Smith and Chris Bergin, Rocket Lab has formally established a new subsidiary in Germany and introduced a containerized mobile'\nThe post Rocket Lab advances via series of announcements appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "Liftoff from the Kennedy Space Center atop a SpaceX Falcon Heavy is scheduled for 7:26 a. m."
+    },
+    {
+      "type": "p",
+      "text": "EDT (1126 UTC)."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Rocket Lab advances via series of announcements — a notable development in Space Exploration",
+    "Roman Space Telescope, NASA's next 'great observatory,' poised for Sunday launch — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Martin Smith and Chris Bergin",
+      "value": "William Harwood",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Rocket Lab advances via series of announcements",
+      "date": "2026-08-30",
+      "event": "Roman Space Telescope, NASA's next 'great observatory,' poised for Sunday launch",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "rocket",
-    "advances",
+    "roman",
+    "space",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Rocket Lab advances via series of announcements | Space Exploration News",
-  "metaDescription": "Rocket Lab has formally established a new subsidiary in Germany and introduced a containerized mobile'\nThe post Rocket Lab advances via series of announcemen...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, rocket, advances, series, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Roman Space Telescope, NASA's next 'great observatory,' p... | Space Exploration News",
+  "metaDescription": "Using a donated Hubble-class mirror originally built for a spy satellite, NASA's Roman Space Telescope is poised for launch Sunday on a $4.3 billion mission ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, roman, space, telescope, TechNanoAI, emerging tech news",
+  "featured": true
 }

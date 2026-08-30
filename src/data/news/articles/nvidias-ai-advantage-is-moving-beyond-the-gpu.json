@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786774776554-2",
+  "id": "ai-1788087228187-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Kog is going deeper to squeeze more inference out of GPUs | AI News",
-  "excerpt": "The idea that GPUs are poorly suited for agentic workflows may be a misconception, according to French startup Kog.",
-  "date": "2026-08-15",
+  "title": "Nvidia’s AI advantage is moving beyond the GPU | AI News",
+  "excerpt": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+  "date": "2026-08-30",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus",
-  "sourceLink": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/",
-  "sourceName": "Anna Heim",
+  "slug": "nvidias-ai-advantage-is-moving-beyond-the-gpu",
+  "sourceLink": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+  "sourceName": "Russell Brandom",
   "body": [
     {
       "type": "p",
-      "text": "The idea that GPUs are poorly suited for agentic workflows may be a misconception, according to French startup Kog."
+      "text": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anna Heim, The idea that GPUs are poorly suited for agentic workflows may be a misconception, according to French startup Kog.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Russell Brandom, The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Kog is going deeper to squeeze more inference out of GPUs — a notable development in AI",
+    "Nvidia’s AI advantage is moving beyond the GPU — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anna Heim",
+      "value": "Russell Brandom",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-15",
-      "event": "Kog is going deeper to squeeze more inference out of GPUs",
+      "date": "2026-08-30",
+      "event": "Nvidia’s AI advantage is moving beyond the GPU",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "going",
-    "deeper",
+    "nvidia",
+    "advantage",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Kog is going deeper to squeeze more inference out of GPUs | AI News",
-  "metaDescription": "The idea that GPUs are poorly suited for agentic workflows may be a misconception, according to French startup Kog. LLMs, agents & the race to AGI. Latest AI de",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, going, deeper, squeeze, TechNanoAI, emerging tech news",
+  "metaTitle": "Nvidia’s AI advantage is moving beyond the GPU | AI News",
+  "metaDescription": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, nvidia, advantage, moving, TechNanoAI, emerging tech news",
   "featured": false
 }
