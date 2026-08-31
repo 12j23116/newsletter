@@ -1,113 +1,113 @@
 {
-  "issue": 86,
-  "date": "2026-08-24",
-  "subject": "This Week: AI, Energy Storage & more — August 24, 2026",
+  "issue": 87,
+  "date": "2026-08-31",
+  "subject": "This Week: AI, Energy Storage & more — August 31, 2026",
   "articleCount": 12,
   "topicsCovered": [
     "ai",
     "energy",
-    "biotech",
-    "quantum",
-    "robotics",
     "cybersecurity",
-    "av"
+    "biotech",
+    "robotics",
+    "quantum",
+    "space"
   ],
   "articles": [
     {
-      "title": "Flock CEO calls for ‘compromise’ as surveillance company ... | AI News",
-      "slug": "flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-b",
+      "title": "Caterpillar is bringing to AI deployment what it learned ... | AI News",
+      "slug": "caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automati",
       "topic": "ai",
-      "excerpt": "Flock Safety faces a growing public outcry over concerns that its surveillance technology could be misused.",
-      "url": "https://technanoai.com/news/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-b",
-      "date": "2026-08-24"
+      "excerpt": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.",
+      "url": "https://technanoai.com/news/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automati",
+      "date": "2026-08-31"
     },
     {
-      "title": "Is it legal to train AI models on copyrighted books? It’s... | AI News",
-      "slug": "is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated",
+      "title": "China-Linked Fire Ant Hijacks Cisco Routers to Steal Cred... | AI News",
+      "slug": "china-linked-fire-ant-hijacks-cisco-routers-to-steal-credentials-and-b",
       "topic": "ai",
-      "excerpt": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods. That seems illegal, right?",
-      "url": "https://technanoai.com/news/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated",
-      "date": "2026-08-24"
+      "excerpt": "A China-nexus cyber espionage actor tracked as Fire Ant has expanded a long-running campaign beyond VMware hypervisors to compromise Cisco IOS XR routers, Terminal Access Controller Access-Control Sys",
+      "url": "https://technanoai.com/news/china-linked-fire-ant-hijacks-cisco-routers-to-steal-credentials-and-b",
+      "date": "2026-08-31"
     },
     {
-      "title": "India hits $0.068/kWh tariff in 4-hour peak renewable pow... | Energy Storage News",
-      "slug": "india-hits-0068kwh-tariff-in-4-hour-peak-renewable-power-tender",
+      "title": "Brazil’s Intersolar SA 2026 highlights storage momentum a... | Energy Storage News",
+      "slug": "brazils-intersolar-sa-2026-highlights-storage-momentum-amid-solar-slow",
       "topic": "energy",
-      "excerpt": "SECI has discovered a lowest tariff of INR 5.99 ($0.068)/kWh in its 1.5 GW tender for four-hour assured peak renewable power. Waaree Energies secured 700 MW, while NTPC REL and ACME Solar won 500 MW a",
-      "url": "https://technanoai.com/news/india-hits-0068kwh-tariff-in-4-hour-peak-renewable-power-tender",
-      "date": "2026-08-24"
+      "excerpt": "Energy storage is emerging as one of the key growth areas for Brazil’s solar industry. Manufacturers are expanding their battery portfolios and seeking local partnerships to meet domestic content requ",
+      "url": "https://technanoai.com/news/brazils-intersolar-sa-2026-highlights-storage-momentum-amid-solar-slow",
+      "date": "2026-08-31"
     },
     {
-      "title": "Quinbrook advances plans for polysilicon factory in Austr... | Energy Storage News",
-      "slug": "quinbrook-advances-plans-for-polysilicon-factory-in-australia",
+      "title": "CATL targets opportunities in Brazil’s capacity reserve a... | Energy Storage News",
+      "slug": "catl-targets-opportunities-in-brazils-capacity-reserve-auction-as-regu",
       "topic": "energy",
-      "excerpt": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement wit",
-      "url": "https://technanoai.com/news/quinbrook-advances-plans-for-polysilicon-factory-in-australia",
-      "date": "2026-08-24"
+      "excerpt": "CATL has formed a partnership to work on projects awarded contracts through Brazil’s first national energy storage auction programme, which received more than 6,000 bids.",
+      "url": "https://technanoai.com/news/catl-targets-opportunities-in-brazils-capacity-reserve-auction-as-regu",
+      "date": "2026-08-31"
     },
     {
-      "title": "<a href=\"/biotech/boehringer-benches-phase-1-study-safety... | Biotechnology News",
-      "slug": "a-hrefbiotechboehringer-benches-phase-1-study-safety-event-hreflangenb",
-      "topic": "biotech",
-      "excerpt": "Boehringer Ingelheim has suspended a phase 1 trial of an investigational small molecule drug while it seeks to understand a “safety event,” although the German pharma isn't shedding light on the natur",
-      "url": "https://technanoai.com/news/a-hrefbiotechboehringer-benches-phase-1-study-safety-event-hreflangenb",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "<a href=\"/biotech/chutes-ladders-neumora-shuffles-leaders... | Biotechnology News",
-      "slug": "a-hrefbiotechchutes-ladders-neumora-shuffles-leadership-ahead-ind-href",
-      "topic": "biotech",
-      "excerpt": "Joshua Pinto, Ph.D., has been appointed chief executive officer of Neumora Therapeutics, a clinical-stage biotech with obesity and neuro assets.",
-      "url": "https://technanoai.com/news/a-hrefbiotechchutes-ladders-neumora-shuffles-leadership-ahead-ind-href",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "Scientists turn tiny “defects” into a 5.5x heat transfer ... | Quantum Computing News",
-      "slug": "scientists-turn-tiny-defects-into-a-55x-heat-transfer-boost",
-      "topic": "quantum",
-      "excerpt": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation. By turning tiny polymer structures once considered “defects” int",
-      "url": "https://technanoai.com/news/scientists-turn-tiny-defects-into-a-55x-heat-transfer-boost",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "Physicists create a tiny “Big Bang” with surprisingly sma... | Robotics News",
-      "slug": "physicists-create-a-tiny-big-bang-with-surprisingly-small-atomic-nucle",
-      "topic": "robotics",
-      "excerpt": "Researchers at CERN have created microscopic versions of the early Universe by colliding surprisingly small atomic nuclei at nearly the speed of light. The collisions produced quark-gluon plasma, the ",
-      "url": "https://technanoai.com/news/physicists-create-a-tiny-big-bang-with-surprisingly-small-atomic-nucle",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "Use a digital twin to explore automation before committin... | Robotics News",
-      "slug": "use-a-digital-twin-to-explore-automation-before-committing-capital",
-      "topic": "robotics",
-      "excerpt": "While a digital twin does not necessarily replace a systems integrator, it can help manufacturers evaluate robots and plan applications, says RoboDK.\nThe post Use a digital twin to explore automation ",
-      "url": "https://technanoai.com/news/use-a-digital-twin-to-explore-automation-before-committing-capital",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "ToxicPanda Android malware uses VPN permissions to block ... | Cybersecurity News",
-      "slug": "toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play",
+      "title": "Boston Scientific Still Recovering From Cyberattack | Cybersecurity News",
+      "slug": "boston-scientific-still-recovering-from-cyberattack",
       "topic": "cybersecurity",
-      "excerpt": "The ToxicPanda Android malware has evolved with new malicious functionality, expanding its targeting to 349 applications and adding support for 167 remote commands. [...]",
-      "url": "https://technanoai.com/news/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play",
-      "date": "2026-08-24"
+      "excerpt": "The company has called in CrowdStrike and others to investigate the attack that caused global network disruption.\nThe post Boston Scientific Still Recovering From Cyberattack appeared first on Securit",
+      "url": "https://technanoai.com/news/boston-scientific-still-recovering-from-cyberattack",
+      "date": "2026-08-31"
     },
     {
-      "title": "TechCrunch Mobility: The custom chip driving Waymo’s robo... | Autonomous Vehicles News",
-      "slug": "techcrunch-mobility-the-custom-chip-driving-waymos-robotaxi-ambitions",
-      "topic": "av",
-      "excerpt": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
-      "url": "https://technanoai.com/news/techcrunch-mobility-the-custom-chip-driving-waymos-robotaxi-ambitions",
-      "date": "2026-08-24"
+      "title": "Critical Ruby on Rails Vulnerability in Attackers' Crossh... | Cybersecurity News",
+      "slug": "critical-ruby-on-rails-vulnerability-in-attackers8217-crosshairs",
+      "topic": "cybersecurity",
+      "excerpt": "Named KindaRails2Shell, the arbitrary file read flaw allows attackers to extract secrets and execute arbitrary code remotely.\nThe post Critical Ruby on Rails Vulnerability in Attackers' Crosshairs app",
+      "url": "https://technanoai.com/news/critical-ruby-on-rails-vulnerability-in-attackers8217-crosshairs",
+      "date": "2026-08-31"
     },
     {
-      "title": "Uber faces fine of nearly $1B over automated driver suspe... | Autonomous Vehicles News",
-      "slug": "uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions",
-      "topic": "av",
-      "excerpt": "The Dutch Data Protection Authority is fining Uber €825 million in the second largest penalty issued under Europe’s GDPR.",
-      "url": "https://technanoai.com/news/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions",
-      "date": "2026-08-24"
+      "title": "<a href=\"/biotech/ausperbio-adds-120m-advance-hepatitis-b... | Biotechnology News",
+      "slug": "a-hrefbiotechausperbio-adds-120m-advance-hepatitis-b-therapy-through-p",
+      "topic": "biotech",
+      "excerpt": "AusperBio Therapeutics has raised $120 million in series C funds to advance its oligonucleotide therapy for chronic hepatitis B through phase 3 testing and hopefully on to commercialization.",
+      "url": "https://technanoai.com/news/a-hrefbiotechausperbio-adds-120m-advance-hepatitis-b-therapy-through-p",
+      "date": "2026-08-31"
+    },
+    {
+      "title": "<a href=\"/biotech/biontech-genentech-personalized-cancer-... | Biotechnology News",
+      "slug": "a-hrefbiotechbiontech-genentech-personalized-cancer-vaccine-posts-wors",
+      "topic": "biotech",
+      "excerpt": "Following Merck and Moderna’s phase 3 triumph with a Keytruda-paired personalized mRNA cancer vaccine, a similar shot from BioNTech and Genentech has faltered in a reminder of the approach’s struggles",
+      "url": "https://technanoai.com/news/a-hrefbiotechbiontech-genentech-personalized-cancer-vaccine-posts-wors",
+      "date": "2026-08-31"
+    },
+    {
+      "title": "The edge AI wall: Why embodied AI requires new mathematics | Robotics News",
+      "slug": "the-edge-ai-wall-why-embodied-ai-requires-new-mathematics",
+      "topic": "robotics",
+      "excerpt": "Computational overload is not a bug of a specific planner, but an edge AI wall limiting physical and embodied AI.\nThe post The edge AI wall: Why embodied AI requires new mathematics appeared first on ",
+      "url": "https://technanoai.com/news/the-edge-ai-wall-why-embodied-ai-requires-new-mathematics",
+      "date": "2026-08-31"
+    },
+    {
+      "title": "A new recipe unlocks “impossible” nanocrystals for LEDs, ... | Quantum Computing News",
+      "slug": "a-new-recipe-unlocks-impossible-nanocrystals-for-leds-implants-and-sup",
+      "topic": "quantum",
+      "excerpt": "Scientists have cracked a long-standing chemistry problem, creating nanocrystals from tough metal nitrides that were previously extremely difficult to produce at this scale. The breakthrough could tur",
+      "url": "https://technanoai.com/news/a-new-recipe-unlocks-impossible-nanocrystals-for-leds-implants-and-sup",
+      "date": "2026-08-31"
+    },
+    {
+      "title": "QuantrolOx and QURECA Partner to Launch Quantum EDGE Acad... | Quantum Computing News",
+      "slug": "quantrolox-and-qureca-partner-to-launch-quantum-edge-academy-for-hands",
+      "topic": "quantum",
+      "excerpt": "Quantum measurement and control software developer QuantrolOx (Espoo, Finland / Oxford, UK) has partnered with quantum education provider QURECA (Glasgow, UK) to launch the Quantum EDGE Academy. Integ",
+      "url": "https://technanoai.com/news/quantrolox-and-qureca-partner-to-launch-quantum-edge-academy-for-hands",
+      "date": "2026-08-31"
+    },
+    {
+      "title": "NASA, SpaceX successfully launch the Nancy Grace Roman Sp... | Space Exploration News",
+      "slug": "nasa-spacex-successfully-launch-the-nancy-grace-roman-space-telescope-",
+      "topic": "space",
+      "excerpt": "NASA and SpaceX have launched NASA's next great space observatory ' the Nancy Grace Roman'\nThe post NASA, SpaceX successfully launch the Nancy Grace Roman Space Telescope from Florida appeared first o",
+      "url": "https://technanoai.com/news/nasa-spacex-successfully-launch-the-nancy-grace-roman-space-telescope-",
+      "date": "2026-08-31"
     }
   ]
 }
