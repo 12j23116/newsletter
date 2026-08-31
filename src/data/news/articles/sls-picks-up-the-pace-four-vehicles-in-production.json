@@ -1,21 +1,21 @@
 {
-  "id": "space-1786861331452-2",
+  "id": "space-1788177994460-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Lunar orbiter among upcoming NASA CLPS task orders | Space Exploration News",
-  "excerpt": "NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissance Orbiter\nThe post Lunar orbiter among upc",
-  "date": "2026-08-16",
+  "title": "SLS picks up the pace, four vehicles in production | Space Exploration News",
+  "excerpt": "The NASA and contractor workforce continues to make progress ahead of next year's Artemis III'\nThe post SLS picks up the pace, four vehicles in production appeared first on NASASpaceFlight.com.",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "lunar-orbiter-among-upcoming-nasa-clps-task-orders",
-  "sourceLink": "https://spacenews.com/lunar-orbiter-among-upcoming-nasa-clps-task-orders/",
-  "sourceName": "Jeff Foust",
+  "slug": "sls-picks-up-the-pace-four-vehicles-in-production",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/sls-pace-four-vehicles-production/",
+  "sourceName": "Alejandro Alcantarilla Romera and Chris Bergin",
   "body": [
     {
       "type": "p",
-      "text": "NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissance Orbiter\nThe post Lunar orbiter among upcoming NASA CLPS task orders appeared first on SpaceNews."
+      "text": "The NASA and contractor workforce continues to make progress ahead of next year's Artemis III'\nThe post SLS picks up the pace, four vehicles in production appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jeff Foust, NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissance Orbiter\nThe post Lunar orbiter among upcoming NASA CLPS task orders appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alejandro Alcantarilla Romera and Chris Bergin, The NASA and contractor workforce continues to make progress ahead of next year's Artemis III'\nThe post SLS picks up the pace, four vehicles in production appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Lunar orbiter among upcoming NASA CLPS task orders — a notable development in Space Exploration",
+    "SLS picks up the pace, four vehicles in production — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jeff Foust",
+      "value": "Alejandro Alcantarilla Romera and Chris Bergin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "Lunar orbiter among upcoming NASA CLPS task orders",
+      "date": "2026-08-31",
+      "event": "SLS picks up the pace, four vehicles in production",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "lunar",
-    "orbiter",
+    "picks",
+    "vehicles",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Lunar orbiter among upcoming NASA CLPS task orders | Space Exploration News",
-  "metaDescription": "NASA plans to award three more lunar missions this year through a commercial services program, including an orbiter that would replace the Lunar Reconnaissan...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, lunar, orbiter, among, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "SLS picks up the pace, four vehicles in production | Space Exploration News",
+  "metaDescription": "The NASA and contractor workforce continues to make progress ahead of next year's Artemis III'\nThe post SLS picks up the pace, four vehicles in production ap...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, picks, pace, four, TechNanoAI, emerging tech news",
+  "featured": true
 }

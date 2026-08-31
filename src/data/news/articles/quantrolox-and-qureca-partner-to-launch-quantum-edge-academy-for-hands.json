@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786861337425-0",
+  "id": "quantum-1788178001040-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Quantinuum to Partner with the Singapore Institute of Tec... | Quantum Computing News",
-  "excerpt": "Quantinuum has signed a Memorandum of Understanding (MoU) with the Singapore Institute of Technology (SIT) to train and expand Singapore’s quantum workforce. Building on Quantinuum’s existing R&D foot",
-  "date": "2026-08-16",
+  "title": "QuantrolOx and QURECA Partner to Launch Quantum EDGE Acad... | Quantum Computing News",
+  "excerpt": "Quantum measurement and control software developer QuantrolOx (Espoo, Finland / Oxford, UK) has partnered with quantum education provider QURECA (Glasgow, UK) to launch the Quantum EDGE Academy. Integ",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "quantinuum-to-partner-with-the-singapore-institute-of-technology-to-he",
-  "sourceLink": "https://quantumcomputingreport.com/quantinuum-to-partner-with-the-singapore-institute-of-technology-to-help-develop-singapores-future-quantum-workforce/",
-  "sourceName": "dougfinke",
+  "slug": "quantrolox-and-qureca-partner-to-launch-quantum-edge-academy-for-hands",
+  "sourceLink": "https://quantumcomputingreport.com/quantrolox-and-qureca-partner-to-launch-quantum-edge-academy-for-hands-on-hardware-training/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Quantinuum has signed a Memorandum of Understanding (MoU) with the Singapore Institute of Technology (SIT) to train and expand Singapore’s quantum workforce.  Building on Quantinuum’s existing R&D footprint and the planned deployment of its Helios quantum processor in Singapore, the collaboration aims to prepare an industry-ready workforce across engineering, systems development, and applied technologies."
+      "text": "Quantum measurement and control software developer QuantrolOx (Espoo, Finland / Oxford, UK) has partnered with quantum education provider QURECA (Glasgow, UK) to launch the Quantum EDGE Academy.  Integrated into QURECA's educational catalog, the initiative provides a flight-simulator-style software environment to train experimentalists, technicians, and hardware engineers in automated QPU development, tuning, qubit characterization, and system  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Key  [..."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Quantum measurement and control software developer QuantrolOx (Espoo, Finland / Oxford, UK) has partnered with quantum education provider QURECA (Glasgow, UK) to launch the Quantum EDGE Academy. Integrated into QURECA's educational catalog, the initiative provides a flight-simulator-style software environment to train experimentalists, technicians, and hardware engineers in automated QPU development, tuning, qubit characterization, and system  [...]\nThe post QuantrolOx and QURECA Partner to Laun. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Quantinuum to Partner with the Singapore Institute of Technology to Help Develop — a notable development in Quantum Computing",
+    "QuantrolOx and QURECA Partner to Launch Quantum EDGE Academy for Hands-On Hardwa — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "dougfinke",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "Quantinuum to Partner with the Singapore Institute of Technology to Help Develop",
+      "date": "2026-08-31",
+      "event": "QuantrolOx and QURECA Partner to Launch Quantum EDGE Academy for Hands-On Hardwa",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "quantinuum",
-    "partner",
+    "quantrolox",
+    "qureca",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Quantinuum to Partner with the Singapore Institute of Tec... | Quantum Computing News",
-  "metaDescription": "Quantinuum has signed a Memorandum of Understanding (MoU) with the Singapore Institute of Technology (SIT) to train and expand Singapore’s quantum workforce....",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantinuum, partner, with, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "QuantrolOx and QURECA Partner to Launch Quantum EDGE Acad... | Quantum Computing News",
+  "metaDescription": "Quantum measurement and control software developer QuantrolOx (Espoo, Finland / Oxford, UK) has partnered with quantum education provider QURECA (Glasgow, UK...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantrolox, qureca, partner, TechNanoAI, emerging tech news",
+  "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1786861330434-0",
+  "id": "cybersecurity-1788177993295-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "New Evooo1Bot Linux botnet turns routers into traffic rel... | Cybersecurity News",
-  "excerpt": "A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay nodes. [...]",
-  "date": "2026-08-16",
+  "title": "Extortion Group Claims Manchester Airports Group Data Breach | Cybersecurity News",
+  "excerpt": "FulcrumSec says it stole over 80 GB of data from Manchester Airports Group and plans to leak it online.\nThe post Extortion Group Claims Manchester Airports Group Data Breach appeared first on Security",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/",
-  "sourceName": "Bill Toulas",
+  "slug": "extortion-group-claims-manchester-airports-group-data-breach",
+  "sourceLink": "https://www.securityweek.com/extortion-group-claims-manchester-airports-group-data-breach/",
+  "sourceName": "Ionut Arghire",
   "body": [
     {
       "type": "p",
-      "text": "A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay nodes.  [..."
+      "text": "FulcrumSec says it stole over 80 GB of data from Manchester Airports Group and plans to leak it online. \nThe post Extortion Group Claims Manchester Airports Group Data Breach appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay nodes. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ionut Arghire, FulcrumSec says it stole over 80 GB of data from Manchester Airports Group and plans to leak it online.\nThe post Extortion Group Claims Manchester Airports Group Data Breach appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "New Evooo1Bot Linux botnet turns routers into traffic relay nodes — a notable development in Cybersecurity",
+    "Extortion Group Claims Manchester Airports Group Data Breach — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "Ionut Arghire",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "New Evooo1Bot Linux botnet turns routers into traffic relay nodes",
+      "date": "2026-08-31",
+      "event": "Extortion Group Claims Manchester Airports Group Data Breach",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "evooo",
-    "linux",
+    "extortion",
+    "group",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "New Evooo1Bot Linux botnet turns routers into traffic rel... | Cybersecurity News",
-  "metaDescription": "A new Mirai-based modular Linux botnet malware called Evooo1Bot has been targeting internet-facing gateway devices, turning them into SOCKS5 traffic relay no...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, evooo, linux, botnet, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Extortion Group Claims Manchester Airports Group Data Breach | Cybersecurity News",
+  "metaDescription": "FulcrumSec says it stole over 80 GB of data from Manchester Airports Group and plans to leak it online.\nThe post Extortion Group Claims Manchester Airports G...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, extortion, group, claims, TechNanoAI, emerging tech news",
+  "featured": false
 }

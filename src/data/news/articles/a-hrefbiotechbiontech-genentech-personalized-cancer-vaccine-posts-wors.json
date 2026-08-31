@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1786861332079-0",
+  "id": "biotech-1788177995021-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "CDMOs Expand and Build for Future Growth | Biotechnology News",
-  "excerpt": "Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent service expansions and new facilities in intervie",
-  "date": "2026-08-16",
+  "title": "<a href=\"/biotech/biontech-genentech-personalized-cancer-... | Biotechnology News",
+  "excerpt": "Following Merck and Moderna’s phase 3 triumph with a Keytruda-paired personalized mRNA cancer vaccine, a similar shot from BioNTech and Genentech has faltered in a reminder of the approach’s struggles",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "cdmos-expand-and-build-for-future-growth",
-  "sourceLink": "https://www.genengnews.com/topics/bioprocessing/cdmos-expand-and-build-for-future-growth/",
-  "sourceName": "Alex Philippidis",
+  "slug": "a-hrefbiotechbiontech-genentech-personalized-cancer-vaccine-posts-wors",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/biontech-genentech-personalized-cancer-vaccine-posts-worse-patient-survival-terminated-ph-2",
+  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
   "body": [
     {
       "type": "p",
-      "text": "Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent service expansions and new facilities in interviews with GEN. \nThe post CDMOs Expand and Build for Future Growth appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Following Merck and Moderna’s phase 3 triumph with a Keytruda-paired personalized mRNA cancer vaccine, a similar shot from BioNTech and Genentech has faltered in a reminder of the approach’s struggles as a standalone therapy."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Alex Philippidis, Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent service expansions and new facilities in interviews with GEN.\nThe post CDMOs Expand and Build for Future Growth appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, Following Merck and Moderna’s phase 3 triumph with a Keytruda-paired personalized mRNA cancer vaccine, a similar shot from BioNTech and Genentech has faltered in a reminder of the approach’s struggles as a standalone therapy.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "CDMOs Expand and Build for Future Growth — a notable development in Biotechnology",
+    "<a href=\"/biotech/biontech-genentech-personalized-cancer-vaccine-posts-worse-pat — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Alex Philippidis",
+      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "CDMOs Expand and Build for Future Growth",
+      "date": "2026-08-31",
+      "event": "<a href=\"/biotech/biontech-genentech-personalized-cancer-vaccine-posts-worse-pat",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "cdmos",
-    "expand",
+    "biotech",
+    "biontech",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "CDMOs Expand and Build for Future Growth | Biotechnology News",
-  "metaDescription": "Executives from Fujifilm Biotechnologies, Lonza Group, MilliporeSigma, Samsung Biologics, and Thermo Fisher Scientific discuss their companies' recent servic...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, cdmos, expand, build, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/biontech-genentech-personalized-cancer-... | Biotechnology News",
+  "metaDescription": "Following Merck and Moderna’s phase 3 triumph with a Keytruda-paired personalized mRNA cancer vaccine, a similar shot from BioNTech and Genentech has faltere...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, biontech, TechNanoAI, emerging tech news",
+  "featured": false
 }

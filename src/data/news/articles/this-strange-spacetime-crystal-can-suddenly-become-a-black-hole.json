@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786861337425-1",
+  "id": "quantum-1788178001040-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Who’s News: Strategic Appointments at PsiQuantum, EigenQ,... | Quantum Computing News",
-  "excerpt": "PsiQuantum has appointed Niklas Zennström to its Board of Directors, effective August 11, 2026. Zennström is the Founder and CEO of Atomico and co-founder of Skype. He succeeds Siraj Khaliq as Atomico",
-  "date": "2026-08-16",
+  "title": "This strange “spacetime crystal” can suddenly become a bl... | Quantum Computing News",
+  "excerpt": "Physicists have mathematically captured a bizarre “spacetime crystal” that can either dissolve or collapse into a microscopic black hole after only a tiny change in energy. Their breakthrough came fro",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "whos-news-strategic-appointments-at-psiquantum-eigenq-qunova-computing",
-  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-psiquantum-eigenq-qunova-computing-and-optica-quantum/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "this-strange-spacetime-crystal-can-suddenly-become-a-black-hole",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260829035225.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "PsiQuantum has appointed Niklas Zennström to its Board of Directors, effective August 11, 2026.  Zennström is the Founder and CEO of Atomico and co-founder of Skype."
+      "text": "Physicists have mathematically captured a bizarre “spacetime crystal” that can either dissolve or collapse into a microscopic black hole after only a tiny change in energy.  Their breakthrough came from an unusual trick involving infinitely many dimensions, potentially giving researchers a new tool for studying primordial and microscopic black holes."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "He succeeds Siraj Khaliq as Atomico's representative on the board, following recent executive additions including Victor Peng as CEO, Rob Soderbery as Executive Vice President, and Sriram Sitaraman as  [..."
+      "text": "According to reporting from sciencedaily.com, Physicists have mathematically captured a bizarre “spacetime crystal” that can either dissolve or collapse into a microscopic black hole after only a tiny change in energy. Their breakthrough came from an unusual trick involving infinitely many dimensions, potentially giving researchers a new tool for studying primordial and microscopic black holes.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Who’s News: Strategic Appointments at PsiQuantum, EigenQ, Qunova Computing, and  — a notable development in Quantum Computing",
+    "This strange “spacetime crystal” can suddenly become a black hole — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "Who’s News: Strategic Appointments at PsiQuantum, EigenQ, Qunova Computing, and ",
+      "date": "2026-08-31",
+      "event": "This strange “spacetime crystal” can suddenly become a black hole",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "strategic",
-    "appointments",
+    "strange",
+    "spacetime",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Who’s News: Strategic Appointments at PsiQuantum, EigenQ,... | Quantum Computing News",
-  "metaDescription": "PsiQuantum has appointed Niklas Zennström to its Board of Directors, effective August 11, 2026. Zennström is the Founder and CEO of Atomico and co-founder of...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "This strange “spacetime crystal” can suddenly become a bl... | Quantum Computing News",
+  "metaDescription": "Physicists have mathematically captured a bizarre “spacetime crystal” that can either dissolve or collapse into a microscopic black hole after only a tiny ch...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, this, strange, spacetime, TechNanoAI, emerging tech news",
+  "featured": true
 }

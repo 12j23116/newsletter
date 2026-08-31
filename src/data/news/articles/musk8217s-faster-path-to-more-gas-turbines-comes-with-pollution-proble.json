@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786861329843-2",
+  "id": "ai-1788177992663-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "SpaceX officially closes its Cursor acquisition | AI News",
-  "excerpt": "AI coding startup Cursor is now officially a part of SpaceX.",
-  "date": "2026-08-16",
+  "title": "Musk's faster path to more gas turbines comes with pollut... | AI News",
+  "excerpt": "Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's a bet on a fuel source that's already trigg",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "spacex-officially-closes-its-cursor-acquisition",
-  "sourceLink": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
-  "sourceName": "Anthony Ha",
+  "slug": "musk8217s-faster-path-to-more-gas-turbines-comes-with-pollution-proble",
+  "sourceLink": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+  "sourceName": "Connie Loizos",
   "body": [
     {
       "type": "p",
-      "text": "AI coding startup Cursor is now officially a part of SpaceX."
+      "text": "Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's a bet on a fuel source that's already triggering lawsuits and health studies everywhere his (and others') turbines have gone in."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, AI coding startup Cursor is now officially a part of SpaceX.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Connie Loizos, Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's a bet on a fuel source that's already triggering lawsuits and health studies everywhere his (and others') turbines have gone in.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX officially closes its Cursor acquisition — a notable development in AI",
+    "Musk's faster path to more gas turbines comes with pollution problem — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Connie Loizos",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "SpaceX officially closes its Cursor acquisition",
+      "date": "2026-08-31",
+      "event": "Musk's faster path to more gas turbines comes with pollution problem",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "spacex",
-    "officially",
+    "faster",
+    "turbines",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX officially closes its Cursor acquisition | AI News",
-  "metaDescription": "AI coding startup Cursor is now officially a part of SpaceX. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, spacex, officially, closes, TechNanoAI, emerging tech news",
+  "metaTitle": "Musk's faster path to more gas turbines comes with pollut... | AI News",
+  "metaDescription": "Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, musk, faster, path, TechNanoAI, emerging tech news",
   "featured": false
 }

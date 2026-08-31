@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1786861336405-0",
+  "id": "robotics-1788177999705-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Why robots that can’t communicate naturally won’t be adopted | Robotics News",
-  "excerpt": "Gunnar Pétur Hauksson, the co-founder and COO at Treble Technologies, says robotics developers can't overlook the importance of hearing.\nThe post Why robots that can’t communicate naturally won’t be a",
-  "date": "2026-08-16",
+  "title": "The edge AI wall: Why embodied AI requires new mathematics | Robotics News",
+  "excerpt": "Computational overload is not a bug of a specific planner, but an edge AI wall limiting physical and embodied AI.\nThe post The edge AI wall: Why embodied AI requires new mathematics appeared first on ",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "why-robots-that-cant-communicate-naturally-wont-be-adopted",
-  "sourceLink": "https://www.therobotreport.com/why-robots-that-cant-communicate-naturally-wont-be-adopted-says-treble/",
-  "sourceName": "Gunnar Pétur Hauksson",
+  "slug": "the-edge-ai-wall-why-embodied-ai-requires-new-mathematics",
+  "sourceLink": "https://www.therobotreport.com/edge-ai-wall-why-embodied-ai-requires-new-mathematics/",
+  "sourceName": "Zhengis Tileubay",
   "body": [
     {
       "type": "p",
-      "text": "Gunnar Pétur Hauksson, the co-founder and COO at Treble Technologies, says robotics developers can't overlook the importance of hearing. \nThe post Why robots that can’t communicate naturally won’t be adopted appeared first on The Robot Report."
+      "text": "Computational overload is not a bug of a specific planner, but an edge AI wall limiting physical and embodied AI. \nThe post The edge AI wall: Why embodied AI requires new mathematics appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Gunnar Pétur Hauksson, Gunnar Pétur Hauksson, the co-founder and COO at Treble Technologies, says robotics developers can't overlook the importance of hearing.\nThe post Why robots that can’t communicate naturally won’t be adopted appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Zhengis Tileubay, Computational overload is not a bug of a specific planner, but an edge AI wall limiting physical and embodied AI.\nThe post The edge AI wall: Why embodied AI requires new mathematics appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Why robots that can’t communicate naturally won’t be adopted — a notable development in Robotics",
+    "The edge AI wall: Why embodied AI requires new mathematics — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Gunnar Pétur Hauksson",
+      "value": "Zhengis Tileubay",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "Why robots that can’t communicate naturally won’t be adopted",
+      "date": "2026-08-31",
+      "event": "The edge AI wall: Why embodied AI requires new mathematics",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "robots",
-    "communicate",
+    "embodied",
+    "requires",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Why robots that can’t communicate naturally won’t be adopted | Robotics News",
-  "metaDescription": "Gunnar Pétur Hauksson, the co-founder and COO at Treble Technologies, says robotics developers can't overlook the importance of hearing.\nThe post Why robots ...",
-  "keywords": "robotics, humanoid robot, automation, drones, robots, that, communicate, TechNanoAI, emerging tech news",
+  "metaTitle": "The edge AI wall: Why embodied AI requires new mathematics | Robotics News",
+  "metaDescription": "Computational overload is not a bug of a specific planner, but an edge AI wall limiting physical and embodied AI.\nThe post The edge AI wall: Why embodied AI ...",
+  "keywords": "robotics, humanoid robot, automation, drones, edge, wall, embodied, TechNanoAI, emerging tech news",
   "featured": true
 }

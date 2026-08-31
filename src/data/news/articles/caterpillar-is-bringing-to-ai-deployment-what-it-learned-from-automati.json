@@ -1,21 +1,21 @@
 {
-  "id": "ai-1786861329842-1",
+  "id": "ai-1788177992663-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Anthropic shares more details about how Claude’s new wate... | AI News",
-  "excerpt": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
-  "date": "2026-08-16",
+  "title": "Caterpillar is bringing to AI deployment what it learned ... | AI News",
+  "excerpt": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "anthropic-shares-more-details-about-how-claudes-new-watermarks-will-wo",
-  "sourceLink": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
-  "sourceName": "Anthony Ha",
+  "slug": "caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automati",
+  "sourceLink": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+  "sourceName": "Kate Park",
   "body": [
     {
       "type": "p",
-      "text": "How will the watermarking actually work?  Can it be hidden with editing?"
+      "text": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites.  It's now bringing that experience to AI deployment."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "And how does this affect code?"
+      "text": "According to reporting from Kate Park, Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Anthropic shares more details about how Claude’s new watermarks will work — a notable development in AI",
+    "Caterpillar is bringing to AI deployment what it learned from automating mining — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Kate Park",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "Anthropic shares more details about how Claude’s new watermarks will work",
+      "date": "2026-08-31",
+      "event": "Caterpillar is bringing to AI deployment what it learned from automating mining",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anthropic",
-    "shares",
+    "caterpillar",
+    "bringing",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Anthropic shares more details about how Claude’s new wate... | AI News",
-  "metaDescription": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code? LLMs, agents & the race to AGI. Latest AI developments an",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, shares, more, TechNanoAI, emerging tech news",
+  "metaTitle": "Caterpillar is bringing to AI deployment what it learned ... | AI News",
+  "metaDescription": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, caterpillar, bringing, deployment, TechNanoAI, emerging tech news",
   "featured": false
 }

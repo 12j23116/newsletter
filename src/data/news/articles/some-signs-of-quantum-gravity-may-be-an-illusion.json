@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1786861337426-2",
+  "id": "quantum-1788178001040-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Global Consortium Launches Quantum Optimization Benchmark... | Quantum Computing News",
-  "excerpt": "An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global academic and industrial partners—has introdu",
-  "date": "2026-08-16",
+  "title": "Some signs of quantum gravity may be an illusion | Quantum Computing News",
+  "excerpt": "Quantum mechanics and Einstein’s theory of gravity explain almost everything we see in nature, yet physicists still do not know how to unite them. A new theoretical framework suggests that some experi",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "global-consortium-launches-quantum-optimization-benchmarking-library-q",
-  "sourceLink": "https://quantumcomputingreport.com/global-consortium-launches-quantum-optimization-benchmarking-library-qoblib-to-track-path-to-quantum-advantage/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "some-signs-of-quantum-gravity-may-be-an-illusion",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260828005226.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global academic and industrial partners—has introduced the Quantum Optimization Benchmarking Library (QOBLIB).  Published in Nature Computational Science (\"The Quantum Optimization Benchmarking Library\"), the open-source initiative establishes a standardized, model-independent benchmarking framework to evaluate quantum, classical, and hybrid  [..."
+      "text": "Quantum mechanics and Einstein’s theory of gravity explain almost everything we see in nature, yet physicists still do not know how to unite them.  A new theoretical framework suggests that some experiments that appear to show gravity behaving quantum mechanically may have a much more ordinary explanation."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global academic and industrial partners—has introduced the Quantum Optimization Benchmarking Library (QOBLIB). Published in Nature Computational Science (\"The Quantum Optimization Benchmarking Library\"), the open-source initiative establishes a standardized, model-independent benchmarking framework to evaluate quantum, classical, and hybrid  [...]\nT. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "Researchers found that scenarios involving a supposed “superposition of gravity” can sometimes be described equally well as quantum particles moving through classical spacetime."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Global Consortium Launches Quantum Optimization Benchmarking Library (QOBLIB) to — a notable development in Quantum Computing",
+    "Some signs of quantum gravity may be an illusion — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "Global Consortium Launches Quantum Optimization Benchmarking Library (QOBLIB) to",
+      "date": "2026-08-31",
+      "event": "Some signs of quantum gravity may be an illusion",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "global",
-    "consortium",
+    "signs",
+    "quantum",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Global Consortium Launches Quantum Optimization Benchmark... | Quantum Computing News",
-  "metaDescription": "An international research consortium led by IBM Quantum, Zuse Institute Berlin (ZIB), Technische Universität Berlin, and Purdue University—alongside global a...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, global, consortium, launches, TechNanoAI, emerging tech news",
+  "metaTitle": "Some signs of quantum gravity may be an illusion | Quantum Computing News",
+  "metaDescription": "Quantum mechanics and Einstein’s theory of gravity explain almost everything we see in nature, yet physicists still do not know how to unite them. A new theo...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, some, signs, quantum, TechNanoAI, emerging tech news",
   "featured": false
 }

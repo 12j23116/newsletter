@@ -1,21 +1,21 @@
 {
-  "id": "space-1786861331452-3",
+  "id": "space-1788177994461-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Blue Origin overviews plan for dual pad ops at Cape Canav... | Space Exploration News",
-  "excerpt": "As Blue Origin continues restoring its primary launch pad at LC-36A, the company has released'\nThe post Blue Origin overviews plan for dual pad ops at Cape Canaveral appeared first on NASASpaceFlight.",
-  "date": "2026-08-16",
+  "title": "The electronics 'under the hood' of space networking | Space Exploration News",
+  "excerpt": "In this episode, SpaceNews' Mike Gruss interviews Jeff Janicik, founder and chairman of Innoflight. They discuss Golden Dome, Artemis and working with big numbers for the Space Development Agency. Spo",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "blue-origin-overviews-plan-for-dual-pad-ops-at-cape-canaveral",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/blue-origin-launch-pad-cape-canaveral/",
-  "sourceName": "Alejandro Alcantarilla Romera, and Chris Bergin",
+  "slug": "the-electronics-8216under-the-hood8217-of-space-networking",
+  "sourceLink": "https://spacenews.com/the-electronics-under-the-hood-of-space-networking/",
+  "sourceName": "SpaceNews Editor",
   "body": [
     {
       "type": "p",
-      "text": "As Blue Origin continues restoring its primary launch pad at LC-36A, the company has released'\nThe post Blue Origin overviews plan for dual pad ops at Cape Canaveral appeared first on NASASpaceFlight. com."
+      "text": "In this episode, SpaceNews' Mike Gruss interviews Jeff Janicik, founder and chairman of Innoflight.  They discuss Golden Dome, Artemis and working with big numbers for the Space Development Agency."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Alejandro Alcantarilla Romera, and Chris Bergin, As Blue Origin continues restoring its primary launch pad at LC-36A, the company has released'\nThe post Blue Origin overviews plan for dual pad ops at Cape Canaveral appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "Sponsored [']\nThe post The electronics 'under the hood' of space networking appeared first on SpaceNews."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Blue Origin overviews plan for dual pad ops at Cape Canaveral — a notable development in Space Exploration",
+    "The electronics 'under the hood' of space networking — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Alejandro Alcantarilla Romera, and Chris Bergin",
+      "value": "SpaceNews Editor",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "Blue Origin overviews plan for dual pad ops at Cape Canaveral",
+      "date": "2026-08-31",
+      "event": "The electronics 'under the hood' of space networking",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "origin",
-    "overviews",
+    "electronics",
+    "under",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Blue Origin overviews plan for dual pad ops at Cape Canav... | Space Exploration News",
-  "metaDescription": "As Blue Origin continues restoring its primary launch pad at LC-36A, the company has released'\nThe post Blue Origin overviews plan for dual pad ops at Cape C...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, blue, origin, overviews, TechNanoAI, emerging tech news",
+  "metaTitle": "The electronics 'under the hood' of space networking | Space Exploration News",
+  "metaDescription": "In this episode, SpaceNews' Mike Gruss interviews Jeff Janicik, founder and chairman of Innoflight. They discuss Golden Dome, Artemis and working with big nu...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, electronics, under, hood, TechNanoAI, emerging tech news",
   "featured": false
 }

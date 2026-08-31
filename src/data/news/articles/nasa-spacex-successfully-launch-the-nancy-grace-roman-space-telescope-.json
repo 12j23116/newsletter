@@ -1,21 +1,21 @@
 {
-  "id": "space-1786861331452-1",
+  "id": "space-1788177994461-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX launches record-breaking back-to-back Falcon 9 roc... | Space Exploration News",
-  "excerpt": "The batch of eight Globalstar satellites will help refresh the company’s low Earth orbit constellation. Liftoff from pad 40 at Cape Canaveral Space Force Station is scheduled for 9:12 p.m. EDT (0112 U",
-  "date": "2026-08-16",
+  "title": "NASA, SpaceX successfully launch the Nancy Grace Roman Sp... | Space Exploration News",
+  "excerpt": "NASA and SpaceX have launched NASA's next great space observatory ' the Nancy Grace Roman'\nThe post NASA, SpaceX successfully launch the Nancy Grace Roman Space Telescope from Florida appeared first o",
+  "date": "2026-08-31",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-launches-record-breaking-back-to-back-falcon-9-rockets-for-glob",
-  "sourceLink": "https://spaceflightnow.com/2026/08/15/live-coverage-spacex-to-launch-satellite-replenishment-mission-for-globalstar-from-cape-canaveral/",
-  "sourceName": "Will Robinson-Smith",
+  "slug": "nasa-spacex-successfully-launch-the-nancy-grace-roman-space-telescope-",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/08/roman-telescope-launch/",
+  "sourceName": "Haygen Warren",
   "body": [
     {
       "type": "p",
-      "text": "The batch of eight Globalstar satellites will help refresh the company’s low Earth orbit constellation.  Liftoff from pad 40 at Cape Canaveral Space Force Station is scheduled for 9:12 p."
+      "text": "NASA and SpaceX have launched NASA's next great space observatory ' the Nancy Grace Roman'\nThe post NASA, SpaceX successfully launch the Nancy Grace Roman Space Telescope from Florida appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "m.  EDT (0112 UTC)."
+      "text": "According to reporting from Haygen Warren, NASA and SpaceX have launched NASA's next great space observatory ' the Nancy Grace Roman'\nThe post NASA, SpaceX successfully launch the Nancy Grace Roman Space Telescope from Florida appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX launches record-breaking back-to-back Falcon 9 rockets for Globalstar, U. — a notable development in Space Exploration",
+    "NASA, SpaceX successfully launch the Nancy Grace Roman Space Telescope from Flor — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Will Robinson-Smith",
+      "value": "Haygen Warren",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-16",
-      "event": "SpaceX launches record-breaking back-to-back Falcon 9 rockets for Globalstar, U.",
+      "date": "2026-08-31",
+      "event": "NASA, SpaceX successfully launch the Nancy Grace Roman Space Telescope from Flor",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "space exploration",
     "rocket launch",
     "spacex",
-    "launches",
+    "successfully",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX launches record-breaking back-to-back Falcon 9 roc... | Space Exploration News",
-  "metaDescription": "The batch of eight Globalstar satellites will help refresh the company’s low Earth orbit constellation. Liftoff from pad 40 at Cape Canaveral Space Force Sta...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, launches, record, TechNanoAI, emerging tech news",
+  "metaTitle": "NASA, SpaceX successfully launch the Nancy Grace Roman Sp... | Space Exploration News",
+  "metaDescription": "NASA and SpaceX have launched NASA's next great space observatory ' the Nancy Grace Roman'\nThe post NASA, SpaceX successfully launch the Nancy Grace Roman Sp...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, spacex, successfully, TechNanoAI, emerging tech news",
   "featured": false
 }
