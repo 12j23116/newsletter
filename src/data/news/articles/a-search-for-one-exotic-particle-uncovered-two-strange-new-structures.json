@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788343759402-2",
+  "id": "quantum-1788343759401-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IQT Sunday Edition | Quantum Computing News",
-  "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
+  "title": "A search for one exotic particle uncovered two strange ne... | Quantum Computing News",
+  "excerpt": "A search for one mysterious particle unexpectedly revealed evidence for two different structures that may belong to the bizarre family of exotic subatomic particles known as XYZ states. The findings c",
   "date": "2026-09-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "iqt-sunday-edition",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/iqt-sunday-edition-august-31-2026/",
-  "sourceName": "Brian Siegelwax",
+  "slug": "a-search-for-one-exotic-particle-uncovered-two-strange-new-structures",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260831015147.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies.  CNBC The Tech Download “BlackBerry found a second life in car..."
+      "text": "A search for one mysterious particle unexpectedly revealed evidence for two different structures that may belong to the bizarre family of exotic subatomic particles known as XYZ states.  The findings could help physicists uncover new ways that quarks and gluons combine to create matter."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Siegelwax, Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies. CNBC The Tech Download “BlackBerry found a second life in car.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, A search for one mysterious particle unexpectedly revealed evidence for two different structures that may belong to the bizarre family of exotic subatomic particles known as XYZ states. The findings could help physicists uncover new ways that quarks and gluons combine to create matter.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IQT Sunday Edition — a notable development in Quantum Computing",
+    "A search for one exotic particle uncovered two strange new structures — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Brian Siegelwax",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -158,7 +158,7 @@
     },
     {
       "date": "2026-09-02",
-      "event": "IQT Sunday Edition",
+      "event": "A search for one exotic particle uncovered two strange new structures",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "sunday",
-    "edition",
+    "search",
+    "exotic",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IQT Sunday Edition | Quantum Computing News",
-  "metaDescription": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of nationa...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, sunday, edition, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "A search for one exotic particle uncovered two strange ne... | Quantum Computing News",
+  "metaDescription": "A search for one mysterious particle unexpectedly revealed evidence for two different structures that may belong to the bizarre family of exotic subatomic pa...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, search, exotic, particle, TechNanoAI, emerging tech news",
+  "featured": true
 }

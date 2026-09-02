@@ -1,11 +1,11 @@
 {
-  "id": "bci-1787034280407-1",
+  "id": "bci-1788343759984-4",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "DNA shaper steers nervous system development | Brain-Computer Interfaces News",
   "excerpt": "A study of worms finds a protein that helps shape the structure of the genome is critical for establishing the identity of some neurons.",
-  "date": "2026-08-18",
+  "date": "2026-09-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-18",
+      "date": "2026-09-02",
       "event": "DNA shaper steers nervous system development",
       "current": true
     },

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788343759402-2",
+  "id": "quantum-1788343759402-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IQT Sunday Edition | Quantum Computing News",
-  "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
+  "title": "Flattening Quantum Circuits: 'Planus!' | Quantum Computing News",
+  "excerpt": "He didn’t want to do it, but Harry Potter is an old friend of The Quantum Dragon, and fire-breathing dragons can be rather persuasive. You see, after reading “Quantum Art Validates a Scalable Path to ",
   "date": "2026-09-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "iqt-sunday-edition",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/iqt-sunday-edition-august-31-2026/",
+  "slug": "flattening-quantum-circuits-8220planus8221",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/flattening-quantum-circuits-planus/",
   "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies.  CNBC The Tech Download “BlackBerry found a second life in car..."
+      "text": "He didn’t want to do it, but Harry Potter is an old friend of The Quantum Dragon, and fire-breathing dragons can be rather persuasive.  You see, after reading “Quantum Art Validates a Scalable Path to Fault-Tolerant Quantum Computing Using Multi-Qubit Gates,” The Quantum Dragon wanted to focus on ..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Siegelwax, Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies. CNBC The Tech Download “BlackBerry found a second life in car.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Brian Siegelwax, He didn’t want to do it, but Harry Potter is an old friend of The Quantum Dragon, and fire-breathing dragons can be rather persuasive. You see, after reading “Quantum Art Validates a Scalable Path to Fault-Tolerant Quantum Computing Using Multi-Qubit Gates,” The Quantum Dragon wanted to focus on .... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IQT Sunday Edition — a notable development in Quantum Computing",
+    "Flattening Quantum Circuits: 'Planus!' — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -158,7 +158,7 @@
     },
     {
       "date": "2026-09-02",
-      "event": "IQT Sunday Edition",
+      "event": "Flattening Quantum Circuits: 'Planus!'",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "sunday",
-    "edition",
+    "flattening",
+    "quantum",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IQT Sunday Edition | Quantum Computing News",
-  "metaDescription": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of nationa...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, sunday, edition, TechNanoAI, emerging tech news",
+  "metaTitle": "Flattening Quantum Circuits: 'Planus!' | Quantum Computing News",
+  "metaDescription": "He didn’t want to do it, but Harry Potter is an old friend of The Quantum Dragon, and fire-breathing dragons can be rather persuasive. You see, after reading...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, flattening, quantum, circuits, TechNanoAI, emerging tech news",
   "featured": false
 }

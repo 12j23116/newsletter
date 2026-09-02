@@ -1,21 +1,21 @@
 {
-  "id": "bci-1788343759983-3",
+  "id": "bci-1788343759983-1",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
-  "title": "Tackling rare genetic disorders with patient-focused science | Brain-Computer Interfaces News",
-  "excerpt": "Shannon Knight, a brain and cognitive sciences PhD candidate and McGovern Institute researcher, focuses on developing a novel gene therapy.",
+  "title": "Atlas of the brain’s striatum could guide researchers to ... | Brain-Computer Interfaces News",
+  "excerpt": "A new study reveals insights into populations of neurons affected by Huntington’s disease, schizophrenia, addiction, and other disorders.",
   "date": "2026-09-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
-  "slug": "tackling-rare-genetic-disorders-with-patient-focused-science",
-  "sourceLink": "https://news.mit.edu/2026/tackling-rare-genetic-disorders-patient-focused-science-shannon-knight-0818",
-  "sourceName": "Stefanie Koperniak | Office of Graduate Education",
+  "slug": "atlas-of-the-brains-striatum-could-guide-researchers-to-new-drug-treat",
+  "sourceLink": "https://news.mit.edu/2026/brains-striatum-atlas-could-guide-researchers-new-drug-treatments-0901",
+  "sourceName": "Anne Trafton | MIT News",
   "body": [
     {
       "type": "p",
-      "text": "Shannon Knight, a brain and cognitive sciences PhD candidate and McGovern Institute researcher, focuses on developing a novel gene therapy."
+      "text": "A new study reveals insights into populations of neurons affected by Huntington’s disease, schizophrenia, addiction, and other disorders."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Stefanie Koperniak | Office of Graduate Education, Shannon Knight, a brain and cognitive sciences PhD candidate and McGovern Institute researcher, focuses on developing a novel gene therapy.. The development represents a notable step forward in the Brain-Computer Interfaces landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anne Trafton | MIT News, A new study reveals insights into populations of neurons affected by Huntington’s disease, schizophrenia, addiction, and other disorders.. The development represents a notable step forward in the Brain-Computer Interfaces landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Tackling rare genetic disorders with patient-focused science — a notable development in Brain-Computer Interfaces",
+    "Atlas of the brain’s striatum could guide researchers to new drug treatments — a notable development in Brain-Computer Interfaces",
     "The brain-computer interfaces sector continues to accelerate, with neural implants & eeg control driving rapid progress",
     "Industry context: Brain-computer interfaces are entering clinical trials at scale, with Neuralink, Synchron, and Preci...",
     "Challenges remain: Biocompatibility, long-term implant stability, decoding bandwidth, and ethical f...",
@@ -120,7 +120,7 @@
       "change": "Neural implants & EEG control"
     },
     {
-      "value": "Stefanie Koperniak | Office of Graduate Education",
+      "value": "Anne Trafton | MIT News",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -158,7 +158,7 @@
     },
     {
       "date": "2026-09-02",
-      "event": "Tackling rare genetic disorders with patient-focused science",
+      "event": "Atlas of the brain’s striatum could guide researchers to new drug treatments",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "brain-computer interface",
     "BCI",
-    "tackling",
-    "genetic",
+    "atlas",
+    "brain",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Tackling rare genetic disorders with patient-focused science | Brain-Computer Interfaces News",
-  "metaDescription": "Shannon Knight, a brain and cognitive sciences PhD candidate and McGovern Institute researcher, focuses on developing a novel gene therapy.",
-  "keywords": "brain-computer interface, BCI, neural implant, Neuralink, tackling, rare, genetic, TechNanoAI, emerging tech news",
+  "metaTitle": "Atlas of the brain’s striatum could guide researchers to ... | Brain-Computer Interfaces News",
+  "metaDescription": "A new study reveals insights into populations of neurons affected by Huntington’s disease, schizophrenia, addiction, and other disorders.",
+  "keywords": "brain-computer interface, BCI, neural implant, Neuralink, atlas, brain, striatum, TechNanoAI, emerging tech news",
   "featured": false
 }

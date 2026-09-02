@@ -1,11 +1,11 @@
 {
-  "id": "bci-1787034280408-2",
+  "id": "bci-1788343759984-5",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Flexible brain circuits can switch between different tasks | Brain-Computer Interfaces News",
   "excerpt": "Neuroscientists have discovered circuits in the prefrontal cortex that can be repurposed to store different types of information.",
-  "date": "2026-08-18",
+  "date": "2026-09-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-18",
+      "date": "2026-09-02",
       "event": "Flexible brain circuits can switch between different tasks",
       "current": true
     },
