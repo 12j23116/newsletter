@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1787379691038-2",
+  "id": "robotics-1788688406577-5",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Schaeffler plans to mass produce gearboxes for humanoid r... | Robotics News",
-  "excerpt": "Schaeffler is creating its strain wave gearboxes with a forming technology that will enable mass production of the components. \nThe post Schaeffler plans to mass produce gearboxes for humanoid robots ",
-  "date": "2026-08-22",
+  "title": "Video Friday: Digit Redecorates | Robotics News",
+  "excerpt": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few month",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "schaeffler-plans-to-mass-produce-gearboxes-for-humanoid-robots-in-2027",
-  "sourceLink": "https://www.therobotreport.com/schaeffler-plans-to-mass-manufacture-gearboxes-for-humanoids-in-2027/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "video-friday-digit-redecorates",
+  "sourceLink": "https://spectrum.ieee.org/video-friday-agility-robotics-digit",
+  "sourceName": "Evan Ackerman",
   "body": [
     {
       "type": "p",
-      "text": "Schaeffler is creating its strain wave gearboxes with a forming technology that will enable mass production of the components.  \nThe post Schaeffler plans to mass produce gearboxes for humanoid robots in 2027 appeared first on The Robot Report."
+      "text": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics.  We also post a weekly calendar of upcoming robotics events for the next few months."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, Schaeffler is creating its strain wave gearboxes with a forming technology that will enable mass production of the components. \nThe post Schaeffler plans to mass produce gearboxes for humanoid robots in 2027 appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "Please send us your events for inclusion. Humanoids Summit Seoul: 22–23 September 2026, SEOULIROS 2026: 27 September–1 October 2026, PITTSBURGHCoRL 2026: 9–12 November 2026, AUSTINEnjoy today’s videos!"
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Schaeffler plans to mass produce gearboxes for humanoid robots in 2027 — a notable development in Robotics",
+    "Video Friday: Digit Redecorates — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Evan Ackerman",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Schaeffler plans to mass produce gearboxes for humanoid robots in 2027",
+      "date": "2026-09-06",
+      "event": "Video Friday: Digit Redecorates",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "schaeffler",
-    "plans",
+    "video",
+    "friday",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Schaeffler plans to mass produce gearboxes for humanoid r... | Robotics News",
-  "metaDescription": "Schaeffler is creating its strain wave gearboxes with a forming technology that will enable mass production of the components. \nThe post Schaeffler plans to ...",
-  "keywords": "robotics, humanoid robot, automation, drones, schaeffler, plans, mass, TechNanoAI, emerging tech news",
+  "metaTitle": "Video Friday: Digit Redecorates | Robotics News",
+  "metaDescription": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upco...",
+  "keywords": "robotics, humanoid robot, automation, drones, video, friday, digit, TechNanoAI, emerging tech news",
   "featured": false
 }

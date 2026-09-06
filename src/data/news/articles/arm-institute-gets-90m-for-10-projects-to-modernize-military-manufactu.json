@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1787379691038-1",
+  "id": "robotics-1788688406576-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Amazon's Bhavana Chandrashekhar to speak at RoboBusiness'... | Robotics News",
-  "excerpt": "The Women in Robotics Lunch at RoboBusiness is an opportunity to form new connections and deepen relationships.\nThe post Amazon's Bhavana Chandrashekhar to speak at RoboBusiness' Women in Robotics Lun",
-  "date": "2026-08-22",
+  "title": "ARM Institute gets $90M for 10 projects to modernize mili... | Robotics News",
+  "excerpt": "Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said.\nThe post ARM Institute gets $90M for 10 projects to modernize military manufactu",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "amazon8217s-bhavana-chandrashekhar-to-speak-at-robobusiness8217-women-",
-  "sourceLink": "https://www.therobotreport.com/amazons-bhavana-chandrashekhar-speaks-robobusiness-women-in-robotics-lunch/",
+  "slug": "arm-institute-gets-90m-for-10-projects-to-modernize-military-manufactu",
+  "sourceLink": "https://www.therobotreport.com/arm-institute-gets-90m-for-10-projects-to-modernize-military-manufacturing/",
   "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "The Women in Robotics Lunch at RoboBusiness is an opportunity to form new connections and deepen relationships. \nThe post Amazon's Bhavana Chandrashekhar to speak at RoboBusiness' Women in Robotics Lunch appeared first on The Robot Report."
+      "text": "Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said. \nThe post ARM Institute gets $90M for 10 projects to modernize military manufacturing appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, The Women in Robotics Lunch at RoboBusiness is an opportunity to form new connections and deepen relationships.\nThe post Amazon's Bhavana Chandrashekhar to speak at RoboBusiness' Women in Robotics Lunch appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from The Robot Report Staff, Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said.\nThe post ARM Institute gets $90M for 10 projects to modernize military manufacturing appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Amazon's Bhavana Chandrashekhar to speak at RoboBusiness' Women in Robotics Lunc — a notable development in Robotics",
+    "ARM Institute gets $90M for 10 projects to modernize military manufacturing — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Amazon's Bhavana Chandrashekhar to speak at RoboBusiness' Women in Robotics Lunc",
+      "date": "2026-09-06",
+      "event": "ARM Institute gets $90M for 10 projects to modernize military manufacturing",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "amazon",
-    "bhavana",
+    "institute",
+    "projects",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Amazon's Bhavana Chandrashekhar to speak at RoboBusiness'... | Robotics News",
-  "metaDescription": "The Women in Robotics Lunch at RoboBusiness is an opportunity to form new connections and deepen relationships.\nThe post Amazon's Bhavana Chandrashekhar to s...",
-  "keywords": "robotics, humanoid robot, automation, drones, amazon, bhavana, chandrashekhar, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "ARM Institute gets $90M for 10 projects to modernize mili... | Robotics News",
+  "metaDescription": "Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said.\nThe post ARM Institute gets $90M for ...",
+  "keywords": "robotics, humanoid robot, automation, drones, institute, gets, projects, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1787379685087-2",
+  "id": "space-1788688401638-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Live coverage: SpaceX to launch 100th orbital mission of ... | Space Exploration News",
-  "excerpt": "The Starlink 15-20 mission represents the 99th Falcon 9 rocket launch of the year. Liftoff from pad 4 East is scheduled for 12:25 a.m. PDT (3:25 a.m. EDT / 0725 UTC).",
-  "date": "2026-08-22",
+  "title": "Isar Aerospace launches Spectrum rocket after months of d... | Space Exploration News",
+  "excerpt": "The European private space launch provider Isar Aerospace, headquartered in Ottobrunn, Germany, launched its Spectrum'\nThe post Isar Aerospace launches Spectrum rocket after months of delays appeared ",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "live-coverage-spacex-to-launch-100th-orbital-mission-of-2026",
-  "sourceLink": "https://spaceflightnow.com/2026/08/21/live-coverage-spacex-to-launch-100th-orbital-mission-of-2026/",
-  "sourceName": "Will Robinson-Smith",
+  "slug": "isar-aerospace-launches-spectrum-rocket-after-months-of-delays",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/09/isar-onward-and-upward/",
+  "sourceName": "Justin Davenport",
   "body": [
     {
       "type": "p",
-      "text": "The Starlink 15-20 mission represents the 99th Falcon 9 rocket launch of the year.  Liftoff from pad 4 East is scheduled for 12:25 a."
+      "text": "The European private space launch provider Isar Aerospace, headquartered in Ottobrunn, Germany, launched its Spectrum'\nThe post Isar Aerospace launches Spectrum rocket after months of delays appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "m.  PDT (3:25 a."
-    },
-    {
-      "type": "p",
-      "text": "m.  EDT / 0725 UTC)."
+      "text": "According to reporting from Justin Davenport, The European private space launch provider Isar Aerospace, headquartered in Ottobrunn, Germany, launched its Spectrum'\nThe post Isar Aerospace launches Spectrum rocket after months of delays appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Live coverage: SpaceX to launch 100th orbital mission of 2026 — a notable development in Space Exploration",
+    "Isar Aerospace launches Spectrum rocket after months of delays — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Will Robinson-Smith",
+      "value": "Justin Davenport",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Live coverage: SpaceX to launch 100th orbital mission of 2026",
+      "date": "2026-09-06",
+      "event": "Isar Aerospace launches Spectrum rocket after months of delays",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "coverage",
-    "spacex",
+    "aerospace",
+    "launches",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Live coverage: SpaceX to launch 100th orbital mission of ... | Space Exploration News",
-  "metaDescription": "The Starlink 15-20 mission represents the 99th Falcon 9 rocket launch of the year. Liftoff from pad 4 East is scheduled for 12:25 a.m. PDT (3:25 a.m. EDT / 0...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, live, coverage, spacex, TechNanoAI, emerging tech news",
+  "metaTitle": "Isar Aerospace launches Spectrum rocket after months of d... | Space Exploration News",
+  "metaDescription": "The European private space launch provider Isar Aerospace, headquartered in Ottobrunn, Germany, launched its Spectrum'\nThe post Isar Aerospace launches Spect...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, isar, aerospace, launches, TechNanoAI, emerging tech news",
   "featured": false
 }

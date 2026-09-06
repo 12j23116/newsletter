@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1787379691037-0",
+  "id": "robotics-1788688406577-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "How software-defined manufacturing fits into real factory... | Robotics News",
-  "excerpt": "Roby Lynn explains how R2 Labs bridges PLCs, robots, and AI to unify fragmented manufacturing systems.\nThe post How software-defined manufacturing fits into real factory operations appeared first on T",
-  "date": "2026-08-22",
-  "readTime": "3 min",
+  "title": "Cyborg Roaches Can Stab You With Needles | Robotics News",
+  "excerpt": "Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling toward you. Although the sight might be unnervin",
+  "date": "2026-09-06",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "how-software-defined-manufacturing-fits-into-real-factory-operations",
-  "sourceLink": "https://www.therobotreport.com/how-software-defined-manufacturing-fits-into-real-factory-operations/",
-  "sourceName": "Mike Oitzman",
+  "slug": "cyborg-roaches-can-stab-you-with-needles",
+  "sourceLink": "https://spectrum.ieee.org/cyborg-rescue-roach",
+  "sourceName": "Charles Q. Choi",
   "body": [
     {
       "type": "p",
-      "text": "Roby Lynn explains how R2 Labs bridges PLCs, robots, and AI to unify fragmented manufacturing systems. \nThe post How software-defined manufacturing fits into real factory operations appeared first on The Robot Report."
+      "text": "Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling toward you.  Although the sight might be unnerving, to say the least, this prototype paramedic cyborg, or “Paraborg,” might one day help deliver lifesaving aid to disaster victims who might be otherwise impossible to reach."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mike Oitzman, Roby Lynn explains how R2 Labs bridges PLCs, robots, and AI to unify fragmented manufacturing systems.\nThe post How software-defined manufacturing fits into real factory operations appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Charles Q. Choi, Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling toward you. Although the sight might be unnerving, to say the least, this prototype paramedic cyborg, or “Paraborg,” might one day help deliver lifesaving aid to disaster victims who might be otherwise impossible to reach.The Hardest Problems in RoboticsFor decades, scientists have sought to develop cyborg insects as “a shortcut around some of th. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "How software-defined manufacturing fits into real factory operations — a notable development in Robotics",
+    "Cyborg Roaches Can Stab You With Needles — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Mike Oitzman",
+      "value": "Charles Q. Choi",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "How software-defined manufacturing fits into real factory operations",
+      "date": "2026-09-06",
+      "event": "Cyborg Roaches Can Stab You With Needles",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "software",
-    "defined",
+    "cyborg",
+    "roaches",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "How software-defined manufacturing fits into real factory... | Robotics News",
-  "metaDescription": "Roby Lynn explains how R2 Labs bridges PLCs, robots, and AI to unify fragmented manufacturing systems.\nThe post How software-defined manufacturing fits into ...",
-  "keywords": "robotics, humanoid robot, automation, drones, software, defined, manufacturing, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Cyborg Roaches Can Stab You With Needles | Robotics News",
+  "metaDescription": "Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling towar...",
+  "keywords": "robotics, humanoid robot, automation, drones, cyborg, roaches, stab, TechNanoAI, emerging tech news",
+  "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1787379685086-0",
+  "id": "space-1788688401639-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "APOD: 2026 August 22 – Mostly Perseids | Space Exploration News",
-  "excerpt": "APOD Science APOD APOD: 2026 August 22… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different",
-  "date": "2026-08-22",
+  "title": "APOD: 2026 September 5 – Chasing the Moon’s Shadow | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 September 5 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diffe",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "apod-2026-august-22-mostly-perseids",
-  "sourceLink": "https://science.nasa.gov/image-article/apod/apod-2026-august-22-mostly-perseids/",
+  "slug": "apod-2026-september-5-chasing-the-moons-shadow",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-september-5-chasing-the-moons-shadow/",
   "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "APOD Science APOD APOD: 2026 August 22… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
+      "text": "APOD Science APOD APOD: 2026 September 5 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 August 22… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Mostly Perseids Explanation: Recorded [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 September 5 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Chasing the Moon's [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "APOD: 2026 August 22 – Mostly Perseids — a notable development in Space Exploration",
+    "APOD: 2026 September 5 – Chasing the Moon’s Shadow — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "APOD: 2026 August 22 – Mostly Perseids",
+      "date": "2026-09-06",
+      "event": "APOD: 2026 September 5 – Chasing the Moon’s Shadow",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "august",
-    "mostly",
+    "september",
+    "chasing",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "APOD: 2026 August 22 – Mostly Perseids | Space Exploration News",
-  "metaDescription": "APOD Science APOD APOD: 2026 August 22… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Da...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, apod, august, mostly, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "APOD: 2026 September 5 – Chasing the Moon’s Shadow | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 September 5 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of th...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, september, chasing, TechNanoAI, emerging tech news",
+  "featured": false
 }

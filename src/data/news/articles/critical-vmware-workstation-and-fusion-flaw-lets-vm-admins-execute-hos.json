@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1787379684190-3",
+  "id": "cybersecurity-1788688400840-4",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Hundreds of leaked AWS keys give full control over corpor... | Cybersecurity News",
-  "excerpt": "More than 9,300 Amazon Web Services (AWS) access keys publicly exposed between August 2022 and August 2026 are still active and valid. [...]",
-  "date": "2026-08-22",
+  "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admin... | Cybersecurity News",
+  "excerpt": "Broadcom has released security updates for two security flaws impacting VMware Workstation and Fusion, including one critical bug that could result in arbitrary code execution under certain conditions",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/",
-  "sourceName": "Bill Toulas",
+  "slug": "critical-vmware-workstation-and-fusion-flaw-lets-vm-admins-execute-hos",
+  "sourceLink": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "More than 9,300 Amazon Web Services (AWS) access keys publicly exposed between August 2022 and August 2026 are still active and valid.  [..."
+      "text": "Broadcom has released security updates for two security flaws impacting VMware Workstation and Fusion, including one critical bug that could result in arbitrary code execution under certain conditions. \n\nThe vulnerability, tracked as CVE-2026-59346 (CVSS score: 9."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, More than 9,300 Amazon Web Services (AWS) access keys publicly exposed between August 2022 and August 2026 are still active and valid. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "3), is an integer-overflow vulnerability that a local attacker with elevated privileges can exploit to run arbitrary code."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hundreds of leaked AWS keys give full control over corporate accounts — a notable development in Cybersecurity",
+    "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Hundreds of leaked AWS keys give full control over corporate accounts",
+      "date": "2026-09-06",
+      "event": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "hundreds",
-    "leaked",
+    "critical",
+    "vmware",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hundreds of leaked AWS keys give full control over corpor... | Cybersecurity News",
-  "metaDescription": "More than 9,300 Amazon Web Services (AWS) access keys publicly exposed between August 2022 and August 2026 are still active and valid. [...]",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, hundreds, leaked, keys, TechNanoAI, emerging tech news",
+  "metaTitle": "Critical VMware Workstation and Fusion Flaw Lets VM Admin... | Cybersecurity News",
+  "metaDescription": "Broadcom has released security updates for two security flaws impacting VMware Workstation and Fusion, including one critical bug that could result in arbitr...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, critical, vmware, workstation, TechNanoAI, emerging tech news",
   "featured": false
 }

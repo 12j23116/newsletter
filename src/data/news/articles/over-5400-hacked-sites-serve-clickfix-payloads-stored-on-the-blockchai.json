@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1787379684190-2",
+  "id": "cybersecurity-1788688400841-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Former NSA Director Paul Nakasone Launches National Secur... | Cybersecurity News",
-  "excerpt": "The newly-formed Nakasone Group will counsel government leaders, corporations, prominent families, and other private clients confronting cybersecurity, geopolitical, and personal security risks.\nThe p",
-  "date": "2026-08-22",
+  "title": "Over 5,400 hacked sites serve ClickFix payloads stored on... | Cybersecurity News",
+  "excerpt": "A massive cybercriminal operation is leveraging thousands of compromised small-business websites to deliver ClickFix payloads stored in smart contracts on the BNB Smart Chain (BSC). [...]",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "former-nsa-director-paul-nakasone-launches-national-security-advisory-",
-  "sourceLink": "https://www.securityweek.com/former-nsa-director-paul-nakasone-launches-national-security-advisory-firm/",
-  "sourceName": "Mike Lennon",
+  "slug": "over-5400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchai",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "The newly-formed Nakasone Group will counsel government leaders, corporations, prominent families, and other private clients confronting cybersecurity, geopolitical, and personal security risks. \nThe post Former NSA Director Paul Nakasone Launches National Security Advisory Firm appeared first on SecurityWeek."
+      "text": "A massive cybercriminal operation is leveraging thousands of compromised small-business websites to deliver ClickFix payloads stored in smart contracts on the BNB Smart Chain (BSC).  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mike Lennon, The newly-formed Nakasone Group will counsel government leaders, corporations, prominent families, and other private clients confronting cybersecurity, geopolitical, and personal security risks.\nThe post Former NSA Director Paul Nakasone Launches National Security Advisory Firm appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Bill Toulas, A massive cybercriminal operation is leveraging thousands of compromised small-business websites to deliver ClickFix payloads stored in smart contracts on the BNB Smart Chain (BSC). [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Former NSA Director Paul Nakasone Launches National Security Advisory Firm — a notable development in Cybersecurity",
+    "Over 5,400 hacked sites serve ClickFix payloads stored on the blockchain — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Mike Lennon",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Former NSA Director Paul Nakasone Launches National Security Advisory Firm",
+      "date": "2026-09-06",
+      "event": "Over 5,400 hacked sites serve ClickFix payloads stored on the blockchain",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "former",
-    "director",
+    "hacked",
+    "sites",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Former NSA Director Paul Nakasone Launches National Secur... | Cybersecurity News",
-  "metaDescription": "The newly-formed Nakasone Group will counsel government leaders, corporations, prominent families, and other private clients confronting cybersecurity, geopo...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, former, director, paul, TechNanoAI, emerging tech news",
+  "metaTitle": "Over 5,400 hacked sites serve ClickFix payloads stored on... | Cybersecurity News",
+  "metaDescription": "A massive cybercriminal operation is leveraging thousands of compromised small-business websites to deliver ClickFix payloads stored in smart contracts on th...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, over, hacked, sites, TechNanoAI, emerging tech news",
   "featured": false
 }

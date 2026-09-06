@@ -1,21 +1,21 @@
 {
-  "id": "space-1787379685088-3",
+  "id": "space-1788688401639-5",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Ship 41 Completes Engine Testing Ahead of Flight 14 | Space Exploration News",
-  "excerpt": "While Ship 40 is preparing to be transported back to Starbase from Christmas Island, Ship'\nThe post Ship 41 Completes Engine Testing Ahead of Flight 14 appeared first on NASASpaceFlight.com.",
-  "date": "2026-08-22",
+  "title": "NASA Hosts Virtual Artemis Webinar for Blind, Low-Vision ... | Space Exploration News",
+  "excerpt": "NASA will host a virtual webinar at 2 p.m. EDT on Friday, Oct. 2, titled “The'RS-25'Engine and the Future of Artemis Missions: An Accessible Webinar for the Blind and Low-Vision Community.” This webin",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "ship-41-completes-engine-testing-ahead-of-flight-14",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/ship-41-engine-testing-flight-14/",
-  "sourceName": "Ryan Weber",
+  "slug": "nasa-hosts-virtual-artemis-webinar-for-blind-low-vision-community",
+  "sourceLink": "https://www.nasa.gov/general/nasa-hosts-virtual-artemis-webinar-for-blind-low-vision-community/",
+  "sourceName": "Lauren E. Low",
   "body": [
     {
       "type": "p",
-      "text": "While Ship 40 is preparing to be transported back to Starbase from Christmas Island, Ship'\nThe post Ship 41 Completes Engine Testing Ahead of Flight 14 appeared first on NASASpaceFlight. com."
+      "text": "NASA will host a virtual webinar at 2 p. m."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ryan Weber, While Ship 40 is preparing to be transported back to Starbase from Christmas Island, Ship'\nThe post Ship 41 Completes Engine Testing Ahead of Flight 14 appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "EDT on Friday, Oct.  2, titled “The'RS-25'Engine and the Future of Artemis Missions: An Accessible Webinar for the Blind and Low-Vision Community."
+    },
+    {
+      "type": "p",
+      "text": "” This webinar is open to the public, however it is tailored specifically for a blind and low-vision audience."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Ship 41 Completes Engine Testing Ahead of Flight 14 — a notable development in Space Exploration",
+    "NASA Hosts Virtual Artemis Webinar for Blind, Low-Vision Community — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Ryan Weber",
+      "value": "Lauren E. Low",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Ship 41 Completes Engine Testing Ahead of Flight 14",
+      "date": "2026-09-06",
+      "event": "NASA Hosts Virtual Artemis Webinar for Blind, Low-Vision Community",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "completes",
-    "engine",
+    "hosts",
+    "virtual",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Ship 41 Completes Engine Testing Ahead of Flight 14 | Space Exploration News",
-  "metaDescription": "While Ship 40 is preparing to be transported back to Starbase from Christmas Island, Ship'\nThe post Ship 41 Completes Engine Testing Ahead of Flight 14 appea...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, ship, completes, engine, TechNanoAI, emerging tech news",
+  "metaTitle": "NASA Hosts Virtual Artemis Webinar for Blind, Low-Vision ... | Space Exploration News",
+  "metaDescription": "NASA will host a virtual webinar at 2 p.m. EDT on Friday, Oct. 2, titled “The'RS-25'Engine and the Future of Artemis Missions: An Accessible Webinar for the ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, hosts, virtual, TechNanoAI, emerging tech news",
   "featured": false
 }

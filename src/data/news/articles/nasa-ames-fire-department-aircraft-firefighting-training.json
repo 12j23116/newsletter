@@ -1,21 +1,21 @@
 {
-  "id": "space-1787379685087-1",
+  "id": "space-1788688401639-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "New Novaspace forecast: 6,500+ EO satellites to launch by... | Space Exploration News",
-  "excerpt": "Paris, France ' August 2026– More than 6,500 Earth observation (EO) satellites are expected to launch by 2035, generating $155.9 billion in manufacturing revenues as governments expand sovereign intel",
-  "date": "2026-08-22",
+  "title": "NASA Ames Fire Department Aircraft Firefighting Training | Space Exploration News",
+  "excerpt": "The fire department at NASA’s Ames Research Center in California’s Silicon Valley will perform training on the Moffett Federal Airfield beginning Tuesday, Sept. 8 through Friday, Sept. 11. The trainin",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "new-novaspace-forecast-6500-eo-satellites-to-launch-by-2035",
-  "sourceLink": "https://spacenews.com/new-novaspace-forecast-6500-eo-satellites-to-launch-by-2035/",
-  "sourceName": "Novaspace",
+  "slug": "nasa-ames-fire-department-aircraft-firefighting-training",
+  "sourceLink": "https://www.nasa.gov/news-release/nasa-ames-fire-department-aircraft-firefighting-training/",
+  "sourceName": "Jeanne Neal",
   "body": [
     {
       "type": "p",
-      "text": "Paris, France ' August 2026– More than 6,500 Earth observation (EO) satellites are expected to launch by 2035, generating $155. 9 billion in manufacturing revenues as governments expand sovereign intelligence, surveillance, [']\nThe post New Novaspace forecast: 6,500+ EO satellites to launch by 2035 appeared first on SpaceNews."
+      "text": "The fire department at NASA’s Ames Research Center in California’s Silicon Valley will perform training on the Moffett Federal Airfield beginning Tuesday, Sept.  8 through Friday, Sept."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Novaspace, Paris, France ' August 2026– More than 6,500 Earth observation (EO) satellites are expected to launch by 2035, generating $155.9 billion in manufacturing revenues as governments expand sovereign intelligence, surveillance, [']\nThe post New Novaspace forecast: 6,500+ EO satellites to launch by 2035 appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "11.  The training will involve the use of a propane-fueled aircraft fire simulator and be conducted from 8 a."
+    },
+    {
+      "type": "p",
+      "text": "m.  to 8 p."
+    },
+    {
+      "type": "p",
+      "text": "m.  PDT."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "New Novaspace forecast: 6,500+ EO satellites to launch by 2035 — a notable development in Space Exploration",
+    "NASA Ames Fire Department Aircraft Firefighting Training — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +128,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Novaspace",
+      "value": "Jeanne Neal",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "New Novaspace forecast: 6,500+ EO satellites to launch by 2035",
+      "date": "2026-09-06",
+      "event": "NASA Ames Fire Department Aircraft Firefighting Training",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "novaspace",
-    "forecast",
+    "department",
+    "aircraft",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "New Novaspace forecast: 6,500+ EO satellites to launch by... | Space Exploration News",
-  "metaDescription": "Paris, France ' August 2026– More than 6,500 Earth observation (EO) satellites are expected to launch by 2035, generating $155.9 billion in manufacturing rev...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, novaspace, forecast, satellites, TechNanoAI, emerging tech news",
+  "metaTitle": "NASA Ames Fire Department Aircraft Firefighting Training | Space Exploration News",
+  "metaDescription": "The fire department at NASA’s Ames Research Center in California’s Silicon Valley will perform training on the Moffett Federal Airfield beginning Tuesday, Se...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, ames, fire, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787379683489-2",
+  "id": "ai-1788688400326-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Nvidia just showed that the harness, not the AI model, is... | AI News",
-  "excerpt": "Nvidia research shows that AI agents can perform well, and not go off the deep end, through fine-tuning, even if the AI model isn't that great at the task.",
-  "date": "2026-08-22",
+  "title": "Four REVSTEALER-Linked Modules Disable Windows Update and... | AI News",
+  "excerpt": "Elastic Security Labs has documented four previously unreported programs associated with REVSTEALER, an emerging Windows information stealer, that remain on an infected machine after the stealer delet",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-h",
-  "sourceLink": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
-  "sourceName": "Julie Bort",
+  "slug": "four-revstealer-linked-modules-disable-windows-update-and-defender-to-",
+  "sourceLink": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Nvidia research shows that AI agents can perform well, and not go off the deep end, through fine-tuning, even if the AI model isn't that great at the task."
+      "text": "Elastic Security Labs has documented four previously unreported programs associated with REVSTEALER, an emerging Windows information stealer, that remain on an infected machine after the stealer deletes itself. \n\nOne of them switches off Windows Update and Microsoft Defender before running a cryptocurrency miner."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julie Bort, Nvidia research shows that AI agents can perform well, and not go off the deep end, through fine-tuning, even if the AI model isn't that great at the task.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Elastic Security Labs has documented four previously unreported programs associated with REVSTEALER, an emerging Windows information stealer, that remain on an infected machine after the stealer deletes itself.\n\nOne of them switches off Windows Update and Microsoft Defender before running a cryptocurrency miner.\n\nThe company named the four programs ProManager, WinUpdate, SoftManager, and. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Nvidia just showed that the harness, not the AI model, is now the real hero — a notable development in AI",
+    "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Cryp — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Julie Bort",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Nvidia just showed that the harness, not the AI model, is now the real hero",
+      "date": "2026-09-06",
+      "event": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Cryp",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "nvidia",
-    "showed",
+    "revstealer",
+    "linked",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Nvidia just showed that the harness, not the AI model, is... | AI News",
-  "metaDescription": "Nvidia research shows that AI agents can perform well, and not go off the deep end, through fine-tuning, even if the AI model isn't that great at the task.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, nvidia, just, showed, TechNanoAI, emerging tech news",
+  "metaTitle": "Four REVSTEALER-Linked Modules Disable Windows Update and... | AI News",
+  "metaDescription": "Elastic Security Labs has documented four previously unreported programs associated with REVSTEALER, an emerging Windows information stealer, that remain on ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, four, revstealer, linked, TechNanoAI, emerging tech news",
   "featured": false
 }

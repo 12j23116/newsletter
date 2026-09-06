@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1787379686623-2",
+  "id": "biotech-1788688402191-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Lab-Grown Neocortex Models Mimic Early Brain Organization | Biotechnology News",
-  "excerpt": "By using chemical signals to guide cells to adopt distinct regional identities, scientists created lab-grown human organoids that mimic early brain development and could illuminate how specialized bra",
-  "date": "2026-08-22",
+  "title": "NewBiologix and Synastra Join Forces to Advance rAAV Manu... | Biotechnology News",
+  "excerpt": "The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development with NewBiologix’s proprietary cell engineeri",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "lab-grown-neocortex-models-mimic-early-brain-organization",
-  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/lab-grown-neocortex-models-mimic-early-brain-organization/",
-  "sourceName": "Uduak Thomas",
+  "slug": "newbiologix-and-synastra-join-forces-to-advance-raav-manufacturing-for",
+  "sourceLink": "https://www.genengnews.com/topics/bioprocessing/newbiologix-and-synastra-join-forces-to-advance-raav-manufacturing-for-duchenne-gene-therapy/",
+  "sourceName": "John Sterling",
   "body": [
     {
       "type": "p",
-      "text": "By using chemical signals to guide cells to adopt distinct regional identities, scientists created lab-grown human organoids that mimic early brain development and could illuminate how specialized brain areas emerge. \nThe post Lab-Grown Neocortex Models Mimic Early Brain Organization appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development with NewBiologix’s proprietary cell engineering and rAAV manufacturing technologies. \nThe post NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne Gene Therapy appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Uduak Thomas, By using chemical signals to guide cells to adopt distinct regional identities, scientists created lab-grown human organoids that mimic early brain development and could illuminate how specialized brain areas emerge.\nThe post Lab-Grown Neocortex Models Mimic Early Brain Organization appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from John Sterling, The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development with NewBiologix’s proprietary cell engineering and rAAV manufacturing technologies.\nThe post NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne Gene Therapy appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Lab-Grown Neocortex Models Mimic Early Brain Organization — a notable development in Biotechnology",
+    "NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne  — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Uduak Thomas",
+      "value": "John Sterling",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Lab-Grown Neocortex Models Mimic Early Brain Organization",
+      "date": "2026-09-06",
+      "event": "NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "grown",
-    "neocortex",
+    "newbiologix",
+    "synastra",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Lab-Grown Neocortex Models Mimic Early Brain Organization | Biotechnology News",
-  "metaDescription": "By using chemical signals to guide cells to adopt distinct regional identities, scientists created lab-grown human organoids that mimic early brain developme...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, grown, neocortex, models, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "NewBiologix and Synastra Join Forces to Advance rAAV Manu... | Biotechnology News",
+  "metaDescription": "The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development wi...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, newbiologix, synastra, join, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787379683489-3",
+  "id": "ai-1788688400328-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor ... | AI News",
-  "excerpt": "Cybersecurity researchers have discovered a set of trojanized npm packages that masquerade as working calendar and streak utilities but are engineered to stealthily deliver an artificial intelligence ",
-  "date": "2026-08-22",
+  "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a ... | AI News",
+  "excerpt": "OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum.",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "14-trojanized-npm-packages-drop-redc2-40-linux-backdoor-with-ai-assist",
-  "sourceLink": "https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more",
+  "sourceLink": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have discovered a set of trojanized npm packages that masquerade as working calendar and streak utilities but are engineered to stealthily deliver an artificial intelligence (AI)-powered Linux implant dubbed RedC2 4. 0."
+      "text": "OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have discovered a set of trojanized npm packages that masquerade as working calendar and streak utilities but are engineered to stealthily deliver an artificial intelligence (AI)-powered Linux implant dubbed RedC2 4.0.\n\n\"When the module loads, it locates the bundled binary, marks it executable, and launches it as a detached background process,\" TrendAI, Trend Micro's. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2 — a notable development in AI",
+    "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more dis — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2",
+      "date": "2026-09-06",
+      "event": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more dis",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "trojanized",
-    "packages",
+    "openai",
+    "confirms",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor ... | AI News",
-  "metaDescription": "Cybersecurity researchers have discovered a set of trojanized npm packages that masquerade as working calendar and streak utilities but are engineered to ste...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, trojanized, packages, drop, TechNanoAI, emerging tech news",
+  "metaTitle": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a ... | AI News",
+  "metaDescription": "OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum. LLMs, agents & the race to AGI. Latest AI developmen",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, confirms, wiki, TechNanoAI, emerging tech news",
   "featured": false
 }

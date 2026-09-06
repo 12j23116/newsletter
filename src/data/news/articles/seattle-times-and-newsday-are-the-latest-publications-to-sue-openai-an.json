@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787379683490-5",
+  "id": "ai-1788688400326-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Android Car Malware Spreads Through Built-In Updaters for... | AI News",
-  "excerpt": "Cybersecurity researchers have flagged a new malware family that's specifically designed to infect Android-based vehicle head unit firmware developed by DoFun.\n\nKaspersky, which discovered the threat ",
-  "date": "2026-08-22",
+  "title": "Seattle Times and Newsday are the latest publications to ... | AI News",
+  "excerpt": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI.",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "android-car-malware-spreads-through-built-in-updaters-for-ad-fraud-pro",
-  "sourceLink": "https://thehackernews.com/2026/08/android-car-malware-spreads-through.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-an",
+  "sourceLink": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have flagged a new malware family that's specifically designed to infect Android-based vehicle head unit firmware developed by DoFun. \n\nKaspersky, which discovered the threat in June 2026, said the end goal of the malware is to serve a multi-stage downloader to enable ad fraud and creation of a proxy botnet."
+      "text": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have flagged a new malware family that's specifically designed to infect Android-based vehicle head unit firmware developed by DoFun.\n\nKaspersky, which discovered the threat in June 2026, said the end goal of the malware is to serve a multi-stage downloader to enable ad fraud and creation of a proxy botnet.\n\n\"The malware spread through the built-in updaters of. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Android Car Malware Spreads Through Built-In Updaters for Ad Fraud, Proxy Botnet — a notable development in AI",
+    "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsof — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Android Car Malware Spreads Through Built-In Updaters for Ad Fraud, Proxy Botnet",
+      "date": "2026-09-06",
+      "event": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsof",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "android",
-    "malware",
+    "seattle",
+    "times",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Android Car Malware Spreads Through Built-In Updaters for... | AI News",
-  "metaDescription": "Cybersecurity researchers have flagged a new malware family that's specifically designed to infect Android-based vehicle head unit firmware developed by DoFu...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, android, malware, spreads, TechNanoAI, emerging tech news",
+  "metaTitle": "Seattle Times and Newsday are the latest publications to ... | AI News",
+  "metaDescription": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI. LLMs, agents & the race to AGI. Latest AI deve",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, seattle, times, newsday, TechNanoAI, emerging tech news",
   "featured": false
 }

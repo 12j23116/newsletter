@@ -1,21 +1,21 @@
 {
-  "id": "space-1787379685089-5",
+  "id": "space-1788688401638-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "TB 26-04 Updates and Modernization of NASA’s Chemical Equ... | Space Exploration News",
-  "excerpt": "For more information, contact Mark K. Leader, Glenn Research Center, mark.leader@nasa.gov Download the PDF version NASA’s Chemical Equilibrium with Applications (CEA) code is a foundational tool for p",
-  "date": "2026-08-22",
+  "title": "Live coverage: SpaceX to launch 80th Starlink mission of ... | Space Exploration News",
+  "excerpt": "SpaceX decided to shift all Starlink missions flying on Falcon 9 rockets to the West Coast as it pushes towards the debut of its Starship-Super Heavy in Florida. Liftoff of the Starlink 15-24 mission ",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "tb-26-04-updates-and-modernization-of-nasas-chemical-equilibrium-with-",
-  "sourceLink": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-04-updates-and-modernization-of-nasas-chemical-equilibrium-with-applications-cea-code/",
-  "sourceName": "Daniel Hoffpauir",
+  "slug": "live-coverage-spacex-to-launch-80th-starlink-mission-of-2026",
+  "sourceLink": "https://spaceflightnow.com/2026/09/05/live-coverage-spacex-to-launch-80th-starlink-mission-of-2026/",
+  "sourceName": "Will Robinson-Smith",
   "body": [
     {
       "type": "p",
-      "text": "For more information, contact Mark K.  Leader, Glenn Research Center, mark."
+      "text": "SpaceX decided to shift all Starlink missions flying on Falcon 9 rockets to the West Coast as it pushes towards the debut of its Starship-Super Heavy in Florida.  Liftoff of the Starlink 15-24 mission from Vandenberg Space Force Base is scheduled 7:26 a."
     },
     {
       "type": "p",
@@ -27,11 +27,11 @@
     },
     {
       "type": "p",
-      "text": "leader@nasa. gov Download the PDF version NASA’s Chemical Equilibrium with Applications (CEA) code is a foundational tool for propulsion system analysis."
+      "text": "m.  PDT (10:26 a."
     },
     {
       "type": "p",
-      "text": "It provides equilibrium chemistry, rocket performance, shock, and detonation calculations used across NASA and the broader aerospace community."
+      "text": "m.  EDT / 1426 UTC)."
     },
     {
       "type": "h2",
@@ -101,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "TB 26-04 Updates and Modernization of NASA’s Chemical Equilibrium with Applicati — a notable development in Space Exploration",
+    "Live coverage: SpaceX to launch 80th Starlink mission of 2026 — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Daniel Hoffpauir",
+      "value": "Will Robinson-Smith",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "TB 26-04 Updates and Modernization of NASA’s Chemical Equilibrium with Applicati",
+      "date": "2026-09-06",
+      "event": "Live coverage: SpaceX to launch 80th Starlink mission of 2026",
       "current": true
     },
     {
@@ -195,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "updates",
-    "modernization",
+    "coverage",
+    "spacex",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "TB 26-04 Updates and Modernization of NASA’s Chemical Equ... | Space Exploration News",
-  "metaDescription": "For more information, contact Mark K. Leader, Glenn Research Center, mark.leader@nasa.gov Download the PDF version NASA’s Chemical Equilibrium with Applicati...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, updates, modernization, nasa, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Live coverage: SpaceX to launch 80th Starlink mission of ... | Space Exploration News",
+  "metaDescription": "SpaceX decided to shift all Starlink missions flying on Falcon 9 rockets to the West Coast as it pushes towards the debut of its Starship-Super Heavy in Flor...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, live, coverage, spacex, TechNanoAI, emerging tech news",
+  "featured": true
 }

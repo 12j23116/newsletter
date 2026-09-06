@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1787379691963-2",
+  "id": "quantum-1788688407411-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Join the Cat Side | Quantum Computing News",
-  "excerpt": "I’ve got places to go, people to see, and brand-spanking-new Alice ' Bob swag to wear. For the record, The Quantum Dragon really wants his own t-shirt, but even he agreed that we wouldn’t want his win",
-  "date": "2026-08-22",
+  "title": "What do you wanna talk about? | Quantum Computing News",
+  "excerpt": "The Quantum Dragon will be attending Q+AI 2026 (3.0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, and its companion PQC+IQT conference on Octo",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "join-the-cat-side",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/join-the-cat-side/",
+  "slug": "what-do-you-wanna-talk-about",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/what-do-you-wanna-talk-about/",
   "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "I’ve got places to go, people to see, and brand-spanking-new Alice ' Bob swag to wear.  For the record, The Quantum Dragon really wants his own t-shirt, but even he agreed that we wouldn’t want his wings to tear through Guillaume Gennet’s magnificent design."
+      "text": "The Quantum Dragon will be attending Q+AI 2026 (3. 0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, and its companion PQC+IQT conference on October 25-26."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Even a firebreathing dragon doesn’t..."
+      "text": "While there, he will attempt to record a series of single-question mini-podcasts.  The ..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Join the Cat Side — a notable development in Quantum Computing",
+    "What do you wanna talk about? — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Join the Cat Side",
+      "date": "2026-09-06",
+      "event": "What do you wanna talk about?",
       "current": true
     },
     {
@@ -191,6 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
+    "wanna",
+    "about",
     "emerging tech"
   ],
   "poll": {
@@ -214,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Join the Cat Side | Quantum Computing News",
-  "metaDescription": "I’ve got places to go, people to see, and brand-spanking-new Alice ' Bob swag to wear. For the record, The Quantum Dragon really wants his own t-shirt, but e...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, join, side, TechNanoAI, emerging tech news",
+  "metaTitle": "What do you wanna talk about? | Quantum Computing News",
+  "metaDescription": "The Quantum Dragon will be attending Q+AI 2026 (3.0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, a...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, what, wanna, talk, TechNanoAI, emerging tech news",
   "featured": false
 }

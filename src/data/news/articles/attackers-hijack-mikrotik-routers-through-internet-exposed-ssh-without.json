@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787379683489-4",
+  "id": "ai-1788688400325-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Microsoft Defender's Own Driver Can Be Weaponized to Dele... | AI News",
-  "excerpt": "Check Point Research has disclosed a technique that uses Microsoft Defender's own legitimately signed boot-time remediation driver to perform arbitrary kernel-level file and registry operations on Win",
-  "date": "2026-08-22",
+  "title": "Attackers Hijack MikroTik Routers Through Internet-Expose... | AI News",
+  "excerpt": "Attackers are exploiting MikroTik routers with their Secure Shell (SSH) remote-access service, which is reachable from the internet, to gain full administrative control without authentication, accordi",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "microsoft-defenders-own-driver-can-be-weaponized-to-delete-security-so",
-  "sourceLink": "https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html",
+  "slug": "attackers-hijack-mikrotik-routers-through-internet-exposed-ssh-without",
+  "sourceLink": "https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Check Point Research has disclosed a technique that uses Microsoft Defender's own legitimately signed boot-time remediation driver to perform arbitrary kernel-level file and registry operations on Windows systems ranging from Windows 7 through Windows 11 25H2, with no software flaw exploited and no driver imported from outside the machine. \n\nThe driver, BTR."
+      "text": "Attackers are exploiting MikroTik routers with their Secure Shell (SSH) remote-access service, which is reachable from the internet, to gain full administrative control without authentication, according to CERT Polska's attack warning, published on September 5. \n\nSuccessful attacks date to at least September 2."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Check Point Research has disclosed a technique that uses Microsoft Defender's own legitimately signed boot-time remediation driver to perform arbitrary kernel-level file and registry operations on Windows systems ranging from Windows 7 through Windows 11 25H2, with no software flaw exploited and no driver imported from outside the machine.\n\nThe driver, BTR.sys (Boot Time Removal Tool), is a. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Attackers are exploiting MikroTik routers with their Secure Shell (SSH) remote-access service, which is reachable from the internet, to gain full administrative control without authentication, according to CERT Polska's attack warning, published on September 5.\n\nSuccessful attacks date to at least September 2. The Hacker News’s September 6 review of the warning found no victim count or. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at — a notable development in AI",
+    "Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentic — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at",
+      "date": "2026-09-06",
+      "event": "Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentic",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "microsoft",
-    "defender",
+    "attackers",
+    "hijack",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Microsoft Defender's Own Driver Can Be Weaponized to Dele... | AI News",
-  "metaDescription": "Check Point Research has disclosed a technique that uses Microsoft Defender's own legitimately signed boot-time remediation driver to perform arbitrary kerne...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, microsoft, defender, driver, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Attackers Hijack MikroTik Routers Through Internet-Expose... | AI News",
+  "metaDescription": "Attackers are exploiting MikroTik routers with their Secure Shell (SSH) remote-access service, which is reachable from the internet, to gain full administrat...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, hijack, mikrotik, TechNanoAI, emerging tech news",
+  "featured": true
 }

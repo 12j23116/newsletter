@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787379683488-1",
+  "id": "ai-1788688400328-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Nvidia partners with data center developer Cloverleaf | AI News",
-  "excerpt": "Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia.",
-  "date": "2026-08-22",
+  "title": "Hikers rescued after using Google Gemini for planning | AI News",
+  "excerpt": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\"",
+  "date": "2026-09-06",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "nvidia-partners-with-data-center-developer-cloverleaf",
-  "sourceLink": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
-  "sourceName": "Lucas Ropek",
+  "slug": "hikers-rescued-after-using-google-gemini-for-planning",
+  "sourceLink": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia."
+      "text": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\". The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Nvidia partners with data center developer Cloverleaf — a notable development in AI",
+    "Hikers rescued after using Google Gemini for planning — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-22",
-      "event": "Nvidia partners with data center developer Cloverleaf",
+      "date": "2026-09-06",
+      "event": "Hikers rescued after using Google Gemini for planning",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "nvidia",
-    "partners",
+    "hikers",
+    "rescued",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Nvidia partners with data center developer Cloverleaf | AI News",
-  "metaDescription": "Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia. LLMs, agents & the race to AGI. Latest AI",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, nvidia, partners, with, TechNanoAI, emerging tech news",
+  "metaTitle": "Hikers rescued after using Google Gemini for planning | AI News",
+  "metaDescription": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\"",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, hikers, rescued, after, TechNanoAI, emerging tech news",
   "featured": false
 }
