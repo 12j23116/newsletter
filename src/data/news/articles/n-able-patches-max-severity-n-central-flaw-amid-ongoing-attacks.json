@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1787466164583-1",
+  "id": "cybersecurity-1788778806481-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Hackers infect Android car head units with proxy botnet m... | Cybersecurity News",
-  "excerpt": "A supply-chain attack targeting Android-based car head units is using a legitimate device-update app to spread malware that enlists compromised devices in a proxy botnet or uses them for ad fraud. [..",
-  "date": "2026-08-23",
+  "title": "N-able patches max severity N-central flaw amid ongoing a... | Cybersecurity News",
+  "excerpt": "N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM) platform. [...]",
+  "date": "2026-09-07",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "hackers-infect-android-car-head-units-with-proxy-botnet-malware",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/",
-  "sourceName": "Bill Toulas",
+  "slug": "n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/",
+  "sourceName": "Sergiu Gatlan",
   "body": [
     {
       "type": "p",
-      "text": "A supply-chain attack targeting Android-based car head units is using a legitimate device-update app to spread malware that enlists compromised devices in a proxy botnet or uses them for ad fraud.  [..."
+      "text": "N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM) platform.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, A supply-chain attack targeting Android-based car head units is using a legitimate device-update app to spread malware that enlists compromised devices in a proxy botnet or uses them for ad fraud. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sergiu Gatlan, N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM) platform. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hackers infect Android car head units with proxy botnet malware — a notable development in Cybersecurity",
+    "N-able patches max severity N-central flaw amid ongoing attacks — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "Sergiu Gatlan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-23",
-      "event": "Hackers infect Android car head units with proxy botnet malware",
+      "date": "2026-09-07",
+      "event": "N-able patches max severity N-central flaw amid ongoing attacks",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "hackers",
-    "infect",
+    "patches",
+    "severity",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hackers infect Android car head units with proxy botnet m... | Cybersecurity News",
-  "metaDescription": "A supply-chain attack targeting Android-based car head units is using a legitimate device-update app to spread malware that enlists compromised devices in a ...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, infect, android, TechNanoAI, emerging tech news",
+  "metaTitle": "N-able patches max severity N-central flaw amid ongoing a... | Cybersecurity News",
+  "metaDescription": "N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, able, patches, severity, TechNanoAI, emerging tech news",
   "featured": false
 }

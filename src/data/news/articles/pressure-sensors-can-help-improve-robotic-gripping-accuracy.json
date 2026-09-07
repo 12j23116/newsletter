@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1787466168931-0",
+  "id": "robotics-1788778811906-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Robots don't run themselves: The workforce powering physi... | Robotics News",
-  "excerpt": "The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt.\nThe post Robots don't run themselves: The workforce poweri",
-  "date": "2026-08-23",
+  "title": "Pressure sensors can help improve robotic gripping accuracy | Robotics News",
+  "excerpt": "From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking.\nThe post Pressure sensors can help improve robotic gripping ",
+  "date": "2026-09-07",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "robots-don8217t-run-themselves-the-workforce-powering-physical-ai",
-  "sourceLink": "https://www.therobotreport.com/robots-dont-run-themselves-workforce-powering-physical-ai/",
-  "sourceName": "Christopher Bower",
+  "slug": "pressure-sensors-can-help-improve-robotic-gripping-accuracy",
+  "sourceLink": "https://www.therobotreport.com/pressure-sensors-can-help-improve-robotic-gripping-accuracy/",
+  "sourceName": "Faisal Mahmood",
   "body": [
     {
       "type": "p",
-      "text": "The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt. \nThe post Robots don't run themselves: The workforce powering physical AI appeared first on The Robot Report."
+      "text": "From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking. \nThe post Pressure sensors can help improve robotic gripping accuracy appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Christopher Bower, The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt.\nThe post Robots don't run themselves: The workforce powering physical AI appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Faisal Mahmood, From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking.\nThe post Pressure sensors can help improve robotic gripping accuracy appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Robots don't run themselves: The workforce powering physical AI — a notable development in Robotics",
+    "Pressure sensors can help improve robotic gripping accuracy — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Christopher Bower",
+      "value": "Faisal Mahmood",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-23",
-      "event": "Robots don't run themselves: The workforce powering physical AI",
+      "date": "2026-09-07",
+      "event": "Pressure sensors can help improve robotic gripping accuracy",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "robots",
-    "themselves",
+    "pressure",
+    "sensors",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Robots don't run themselves: The workforce powering physi... | Robotics News",
-  "metaDescription": "The addition of physical AI to the workforce requires more key performance indicators than throughput, according to the president of HireArt.\nThe post Robots...",
-  "keywords": "robotics, humanoid robot, automation, drones, robots, themselves, workforce, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Pressure sensors can help improve robotic gripping accuracy | Robotics News",
+  "metaDescription": "From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking.\nThe post Pressure...",
+  "keywords": "robotics, humanoid robot, automation, drones, pressure, sensors, help, TechNanoAI, emerging tech news",
+  "featured": false
 }

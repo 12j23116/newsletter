@@ -1,21 +1,21 @@
 {
-  "id": "space-1787466165348-5",
+  "id": "space-1788778807424-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Moog Highlights Huntsville Expansion and New Hardware-in-... | Space Exploration News",
-  "excerpt": "Huntsville, AL ' Moog Inc. (NYSE: MOG.A and MOG.B) announces a significant expansion at its Huntsville, AL facility that now includes a new secure Hypersonic/Interceptor Hardware-in-the-Loop (HWIL) la",
-  "date": "2026-08-23",
+  "title": "Starbase Infrastructure Advances Toward Flight 14 | Space Exploration News",
+  "excerpt": "SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 14 appeared first on NASASpaceFlight.com.",
+  "date": "2026-09-07",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "moog-highlights-huntsville-expansion-and-new-hardware-in-the-loop-lab-",
-  "sourceLink": "https://spacenews.com/moog-highlights-huntsville-expansion-and-new-hardware-in-the-loop-lab-during-space-and-missile-defense-symposium/",
-  "sourceName": "Moog Inc.",
+  "slug": "starbase-infrastructure-advances-toward-flight-14",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/09/starbase-infrastructure-spacex-flight-14/",
+  "sourceName": "Ryan Weber",
   "body": [
     {
       "type": "p",
-      "text": "Huntsville, AL ' Moog Inc.  (NYSE: MOG."
+      "text": "SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 14 appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "A and MOG. B) announces a significant expansion at its Huntsville, AL facility that now includes a new secure Hypersonic/Interceptor Hardware-in-the-Loop (HWIL) lab."
-    },
-    {
-      "type": "p",
-      "text": "It is [']\nThe post Moog Highlights Huntsville Expansion and New Hardware-in-the-Loop Lab During Space and Missile Defense Symposium  appeared first on SpaceNews."
+      "text": "According to reporting from Ryan Weber, SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 14 appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Moog Highlights Huntsville Expansion and New Hardware-in-the-Loop Lab During Spa — a notable development in Space Exploration",
+    "Starbase Infrastructure Advances Toward Flight 14 — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Moog Inc.",
+      "value": "Ryan Weber",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-23",
-      "event": "Moog Highlights Huntsville Expansion and New Hardware-in-the-Loop Lab During Spa",
+      "date": "2026-09-07",
+      "event": "Starbase Infrastructure Advances Toward Flight 14",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "highlights",
-    "huntsville",
+    "starbase",
+    "infrastructure",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Moog Highlights Huntsville Expansion and New Hardware-in-... | Space Exploration News",
-  "metaDescription": "Huntsville, AL ' Moog Inc. (NYSE: MOG.A and MOG.B) announces a significant expansion at its Huntsville, AL facility that now includes a new secure Hypersonic...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, moog, highlights, huntsville, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Starbase Infrastructure Advances Toward Flight 14 | Space Exploration News",
+  "metaDescription": "SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 1...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, starbase, infrastructure, advances, TechNanoAI, emerging tech news",
+  "featured": true
 }

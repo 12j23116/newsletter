@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1787466168932-1",
+  "id": "robotics-1788778811905-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "The technology that could bring robot mowers to one in tw... | Robotics News",
-  "excerpt": "Improvements in AI, satellite navigation, and machine vision are helping robotic lawn mowers spread in the U.S., writes Sunseeker's founder.\nThe post The technology that could bring robot mowers to on",
-  "date": "2026-08-23",
+  "title": "Eric Sivertson discusses FPGAs and robot security | Robotics News",
+  "excerpt": "An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security.\nThe post Eric Sivertson discusses FPGAs and robot security appeared first on T",
+  "date": "2026-09-07",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "the-technology-that-could-bring-robot-mowers-to-one-in-two-american-la",
-  "sourceLink": "https://www.therobotreport.com/technology-could-bring-robot-mowers-one-half-american-lawns/",
-  "sourceName": "Terry Ma",
+  "slug": "eric-sivertson-discusses-fpgas-and-robot-security",
+  "sourceLink": "https://www.therobotreport.com/eric-sivertson-discusses-fpgas-robot-security/",
+  "sourceName": "Mike Oitzman",
   "body": [
     {
       "type": "p",
-      "text": "Improvements in AI, satellite navigation, and machine vision are helping robotic lawn mowers spread in the U. S."
+      "text": "An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security. \nThe post Eric Sivertson discusses FPGAs and robot security appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": ", writes Sunseeker's founder. \nThe post The technology that could bring robot mowers to one in two American lawns appeared first on The Robot Report."
+      "text": "According to reporting from Mike Oitzman, An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security.\nThe post Eric Sivertson discusses FPGAs and robot security appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The technology that could bring robot mowers to one in two American lawns — a notable development in Robotics",
+    "Eric Sivertson discusses FPGAs and robot security — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Terry Ma",
+      "value": "Mike Oitzman",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-23",
-      "event": "The technology that could bring robot mowers to one in two American lawns",
+      "date": "2026-09-07",
+      "event": "Eric Sivertson discusses FPGAs and robot security",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "technology",
-    "could",
+    "sivertson",
+    "discusses",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The technology that could bring robot mowers to one in tw... | Robotics News",
-  "metaDescription": "Improvements in AI, satellite navigation, and machine vision are helping robotic lawn mowers spread in the U.S., writes Sunseeker's founder.\nThe post The tec...",
-  "keywords": "robotics, humanoid robot, automation, drones, technology, that, could, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Eric Sivertson discusses FPGAs and robot security | Robotics News",
+  "metaDescription": "An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security.\nThe post Eric Sivertson discusses F...",
+  "keywords": "robotics, humanoid robot, automation, drones, eric, sivertson, discusses, TechNanoAI, emerging tech news",
+  "featured": true
 }

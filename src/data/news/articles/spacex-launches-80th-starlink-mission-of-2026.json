@@ -1,21 +1,21 @@
 {
-  "id": "space-1787466165347-1",
+  "id": "space-1788778807426-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX launches 100th orbital mission of 2026 | Space Exploration News",
-  "excerpt": "The Starlink 15-20 mission represented the 99th Falcon 9 rocket launch of the year. Liftoff from pad 4 East happened at 12:25 a.m. PDT (3:25 a.m. EDT / 0725 UTC).",
-  "date": "2026-08-23",
+  "title": "SpaceX launches 80th Starlink mission of 2026 | Space Exploration News",
+  "excerpt": "SpaceX decided to shift all Starlink missions flying on Falcon 9 rockets to the West Coast as it pushes towards the debut of its Starship-Super Heavy in Florida. Liftoff of the Starlink 15-24 mission ",
+  "date": "2026-09-07",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-launches-100th-orbital-mission-of-2026",
-  "sourceLink": "https://spaceflightnow.com/2026/08/21/live-coverage-spacex-to-launch-100th-orbital-mission-of-2026/",
+  "slug": "spacex-launches-80th-starlink-mission-of-2026",
+  "sourceLink": "https://spaceflightnow.com/2026/09/05/live-coverage-spacex-to-launch-80th-starlink-mission-of-2026/",
   "sourceName": "Will Robinson-Smith",
   "body": [
     {
       "type": "p",
-      "text": "The Starlink 15-20 mission represented the 99th Falcon 9 rocket launch of the year.  Liftoff from pad 4 East happened at 12:25 a."
+      "text": "SpaceX decided to shift all Starlink missions flying on Falcon 9 rockets to the West Coast as it pushes towards the debut of its Starship-Super Heavy in Florida.  Liftoff of the Starlink 15-24 mission from Vandenberg Space Force Base happened at 7:26 a."
     },
     {
       "type": "p",
@@ -27,11 +27,11 @@
     },
     {
       "type": "p",
-      "text": "m.  PDT (3:25 a."
+      "text": "m.  PDT (10:26 a."
     },
     {
       "type": "p",
-      "text": "m.  EDT / 0725 UTC)."
+      "text": "m.  EDT / 1426 UTC)."
     },
     {
       "type": "h2",
@@ -101,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX launches 100th orbital mission of 2026 — a notable development in Space Exploration",
+    "SpaceX launches 80th Starlink mission of 2026 — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -161,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-23",
-      "event": "SpaceX launches 100th orbital mission of 2026",
+      "date": "2026-09-07",
+      "event": "SpaceX launches 80th Starlink mission of 2026",
       "current": true
     },
     {
@@ -220,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX launches 100th orbital mission of 2026 | Space Exploration News",
-  "metaDescription": "The Starlink 15-20 mission represented the 99th Falcon 9 rocket launch of the year. Liftoff from pad 4 East happened at 12:25 a.m. PDT (3:25 a.m. EDT / 0725 ...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, launches, orbital, TechNanoAI, emerging tech news",
+  "metaTitle": "SpaceX launches 80th Starlink mission of 2026 | Space Exploration News",
+  "metaDescription": "SpaceX decided to shift all Starlink missions flying on Falcon 9 rockets to the West Coast as it pushes towards the debut of its Starship-Super Heavy in Flor...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, launches, starlink, TechNanoAI, emerging tech news",
   "featured": false
 }

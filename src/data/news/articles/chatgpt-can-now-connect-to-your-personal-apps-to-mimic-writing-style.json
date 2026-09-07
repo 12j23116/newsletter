@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1787466164584-2",
+  "id": "cybersecurity-1788778806479-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Named Pipes Under Attack: Securing Windows Interprocess C... | Cybersecurity News",
-  "excerpt": "Windows named pipes provide fast interprocess communication, but weak access controls can expose privileged services to untrusted processes. ThreatLocker explains how endpoint verification, command au",
-  "date": "2026-08-23",
+  "title": "ChatGPT can now connect to your personal apps to mimic wr... | Cybersecurity News",
+  "excerpt": "OpenAI appears to be testing a new \"Writing Style\" feature for ChatGPT that can learn how you write by looking at examples from your connected apps. [...]",
+  "date": "2026-09-07",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "named-pipes-under-attack-securing-windows-interprocess-communication",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/named-pipes-under-attack-securing-windows-interprocess-communication/",
-  "sourceName": "Sponsored by ThreatLocker",
+  "slug": "chatgpt-can-now-connect-to-your-personal-apps-to-mimic-writing-style",
+  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-can-now-connect-to-your-personal-apps-to-mimic-writing-style/",
+  "sourceName": "Mayank Parmar",
   "body": [
     {
       "type": "p",
-      "text": "Windows named pipes provide fast interprocess communication, but weak access controls can expose privileged services to untrusted processes.  ThreatLocker explains how endpoint verification, command authorization, strict input validation, and narrowly scoped privileges can help secure named-pipe communication."
+      "text": "OpenAI appears to be testing a new \"Writing Style\" feature for ChatGPT that can learn how you write by looking at examples from your connected apps.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "[..."
+      "text": "According to reporting from Mayank Parmar, OpenAI appears to be testing a new \"Writing Style\" feature for ChatGPT that can learn how you write by looking at examples from your connected apps. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Named Pipes Under Attack: Securing Windows Interprocess Communication — a notable development in Cybersecurity",
+    "ChatGPT can now connect to your personal apps to mimic writing style — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Sponsored by ThreatLocker",
+      "value": "Mayank Parmar",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-23",
-      "event": "Named Pipes Under Attack: Securing Windows Interprocess Communication",
+      "date": "2026-09-07",
+      "event": "ChatGPT can now connect to your personal apps to mimic writing style",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "named",
-    "pipes",
+    "chatgpt",
+    "connect",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Named Pipes Under Attack: Securing Windows Interprocess C... | Cybersecurity News",
-  "metaDescription": "Windows named pipes provide fast interprocess communication, but weak access controls can expose privileged services to untrusted processes. ThreatLocker exp...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, named, pipes, under, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "ChatGPT can now connect to your personal apps to mimic wr... | Cybersecurity News",
+  "metaDescription": "OpenAI appears to be testing a new \"Writing Style\" feature for ChatGPT that can learn how you write by looking at examples from your connected apps. [...]",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, chatgpt, connect, your, TechNanoAI, emerging tech news",
+  "featured": true
 }
