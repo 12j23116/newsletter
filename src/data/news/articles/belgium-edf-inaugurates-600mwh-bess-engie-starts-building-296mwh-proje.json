@@ -1,21 +1,21 @@
 {
-  "id": "energy-1787553326103-0",
+  "id": "energy-1788862564554-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "India hits $0.068/kWh tariff in 4-hour peak renewable pow... | Energy Storage News",
-  "excerpt": "SECI has discovered a lowest tariff of INR 5.99 ($0.068)/kWh in its 1.5 GW tender for four-hour assured peak renewable power. Waaree Energies secured 700 MW, while NTPC REL and ACME Solar won 500 MW a",
-  "date": "2026-08-24",
+  "title": "Belgium: EDF inaugurates 600MWh BESS, Engie starts buildi... | Energy Storage News",
+  "excerpt": "EDF Power Solutions has put a 150MW/600MWh BESS in Belgium into commercial operation while Engie has started building a 74MW/96MWh project.",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "india-hits-0068kwh-tariff-in-4-hour-peak-renewable-power-tender",
-  "sourceLink": "https://www.pv-magazine.com/2026/08/24/seci-discovers-inr-5-99-kwh-tariff-for-4-hour-peak-renewable-power/",
-  "sourceName": "Uma Gupta",
+  "slug": "belgium-edf-inaugurates-600mwh-bess-engie-starts-building-296mwh-proje",
+  "sourceLink": "https://www.energy-storage.news/belgium-edf-inaugurates-600mwh-bess-engie-starts-building-296mwh-project/",
+  "sourceName": "Cameron Murray",
   "body": [
     {
       "type": "p",
-      "text": "SECI has discovered a lowest tariff of INR 5. 99 ($0."
+      "text": "EDF Power Solutions has put a 150MW/600MWh BESS in Belgium into commercial operation while Engie has started building a 74MW/96MWh project."
     },
     {
       "type": "p",
@@ -27,15 +27,7 @@
     },
     {
       "type": "p",
-      "text": "068)/kWh in its 1. 5 GW tender for four-hour assured peak renewable power."
-    },
-    {
-      "type": "p",
-      "text": "Waaree Energies secured 700 MW, while NTPC REL and ACME Solar won 500 MW and 300 MW, respectively. \nThe post India hits $0."
-    },
-    {
-      "type": "p",
-      "text": "068/kWh tariff in 4-hour peak renewable power tender appeared first on pv magazine Global."
+      "text": "According to reporting from Cameron Murray, EDF Power Solutions has put a 150MW/600MWh BESS in Belgium into commercial operation while Engie has started building a 74MW/96MWh project.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -105,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "India hits $0.068/kWh tariff in 4-hour peak renewable power tender — a notable development in Energy Storage",
+    "Belgium: EDF inaugurates 600MWh BESS, Engie starts building 296MWh project — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -128,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Uma Gupta",
+      "value": "Cameron Murray",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -165,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "India hits $0.068/kWh tariff in 4-hour peak renewable power tender",
+      "date": "2026-09-08",
+      "event": "Belgium: EDF inaugurates 600MWh BESS, Engie starts building 296MWh project",
       "current": true
     },
     {
@@ -199,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "india",
-    "tariff",
+    "belgium",
+    "inaugurates",
     "emerging tech"
   ],
   "poll": {
@@ -224,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "India hits $0.068/kWh tariff in 4-hour peak renewable pow... | Energy Storage News",
-  "metaDescription": "SECI has discovered a lowest tariff of INR 5.99 ($0.068)/kWh in its 1.5 GW tender for four-hour assured peak renewable power. Waaree Energies secured 700 MW,...",
-  "keywords": "energy storage, battery, solid-state, grid storage, india, hits, tariff, TechNanoAI, emerging tech news",
+  "metaTitle": "Belgium: EDF inaugurates 600MWh BESS, Engie starts buildi... | Energy Storage News",
+  "metaDescription": "EDF Power Solutions has put a 150MW/600MWh BESS in Belgium into commercial operation while Engie has started building a 74MW/96MWh project.",
+  "keywords": "energy storage, battery, solid-state, grid storage, belgium, inaugurates, bess, TechNanoAI, emerging tech news",
   "featured": true
 }

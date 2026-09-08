@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787553319790-0",
+  "id": "ai-1788862547646-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Who's behind the new ‘stealth model’ Ox Alpha? | AI News",
-  "excerpt": "A mysterious new AI model called Ox Alpha has driven certain corners of the internet into a frenzy of speculation.",
-  "date": "2026-08-24",
+  "title": "Fake IT Calls Target Executives in Microsoft 365 Data The... | AI News",
+  "excerpt": "Threat hunters have disclosed details of a widespread data theft and extortion threat cluster that's targeting Microsoft 365 and other software-as-a-service (SaaS) offerings through information techno",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "who8217s-behind-the-new-stealth-model-ox-alpha",
-  "sourceLink": "https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/",
-  "sourceName": "Anthony Ha",
+  "slug": "fake-it-calls-target-executives-in-microsoft-365-data-theft-and-extort",
+  "sourceLink": "https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "A mysterious new AI model called Ox Alpha has driven certain corners of the internet into a frenzy of speculation."
+      "text": "Threat hunters have disclosed details of a widespread data theft and extortion threat cluster that's targeting Microsoft 365 and other software-as-a-service (SaaS) offerings through information technology (IT) help desk vishing, adversary-in-the-middle (AitM) token theft, and residential-proxy sign-ins."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, A mysterious new AI model called Ox Alpha has driven certain corners of the internet into a frenzy of speculation.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Threat hunters have disclosed details of a widespread data theft and extortion threat cluster that's targeting Microsoft 365 and other software-as-a-service (SaaS) offerings through information technology (IT) help desk vishing, adversary-in-the-middle (AitM) token theft, and residential-proxy sign-ins.\n\nThe activity, which mainly singles out directors, vice presidents, and other executive staff. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Who's behind the new ‘stealth model’ Ox Alpha? — a notable development in AI",
+    "Fake IT Calls Target Executives in Microsoft 365 Data Theft and Extortion Attack — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "Who's behind the new ‘stealth model’ Ox Alpha?",
+      "date": "2026-09-08",
+      "event": "Fake IT Calls Target Executives in Microsoft 365 Data Theft and Extortion Attack",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "behind",
-    "stealth",
+    "calls",
+    "target",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Who's behind the new ‘stealth model’ Ox Alpha? | AI News",
-  "metaDescription": "A mysterious new AI model called Ox Alpha has driven certain corners of the internet into a frenzy of speculation. LLMs, agents & the race to AGI. Latest AI dev",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, behind, stealth, model, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Fake IT Calls Target Executives in Microsoft 365 Data The... | AI News",
+  "metaDescription": "Threat hunters have disclosed details of a widespread data theft and extortion threat cluster that's targeting Microsoft 365 and other software-as-a-service ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, fake, calls, target, TechNanoAI, emerging tech news",
+  "featured": false
 }

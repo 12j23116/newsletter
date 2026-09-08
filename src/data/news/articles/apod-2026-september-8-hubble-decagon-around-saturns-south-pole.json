@@ -1,21 +1,21 @@
 {
-  "id": "space-1787553321134-1",
+  "id": "space-1788862549567-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "LandSpace’s Zhuque-3 topples following milestone landing | Space Exploration News",
-  "excerpt": "LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following milestone landing appeared first on NASASpaceFlight",
-  "date": "2026-08-24",
+  "title": "APOD: 2026 September 8 – Hubble: Decagon Around Saturn’s ... | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 September 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diffe",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "landspaces-zhuque-3-topples-following-milestone-landing",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/landspaces-zhuque-3-topples/",
-  "sourceName": "Martin Smith and Chris Bergin",
+  "slug": "apod-2026-september-8-hubble-decagon-around-saturns-south-pole",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-september-8-hubble-decagon-around-saturns-south-pole/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following milestone landing appeared first on NASASpaceFlight. com."
+      "text": "APOD Science APOD APOD: 2026 September 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Martin Smith and Chris Bergin, LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following milestone landing appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 September 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Hubble: Decagon Around [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "LandSpace’s Zhuque-3 topples following milestone landing — a notable development in Space Exploration",
+    "APOD: 2026 September 8 – Hubble: Decagon Around Saturn’s South Pole — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Martin Smith and Chris Bergin",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "LandSpace’s Zhuque-3 topples following milestone landing",
+      "date": "2026-09-08",
+      "event": "APOD: 2026 September 8 – Hubble: Decagon Around Saturn’s South Pole",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "landspace",
-    "zhuque",
+    "september",
+    "hubble",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "LandSpace’s Zhuque-3 topples following milestone landing | Space Exploration News",
-  "metaDescription": "LandSpace achieved a major milestone for Chinese commercial rocketry this week when the first stage'\nThe post LandSpace’s Zhuque-3 topples following mileston...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, landspace, zhuque, topples, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "APOD: 2026 September 8 – Hubble: Decagon Around Saturn’s ... | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 September 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of th...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, september, hubble, TechNanoAI, emerging tech news",
+  "featured": true
 }

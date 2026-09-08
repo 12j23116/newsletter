@@ -1,21 +1,21 @@
 {
-  "id": "energy-1787553326104-3",
+  "id": "energy-1788862564556-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Quinbrook taps GE Vernova and CATL for the third stage of... | Energy Storage News",
-  "excerpt": "GE Vernova and CATL selected for 1,216MWh Supernode Stage 3 in Queensland, which will expand Australia's largest battery storage system.",
-  "date": "2026-08-24",
+  "title": "Lebanon extends deadline for 350 MW solar tender | Energy Storage News",
+  "excerpt": "The deadline extension gives interested investors and developers additional time to submit applications, while all other tender terms and requirements remain unchanged.\nThe post Lebanon extends deadli",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "quinbrook-taps-ge-vernova-and-catl-for-the-third-stage-of-australias-l",
-  "sourceLink": "https://www.energy-storage.news/quinbrook-taps-ge-vernova-and-catl-for-the-third-stage-of-australias-largest-battery-storage-system/",
-  "sourceName": "George Heynes",
+  "slug": "lebanon-extends-deadline-for-350-mw-solar-tender",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/08/lebanon-extends-deadline-for-350-mw-solar-tender/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "GE Vernova and CATL selected for 1,216MWh Supernode Stage 3 in Queensland, which will expand Australia's largest battery storage system."
+      "text": "The deadline extension gives interested investors and developers additional time to submit applications, while all other tender terms and requirements remain unchanged. \nThe post Lebanon extends deadline for 350 MW solar tender appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from George Heynes, GE Vernova and CATL selected for 1,216MWh Supernode Stage 3 in Queensland, which will expand Australia's largest battery storage system.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Emiliano Bellini, The deadline extension gives interested investors and developers additional time to submit applications, while all other tender terms and requirements remain unchanged.\nThe post Lebanon extends deadline for 350 MW solar tender appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Quinbrook taps GE Vernova and CATL for the third stage of Australia’s largest ba — a notable development in Energy Storage",
+    "Lebanon extends deadline for 350 MW solar tender — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "George Heynes",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "Quinbrook taps GE Vernova and CATL for the third stage of Australia’s largest ba",
+      "date": "2026-09-08",
+      "event": "Lebanon extends deadline for 350 MW solar tender",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "quinbrook",
-    "vernova",
+    "lebanon",
+    "extends",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Quinbrook taps GE Vernova and CATL for the third stage of... | Energy Storage News",
-  "metaDescription": "GE Vernova and CATL selected for 1,216MWh Supernode Stage 3 in Queensland, which will expand Australia's largest battery storage system.",
-  "keywords": "energy storage, battery, solid-state, grid storage, quinbrook, taps, vernova, TechNanoAI, emerging tech news",
+  "metaTitle": "Lebanon extends deadline for 350 MW solar tender | Energy Storage News",
+  "metaDescription": "The deadline extension gives interested investors and developers additional time to submit applications, while all other tender terms and requirements remain...",
+  "keywords": "energy storage, battery, solid-state, grid storage, lebanon, extends, deadline, TechNanoAI, emerging tech news",
   "featured": false
 }

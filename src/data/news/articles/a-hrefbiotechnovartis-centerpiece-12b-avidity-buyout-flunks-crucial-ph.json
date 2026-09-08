@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1787553321813-2",
+  "id": "biotech-1788862550617-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-tr... | Biotechnology News",
-  "excerpt": "Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology startup is so far sticking to its transpare",
-  "date": "2026-08-24",
+  "title": "<a href=\"/biotech/novartis-centerpiece-12b-avidity-buyout... | Biotechnology News",
+  "excerpt": "The phase 3 Harbor trial of Novartis’ del-desiran has missed its primary endpoint, dealing a major blow to an asset that the Swiss drugmaker acquired in the $12 billion takeover of Avidity Biosciences",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechwhy-pheasts-ceo-has-no-regrets-about-transparent-approach",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/why-pheasts-ceo-has-no-regrets-about-transparent-approach-despite-competitors-circling",
-  "sourceName": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+  "slug": "a-hrefbiotechnovartis-centerpiece-12b-avidity-buyout-flunks-crucial-ph",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/novartis-centerpiece-12b-avidity-buyout-flunks-crucial-phase-3-test",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology startup is so far sticking to its transparent approach."
+      "text": "The phase 3 Harbor trial of Novartis’ del-desiran has missed its primary endpoint, dealing a major blow to an asset that the Swiss drugmaker acquired in the $12 billion takeover of Avidity Biosciences.  The flop leaves Novartis with one win and two failures from a rapid-fire run of key clinical readouts."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>, Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology startup is so far sticking to its transparent approach.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, The phase 3 Harbor trial of Novartis’ del-desiran has missed its primary endpoint, dealing a major blow to an asset that the Swiss drugmaker acquired in the $12 billion takeover of Avidity Biosciences. The flop leaves Novartis with one win and two failures from a rapid-fire run of key clinical readouts. <br>. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-transparent-approach-desp — a notable development in Biotechnology",
+    "<a href=\"/biotech/novartis-centerpiece-12b-avidity-buyout-flunks-crucial-phase-3 — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-transparent-approach-desp",
+      "date": "2026-09-08",
+      "event": "<a href=\"/biotech/novartis-centerpiece-12b-avidity-buyout-flunks-crucial-phase-3",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "pheasts",
+    "novartis",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/why-pheasts-ceo-has-no-regrets-about-tr... | Biotechnology News",
-  "metaDescription": "Pheast Therapeutics may have learned the hard way about the risks of competitors getting a glimpse of your heard-earned discoveries, but the immuno-oncology ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, pheasts, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "<a href=\"/biotech/novartis-centerpiece-12b-avidity-buyout... | Biotechnology News",
+  "metaDescription": "The phase 3 Harbor trial of Novartis’ del-desiran has missed its primary endpoint, dealing a major blow to an asset that the Swiss drugmaker acquired in the ...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, novartis, TechNanoAI, emerging tech news",
+  "featured": true
 }

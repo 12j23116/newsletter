@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787553319793-3",
+  "id": "ai-1788862547645-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Is it legal to train AI models on copyrighted books? It’s... | AI News",
-  "excerpt": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods. That seems illegal, right?",
-  "date": "2026-08-24",
+  "title": "Grindr to Pay £26 Million to Settle U.K. Claims Over HIV ... | AI News",
+  "excerpt": "Online dating app Grindr has opted to pay £26 million ($35.1 million) to settle a lawsuit in the U.K. over allegations that it shared users' personal information, including their HIV status, with thir",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated",
-  "sourceLink": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
-  "sourceName": "Amanda Silberling",
+  "slug": "grindr-to-pay-26-million-to-settle-uk-claims-over-hiv-status-data-shar",
+  "sourceLink": "https://thehackernews.com/2026/09/grindr-to-pay-26-million-to-settle-uk.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods.  That seems illegal, right?"
+      "text": "Online dating app Grindr has opted to pay £26 million ($35. 1 million) to settle a lawsuit in the U."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Amanda Silberling, Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods. That seems illegal, right?. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "K.  over allegations that it shared users' personal information, including their HIV status, with third-parties."
+    },
+    {
+      "type": "p",
+      "text": "Grindr, which is the largest LGBTQ+ dating app, was sued in April 2024, accusing it of violating U. K."
+    },
+    {
+      "type": "p",
+      "text": "privacy laws by sharing sensitive data for commercial purposes such as advertising."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "Is it legal to train AI models on copyrighted books? It’s complicated — a notable development in AI",
+    "Grindr to Pay £26 Million to Settle U.K. Claims Over HIV Status Data Sharing — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +128,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Amanda Silberling",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "Is it legal to train AI models on copyrighted books? It’s complicated",
+      "date": "2026-09-08",
+      "event": "Grindr to Pay £26 Million to Settle U.K. Claims Over HIV Status Data Sharing",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "legal",
-    "train",
+    "grindr",
+    "million",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "Is it legal to train AI models on copyrighted books? It’s... | AI News",
-  "metaDescription": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelih...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, legal, train, models, TechNanoAI, emerging tech news",
+  "metaTitle": "Grindr to Pay £26 Million to Settle U.K. Claims Over HIV ... | AI News",
+  "metaDescription": "Online dating app Grindr has opted to pay £26 million ($35.1 million) to settle a lawsuit in the U.K. over allegations that it shared users' personal informa...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, grindr, million, settle, TechNanoAI, emerging tech news",
   "featured": false
 }

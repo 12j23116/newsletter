@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1787553326491-1",
+  "id": "robotics-1788862565283-3",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Use a digital twin to explore automation before committin... | Robotics News",
-  "excerpt": "While a digital twin does not necessarily replace a systems integrator, it can help manufacturers evaluate robots and plan applications, says RoboDK.\nThe post Use a digital twin to explore automation ",
-  "date": "2026-08-24",
+  "title": "MassRobotics shares member survey results around FCC rest... | Robotics News",
+  "excerpt": "MassRobotics has found that companies were split on the FCC ban on new foreign-produced mobile robots.\nThe post MassRobotics shares member survey results around FCC restrictions appeared first on The ",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "use-a-digital-twin-to-explore-automation-before-committing-capital",
-  "sourceLink": "https://www.therobotreport.com/use-digital-twin-explore-automation-before-committing-capital/",
-  "sourceName": "Albert Nubiola",
+  "slug": "massrobotics-shares-member-survey-results-around-fcc-restrictions",
+  "sourceLink": "https://www.therobotreport.com/massrobotics-shares-member-survey-results-around-fcc-restrictions/",
+  "sourceName": "Eugene Demaitre",
   "body": [
     {
       "type": "p",
-      "text": "While a digital twin does not necessarily replace a systems integrator, it can help manufacturers evaluate robots and plan applications, says RoboDK. \nThe post Use a digital twin to explore automation before committing capital appeared first on The Robot Report."
+      "text": "MassRobotics has found that companies were split on the FCC ban on new foreign-produced mobile robots. \nThe post MassRobotics shares member survey results around FCC restrictions appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Albert Nubiola, While a digital twin does not necessarily replace a systems integrator, it can help manufacturers evaluate robots and plan applications, says RoboDK.\nThe post Use a digital twin to explore automation before committing capital appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eugene Demaitre, MassRobotics has found that companies were split on the FCC ban on new foreign-produced mobile robots.\nThe post MassRobotics shares member survey results around FCC restrictions appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Use a digital twin to explore automation before committing capital — a notable development in Robotics",
+    "MassRobotics shares member survey results around FCC restrictions — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Albert Nubiola",
+      "value": "Eugene Demaitre",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "Use a digital twin to explore automation before committing capital",
+      "date": "2026-09-08",
+      "event": "MassRobotics shares member survey results around FCC restrictions",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "digital",
-    "explore",
+    "massrobotics",
+    "shares",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Use a digital twin to explore automation before committin... | Robotics News",
-  "metaDescription": "While a digital twin does not necessarily replace a systems integrator, it can help manufacturers evaluate robots and plan applications, says RoboDK.\nThe pos...",
-  "keywords": "robotics, humanoid robot, automation, drones, digital, twin, explore, TechNanoAI, emerging tech news",
+  "metaTitle": "MassRobotics shares member survey results around FCC rest... | Robotics News",
+  "metaDescription": "MassRobotics has found that companies were split on the FCC ban on new foreign-produced mobile robots.\nThe post MassRobotics shares member survey results aro...",
+  "keywords": "robotics, humanoid robot, automation, drones, massrobotics, shares, member, TechNanoAI, emerging tech news",
   "featured": false
 }

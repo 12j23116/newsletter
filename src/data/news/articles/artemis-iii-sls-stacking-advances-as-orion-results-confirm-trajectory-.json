@@ -1,21 +1,21 @@
 {
-  "id": "space-1787553321134-0",
+  "id": "space-1788862549568-3",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA's Roman telescope nears launch, reaches final integr... | Space Exploration News",
-  "excerpt": "With a scheduled launch date of Aug. 30, NASA's Nancy Grace Roman Space Telescope is'\nThe post NASA's Roman telescope nears launch, reaches final integration and rehearsal milestones appeared first on",
-  "date": "2026-08-24",
+  "title": "Artemis III SLS stacking advances as Orion results confir... | Space Exploration News",
+  "excerpt": "Teams at NASA’s Kennedy Space Center have pushed Artemis III Space Launch System hardware another'\nThe post Artemis III SLS stacking advances as Orion results confirm trajectory fix appeared first on ",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa8217s-roman-telescope-nears-launch-reaches-final-integration-and-r",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/08/roman-update-082326/",
-  "sourceName": "Haygen Warren",
+  "slug": "artemis-iii-sls-stacking-advances-as-orion-results-confirm-trajectory-",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/09/artemis-iii-sls-stacking-artemis-ii-orion-fix/",
+  "sourceName": "Alejandro Alcantarilla Romera and Chris Bergin",
   "body": [
     {
       "type": "p",
-      "text": "With a scheduled launch date of Aug.  30, NASA's Nancy Grace Roman Space Telescope is'\nThe post NASA's Roman telescope nears launch, reaches final integration and rehearsal milestones appeared first on NASASpaceFlight."
+      "text": "Teams at NASA’s Kennedy Space Center have pushed Artemis III Space Launch System hardware another'\nThe post Artemis III SLS stacking advances as Orion results confirm trajectory fix appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "com."
+      "text": "According to reporting from Alejandro Alcantarilla Romera and Chris Bergin, Teams at NASA’s Kennedy Space Center have pushed Artemis III Space Launch System hardware another'\nThe post Artemis III SLS stacking advances as Orion results confirm trajectory fix appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA's Roman telescope nears launch, reaches final integration and rehearsal mil — a notable development in Space Exploration",
+    "Artemis III SLS stacking advances as Orion results confirm trajectory fix — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Haygen Warren",
+      "value": "Alejandro Alcantarilla Romera and Chris Bergin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "NASA's Roman telescope nears launch, reaches final integration and rehearsal mil",
+      "date": "2026-09-08",
+      "event": "Artemis III SLS stacking advances as Orion results confirm trajectory fix",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "roman",
-    "telescope",
+    "artemis",
+    "stacking",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA's Roman telescope nears launch, reaches final integr... | Space Exploration News",
-  "metaDescription": "With a scheduled launch date of Aug. 30, NASA's Nancy Grace Roman Space Telescope is'\nThe post NASA's Roman telescope nears launch, reaches final integration...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, roman, telescope, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Artemis III SLS stacking advances as Orion results confir... | Space Exploration News",
+  "metaDescription": "Teams at NASA’s Kennedy Space Center have pushed Artemis III Space Launch System hardware another'\nThe post Artemis III SLS stacking advances as Orion result...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, artemis, stacking, advances, TechNanoAI, emerging tech news",
+  "featured": false
 }

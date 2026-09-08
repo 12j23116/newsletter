@@ -1,21 +1,21 @@
 {
-  "id": "energy-1787553326103-2",
+  "id": "energy-1788862564556-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "US updates foreign inverter ban to include wired devices | Energy Storage News",
-  "excerpt": "The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligible domestic manufacturing.\nThe post US upd",
-  "date": "2026-08-24",
+  "title": "Hoymiles releases bidirectional EV charger | Energy Storage News",
+  "excerpt": "The V2X DC Charger has up to 22 kW of DC charging power. It features IP65 protection and IK10 impact protection. \nThe post Hoymiles releases bidirectional EV charger appeared first on pv magazine Glob",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "us-updates-foreign-inverter-ban-to-include-wired-devices",
-  "sourceLink": "https://www.pv-magazine.com/2026/08/24/fcc-updates-foreign-inverter-ban-to-include-wired-devices-adds-45x-safe-harbor/",
-  "sourceName": "Ryan Kennedy",
+  "slug": "hoymiles-releases-bidirectional-ev-charger",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/08/hoymiles-releases-bidirectional-ev-charger/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligible domestic manufacturing. \nThe post US updates foreign inverter ban to include wired devices appeared first on pv magazine Global."
+      "text": "The V2X DC Charger has up to 22 kW of DC charging power.  It features IP65 protection and IK10 impact protection."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ryan Kennedy, The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligible domestic manufacturing.\nThe post US updates foreign inverter ban to include wired devices appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post Hoymiles releases bidirectional EV charger appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "US updates foreign inverter ban to include wired devices — a notable development in Energy Storage",
+    "Hoymiles releases bidirectional EV charger — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Ryan Kennedy",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "US updates foreign inverter ban to include wired devices",
+      "date": "2026-09-08",
+      "event": "Hoymiles releases bidirectional EV charger",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "updates",
-    "foreign",
+    "hoymiles",
+    "releases",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "US updates foreign inverter ban to include wired devices | Energy Storage News",
-  "metaDescription": "The FCC expanded its national security Covered List rules to explicitly target Ethernet-connected inverters while creating a compliance pathway for 45X-eligi...",
-  "keywords": "energy storage, battery, solid-state, grid storage, updates, foreign, inverter, TechNanoAI, emerging tech news",
+  "metaTitle": "Hoymiles releases bidirectional EV charger | Energy Storage News",
+  "metaDescription": "The V2X DC Charger has up to 22 kW of DC charging power. It features IP65 protection and IK10 impact protection. \nThe post Hoymiles releases bidirectional EV...",
+  "keywords": "energy storage, battery, solid-state, grid storage, hoymiles, releases, bidirectional, TechNanoAI, emerging tech news",
   "featured": false
 }

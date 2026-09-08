@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1787553327359-1",
+  "id": "quantum-1788862566736-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Scientists turn tiny “defects” into a 5.5x heat transfer ... | Quantum Computing News",
-  "excerpt": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation. By turning tiny polymer structures once considered “defects” int",
-  "date": "2026-08-24",
+  "title": "NEC Discontinues Superconducting Quantum Computer Develop... | Quantum Computing News",
+  "excerpt": "NEC Corporation has ceased its research and development into superconducting quantum computers, shifting focus to quantum-inspired annealing and classical emulation due to long commercialization timel",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "scientists-turn-tiny-defects-into-a-55x-heat-transfer-boost",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/08/260823014940.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "nec-discontinues-superconducting-quantum-computer-development-to-focus",
+  "sourceLink": "https://quantumcomputingreport.com/nec-discontinues-superconducting-quantum-computer-development-to-focus-on-annealing-and-classical-emulation/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation.  By turning tiny polymer structures once considered “defects” into places where water droplets can form, then helping those droplets detach quickly, the new surface keeps exposing fresh areas for condensation."
+      "text": "NEC Corporation has ceased its research and development into superconducting quantum computers, shifting focus to quantum-inspired annealing and classical emulation due to long commercialization timelines and high capital investment.  This move, reported by Nikkei Asia, means NEC will now concentrate on software and optimization services, leaving Fujitsu as the main domestic corporate developer of superconducting hardware in Japan."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "In tests on copper tubes, it transferred heat up to 5."
+      "text": "According to reporting from Mohamed Abdel-Kareem, NEC Corporation has ceased its research and development into superconducting quantum computers, shifting focus to quantum-inspired annealing and classical emulation due to long commercialization timelines and high capital investment. This move, reported by Nikkei Asia, means NEC will now concentrate on software and optimization services, leaving Fujitsu as the main domestic corporate developer of superconducting hardware in Japan.\nThe post NEC Discontinues Superconducting Quantum Computer Develo. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Scientists turn tiny “defects” into a 5.5x heat transfer boost — a notable development in Quantum Computing",
+    "NEC Discontinues Superconducting Quantum Computer Development to Focus on Anneal — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "Scientists turn tiny “defects” into a 5.5x heat transfer boost",
+      "date": "2026-09-08",
+      "event": "NEC Discontinues Superconducting Quantum Computer Development to Focus on Anneal",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "scientists",
-    "defects",
+    "discontinues",
+    "superconducting",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Scientists turn tiny “defects” into a 5.5x heat transfer ... | Quantum Computing News",
-  "metaDescription": "Scientists have developed an ultrathin coating that could dramatically improve how efficiently heat is transferred during condensation. By turning tiny polym...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, scientists, turn, tiny, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "NEC Discontinues Superconducting Quantum Computer Develop... | Quantum Computing News",
+  "metaDescription": "NEC Corporation has ceased its research and development into superconducting quantum computers, shifting focus to quantum-inspired annealing and classical em...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, discontinues, superconducting, quantum, TechNanoAI, emerging tech news",
+  "featured": true
 }

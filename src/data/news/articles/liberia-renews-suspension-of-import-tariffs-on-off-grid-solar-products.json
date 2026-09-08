@@ -1,21 +1,21 @@
 {
-  "id": "energy-1787553326103-1",
+  "id": "energy-1788862564554-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Quinbrook advances plans for polysilicon factory in Austr... | Energy Storage News",
-  "excerpt": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement wit",
-  "date": "2026-08-24",
+  "title": "Liberia renews suspension of import tariffs on off-grid s... | Energy Storage News",
+  "excerpt": "Liberia's suspension of import tariffs on off-grid solar products has been extended as the country looks to stimulate private investment and expand access to clean energy.\nThe post Liberia renews susp",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "quinbrook-advances-plans-for-polysilicon-factory-in-australia",
-  "sourceLink": "https://www.pv-magazine.com/2026/08/24/quinbrook-advances-plans-for-polysilicon-production-plant/",
-  "sourceName": "David Carroll",
+  "slug": "liberia-renews-suspension-of-import-tariffs-on-off-grid-solar-products",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/08/liberia-renews-suspension-of-import-tariffs-on-off-grid-solar-products/",
+  "sourceName": "Patrick Jowett",
   "body": [
     {
       "type": "p",
-      "text": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement with the local government authority. \nThe post Quinbrook advances plans for polysilicon factory in Australia appeared first on pv magazine Global."
+      "text": "Liberia's suspension of import tariffs on off-grid solar products has been extended as the country looks to stimulate private investment and expand access to clean energy. \nThe post Liberia renews suspension of import tariffs on off-grid solar products appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from David Carroll, Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward following the recent signing of an agreement with the local government authority.\nThe post Quinbrook advances plans for polysilicon factory in Australia appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Patrick Jowett, Liberia's suspension of import tariffs on off-grid solar products has been extended as the country looks to stimulate private investment and expand access to clean energy.\nThe post Liberia renews suspension of import tariffs on off-grid solar products appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Quinbrook advances plans for polysilicon factory in Australia — a notable development in Energy Storage",
+    "Liberia renews suspension of import tariffs on off-grid solar products — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "David Carroll",
+      "value": "Patrick Jowett",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "Quinbrook advances plans for polysilicon factory in Australia",
+      "date": "2026-09-08",
+      "event": "Liberia renews suspension of import tariffs on off-grid solar products",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "quinbrook",
-    "advances",
+    "liberia",
+    "renews",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Quinbrook advances plans for polysilicon factory in Austr... | Energy Storage News",
-  "metaDescription": "Quinbrook Infrastructure Partners’ plans to build a polysilicon plant in Queensland to supply solar panel manufacturers have taken another step forward follo...",
-  "keywords": "energy storage, battery, solid-state, grid storage, quinbrook, advances, plans, TechNanoAI, emerging tech news",
+  "metaTitle": "Liberia renews suspension of import tariffs on off-grid s... | Energy Storage News",
+  "metaDescription": "Liberia's suspension of import tariffs on off-grid solar products has been extended as the country looks to stimulate private investment and expand access to...",
+  "keywords": "energy storage, battery, solid-state, grid storage, liberia, renews, suspension, TechNanoAI, emerging tech news",
   "featured": false
 }

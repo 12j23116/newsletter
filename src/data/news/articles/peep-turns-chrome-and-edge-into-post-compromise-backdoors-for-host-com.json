@@ -1,21 +1,21 @@
 {
-  "id": "ai-1787553319791-1",
+  "id": "ai-1788862547645-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Linkdaze’s smart calendar is built to run a household, no... | AI News",
-  "excerpt": "Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool.",
-  "date": "2026-08-24",
+  "title": "PEEP Turns Chrome and Edge Into Post-Compromise Backdoors... | AI News",
+  "excerpt": "Cybersecurity researchers have disclosed details of a complex Chromium-based post-exploitation toolkit called PEEP that masquerades as a bookmarks extension for the web browser.\n\n\"Requiring prior admi",
+  "date": "2026-09-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-",
-  "sourceLink": "https://techcrunch.com/2026/08/23/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
-  "sourceName": "Lauren Forristal",
+  "slug": "peep-turns-chrome-and-edge-into-post-compromise-backdoors-for-host-com",
+  "sourceLink": "https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool."
+      "text": "Cybersecurity researchers have disclosed details of a complex Chromium-based post-exploitation toolkit called PEEP that masquerades as a bookmarks extension for the web browser."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lauren Forristal, Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have disclosed details of a complex Chromium-based post-exploitation toolkit called PEEP that masquerades as a bookmarks extension for the web browser.\n\n\"Requiring prior administrative or code execution access, its installer injects the extension directly into Chrome/Edge profiles, bypassing Web Store checks and user prompts by forging Chromium's own Secure Preferences. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Linkdaze’s smart calendar is built to run a household, not just track a schedule — a notable development in AI",
+    "PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execu — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lauren Forristal",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-24",
-      "event": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
+      "date": "2026-09-08",
+      "event": "PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execu",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "linkdaze",
-    "smart",
+    "turns",
+    "chrome",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Linkdaze’s smart calendar is built to run a household, no... | AI News",
-  "metaDescription": "Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, linkdaze, smart, calendar, TechNanoAI, emerging tech news",
+  "metaTitle": "PEEP Turns Chrome and Edge Into Post-Compromise Backdoors... | AI News",
+  "metaDescription": "Cybersecurity researchers have disclosed details of a complex Chromium-based post-exploitation toolkit called PEEP that masquerades as a bookmarks extension ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, peep, turns, chrome, TechNanoAI, emerging tech news",
   "featured": false
 }
