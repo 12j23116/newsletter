@@ -1,11 +1,11 @@
 {
-  "id": "bci-1787639344828-0",
+  "id": "bci-1788949286146-2",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Brain circuit keeps tabs on what just happened to aid jud... | Brain-Computer Interfaces News",
   "excerpt": "To keep track of what’s going on in front of it, the brain relies not only on what it sees, but also a comparison with what it just saw. A new study pinpoints the circuit that provides that service.",
-  "date": "2026-08-25",
+  "date": "2026-09-09",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-25",
+      "date": "2026-09-09",
       "event": "Brain circuit keeps tabs on what just happened to aid judgment of what’s happeni",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Brain circuit keeps tabs on what just happened to aid jud... | Brain-Computer Interfaces News",
   "metaDescription": "To keep track of what’s going on in front of it, the brain relies not only on what it sees, but also a comparison with what it just saw. A new study pinpoint...",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, brain, circuit, keeps, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
