@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788004583182-3",
+  "id": "ai-1789296418243-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "An Anthropic researcher just gave us a peek at self-impro... | AI News",
-  "excerpt": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
-  "date": "2026-08-29",
+  "title": "Attackers Use Passkey Phishing to Hijack Microsoft Cloud ... | AI News",
+  "excerpt": "Microsoft has disclosed details of two campaigns in which threat actors are abusing third-party email delivery infrastructure to blast financial fraud scam messages and using passkey-themed social eng",
+  "date": "2026-09-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai",
-  "sourceLink": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
-  "sourceName": "Russell Brandom",
+  "slug": "attackers-use-passkey-phishing-to-hijack-microsoft-cloud-accounts-and-",
+  "sourceLink": "https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance."
+      "text": "Microsoft has disclosed details of two campaigns in which threat actors are abusing third-party email delivery infrastructure to blast financial fraud scam messages and using passkey-themed social engineering to breach cloud environments."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Russell Brandom, Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Microsoft has disclosed details of two campaigns in which threat actors are abusing third-party email delivery infrastructure to blast financial fraud scam messages and using passkey-themed social engineering to breach cloud environments.\n\nThe first campaign, per the tech giant, involved sending over a million scam emails between August 3 and 5, 2026, by masquerading as chief executive officers. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "An Anthropic researcher just gave us a peek at self-improving AI — a notable development in AI",
+    "Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Russell Brandom",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "An Anthropic researcher just gave us a peek at self-improving AI",
+      "date": "2026-09-13",
+      "event": "Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anthropic",
-    "researcher",
+    "attackers",
+    "passkey",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "An Anthropic researcher just gave us a peek at self-impro... | AI News",
-  "metaDescription": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall p...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, researcher, just, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Attackers Use Passkey Phishing to Hijack Microsoft Cloud ... | AI News",
+  "metaDescription": "Microsoft has disclosed details of two campaigns in which threat actors are abusing third-party email delivery infrastructure to blast financial fraud scam m...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, passkey, phishing, TechNanoAI, emerging tech news",
+  "featured": true
 }

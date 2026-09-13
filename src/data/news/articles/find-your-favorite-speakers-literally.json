@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788004600619-2",
+  "id": "quantum-1789296425888-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $89... | Quantum Computing News",
-  "excerpt": "Photonic quantum computing developer Xanadu (NASDAQ/TSX: XNDU) has signed a definitive agreement with the Government of Canada securing CAD $195 million ($140.2 million USD) in federal funding through",
-  "date": "2026-08-29",
+  "title": "Find Your Favorite Speakers (Literally) | Quantum Computing News",
+  "excerpt": "Quantum is way too interesting for anything written about it to be boring' and that includes lists of conference speakers. So, when I told The Quantum Dragon that there needs to be a way for people to",
+  "date": "2026-09-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "canada-commits-cad-195m-1402-m-usd-to-xanadu-for-893m-6422m-usd-8220in",
-  "sourceLink": "https://quantumcomputingreport.com/canada-commits-cad-195m-140-2-m-usd-to-xanadu-for-893m-642-2m-usd-inception-quantum-manufacturing-facility/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "find-your-favorite-speakers-literally",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/find-your-favorite-speakers-literally/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Photonic quantum computing developer Xanadu (NASDAQ/TSX: XNDU) has signed a definitive agreement with the Government of Canada securing CAD $195 million ($140. 2 million USD) in federal funding through the Strategic Response Fund, administered by Innovation, Science and Economic Development Canada (ISED)."
+      "text": "Quantum is way too interesting for anything written about it to be boring' and that includes lists of conference speakers.  So, when I told The Quantum Dragon that there needs to be a way for people to find their favorite speakers at Q+AI 2026 (3."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The federal commitment anchors a broader CAD $893 ($642. 2 million USD) million project—designated Project  [..."
-    },
-    {
-      "type": "p",
-      "text": "]\nThe post Canada Commits CAD $195M ($140. 2 M USD) to Xanadu for $893M ($642."
+      "text": "0): Uncovering the Coming Wave of Quantum + A..."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $893M ($642.2M USD) 'Incep — a notable development in Quantum Computing",
+    "Find Your Favorite Speakers (Literally) — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -124,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $893M ($642.2M USD) 'Incep",
+      "date": "2026-09-13",
+      "event": "Find Your Favorite Speakers (Literally)",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "canada",
-    "commits",
+    "favorite",
+    "speakers",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Canada Commits CAD $195M ($140.2 M USD) to Xanadu for $89... | Quantum Computing News",
-  "metaDescription": "Photonic quantum computing developer Xanadu (NASDAQ/TSX: XNDU) has signed a definitive agreement with the Government of Canada securing CAD $195 million ($14...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, canada, commits, xanadu, TechNanoAI, emerging tech news",
+  "metaTitle": "Find Your Favorite Speakers (Literally) | Quantum Computing News",
+  "metaDescription": "Quantum is way too interesting for anything written about it to be boring' and that includes lists of conference speakers. So, when I told The Quantum Dragon...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, find, your, favorite, TechNanoAI, emerging tech news",
   "featured": false
 }

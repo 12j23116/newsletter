@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788004600619-0",
+  "id": "quantum-1789296425887-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Tar... | Quantum Computing News",
-  "excerpt": "The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two major defense and national security quantum ",
-  "date": "2026-08-29",
-  "readTime": "4 min",
+  "title": "GÉANT and Quantum Internet Alliance Partner to Advance Eu... | Quantum Computing News",
+  "excerpt": "GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026. This collaboration leverages GÉANT's optical network and QIA",
+  "date": "2026-09-13",
+  "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "new-mexico-adds-darpa-qbi-stage-c-and-quantumeagle-to-targeted-federal",
-  "sourceLink": "https://quantumcomputingreport.com/new-mexico-adds-darpa-qbi-stage-c-and-quantumeagle-to-targeted-federal-match-grant-program/",
+  "slug": "gant-and-quantum-internet-alliance-partner-to-advance-european-quantum",
+  "sourceLink": "https://quantumcomputingreport.com/geant-and-quantum-internet-alliance-partner-to-advance-european-quantum-networking-architecture/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two major defense and national security quantum initiatives: DARPA’s Quantum Benchmarking Initiative (QBI) Stage C and the Army Research Office/NSA Laboratory for Physical Sciences QuantumEAGLe program.  The expansion offers matching state grants to quantum  [..."
+      "text": "GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026.  This collaboration leverages GÉANT's optical network and QIA's quantum networking expertise to develop infrastructure, standards, and interoperability protocols, aiming to transition quantum communication prototypes into operational cross-border trials and establish a sovereign European Quantum Internet."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two major defense and national security quantum initiatives: DARPA’s Quantum Benchmarking Initiative (QBI) Stage C and the Army Research Office/NSA Laboratory for Physical Sciences QuantumEAGLe program. The expansion offers matching state grants to quantum  [...]\nThe post New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Targeted Federal Matc. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mohamed Abdel-Kareem, GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026. This collaboration leverages GÉANT's optical network and QIA's quantum networking expertise to develop infrastructure, standards, and interoperability protocols, aiming to transition quantum communication prototypes into operational cross-border trials and establish a sovereign European Quantum Internet.\nThe post GÉANT and Quantum Internet Alliance Partner t. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Targeted Federal Match Gra — a notable development in Quantum Computing",
+    "GÉANT and Quantum Internet Alliance Partner to Advance European Quantum Networki — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Targeted Federal Match Gra",
+      "date": "2026-09-13",
+      "event": "GÉANT and Quantum Internet Alliance Partner to Advance European Quantum Networki",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "mexico",
-    "darpa",
+    "quantum",
+    "internet",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "New Mexico Adds DARPA QBI Stage C and QuantumEAGLe to Tar... | Quantum Computing News",
-  "metaDescription": "The Technology and Innovation Office (TIO) within Economic Development New Mexico has expanded its Targeted Federal Match grant solicitation to include two m...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, mexico, adds, darpa, TechNanoAI, emerging tech news",
+  "metaTitle": "GÉANT and Quantum Internet Alliance Partner to Advance Eu... | Quantum Computing News",
+  "metaDescription": "GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026. This collaboratio...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, internet, alliance, TechNanoAI, emerging tech news",
   "featured": true
 }

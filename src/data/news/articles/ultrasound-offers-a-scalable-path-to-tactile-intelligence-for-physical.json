@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788004599556-1",
+  "id": "robotics-1789296424851-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Deere faces headwinds in Q3 update and announces Reservoi... | Robotics News",
-  "excerpt": "Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative.\nThe post Deere faces headwinds in Q3 update and announces Reservoir R'D partnership app",
-  "date": "2026-08-29",
+  "title": "Ultrasound offers a scalable path to tactile intelligence... | Robotics News",
+  "excerpt": "Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense.\nThe post Ultrasound offers a scalable path to tactile intelligence for physical AI ap",
+  "date": "2026-09-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "deere-faces-headwinds-in-q3-update-and-announces-reservoir-r038d-partn",
-  "sourceLink": "https://www.therobotreport.com/deere-faces-headwinds-in-q3-update-and-announces-10m-reservoir-rd-partnership/",
-  "sourceName": "Mike Oitzman",
+  "slug": "ultrasound-offers-a-scalable-path-to-tactile-intelligence-for-physical",
+  "sourceLink": "https://www.therobotreport.com/ultrasound-offers-scalable-path-tactile-intelligence-physical-ai/",
+  "sourceName": "Mo Maghsoudnia and Hao-Yen Tang",
   "body": [
     {
       "type": "p",
-      "text": "Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative. \nThe post Deere faces headwinds in Q3 update and announces Reservoir R'D partnership appeared first on The Robot Report."
+      "text": "Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense. \nThe post Ultrasound offers a scalable path to tactile intelligence for physical AI appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mike Oitzman, Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative.\nThe post Deere faces headwinds in Q3 update and announces Reservoir R'D partnership appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mo Maghsoudnia and Hao-Yen Tang, Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense.\nThe post Ultrasound offers a scalable path to tactile intelligence for physical AI appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Deere faces headwinds in Q3 update and announces Reservoir R'D partnership — a notable development in Robotics",
+    "Ultrasound offers a scalable path to tactile intelligence for physical AI — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Mike Oitzman",
+      "value": "Mo Maghsoudnia and Hao-Yen Tang",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "Deere faces headwinds in Q3 update and announces Reservoir R'D partnership",
+      "date": "2026-09-13",
+      "event": "Ultrasound offers a scalable path to tactile intelligence for physical AI",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "deere",
-    "faces",
+    "ultrasound",
+    "offers",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Deere faces headwinds in Q3 update and announces Reservoi... | Robotics News",
-  "metaDescription": "Deere beats Q3 expectations, raises guidance, and partners with Reservoir on a $10 million agtech AI initiative.\nThe post Deere faces headwinds in Q3 update ...",
-  "keywords": "robotics, humanoid robot, automation, drones, deere, faces, headwinds, TechNanoAI, emerging tech news",
+  "metaTitle": "Ultrasound offers a scalable path to tactile intelligence... | Robotics News",
+  "metaDescription": "Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense.\nThe post Ultrasound offers a scalable path...",
+  "keywords": "robotics, humanoid robot, automation, drones, ultrasound, offers, scalable, TechNanoAI, emerging tech news",
   "featured": false
 }

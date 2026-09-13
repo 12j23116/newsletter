@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788004583182-2",
+  "id": "ai-1789296418245-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Neocloud Lambda secures $1B in debt to buy more chips | AI News",
-  "excerpt": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
-  "date": "2026-08-29",
-  "readTime": "3 min",
+  "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE... | AI News",
+  "excerpt": "The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers Spencer Kitts, Thomas Larsen, and Sydney Vo",
+  "date": "2026-09-13",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "neocloud-lambda-secures-1b-in-debt-to-buy-more-chips",
-  "sourceLink": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
-  "sourceName": "Rebecca Bellan",
+  "slug": "openai-agents-linked-to-rubygems-campaign-that-gained-rce-on-rubydoc-s",
+  "sourceLink": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft.  It's the latest in a string of loans, underscoring the high cost of the AI boom."
+      "text": "The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers Spencer Kitts, Thomas Larsen, and Sydney Von Arx. \n\nOn May 12, Maciej Mensfeld, senior product manager for software supply chain security at Mend."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Rebecca Bellan, Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers Spencer Kitts, Thomas Larsen, and Sydney Von Arx.\n\nOn May 12, Maciej Mensfeld, senior product manager for software supply chain security at Mend.io, disclosed details of a coordinated cyber attack that targeted the package manager for the. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Neocloud Lambda secures $1B in debt to buy more chips — a notable development in AI",
+    "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Rebecca Bellan",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "Neocloud Lambda secures $1B in debt to buy more chips",
+      "date": "2026-09-13",
+      "event": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "neocloud",
-    "lambda",
+    "openai",
+    "agents",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Neocloud Lambda secures $1B in debt to buy more chips | AI News",
-  "metaDescription": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the hig...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, neocloud, lambda, secures, TechNanoAI, emerging tech news",
+  "metaTitle": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE... | AI News",
+  "metaDescription": "The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, agents, linked, TechNanoAI, emerging tech news",
   "featured": false
 }

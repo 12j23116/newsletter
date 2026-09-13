@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788004583183-5",
+  "id": "ai-1789296418243-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Attackers Chain Two PaperCut Flaws to Execute Code Withou... | AI News",
-  "excerpt": "Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company released a fresh emergency fix with additional ha",
-  "date": "2026-08-29",
+  "title": "Anthropic CEO outlines plan to slow AI development | AI News",
+  "excerpt": "Anthropic's Dario Amodei and OpenAI's Sam Altman seem to agree that it's time to \"pace the frontier.\" What would that actually look like?",
+  "date": "2026-09-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "attackers-chain-two-papercut-flaws-to-execute-code-without-authenticat",
-  "sourceLink": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "anthropic-ceo-outlines-plan-to-slow-ai-development",
+  "sourceLink": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company released a fresh emergency fix with additional hardening."
+      "text": "Anthropic's Dario Amodei and OpenAI's Sam Altman seem to agree that it's time to \"pace the frontier. \" What would that actually look like?"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company released a fresh emergency fix with additional hardening.\n\n\"This vulnerability gives an unauthenticated attacker remote control over PaperCut's trusted configuration, which could be used to execute arbitrary Java code inside the application's. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Anthropic's Dario Amodei and OpenAI's Sam Altman seem to agree that it's time to \"pace the frontier.\" What would that actually look like?. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication — a notable development in AI",
+    "Anthropic CEO outlines plan to slow AI development — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
+      "date": "2026-09-13",
+      "event": "Anthropic CEO outlines plan to slow AI development",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "attackers",
-    "chain",
+    "anthropic",
+    "outlines",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Attackers Chain Two PaperCut Flaws to Execute Code Withou... | AI News",
-  "metaDescription": "Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company releas...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, chain, papercut, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic CEO outlines plan to slow AI development | AI News",
+  "metaDescription": "Anthropic's Dario Amodei and OpenAI's Sam Altman seem to agree that it's time to \"pace the frontier.\" What would that actually look like?",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, outlines, plan, TechNanoAI, emerging tech news",
   "featured": false
 }

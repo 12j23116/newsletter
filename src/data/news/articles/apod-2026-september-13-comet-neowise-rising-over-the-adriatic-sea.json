@@ -1,21 +1,21 @@
 {
-  "id": "space-1788004585132-1",
+  "id": "space-1789296419629-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA's Artemis II Crew Receives Congressional Space Medal... | Space Exploration News",
-  "excerpt": "From left to right: NASA astronauts Victor Glover and Christina Koch, CSA (Canadian Space Agency) astronaut Jeremy Hansen, and NASA astronaut Reid Wiseman receive the Congressional Space Medal of Hono",
-  "date": "2026-08-29",
+  "title": "APOD: 2026 September 13 – Comet NEOWISE Rising over the A... | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 September 13 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diff",
+  "date": "2026-09-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa8217s-artemis-ii-crew-receives-congressional-space-medal-of-honor",
-  "sourceLink": "https://www.nasa.gov/image-article/nasas-artemis-ii-crew-receives-congressional-space-medal-of-honor/",
-  "sourceName": "HQ Web Team",
+  "slug": "apod-2026-september-13-comet-neowise-rising-over-the-adriatic-sea",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-september-13-comet-neowise-rising-over-the-adriatic-sea/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "From left to right: NASA astronauts Victor Glover and Christina Koch, CSA (Canadian Space Agency) astronaut Jeremy Hansen, and NASA astronaut Reid Wiseman receive the Congressional Space Medal of Honor from President Donald J.  Trump on Aug."
+      "text": "APOD Science APOD APOD: 2026 September 13 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "28, 2026, for their service during the Artemis II mission."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 September 13 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. To view this [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA's Artemis II Crew Receives Congressional Space Medal of Honor — a notable development in Space Exploration",
+    "APOD: 2026 September 13 – Comet NEOWISE Rising over the Adriatic Sea — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "HQ Web Team",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "NASA's Artemis II Crew Receives Congressional Space Medal of Honor",
+      "date": "2026-09-13",
+      "event": "APOD: 2026 September 13 – Comet NEOWISE Rising over the Adriatic Sea",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "artemis",
-    "receives",
+    "september",
+    "comet",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA's Artemis II Crew Receives Congressional Space Medal... | Space Exploration News",
-  "metaDescription": "From left to right: NASA astronauts Victor Glover and Christina Koch, CSA (Canadian Space Agency) astronaut Jeremy Hansen, and NASA astronaut Reid Wiseman re...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, artemis, crew, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "APOD: 2026 September 13 – Comet NEOWISE Rising over the A... | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 September 13 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of t...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, september, comet, TechNanoAI, emerging tech news",
+  "featured": true
 }

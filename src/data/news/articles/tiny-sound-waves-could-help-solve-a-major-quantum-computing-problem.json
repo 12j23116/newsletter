@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788004600619-1",
+  "id": "quantum-1789296425887-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Governor Newsom Awards $9.74M to Scale Southern Californi... | Quantum Computing News",
-  "excerpt": "California Governor Gavin Newsom has announced a $48.5 million state investment under the California Jobs First Regional Investment Initiative (Round II Implementation Phase) to advance high-growth te",
-  "date": "2026-08-29",
+  "title": "Tiny sound waves could help solve a major quantum computi... | Quantum Computing News",
+  "excerpt": "Researchers at Harvard have demonstrated a way to protect quantum information using microscopic sound waves. By continuously surrounding a diamond-based qubit with mechanical vibrations, they extended",
+  "date": "2026-09-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "governor-newsom-awards-974m-to-scale-southern-california-quantum-ecosy",
-  "sourceLink": "https://quantumcomputingreport.com/governor-newsom-awards-9-74m-to-scale-southern-california-quantum-ecosystem/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "tiny-sound-waves-could-help-solve-a-major-quantum-computing-problem",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260911214245.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "California Governor Gavin Newsom has announced a $48. 5 million state investment under the California Jobs First Regional Investment Initiative (Round II Implementation Phase) to advance high-growth technology sectors and regional workforce infrastructure."
+      "text": "Researchers at Harvard have demonstrated a way to protect quantum information using microscopic sound waves.  By continuously surrounding a diamond-based qubit with mechanical vibrations, they extended its coherence time by roughly threefold."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Of the total funding allocation, $9,742,070 has been awarded specifically to Regional Cluster #7, focusing on the Quantum subsector to expand regional coordination,  [... ]\nThe post Governor Newsom Awards $9."
+      "text": "The same phonons could eventually both transmit and protect quantum information, opening the door to compact sound-based quantum networks on chips."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Governor Newsom Awards $9.74M to Scale Southern California Quantum Ecosystem — a notable development in Quantum Computing",
+    "Tiny sound waves could help solve a major quantum computing problem — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-29",
-      "event": "Governor Newsom Awards $9.74M to Scale Southern California Quantum Ecosystem",
+      "date": "2026-09-13",
+      "event": "Tiny sound waves could help solve a major quantum computing problem",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "governor",
-    "newsom",
+    "sound",
+    "waves",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Governor Newsom Awards $9.74M to Scale Southern Californi... | Quantum Computing News",
-  "metaDescription": "California Governor Gavin Newsom has announced a $48.5 million state investment under the California Jobs First Regional Investment Initiative (Round II Impl...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, governor, newsom, awards, TechNanoAI, emerging tech news",
+  "metaTitle": "Tiny sound waves could help solve a major quantum computi... | Quantum Computing News",
+  "metaDescription": "Researchers at Harvard have demonstrated a way to protect quantum information using microscopic sound waves. By continuously surrounding a diamond-based qubi...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, tiny, sound, waves, TechNanoAI, emerging tech news",
   "featured": false
 }
