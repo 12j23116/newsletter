@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788087235232-2",
+  "id": "quantum-1789384358832-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "iAccess Partners and QAI Ventures Partner to Lower Entry ... | Quantum Computing News",
-  "excerpt": "Swiss fintech firm iAccess Partners and Basel-headquartered venture capital firm QAI Ventures have established a strategic partnership designed to broaden access to early-stage quantum technology and ",
-  "date": "2026-08-30",
+  "title": "Physicists can’t agree on how the Universe works | Quantum Computing News",
+  "excerpt": "A massive worldwide survey of physicists has revealed surprisingly little agreement about some of the universe’s biggest mysteries. No majority backed the standard cosmological model, a leading explan",
+  "date": "2026-09-14",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "iaccess-partners-and-qai-ventures-partner-to-lower-entry-threshold-for",
-  "sourceLink": "https://quantumcomputingreport.com/iaccess-partners-and-qai-ventures-partner-to-lower-entry-threshold-for-early-stage-quantum-vc-fund/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "physicists-cant-agree-on-how-the-universe-works",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260912220041.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Swiss fintech firm iAccess Partners and Basel-headquartered venture capital firm QAI Ventures have established a strategic partnership designed to broaden access to early-stage quantum technology and advanced computing investments.  By leveraging bankable International Securities Identification Numbers (ISINs), the partnership lowers the minimum investment threshold for qualified and professional investors down to USD $25,000."
+      "text": "A massive worldwide survey of physicists has revealed surprisingly little agreement about some of the universe’s biggest mysteries.  No majority backed the standard cosmological model, a leading explanation for dark matter, or any single theory of quantum gravity."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "[ QAI  [..."
+      "text": "One area of stronger agreement stood out: 68% said the Big Bang does not necessarily represent the beginning of time.  Researchers say the divisions show just how alive and unsettled the frontiers of physics remain."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "iAccess Partners and QAI Ventures Partner to Lower Entry Threshold for Early-Sta — a notable development in Quantum Computing",
+    "Physicists can’t agree on how the Universe works — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "iAccess Partners and QAI Ventures Partner to Lower Entry Threshold for Early-Sta",
+      "date": "2026-09-14",
+      "event": "Physicists can’t agree on how the Universe works",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "iaccess",
-    "partners",
+    "physicists",
+    "agree",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "iAccess Partners and QAI Ventures Partner to Lower Entry ... | Quantum Computing News",
-  "metaDescription": "Swiss fintech firm iAccess Partners and Basel-headquartered venture capital firm QAI Ventures have established a strategic partnership designed to broaden ac...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, iaccess, partners, ventures, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Physicists can’t agree on how the Universe works | Quantum Computing News",
+  "metaDescription": "A massive worldwide survey of physicists has revealed surprisingly little agreement about some of the universe’s biggest mysteries. No majority backed the st...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, physicists, agree, universe, TechNanoAI, emerging tech news",
+  "featured": true
 }

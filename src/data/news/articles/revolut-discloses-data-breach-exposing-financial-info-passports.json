@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1788087228695-3",
+  "id": "cybersecurity-1789384349003-4",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Brave browser adds email aliases to help users evade trac... | Cybersecurity News",
-  "excerpt": "The latest version of the Brave browser, 1.94, introduces a feature called 'Email Aliases' that allows users to generate disposable email addresses when signing up to a new service. [...]",
-  "date": "2026-08-30",
+  "title": "Revolut discloses data breach exposing financial info, pa... | Cybersecurity News",
+  "excerpt": "Fintech company Revolut has disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government agency. [...]",
+  "date": "2026-09-14",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "brave-browser-adds-email-aliases-to-help-users-evade-tracking",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/brave-browser-adds-email-aliases-to-help-users-evade-tracking/",
-  "sourceName": "Bill Toulas",
+  "slug": "revolut-discloses-data-breach-exposing-financial-info-passports",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/revolut-discloses-data-breach-exposing-financial-info-passports/",
+  "sourceName": "Sergiu Gatlan",
   "body": [
     {
       "type": "p",
-      "text": "The latest version of the Brave browser, 1. 94, introduces a feature called 'Email Aliases' that allows users to generate disposable email addresses when signing up to a new service."
+      "text": "Fintech company Revolut has disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government agency.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "[..."
+      "text": "According to reporting from Sergiu Gatlan, Fintech company Revolut has disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government agency. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Brave browser adds email aliases to help users evade tracking — a notable development in Cybersecurity",
+    "Revolut discloses data breach exposing financial info, passports — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "Sergiu Gatlan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "Brave browser adds email aliases to help users evade tracking",
+      "date": "2026-09-14",
+      "event": "Revolut discloses data breach exposing financial info, passports",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "brave",
-    "browser",
+    "revolut",
+    "discloses",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Brave browser adds email aliases to help users evade trac... | Cybersecurity News",
-  "metaDescription": "The latest version of the Brave browser, 1.94, introduces a feature called 'Email Aliases' that allows users to generate disposable email addresses when sign...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, brave, browser, adds, TechNanoAI, emerging tech news",
+  "metaTitle": "Revolut discloses data breach exposing financial info, pa... | Cybersecurity News",
+  "metaDescription": "Fintech company Revolut has disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, revolut, discloses, data, TechNanoAI, emerging tech news",
   "featured": false
 }

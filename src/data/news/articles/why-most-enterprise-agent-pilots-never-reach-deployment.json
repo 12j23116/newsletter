@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788087228186-1",
+  "id": "ai-1789384347458-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Sony Music, Warner sue Anthropic, alleging a 'brazen camp... | AI News",
-  "excerpt": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.",
-  "date": "2026-08-30",
+  "title": "Why Most Enterprise Agent Pilots Never Reach Deployment | AI News",
+  "excerpt": "Deloitte's 2026 technology trends research puts the pilot-to-production failure rate for AI agents at 89%. A Teradata survey adds the shape of that gap: 78% of enterprises have at least one agent pilo",
+  "date": "2026-09-14",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "sony-music-warner-sue-anthropic-alleging-a-8220brazen-campaign8221-of-",
-  "sourceLink": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
-  "sourceName": "Kirsten Korosec",
+  "slug": "why-most-enterprise-agent-pilots-never-reach-deployment",
+  "sourceLink": "https://www.artificialintelligence-news.com/news/why-most-enterprise-agent-pilots-never-reach-deployment/",
+  "sourceName": "SEO DIGITAL PROS",
   "body": [
     {
       "type": "p",
-      "text": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy."
+      "text": "Deloitte's 2026 technology trends research puts the pilot-to-production failure rate for AI agents at 89%.  A Teradata survey adds the shape of that gap: 78% of enterprises have at least one agent pilot running, but only 14% have scaled one to organisation-wide use."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kirsten Korosec, This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "Adoption is nearly universal; deployment is rare.  The difference is not model [']\nThe post Why Most Enterprise Agent Pilots Never Reach Deployment appeared first on AI News."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Sony Music, Warner sue Anthropic, alleging a 'brazen campaign' of intellectual p — a notable development in AI",
+    "Why Most Enterprise Agent Pilots Never Reach Deployment — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Kirsten Korosec",
+      "value": "SEO DIGITAL PROS",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "Sony Music, Warner sue Anthropic, alleging a 'brazen campaign' of intellectual p",
+      "date": "2026-09-14",
+      "event": "Why Most Enterprise Agent Pilots Never Reach Deployment",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "music",
-    "warner",
+    "enterprise",
+    "agent",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Sony Music, Warner sue Anthropic, alleging a 'brazen camp... | AI News",
-  "metaDescription": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy. LLMs, agents & the race to AGI. Latest AI developments and analysis fro",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, sony, music, warner, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Why Most Enterprise Agent Pilots Never Reach Deployment | AI News",
+  "metaDescription": "Deloitte's 2026 technology trends research puts the pilot-to-production failure rate for AI agents at 89%. A Teradata survey adds the shape of that gap: 78% ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, most, enterprise, agent, TechNanoAI, emerging tech news",
+  "featured": true
 }

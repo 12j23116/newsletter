@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788087234290-0",
+  "id": "robotics-1789384357500-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "The differences between decentralized and centralized pow... | Robotics News",
-  "excerpt": "A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both.\nThe post The differences between decentralized and centralized po",
-  "date": "2026-08-30",
+  "title": "Scientists are building a microscope powered by a quantum... | Robotics News",
+  "excerpt": "Scientists are combining an electron microscope with a quantum computer to squeeze far more information from each electron. The approach could reveal faint details with fewer electrons, helping protec",
+  "date": "2026-09-14",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "the-differences-between-decentralized-and-centralized-power-in-swarm-r",
-  "sourceLink": "https://www.therobotreport.com/differences-between-decentralized-centralized-power-swarm-robotics/",
-  "sourceName": "Lou Farrell",
+  "slug": "scientists-are-building-a-microscope-powered-by-a-quantum-computer",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260912220038.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both. \nThe post The differences between decentralized and centralized power in swarm robotics appeared first on The Robot Report."
+      "text": "Scientists are combining an electron microscope with a quantum computer to squeeze far more information from each electron.  The approach could reveal faint details with fewer electrons, helping protect fragile samples that conventional microscopy can damage."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lou Farrell, A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both.\nThe post The differences between decentralized and centralized power in swarm robotics appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, Scientists are combining an electron microscope with a quantum computer to squeeze far more information from each electron. The approach could reveal faint details with fewer electrons, helping protect fragile samples that conventional microscopy can damage.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The differences between decentralized and centralized power in swarm robotics — a notable development in Robotics",
+    "Scientists are building a microscope powered by a quantum computer — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Lou Farrell",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "The differences between decentralized and centralized power in swarm robotics",
+      "date": "2026-09-14",
+      "event": "Scientists are building a microscope powered by a quantum computer",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "differences",
-    "between",
+    "scientists",
+    "building",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The differences between decentralized and centralized pow... | Robotics News",
-  "metaDescription": "A robotic swarm typically relies on centralized or decentralized power management, but a hybrid approach could offer the best of both.\nThe post The differenc...",
-  "keywords": "robotics, humanoid robot, automation, drones, differences, between, decentralized, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Scientists are building a microscope powered by a quantum... | Robotics News",
+  "metaDescription": "Scientists are combining an electron microscope with a quantum computer to squeeze far more information from each electron. The approach could reveal faint d...",
+  "keywords": "robotics, humanoid robot, automation, drones, scientists, building, microscope, TechNanoAI, emerging tech news",
+  "featured": false
 }

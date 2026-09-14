@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788087228186-2",
+  "id": "ai-1789384347461-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "'We're not doing 30 bets a year': Vijay Pande on betting ... | AI News",
-  "excerpt": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"en",
-  "date": "2026-08-30",
-  "readTime": "4 min",
+  "title": "What's behind the AI industry’s latest warnings of doom? | AI News",
+  "excerpt": "On Equity, we discussed the AI industry's latest debate about whether it poses an existential threat to humanity.",
+  "date": "2026-09-14",
+  "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "8220we8217re-not-doing-30-bets-a-year8221-vijay-pande-on-betting-small",
-  "sourceLink": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
-  "sourceName": "Connie Loizos",
+  "slug": "what8217s-behind-the-ai-industrys-latest-warnings-of-doom",
+  "sourceLink": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-off ones) are what will actually let AI transform medicine."
+      "text": "On Equity, we discussed the AI industry's latest debate about whether it poses an existential threat to humanity."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Connie Loizos, Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-off ones) are what will actually let AI transform medicine.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, On Equity, we discussed the AI industry's latest debate about whether it poses an existential threat to humanity.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "'We're not doing 30 bets a year': Vijay Pande on betting small after running $4  — a notable development in AI",
+    "What's behind the AI industry’s latest warnings of doom? — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Connie Loizos",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "'We're not doing 30 bets a year': Vijay Pande on betting small after running $4 ",
+      "date": "2026-09-14",
+      "event": "What's behind the AI industry’s latest warnings of doom?",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "doing",
-    "vijay",
+    "behind",
+    "industry",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "'We're not doing 30 bets a year': Vijay Pande on betting ... | AI News",
-  "metaDescription": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally sh...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, doing, bets, year, TechNanoAI, emerging tech news",
+  "metaTitle": "What's behind the AI industry’s latest warnings of doom? | AI News",
+  "metaDescription": "On Equity, we discussed the AI industry's latest debate about whether it poses an existential threat to humanity. LLMs, agents & the race to AGI. Latest AI deve",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, what, behind, industry, TechNanoAI, emerging tech news",
   "featured": false
 }

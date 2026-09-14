@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788087228187-4",
+  "id": "ai-1789384347459-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Nvidia’s AI advantage is moving beyond the GPU | AI News",
-  "excerpt": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
-  "date": "2026-08-30",
+  "title": "From Video to Data: How AI Is Transforming Multimedia Con... | AI News",
+  "excerpt": "A video looks simple when you press play. There is a picture, some dialogue, perhaps music in the background, and a few minutes later it is over. However, with the right use of AI, things can become a",
+  "date": "2026-09-14",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "nvidias-ai-advantage-is-moving-beyond-the-gpu",
-  "sourceLink": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
-  "sourceName": "Russell Brandom",
+  "slug": "from-video-to-data-how-ai-is-transforming-multimedia-content-processin",
+  "sourceLink": "https://www.artificialintelligence-news.com/news/from-video-to-data-how-ai-is-transforming-multimedia-content-processing/",
+  "sourceName": "SEO DIGITAL PROS",
   "body": [
     {
       "type": "p",
-      "text": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles."
+      "text": "A video looks simple when you press play.  There is a picture, some dialogue, perhaps music in the background, and a few minutes later it is over."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Russell Brandom, The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "However, with the right use of AI, things can become a lot more interesting.  To an artificial intelligence system, that same video can become speech to transcribe, faces [']\nThe post From Video to Data: How AI Is Transforming Multimedia Content Processing appeared first on AI News."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Nvidia’s AI advantage is moving beyond the GPU — a notable development in AI",
+    "From Video to Data: How AI Is Transforming Multimedia Content Processing — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Russell Brandom",
+      "value": "SEO DIGITAL PROS",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "Nvidia’s AI advantage is moving beyond the GPU",
+      "date": "2026-09-14",
+      "event": "From Video to Data: How AI Is Transforming Multimedia Content Processing",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "nvidia",
-    "advantage",
+    "video",
+    "transforming",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Nvidia’s AI advantage is moving beyond the GPU | AI News",
-  "metaDescription": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, nvidia, advantage, moving, TechNanoAI, emerging tech news",
+  "metaTitle": "From Video to Data: How AI Is Transforming Multimedia Con... | AI News",
+  "metaDescription": "A video looks simple when you press play. There is a picture, some dialogue, perhaps music in the background, and a few minutes later it is over. However, wi...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, from, video, data, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788087228186-3",
+  "id": "ai-1789384347462-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Five Critical WordPress Plugin and Theme Flaws Enable Sit... | AI News",
-  "excerpt": "Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, that could lead to authentication bypass, a",
-  "date": "2026-08-30",
+  "title": "Obama urges Democrats to have a ‘clear plan’ for AI safeg... | AI News",
+  "excerpt": "Obama recently said that Democrats need to make artificial intelligence one of their “central agendas” and “have a very clear plan” to address concerns around the technology’s economic impact and safe",
+  "date": "2026-09-14",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "five-critical-wordpress-plugin-and-theme-flaws-enable-site-takeover-or",
-  "sourceLink": "https://thehackernews.com/2026/08/five-critical-wordpress-plugin-and.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards",
+  "sourceLink": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, that could lead to authentication bypass, account takeover, and arbitrary code execution. \n\nThe vulnerabilities, according to Wordfence and Patchstack, are listed below -\n\n\n  CVE-2026-76581 (CVSS score: 9."
+      "text": "Obama recently said that Democrats need to make artificial intelligence one of their “central agendas” and “have a very clear plan” to address concerns around the technology’s economic impact and safety."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, that could lead to authentication bypass, account takeover, and arbitrary code execution.\n\nThe vulnerabilities, according to Wordfence and Patchstack, are listed below -\n\n\n  CVE-2026-76581 (CVSS score: 9.8) - An authentication bypass flaw in. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Obama recently said that Democrats need to make artificial intelligence one of their “central agendas” and “have a very clear plan” to address concerns around the technology’s economic impact and safety.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Five Critical WordPress Plugin and Theme Flaws Enable Site Takeover or RCE — a notable development in AI",
+    "Obama urges Democrats to have a ‘clear plan’ for AI safeguards — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "Five Critical WordPress Plugin and Theme Flaws Enable Site Takeover or RCE",
+      "date": "2026-09-14",
+      "event": "Obama urges Democrats to have a ‘clear plan’ for AI safeguards",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "critical",
-    "wordpress",
+    "obama",
+    "urges",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Five Critical WordPress Plugin and Theme Flaws Enable Sit... | AI News",
-  "metaDescription": "Multiple critical security flaws have been disclosed in WordPress plugins and themes, including WPMU DEV Dashboard, Avada, TranslatePress, Pods, and GiveWP, ...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, five, critical, wordpress, TechNanoAI, emerging tech news",
+  "metaTitle": "Obama urges Democrats to have a ‘clear plan’ for AI safeg... | AI News",
+  "metaDescription": "Obama recently said that Democrats need to make artificial intelligence one of their “central agendas” and “have a very clear plan” to address concerns aroun...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, obama, urges, democrats, TechNanoAI, emerging tech news",
   "featured": false
 }

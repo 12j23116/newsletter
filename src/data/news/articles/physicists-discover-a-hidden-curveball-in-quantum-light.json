@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788087235232-1",
+  "id": "quantum-1789384358832-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserv... | Quantum Computing News",
-  "excerpt": "IBM Quantum has officially launched Qiskit Fermions (v0.1.0), an open-source software library and transpiler extension designed to express fermionic operators, construct domain-specific fermionic circ",
-  "date": "2026-08-30",
+  "title": "Physicists discover a hidden “curveball” in quantum light | Quantum Computing News",
+  "excerpt": "Researchers have experimentally demonstrated the optical Magnus effect for the first time, revealing that a tightly focused laser interacts most strongly with an atom slightly away from the beam’s cen",
+  "date": "2026-09-14",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "ibm-releases-open-source-qiskit-fermions-010-to-preserve-system-struct",
-  "sourceLink": "https://quantumcomputingreport.com/ibm-releases-open-source-qiskit-fermions-0-1-0-to-preserve-system-structure-during-transpilation/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "physicists-discover-a-hidden-curveball-in-quantum-light",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260912220025.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "IBM Quantum has officially launched Qiskit Fermions (v0. 1."
+      "text": "Researchers have experimentally demonstrated the optical Magnus effect for the first time, revealing that a tightly focused laser interacts most strongly with an atom slightly away from the beam’s center.  The unexpected shift is similar to the physics that makes a spinning table tennis ball curve through the air."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "0), an open-source software library and transpiler extension designed to express fermionic operators, construct domain-specific fermionic circuits, and optimize mappings to qubit architectures.  Built on a high-performance Rust core with Python and C bindings, the package addresses the compilation gap between interacting particle physics—such as quantum chemistry and  [..."
-    },
-    {
-      "type": "p",
-      "text": "]\nThe post IBM Releases Open-Source Qiskit Fermions 0. 1."
+      "text": "Because lasers are used to control qubits, the effect could create errors in quantum computers, but it might also provide a new way to couple qubits together."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserve System Structure Duri — a notable development in Quantum Computing",
+    "Physicists discover a hidden “curveball” in quantum light — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -124,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-08-30",
-      "event": "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserve System Structure Duri",
+      "date": "2026-09-14",
+      "event": "Physicists discover a hidden “curveball” in quantum light",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "releases",
-    "source",
+    "physicists",
+    "discover",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IBM Releases Open-Source Qiskit Fermions 0.1.0 to Preserv... | Quantum Computing News",
-  "metaDescription": "IBM Quantum has officially launched Qiskit Fermions (v0.1.0), an open-source software library and transpiler extension designed to express fermionic operator...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, releases, open, source, TechNanoAI, emerging tech news",
+  "metaTitle": "Physicists discover a hidden “curveball” in quantum light | Quantum Computing News",
+  "metaDescription": "Researchers have experimentally demonstrated the optical Magnus effect for the first time, revealing that a tightly focused laser interacts most strongly wit...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, physicists, discover, hidden, TechNanoAI, emerging tech news",
   "featured": false
 }
