@@ -1,11 +1,11 @@
 {
-  "id": "bci-1788343759983-1",
+  "id": "bci-1789641473382-3",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Atlas of the brain’s striatum could guide researchers to ... | Brain-Computer Interfaces News",
   "excerpt": "A new study reveals insights into populations of neurons affected by Huntington’s disease, schizophrenia, addiction, and other disorders.",
-  "date": "2026-09-02",
+  "date": "2026-09-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-02",
+      "date": "2026-09-17",
       "event": "Atlas of the brain’s striatum could guide researchers to new drug treatments",
       "current": true
     },

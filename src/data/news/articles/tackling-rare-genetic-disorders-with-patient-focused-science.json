@@ -1,11 +1,11 @@
 {
-  "id": "bci-1788343759983-3",
+  "id": "bci-1789641473382-5",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Tackling rare genetic disorders with patient-focused science | Brain-Computer Interfaces News",
   "excerpt": "Shannon Knight, a brain and cognitive sciences PhD candidate and McGovern Institute researcher, focuses on developing a novel gene therapy.",
-  "date": "2026-09-02",
+  "date": "2026-09-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-02",
+      "date": "2026-09-17",
       "event": "Tackling rare genetic disorders with patient-focused science",
       "current": true
     },

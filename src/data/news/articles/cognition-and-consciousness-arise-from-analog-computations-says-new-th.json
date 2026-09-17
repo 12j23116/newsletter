@@ -1,11 +1,11 @@
 {
-  "id": "bci-1788343759983-0",
+  "id": "bci-1789641473381-2",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Cognition and consciousness arise from analog computation... | Brain-Computer Interfaces News",
   "excerpt": "The brain's ability to generate quick, nimble volitional thought — and a unified awareness of thought and experience — arises from analog computations, MIT neuroscientists argue in a new review.",
-  "date": "2026-09-02",
+  "date": "2026-09-17",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-02",
+      "date": "2026-09-17",
       "event": "Cognition and consciousness arise from analog computations, says new theory",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Cognition and consciousness arise from analog computation... | Brain-Computer Interfaces News",
   "metaDescription": "The brain's ability to generate quick, nimble volitional thought — and a unified awareness of thought and experience — arises from analog computations, MIT n...",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, cognition, consciousness, arise, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
