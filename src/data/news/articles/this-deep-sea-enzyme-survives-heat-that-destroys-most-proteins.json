@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788601068510-0",
+  "id": "robotics-1789899371262-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "How FPGAs become the gatekeepers of physical AI security | Robotics News",
-  "excerpt": "Eric Sivertson, vice president of security business at Lattice Semiconductor, explains how FPGAs can act as deterministic guardrails for robotic systems.\nThe post How FPGAs become the gatekeepers of p",
-  "date": "2026-09-05",
+  "title": "This deep-sea enzyme survives heat that destroys most pro... | Robotics News",
+  "excerpt": "A deep-sea microbe uses an exceptionally heat-resistant enzyme to turn atmospheric nitrogen into ammonia at temperatures that would destroy most proteins. Its unusual structure and a newly observed re",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "how-fpgas-become-the-gatekeepers-of-physical-ai-security",
-  "sourceLink": "https://www.therobotreport.com/how-fpgas-become-the-gatekeepers-of-physical-ai-security/",
-  "sourceName": "Mike Oitzman",
+  "slug": "this-deep-sea-enzyme-survives-heat-that-destroys-most-proteins",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260918024810.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Eric Sivertson, vice president of security business at Lattice Semiconductor, explains how FPGAs can act as deterministic guardrails for robotic systems. \nThe post How FPGAs become the gatekeepers of physical AI security appeared first on The Robot Report."
+      "text": "A deep-sea microbe uses an exceptionally heat-resistant enzyme to turn atmospheric nitrogen into ammonia at temperatures that would destroy most proteins.  Its unusual structure and a newly observed reaction state may reveal an ancient, shared mechanism behind nitrogen fixation and could eventually inspire cleaner biotechnology and fertilizer production."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mike Oitzman, Eric Sivertson, vice president of security business at Lattice Semiconductor, explains how FPGAs can act as deterministic guardrails for robotic systems.\nThe post How FPGAs become the gatekeepers of physical AI security appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, A deep-sea microbe uses an exceptionally heat-resistant enzyme to turn atmospheric nitrogen into ammonia at temperatures that would destroy most proteins. Its unusual structure and a newly observed reaction state may reveal an ancient, shared mechanism behind nitrogen fixation and could eventually inspire cleaner biotechnology and fertilizer production.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "How FPGAs become the gatekeepers of physical AI security — a notable development in Robotics",
+    "This deep-sea enzyme survives heat that destroys most proteins — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Mike Oitzman",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "How FPGAs become the gatekeepers of physical AI security",
+      "date": "2026-09-20",
+      "event": "This deep-sea enzyme survives heat that destroys most proteins",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "fpgas",
-    "become",
+    "enzyme",
+    "survives",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "How FPGAs become the gatekeepers of physical AI security | Robotics News",
-  "metaDescription": "Eric Sivertson, vice president of security business at Lattice Semiconductor, explains how FPGAs can act as deterministic guardrails for robotic systems.\nThe...",
-  "keywords": "robotics, humanoid robot, automation, drones, fpgas, become, gatekeepers, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "This deep-sea enzyme survives heat that destroys most pro... | Robotics News",
+  "metaDescription": "A deep-sea microbe uses an exceptionally heat-resistant enzyme to turn atmospheric nitrogen into ammonia at temperatures that would destroy most proteins. It...",
+  "keywords": "robotics, humanoid robot, automation, drones, this, deep, enzyme, TechNanoAI, emerging tech news",
+  "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1788601063093-4",
+  "id": "cybersecurity-1789899365494-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "HPE Patches Critical RCE Vulnerabilities in AOS-CX | Cybersecurity News",
-  "excerpt": "Nearly two dozen issues, tracked collectively as CVE-2026-73749 (CVSS score of 9.8), were addressed with the updates.\nThe post HPE Patches Critical RCE Vulnerabilities in AOS-CX appeared first on Secu",
-  "date": "2026-09-05",
+  "title": "BragJack attacks hijack AI browser agents through malicio... | Cybersecurity News",
+  "excerpt": "BragJack, a proof-of-concept attack from Forever Security's Gal Weizman, hijacks the AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude in Chrome using one malicious extension. Th",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "hpe-patches-critical-rce-vulnerabilities-in-aos-cx",
-  "sourceLink": "https://www.securityweek.com/hpe-patches-critical-rce-vulnerabilities-in-aos-cx/",
-  "sourceName": "Ionut Arghire",
+  "slug": "bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/",
+  "sourceName": "Ax Sharma",
   "body": [
     {
       "type": "p",
-      "text": "Nearly two dozen issues, tracked collectively as CVE-2026-73749 (CVSS score of 9. 8), were addressed with the updates."
+      "text": "BragJack, a proof-of-concept attack from Forever Security's Gal Weizman, hijacks the AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude in Chrome using one malicious extension.  The Prompt Forcing technique earned over $20,000 in bounties and two CVEs."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post HPE Patches Critical RCE Vulnerabilities in AOS-CX appeared first on SecurityWeek."
+      "text": "[..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "HPE Patches Critical RCE Vulnerabilities in AOS-CX — a notable development in Cybersecurity",
+    "BragJack attacks hijack AI browser agents through malicious extensions — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Ax Sharma",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "HPE Patches Critical RCE Vulnerabilities in AOS-CX",
+      "date": "2026-09-20",
+      "event": "BragJack attacks hijack AI browser agents through malicious extensions",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "patches",
-    "critical",
+    "bragjack",
+    "attacks",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "HPE Patches Critical RCE Vulnerabilities in AOS-CX | Cybersecurity News",
-  "metaDescription": "Nearly two dozen issues, tracked collectively as CVE-2026-73749 (CVSS score of 9.8), were addressed with the updates.\nThe post HPE Patches Critical RCE Vulne...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, patches, critical, vulnerabilities, TechNanoAI, emerging tech news",
+  "metaTitle": "BragJack attacks hijack AI browser agents through malicio... | Cybersecurity News",
+  "metaDescription": "BragJack, a proof-of-concept attack from Forever Security's Gal Weizman, hijacks the AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude ...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, bragjack, attacks, hijack, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1788601063094-5",
+  "id": "cybersecurity-1789899365495-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "OpenAI Pledges $1 Billion to Bring Frontier AI to Critica... | Cybersecurity News",
-  "excerpt": "The Daybreak initiative will provide subsidized AI cyber capabilities, training and technical assistance, though OpenAI has disclosed few details about costs and eligibility.\nThe post OpenAI Pledges $",
-  "date": "2026-09-05",
+  "title": "TigerByte Cyber Emerges From Stealth With $3 Million in F... | Cybersecurity News",
+  "excerpt": "The company has secured over $7 million in contracts with US government agencies, including the US Space Force, the US Navy, and DARPA.\nThe post TigerByte Cyber Emerges From Stealth With $3 Million in",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "openai-pledges-1-billion-to-bring-frontier-ai-to-critical-infrastructu",
-  "sourceLink": "https://www.securityweek.com/openai-pledges-1-billion-to-bring-frontier-ai-to-critical-infrastructure-defenders/",
-  "sourceName": "Kevin Townsend",
+  "slug": "tigerbyte-cyber-emerges-from-stealth-with-3-million-in-funding",
+  "sourceLink": "https://www.securityweek.com/tigerbyte-cyber-emerges-from-stealth-with-3-million-in-funding/",
+  "sourceName": "Ionut Arghire",
   "body": [
     {
       "type": "p",
-      "text": "The Daybreak initiative will provide subsidized AI cyber capabilities, training and technical assistance, though OpenAI has disclosed few details about costs and eligibility. \nThe post OpenAI Pledges $1 Billion to Bring Frontier AI to Critical Infrastructure Defenders appeared first on SecurityWeek."
+      "text": "The company has secured over $7 million in contracts with US government agencies, including the US Space Force, the US Navy, and DARPA. \nThe post TigerByte Cyber Emerges From Stealth With $3 Million in Funding appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kevin Townsend, The Daybreak initiative will provide subsidized AI cyber capabilities, training and technical assistance, though OpenAI has disclosed few details about costs and eligibility.\nThe post OpenAI Pledges $1 Billion to Bring Frontier AI to Critical Infrastructure Defenders appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ionut Arghire, The company has secured over $7 million in contracts with US government agencies, including the US Space Force, the US Navy, and DARPA.\nThe post TigerByte Cyber Emerges From Stealth With $3 Million in Funding appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI Pledges $1 Billion to Bring Frontier AI to Critical Infrastructure Defend — a notable development in Cybersecurity",
+    "TigerByte Cyber Emerges From Stealth With $3 Million in Funding — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Kevin Townsend",
+      "value": "Ionut Arghire",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "OpenAI Pledges $1 Billion to Bring Frontier AI to Critical Infrastructure Defend",
+      "date": "2026-09-20",
+      "event": "TigerByte Cyber Emerges From Stealth With $3 Million in Funding",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "openai",
-    "pledges",
+    "tigerbyte",
+    "cyber",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI Pledges $1 Billion to Bring Frontier AI to Critica... | Cybersecurity News",
-  "metaDescription": "The Daybreak initiative will provide subsidized AI cyber capabilities, training and technical assistance, though OpenAI has disclosed few details about costs...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, openai, pledges, billion, TechNanoAI, emerging tech news",
+  "metaTitle": "TigerByte Cyber Emerges From Stealth With $3 Million in F... | Cybersecurity News",
+  "metaDescription": "The company has secured over $7 million in contracts with US government agencies, including the US Space Force, the US Navy, and DARPA.\nThe post TigerByte Cy...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, tigerbyte, cyber, emerges, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788601062568-2",
+  "id": "ai-1789899364864-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "XDOF, just three months out of stealth, is in talks for a... | AI News",
-  "excerpt": "The round is being raised just months after the robot data startup exited from stealth.",
-  "date": "2026-09-05",
+  "title": "Google’s Gemini is the latest AI model to hack other comp... | AI News",
+  "excerpt": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-",
-  "sourceLink": "https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/",
-  "sourceName": "Marina Temkin",
+  "slug": "googles-gemini-is-the-latest-ai-model-to-hack-other-companies",
+  "sourceLink": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "The round is being raised just months after the robot data startup exited from stealth."
+      "text": "Google said Gemini had \"acted appropriately\" by ending each hack immediately."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Marina Temkin, The round is being raised just months after the robot data startup exited from stealth.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Google said Gemini had \"acted appropriately\" by ending each hack immediately.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B va — a notable development in AI",
+    "Google’s Gemini is the latest AI model to hack other companies — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Marina Temkin",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B va",
+      "date": "2026-09-20",
+      "event": "Google’s Gemini is the latest AI model to hack other companies",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "three",
-    "months",
+    "google",
+    "gemini",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "XDOF, just three months out of stealth, is in talks for a... | AI News",
-  "metaDescription": "The round is being raised just months after the robot data startup exited from stealth. LLMs, agents & the race to AGI. Latest AI developments and analysis from",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, xdof, just, three, TechNanoAI, emerging tech news",
+  "metaTitle": "Google’s Gemini is the latest AI model to hack other comp... | AI News",
+  "metaDescription": "Google said Gemini had \"acted appropriately\" by ending each hack immediately. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoA",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, google, gemini, latest, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788601062570-5",
+  "id": "ai-1789899364864-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "What will Apple's John Ternus era look like? | AI News",
-  "excerpt": "It's'officially the Ternus era at Apple.'' Tim Cook stepped down'as CEO this week, handing the company to former hardware chief John Ternus, whose first memo'promised a “huge launch next week”'— timin",
-  "date": "2026-09-05",
+  "title": "Petlibro’s new AI-powered feeder is a game changer for mu... | AI News",
+  "excerpt": "Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when — though the fanciest health-monitoring features ",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "what-will-apple8217s-john-ternus-era-look-like",
-  "sourceLink": "https://techcrunch.com/video/what-will-apples-john-ternus-era-look-like/",
-  "sourceName": "Theresa Loconsolo",
+  "slug": "petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes",
+  "sourceLink": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+  "sourceName": "Lauren Forristal",
   "body": [
     {
       "type": "p",
-      "text": "It's'officially the Ternus era at Apple. '' Tim Cook stepped down'as CEO this week, handing the company to former hardware chief John Ternus, whose first memo'promised a “huge launch next week”'— timing that puts Apple's next iPhone event on his desk before'he's'even settled in."
+      "text": "Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when — though the fanciest health-monitoring features will cost you an extra subscription."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Theresa Loconsolo, It's'officially the Ternus era at Apple.'' Tim Cook stepped down'as CEO this week, handing the company to former hardware chief John Ternus, whose first memo'promised a “huge launch next week”'— timing that puts Apple's next iPhone event on his desk before'he's'even settled in. Cook'isn't'going far, though:'he's'staying on as Executive'Chairman, focused on the kind of policy [']. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lauren Forristal, Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when — though the fanciest health-monitoring features will cost you an extra subscription.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "What will Apple's John Ternus era look like? — a notable development in AI",
+    "Petlibro’s new AI-powered feeder is a game changer for multi-cat homes — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Theresa Loconsolo",
+      "value": "Lauren Forristal",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "What will Apple's John Ternus era look like?",
+      "date": "2026-09-20",
+      "event": "Petlibro’s new AI-powered feeder is a game changer for multi-cat homes",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "apple",
-    "ternus",
+    "petlibro",
+    "powered",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "What will Apple's John Ternus era look like? | AI News",
-  "metaDescription": "It's'officially the Ternus era at Apple.'' Tim Cook stepped down'as CEO this week, handing the company to former hardware chief John Ternus, whose first memo...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, what, will, apple, TechNanoAI, emerging tech news",
+  "metaTitle": "Petlibro’s new AI-powered feeder is a game changer for mu... | AI News",
+  "metaDescription": "Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when — thou...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, petlibro, powered, feeder, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788601068511-3",
+  "id": "robotics-1789899371263-3",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Robot.com partners with Sodexo to roll out more sidewalk ... | Robotics News",
-  "excerpt": "Robot.com says college campuses will continue to be an important part of its strategy as it scales sidewalk delivery robots.\nThe post Robot.com partners with Sodexo to roll out more sidewalk delivery ",
-  "date": "2026-09-05",
+  "title": "Billions in rare earth elements may be hiding in America’... | Robotics News",
+  "excerpt": "Scientists are looking to diatoms, sea sponges, and plants for a cleaner way to recover rare earth elements and other valuable minerals hidden inside coal ash, red mud, and mine tailings. The bio-insp",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "robotcom-partners-with-sodexo-to-roll-out-more-sidewalk-delivery-robot",
-  "sourceLink": "https://www.therobotreport.com/robot-com-partners-sodexo-rolls-out-more-sidewalk-delivery-robots/",
-  "sourceName": "Brianna Wessling &#38; Eugene Demaitre",
+  "slug": "billions-in-rare-earth-elements-may-be-hiding-in-americas-coal-ash",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260918024759.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Robot. com says college campuses will continue to be an important part of its strategy as it scales sidewalk delivery robots."
+      "text": "Scientists are looking to diatoms, sea sponges, and plants for a cleaner way to recover rare earth elements and other valuable minerals hidden inside coal ash, red mud, and mine tailings.  The bio-inspired approach could turn massive industrial waste piles into useful materials while reducing energy use, harsh chemicals, and reliance on new mining."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Robot. com partners with Sodexo to roll out more sidewalk delivery robots appeared first on The Robot Report."
+      "text": "According to reporting from sciencedaily.com, Scientists are looking to diatoms, sea sponges, and plants for a cleaner way to recover rare earth elements and other valuable minerals hidden inside coal ash, red mud, and mine tailings. The bio-inspired approach could turn massive industrial waste piles into useful materials while reducing energy use, harsh chemicals, and reliance on new mining.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Robot.com partners with Sodexo to roll out more sidewalk delivery robots — a notable development in Robotics",
+    "Billions in rare earth elements may be hiding in America’s coal ash — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Brianna Wessling &#38; Eugene Demaitre",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "Robot.com partners with Sodexo to roll out more sidewalk delivery robots",
+      "date": "2026-09-20",
+      "event": "Billions in rare earth elements may be hiding in America’s coal ash",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "robot",
-    "partners",
+    "billions",
+    "earth",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Robot.com partners with Sodexo to roll out more sidewalk ... | Robotics News",
-  "metaDescription": "Robot.com says college campuses will continue to be an important part of its strategy as it scales sidewalk delivery robots.\nThe post Robot.com partners with...",
-  "keywords": "robotics, humanoid robot, automation, drones, robot, partners, with, TechNanoAI, emerging tech news",
+  "metaTitle": "Billions in rare earth elements may be hiding in America’... | Robotics News",
+  "metaDescription": "Scientists are looking to diatoms, sea sponges, and plants for a cleaner way to recover rare earth elements and other valuable minerals hidden inside coal as...",
+  "keywords": "robotics, humanoid robot, automation, drones, billions, rare, earth, TechNanoAI, emerging tech news",
   "featured": false
 }

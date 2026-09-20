@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788601062568-1",
+  "id": "ai-1789899364863-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Attackers Exploit PaperCut Flaws to Steal Credentials Fro... | AI News",
-  "excerpt": "Threat actors are exploiting the newly disclosed PaperCut flaws to facilitate credential theft in attacks targeting the education sector in the U.S. and Europe.\n\nThe Arctic Wolf Adversary Research Tea",
-  "date": "2026-09-05",
+  "title": "Trump says it's time to rebrand AI with a new name — and ... | AI News",
+  "excerpt": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "attackers-exploit-papercut-flaws-to-steal-credentials-from-schools-and",
-  "sourceLink": "https://thehackernews.com/2026/09/attackers-exploit-papercut-flaws-to.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "trump-says-it8217s-time-to-rebrand-ai-with-a-new-name-and-he8217s-also",
+  "sourceLink": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Threat actors are exploiting the newly disclosed PaperCut flaws to facilitate credential theft in attacks targeting the education sector in the U. S."
+      "text": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "and Europe."
+      "text": "According to reporting from Anthony Ha, Trump claimed, without evidence, that the AI backlash is a Democratic hoax.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Attackers Exploit PaperCut Flaws to Steal Credentials From Schools and Universit — a notable development in AI",
+    "Trump says it's time to rebrand AI with a new name — and he's also creating an A — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "Attackers Exploit PaperCut Flaws to Steal Credentials From Schools and Universit",
+      "date": "2026-09-20",
+      "event": "Trump says it's time to rebrand AI with a new name — and he's also creating an A",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "attackers",
-    "exploit",
+    "trump",
+    "rebrand",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Attackers Exploit PaperCut Flaws to Steal Credentials Fro... | AI News",
-  "metaDescription": "Threat actors are exploiting the newly disclosed PaperCut flaws to facilitate credential theft in attacks targeting the education sector in the U.S. and Euro...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, exploit, papercut, TechNanoAI, emerging tech news",
+  "metaTitle": "Trump says it's time to rebrand AI with a new name — and ... | AI News",
+  "metaDescription": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, trump, says, time, TechNanoAI, emerging tech news",
   "featured": false
 }

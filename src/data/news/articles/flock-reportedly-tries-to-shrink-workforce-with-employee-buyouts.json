@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788601062569-3",
+  "id": "ai-1789899364863-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI's rogue agents keep escaping, with no formal proce... | AI News",
-  "excerpt": "OpenAI’s latest agent swarm incident adds urgency to calls for independent investigations as researchers and lawmakers question whether AI labs should control the scope of their own safety reviews.",
-  "date": "2026-09-05",
+  "title": "Flock reportedly tries to shrink workforce with employee ... | AI News",
+  "excerpt": "Without buyouts, Flock would \"almost certainly\" need to lay off staff.",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai8217s-rogue-agents-keep-escaping-with-no-formal-process-to-inves",
-  "sourceLink": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/",
-  "sourceName": "Rebecca Bellan",
+  "slug": "flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts",
+  "sourceLink": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "OpenAI’s latest agent swarm incident adds urgency to calls for independent investigations as researchers and lawmakers question whether AI labs should control the scope of their own safety reviews."
+      "text": "Without buyouts, Flock would \"almost certainly\" need to lay off staff."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Rebecca Bellan, OpenAI’s latest agent swarm incident adds urgency to calls for independent investigations as researchers and lawmakers question whether AI labs should control the scope of their own safety reviews.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Without buyouts, Flock would \"almost certainly\" need to lay off staff.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI's rogue agents keep escaping, with no formal process to investigate them — a notable development in AI",
+    "Flock reportedly tries to shrink workforce with employee buyouts — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Rebecca Bellan",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "OpenAI's rogue agents keep escaping, with no formal process to investigate them",
+      "date": "2026-09-20",
+      "event": "Flock reportedly tries to shrink workforce with employee buyouts",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "rogue",
+    "flock",
+    "reportedly",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI's rogue agents keep escaping, with no formal proce... | AI News",
-  "metaDescription": "OpenAI’s latest agent swarm incident adds urgency to calls for independent investigations as researchers and lawmakers question whether AI labs should contro...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, rogue, agents, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Flock reportedly tries to shrink workforce with employee ... | AI News",
+  "metaDescription": "Without buyouts, Flock would \"almost certainly\" need to lay off staff. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, flock, reportedly, tries, TechNanoAI, emerging tech news",
+  "featured": true
 }

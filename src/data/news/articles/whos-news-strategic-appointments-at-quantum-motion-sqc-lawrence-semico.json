@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788601069113-0",
+  "id": "quantum-1789899372428-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Quantum oscillations defy expectations in this exotic mat... | Quantum Computing News",
-  "excerpt": "Scientists have uncovered an unusual form of electron behavior in zirconium pentatelluride, a quantum material that can act as both an insulator and a conductor. Under temperatures near absolute zero ",
-  "date": "2026-09-05",
+  "title": "Who’s News: Strategic Appointments at Quantum Motion, SQC... | Quantum Computing News",
+  "excerpt": "Quantum Motion promoted Dr. Anna Stockklauser to CPO, Silicon Quantum Computing appointed John Hollister as CFO, Lawrence Semiconductor named Don Garrison GM and COO, and Pasqal added Roberto Mauro as",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "quantum-oscillations-defy-expectations-in-this-exotic-material",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260901010715.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "whos-news-strategic-appointments-at-quantum-motion-sqc-lawrence-semico",
+  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-quantum-motion-sqc-lawrence-semiconductor-and-pasqal/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Scientists have uncovered an unusual form of electron behavior in zirconium pentatelluride, a quantum material that can act as both an insulator and a conductor.  Under temperatures near absolute zero and magnetic fields reaching 60 tesla, electrons produced quantum oscillations that continued even after conventional physics predicted they should disappear."
+      "text": "Quantum Motion promoted Dr.  Anna Stockklauser to CPO, Silicon Quantum Computing appointed John Hollister as CFO, Lawrence Semiconductor named Don Garrison GM and COO, and Pasqal added Roberto Mauro as CPO and Joëlle Lumb as CHRO."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Scientists have uncovered an unusual form of electron behavior in zirconium pentatelluride, a quantum material that can act as both an insulator and a conductor. Under temperatures near absolute zero and magnetic fields reaching 60 tesla, electrons produced quantum oscillations that continued even after conventional physics predicted they should disappear.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "These leadership moves support silicon spin-qubit deployment, global financial strategy, expanded epitaxial foundry capacity, and neutral-atom product and talent scaling across the quantum industry."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Quantum oscillations defy expectations in this exotic material — a notable development in Quantum Computing",
+    "Who’s News: Strategic Appointments at Quantum Motion, SQC, Lawrence Semiconducto — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "Quantum oscillations defy expectations in this exotic material",
+      "date": "2026-09-20",
+      "event": "Who’s News: Strategic Appointments at Quantum Motion, SQC, Lawrence Semiconducto",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "quantum",
-    "oscillations",
+    "strategic",
+    "appointments",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Quantum oscillations defy expectations in this exotic mat... | Quantum Computing News",
-  "metaDescription": "Scientists have uncovered an unusual form of electron behavior in zirconium pentatelluride, a quantum material that can act as both an insulator and a conduc...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, oscillations, defy, TechNanoAI, emerging tech news",
+  "metaTitle": "Who’s News: Strategic Appointments at Quantum Motion, SQC... | Quantum Computing News",
+  "metaDescription": "Quantum Motion promoted Dr. Anna Stockklauser to CPO, Silicon Quantum Computing appointed John Hollister as CFO, Lawrence Semiconductor named Don Garrison GM...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
   "featured": true
 }

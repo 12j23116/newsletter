@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1788601063093-3",
+  "id": "cybersecurity-1789899365495-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "In Other News: Microsoft’s Cloud Patches, Hacked Dropbox ... | Cybersecurity News",
-  "excerpt": "Noteworthy stories that might have slipped under the radar: Microsoft rolled out patches for cloud services, hackers compromised 5,000 Dropbox accounts, and Guardio is now valued at $1.1 billion. \nThe",
-  "date": "2026-09-05",
+  "title": "North Korean WaterPlum hackers infected 30,000 devices wo... | Cybersecurity News",
+  "excerpt": "A joint law enforcement advisory warns that the North Korean hacking group WaterPlum compromised at least 30,000 devices worldwide from December 2025 through July 2026 and transferred more than $10.7 ",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "in-other-news-microsofts-cloud-patches-hacked-dropbox-accounts-guardio",
-  "sourceLink": "https://www.securityweek.com/in-other-news-microsofts-cloud-patches-hacked-dropbox-accounts-guardios-1-1b-valuation/",
-  "sourceName": "SecurityWeek News",
+  "slug": "north-korean-waterplum-hackers-infected-30000-devices-worldwide",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "Noteworthy stories that might have slipped under the radar: Microsoft rolled out patches for cloud services, hackers compromised 5,000 Dropbox accounts, and Guardio is now valued at $1. 1 billion."
+      "text": "A joint law enforcement advisory warns that the North Korean hacking group WaterPlum compromised at least 30,000 devices worldwide from December 2025 through July 2026 and transferred more than $10. 7 million in stolen cryptocurrency to North Korea."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post In Other News: Microsoft’s Cloud Patches, Hacked Dropbox Accounts, Guardio’s $1. 1B Valuation appeared first on SecurityWeek."
+      "text": "[..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "In Other News: Microsoft’s Cloud Patches, Hacked Dropbox Accounts, Guardio’s $1. — a notable development in Cybersecurity",
+    "North Korean WaterPlum hackers infected 30,000 devices worldwide — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "SecurityWeek News",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "In Other News: Microsoft’s Cloud Patches, Hacked Dropbox Accounts, Guardio’s $1.",
+      "date": "2026-09-20",
+      "event": "North Korean WaterPlum hackers infected 30,000 devices worldwide",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "other",
-    "microsoft",
+    "north",
+    "korean",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "In Other News: Microsoft’s Cloud Patches, Hacked Dropbox ... | Cybersecurity News",
-  "metaDescription": "Noteworthy stories that might have slipped under the radar: Microsoft rolled out patches for cloud services, hackers compromised 5,000 Dropbox accounts, and ...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, other, news, microsoft, TechNanoAI, emerging tech news",
+  "metaTitle": "North Korean WaterPlum hackers infected 30,000 devices wo... | Cybersecurity News",
+  "metaDescription": "A joint law enforcement advisory warns that the North Korean hacking group WaterPlum compromised at least 30,000 devices worldwide from December 2025 through...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, north, korean, waterplum, TechNanoAI, emerging tech news",
   "featured": false
 }

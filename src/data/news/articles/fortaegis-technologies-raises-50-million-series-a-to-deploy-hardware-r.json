@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788601069114-4",
+  "id": "quantum-1789899372429-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Quantum Foundry Copenhagen and Novo Nordisk Foundation An... | Quantum Computing News",
-  "excerpt": "Technology firm Quantum Foundry Copenhagen and the Novo Nordisk Foundation have announced plans to construct a 5,300 m² commercial quantum chip fabrication facility in Copenhagen, Denmark. Operational",
-  "date": "2026-09-05",
+  "title": "Fortaegis Technologies Raises $50 Million Series A to Dep... | Quantum Computing News",
+  "excerpt": "Fortaegis Technologies has successfully closed a $50 million Series A funding round led by Serendipity Capital, with participation from major strategic investors. This capital will accelerate the depl",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "quantum-foundry-copenhagen-and-novo-nordisk-foundation-announce-5300-m",
-  "sourceLink": "https://quantumcomputingreport.com/quantum-foundry-copenhagen-and-novo-nordisk-foundation-announce-5300-m%c2%b2-fabrication-facility-for-quantum-chips/",
+  "slug": "fortaegis-technologies-raises-50-million-series-a-to-deploy-hardware-r",
+  "sourceLink": "https://quantumcomputingreport.com/fortaegis-technologies-raises-50-million-series-a-to-deploy-hardware-rooted-quantum-safe-secure-compute-architecture/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Technology firm Quantum Foundry Copenhagen and the Novo Nordisk Foundation have announced plans to construct a 5,300 m² commercial quantum chip fabrication facility in Copenhagen, Denmark.  Operational by 2027, the infrastructure is engineered to bridge academic research with industrial manufacturing, offering commercial wafer fabrication, characterization, assembly, and packaging services to global quantum technology vendors."
+      "text": "Fortaegis Technologies has successfully closed a $50 million Series A funding round led by Serendipity Capital, with participation from major strategic investors.  This capital will accelerate the deployment of their hardware-rooted quantum-safe secure compute architecture, which provides advanced security against AI and post-quantum decryption threats by generating dynamic, quantum-resistant encryption keys from physical silicon properties."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "[  [..."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Fortaegis Technologies has successfully closed a $50 million Series A funding round led by Serendipity Capital, with participation from major strategic investors. This capital will accelerate the deployment of their hardware-rooted quantum-safe secure compute architecture, which provides advanced security against AI and post-quantum decryption threats by generating dynamic, quantum-resistant encryption keys from physical silicon properties. The company plans to scale FPGA deployment and develop. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Quantum Foundry Copenhagen and Novo Nordisk Foundation Announce 5,300 m² Fabrica — a notable development in Quantum Computing",
+    "Fortaegis Technologies Raises $50 Million Series A to Deploy Hardware-Rooted Qua — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "Quantum Foundry Copenhagen and Novo Nordisk Foundation Announce 5,300 m² Fabrica",
+      "date": "2026-09-20",
+      "event": "Fortaegis Technologies Raises $50 Million Series A to Deploy Hardware-Rooted Qua",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "quantum",
-    "foundry",
+    "fortaegis",
+    "technologies",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Quantum Foundry Copenhagen and Novo Nordisk Foundation An... | Quantum Computing News",
-  "metaDescription": "Technology firm Quantum Foundry Copenhagen and the Novo Nordisk Foundation have announced plans to construct a 5,300 m² commercial quantum chip fabrication f...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, foundry, copenhagen, TechNanoAI, emerging tech news",
+  "metaTitle": "Fortaegis Technologies Raises $50 Million Series A to Dep... | Quantum Computing News",
+  "metaDescription": "Fortaegis Technologies has successfully closed a $50 million Series A funding round led by Serendipity Capital, with participation from major strategic inves...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, fortaegis, technologies, raises, TechNanoAI, emerging tech news",
   "featured": false
 }

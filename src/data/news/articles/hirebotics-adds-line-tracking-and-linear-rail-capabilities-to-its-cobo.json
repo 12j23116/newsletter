@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788601068511-2",
+  "id": "robotics-1789899371261-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Lyte raises $165M to help robots better sense their surro... | Robotics News",
-  "excerpt": "Lyte AI plans to use its second round of funding this year to scale production of its AI and perception capabilities.\nThe post Lyte raises $165M to help robots better sense their surroundings appeared",
-  "date": "2026-09-05",
+  "title": "Hirebotics adds line tracking and linear rail capabilitie... | Robotics News",
+  "excerpt": "Hirebotics said these new capabilities extend the working range of the cobots, giving manufacturers greater flexibility.\nThe post Hirebotics adds line tracking and linear rail capabilities to its cobo",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "lyte-raises-165m-to-help-robots-better-sense-their-surroundings",
-  "sourceLink": "https://www.therobotreport.com/lyte-raises-165m-help-robots-better-sense-their-surroundings/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "hirebotics-adds-line-tracking-and-linear-rail-capabilities-to-its-cobo",
+  "sourceLink": "https://www.therobotreport.com/hirebotics-adds-line-tracking-linear-rail-capabilities-cobots/",
+  "sourceName": "Brianna Wessling",
   "body": [
     {
       "type": "p",
-      "text": "Lyte AI plans to use its second round of funding this year to scale production of its AI and perception capabilities. \nThe post Lyte raises $165M to help robots better sense their surroundings appeared first on The Robot Report."
+      "text": "Hirebotics said these new capabilities extend the working range of the cobots, giving manufacturers greater flexibility. \nThe post Hirebotics adds line tracking and linear rail capabilities to its cobots appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, Lyte AI plans to use its second round of funding this year to scale production of its AI and perception capabilities.\nThe post Lyte raises $165M to help robots better sense their surroundings appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Brianna Wessling, Hirebotics said these new capabilities extend the working range of the cobots, giving manufacturers greater flexibility.\nThe post Hirebotics adds line tracking and linear rail capabilities to its cobots appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Lyte raises $165M to help robots better sense their surroundings — a notable development in Robotics",
+    "Hirebotics adds line tracking and linear rail capabilities to its cobots — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Brianna Wessling",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "Lyte raises $165M to help robots better sense their surroundings",
+      "date": "2026-09-20",
+      "event": "Hirebotics adds line tracking and linear rail capabilities to its cobots",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "raises",
-    "robots",
+    "hirebotics",
+    "tracking",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Lyte raises $165M to help robots better sense their surro... | Robotics News",
-  "metaDescription": "Lyte AI plans to use its second round of funding this year to scale production of its AI and perception capabilities.\nThe post Lyte raises $165M to help robo...",
-  "keywords": "robotics, humanoid robot, automation, drones, lyte, raises, help, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Hirebotics adds line tracking and linear rail capabilitie... | Robotics News",
+  "metaDescription": "Hirebotics said these new capabilities extend the working range of the cobots, giving manufacturers greater flexibility.\nThe post Hirebotics adds line tracki...",
+  "keywords": "robotics, humanoid robot, automation, drones, hirebotics, adds, line, TechNanoAI, emerging tech news",
+  "featured": true
 }

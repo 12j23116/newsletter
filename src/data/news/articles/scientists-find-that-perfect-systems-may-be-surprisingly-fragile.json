@@ -1,21 +1,21 @@
 {
-  "id": "energy-1788601068244-1",
+  "id": "energy-1789899370660-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "South Korea to double 2027 budget for farm solar, agrivol... | Energy Storage News",
-  "excerpt": "South Korea plans to double government funding for factory rooftop solar and agrivoltaics to KRW 1.8 trillion ($1.3 billion) in 2027, as a new law regulating dual-use solar on farmland takes effect in",
-  "date": "2026-09-05",
+  "title": "Scientists find that “perfect” systems may be surprisingl... | Energy Storage News",
+  "excerpt": "Complex systems may work better when their parts are not perfectly alike. Northwestern physicists found that carefully balanced variation, or “disorder,” can make networks such as power grids, ecosyst",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "south-korea-to-double-2027-budget-for-farm-solar-agrivoltaics",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/04/south-korea-to-double-2027-budget-for-farm-solar-agrivoltaics/",
-  "sourceName": "Brian Publicover",
+  "slug": "scientists-find-that-perfect-systems-may-be-surprisingly-fragile",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260919031022.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "South Korea plans to double government funding for factory rooftop solar and agrivoltaics to KRW 1. 8 trillion ($1."
+      "text": "Complex systems may work better when their parts are not perfectly alike.  Northwestern physicists found that carefully balanced variation, or “disorder,” can make networks such as power grids, ecosystems, neurons, and materials more stable."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "3 billion) in 2027, as a new law regulating dual-use solar on farmland takes effect in December. \nThe post South Korea to double 2027 budget for farm solar, agrivoltaics appeared first on pv magazine Global."
+      "text": "Even random differences sometimes improved stability compared with completely uniform systems.  The discovery could help researchers design more resilient technologies and explain why natural systems are so rarely perfectly uniform."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "South Korea to double 2027 budget for farm solar, agrivoltaics — a notable development in Energy Storage",
+    "Scientists find that “perfect” systems may be surprisingly fragile — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Brian Publicover",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "South Korea to double 2027 budget for farm solar, agrivoltaics",
+      "date": "2026-09-20",
+      "event": "Scientists find that “perfect” systems may be surprisingly fragile",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "south",
-    "korea",
+    "scientists",
+    "perfect",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "South Korea to double 2027 budget for farm solar, agrivol... | Energy Storage News",
-  "metaDescription": "South Korea plans to double government funding for factory rooftop solar and agrivoltaics to KRW 1.8 trillion ($1.3 billion) in 2027, as a new law regulating...",
-  "keywords": "energy storage, battery, solid-state, grid storage, south, korea, double, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Scientists find that “perfect” systems may be surprisingl... | Energy Storage News",
+  "metaDescription": "Complex systems may work better when their parts are not perfectly alike. Northwestern physicists found that carefully balanced variation, or “disorder,” can...",
+  "keywords": "energy storage, battery, solid-state, grid storage, scientists, find, that, TechNanoAI, emerging tech news",
+  "featured": true
 }

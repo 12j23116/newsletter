@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788601069113-2",
+  "id": "quantum-1789899372428-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "RIKEN Integrates QunaSys QURI SDK Enterprise into Japan's... | Quantum Computing News",
-  "excerpt": "The RIKEN Center for Computational Science (R-CCS) has officially adopted the enterprise quantum software development kit QURI SDK Enterprise from Tokyo-based algorithm developer QunaSys Inc. as the p",
-  "date": "2026-09-05",
+  "title": "IBM Research Demonstrates Hybrid Spacetime PEC to Reduce ... | Quantum Computing News",
+  "excerpt": "IBM Research has introduced Spacetime Probabilistic Error Cancellation (Spacetime PEC), a hybrid error-handling framework that significantly reduces the sampling overhead in quantum computing. This ne",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "riken-integrates-qunasys-quri-sdk-enterprise-into-japan8217s-jhpc-quan",
-  "sourceLink": "https://quantumcomputingreport.com/riken-integrates-qunasys-quri-sdk-enterprise-into-japans-jhpc-quantum-platform/",
+  "slug": "ibm-research-demonstrates-hybrid-spacetime-pec-to-reduce-error-mitigat",
+  "sourceLink": "https://quantumcomputingreport.com/ibm-research-demonstrates-hybrid-spacetime-pec-to-reduce-error-mitigation-sampling-overhead-by-63x/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "The RIKEN Center for Computational Science (R-CCS) has officially adopted the enterprise quantum software development kit QURI SDK Enterprise from Tokyo-based algorithm developer QunaSys Inc.  as the primary software layer for Japan’s national JHPC-quantum project."
+      "text": "IBM Research has introduced Spacetime Probabilistic Error Cancellation (Spacetime PEC), a hybrid error-handling framework that significantly reduces the sampling overhead in quantum computing.  This new protocol combines Probabilistic Error Cancellation (PEC) with post-selected Quantum Error Detection (ED), achieving up to a 63-fold reduction in sampling overhead compared to standard PEC."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Funded by the New Energy and Industrial Technology Development Organization (NEDO) under the Ministry of Economy, Trade and Industry (METI),  [..."
+      "text": "According to reporting from Mohamed Abdel-Kareem, IBM Research has introduced Spacetime Probabilistic Error Cancellation (Spacetime PEC), a hybrid error-handling framework that significantly reduces the sampling overhead in quantum computing. This new protocol combines Probabilistic Error Cancellation (PEC) with post-selected Quantum Error Detection (ED), achieving up to a 63-fold reduction in sampling overhead compared to standard PEC. The approach was experimentally validated on IBM's 27-qubit heavy-hex superconducting processor, demonstratin. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "RIKEN Integrates QunaSys QURI SDK Enterprise into Japan's JHPC-quantum Platform — a notable development in Quantum Computing",
+    "IBM Research Demonstrates Hybrid Spacetime PEC to Reduce Error-Mitigation Sampli — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "RIKEN Integrates QunaSys QURI SDK Enterprise into Japan's JHPC-quantum Platform",
+      "date": "2026-09-20",
+      "event": "IBM Research Demonstrates Hybrid Spacetime PEC to Reduce Error-Mitigation Sampli",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "riken",
-    "integrates",
+    "research",
+    "demonstrates",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "RIKEN Integrates QunaSys QURI SDK Enterprise into Japan's... | Quantum Computing News",
-  "metaDescription": "The RIKEN Center for Computational Science (R-CCS) has officially adopted the enterprise quantum software development kit QURI SDK Enterprise from Tokyo-base...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, riken, integrates, qunasys, TechNanoAI, emerging tech news",
+  "metaTitle": "IBM Research Demonstrates Hybrid Spacetime PEC to Reduce ... | Quantum Computing News",
+  "metaDescription": "IBM Research has introduced Spacetime Probabilistic Error Cancellation (Spacetime PEC), a hybrid error-handling framework that significantly reduces the samp...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, research, demonstrates, hybrid, TechNanoAI, emerging tech news",
   "featured": false
 }

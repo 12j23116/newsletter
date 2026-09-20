@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788601062569-4",
+  "id": "ai-1789899364865-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "AI compute provider Nscale is looking for $3.5B in pre-IP... | AI News",
-  "excerpt": "Nscale, which recently struck a $45 billion deal with Anthropic, is in talks to raise additional funds in anticipation of an upcoming IPO.",
-  "date": "2026-09-05",
+  "title": "AI safety conversations have gotten unbelievable | AI News",
+  "excerpt": "This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "ai-compute-provider-nscale-is-looking-for-35b-in-pre-ipo-financing",
-  "sourceLink": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
-  "sourceName": "Lucas Ropek",
+  "slug": "ai-safety-conversations-have-gotten-unbelievable",
+  "sourceLink": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/",
+  "sourceName": "Julie Bort",
   "body": [
     {
       "type": "p",
-      "text": "Nscale, which recently struck a $45 billion deal with Anthropic, is in talks to raise additional funds in anticipation of an upcoming IPO."
+      "text": "This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, Nscale, which recently struck a $45 billion deal with Anthropic, is in talks to raise additional funds in anticipation of an upcoming IPO.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Julie Bort, This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "AI compute provider Nscale is looking for $3.5B in pre-IPO financing — a notable development in AI",
+    "AI safety conversations have gotten unbelievable — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "Julie Bort",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "AI compute provider Nscale is looking for $3.5B in pre-IPO financing",
+      "date": "2026-09-20",
+      "event": "AI safety conversations have gotten unbelievable",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "compute",
-    "provider",
+    "safety",
+    "conversations",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "AI compute provider Nscale is looking for $3.5B in pre-IP... | AI News",
-  "metaDescription": "Nscale, which recently struck a $45 billion deal with Anthropic, is in talks to raise additional funds in anticipation of an upcoming IPO.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, compute, provider, nscale, TechNanoAI, emerging tech news",
+  "metaTitle": "AI safety conversations have gotten unbelievable | AI News",
+  "metaDescription": "This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, safety, conversations, have, TechNanoAI, emerging tech news",
   "featured": false
 }

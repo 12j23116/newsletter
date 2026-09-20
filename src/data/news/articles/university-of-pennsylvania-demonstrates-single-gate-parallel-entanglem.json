@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788601069113-1",
+  "id": "quantum-1789899372428-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Who’s News: Strategic Appointments at QuIC, Atom Computin... | Quantum Computing News",
-  "excerpt": "Cécile Perrault is the new Executive Director of QuIC, Kevin Messerle is the new CFO of Atom Computing, and Albert Solana is the new Chief of Staff at Qilimanjaro Quantum Tech, all bringing their expe",
-  "date": "2026-09-05",
+  "title": "University of Pennsylvania Demonstrates Single-Gate Paral... | Quantum Computing News",
+  "excerpt": "University of Pennsylvania researchers have achieved a breakthrough in quantum computing by demonstrating single-gate, parallelized multipartite entanglement on a room-temperature diamond quantum regi",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "whos-news-strategic-appointments-at-quic-atom-computing-and-qilimanjar",
-  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-quic-atom-computing-and-qilimanjaro-quantum-tech/",
+  "slug": "university-of-pennsylvania-demonstrates-single-gate-parallel-entanglem",
+  "sourceLink": "https://quantumcomputingreport.com/university-of-pennsylvania-demonstrates-single-gate-parallel-entanglement-on-room-temperature-diamond-quantum-register/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Cécile Perrault is the new Executive Director of QuIC, Kevin Messerle is the new CFO of Atom Computing, and Albert Solana is the new Chief of Staff at Qilimanjaro Quantum Tech, all bringing their expertise to advance quantum technologies. \nThe post Who’s News: Strategic Appointments at QuIC, Atom Computing, and Qilimanjaro Quantum Tech appeared first on Quantum Computing Report."
+      "text": "University of Pennsylvania researchers have achieved a breakthrough in quantum computing by demonstrating single-gate, parallelized multipartite entanglement on a room-temperature diamond quantum register.  They successfully generated a four-qubit Greenberger–Horne–Zeilinger (GHZ) state in just 14."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Cécile Perrault is the new Executive Director of QuIC, Kevin Messerle is the new CFO of Atom Computing, and Albert Solana is the new Chief of Staff at Qilimanjaro Quantum Tech, all bringing their expertise to advance quantum technologies.\nThe post Who’s News: Strategic Appointments at QuIC, Atom Computing, and Qilimanjaro Quantum Tech appeared first on Quantum Computing Report.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "8 microseconds, a tenfold speedup over traditional methods, with significantly improved fidelity."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Who’s News: Strategic Appointments at QuIC, Atom Computing, and Qilimanjaro Quan — a notable development in Quantum Computing",
+    "University of Pennsylvania Demonstrates Single-Gate Parallel Entanglement on Roo — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "Who’s News: Strategic Appointments at QuIC, Atom Computing, and Qilimanjaro Quan",
+      "date": "2026-09-20",
+      "event": "University of Pennsylvania Demonstrates Single-Gate Parallel Entanglement on Roo",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "strategic",
-    "appointments",
+    "university",
+    "pennsylvania",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Who’s News: Strategic Appointments at QuIC, Atom Computin... | Quantum Computing News",
-  "metaDescription": "Cécile Perrault is the new Executive Director of QuIC, Kevin Messerle is the new CFO of Atom Computing, and Albert Solana is the new Chief of Staff at Qilima...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
+  "metaTitle": "University of Pennsylvania Demonstrates Single-Gate Paral... | Quantum Computing News",
+  "metaDescription": "University of Pennsylvania researchers have achieved a breakthrough in quantum computing by demonstrating single-gate, parallelized multipartite entanglement...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, university, pennsylvania, demonstrates, TechNanoAI, emerging tech news",
   "featured": false
 }

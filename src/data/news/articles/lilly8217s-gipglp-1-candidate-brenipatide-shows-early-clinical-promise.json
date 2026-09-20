@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1788601064256-2",
+  "id": "biotech-1789899367451-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "C. difficile Have Lasting Effects on the Infant Gut, Chal... | Biotechnology News",
-  "excerpt": "A new study from CHOP challenges the assumption that infant C. difficile colonization is harmless, finding that it can reshape the developing gut and immune system with potentially lasting health effe",
-  "date": "2026-09-05",
+  "title": "Lilly's GIP/GLP-1 Candidate Brenipatide Shows Early Clini... | Biotechnology News",
+  "excerpt": "Brenipatide showed a mean half-life ranging between 9.08 days and 12.5 days, with the longer half-life seen in participants given the highest dose of the drug at 4.5 mg. \nThe post Lilly's GIP/GLP-1 Ca",
+  "date": "2026-09-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "c-difficile-have-lasting-effects-on-the-infant-gut-challenging-long-he",
-  "sourceLink": "https://www.genengnews.com/topics/infectious-diseases/c-difficile-have-lasting-effects-on-the-infant-gut-challenging-long-held-assumption/",
-  "sourceName": "Julianna LeMieux, PhD",
+  "slug": "lilly8217s-gipglp-1-candidate-brenipatide-shows-early-clinical-promise",
+  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/lillys-gip-glp-1-candidate-brenipatide-shows-early-clinical-promise-in-substance-psych-disorders/",
+  "sourceName": "Alex Philippidis",
   "body": [
     {
       "type": "p",
-      "text": "A new study from CHOP challenges the assumption that infant C.  difficile colonization is harmless, finding that it can reshape the developing gut and immune system with potentially lasting health effects."
+      "text": "Brenipatide showed a mean half-life ranging between 9. 08 days and 12."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "The post <i>C.  difficile</i> Have Lasting Effects on the Infant Gut, Challenging Long-Held Assumption appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "5 days, with the longer half-life seen in participants given the highest dose of the drug at 4. 5 mg."
+    },
+    {
+      "type": "p",
+      "text": "The post Lilly's GIP/GLP-1 Candidate Brenipatide Shows Early Clinical Promise in Substance, Psych Disorders appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "C. difficile Have Lasting Effects on the Infant Gut, Challenging Long-Held Assum — a notable development in Biotechnology",
+    "Lilly's GIP/GLP-1 Candidate Brenipatide Shows Early Clinical Promise in Substanc — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +124,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Julianna LeMieux, PhD",
+      "value": "Alex Philippidis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-05",
-      "event": "C. difficile Have Lasting Effects on the Infant Gut, Challenging Long-Held Assum",
+      "date": "2026-09-20",
+      "event": "Lilly's GIP/GLP-1 Candidate Brenipatide Shows Early Clinical Promise in Substanc",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "difficile",
-    "lasting",
+    "lilly",
+    "candidate",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "C. difficile Have Lasting Effects on the Infant Gut, Chal... | Biotechnology News",
-  "metaDescription": "A new study from CHOP challenges the assumption that infant C. difficile colonization is harmless, finding that it can reshape the developing gut and immune ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, difficile, have, lasting, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Lilly's GIP/GLP-1 Candidate Brenipatide Shows Early Clini... | Biotechnology News",
+  "metaDescription": "Brenipatide showed a mean half-life ranging between 9.08 days and 12.5 days, with the longer half-life seen in participants given the highest dose of the dru...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, lilly, candidate, brenipatide, TechNanoAI, emerging tech news",
+  "featured": true
 }
