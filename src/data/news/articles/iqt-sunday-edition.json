@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788688407410-1",
+  "id": "quantum-1789989828343-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "A mysterious signal around Earth could be dark matter | Quantum Computing News",
-  "excerpt": "Scientists used Earth’s magnetic field and atmosphere as a planet-sized detector to search for some of the lightest proposed forms of dark matter. The approach dramatically improved limits on ultralig",
-  "date": "2026-09-06",
+  "title": "IQT Sunday Edition | Quantum Computing News",
+  "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
+  "date": "2026-09-21",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "a-mysterious-signal-around-earth-could-be-dark-matter",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260904000328.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "iqt-sunday-edition",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/iqt-sunday-edition-4/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Scientists used Earth’s magnetic field and atmosphere as a planet-sized detector to search for some of the lightest proposed forms of dark matter.  The approach dramatically improved limits on ultralight axions and uncovered several intriguing dark photon signals that still need to be explained."
+      "text": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies.  QUANTUM + AI 2026 EARLY BIRD SAVINGS!"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Scientists used Earth’s magnetic field and atmosphere as a planet-sized detector to search for some of the lightest proposed forms of dark matter. The approach dramatically improved limits on ultralight axions and uncovered several intriguing dark photon signals that still need to be explained.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "Q+AI October 25-27 in New York ..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "A mysterious signal around Earth could be dark matter — a notable development in Quantum Computing",
+    "IQT Sunday Edition — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "A mysterious signal around Earth could be dark matter",
+      "date": "2026-09-21",
+      "event": "IQT Sunday Edition",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "mysterious",
-    "signal",
+    "sunday",
+    "edition",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "A mysterious signal around Earth could be dark matter | Quantum Computing News",
-  "metaDescription": "Scientists used Earth’s magnetic field and atmosphere as a planet-sized detector to search for some of the lightest proposed forms of dark matter. The approa...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, mysterious, signal, around, TechNanoAI, emerging tech news",
+  "metaTitle": "IQT Sunday Edition | Quantum Computing News",
+  "metaDescription": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of nationa...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, sunday, edition, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1788688402191-0",
+  "id": "biotech-1789989821890-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "NewBiologix and Synastra Join Forces to Advance rAAV Manu... | Biotechnology News",
-  "excerpt": "The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development with NewBiologix’s proprietary cell engineeri",
-  "date": "2026-09-06",
+  "title": "<a href=\"/biotech/cue-chalks-phase-2-hives-win-xolair-cha... | Biotechnology News",
+  "excerpt": "A midstage study of Cue Biopharma’s hives drug candidate has hit its primary endpoint, emboldening the biotech to move the would-be challenger to Xolair into a phase 2b/3 trial.<br>",
+  "date": "2026-09-21",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "newbiologix-and-synastra-join-forces-to-advance-raav-manufacturing-for",
-  "sourceLink": "https://www.genengnews.com/topics/bioprocessing/newbiologix-and-synastra-join-forces-to-advance-raav-manufacturing-for-duchenne-gene-therapy/",
-  "sourceName": "John Sterling",
+  "slug": "a-hrefbiotechcue-chalks-phase-2-hives-win-xolair-challenger-hreflangen",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/cue-chalks-phase-2-hives-win-xolair-challenger",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development with NewBiologix’s proprietary cell engineering and rAAV manufacturing technologies. \nThe post NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne Gene Therapy appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "A midstage study of Cue Biopharma’s hives drug candidate has hit its primary endpoint, emboldening the biotech to move the would-be challenger to Xolair into a phase 2b/3 trial."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from John Sterling, The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development with NewBiologix’s proprietary cell engineering and rAAV manufacturing technologies.\nThe post NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne Gene Therapy appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, A midstage study of Cue Biopharma’s hives drug candidate has hit its primary endpoint, emboldening the biotech to move the would-be challenger to Xolair into a phase 2b/3 trial.<br>. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne  — a notable development in Biotechnology",
+    "<a href=\"/biotech/cue-chalks-phase-2-hives-win-xolair-challenger\" hreflang=\"en\"> — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "John Sterling",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "NewBiologix and Synastra Join Forces to Advance rAAV Manufacturing for Duchenne ",
+      "date": "2026-09-21",
+      "event": "<a href=\"/biotech/cue-chalks-phase-2-hives-win-xolair-challenger\" hreflang=\"en\">",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "newbiologix",
-    "synastra",
+    "biotech",
+    "chalks",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NewBiologix and Synastra Join Forces to Advance rAAV Manu... | Biotechnology News",
-  "metaDescription": "The collaboration brings together Synastra’s expertise in genomic engineering, AAV vector design, rare-disease gene therapy, and translational development wi...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, newbiologix, synastra, join, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/cue-chalks-phase-2-hives-win-xolair-cha... | Biotechnology News",
+  "metaDescription": "A midstage study of Cue Biopharma’s hives drug candidate has hit its primary endpoint, emboldening the biotech to move the would-be challenger to Xolair into...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, chalks, TechNanoAI, emerging tech news",
+  "featured": false
 }

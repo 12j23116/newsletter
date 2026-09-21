@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1788688407411-2",
+  "id": "quantum-1789989828342-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "What do you wanna talk about? | Quantum Computing News",
-  "excerpt": "The Quantum Dragon will be attending Q+AI 2026 (3.0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, and its companion PQC+IQT conference on Octo",
-  "date": "2026-09-06",
+  "title": "What kills Schrödinger’s cat? Gravity may not be the answer | Quantum Computing News",
+  "excerpt": "Physicists have put a decades-old idea about why the strange rules of quantum mechanics disappear in our everyday world to one of its toughest experimental tests yet. Deep beneath Italy’s Gran Sasso m",
+  "date": "2026-09-21",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "what-do-you-wanna-talk-about",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/what-do-you-wanna-talk-about/",
-  "sourceName": "Brian Siegelwax",
+  "slug": "what-kills-schrdingers-cat-gravity-may-not-be-the-answer",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260920222350.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "The Quantum Dragon will be attending Q+AI 2026 (3. 0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, and its companion PQC+IQT conference on October 25-26."
+      "text": "Physicists have put a decades-old idea about why the strange rules of quantum mechanics disappear in our everyday world to one of its toughest experimental tests yet.  Deep beneath Italy’s Gran Sasso mountain, researchers searched for an extremely faint radiation signal predicted by a theory suggesting that tiny fluctuations in spacetime, caused by gravity, gradually destroy quantum superpositions."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "While there, he will attempt to record a series of single-question mini-podcasts.  The ..."
+      "text": "After 62 days of measurements with a highly shielded germanium detector, they found no such signal."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "What do you wanna talk about? — a notable development in Quantum Computing",
+    "What kills Schrödinger’s cat? Gravity may not be the answer — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Brian Siegelwax",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "What do you wanna talk about?",
+      "date": "2026-09-21",
+      "event": "What kills Schrödinger’s cat? Gravity may not be the answer",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "wanna",
-    "about",
+    "kills",
+    "dinger",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "What do you wanna talk about? | Quantum Computing News",
-  "metaDescription": "The Quantum Dragon will be attending Q+AI 2026 (3.0): Uncovering the Coming Wave of Quantum + AI, which will be held October 25-27, 2026, in New York City, a...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, what, wanna, talk, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "What kills Schrödinger’s cat? Gravity may not be the answer | Quantum Computing News",
+  "metaDescription": "Physicists have put a decades-old idea about why the strange rules of quantum mechanics disappear in our everyday world to one of its toughest experimental t...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, what, kills, schr, TechNanoAI, emerging tech news",
+  "featured": true
 }

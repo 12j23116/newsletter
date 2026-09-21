@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788688406576-0",
+  "id": "robotics-1789989826776-2",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "ARM Institute gets $90M for 10 projects to modernize mili... | Robotics News",
-  "excerpt": "Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said.\nThe post ARM Institute gets $90M for 10 projects to modernize military manufactu",
-  "date": "2026-09-06",
+  "title": "Einstein’s “spooky action” just survived one of physics’ ... | Robotics News",
+  "excerpt": "Physicists have detected strong evidence that heavy, fleeting Z bosons can become quantum entangled during Higgs boson decays at CERN’s Large Hadron Collider. The result shows that Einstein’s “spooky ",
+  "date": "2026-09-21",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "arm-institute-gets-90m-for-10-projects-to-modernize-military-manufactu",
-  "sourceLink": "https://www.therobotreport.com/arm-institute-gets-90m-for-10-projects-to-modernize-military-manufacturing/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "einsteins-spooky-action-just-survived-one-of-physics-most-extreme-test",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260919031023.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said. \nThe post ARM Institute gets $90M for 10 projects to modernize military manufacturing appeared first on The Robot Report."
+      "text": "Physicists have detected strong evidence that heavy, fleeting Z bosons can become quantum entangled during Higgs boson decays at CERN’s Large Hadron Collider.  The result shows that Einstein’s “spooky action at a distance” survives even under some of the most extreme conditions ever created in a laboratory."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said.\nThe post ARM Institute gets $90M for 10 projects to modernize military manufacturing appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, Physicists have detected strong evidence that heavy, fleeting Z bosons can become quantum entangled during Higgs boson decays at CERN’s Large Hadron Collider. The result shows that Einstein’s “spooky action at a distance” survives even under some of the most extreme conditions ever created in a laboratory.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "ARM Institute gets $90M for 10 projects to modernize military manufacturing — a notable development in Robotics",
+    "Einstein’s “spooky action” just survived one of physics’ most extreme tests — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "ARM Institute gets $90M for 10 projects to modernize military manufacturing",
+      "date": "2026-09-21",
+      "event": "Einstein’s “spooky action” just survived one of physics’ most extreme tests",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "institute",
-    "projects",
+    "einstein",
+    "spooky",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "ARM Institute gets $90M for 10 projects to modernize mili... | Robotics News",
-  "metaDescription": "Fifteen member organizations will deliver viable working solutions within a two-year timeframe, the ARM Institute said.\nThe post ARM Institute gets $90M for ...",
-  "keywords": "robotics, humanoid robot, automation, drones, institute, gets, projects, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Einstein’s “spooky action” just survived one of physics’ ... | Robotics News",
+  "metaDescription": "Physicists have detected strong evidence that heavy, fleeting Z bosons can become quantum entangled during Higgs boson decays at CERN’s Large Hadron Collider...",
+  "keywords": "robotics, humanoid robot, automation, drones, einstein, spooky, action, TechNanoAI, emerging tech news",
+  "featured": false
 }

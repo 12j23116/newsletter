@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1788688400840-4",
+  "id": "cybersecurity-1789989819810-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admin... | Cybersecurity News",
-  "excerpt": "Broadcom has released security updates for two security flaws impacting VMware Workstation and Fusion, including one critical bug that could result in arbitrary code execution under certain conditions",
-  "date": "2026-09-06",
+  "title": "Colorado Water Utilities Hit by Cyberattacks Targeting OT... | Cybersecurity News",
+  "excerpt": "The hackers changed equipment settings, disabled remote access and alarms, and altered pumping cycles, officials said. \nThe post Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems appea",
+  "date": "2026-09-21",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "critical-vmware-workstation-and-fusion-flaw-lets-vm-admins-execute-hos",
-  "sourceLink": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems",
+  "sourceLink": "https://www.securityweek.com/colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "Broadcom has released security updates for two security flaws impacting VMware Workstation and Fusion, including one critical bug that could result in arbitrary code execution under certain conditions. \n\nThe vulnerability, tracked as CVE-2026-59346 (CVSS score: 9."
+      "text": "The hackers changed equipment settings, disabled remote access and alarms, and altered pumping cycles, officials said.  \nThe post Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "3), is an integer-overflow vulnerability that a local attacker with elevated privileges can exploit to run arbitrary code."
+      "text": "According to reporting from Eduard Kovacs, The hackers changed equipment settings, disabled remote access and alarms, and altered pumping cycles, officials said. \nThe post Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code — a notable development in Cybersecurity",
+    "Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
+      "date": "2026-09-21",
+      "event": "Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "critical",
-    "vmware",
+    "colorado",
+    "water",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Critical VMware Workstation and Fusion Flaw Lets VM Admin... | Cybersecurity News",
-  "metaDescription": "Broadcom has released security updates for two security flaws impacting VMware Workstation and Fusion, including one critical bug that could result in arbitr...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, critical, vmware, workstation, TechNanoAI, emerging tech news",
+  "metaTitle": "Colorado Water Utilities Hit by Cyberattacks Targeting OT... | Cybersecurity News",
+  "metaDescription": "The hackers changed equipment settings, disabled remote access and alarms, and altered pumping cycles, officials said. \nThe post Colorado Water Utilities Hit...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, colorado, water, utilities, TechNanoAI, emerging tech news",
   "featured": false
 }

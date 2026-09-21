@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788688406577-1",
+  "id": "robotics-1789989826774-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Cyborg Roaches Can Stab You With Needles | Robotics News",
-  "excerpt": "Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling toward you. Although the sight might be unnervin",
-  "date": "2026-09-06",
-  "readTime": "4 min",
+  "title": "What do you do with a humanoid robot when it breaks down? | Robotics News",
+  "excerpt": "Decommissioning a humanoid robot is not a matter of traditional scrapping. It's a highly technical, high-stakes surgical endeavor.\nThe post What do you do with a humanoid robot when it breaks down? ap",
+  "date": "2026-09-21",
+  "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "cyborg-roaches-can-stab-you-with-needles",
-  "sourceLink": "https://spectrum.ieee.org/cyborg-rescue-roach",
-  "sourceName": "Charles Q. Choi",
+  "slug": "what-do-you-do-with-a-humanoid-robot-when-it-breaks-down",
+  "sourceLink": "https://www.therobotreport.com/what-do-you-do-with-a-humanoid-robot-when-it-breaks-down/",
+  "sourceName": "Robert Belt",
   "body": [
     {
       "type": "p",
-      "text": "Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling toward you.  Although the sight might be unnerving, to say the least, this prototype paramedic cyborg, or “Paraborg,” might one day help deliver lifesaving aid to disaster victims who might be otherwise impossible to reach."
+      "text": "Decommissioning a humanoid robot is not a matter of traditional scrapping.  It's a highly technical, high-stakes surgical endeavor."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Charles Q. Choi, Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling toward you. Although the sight might be unnerving, to say the least, this prototype paramedic cyborg, or “Paraborg,” might one day help deliver lifesaving aid to disaster victims who might be otherwise impossible to reach.The Hardest Problems in RoboticsFor decades, scientists have sought to develop cyborg insects as “a shortcut around some of th. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post What do you do with a humanoid robot when it breaks down?  appeared first on The Robot Report."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Cyborg Roaches Can Stab You With Needles — a notable development in Robotics",
+    "What do you do with a humanoid robot when it breaks down? — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Charles Q. Choi",
+      "value": "Robert Belt",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "Cyborg Roaches Can Stab You With Needles",
+      "date": "2026-09-21",
+      "event": "What do you do with a humanoid robot when it breaks down?",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "cyborg",
-    "roaches",
+    "humanoid",
+    "robot",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Cyborg Roaches Can Stab You With Needles | Robotics News",
-  "metaDescription": "Imagine you are trapped under rubble after an earthquake and you see an electronics-covered cockroach with a spring-loaded needle on its back scuttling towar...",
-  "keywords": "robotics, humanoid robot, automation, drones, cyborg, roaches, stab, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "What do you do with a humanoid robot when it breaks down? | Robotics News",
+  "metaDescription": "Decommissioning a humanoid robot is not a matter of traditional scrapping. It's a highly technical, high-stakes surgical endeavor.\nThe post What do you do wi...",
+  "keywords": "robotics, humanoid robot, automation, drones, what, with, humanoid, TechNanoAI, emerging tech news",
+  "featured": true
 }

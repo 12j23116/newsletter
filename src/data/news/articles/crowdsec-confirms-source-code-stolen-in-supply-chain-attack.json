@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1788688400840-3",
+  "id": "cybersecurity-1789989819810-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCi... | Cybersecurity News",
-  "excerpt": "JetBrains is urging Cadence users to revoke and rotate all credentials following a security incident last month in which unidentified threat actors exploited a recently disclosed critical vulnerabilit",
-  "date": "2026-09-06",
+  "title": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack | Cybersecurity News",
+  "excerpt": "The cybersecurity firm believes the data breach was the result of the May 2026 TanStack supply chain attack.\nThe post CrowdSec Confirms Source Code Stolen in Supply Chain Attack appeared first on Secu",
+  "date": "2026-09-21",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "attackers-breached-jetbrains-cadence-via-unpatched-teamcity-extracting",
-  "sourceLink": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "crowdsec-confirms-source-code-stolen-in-supply-chain-attack",
+  "sourceLink": "https://www.securityweek.com/crowdsec-confirms-source-code-stolen-in-supply-chain-attack/",
+  "sourceName": "Ionut Arghire",
   "body": [
     {
       "type": "p",
-      "text": "JetBrains is urging Cadence users to revoke and rotate all credentials following a security incident last month in which unidentified threat actors exploited a recently disclosed critical vulnerability in TeamCity to breach its own environment. \n\n\"Cadence users should immediately revoke or rotate all credentials and secrets that may have been used to run their Cadence executions,\" JetBrains said."
+      "text": "The cybersecurity firm believes the data breach was the result of the May 2026 TanStack supply chain attack. \nThe post CrowdSec Confirms Source Code Stolen in Supply Chain Attack appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), JetBrains is urging Cadence users to revoke and rotate all credentials following a security incident last month in which unidentified threat actors exploited a recently disclosed critical vulnerability in TeamCity to breach its own environment.\n\n\"Cadence users should immediately revoke or rotate all credentials and secrets that may have been used to run their Cadence executions,\" JetBrains said.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ionut Arghire, The cybersecurity firm believes the data breach was the result of the May 2026 TanStack supply chain attack.\nThe post CrowdSec Confirms Source Code Stolen in Supply Chain Attack appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Cred — a notable development in Cybersecurity",
+    "CrowdSec Confirms Source Code Stolen in Supply Chain Attack — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Ionut Arghire",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Cred",
+      "date": "2026-09-21",
+      "event": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "attackers",
-    "breached",
+    "crowdsec",
+    "confirms",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Attackers Breached JetBrains Cadence via Unpatched TeamCi... | Cybersecurity News",
-  "metaDescription": "JetBrains is urging Cadence users to revoke and rotate all credentials following a security incident last month in which unidentified threat actors exploited...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, attackers, breached, jetbrains, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack | Cybersecurity News",
+  "metaDescription": "The cybersecurity firm believes the data breach was the result of the May 2026 TanStack supply chain attack.\nThe post CrowdSec Confirms Source Code Stolen in...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, crowdsec, confirms, source, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788688400328-4",
+  "id": "ai-1789989819087-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hikers rescued after using Google Gemini for planning | AI News",
-  "excerpt": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\"",
-  "date": "2026-09-06",
+  "title": "6 days left to save up to $200 to TechCrunch Disrupt 2026 | AI News",
+  "excerpt": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+  "date": "2026-09-21",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hikers-rescued-after-using-google-gemini-for-planning",
-  "sourceLink": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
-  "sourceName": "Anthony Ha",
+  "slug": "6-days-left-to-save-up-to-200-to-techcrunch-disrupt-2026",
+  "sourceLink": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026/",
+  "sourceName": "TechCrunch Events",
   "body": [
     {
       "type": "p",
-      "text": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required."
+      "text": "Current ticket pricing ends in 6 days on Sept.  25 at 11:59 p."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\". The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "m.  PT."
+    },
+    {
+      "type": "p",
+      "text": "Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Hikers rescued after using Google Gemini for planning — a notable development in AI",
+    "6 days left to save up to $200 to TechCrunch Disrupt 2026 — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +124,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "TechCrunch Events",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-06",
-      "event": "Hikers rescued after using Google Gemini for planning",
+      "date": "2026-09-21",
+      "event": "6 days left to save up to $200 to TechCrunch Disrupt 2026",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hikers",
-    "rescued",
+    "techcrunch",
+    "disrupt",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Hikers rescued after using Google Gemini for planning | AI News",
-  "metaDescription": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\"",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hikers, rescued, after, TechNanoAI, emerging tech news",
+  "metaTitle": "6 days left to save up to $200 to TechCrunch Disrupt 2026 | AI News",
+  "metaDescription": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, days, left, save, TechNanoAI, emerging tech news",
   "featured": false
 }
