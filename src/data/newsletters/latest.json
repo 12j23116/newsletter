@@ -1,112 +1,113 @@
 {
-  "issue": 89,
-  "date": "2026-09-14",
-  "subject": "This Week: Cybersecurity, Space & more — September 14, 2026",
+  "issue": 90,
+  "date": "2026-09-21",
+  "subject": "This Week: AI, Biotech & more — September 21, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "cybersecurity",
-    "space",
-    "biotech",
     "ai",
+    "biotech",
+    "cybersecurity",
     "robotics",
+    "fusion",
+    "quantum",
     "energy"
   ],
   "articles": [
     {
-      "title": "CISOs Race to Control AI Agents Without Destroying Their ... | Cybersecurity News",
-      "slug": "cisos-race-to-control-ai-agents-without-destroying-their-value",
-      "topic": "cybersecurity",
-      "excerpt": "Security leaders are struggling to modernize cyber hygiene and prevent over-privileged agents from causing unintended harm.\nThe post CISOs Race to Control AI Agents Without Destroying Their Value appe",
-      "url": "https://technanoai.com/news/cisos-race-to-control-ai-agents-without-destroying-their-value",
-      "date": "2026-09-14"
-    },
-    {
-      "title": "ConnectWise Patches ScreenConnect Vulnerability Exploited... | Cybersecurity News",
-      "slug": "connectwise-patches-screenconnect-vulnerability-exploited-in-worm-like",
-      "topic": "cybersecurity",
-      "excerpt": "The flaw allows attackers to send files and execute them without authorization through an active remote session.\nThe post ConnectWise Patches ScreenConnect Vulnerability Exploited in Worm-Like Attacks",
-      "url": "https://technanoai.com/news/connectwise-patches-screenconnect-vulnerability-exploited-in-worm-like",
-      "date": "2026-09-14"
-    },
-    {
-      "title": "An Early Look at Fall Color in Canada | Space Exploration News",
-      "slug": "an-early-look-at-fall-color-in-canada",
-      "topic": "space",
-      "excerpt": "Reds, yellows, and oranges are already sweeping across tundra landscapes in Nunavut.",
-      "url": "https://technanoai.com/news/an-early-look-at-fall-color-in-canada",
-      "date": "2026-09-14"
-    },
-    {
-      "title": "APOD: 2026 September 14 – Where Your Elements Came From | Space Exploration News",
-      "slug": "apod-2026-september-14-where-your-elements-came-from",
-      "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 September 14 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diff",
-      "url": "https://technanoai.com/news/apod-2026-september-14-where-your-elements-came-from",
-      "date": "2026-09-14"
-    },
-    {
-      "title": "<a href=\"/biotech/biontech-sets-survival-standard-hard-tr... | Biotechnology News",
-      "slug": "a-hrefbiotechbiontech-sets-survival-standard-hard-treat-cancer-ahead-p",
-      "topic": "biotech",
-      "excerpt": "BioNTech has linked gotistobart to median overall survival of 18.5 months in relapsed lung cancer patients, adding to evidence that the anti-CTLA-4 antibody is better than the standard of care.",
-      "url": "https://technanoai.com/news/a-hrefbiotechbiontech-sets-survival-standard-hard-treat-cancer-ahead-p",
-      "date": "2026-09-14"
-    },
-    {
-      "title": "<a href=\"/biotech/cellectis-cans-allogeneic-car-ts-hop-ab... | Biotechnology News",
-      "slug": "a-hrefbiotechcellectis-cans-allogeneic-car-ts-hop-aboard-vivo-bandwago",
-      "topic": "biotech",
-      "excerpt": "Cellectis may have kicked off the year promising “huge momentum” in the allogeneic CAR-T space, but even the French biotech has been unable to resist the dominance of in vivo options.",
-      "url": "https://technanoai.com/news/a-hrefbiotechcellectis-cans-allogeneic-car-ts-hop-aboard-vivo-bandwago",
-      "date": "2026-09-14"
-    },
-    {
-      "title": "From Video to Data: How AI Is Transforming Multimedia Con... | AI News",
-      "slug": "from-video-to-data-how-ai-is-transforming-multimedia-content-processin",
+      "title": "6 days left to save up to $200 to TechCrunch Disrupt 2026 | AI News",
+      "slug": "6-days-left-to-save-up-to-200-to-techcrunch-disrupt-2026",
       "topic": "ai",
-      "excerpt": "A video looks simple when you press play. There is a picture, some dialogue, perhaps music in the background, and a few minutes later it is over. However, with the right use of AI, things can become a",
-      "url": "https://technanoai.com/news/from-video-to-data-how-ai-is-transforming-multimedia-content-processin",
-      "date": "2026-09-14"
+      "excerpt": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+      "url": "https://technanoai.com/news/6-days-left-to-save-up-to-200-to-techcrunch-disrupt-2026",
+      "date": "2026-09-21"
     },
     {
-      "title": "How Vox Group's AI-Powered Technology Is Solving Real-Tim... | AI News",
-      "slug": "how-vox-group8217s-ai-powered-technology-is-solving-real-time-translat",
+      "title": "ClickFix Lures Deploy ChainScript RAT Using Polygon to Ro... | AI News",
+      "slug": "clickfix-lures-deploy-chainscript-rat-using-polygon-to-rotate-c2-infra",
       "topic": "ai",
-      "excerpt": "Live translation has long been one of travel's hardest unsolved problems: a single guide speaking to a mixed-language group, with no way to be understood by everyone at once. Vox Group, a 25-year-old ",
-      "url": "https://technanoai.com/news/how-vox-group8217s-ai-powered-technology-is-solving-real-time-translat",
-      "date": "2026-09-14"
+      "excerpt": "Threat actors are leveraging ClickFix-like lures to deliver a previously undocumented remote access trojan (RAT) called ChainScript.\n\n\"ChainScript has appeared under multiple build names, including Co",
+      "url": "https://technanoai.com/news/clickfix-lures-deploy-chainscript-rat-using-polygon-to-rotate-c2-infra",
+      "date": "2026-09-21"
     },
     {
-      "title": "How autonomous fleets are changing what's possible in Ame... | Robotics News",
-      "slug": "how-autonomous-fleets-are-changing-what8217s-possible-in-american-agri",
+      "title": "<a href=\"/biotech/analysts-extremely-bullish-telix-beams-... | Biotechnology News",
+      "slug": "a-hrefbiotechanalysts-extremely-bullish-telix-beams-novartis-territory",
+      "topic": "biotech",
+      "excerpt": "Telix has struck a deal to buy ITM Isotope Technologies Munich for $1.65 billion upfront, securing an RD pipeline led by a rival to Novartis’ Lutathera and a radiopharmaceutical supply network.",
+      "url": "https://technanoai.com/news/a-hrefbiotechanalysts-extremely-bullish-telix-beams-novartis-territory",
+      "date": "2026-09-21"
+    },
+    {
+      "title": "<a href=\"/biotech/beacon-lights-path-fda-approval-pivotal... | Biotechnology News",
+      "slug": "a-hrefbiotechbeacon-lights-path-fda-approval-pivotal-trial-win-rare-vi",
+      "topic": "biotech",
+      "excerpt": "Beacon Therapeutics has found the light in a rare vision loss disease that has left larger companies in the dark. The biotech’s gene therapy for X-linked retinitis pigmentosa (XLRP) successfully impro",
+      "url": "https://technanoai.com/news/a-hrefbiotechbeacon-lights-path-fda-approval-pivotal-trial-win-rare-vi",
+      "date": "2026-09-21"
+    },
+    {
+      "title": "Colorado Water Utilities Hit by Cyberattacks Targeting OT... | Cybersecurity News",
+      "slug": "colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems",
+      "topic": "cybersecurity",
+      "excerpt": "The hackers changed equipment settings, disabled remote access and alarms, and altered pumping cycles, officials said. \nThe post Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems appea",
+      "url": "https://technanoai.com/news/colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems",
+      "date": "2026-09-21"
+    },
+    {
+      "title": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack | Cybersecurity News",
+      "slug": "crowdsec-confirms-source-code-stolen-in-supply-chain-attack",
+      "topic": "cybersecurity",
+      "excerpt": "The cybersecurity firm believes the data breach was the result of the May 2026 TanStack supply chain attack.\nThe post CrowdSec Confirms Source Code Stolen in Supply Chain Attack appeared first on Secu",
+      "url": "https://technanoai.com/news/crowdsec-confirms-source-code-stolen-in-supply-chain-attack",
+      "date": "2026-09-21"
+    },
+    {
+      "title": "Einstein’s “spooky action” just survived one of physics’ ... | Robotics News",
+      "slug": "einsteins-spooky-action-just-survived-one-of-physics-most-extreme-test",
       "topic": "robotics",
-      "excerpt": "Autonomous tractors can help American agriculture, as exemplified in ASI's collaboration with U.S. Sugar and Everglades Equipment.\nThe post How autonomous fleets are changing what's possible in Americ",
-      "url": "https://technanoai.com/news/how-autonomous-fleets-are-changing-what8217s-possible-in-american-agri",
-      "date": "2026-09-14"
+      "excerpt": "Physicists have detected strong evidence that heavy, fleeting Z bosons can become quantum entangled during Higgs boson decays at CERN’s Large Hadron Collider. The result shows that Einstein’s “spooky ",
+      "url": "https://technanoai.com/news/einsteins-spooky-action-just-survived-one-of-physics-most-extreme-test",
+      "date": "2026-09-21"
     },
     {
-      "title": "Scientists are building a microscope powered by a quantum... | Robotics News",
-      "slug": "scientists-are-building-a-microscope-powered-by-a-quantum-computer",
+      "title": "New nanoparticles make hidden chemical differences light up | Robotics News",
+      "slug": "new-nanoparticles-make-hidden-chemical-differences-light-up",
       "topic": "robotics",
-      "excerpt": "Scientists are combining an electron microscope with a quantum computer to squeeze far more information from each electron. The approach could reveal faint details with fewer electrons, helping protec",
-      "url": "https://technanoai.com/news/scientists-are-building-a-microscope-powered-by-a-quantum-computer",
-      "date": "2026-09-14"
+      "excerpt": "Scientists have developed ultra-bright nanoparticles that can detect tiny amounts of chemicals and distinguish between molecules that look almost identical. The technology could one day provide a chea",
+      "url": "https://technanoai.com/news/new-nanoparticles-make-hidden-chemical-differences-light-up",
+      "date": "2026-09-21"
     },
     {
-      "title": "Anker SOLIX launches XE, the next-generation all-in-one h... | Energy Storage News",
-      "slug": "anker-solix-launches-xe-the-next-generation-all-in-one-home-energy-sto",
-      "topic": "energy",
-      "excerpt": "The system, launched in the UK and Ireland, removes the barriers that have kept home energy storage from the mainstream.\nThe post Anker SOLIX launches XE, the next-generation all-in-one home energy st",
-      "url": "https://technanoai.com/news/anker-solix-launches-xe-the-next-generation-all-in-one-home-energy-sto",
-      "date": "2026-09-14"
+      "title": "AI can now control fusion plasma faster than humans can r... | Nuclear Fusion News",
+      "slug": "ai-can-now-control-fusion-plasma-faster-than-humans-can-react",
+      "topic": "fusion",
+      "excerpt": "Princeton researchers have tested an AI system that can monitor and control fusion plasma in milliseconds, reacting far faster than a human operator. In one experiment, it predicted a damaging instabi",
+      "url": "https://technanoai.com/news/ai-can-now-control-fusion-plasma-faster-than-humans-can-react",
+      "date": "2026-09-21"
     },
     {
-      "title": "Australia to introduce technical code for consumer energy... | Energy Storage News",
-      "slug": "australia-to-introduce-technical-code-for-consumer-energy-resources",
+      "title": "IQT Sunday Edition | Quantum Computing News",
+      "slug": "iqt-sunday-edition",
+      "topic": "quantum",
+      "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
+      "url": "https://technanoai.com/news/iqt-sunday-edition",
+      "date": "2026-09-21"
+    },
+    {
+      "title": "Scientists opened a sealed envelope after 10 years. Gravi... | Quantum Computing News",
+      "slug": "scientists-opened-a-sealed-envelope-after-10-years-gravity-still-didnt",
+      "topic": "quantum",
+      "excerpt": "A decade-long NIST experiment has produced a new measurement of the universal gravitational constant that differs unexpectedly from another leading result, deepening a 225-year-old physics puzzle. The",
+      "url": "https://technanoai.com/news/scientists-opened-a-sealed-envelope-after-10-years-gravity-still-didnt",
+      "date": "2026-09-21"
+    },
+    {
+      "title": "Already-operating battery storage projects are key to mak... | Energy Storage News",
+      "slug": "already-operating-battery-storage-projects-are-key-to-making-the-busin",
       "topic": "energy",
-      "excerpt": "Australia's new regulatory framework for solar inverters, batteries and other consumer energy resources will require suppliers to register products and prove compliance with a technical code. It also ",
-      "url": "https://technanoai.com/news/australia-to-introduce-technical-code-for-consumer-energy-resources",
-      "date": "2026-09-14"
+      "excerpt": "Existing assets can provide crucial benchmarks in sizing and other crucial battery storage design decisions, writes Ashutosh Vats, head of BESS business development at 3E.",
+      "url": "https://technanoai.com/news/already-operating-battery-storage-projects-are-key-to-making-the-busin",
+      "date": "2026-09-21"
     }
   ]
 }
