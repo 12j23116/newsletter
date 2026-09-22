@@ -1,21 +1,21 @@
 {
-  "id": "ai-1788778805968-0",
+  "id": "ai-1790073162908-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "N-able Issues Fourth N-central Hotfix in Five Weeks for U... | AI News",
-  "excerpt": "Every on-premises N-central build below 2026.3.1.14 — including servers updated to Hotfix 3 a day earlier — needs Hotfix 4. N-able's incident notice says the flaw has been exploited in the wild; its r",
-  "date": "2026-09-07",
+  "title": "OpenAI forms math advisory group as its AI resolves more ... | AI News",
+  "excerpt": "The group won't be given leeway to slow down or redirect OpenAI's ongoing mathematical research.",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "n-able-issues-fourth-n-central-hotfix-in-five-weeks-for-unauthenticate",
-  "sourceLink": "https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open",
+  "sourceLink": "https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/",
+  "sourceName": "Aditya Mehta",
   "body": [
     {
       "type": "p",
-      "text": "Every on-premises N-central build below 2026. 3."
+      "text": "The group won't be given leeway to slow down or redirect OpenAI's ongoing mathematical research."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "1. 14 — including servers updated to Hotfix 3 a day earlier — needs Hotfix 4."
-    },
-    {
-      "type": "p",
-      "text": "N-able's incident notice says the flaw has been exploited in the wild; its release notes say that is unconfirmed."
+      "text": "According to reporting from Aditya Mehta, The group won't be given leeway to slow down or redirect OpenAI's ongoing mathematical research.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw — a notable development in AI",
+    "OpenAI forms math advisory group as its AI resolves more than 100 open problems — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -124,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Aditya Mehta",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw",
+      "date": "2026-09-22",
+      "event": "OpenAI forms math advisory group as its AI resolves more than 100 open problems",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "issues",
-    "fourth",
+    "openai",
+    "forms",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "N-able Issues Fourth N-central Hotfix in Five Weeks for U... | AI News",
-  "metaDescription": "Every on-premises N-central build below 2026.3.1.14 — including servers updated to Hotfix 3 a day earlier — needs Hotfix 4. N-able's incident notice says the...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, able, issues, fourth, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "OpenAI forms math advisory group as its AI resolves more ... | AI News",
+  "metaDescription": "The group won't be given leeway to slow down or redirect OpenAI's ongoing mathematical research. LLMs, agents & the race to AGI. Latest AI developments and anal",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, forms, math, TechNanoAI, emerging tech news",
+  "featured": false
 }

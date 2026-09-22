@@ -1,21 +1,21 @@
 {
-  "id": "energy-1788778810854-0",
+  "id": "energy-1790073168199-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Pakistan’s regulator approves mandatory energy storage co... | Energy Storage News",
-  "excerpt": "Pakistan's National Electric Power Regulatory Authority (NEPRA) has approved plans to require bidders in a renewable energy auction to include energy storage.",
-  "date": "2026-09-07",
+  "title": "Grids, grids, grids, and more: EUPVSEC 2026 | Energy Storage News",
+  "excerpt": "Now in its 43rd year, the European Photovoltaic Solar Energy Conference (EUPVSEC) got underway this week in Rotterdam. Sessions on the first day point to a European solar industry becoming more consci",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "pakistans-regulator-approves-mandatory-energy-storage-component-for-re",
-  "sourceLink": "https://www.energy-storage.news/pakistan-regulator-approves-mandatory-energy-storage-component-renewables-auction/",
-  "sourceName": "Andy Colthorpe",
+  "slug": "grids-grids-grids-and-more-eupvsec-2026",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/22/grids-grids-grids-and-more-eupvsec-2026/",
+  "sourceName": "Mark Hutchins",
   "body": [
     {
       "type": "p",
-      "text": "Pakistan's National Electric Power Regulatory Authority (NEPRA) has approved plans to require bidders in a renewable energy auction to include energy storage."
+      "text": "Now in its 43rd year, the European Photovoltaic Solar Energy Conference (EUPVSEC) got underway this week in Rotterdam.  Sessions on the first day point to a European solar industry becoming more conscious of its place in the wider energy world, and focussing on its connections and relationships with policymakers, the public and other industrial sectors."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Andy Colthorpe, Pakistan's National Electric Power Regulatory Authority (NEPRA) has approved plans to require bidders in a renewable energy auction to include energy storage.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post Grids, grids, grids, and more: EUPVSEC 2026 appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Pakistan’s regulator approves mandatory energy storage component for renewables  — a notable development in Energy Storage",
+    "Grids, grids, grids, and more: EUPVSEC 2026 — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Andy Colthorpe",
+      "value": "Mark Hutchins",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Pakistan’s regulator approves mandatory energy storage component for renewables ",
+      "date": "2026-09-22",
+      "event": "Grids, grids, grids, and more: EUPVSEC 2026",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "pakistan",
-    "regulator",
+    "grids",
+    "eupvsec",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Pakistan’s regulator approves mandatory energy storage co... | Energy Storage News",
-  "metaDescription": "Pakistan's National Electric Power Regulatory Authority (NEPRA) has approved plans to require bidders in a renewable energy auction to include energy storage.",
-  "keywords": "energy storage, battery, solid-state, grid storage, pakistan, regulator, approves, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Grids, grids, grids, and more: EUPVSEC 2026 | Energy Storage News",
+  "metaDescription": "Now in its 43rd year, the European Photovoltaic Solar Energy Conference (EUPVSEC) got underway this week in Rotterdam. Sessions on the first day point to a E...",
+  "keywords": "energy storage, battery, solid-state, grid storage, grids, more, eupvsec, TechNanoAI, emerging tech news",
+  "featured": false
 }

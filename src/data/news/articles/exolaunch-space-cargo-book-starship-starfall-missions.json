@@ -1,21 +1,21 @@
 {
-  "id": "space-1788778807425-1",
+  "id": "space-1790073164645-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Cape neighbors Stoke and Relativity advance LC-14 and LC-... | Space Exploration News",
-  "excerpt": "Along Missile Row at Cape Canaveral Space Force Station, Stoke Space and Relativity Space are'\nThe post Cape neighbors Stoke and Relativity advance LC-14 and LC-16 toward first flights appeared first ",
-  "date": "2026-09-07",
+  "title": "Exolaunch, Space Cargo book Starship Starfall missions | Space Exploration News",
+  "excerpt": "SpaceX’s disk-shaped Starfall reentry capsule, first flown on Falcon 9 in June, now has two'\nThe post Exolaunch, Space Cargo book Starship Starfall missions appeared first on NASASpaceFlight.com.",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "cape-neighbors-stoke-and-relativity-advance-lc-14-and-lc-16-toward-fir",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/09/cape-neighbors-stoke-relativity-advance-lc-14-lc-16/",
-  "sourceName": "Alejandro Alcantarilla Romera and Chris Bergin",
+  "slug": "exolaunch-space-cargo-book-starship-starfall-missions",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/09/exolaunch-space-cargo-starship-starfall/",
+  "sourceName": "Chris Bergin",
   "body": [
     {
       "type": "p",
-      "text": "Along Missile Row at Cape Canaveral Space Force Station, Stoke Space and Relativity Space are'\nThe post Cape neighbors Stoke and Relativity advance LC-14 and LC-16 toward first flights appeared first on NASASpaceFlight. com."
+      "text": "SpaceX’s disk-shaped Starfall reentry capsule, first flown on Falcon 9 in June, now has two'\nThe post Exolaunch, Space Cargo book Starship Starfall missions appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Alejandro Alcantarilla Romera and Chris Bergin, Along Missile Row at Cape Canaveral Space Force Station, Stoke Space and Relativity Space are'\nThe post Cape neighbors Stoke and Relativity advance LC-14 and LC-16 toward first flights appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Chris Bergin, SpaceX’s disk-shaped Starfall reentry capsule, first flown on Falcon 9 in June, now has two'\nThe post Exolaunch, Space Cargo book Starship Starfall missions appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Cape neighbors Stoke and Relativity advance LC-14 and LC-16 toward first flights — a notable development in Space Exploration",
+    "Exolaunch, Space Cargo book Starship Starfall missions — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Alejandro Alcantarilla Romera and Chris Bergin",
+      "value": "Chris Bergin",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Cape neighbors Stoke and Relativity advance LC-14 and LC-16 toward first flights",
+      "date": "2026-09-22",
+      "event": "Exolaunch, Space Cargo book Starship Starfall missions",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "neighbors",
-    "stoke",
+    "exolaunch",
+    "space",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Cape neighbors Stoke and Relativity advance LC-14 and LC-... | Space Exploration News",
-  "metaDescription": "Along Missile Row at Cape Canaveral Space Force Station, Stoke Space and Relativity Space are'\nThe post Cape neighbors Stoke and Relativity advance LC-14 and...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, cape, neighbors, stoke, TechNanoAI, emerging tech news",
+  "metaTitle": "Exolaunch, Space Cargo book Starship Starfall missions | Space Exploration News",
+  "metaDescription": "SpaceX’s disk-shaped Starfall reentry capsule, first flown on Falcon 9 in June, now has two'\nThe post Exolaunch, Space Cargo book Starship Starfall missions ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, exolaunch, space, cargo, TechNanoAI, emerging tech news",
   "featured": false
 }

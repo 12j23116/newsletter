@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788778811906-1",
+  "id": "robotics-1790073168590-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Pressure sensors can help improve robotic gripping accuracy | Robotics News",
-  "excerpt": "From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking.\nThe post Pressure sensors can help improve robotic gripping ",
-  "date": "2026-09-07",
+  "title": "Boston Dynamics opens Metaplant Application Center to tra... | Robotics News",
+  "excerpt": "The new Robotics Metaplant Application Center is training humanoids as part of Hyundai's Metaplant America in Georgia.\nThe post Boston Dynamics opens Metaplant Application Center to train Atlas humano",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "pressure-sensors-can-help-improve-robotic-gripping-accuracy",
-  "sourceLink": "https://www.therobotreport.com/pressure-sensors-can-help-improve-robotic-gripping-accuracy/",
-  "sourceName": "Faisal Mahmood",
+  "slug": "boston-dynamics-opens-metaplant-application-center-to-train-atlas-huma",
+  "sourceLink": "https://www.therobotreport.com/boston-dynamics-opens-metaplant-application-center-train-atlas-humanoid-robots/",
+  "sourceName": "Eugene Demaitre",
   "body": [
     {
       "type": "p",
-      "text": "From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking. \nThe post Pressure sensors can help improve robotic gripping accuracy appeared first on The Robot Report."
+      "text": "The new Robotics Metaplant Application Center is training humanoids as part of Hyundai's Metaplant America in Georgia. \nThe post Boston Dynamics opens Metaplant Application Center to train Atlas humanoids appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Faisal Mahmood, From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking.\nThe post Pressure sensors can help improve robotic gripping accuracy appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eugene Demaitre, The new Robotics Metaplant Application Center is training humanoids as part of Hyundai's Metaplant America in Georgia.\nThe post Boston Dynamics opens Metaplant Application Center to train Atlas humanoids appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Pressure sensors can help improve robotic gripping accuracy — a notable development in Robotics",
+    "Boston Dynamics opens Metaplant Application Center to train Atlas humanoids — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Faisal Mahmood",
+      "value": "Eugene Demaitre",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Pressure sensors can help improve robotic gripping accuracy",
+      "date": "2026-09-22",
+      "event": "Boston Dynamics opens Metaplant Application Center to train Atlas humanoids",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "pressure",
-    "sensors",
+    "boston",
+    "dynamics",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Pressure sensors can help improve robotic gripping accuracy | Robotics News",
-  "metaDescription": "From first contact through surface deformation, load distribution, and final stable hold, pressure sensors can improve robotic bin picking.\nThe post Pressure...",
-  "keywords": "robotics, humanoid robot, automation, drones, pressure, sensors, help, TechNanoAI, emerging tech news",
+  "metaTitle": "Boston Dynamics opens Metaplant Application Center to tra... | Robotics News",
+  "metaDescription": "The new Robotics Metaplant Application Center is training humanoids as part of Hyundai's Metaplant America in Georgia.\nThe post Boston Dynamics opens Metapla...",
+  "keywords": "robotics, humanoid robot, automation, drones, boston, dynamics, opens, TechNanoAI, emerging tech news",
   "featured": false
 }

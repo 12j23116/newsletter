@@ -1,21 +1,21 @@
 {
-  "id": "energy-1788778810856-4",
+  "id": "energy-1790073168198-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Comoros inaugurates three solar projects | Energy Storage News",
-  "excerpt": "Abu Dhabi-based developers Masdar and Global South Utilities implemented the three solar projects, located across three islands of the Comoros, alongside two battery storage systems and transmission i",
-  "date": "2026-09-07",
+  "title": "Vietnam pushes provinces to accelerate rooftop solar rollout | Energy Storage News",
+  "excerpt": "The Vietnamese government has ordered provinces to accelerate rooftop solar support after most missed a national deadline, even as looser surplus-power rules have yet to produce a single recorded sale",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "comoros-inaugurates-three-solar-projects",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/07/comoros-inaugurates-three-solar-projects/",
-  "sourceName": "Patrick Jowett",
+  "slug": "vietnam-pushes-provinces-to-accelerate-rooftop-solar-rollout",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/22/vietnam-pushes-provinces-to-accelerate-rooftop-solar-rollout/",
+  "sourceName": "Brian Publicover",
   "body": [
     {
       "type": "p",
-      "text": "Abu Dhabi-based developers Masdar and Global South Utilities implemented the three solar projects, located across three islands of the Comoros, alongside two battery storage systems and transmission infrastructure. \nThe post Comoros inaugurates three solar projects appeared first on pv magazine Global."
+      "text": "The Vietnamese government has ordered provinces to accelerate rooftop solar support after most missed a national deadline, even as looser surplus-power rules have yet to produce a single recorded sale. \nThe post Vietnam pushes provinces to accelerate rooftop solar rollout appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Patrick Jowett, Abu Dhabi-based developers Masdar and Global South Utilities implemented the three solar projects, located across three islands of the Comoros, alongside two battery storage systems and transmission infrastructure.\nThe post Comoros inaugurates three solar projects appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Brian Publicover, The Vietnamese government has ordered provinces to accelerate rooftop solar support after most missed a national deadline, even as looser surplus-power rules have yet to produce a single recorded sale.\nThe post Vietnam pushes provinces to accelerate rooftop solar rollout appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Comoros inaugurates three solar projects — a notable development in Energy Storage",
+    "Vietnam pushes provinces to accelerate rooftop solar rollout — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Brian Publicover",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Comoros inaugurates three solar projects",
+      "date": "2026-09-22",
+      "event": "Vietnam pushes provinces to accelerate rooftop solar rollout",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "comoros",
-    "inaugurates",
+    "vietnam",
+    "pushes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Comoros inaugurates three solar projects | Energy Storage News",
-  "metaDescription": "Abu Dhabi-based developers Masdar and Global South Utilities implemented the three solar projects, located across three islands of the Comoros, alongside two...",
-  "keywords": "energy storage, battery, solid-state, grid storage, comoros, inaugurates, three, TechNanoAI, emerging tech news",
+  "metaTitle": "Vietnam pushes provinces to accelerate rooftop solar rollout | Energy Storage News",
+  "metaDescription": "The Vietnamese government has ordered provinces to accelerate rooftop solar support after most missed a national deadline, even as looser surplus-power rules...",
+  "keywords": "energy storage, battery, solid-state, grid storage, vietnam, pushes, provinces, TechNanoAI, emerging tech news",
   "featured": false
 }

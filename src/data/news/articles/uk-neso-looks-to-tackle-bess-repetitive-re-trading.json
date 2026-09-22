@@ -1,21 +1,21 @@
 {
-  "id": "energy-1788778810856-5",
+  "id": "energy-1790073168197-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "EPC Renewables, Cobra to deploy 142 MW/240 MWh solar-plus... | Energy Storage News",
-  "excerpt": "EPC Renewables and Grupo Cobra are planning a 142 MW solar project with 240 MWh of battery storage in Fiji, to be developed in two stages. The Yaqara project is expected to reduce reliance on imported",
-  "date": "2026-09-07",
+  "title": "UK: NESO looks to tackle BESS repetitive re-trading | Energy Storage News",
+  "excerpt": "What is repetitive re-trading (RTT) by BESS in the UK, and what is NESO looking to do about it?",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "epc-renewables-cobra-to-deploy-142-mw240-mwh-solar-plus-storage-projec",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/07/epc-renewables-cobra-to-deploy-142-mw-240-mwh-solar-plus-storage-project-in-fiji/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "uk-neso-looks-to-tackle-bess-repetitive-re-trading",
+  "sourceLink": "https://www.energy-storage.news/uk-neso-looks-to-tackle-bess-repetitive-re-trading/",
+  "sourceName": "Liam Critchley",
   "body": [
     {
       "type": "p",
-      "text": "EPC Renewables and Grupo Cobra are planning a 142 MW solar project with 240 MWh of battery storage in Fiji, to be developed in two stages.  The Yaqara project is expected to reduce reliance on imported diesel while supporting Fiji’s renewable energy targets and creating about 200 local jobs."
+      "text": "What is repetitive re-trading (RTT) by BESS in the UK, and what is NESO looking to do about it?"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post EPC Renewables, Cobra to deploy 142 MW/240 MWh solar-plus-storage project in Fiji appeared first on pv magazine Global."
+      "text": "According to reporting from Liam Critchley, What is repetitive re-trading (RTT) by BESS in the UK, and what is NESO looking to do about it?. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "EPC Renewables, Cobra to deploy 142 MW/240 MWh solar-plus-storage project in Fij — a notable development in Energy Storage",
+    "UK: NESO looks to tackle BESS repetitive re-trading — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Liam Critchley",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "EPC Renewables, Cobra to deploy 142 MW/240 MWh solar-plus-storage project in Fij",
+      "date": "2026-09-22",
+      "event": "UK: NESO looks to tackle BESS repetitive re-trading",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "renewables",
-    "cobra",
+    "looks",
+    "tackle",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "EPC Renewables, Cobra to deploy 142 MW/240 MWh solar-plus... | Energy Storage News",
-  "metaDescription": "EPC Renewables and Grupo Cobra are planning a 142 MW solar project with 240 MWh of battery storage in Fiji, to be developed in two stages. The Yaqara project...",
-  "keywords": "energy storage, battery, solid-state, grid storage, renewables, cobra, deploy, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "UK: NESO looks to tackle BESS repetitive re-trading | Energy Storage News",
+  "metaDescription": "What is repetitive re-trading (RTT) by BESS in the UK, and what is NESO looking to do about it? Solid-state batteries & grid storage. Latest Energy Storage deve",
+  "keywords": "energy storage, battery, solid-state, grid storage, neso, looks, tackle, TechNanoAI, emerging tech news",
+  "featured": true
 }

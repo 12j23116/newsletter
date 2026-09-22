@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1788778807881-2",
+  "id": "biotech-1790073165497-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/novartis-lpa-drug-fails-lower-cardiovas... | Biotechnology News",
-  "excerpt": "Novartis’ Ionis-partnered drug designed to lower levels of Lp(a), a known cardiovascular risk factor, failed to reduce patients’ risk of a heart attack, stroke, or other major cardiovascular event in ",
-  "date": "2026-09-07",
+  "title": "SARS-CoV-2 Protein Fuels Lung Inflammation by Hijacking M... | Biotechnology News",
+  "excerpt": "The SARS-CoV-2 protein ORF8 reprograms macrophages to promote viral replication and lung inflammation. Blocking the ORF8-linked receptor IL-17RA reduced inflammation and fibrosis in mice, pointing to ",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechnovartis-lpa-drug-fails-lower-cardiovascular-risk-closely",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/novartis-lpa-drug-fails-lower-cardiovascular-risk-closely-watched-ph-3-trial",
-  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "slug": "sars-cov-2-protein-fuels-lung-inflammation-by-hijacking-macrophages",
+  "sourceLink": "https://www.genengnews.com/topics/infectious-diseases/sars-cov-2-protein-fuels-lung-inflammation-by-hijacking-macrophages/",
+  "sourceName": "Savannah Wiegel",
   "body": [
     {
       "type": "p",
-      "text": "Novartis’ Ionis-partnered drug designed to lower levels of Lp(a), a known cardiovascular risk factor, failed to reduce patients’ risk of a heart attack, stroke, or other major cardiovascular event in the first late-stage test for a drug meant to tackle the mysterious molecule."
+      "text": "The SARS-CoV-2 protein ORF8 reprograms macrophages to promote viral replication and lung inflammation.  Blocking the ORF8-linked receptor IL-17RA reduced inflammation and fibrosis in mice, pointing to a potential therapeutic target."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, Novartis’ Ionis-partnered drug designed to lower levels of Lp(a), a known cardiovascular risk factor, failed to reduce patients’ risk of a heart attack, stroke, or other major cardiovascular event in the first late-stage test for a drug meant to tackle the mysterious molecule.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post SARS-CoV-2 Protein Fuels Lung Inflammation by Hijacking Macrophages appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/novartis-lpa-drug-fails-lower-cardiovascular-risk-closely-watc — a notable development in Biotechnology",
+    "SARS-CoV-2 Protein Fuels Lung Inflammation by Hijacking Macrophages — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "Savannah Wiegel",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "<a href=\"/biotech/novartis-lpa-drug-fails-lower-cardiovascular-risk-closely-watc",
+      "date": "2026-09-22",
+      "event": "SARS-CoV-2 Protein Fuels Lung Inflammation by Hijacking Macrophages",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "novartis",
+    "protein",
+    "fuels",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/novartis-lpa-drug-fails-lower-cardiovas... | Biotechnology News",
-  "metaDescription": "Novartis’ Ionis-partnered drug designed to lower levels of Lp(a), a known cardiovascular risk factor, failed to reduce patients’ risk of a heart attack, stro...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, novartis, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "SARS-CoV-2 Protein Fuels Lung Inflammation by Hijacking M... | Biotechnology News",
+  "metaDescription": "The SARS-CoV-2 protein ORF8 reprograms macrophages to promote viral replication and lung inflammation. Blocking the ORF8-linked receptor IL-17RA reduced infl...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, sars, protein, fuels, TechNanoAI, emerging tech news",
+  "featured": true
 }

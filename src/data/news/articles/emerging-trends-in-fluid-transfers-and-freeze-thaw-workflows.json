@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1788778807882-5",
+  "id": "biotech-1790073165497-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/year-big-pharmas-pull-back-uk-has-anyth... | Biotechnology News",
-  "excerpt": "September 2025 marked a low point for relations between the U.K. government and Big Pharma. Fierce reached out to the companies involved to see if they've softened their stance.",
-  "date": "2026-09-07",
+  "title": "Emerging Trends in Fluid Transfers and Freeze-Thaw Workflows | Biotechnology News",
+  "excerpt": "In this GEN webinar, our expert speakers will discuss the latest trends, challenges, and innovations shaping fluid transfer and freeze-thaw workflows. \nThe post Emerging Trends in Fluid Transfers and ",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechyear-big-pharmas-pull-back-uk-has-anything-changed-hrefla",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/year-big-pharmas-pull-back-uk-has-anything-changed",
-  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+  "slug": "emerging-trends-in-fluid-transfers-and-freeze-thaw-workflows",
+  "sourceLink": "https://www.genengnews.com/multimedia/webinars/emerging-trends-in-fluid-transfers-and-freeze-thaw-workflows/",
+  "sourceName": "Kathy Vuksanaj",
   "body": [
     {
       "type": "p",
-      "text": "September 2025 marked a low point for relations between the U. K."
+      "text": "In this GEN webinar, our expert speakers will discuss the latest trends, challenges, and innovations shaping fluid transfer and freeze-thaw workflows.  \nThe post Emerging Trends in Fluid Transfers and Freeze-Thaw Workflows appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "government and Big Pharma.  Fierce reached out to the companies involved to see if they've softened their stance."
+      "text": "According to reporting from Kathy Vuksanaj, In this GEN webinar, our expert speakers will discuss the latest trends, challenges, and innovations shaping fluid transfer and freeze-thaw workflows. \nThe post Emerging Trends in Fluid Transfers and Freeze-Thaw Workflows appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/year-big-pharmas-pull-back-uk-has-anything-changed\" hreflang=\" — a notable development in Biotechnology",
+    "Emerging Trends in Fluid Transfers and Freeze-Thaw Workflows — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+      "value": "Kathy Vuksanaj",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "<a href=\"/biotech/year-big-pharmas-pull-back-uk-has-anything-changed\" hreflang=\"",
+      "date": "2026-09-22",
+      "event": "Emerging Trends in Fluid Transfers and Freeze-Thaw Workflows",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "pharmas",
+    "emerging",
+    "trends",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/year-big-pharmas-pull-back-uk-has-anyth... | Biotechnology News",
-  "metaDescription": "September 2025 marked a low point for relations between the U.K. government and Big Pharma. Fierce reached out to the companies involved to see if they've so...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, year, TechNanoAI, emerging tech news",
+  "metaTitle": "Emerging Trends in Fluid Transfers and Freeze-Thaw Workflows | Biotechnology News",
+  "metaDescription": "In this GEN webinar, our expert speakers will discuss the latest trends, challenges, and innovations shaping fluid transfer and freeze-thaw workflows. \nThe p...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, emerging, trends, fluid, TechNanoAI, emerging tech news",
   "featured": false
 }

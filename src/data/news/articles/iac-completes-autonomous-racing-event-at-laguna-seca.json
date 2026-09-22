@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1788778811905-0",
+  "id": "robotics-1790073168590-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Eric Sivertson discusses FPGAs and robot security | Robotics News",
-  "excerpt": "An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security.\nThe post Eric Sivertson discusses FPGAs and robot security appeared first on T",
-  "date": "2026-09-07",
+  "title": "IAC completes autonomous racing event at Laguna Seca | Robotics News",
+  "excerpt": "At Laguna Seca, Unimore Racing won the Indy Autonomous Challenge, marking the IAC's first autonomous car overtakes on a road course.\nThe post IAC completes autonomous racing event at Laguna Seca appea",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "eric-sivertson-discusses-fpgas-and-robot-security",
-  "sourceLink": "https://www.therobotreport.com/eric-sivertson-discusses-fpgas-robot-security/",
+  "slug": "iac-completes-autonomous-racing-event-at-laguna-seca",
+  "sourceLink": "https://www.therobotreport.com/iac-completes-autonomous-racing-event-at-laguna-seca/",
   "sourceName": "Mike Oitzman",
   "body": [
     {
       "type": "p",
-      "text": "An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security. \nThe post Eric Sivertson discusses FPGAs and robot security appeared first on The Robot Report."
+      "text": "At Laguna Seca, Unimore Racing won the Indy Autonomous Challenge, marking the IAC's first autonomous car overtakes on a road course. \nThe post IAC completes autonomous racing event at Laguna Seca appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mike Oitzman, An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security.\nThe post Eric Sivertson discusses FPGAs and robot security appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mike Oitzman, At Laguna Seca, Unimore Racing won the Indy Autonomous Challenge, marking the IAC's first autonomous car overtakes on a road course.\nThe post IAC completes autonomous racing event at Laguna Seca appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Eric Sivertson discusses FPGAs and robot security — a notable development in Robotics",
+    "IAC completes autonomous racing event at Laguna Seca — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Eric Sivertson discusses FPGAs and robot security",
+      "date": "2026-09-22",
+      "event": "IAC completes autonomous racing event at Laguna Seca",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "sivertson",
-    "discusses",
+    "completes",
+    "autonomous",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Eric Sivertson discusses FPGAs and robot security | Robotics News",
-  "metaDescription": "An interview with Eric Sivertson of Lattice Semiconductor about FPGAs and how they can improve robot safety and security.\nThe post Eric Sivertson discusses F...",
-  "keywords": "robotics, humanoid robot, automation, drones, eric, sivertson, discusses, TechNanoAI, emerging tech news",
+  "metaTitle": "IAC completes autonomous racing event at Laguna Seca | Robotics News",
+  "metaDescription": "At Laguna Seca, Unimore Racing won the Indy Autonomous Challenge, marking the IAC's first autonomous car overtakes on a road course.\nThe post IAC completes a...",
+  "keywords": "robotics, humanoid robot, automation, drones, completes, autonomous, racing, TechNanoAI, emerging tech news",
   "featured": true
 }

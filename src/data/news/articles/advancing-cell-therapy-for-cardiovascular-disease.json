@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1788778807881-1",
+  "id": "biotech-1790073165497-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/abbvie-backed-adarx-plans-ipo-fund-arra... | Biotechnology News",
-  "excerpt": "ADARx has reinvigorated its ambitions to go public as the AbbVie-backed biotech looks to fund ongoing clinical trials of a range of next-gen small interfering RNA medicines.",
-  "date": "2026-09-07",
+  "title": "Advancing Cell Therapy for Cardiovascular Disease | Biotechnology News",
+  "excerpt": "In this GEN webinar, our expert speaker Joshua Michael Hare, MD, will examine how therapeutically relevant research is helping shape the development of cell therapies for cardiovascular disease. \nThe ",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechabbvie-backed-adarx-plans-ipo-fund-array-clinical-stage-s",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/abbvie-backed-adarx-plans-ipo-fund-array-clinical-stage-sirna-therapies",
-  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+  "slug": "advancing-cell-therapy-for-cardiovascular-disease",
+  "sourceLink": "https://www.genengnews.com/multimedia/webinars/advancing-cell-therapy-for-cardiovascular-disease/",
+  "sourceName": "Kathy Vuksanaj",
   "body": [
     {
       "type": "p",
-      "text": "ADARx has reinvigorated its ambitions to go public as the AbbVie-backed biotech looks to fund ongoing clinical trials of a range of next-gen small interfering RNA medicines."
+      "text": "In this GEN webinar, our expert speaker Joshua Michael Hare, MD, will examine how therapeutically relevant research is helping shape the development of cell therapies for cardiovascular disease.  \nThe post Advancing Cell Therapy for Cardiovascular Disease appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, ADARx has reinvigorated its ambitions to go public as the AbbVie-backed biotech looks to fund ongoing clinical trials of a range of next-gen small interfering RNA medicines.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Kathy Vuksanaj, In this GEN webinar, our expert speaker Joshua Michael Hare, MD, will examine how therapeutically relevant research is helping shape the development of cell therapies for cardiovascular disease. \nThe post Advancing Cell Therapy for Cardiovascular Disease appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/abbvie-backed-adarx-plans-ipo-fund-array-clinical-stage-sirna- — a notable development in Biotechnology",
+    "Advancing Cell Therapy for Cardiovascular Disease — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+      "value": "Kathy Vuksanaj",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "<a href=\"/biotech/abbvie-backed-adarx-plans-ipo-fund-array-clinical-stage-sirna-",
+      "date": "2026-09-22",
+      "event": "Advancing Cell Therapy for Cardiovascular Disease",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "abbvie",
+    "advancing",
+    "therapy",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/abbvie-backed-adarx-plans-ipo-fund-arra... | Biotechnology News",
-  "metaDescription": "ADARx has reinvigorated its ambitions to go public as the AbbVie-backed biotech looks to fund ongoing clinical trials of a range of next-gen small interferin...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, abbvie, TechNanoAI, emerging tech news",
+  "metaTitle": "Advancing Cell Therapy for Cardiovascular Disease | Biotechnology News",
+  "metaDescription": "In this GEN webinar, our expert speaker Joshua Michael Hare, MD, will examine how therapeutically relevant research is helping shape the development of cell ...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, advancing, cell, therapy, TechNanoAI, emerging tech news",
   "featured": false
 }

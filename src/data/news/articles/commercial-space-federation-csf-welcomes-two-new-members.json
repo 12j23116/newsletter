@@ -1,21 +1,21 @@
 {
-  "id": "space-1788778807424-0",
+  "id": "space-1790073164645-3",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Starbase Infrastructure Advances Toward Flight 14 | Space Exploration News",
-  "excerpt": "SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 14 appeared first on NASASpaceFlight.com.",
-  "date": "2026-09-07",
+  "title": "Commercial Space Federation (CSF) Welcomes Two New Members | Space Exploration News",
+  "excerpt": "September 21, 2026— Washington, D.C.—The Commercial Space Federation (CSF) is pleased to welcome ORBITInsure and Renaissance Strategic Advisors (RSA) as its newest members. ORBITInsure joins CSF as a ",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "starbase-infrastructure-advances-toward-flight-14",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/09/starbase-infrastructure-spacex-flight-14/",
-  "sourceName": "Ryan Weber",
+  "slug": "commercial-space-federation-csf-welcomes-two-new-members",
+  "sourceLink": "https://spacenews.com/commercial-space-federation-csf-welcomes-two-new-members/",
+  "sourceName": "Commercial Space Federation",
   "body": [
     {
       "type": "p",
-      "text": "SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 14 appeared first on NASASpaceFlight. com."
+      "text": "September 21, 2026— Washington, D. C."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ryan Weber, SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 14 appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "—The Commercial Space Federation (CSF) is pleased to welcome ORBITInsure and Renaissance Strategic Advisors (RSA) as its newest members.  ORBITInsure joins CSF as a Space Supply [']\nThe post Commercial Space Federation (CSF) Welcomes Two New Members appeared first on SpaceNews."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Starbase Infrastructure Advances Toward Flight 14 — a notable development in Space Exploration",
+    "Commercial Space Federation (CSF) Welcomes Two New Members — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Ryan Weber",
+      "value": "Commercial Space Federation",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Starbase Infrastructure Advances Toward Flight 14",
+      "date": "2026-09-22",
+      "event": "Commercial Space Federation (CSF) Welcomes Two New Members",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "starbase",
-    "infrastructure",
+    "commercial",
+    "space",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Starbase Infrastructure Advances Toward Flight 14 | Space Exploration News",
-  "metaDescription": "SpaceX is still building out assembly, test, and launch infrastructure at Starbase while Flight 14'\nThe post Starbase Infrastructure Advances Toward Flight 1...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, starbase, infrastructure, advances, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Commercial Space Federation (CSF) Welcomes Two New Members | Space Exploration News",
+  "metaDescription": "September 21, 2026— Washington, D.C.—The Commercial Space Federation (CSF) is pleased to welcome ORBITInsure and Renaissance Strategic Advisors (RSA) as its ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, commercial, space, federation, TechNanoAI, emerging tech news",
+  "featured": false
 }

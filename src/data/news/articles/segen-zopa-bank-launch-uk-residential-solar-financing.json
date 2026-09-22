@@ -1,21 +1,21 @@
 {
-  "id": "energy-1788778810854-1",
+  "id": "energy-1790073168197-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Mongolia completes first renewable energy auction | Energy Storage News",
-  "excerpt": "The auction procured 220 MW of solar and 135 MW/440 MWh of battery energy storage across five projects. A second auction, covering renewable energy projects with a stabilisation solution in Mongolia’s",
-  "date": "2026-09-07",
+  "title": "Segen, Zopa Bank launch UK residential solar financing | Energy Storage News",
+  "excerpt": "UK solar distributor Segen has launched residential solar and battery financing with Zopa Bank, offering loans of two to 10 years at a representative annual percentage rate of 9.9%. Integrated into Se",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "mongolia-completes-first-renewable-energy-auction",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/07/mongolia-completes-first-renewable-energy-auction/",
-  "sourceName": "Patrick Jowett",
+  "slug": "segen-zopa-bank-launch-uk-residential-solar-financing",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/22/segen-zopa-bank-launch-uk-residential-solar-financing/",
+  "sourceName": "Matthew Lynas",
   "body": [
     {
       "type": "p",
-      "text": "The auction procured 220 MW of solar and 135 MW/440 MWh of battery energy storage across five projects.  A second auction, covering renewable energy projects with a stabilisation solution in Mongolia’s Gobi region, is scheduled to take place on September 11."
+      "text": "UK solar distributor Segen has launched residential solar and battery financing with Zopa Bank, offering loans of two to 10 years at a representative annual percentage rate of 9. 9%."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Mongolia completes first renewable energy auction appeared first on pv magazine Global."
+      "text": "Integrated into Segen’s digital proposal platform, the product allows homeowners to apply for financing during the sales process while reducing upfront hardware costs for installers. \nThe post Segen, Zopa Bank launch UK residential solar financing appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Mongolia completes first renewable energy auction — a notable development in Energy Storage",
+    "Segen, Zopa Bank launch UK residential solar financing — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Matthew Lynas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Mongolia completes first renewable energy auction",
+      "date": "2026-09-22",
+      "event": "Segen, Zopa Bank launch UK residential solar financing",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "mongolia",
-    "completes",
+    "segen",
+    "launch",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Mongolia completes first renewable energy auction | Energy Storage News",
-  "metaDescription": "The auction procured 220 MW of solar and 135 MW/440 MWh of battery energy storage across five projects. A second auction, covering renewable energy projects ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, mongolia, completes, first, TechNanoAI, emerging tech news",
+  "metaTitle": "Segen, Zopa Bank launch UK residential solar financing | Energy Storage News",
+  "metaDescription": "UK solar distributor Segen has launched residential solar and battery financing with Zopa Bank, offering loans of two to 10 years at a representative annual ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, segen, zopa, bank, TechNanoAI, emerging tech news",
   "featured": false
 }

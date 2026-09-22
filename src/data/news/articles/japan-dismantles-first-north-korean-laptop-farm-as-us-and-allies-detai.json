@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1788778806481-5",
+  "id": "cybersecurity-1790073163536-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "N-able patches max severity N-central flaw amid ongoing a... | Cybersecurity News",
-  "excerpt": "N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM) platform. [...]",
-  "date": "2026-09-07",
+  "title": "Japan Dismantles First North Korean Laptop Farm as US and... | Cybersecurity News",
+  "excerpt": "The US, Japan, Germany and Australia have published a joint report detailing the scope of North Korea’s WaterPlum campaign.\nThe post Japan Dismantles First North Korean Laptop Farm as US and Allies De",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/",
-  "sourceName": "Sergiu Gatlan",
+  "slug": "japan-dismantles-first-north-korean-laptop-farm-as-us-and-allies-detai",
+  "sourceLink": "https://www.securityweek.com/japan-dismantles-first-north-korean-laptop-farm-as-us-and-allies-detail-wider-scheme/",
+  "sourceName": "Eduard Kovacs",
   "body": [
     {
       "type": "p",
-      "text": "N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM) platform.  [..."
+      "text": "The US, Japan, Germany and Australia have published a joint report detailing the scope of North Korea’s WaterPlum campaign. \nThe post Japan Dismantles First North Korean Laptop Farm as US and Allies Detail Wider Scheme appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sergiu Gatlan, N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM) platform. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eduard Kovacs, The US, Japan, Germany and Australia have published a joint report detailing the scope of North Korea’s WaterPlum campaign.\nThe post Japan Dismantles First North Korean Laptop Farm as US and Allies Detail Wider Scheme appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "N-able patches max severity N-central flaw amid ongoing attacks — a notable development in Cybersecurity",
+    "Japan Dismantles First North Korean Laptop Farm as US and Allies Detail Wider Sc — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Sergiu Gatlan",
+      "value": "Eduard Kovacs",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "N-able patches max severity N-central flaw amid ongoing attacks",
+      "date": "2026-09-22",
+      "event": "Japan Dismantles First North Korean Laptop Farm as US and Allies Detail Wider Sc",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "patches",
-    "severity",
+    "japan",
+    "dismantles",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "N-able patches max severity N-central flaw amid ongoing a... | Cybersecurity News",
-  "metaDescription": "N-able has released an emergency hotfix for a maximum-severity remote code execution (RCE) flaw affecting its N-central remote monitoring and management (RMM...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, able, patches, severity, TechNanoAI, emerging tech news",
+  "metaTitle": "Japan Dismantles First North Korean Laptop Farm as US and... | Cybersecurity News",
+  "metaDescription": "The US, Japan, Germany and Australia have published a joint report detailing the scope of North Korea’s WaterPlum campaign.\nThe post Japan Dismantles First N...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, japan, dismantles, first, TechNanoAI, emerging tech news",
   "featured": false
 }

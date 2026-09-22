@@ -1,21 +1,21 @@
 {
-  "id": "energy-1788778810855-2",
+  "id": "energy-1790073168198-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Tunisia allocates 455 MW of PV in sixth licensing round | Energy Storage News",
-  "excerpt": "Tunisia approved 309 renewable energy projects totaling 455 MW under its authorization scheme, following a heavily oversubscribed 200 MW tender. The projects will sell electricity exclusively to natio",
-  "date": "2026-09-07",
+  "title": "AI-assisted method maps PV module losses from a single lu... | Energy Storage News",
+  "excerpt": "An international research team has developed an AI-assisted method that quantifies PV module power losses from a single luminescence image. The approach achieved an overall error of around 0.5% in tes",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "tunisia-allocates-455-mw-of-pv-in-sixth-licensing-round",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/07/tunisia-allocates-455-mw-of-pv-in-sixth-licensing-round/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "ai-assisted-method-maps-pv-module-losses-from-a-single-luminescence-im",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/22/ai-assisted-method-maps-pv-module-losses-from-a-single-luminescence-image/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "Tunisia approved 309 renewable energy projects totaling 455 MW under its authorization scheme, following a heavily oversubscribed 200 MW tender.  The projects will sell electricity exclusively to national utility STEG at tariffs ranging from $0."
+      "text": "An international research team has developed an AI-assisted method that quantifies PV module power losses from a single luminescence image.  The approach achieved an overall error of around 0."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "049/kWh to $0. 074/kWh."
-    },
-    {
-      "type": "p",
-      "text": "The post Tunisia allocates 455 MW of PV in sixth licensing round appeared first on pv magazine Global."
+      "text": "5% in tests on 300 field-retrieved modules and was demonstrated using drone-based imaging at a 186 kW solar farm. \nThe post AI-assisted method maps PV module losses from a single luminescence image appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Tunisia allocates 455 MW of PV in sixth licensing round — a notable development in Energy Storage",
+    "AI-assisted method maps PV module losses from a single luminescence image — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -124,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Tunisia allocates 455 MW of PV in sixth licensing round",
+      "date": "2026-09-22",
+      "event": "AI-assisted method maps PV module losses from a single luminescence image",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "tunisia",
-    "allocates",
+    "assisted",
+    "method",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Tunisia allocates 455 MW of PV in sixth licensing round | Energy Storage News",
-  "metaDescription": "Tunisia approved 309 renewable energy projects totaling 455 MW under its authorization scheme, following a heavily oversubscribed 200 MW tender. The projects...",
-  "keywords": "energy storage, battery, solid-state, grid storage, tunisia, allocates, sixth, TechNanoAI, emerging tech news",
+  "metaTitle": "AI-assisted method maps PV module losses from a single lu... | Energy Storage News",
+  "metaDescription": "An international research team has developed an AI-assisted method that quantifies PV module power losses from a single luminescence image. The approach achi...",
+  "keywords": "energy storage, battery, solid-state, grid storage, assisted, method, maps, TechNanoAI, emerging tech news",
   "featured": false
 }

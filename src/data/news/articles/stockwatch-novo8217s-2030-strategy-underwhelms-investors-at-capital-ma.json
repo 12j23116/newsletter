@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1788778807881-3",
+  "id": "biotech-1790073165498-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/pharma/ionis-breakthrough-alexander-disease-app... | Biotechnology News",
-  "excerpt": "After Jenny Pearson’s daughter Elise first had a seizure at 16 months old, an MRI came back clean—her brain “looked beautiful,” Pearson recalled to Fierce. But a follow-up scan a year later, just days",
-  "date": "2026-09-07",
+  "title": "StockWatch: Novo's 2030 Strategy Underwhelms Investors at... | Biotechnology News",
+  "excerpt": "Novo said it planned to launch “more than five multi-blockbusters” or drugs with multiple billions of dollars in sales every year through 2030, and generate more than DKK 150 billion (just over $23 bi",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefpharmaionis-breakthrough-alexander-disease-approval-establishes-",
-  "sourceLink": "https://www.fiercebiotech.com/pharma/ionis-breakthrough-alexander-disease-approval-establishes-pillar-rare-disease-pipeline",
-  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "slug": "stockwatch-novo8217s-2030-strategy-underwhelms-investors-at-capital-ma",
+  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/stockwatch-novos-2030-strategy-underwhelms-investors-at-capital-markets-day/",
+  "sourceName": "Alex Philippidis",
   "body": [
     {
       "type": "p",
-      "text": "After Jenny Pearson’s daughter Elise first had a seizure at 16 months old, an MRI came back clean—her brain “looked beautiful,” Pearson recalled to Fierce.  But a follow-up scan a year later, just days before Thanksgiving, showed her frontal lobe was now awash in white splotches."
+      "text": "Novo said it planned to launch “more than five multi-blockbusters” or drugs with multiple billions of dollars in sales every year through 2030, and generate more than DKK 150 billion (just over $23 billion) in risk-adjusted pipeline sales by 2035. \nThe post StockWatch: Novo's 2030 Strategy Underwhelms Investors at Capital Markets Day appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "A genetic test the week before Christmas gave a troubling diagnosis: Alexander disease."
+      "text": "According to reporting from Alex Philippidis, Novo said it planned to launch “more than five multi-blockbusters” or drugs with multiple billions of dollars in sales every year through 2030, and generate more than DKK 150 billion (just over $23 billion) in risk-adjusted pipeline sales by 2035.\nThe post StockWatch: Novo's 2030 Strategy Underwhelms Investors at Capital Markets Day appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/pharma/ionis-breakthrough-alexander-disease-approval-establishes-pilla — a notable development in Biotechnology",
+    "StockWatch: Novo's 2030 Strategy Underwhelms Investors at Capital Markets Day — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "Alex Philippidis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "<a href=\"/pharma/ionis-breakthrough-alexander-disease-approval-establishes-pilla",
+      "date": "2026-09-22",
+      "event": "StockWatch: Novo's 2030 Strategy Underwhelms Investors at Capital Markets Day",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "pharma",
-    "ionis",
+    "stockwatch",
+    "strategy",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/pharma/ionis-breakthrough-alexander-disease-app... | Biotechnology News",
-  "metaDescription": "After Jenny Pearson’s daughter Elise first had a seizure at 16 months old, an MRI came back clean—her brain “looked beautiful,” Pearson recalled to Fierce. B...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, pharma, ionis, TechNanoAI, emerging tech news",
+  "metaTitle": "StockWatch: Novo's 2030 Strategy Underwhelms Investors at... | Biotechnology News",
+  "metaDescription": "Novo said it planned to launch “more than five multi-blockbusters” or drugs with multiple billions of dollars in sales every year through 2030, and generate ...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, stockwatch, novo, strategy, TechNanoAI, emerging tech news",
   "featured": false
 }

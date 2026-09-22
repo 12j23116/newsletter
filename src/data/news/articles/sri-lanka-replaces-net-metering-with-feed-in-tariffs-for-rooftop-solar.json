@@ -1,21 +1,21 @@
 {
-  "id": "energy-1788778810855-3",
+  "id": "energy-1790073168198-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Switzerland has 1,860 active local electricity communities | Energy Storage News",
-  "excerpt": "Switzerland has around 1,860 active local electricity communities just six months after their introduction, highlighting strong early uptake despite regulatory and administrative hurdles.\nThe post Swi",
-  "date": "2026-09-07",
+  "title": "Sri Lanka replaces net metering with feed-in tariffs for ... | Energy Storage News",
+  "excerpt": "Sri Lanka has discontinued net metering for new rooftop solar systems, requiring new installations to operate under its Net Plus feed-in tariff scheme with agreements capped at 12 years. The change co",
+  "date": "2026-09-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "switzerland-has-1860-active-local-electricity-communities",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/07/switzerland-now-has-1860-active-local-electricity-communities/",
+  "slug": "sri-lanka-replaces-net-metering-with-feed-in-tariffs-for-rooftop-solar",
+  "sourceLink": "https://www.pv-magazine.com/2026/09/22/sri-lanka-replaces-net-metering-with-feed-in-tariffs-for-rooftop-solar/",
   "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Switzerland has around 1,860 active local electricity communities just six months after their introduction, highlighting strong early uptake despite regulatory and administrative hurdles. \nThe post Switzerland has 1,860 active local electricity communities appeared first on pv magazine Global."
+      "text": "Sri Lanka has discontinued net metering for new rooftop solar systems, requiring new installations to operate under its Net Plus feed-in tariff scheme with agreements capped at 12 years.  The change comes as the country’s rooftop PV capacity reached 1."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Emiliano Bellini, Switzerland has around 1,860 active local electricity communities just six months after their introduction, highlighting strong early uptake despite regulatory and administrative hurdles.\nThe post Switzerland has 1,860 active local electricity communities appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "94 GW at the end of 2025, following rapid growth in installations and generation. \nThe post Sri Lanka replaces net metering with feed-in tariffs for rooftop solar appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Switzerland has 1,860 active local electricity communities — a notable development in Energy Storage",
+    "Sri Lanka replaces net metering with feed-in tariffs for rooftop solar — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-07",
-      "event": "Switzerland has 1,860 active local electricity communities",
+      "date": "2026-09-22",
+      "event": "Sri Lanka replaces net metering with feed-in tariffs for rooftop solar",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "switzerland",
-    "active",
+    "lanka",
+    "replaces",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Switzerland has 1,860 active local electricity communities | Energy Storage News",
-  "metaDescription": "Switzerland has around 1,860 active local electricity communities just six months after their introduction, highlighting strong early uptake despite regulato...",
-  "keywords": "energy storage, battery, solid-state, grid storage, switzerland, active, local, TechNanoAI, emerging tech news",
+  "metaTitle": "Sri Lanka replaces net metering with feed-in tariffs for ... | Energy Storage News",
+  "metaDescription": "Sri Lanka has discontinued net metering for new rooftop solar systems, requiring new installations to operate under its Net Plus feed-in tariff scheme with a...",
+  "keywords": "energy storage, battery, solid-state, grid storage, lanka, replaces, metering, TechNanoAI, emerging tech news",
   "featured": false
 }
