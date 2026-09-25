@@ -1,21 +1,21 @@
 {
-  "id": "bci-1790333243227-4",
+  "id": "bci-1790333243226-0",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
-  "title": "A burst of “pink noise” may lead to more restorative sleep | Brain-Computer Interfaces News",
-  "excerpt": "Delivered at just the right time, this type of auditory stimulus can strengthen the flow of cerebrospinal fluid, which clears debris from the brain and keeps it healthy.",
+  "title": "Estimating suicide risk from text | Brain-Computer Interfaces News",
+  "excerpt": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions.",
   "date": "2026-09-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
-  "slug": "a-burst-of-pink-noise-may-lead-to-more-restorative-sleep",
-  "sourceLink": "https://news.mit.edu/2026/pink-noise-burst-may-mean-more-restorative-sleep-0909",
-  "sourceName": "Anne Trafton | MIT News",
+  "slug": "estimating-suicide-risk-from-text",
+  "sourceLink": "https://news.mit.edu/2026/estimating-suicide-risk-from-text-0924",
+  "sourceName": "Jennifer Michalowski | McGovern Institute for Brain Research",
   "body": [
     {
       "type": "p",
-      "text": "Delivered at just the right time, this type of auditory stimulus can strengthen the flow of cerebrospinal fluid, which clears debris from the brain and keeps it healthy."
+      "text": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anne Trafton | MIT News, Delivered at just the right time, this type of auditory stimulus can strengthen the flow of cerebrospinal fluid, which clears debris from the brain and keeps it healthy.. The development represents a notable step forward in the Brain-Computer Interfaces landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Jennifer Michalowski | McGovern Institute for Brain Research, A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions.. The development represents a notable step forward in the Brain-Computer Interfaces landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "A burst of “pink noise” may lead to more restorative sleep — a notable development in Brain-Computer Interfaces",
+    "Estimating suicide risk from text — a notable development in Brain-Computer Interfaces",
     "The brain-computer interfaces sector continues to accelerate, with neural implants & eeg control driving rapid progress",
     "Industry context: Brain-computer interfaces are entering clinical trials at scale, with Neuralink, Synchron, and Preci...",
     "Challenges remain: Biocompatibility, long-term implant stability, decoding bandwidth, and ethical f...",
@@ -120,7 +120,7 @@
       "change": "Neural implants & EEG control"
     },
     {
-      "value": "Anne Trafton | MIT News",
+      "value": "Jennifer Michalowski | McGovern Institute for Brain Research",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -158,7 +158,7 @@
     },
     {
       "date": "2026-09-25",
-      "event": "A burst of “pink noise” may lead to more restorative sleep",
+      "event": "Estimating suicide risk from text",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "brain-computer interface",
     "BCI",
-    "burst",
-    "noise",
+    "estimating",
+    "suicide",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "A burst of “pink noise” may lead to more restorative sleep | Brain-Computer Interfaces News",
-  "metaDescription": "Delivered at just the right time, this type of auditory stimulus can strengthen the flow of cerebrospinal fluid, which clears debris from the brain and keeps...",
-  "keywords": "brain-computer interface, BCI, neural implant, Neuralink, burst, pink, noise, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Estimating suicide risk from text | Brain-Computer Interfaces News",
+  "metaDescription": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions.",
+  "keywords": "brain-computer interface, BCI, neural implant, Neuralink, estimating, suicide, risk, TechNanoAI, emerging tech news",
+  "featured": true
 }

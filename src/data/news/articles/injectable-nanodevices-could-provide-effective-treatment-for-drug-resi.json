@@ -1,11 +1,11 @@
 {
-  "id": "bci-1789035241065-0",
+  "id": "bci-1790333243227-3",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Injectable nanodevices could provide effective treatment ... | Brain-Computer Interfaces News",
   "excerpt": "MIT researchers show implanted nanoantennas can be activated wirelessly to kill brain cancer cells without damage to healthy tissue.",
-  "date": "2026-09-10",
+  "date": "2026-09-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-10",
+      "date": "2026-09-25",
       "event": "Injectable nanodevices could provide effective treatment for drug-resistant glio",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Injectable nanodevices could provide effective treatment ... | Brain-Computer Interfaces News",
   "metaDescription": "MIT researchers show implanted nanoantennas can be activated wirelessly to kill brain cancer cells without damage to healthy tissue.",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, injectable, nanodevices, could, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
