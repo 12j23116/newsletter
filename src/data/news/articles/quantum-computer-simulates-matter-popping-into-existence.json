@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1789206337192-1",
+  "id": "quantum-1790506834677-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Who’s News: Strategic Appointments at Q.ANT, Qtonic Quant... | Quantum Computing News",
-  "excerpt": "Q.ANT appointed Joerg Behrend as VP Hardware to lead NPU production, Qtonic Quantum brought in Gina Fratarcangeli as Senior Advisor for AI Transformation and Global Alliances, and QuantrolOx named Sri",
-  "date": "2026-09-12",
+  "title": "Quantum computer simulates matter “popping into existence” | Quantum Computing News",
+  "excerpt": "Scientists recreated a particle-forming process linked to the extreme physics of the early universe using a 13-ion quantum simulator. The breakthrough suggests quantum computers could eventually help ",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "whos-news-strategic-appointments-at-qant-qtonic-quantum-quantrolox-and",
-  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-q-ant-qtonic-quantum-quantrolox-and-leiden-cryogenics/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "quantum-computer-simulates-matter-popping-into-existence",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260925005416.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Q. ANT appointed Joerg Behrend as VP Hardware to lead NPU production, Qtonic Quantum brought in Gina Fratarcangeli as Senior Advisor for AI Transformation and Global Alliances, and QuantrolOx named Srishti Mahhajan as Global Head of Strategy & Corporate Development."
+      "text": "Scientists recreated a particle-forming process linked to the extreme physics of the early universe using a 13-ion quantum simulator.  The breakthrough suggests quantum computers could eventually help researchers investigate how matter formed and evolved after the Big Bang."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Additionally, Eric Kievit is the new CEO of Leiden Cryogenics, with founder Giorgio Frossati moving to a senior scientist role. \nThe post Who’s News: Strategic Appointments at Q."
+      "text": "According to reporting from sciencedaily.com, Scientists recreated a particle-forming process linked to the extreme physics of the early universe using a 13-ion quantum simulator. The breakthrough suggests quantum computers could eventually help researchers investigate how matter formed and evolved after the Big Bang.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Who’s News: Strategic Appointments at Q.ANT, Qtonic Quantum, QuantrolOx, and Lei — a notable development in Quantum Computing",
+    "Quantum computer simulates matter “popping into existence” — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Who’s News: Strategic Appointments at Q.ANT, Qtonic Quantum, QuantrolOx, and Lei",
+      "date": "2026-09-27",
+      "event": "Quantum computer simulates matter “popping into existence”",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "strategic",
-    "appointments",
+    "quantum",
+    "computer",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Who’s News: Strategic Appointments at Q.ANT, Qtonic Quant... | Quantum Computing News",
-  "metaDescription": "Q.ANT appointed Joerg Behrend as VP Hardware to lead NPU production, Qtonic Quantum brought in Gina Fratarcangeli as Senior Advisor for AI Transformation and...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Quantum computer simulates matter “popping into existence” | Quantum Computing News",
+  "metaDescription": "Scientists recreated a particle-forming process linked to the extreme physics of the early universe using a 13-ion quantum simulator. The breakthrough sugges...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, computer, simulates, TechNanoAI, emerging tech news",
+  "featured": true
 }

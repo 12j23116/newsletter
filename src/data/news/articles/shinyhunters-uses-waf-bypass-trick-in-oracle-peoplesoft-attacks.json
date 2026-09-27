@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1789206330420-3",
+  "id": "cybersecurity-1790506829106-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Passkey-themed phishing attacks lead to Microsoft 365 dat... | Cybersecurity News",
-  "excerpt": "Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks to compromise corporate Microsoft accounts ",
-  "date": "2026-09-12",
+  "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft a... | Cybersecurity News",
+  "excerpt": "The ShinyHunters extortion gang is using a URL-encoding trick to bypass web application firewall rules that mitigate the Oracle PeopleSoft CVE-2026-35273 flaw, allowing the threat actors to resume wid",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
+  "slug": "shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
   "sourceName": "Lawrence Abrams",
   "body": [
     {
       "type": "p",
-      "text": "Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks to compromise corporate Microsoft accounts and steal data from Microsoft 365 services.  [..."
+      "text": "The ShinyHunters extortion gang is using a URL-encoding trick to bypass web application firewall rules that mitigate the Oracle PeopleSoft CVE-2026-35273 flaw, allowing the threat actors to resume widespread exploitation of a flaw on vulnerable servers.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks to compromise corporate Microsoft accounts and steal data from Microsoft 365 services. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lawrence Abrams, The ShinyHunters extortion gang is using a URL-encoding trick to bypass web application firewall rules that mitigate the Oracle PeopleSoft CVE-2026-35273 flaw, allowing the threat actors to resume widespread exploitation of a flaw on vulnerable servers. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Passkey-themed phishing attacks lead to Microsoft 365 data theft — a notable development in Cybersecurity",
+    "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
+      "date": "2026-09-27",
+      "event": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "passkey",
-    "themed",
+    "shinyhunters",
+    "bypass",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Passkey-themed phishing attacks lead to Microsoft 365 dat... | Cybersecurity News",
-  "metaDescription": "Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks ...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, passkey, themed, phishing, TechNanoAI, emerging tech news",
+  "metaTitle": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft a... | Cybersecurity News",
+  "metaDescription": "The ShinyHunters extortion gang is using a URL-encoding trick to bypass web application firewall rules that mitigate the Oracle PeopleSoft CVE-2026-35273 fla...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, shinyhunters, uses, bypass, TechNanoAI, emerging tech news",
   "featured": false
 }

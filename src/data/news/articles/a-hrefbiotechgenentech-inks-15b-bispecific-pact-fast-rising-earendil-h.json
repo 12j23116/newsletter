@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1789206332288-0",
+  "id": "biotech-1790506831157-5",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Bone Marrow-on-a-Chip Model Offers New Window Into Immune... | Biotechnology News",
-  "excerpt": "By reproducing elements of human bone marrow on a chip, scientists have created a new tool that will help them gain new insights into how immune cells develop and function. \nThe post Bone Marrow-on-a-",
-  "date": "2026-09-12",
+  "title": "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast... | Biotechnology News",
+  "excerpt": "Roche’s Genentech is paying Earendil Labs $55 million upfront to discover and develop multiple bispecific antibodies. The deal, which focuses on oncology, includes milestones that could take the deal'",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "bone-marrow-on-a-chip-model-offers-new-window-into-immune-cell-develop",
-  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/bone-marrow-on-a-chip-model-offers-new-window-into-immune-cell-development-and-behavior/",
-  "sourceName": "Uduak Thomas",
+  "slug": "a-hrefbiotechgenentech-inks-15b-bispecific-pact-fast-rising-earendil-h",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/genentech-inks-15b-bispecific-pact-fast-rising-earendil",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "By reproducing elements of human bone marrow on a chip, scientists have created a new tool that will help them gain new insights into how immune cells develop and function.  \nThe post Bone Marrow-on-a-Chip Model Offers New Window Into Immune Cell Development and Behavior appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Roche’s Genentech is paying Earendil Labs $55 million upfront to discover and develop multiple bispecific antibodies.  The deal, which focuses on oncology, includes milestones that could take the deal's value above $1."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Uduak Thomas, By reproducing elements of human bone marrow on a chip, scientists have created a new tool that will help them gain new insights into how immune cells develop and function. \nThe post Bone Marrow-on-a-Chip Model Offers New Window Into Immune Cell Development and Behavior appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "5 billion."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Bone Marrow-on-a-Chip Model Offers New Window Into Immune Cell Development and B — a notable development in Biotechnology",
+    "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast-rising-earendil\" hrefl — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Uduak Thomas",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Bone Marrow-on-a-Chip Model Offers New Window Into Immune Cell Development and B",
+      "date": "2026-09-27",
+      "event": "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast-rising-earendil\" hrefl",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "marrow",
-    "model",
+    "biotech",
+    "genentech",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Bone Marrow-on-a-Chip Model Offers New Window Into Immune... | Biotechnology News",
-  "metaDescription": "By reproducing elements of human bone marrow on a chip, scientists have created a new tool that will help them gain new insights into how immune cells develo...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, bone, marrow, chip, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast... | Biotechnology News",
+  "metaDescription": "Roche’s Genentech is paying Earendil Labs $55 million upfront to discover and develop multiple bispecific antibodies. The deal, which focuses on oncology, in...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, genentech, TechNanoAI, emerging tech news",
+  "featured": false
 }

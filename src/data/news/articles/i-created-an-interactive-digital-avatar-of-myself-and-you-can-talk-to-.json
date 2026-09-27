@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789206329629-1",
+  "id": "ai-1790506828636-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Y Combinator's Garry Tan wants US open-weight AI labs to ... | AI News",
-  "excerpt": "Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U.S. a more robust set of open-weight options that aren’t Chinese.",
-  "date": "2026-09-12",
+  "title": "I created an interactive digital avatar of myself — and y... | AI News",
+  "excerpt": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "y-combinator8217s-garry-tan-wants-us-open-weight-ai-labs-to-8216distil",
-  "sourceLink": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-  "sourceName": "Julie Bort",
+  "slug": "i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-",
+  "sourceLink": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
+  "sourceName": "Dominic-Madori Davis",
   "body": [
     {
       "type": "p",
-      "text": "Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U. S."
+      "text": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "a more robust set of open-weight options that aren’t Chinese."
+      "text": "According to reporting from Dominic-Madori Davis, After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Y Combinator's Garry Tan wants US open-weight AI labs to 'distill' frontier mode — a notable development in AI",
+    "I created an interactive digital avatar of myself — and you can talk to it — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Julie Bort",
+      "value": "Dominic-Madori Davis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Y Combinator's Garry Tan wants US open-weight AI labs to 'distill' frontier mode",
+      "date": "2026-09-27",
+      "event": "I created an interactive digital avatar of myself — and you can talk to it",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "combinator",
-    "garry",
+    "created",
+    "interactive",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Y Combinator's Garry Tan wants US open-weight AI labs to ... | AI News",
-  "metaDescription": "Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U.S. a more robust set o...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, combinator, garry, wants, TechNanoAI, emerging tech news",
+  "metaTitle": "I created an interactive digital avatar of myself — and y... | AI News",
+  "metaDescription": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, created, interactive, digital, TechNanoAI, emerging tech news",
   "featured": false
 }

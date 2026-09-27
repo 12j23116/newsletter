@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1789206332288-1",
+  "id": "biotech-1790506831157-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "CloudScope Enables Continuous Remote Monitoring of Brain ... | Biotechnology News",
-  "excerpt": "Johns Hopkins researchers developed CloudScope, a cloud-based microscope enabling continuous, remote brain imaging in freely moving mice, revealing disease progression, seizures, cellular changes and ",
-  "date": "2026-09-12",
+  "title": "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-a... | Biotechnology News",
+  "excerpt": "Novo has struck a 1.17 billion euro ($1.3 billion) deal to combine Nanexa’s long-acting injectable drug delivery platform with its obesity and Type 2 diabetes drugs.",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "cloudscope-enables-continuous-remote-monitoring-of-brain-activity-in-f",
-  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/cloudscope-enables-continuous-remote-monitoring-of-brain-activity-in-freely-moving-mice/",
-  "sourceName": "Julianna LeMieux, PhD",
+  "slug": "a-hrefbiotechnovo-inks-13b-nanexa-deal-unlock-long-acting-obesity-inje",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/novo-inks-13b-nanexa-deal-unlock-long-acting-obesity-injectables",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "Johns Hopkins researchers developed CloudScope, a cloud-based microscope enabling continuous, remote brain imaging in freely moving mice, revealing disease progression, seizures, cellular changes and behavior over extended periods. \nThe post CloudScope Enables Continuous Remote Monitoring of Brain Activity in Freely Moving Mice appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Novo has struck a 1. 17 billion euro ($1."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julianna LeMieux, PhD, Johns Hopkins researchers developed CloudScope, a cloud-based microscope enabling continuous, remote brain imaging in freely moving mice, revealing disease progression, seizures, cellular changes and behavior over extended periods.\nThe post CloudScope Enables Continuous Remote Monitoring of Brain Activity in Freely Moving Mice appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "3 billion) deal to combine Nanexa’s long-acting injectable drug delivery platform with its obesity and Type 2 diabetes drugs."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "CloudScope Enables Continuous Remote Monitoring of Brain Activity in Freely Movi — a notable development in Biotechnology",
+    "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-acting-obesity-injectabl — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Julianna LeMieux, PhD",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "CloudScope Enables Continuous Remote Monitoring of Brain Activity in Freely Movi",
+      "date": "2026-09-27",
+      "event": "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-acting-obesity-injectabl",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "cloudscope",
-    "enables",
+    "biotech",
+    "nanexa",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "CloudScope Enables Continuous Remote Monitoring of Brain ... | Biotechnology News",
-  "metaDescription": "Johns Hopkins researchers developed CloudScope, a cloud-based microscope enabling continuous, remote brain imaging in freely moving mice, revealing disease p...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, cloudscope, enables, continuous, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-a... | Biotechnology News",
+  "metaDescription": "Novo has struck a 1.17 billion euro ($1.3 billion) deal to combine Nanexa’s long-acting injectable drug delivery platform with its obesity and Type 2 diabete...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, novo, TechNanoAI, emerging tech news",
   "featured": false
 }

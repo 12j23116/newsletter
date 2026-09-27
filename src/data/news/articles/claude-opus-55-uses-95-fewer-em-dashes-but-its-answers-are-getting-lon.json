@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1789206330420-4",
+  "id": "cybersecurity-1790506829107-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Phishing Research Challenges Conventional Security Awaren... | Cybersecurity News",
-  "excerpt": "Analysis of 2.47 million simulated attacks shows why organizations should measure credential leaks and reporting, not just clicks.\nThe post Phishing Research Challenges Conventional Security Awareness",
-  "date": "2026-09-12",
+  "title": "Claude Opus 5.5 uses 95% fewer em dashes, but its answers... | Cybersecurity News",
+  "excerpt": "Anthropic's Claude Opus 5.5 appears to be changing how it writes, with new analysis showing fewer obvious AI writing patterns, shorter sentences, and simpler wording compared with Opus 5. [...]",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "phishing-research-challenges-conventional-security-awareness-testing",
-  "sourceLink": "https://www.securityweek.com/phishing-research-challenges-conventional-security-awareness-testing/",
-  "sourceName": "Kevin Townsend",
+  "slug": "claude-opus-55-uses-95-fewer-em-dashes-but-its-answers-are-getting-lon",
+  "sourceLink": "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-opus-55-uses-95-percent-fewer-em-dashes-but-its-answers-are-getting-longer/",
+  "sourceName": "Mayank Parmar",
   "body": [
     {
       "type": "p",
-      "text": "Analysis of 2. 47 million simulated attacks shows why organizations should measure credential leaks and reporting, not just clicks."
+      "text": "Anthropic's Claude Opus 5. 5 appears to be changing how it writes, with new analysis showing fewer obvious AI writing patterns, shorter sentences, and simpler wording compared with Opus 5."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Phishing Research Challenges Conventional Security Awareness Testing appeared first on SecurityWeek."
+      "text": "[..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Phishing Research Challenges Conventional Security Awareness Testing — a notable development in Cybersecurity",
+    "Claude Opus 5.5 uses 95% fewer em dashes, but its answers are getting longer — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Kevin Townsend",
+      "value": "Mayank Parmar",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Phishing Research Challenges Conventional Security Awareness Testing",
+      "date": "2026-09-27",
+      "event": "Claude Opus 5.5 uses 95% fewer em dashes, but its answers are getting longer",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "phishing",
-    "research",
+    "claude",
+    "fewer",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Phishing Research Challenges Conventional Security Awaren... | Cybersecurity News",
-  "metaDescription": "Analysis of 2.47 million simulated attacks shows why organizations should measure credential leaks and reporting, not just clicks.\nThe post Phishing Research...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, phishing, research, challenges, TechNanoAI, emerging tech news",
+  "metaTitle": "Claude Opus 5.5 uses 95% fewer em dashes, but its answers... | Cybersecurity News",
+  "metaDescription": "Anthropic's Claude Opus 5.5 appears to be changing how it writes, with new analysis showing fewer obvious AI writing patterns, shorter sentences, and simpler...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, claude, opus, uses, TechNanoAI, emerging tech news",
   "featured": false
 }

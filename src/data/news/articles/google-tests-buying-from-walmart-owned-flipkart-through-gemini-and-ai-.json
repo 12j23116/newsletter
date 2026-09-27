@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789206329629-0",
+  "id": "ai-1790506828634-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid r... | AI News",
-  "excerpt": "The round for the two-year-old startup is coming together months after Mecka announced its Series A.",
-  "date": "2026-09-12",
+  "title": "Google tests buying from Walmart-owned Flipkart through G... | AI News",
+  "excerpt": "The limited test covers select products and users, with a broader rollout planned for later in October.",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-",
-  "sourceLink": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
-  "sourceName": "Marina Temkin",
+  "slug": "google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-",
+  "sourceLink": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+  "sourceName": "Jagmeet Singh",
   "body": [
     {
       "type": "p",
-      "text": "The round for the two-year-old startup is coming together months after Mecka announced its Series A."
+      "text": "The limited test covers select products and users, with a broader rollout planned for later in October."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Marina Temkin, The round for the two-year-old startup is coming together months after Mecka announced its Series A.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Jagmeet Singh, The limited test covers select products and users, with a broader rollout planned for later in October.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training  — a notable development in AI",
+    "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in In — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Marina Temkin",
+      "value": "Jagmeet Singh",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training ",
+      "date": "2026-09-27",
+      "event": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in In",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "mecka",
-    "nears",
+    "google",
+    "tests",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Mecka AI nears $500M valuation in Sequoia-led deal amid r... | AI News",
-  "metaDescription": "The round for the two-year-old startup is coming together months after Mecka announced its Series A. LLMs, agents & the race to AGI. Latest AI developments and ",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, mecka, nears, valuation, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Google tests buying from Walmart-owned Flipkart through G... | AI News",
+  "metaDescription": "The limited test covers select products and users, with a broader rollout planned for later in October. LLMs, agents & the race to AGI. Latest AI developments a",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, google, tests, buying, TechNanoAI, emerging tech news",
+  "featured": false
 }

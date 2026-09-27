@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1789206332288-2",
+  "id": "biotech-1790506831155-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Transcenta Therapeutics and WuXi Biologics Team Up to Acc... | Biotechnology News",
-  "excerpt": "Transcenta, headquartered in China and with a pipeline of over ten therapeutic antibody candidates, is a clinical-stage biopharmaceutical company with expertise in biologics discovery, translational r",
-  "date": "2026-09-12",
+  "title": "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-big... | Biotechnology News",
+  "excerpt": "With Lundbeck steering its RD engine toward increasingly specialized neuroscience targets, the Danish drugmaker is plotting a U.S. HQ move to one of the country’s preeminent biopharma hotspots.",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "transcenta-therapeutics-and-wuxi-biologics-team-up-to-accelerate-comme",
-  "sourceLink": "https://www.genengnews.com/topics/bioprocessing/transcenta-therapeutics-and-wuxi-biologics-team-up-to-accelerate-commercialization-of-hicb-technology/",
-  "sourceName": "John Sterling",
+  "slug": "a-hrefpharmalundbeck-move-us-digs-boston-it-eyes-bigger-innovation-fro",
+  "sourceLink": "https://www.fiercebiotech.com/pharma/lundbeck-move-us-digs-boston-it-eyes-bigger-innovation-frontiers",
+  "sourceName": "<a href=\"/person/fraiser-kansteiner-0\" hreflang=\"en\">Fraiser Kansteiner</a>",
   "body": [
     {
       "type": "p",
-      "text": "Transcenta, headquartered in China and with a pipeline of over ten therapeutic antibody candidates, is a clinical-stage biopharmaceutical company with expertise in biologics discovery, translational research, clinical, and process development.  \nThe post Transcenta Therapeutics and WuXi Biologics Team Up to Accelerate Commercialization of HiCB Technology appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "With Lundbeck steering its RD engine toward increasingly specialized neuroscience targets, the Danish drugmaker is plotting a U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from John Sterling, Transcenta, headquartered in China and with a pipeline of over ten therapeutic antibody candidates, is a clinical-stage biopharmaceutical company with expertise in biologics discovery, translational research, clinical, and process development. \nThe post Transcenta Therapeutics and WuXi Biologics Team Up to Accelerate Commercialization of HiCB Technology appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "HQ move to one of the country’s preeminent biopharma hotspots."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Transcenta Therapeutics and WuXi Biologics Team Up to Accelerate Commercializati — a notable development in Biotechnology",
+    "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-bigger-innovation-frontier — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "John Sterling",
+      "value": "<a href=\"/person/fraiser-kansteiner-0\" hreflang=\"en\">Fraiser Kansteiner</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Transcenta Therapeutics and WuXi Biologics Team Up to Accelerate Commercializati",
+      "date": "2026-09-27",
+      "event": "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-bigger-innovation-frontier",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "transcenta",
-    "therapeutics",
+    "pharma",
+    "lundbeck",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Transcenta Therapeutics and WuXi Biologics Team Up to Acc... | Biotechnology News",
-  "metaDescription": "Transcenta, headquartered in China and with a pipeline of over ten therapeutic antibody candidates, is a clinical-stage biopharmaceutical company with expert...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, transcenta, therapeutics, wuxi, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-big... | Biotechnology News",
+  "metaDescription": "With Lundbeck steering its RD engine toward increasingly specialized neuroscience targets, the Danish drugmaker is plotting a U.S. HQ move to one of the coun...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, pharma, lundbeck, TechNanoAI, emerging tech news",
+  "featured": true
 }

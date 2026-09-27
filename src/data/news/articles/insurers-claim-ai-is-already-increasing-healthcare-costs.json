@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789206329631-5",
+  "id": "ai-1790506828635-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Kimi-maker Moonshot AI targets $2B in annual revenue | AI News",
-  "excerpt": "While K3's usage figures have declined slightly in recent months, OpenRouter data currently shows as many as 300 billion tokens being generated each day by K3 models on the system.",
-  "date": "2026-09-12",
+  "title": "Insurers claim AI is already increasing healthcare costs | AI News",
+  "excerpt": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "kimi-maker-moonshot-ai-targets-2b-in-annual-revenue",
-  "sourceLink": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
-  "sourceName": "Russell Brandom",
+  "slug": "insurers-claim-ai-is-already-increasing-healthcare-costs",
+  "sourceLink": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "While K3's usage figures have declined slightly in recent months, OpenRouter data currently shows as many as 300 billion tokens being generated each day by K3 models on the system."
+      "text": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Russell Brandom, While K3's usage figures have declined slightly in recent months, OpenRouter data currently shows as many as 300 billion tokens being generated each day by K3 models on the system.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Kimi-maker Moonshot AI targets $2B in annual revenue — a notable development in AI",
+    "Insurers claim AI is already increasing healthcare costs — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Russell Brandom",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Kimi-maker Moonshot AI targets $2B in annual revenue",
+      "date": "2026-09-27",
+      "event": "Insurers claim AI is already increasing healthcare costs",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "maker",
-    "moonshot",
+    "insurers",
+    "claim",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Kimi-maker Moonshot AI targets $2B in annual revenue | AI News",
-  "metaDescription": "While K3's usage figures have declined slightly in recent months, OpenRouter data currently shows as many as 300 billion tokens being generated each day by K...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, kimi, maker, moonshot, TechNanoAI, emerging tech news",
+  "metaTitle": "Insurers claim AI is already increasing healthcare costs | AI News",
+  "metaDescription": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, insurers, claim, already, TechNanoAI, emerging tech news",
   "featured": false
 }

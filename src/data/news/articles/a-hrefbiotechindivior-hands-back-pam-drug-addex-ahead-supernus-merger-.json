@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1789206332289-4",
+  "id": "biotech-1790506831156-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Cancer Treatment Genetic Effects in Healthy Cells May Rev... | Biotechnology News",
-  "excerpt": "Researchers used DNA sequencing to map mutations in normal tissue from cancer patients undergoing different types of treatment. They found significant differences in the genetic mutations in healthy t",
-  "date": "2026-09-12",
+  "title": "<a href=\"/biotech/indivior-hands-back-pam-drug-addex-ahea... | Biotechnology News",
+  "excerpt": "Ahead of its upcoming merger with Supernus, Indivior Pharmaceuticals has ended its long-running collaboration with Addex Therapeutics to develop positive allosteric modulators (PAMs).",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "cancer-treatment-genetic-effects-in-healthy-cells-may-reveal-clues-to-",
-  "sourceLink": "https://www.genengnews.com/topics/cancer/cancer-treatment-genetic-effects-in-healthy-cells-may-reveal-clues-to-side-effects-and-resistance/",
-  "sourceName": "Sophia Ktori",
+  "slug": "a-hrefbiotechindivior-hands-back-pam-drug-addex-ahead-supernus-merger-",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/indivior-hands-back-pam-drug-addex-ahead-supernus-merger",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "Researchers used DNA sequencing to map mutations in normal tissue from cancer patients undergoing different types of treatment.  They found significant differences in the genetic mutations in healthy tissue, depending on whether the patients received radiotherapy, chemotherapy, or chemoradiation."
+      "text": "Ahead of its upcoming merger with Supernus, Indivior Pharmaceuticals has ended its long-running collaboration with Addex Therapeutics to develop positive allosteric modulators (PAMs)."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Cancer Treatment Genetic Effects in Healthy Cells May Reveal Clues to Side Effects and Resistance appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Ahead of its upcoming merger with Supernus, Indivior Pharmaceuticals has ended its long-running collaboration with Addex Therapeutics to develop positive allosteric modulators (PAMs).. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Cancer Treatment Genetic Effects in Healthy Cells May Reveal Clues to Side Effec — a notable development in Biotechnology",
+    "<a href=\"/biotech/indivior-hands-back-pam-drug-addex-ahead-supernus-merger\" href — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Sophia Ktori",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Cancer Treatment Genetic Effects in Healthy Cells May Reveal Clues to Side Effec",
+      "date": "2026-09-27",
+      "event": "<a href=\"/biotech/indivior-hands-back-pam-drug-addex-ahead-supernus-merger\" href",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "cancer",
-    "treatment",
+    "biotech",
+    "indivior",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Cancer Treatment Genetic Effects in Healthy Cells May Rev... | Biotechnology News",
-  "metaDescription": "Researchers used DNA sequencing to map mutations in normal tissue from cancer patients undergoing different types of treatment. They found significant differ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, cancer, treatment, genetic, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/indivior-hands-back-pam-drug-addex-ahea... | Biotechnology News",
+  "metaDescription": "Ahead of its upcoming merger with Supernus, Indivior Pharmaceuticals has ended its long-running collaboration with Addex Therapeutics to develop positive all...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, indivior, TechNanoAI, emerging tech news",
   "featured": false
 }

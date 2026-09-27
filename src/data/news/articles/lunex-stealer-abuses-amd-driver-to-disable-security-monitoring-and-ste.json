@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789206329630-2",
+  "id": "ai-1790506828635-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI's feud with mathematicians is only escalating | AI News",
-  "excerpt": "Twenty-five leading mathematicians signed an open letter arguing that AI labs are threatening their intellectual work.",
-  "date": "2026-09-12",
+  "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monit... | AI News",
+  "excerpt": "The Psychedelic Stealer malware distributed via compromised Ukrainian websites using ClickFix-style Cloudflare verification checks is part of a wider malware-as-a-service (MaaS) platform called Lunex.",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai8217s-feud-with-mathematicians-is-only-escalating",
-  "sourceLink": "https://techcrunch.com/2026/09/11/openais-feud-with-mathematicians-is-only-escalating/",
-  "sourceName": "Tim Fernholz",
+  "slug": "lunex-stealer-abuses-amd-driver-to-disable-security-monitoring-and-ste",
+  "sourceLink": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Twenty-five leading mathematicians signed an open letter arguing that AI labs are threatening their intellectual work."
+      "text": "The Psychedelic Stealer malware distributed via compromised Ukrainian websites using ClickFix-style Cloudflare verification checks is part of a wider malware-as-a-service (MaaS) platform called Lunex. \n\nThe new findings come from Ontinue, which described the activity as a four-stage attack chain aimed at targeting Ukrainian-speaking users."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Tim Fernholz, Twenty-five leading mathematicians signed an open letter arguing that AI labs are threatening their intellectual work.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), The Psychedelic Stealer malware distributed via compromised Ukrainian websites using ClickFix-style Cloudflare verification checks is part of a wider malware-as-a-service (MaaS) platform called Lunex.\n\nThe new findings come from Ontinue, which described the activity as a four-stage attack chain aimed at targeting Ukrainian-speaking users.\n\n\"The attack chain begins with a fake CAPTCHA page and. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI's feud with mathematicians is only escalating — a notable development in AI",
+    "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Tim Fernholz",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "OpenAI's feud with mathematicians is only escalating",
+      "date": "2026-09-27",
+      "event": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "mathematicians",
+    "lunex",
+    "stealer",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI's feud with mathematicians is only escalating | AI News",
-  "metaDescription": "Twenty-five leading mathematicians signed an open letter arguing that AI labs are threatening their intellectual work. LLMs, agents & the race to AGI. Latest AI",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, feud, with, TechNanoAI, emerging tech news",
+  "metaTitle": "Lunex Stealer Abuses AMD Driver to Disable Security Monit... | AI News",
+  "metaDescription": "The Psychedelic Stealer malware distributed via compromised Ukrainian websites using ClickFix-style Cloudflare verification checks is part of a wider malware...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, lunex, stealer, abuses, TechNanoAI, emerging tech news",
   "featured": false
 }

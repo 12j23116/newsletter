@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1789206337193-4",
+  "id": "quantum-1790506834677-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "SEALSQ Reports H1 2026 Financial Results: Revenue Surges ... | Quantum Computing News",
-  "excerpt": "SEALSQ reported a significant surge in H1 2026 revenue to $11.15 million, a 131.1% increase year-over-year, driven by demand for secure-element products, PKI services, and ASIC design. The company als",
-  "date": "2026-09-12",
+  "title": "Only one month to go?!?!? | Quantum Computing News",
+  "excerpt": "September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy QuEra 2026 Wall Calendar and there's Q+AI and",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "sealsq-reports-h1-2026-financial-results-revenue-surges-131-to-112m-48",
-  "sourceLink": "https://quantumcomputingreport.com/sealsq-reports-h1-2026-financial-results-revenue-surges-131-to-11-2m-486m-cash-balance-and-post-quantum-hardware-progress/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "only-one-month-to-go",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/only-one-month-to-go/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "SEALSQ reported a significant surge in H1 2026 revenue to $11. 15 million, a 131."
+      "text": "September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy QuEra 2026 Wall Calendar and there's Q+AI and PQC+IQT just one month away.  Where does the time go when you're busy caring for an a..."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "1% increase year-over-year, driven by demand for secure-element products, PKI services, and ASIC design.  The company also made substantial progress in post-quantum hardware development, achieving NIST certification for its QS7001 chip and advancing customer sampling of its QVault TPM, while reaffirming its FY 2026 revenue guidance."
-    },
-    {
-      "type": "p",
-      "text": "The post SEALSQ Reports H1 2026 Financial Results: Revenue Surges 131% to $11."
+      "text": "According to reporting from Brian Siegelwax, September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy QuEra 2026 Wall Calendar and there's Q+AI and PQC+IQT just one month away. Where does the time go when you're busy caring for an a.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SEALSQ Reports H1 2026 Financial Results: Revenue Surges 131% to $11.2M, $486M C — a notable development in Quantum Computing",
+    "Only one month to go?!?!? — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -124,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "SEALSQ Reports H1 2026 Financial Results: Revenue Surges 131% to $11.2M, $486M C",
+      "date": "2026-09-27",
+      "event": "Only one month to go?!?!?",
       "current": true
     },
     {
@@ -195,8 +191,7 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "sealsq",
-    "reports",
+    "month",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +215,8 @@
       }
     ]
   },
-  "metaTitle": "SEALSQ Reports H1 2026 Financial Results: Revenue Surges ... | Quantum Computing News",
-  "metaDescription": "SEALSQ reported a significant surge in H1 2026 revenue to $11.15 million, a 131.1% increase year-over-year, driven by demand for secure-element products, PKI...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, sealsq, reports, financial, TechNanoAI, emerging tech news",
+  "metaTitle": "Only one month to go?!?!? | Quantum Computing News",
+  "metaDescription": "September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy Qu...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, only, month, TechNanoAI, emerging tech news",
   "featured": false
 }

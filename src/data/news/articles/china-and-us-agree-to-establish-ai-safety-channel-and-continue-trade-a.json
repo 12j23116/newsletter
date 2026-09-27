@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1789206330419-2",
+  "id": "cybersecurity-1790506829106-4",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Florida confirms DMV database breached via stolen police ... | Cybersecurity News",
-  "excerpt": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed that its DAVID driver database suffered a data breach, saying the attackers gained access using credentials belonging",
-  "date": "2026-09-12",
+  "title": "China and US Agree to Establish AI Safety Channel and Con... | Cybersecurity News",
+  "excerpt": "The US and China agreed to set up a communication mechanism for artificial intelligence-related incidents.\nThe post China and US Agree to Establish AI Safety Channel and Continue Trade and Military Ta",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "florida-confirms-dmv-database-breached-via-stolen-police-account",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "china-and-us-agree-to-establish-ai-safety-channel-and-continue-trade-a",
+  "sourceLink": "https://www.securityweek.com/china-and-us-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks/",
+  "sourceName": "Associated Press",
   "body": [
     {
       "type": "p",
-      "text": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed that its DAVID driver database suffered a data breach, saying the attackers gained access using credentials belonging to a police department employee.  [..."
+      "text": "The US and China agreed to set up a communication mechanism for artificial intelligence-related incidents. \nThe post China and US Agree to Establish AI Safety Channel and Continue Trade and Military Talks appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed that its DAVID driver database suffered a data breach, saying the attackers gained access using credentials belonging to a police department employee. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Associated Press, The US and China agreed to set up a communication mechanism for artificial intelligence-related incidents.\nThe post China and US Agree to Establish AI Safety Channel and Continue Trade and Military Talks appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Florida confirms DMV database breached via stolen police account — a notable development in Cybersecurity",
+    "China and US Agree to Establish AI Safety Channel and Continue Trade and Militar — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "Associated Press",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Florida confirms DMV database breached via stolen police account",
+      "date": "2026-09-27",
+      "event": "China and US Agree to Establish AI Safety Channel and Continue Trade and Militar",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "florida",
-    "confirms",
+    "china",
+    "agree",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Florida confirms DMV database breached via stolen police ... | Cybersecurity News",
-  "metaDescription": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed that its DAVID driver database suffered a data breach, saying the attacker...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, florida, confirms, database, TechNanoAI, emerging tech news",
+  "metaTitle": "China and US Agree to Establish AI Safety Channel and Con... | Cybersecurity News",
+  "metaDescription": "The US and China agreed to set up a communication mechanism for artificial intelligence-related incidents.\nThe post China and US Agree to Establish AI Safety...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, china, agree, establish, TechNanoAI, emerging tech news",
   "featured": false
 }

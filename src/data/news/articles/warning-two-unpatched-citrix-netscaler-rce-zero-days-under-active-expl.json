@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789206329630-4",
+  "id": "ai-1790506828634-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Final, final, final call for TechCrunch Disrupt 2026 Side... | AI News",
-  "excerpt": "The absolute last chance to apply to host an official Side Event during TechCrunch Disrupt 2026 is tonight, September 11, at 11:59 p.m. PT.",
-  "date": "2026-09-12",
+  "title": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Und... | AI News",
+  "excerpt": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively exploited in the wild, security firm watchTowr s",
+  "date": "2026-09-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "final-final-final-call-for-techcrunch-disrupt-2026-side-events",
-  "sourceLink": "https://techcrunch.com/2026/09/11/final-final-final-call-for-techcrunch-disrupt-2026-side-events/",
-  "sourceName": "TechCrunch Events",
+  "slug": "warning-two-unpatched-citrix-netscaler-rce-zero-days-under-active-expl",
+  "sourceLink": "https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The absolute last chance to apply to host an official Side Event during TechCrunch Disrupt 2026 is tonight, September 11, at 11:59 p. m."
+      "text": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively exploited in the wild, security firm watchTowr said on September 26. \n\nCitrix has not confirmed the flaws or published a fix."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "PT."
+      "text": "Some administrators say they have taken appliances offline rather than wait for one to be available."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Final, final, final call for TechCrunch Disrupt 2026 Side Events — a notable development in AI",
+    "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "TechCrunch Events",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-12",
-      "event": "Final, final, final call for TechCrunch Disrupt 2026 Side Events",
+      "date": "2026-09-27",
+      "event": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "final",
-    "techcrunch",
+    "warning",
+    "unpatched",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Final, final, final call for TechCrunch Disrupt 2026 Side... | AI News",
-  "metaDescription": "The absolute last chance to apply to host an official Side Event during TechCrunch Disrupt 2026 is tonight, September 11, at 11:59 p.m. PT.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, final, call, techcrunch, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Und... | AI News",
+  "metaDescription": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively explo...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, warning, unpatched, citrix, TechNanoAI, emerging tech news",
+  "featured": true
 }
