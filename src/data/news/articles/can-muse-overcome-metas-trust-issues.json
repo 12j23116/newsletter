@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789296418243-1",
+  "id": "ai-1790597931971-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI’s Sam Altman says it would be 'ill-advised' to go ... | AI News",
-  "excerpt": "While OpenAI has filed confidentially for an IPO, the company will not be going public this year, according to CEO Sam Altman.",
-  "date": "2026-09-13",
+  "title": "Can Muse overcome Meta’s trust issues? | AI News",
+  "excerpt": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
+  "date": "2026-09-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openais-sam-altman-says-it-would-be-8216ill-advised8217-to-go-public-i",
-  "sourceLink": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+  "slug": "can-muse-overcome-metas-trust-issues",
+  "sourceLink": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
   "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "While OpenAI has filed confidentially for an IPO, the company will not be going public this year, according to CEO Sam Altman."
+      "text": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, While OpenAI has filed confidentially for an IPO, the company will not be going public this year, according to CEO Sam Altman.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI’s Sam Altman says it would be 'ill-advised' to go public in 2026 — a notable development in AI",
+    "Can Muse overcome Meta’s trust issues? — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-13",
-      "event": "OpenAI’s Sam Altman says it would be 'ill-advised' to go public in 2026",
+      "date": "2026-09-28",
+      "event": "Can Muse overcome Meta’s trust issues?",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "altman",
+    "overcome",
+    "trust",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI’s Sam Altman says it would be 'ill-advised' to go ... | AI News",
-  "metaDescription": "While OpenAI has filed confidentially for an IPO, the company will not be going public this year, according to CEO Sam Altman.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, altman, says, TechNanoAI, emerging tech news",
+  "metaTitle": "Can Muse overcome Meta’s trust issues? | AI News",
+  "metaDescription": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic. LLMs, agents & the race to AGI. Latest AI developme",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, muse, overcome, meta, TechNanoAI, emerging tech news",
   "featured": false
 }

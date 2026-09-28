@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789296418244-3",
+  "id": "ai-1790597931970-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect... | AI News",
-  "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added five security flaws impacting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vuln",
-  "date": "2026-09-13",
+  "title": "Anthropic’s CEO is about to have dinner with President Trump | AI News",
+  "excerpt": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+  "date": "2026-09-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "cisa-adds-5-actively-exploited-artifactory-screenconnect-and-routeros-",
-  "sourceLink": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "anthropics-ceo-is-about-to-have-dinner-with-president-trump",
+  "sourceLink": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "The U. S."
+      "text": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Cybersecurity and Infrastructure Security Agency (CISA) has added five security flaws impacting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation in the wild. \n\nDetails of the vulnerabilities are as follows -\n\n\n  CVE-2026-42016 (CVSS score: 8."
+      "text": "According to reporting from Anthony Ha, This will be the first one-on-one meeting between Dario Amodei and Donald Trump. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to — a notable development in AI",
+    "Anthropic’s CEO is about to have dinner with President Trump — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-13",
-      "event": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to",
+      "date": "2026-09-28",
+      "event": "Anthropic’s CEO is about to have dinner with President Trump",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "actively",
-    "exploited",
+    "anthropic",
+    "about",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect... | AI News",
-  "metaDescription": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added five security flaws impacting JFrog Artifactory, ConnectWise ScreenConnect, and Mi...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, cisa, adds, actively, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic’s CEO is about to have dinner with President Trump | AI News",
+  "metaDescription": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNan",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, about, have, TechNanoAI, emerging tech news",
   "featured": false
 }

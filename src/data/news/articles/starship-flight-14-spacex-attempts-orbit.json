@@ -1,21 +1,21 @@
 {
-  "id": "space-1789296419630-2",
+  "id": "space-1790597933388-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Help Refine Data from Space Telescopes with Artifact InSP... | Space Exploration News",
-  "excerpt": "How do scientists studying space with data from a telescope hundreds of thousands of miles away know that what they are seeing is real? A new NASA project, Artifact InSPECtor, invites you to find out ",
-  "date": "2026-09-13",
+  "title": "Starship Flight 14: SpaceX Attempts Orbit | Space Exploration News",
+  "excerpt": "After more than a decade of development in many forms, SpaceX’s Starship is slated to'\nThe post Starship Flight 14: SpaceX Attempts Orbit appeared first on NASASpaceFlight.com.",
+  "date": "2026-09-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "help-refine-data-from-space-telescopes-with-artifact-inspector",
-  "sourceLink": "https://science.nasa.gov/get-involved/citizen-science/help-refine-data-from-space-telescopes-with-artifact-inspector/",
-  "sourceName": "nasa.gov",
+  "slug": "starship-flight-14-spacex-attempts-orbit",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/09/starship-flight-14-orbit/",
+  "sourceName": "Ryan Weber",
   "body": [
     {
       "type": "p",
-      "text": "How do scientists studying space with data from a telescope hundreds of thousands of miles away know that what they are seeing is real?"
+      "text": "After more than a decade of development in many forms, SpaceX’s Starship is slated to'\nThe post Starship Flight 14: SpaceX Attempts Orbit appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from nasa.gov, How do scientists studying space with data from a telescope hundreds of thousands of miles away know that what they are seeing is real? A new NASA project, Artifact InSPECtor, invites you to find out – and by doing so, to help missions like Euclid and NASA’s new Nancy Grace Roman Space Telescope answer fundamental […]. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ryan Weber, After more than a decade of development in many forms, SpaceX’s Starship is slated to'\nThe post Starship Flight 14: SpaceX Attempts Orbit appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Help Refine Data from Space Telescopes with Artifact InSPECtor — a notable development in Space Exploration",
+    "Starship Flight 14: SpaceX Attempts Orbit — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "nasa.gov",
+      "value": "Ryan Weber",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-13",
-      "event": "Help Refine Data from Space Telescopes with Artifact InSPECtor",
+      "date": "2026-09-28",
+      "event": "Starship Flight 14: SpaceX Attempts Orbit",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "refine",
-    "space",
+    "starship",
+    "flight",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Help Refine Data from Space Telescopes with Artifact InSP... | Space Exploration News",
-  "metaDescription": "How do scientists studying space with data from a telescope hundreds of thousands of miles away know that what they are seeing is real? A new NASA project, A...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, help, refine, data, TechNanoAI, emerging tech news",
+  "metaTitle": "Starship Flight 14: SpaceX Attempts Orbit | Space Exploration News",
+  "metaDescription": "After more than a decade of development in many forms, SpaceX’s Starship is slated to'\nThe post Starship Flight 14: SpaceX Attempts Orbit appeared first on N...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, starship, flight, spacex, TechNanoAI, emerging tech news",
   "featured": false
 }

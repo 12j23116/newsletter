@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789296418245-4",
+  "id": "ai-1790597931969-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "When the Whole Company Adopts AI: What It Does to Your SOC | AI News",
-  "excerpt": "Over the past year, we watched a new class of alert appear in enterprise security operations centers and grow faster than anything else in the stream: alerts that were triggered by AI tools and agents",
-  "date": "2026-09-13",
+  "title": "JADEPUFFER-Linked Attackers Used Compromised Service Prin... | AI News",
+  "excerpt": "The threat actor known as JADEPUFFER has been observed orchestrating destructive actions within a Microsoft Azure environment using compromised service principals.\n\nMicrosoft, which is tracking the ac",
+  "date": "2026-09-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "when-the-whole-company-adopts-ai-what-it-does-to-your-soc",
-  "sourceLink": "https://thehackernews.com/2026/09/when-whole-company-adopts-ai-what-it.html",
+  "slug": "jadepuffer-linked-attackers-used-compromised-service-principals-to-del",
+  "sourceLink": "https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Over the past year, we watched a new class of alert appear in enterprise security operations centers and grow faster than anything else in the stream: alerts that were triggered by AI tools and agents."
+      "text": "The threat actor known as JADEPUFFER has been observed orchestrating destructive actions within a Microsoft Azure environment using compromised service principals. \n\nMicrosoft, which is tracking the activity under the name Storm-3168, has called it an evolution of the threat actor's tradecraft."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Over the past year, we watched a new class of alert appear in enterprise security operations centers and grow faster than anything else in the stream: alerts that were triggered by AI tools and agents. Not attacks against AI, but the ordinary, everyday footprint of an organization using it, from developers running coding agents and non-technical staff signing consumer AI tools into corporate. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "The attack took place in early June 2026 over a period of about 18 hours."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "When the Whole Company Adopts AI: What It Does to Your SOC — a notable development in AI",
+    "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-13",
-      "event": "When the Whole Company Adopts AI: What It Does to Your SOC",
+      "date": "2026-09-28",
+      "event": "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "whole",
-    "company",
+    "jadepuffer",
+    "linked",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "When the Whole Company Adopts AI: What It Does to Your SOC | AI News",
-  "metaDescription": "Over the past year, we watched a new class of alert appear in enterprise security operations centers and grow faster than anything else in the stream: alerts...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, when, whole, company, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "JADEPUFFER-Linked Attackers Used Compromised Service Prin... | AI News",
+  "metaDescription": "The threat actor known as JADEPUFFER has been observed orchestrating destructive actions within a Microsoft Azure environment using compromised service princ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, jadepuffer, linked, attackers, TechNanoAI, emerging tech news",
+  "featured": true
 }

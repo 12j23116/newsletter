@@ -1,21 +1,21 @@
 {
-  "id": "ai-1789296418245-5",
+  "id": "ai-1790597931972-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE... | AI News",
-  "excerpt": "The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers Spencer Kitts, Thomas Larsen, and Sydney Vo",
-  "date": "2026-09-13",
-  "readTime": "4 min",
+  "title": "Anthropic's Dario Amodei gets the SNL treatment | AI News",
+  "excerpt": "\"AI is the devil and I its maker.\"",
+  "date": "2026-09-28",
+  "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai-agents-linked-to-rubygems-campaign-that-gained-rce-on-rubydoc-s",
-  "sourceLink": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "anthropic8217s-dario-amodei-gets-the-snl-treatment",
+  "sourceLink": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers Spencer Kitts, Thomas Larsen, and Sydney Von Arx. \n\nOn May 12, Maciej Mensfeld, senior product manager for software supply chain security at Mend."
+      "text": "\"AI is the devil and I its maker."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers Spencer Kitts, Thomas Larsen, and Sydney Von Arx.\n\nOn May 12, Maciej Mensfeld, senior product manager for software supply chain security at Mend.io, disclosed details of a coordinated cyber attack that targeted the package manager for the. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, \"AI is the devil and I its maker.\". The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers — a notable development in AI",
+    "Anthropic's Dario Amodei gets the SNL treatment — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-13",
-      "event": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
+      "date": "2026-09-28",
+      "event": "Anthropic's Dario Amodei gets the SNL treatment",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "agents",
+    "anthropic",
+    "dario",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE... | AI News",
-  "metaDescription": "The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers ...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, agents, linked, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic's Dario Amodei gets the SNL treatment | AI News",
+  "metaDescription": "\"AI is the devil and I its maker.\" LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, dario, amodei, TechNanoAI, emerging tech news",
   "featured": false
 }

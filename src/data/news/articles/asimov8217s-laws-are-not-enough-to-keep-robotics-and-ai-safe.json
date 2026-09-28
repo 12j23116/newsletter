@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1789296424851-1",
+  "id": "robotics-1790597937570-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Ultrasound offers a scalable path to tactile intelligence... | Robotics News",
-  "excerpt": "Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense.\nThe post Ultrasound offers a scalable path to tactile intelligence for physical AI ap",
-  "date": "2026-09-13",
+  "title": "Asimov's laws are not enough to keep robotics and AI safe | Robotics News",
+  "excerpt": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not enough to keep robotics and AI safe appeared",
+  "date": "2026-09-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "ultrasound-offers-a-scalable-path-to-tactile-intelligence-for-physical",
-  "sourceLink": "https://www.therobotreport.com/ultrasound-offers-scalable-path-tactile-intelligence-physical-ai/",
-  "sourceName": "Mo Maghsoudnia and Hao-Yen Tang",
+  "slug": "asimov8217s-laws-are-not-enough-to-keep-robotics-and-ai-safe",
+  "sourceLink": "https://www.therobotreport.com/asimovs-laws-are-not-enough-keep-robotics-ai-safe/",
+  "sourceName": "Rinaldo Brutoco",
   "body": [
     {
       "type": "p",
-      "text": "Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense. \nThe post Ultrasound offers a scalable path to tactile intelligence for physical AI appeared first on The Robot Report."
+      "text": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI. \nThe post Asimov's laws are not enough to keep robotics and AI safe appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mo Maghsoudnia and Hao-Yen Tang, Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense.\nThe post Ultrasound offers a scalable path to tactile intelligence for physical AI appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Rinaldo Brutoco, Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not enough to keep robotics and AI safe appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Ultrasound offers a scalable path to tactile intelligence for physical AI — a notable development in Robotics",
+    "Asimov's laws are not enough to keep robotics and AI safe — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Mo Maghsoudnia and Hao-Yen Tang",
+      "value": "Rinaldo Brutoco",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-13",
-      "event": "Ultrasound offers a scalable path to tactile intelligence for physical AI",
+      "date": "2026-09-28",
+      "event": "Asimov's laws are not enough to keep robotics and AI safe",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "ultrasound",
-    "offers",
+    "asimov",
+    "enough",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Ultrasound offers a scalable path to tactile intelligence... | Robotics News",
-  "metaDescription": "Ultrasound sensing can provide tactile perception for robotic hands while avoiding wear and tear, says UltraSense.\nThe post Ultrasound offers a scalable path...",
-  "keywords": "robotics, humanoid robot, automation, drones, ultrasound, offers, scalable, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Asimov's laws are not enough to keep robotics and AI safe | Robotics News",
+  "metaDescription": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not e...",
+  "keywords": "robotics, humanoid robot, automation, drones, asimov, laws, enough, TechNanoAI, emerging tech news",
+  "featured": true
 }

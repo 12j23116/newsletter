@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1789296425887-0",
+  "id": "quantum-1790597938403-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "GÉANT and Quantum Internet Alliance Partner to Advance Eu... | Quantum Computing News",
-  "excerpt": "GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026. This collaboration leverages GÉANT's optical network and QIA",
-  "date": "2026-09-13",
+  "title": "The Two-Century Path That Made Quantum Computing Inevitable | Quantum Computing News",
+  "excerpt": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field fr",
+  "date": "2026-09-28",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "gant-and-quantum-internet-alliance-partner-to-advance-european-quantum",
-  "sourceLink": "https://quantumcomputingreport.com/geant-and-quantum-internet-alliance-partner-to-advance-european-quantum-networking-architecture/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "the-two-century-path-that-made-quantum-computing-inevitable",
+  "sourceLink": "https://quantumcomputingreport.com/the-two-century-path-that-made-quantum-computing-inevitable/",
+  "sourceName": "Doug Finke",
   "body": [
     {
       "type": "p",
-      "text": "GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026.  This collaboration leverages GÉANT's optical network and QIA's quantum networking expertise to develop infrastructure, standards, and interoperability protocols, aiming to transition quantum communication prototypes into operational cross-border trials and establish a sovereign European Quantum Internet."
+      "text": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field from demonstration to disciplined systems engineering. \nThe post The Two-Century Path That Made Quantum Computing Inevitable appeared first on Quantum Computing Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026. This collaboration leverages GÉANT's optical network and QIA's quantum networking expertise to develop infrastructure, standards, and interoperability protocols, aiming to transition quantum communication prototypes into operational cross-border trials and establish a sovereign European Quantum Internet.\nThe post GÉANT and Quantum Internet Alliance Partner t. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Doug Finke, Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field from demonstration to disciplined systems engineering.\nThe post The Two-Century Path That Made Quantum Computing Inevitable appeared first on Quantum Computing Report.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "GÉANT and Quantum Internet Alliance Partner to Advance European Quantum Networki — a notable development in Quantum Computing",
+    "The Two-Century Path That Made Quantum Computing Inevitable — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Doug Finke",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-13",
-      "event": "GÉANT and Quantum Internet Alliance Partner to Advance European Quantum Networki",
+      "date": "2026-09-28",
+      "event": "The Two-Century Path That Made Quantum Computing Inevitable",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
+    "century",
     "quantum",
-    "internet",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "GÉANT and Quantum Internet Alliance Partner to Advance Eu... | Quantum Computing News",
-  "metaDescription": "GÉANT and the Quantum Internet Alliance (QIA) have partnered to advance European quantum networking by signing an MoU on September 8, 2026. This collaboratio...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, internet, alliance, TechNanoAI, emerging tech news",
+  "metaTitle": "The Two-Century Path That Made Quantum Computing Inevitable | Quantum Computing News",
+  "metaDescription": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering a...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, century, path, that, TechNanoAI, emerging tech news",
   "featured": true
 }
