@@ -1,113 +1,113 @@
 {
-  "issue": 90,
-  "date": "2026-09-21",
-  "subject": "This Week: AI, Biotech & more — September 21, 2026",
+  "issue": 91,
+  "date": "2026-09-28",
+  "subject": "This Week: Robotics, AI & more — September 28, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "ai",
-    "biotech",
-    "cybersecurity",
     "robotics",
-    "fusion",
+    "ai",
+    "cybersecurity",
+    "biotech",
     "quantum",
-    "energy"
+    "energy",
+    "space"
   ],
   "articles": [
     {
-      "title": "6 days left to save up to $200 to TechCrunch Disrupt 2026 | AI News",
-      "slug": "6-days-left-to-save-up-to-200-to-techcrunch-disrupt-2026",
-      "topic": "ai",
-      "excerpt": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
-      "url": "https://technanoai.com/news/6-days-left-to-save-up-to-200-to-techcrunch-disrupt-2026",
-      "date": "2026-09-21"
-    },
-    {
-      "title": "ClickFix Lures Deploy ChainScript RAT Using Polygon to Ro... | AI News",
-      "slug": "clickfix-lures-deploy-chainscript-rat-using-polygon-to-rotate-c2-infra",
-      "topic": "ai",
-      "excerpt": "Threat actors are leveraging ClickFix-like lures to deliver a previously undocumented remote access trojan (RAT) called ChainScript.\n\n\"ChainScript has appeared under multiple build names, including Co",
-      "url": "https://technanoai.com/news/clickfix-lures-deploy-chainscript-rat-using-polygon-to-rotate-c2-infra",
-      "date": "2026-09-21"
-    },
-    {
-      "title": "<a href=\"/biotech/analysts-extremely-bullish-telix-beams-... | Biotechnology News",
-      "slug": "a-hrefbiotechanalysts-extremely-bullish-telix-beams-novartis-territory",
-      "topic": "biotech",
-      "excerpt": "Telix has struck a deal to buy ITM Isotope Technologies Munich for $1.65 billion upfront, securing an RD pipeline led by a rival to Novartis’ Lutathera and a radiopharmaceutical supply network.",
-      "url": "https://technanoai.com/news/a-hrefbiotechanalysts-extremely-bullish-telix-beams-novartis-territory",
-      "date": "2026-09-21"
-    },
-    {
-      "title": "<a href=\"/biotech/beacon-lights-path-fda-approval-pivotal... | Biotechnology News",
-      "slug": "a-hrefbiotechbeacon-lights-path-fda-approval-pivotal-trial-win-rare-vi",
-      "topic": "biotech",
-      "excerpt": "Beacon Therapeutics has found the light in a rare vision loss disease that has left larger companies in the dark. The biotech’s gene therapy for X-linked retinitis pigmentosa (XLRP) successfully impro",
-      "url": "https://technanoai.com/news/a-hrefbiotechbeacon-lights-path-fda-approval-pivotal-trial-win-rare-vi",
-      "date": "2026-09-21"
-    },
-    {
-      "title": "Colorado Water Utilities Hit by Cyberattacks Targeting OT... | Cybersecurity News",
-      "slug": "colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems",
-      "topic": "cybersecurity",
-      "excerpt": "The hackers changed equipment settings, disabled remote access and alarms, and altered pumping cycles, officials said. \nThe post Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems appea",
-      "url": "https://technanoai.com/news/colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems",
-      "date": "2026-09-21"
-    },
-    {
-      "title": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack | Cybersecurity News",
-      "slug": "crowdsec-confirms-source-code-stolen-in-supply-chain-attack",
-      "topic": "cybersecurity",
-      "excerpt": "The cybersecurity firm believes the data breach was the result of the May 2026 TanStack supply chain attack.\nThe post CrowdSec Confirms Source Code Stolen in Supply Chain Attack appeared first on Secu",
-      "url": "https://technanoai.com/news/crowdsec-confirms-source-code-stolen-in-supply-chain-attack",
-      "date": "2026-09-21"
-    },
-    {
-      "title": "Einstein’s “spooky action” just survived one of physics’ ... | Robotics News",
-      "slug": "einsteins-spooky-action-just-survived-one-of-physics-most-extreme-test",
+      "title": "Asimov's laws are not enough to keep robotics and AI safe | Robotics News",
+      "slug": "asimov8217s-laws-are-not-enough-to-keep-robotics-and-ai-safe",
       "topic": "robotics",
-      "excerpt": "Physicists have detected strong evidence that heavy, fleeting Z bosons can become quantum entangled during Higgs boson decays at CERN’s Large Hadron Collider. The result shows that Einstein’s “spooky ",
-      "url": "https://technanoai.com/news/einsteins-spooky-action-just-survived-one-of-physics-most-extreme-test",
-      "date": "2026-09-21"
+      "excerpt": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not enough to keep robotics and AI safe appeared",
+      "url": "https://technanoai.com/news/asimov8217s-laws-are-not-enough-to-keep-robotics-and-ai-safe",
+      "date": "2026-09-28"
     },
     {
-      "title": "New nanoparticles make hidden chemical differences light up | Robotics News",
-      "slug": "new-nanoparticles-make-hidden-chemical-differences-light-up",
-      "topic": "robotics",
-      "excerpt": "Scientists have developed ultra-bright nanoparticles that can detect tiny amounts of chemicals and distinguish between molecules that look almost identical. The technology could one day provide a chea",
-      "url": "https://technanoai.com/news/new-nanoparticles-make-hidden-chemical-differences-light-up",
-      "date": "2026-09-21"
+      "title": "Anthropic's Dario Amodei gets the SNL treatment | AI News",
+      "slug": "anthropic8217s-dario-amodei-gets-the-snl-treatment",
+      "topic": "ai",
+      "excerpt": "\"AI is the devil and I its maker.\"",
+      "url": "https://technanoai.com/news/anthropic8217s-dario-amodei-gets-the-snl-treatment",
+      "date": "2026-09-28"
     },
     {
-      "title": "AI can now control fusion plasma faster than humans can r... | Nuclear Fusion News",
-      "slug": "ai-can-now-control-fusion-plasma-faster-than-humans-can-react",
-      "topic": "fusion",
-      "excerpt": "Princeton researchers have tested an AI system that can monitor and control fusion plasma in milliseconds, reacting far faster than a human operator. In one experiment, it predicted a damaging instabi",
-      "url": "https://technanoai.com/news/ai-can-now-control-fusion-plasma-faster-than-humans-can-react",
-      "date": "2026-09-21"
+      "title": "Anthropic’s CEO is about to have dinner with President Trump | AI News",
+      "slug": "anthropics-ceo-is-about-to-have-dinner-with-president-trump",
+      "topic": "ai",
+      "excerpt": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+      "url": "https://technanoai.com/news/anthropics-ceo-is-about-to-have-dinner-with-president-trump",
+      "date": "2026-09-28"
     },
     {
-      "title": "IQT Sunday Edition | Quantum Computing News",
-      "slug": "iqt-sunday-edition",
+      "title": "Bitget resumes Bitcoin withdrawals after $387.5 million c... | Cybersecurity News",
+      "slug": "bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist",
+      "topic": "cybersecurity",
+      "excerpt": "Cryptocurrency exchange Bitget has resumed Bitcoin withdrawals suspended after suspected North Korean hackers breached its systems last week and stole over $350 million. [...]",
+      "url": "https://technanoai.com/news/bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "DC Health Agency Exposes 400,000 Beneficiary Records | Cybersecurity News",
+      "slug": "dc-health-agency-exposes-400000-beneficiary-records",
+      "topic": "cybersecurity",
+      "excerpt": "The Medicaid IDs and other information of Medicaid and DC Healthcare Alliance beneficiaries were exposed.\nThe post DC Health Agency Exposes 400,000 Beneficiary Records appeared first on SecurityWeek.",
+      "url": "https://technanoai.com/news/dc-health-agency-exposes-400000-beneficiary-records",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "<a href=\"/biotech/adicet-bio-car-t-sparks-lupus-remission... | Biotechnology News",
+      "slug": "a-hrefbiotechadicet-bio-car-t-sparks-lupus-remissions-early-trial-new-",
+      "topic": "biotech",
+      "excerpt": "As the race to harness CAR-T cells for autoimmune diseases hits a rough patch, a Bay Area biotech is gliding over the potholes with an early sign of efficacy in lupus.",
+      "url": "https://technanoai.com/news/a-hrefbiotechadicet-bio-car-t-sparks-lupus-remissions-early-trial-new-",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "<a href=\"/biotech/merck-co-and-daiichi-pull-lung-cancer-f... | Biotechnology News",
+      "slug": "a-hrefbiotechmerck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pu",
+      "topic": "biotech",
+      "excerpt": "Daiichi Sankyo and Merck  Co. have withdrawn an antibody-drug conjugate (ADC) filing after the FDA said they lacked the data for accelerated approval in a lung cancer population.",
+      "url": "https://technanoai.com/news/a-hrefbiotechmerck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pu",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "The Two-Century Path That Made Quantum Computing Inevitable | Quantum Computing News",
+      "slug": "the-two-century-path-that-made-quantum-computing-inevitable",
       "topic": "quantum",
-      "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
-      "url": "https://technanoai.com/news/iqt-sunday-edition",
-      "date": "2026-09-21"
+      "excerpt": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field fr",
+      "url": "https://technanoai.com/news/the-two-century-path-that-made-quantum-computing-inevitable",
+      "date": "2026-09-28"
     },
     {
-      "title": "Scientists opened a sealed envelope after 10 years. Gravi... | Quantum Computing News",
-      "slug": "scientists-opened-a-sealed-envelope-after-10-years-gravity-still-didnt",
-      "topic": "quantum",
-      "excerpt": "A decade-long NIST experiment has produced a new measurement of the universal gravitational constant that differs unexpectedly from another leading result, deepening a 225-year-old physics puzzle. The",
-      "url": "https://technanoai.com/news/scientists-opened-a-sealed-envelope-after-10-years-gravity-still-didnt",
-      "date": "2026-09-21"
-    },
-    {
-      "title": "Already-operating battery storage projects are key to mak... | Energy Storage News",
-      "slug": "already-operating-battery-storage-projects-are-key-to-making-the-busin",
+      "title": "EU opens infringement cases against 18 states over energy... | Energy Storage News",
+      "slug": "eu-opens-infringement-cases-against-18-states-over-energy-sharing-rule",
       "topic": "energy",
-      "excerpt": "Existing assets can provide crucial benchmarks in sizing and other crucial battery storage design decisions, writes Ashutosh Vats, head of BESS business development at 3E.",
-      "url": "https://technanoai.com/news/already-operating-battery-storage-projects-are-key-to-making-the-busin",
-      "date": "2026-09-21"
+      "excerpt": "Two-thirds of EU member states face infringement action for failing to enact a new right to share renewable electricity over the grid.\nThe post EU opens infringement cases against 18 states over energ",
+      "url": "https://technanoai.com/news/eu-opens-infringement-cases-against-18-states-over-energy-sharing-rule",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "European residential heat pump sales up 11% in H1 | Energy Storage News",
+      "slug": "european-residential-heat-pump-sales-up-11-in-h1",
+      "topic": "energy",
+      "excerpt": "European Heat Pump Association says Strait of Hormuz crisis and the European Commission’s plan to encourage EU governments to lower electricity tax have helped drive up residential heat pump sales thi",
+      "url": "https://technanoai.com/news/european-residential-heat-pump-sales-up-11-in-h1",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "Agile Space Industries Expands Leadership Structure to Su... | Space Exploration News",
+      "slug": "agile-space-industries-expands-leadership-structure-to-support-next-ph",
+      "topic": "space",
+      "excerpt": "DURANGO, Colo., Sept. 28, 2026 – Agile Space Industries today announced that Jason Wright will join the company as President in early October, strengthening Agile’s operational leadership as the compa",
+      "url": "https://technanoai.com/news/agile-space-industries-expands-leadership-structure-to-support-next-ph",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "Live coverage: SpaceX to launch first Starlink V3 satelli... | Space Exploration News",
+      "slug": "live-coverage-spacex-to-launch-first-starlink-v3-satellites-to-orbit-o",
+      "topic": "space",
+      "excerpt": "The first planned orbital flight of a Starship-Super Heavy rocket aims to send 26 Starlink Version 3 into low Earth orbit. Liftoff from Pad 2 at Starbase, Texas, is scheduled during a 75-minute window",
+      "url": "https://technanoai.com/news/live-coverage-spacex-to-launch-first-starlink-v3-satellites-to-orbit-o",
+      "date": "2026-09-28"
     }
   ]
 }
