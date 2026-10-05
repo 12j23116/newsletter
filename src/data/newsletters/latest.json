@@ -1,113 +1,113 @@
 {
-  "issue": 91,
-  "date": "2026-09-28",
-  "subject": "This Week: Robotics, AI & more — September 28, 2026",
+  "issue": 92,
+  "date": "2026-10-05",
+  "subject": "This Week: Space, Cybersecurity & more — October 5, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "robotics",
-    "ai",
+    "space",
     "cybersecurity",
-    "biotech",
-    "quantum",
     "energy",
-    "space"
+    "robotics",
+    "biotech",
+    "ai",
+    "quantum"
   ],
   "articles": [
     {
-      "title": "Asimov's laws are not enough to keep robotics and AI safe | Robotics News",
-      "slug": "asimov8217s-laws-are-not-enough-to-keep-robotics-and-ai-safe",
+      "title": "Agile Space Industries Strengthens Board and Corporate De... | Space Exploration News",
+      "slug": "agile-space-industries-strengthens-board-and-corporate-development-to-",
+      "topic": "space",
+      "excerpt": "DURANGO, Colo., Oct. 5, 2026 — Agile Space Industries today announced that Jonathan Baliff has joined its Board of Directors, bringing extensive experience in aerospace, finance, and corporate leaders",
+      "url": "https://technanoai.com/news/agile-space-industries-strengthens-board-and-corporate-development-to-",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "APOD: 2026 October 5 – M104: The Sombrero Galaxy’s Tidal ... | Space Exploration News",
+      "slug": "apod-2026-october-5-m104-the-sombrero-galaxys-tidal-streams",
+      "topic": "space",
+      "excerpt": "APOD Science APOD APOD: 2026 October 5 – M104:… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
+      "url": "https://technanoai.com/news/apod-2026-october-5-m104-the-sombrero-galaxys-tidal-streams",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "250,000 Impacted by Data Breaches at New Jersey, Texas He... | Cybersecurity News",
+      "slug": "250000-impacted-by-data-breaches-at-new-jersey-texas-healthcare-firms",
+      "topic": "cybersecurity",
+      "excerpt": "Hackers stole patient information from Clover Health Investments and AngMar Management Services in July.\nThe post 250,000 Impacted by Data Breaches at New Jersey, Texas Healthcare Firms appeared first",
+      "url": "https://technanoai.com/news/250000-impacted-by-data-breaches-at-new-jersey-texas-healthcare-firms",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "Exploitation Hits Rejetto HFS Vulnerability Discovered by AI | Cybersecurity News",
+      "slug": "exploitation-hits-rejetto-hfs-vulnerability-discovered-by-ai",
+      "topic": "cybersecurity",
+      "excerpt": "CVE-2026-61500 allows attackers to recover the session-cookie signing key and gain administrative access and RCE.\nThe post Exploitation Hits Rejetto HFS Vulnerability Discovered by AI  appeared first ",
+      "url": "https://technanoai.com/news/exploitation-hits-rejetto-hfs-vulnerability-discovered-by-ai",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "A new kind of magnetism could unlock faster, more efficie... | Energy Storage News",
+      "slug": "a-new-kind-of-magnetism-could-unlock-faster-more-efficient-computers",
+      "topic": "energy",
+      "excerpt": "Scientists have discovered evidence of altermagnetism in a thin, highly tunable material that could help electronics use electron spin instead of relying only on electrical charge. The unusual magneti",
+      "url": "https://technanoai.com/news/a-new-kind-of-magnetism-could-unlock-faster-more-efficient-computers",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "China’s 700 MW Jintan salt-cavern CAES project completes ... | Energy Storage News",
+      "slug": "chinas-700-mw-jintan-salt-cavern-caes-project-completes-full-system-st",
+      "topic": "energy",
+      "excerpt": "The two-unit non-fuel CAES project is now moving toward grid-connection testing and system commissioning. \nThe post China’s 700 MW Jintan salt-cavern CAES project completes full-system startup appeare",
+      "url": "https://technanoai.com/news/chinas-700-mw-jintan-salt-cavern-caes-project-completes-full-system-st",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "How robotics and physical AI can responsibly tackle key p... | Robotics News",
+      "slug": "how-robotics-and-physical-ai-can-responsibly-tackle-key-physical-secur",
       "topic": "robotics",
-      "excerpt": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not enough to keep robotics and AI safe appeared",
-      "url": "https://technanoai.com/news/asimov8217s-laws-are-not-enough-to-keep-robotics-and-ai-safe",
-      "date": "2026-09-28"
+      "excerpt": "Cyber and physical security threats are rapidly evolving, but robotics and AI can evolve to meet them, writes a columnist.\nThe post How robotics and physical AI can responsibly tackle key physical sec",
+      "url": "https://technanoai.com/news/how-robotics-and-physical-ai-can-responsibly-tackle-key-physical-secur",
+      "date": "2026-10-05"
     },
     {
-      "title": "Anthropic's Dario Amodei gets the SNL treatment | AI News",
-      "slug": "anthropic8217s-dario-amodei-gets-the-snl-treatment",
-      "topic": "ai",
-      "excerpt": "\"AI is the devil and I its maker.\"",
-      "url": "https://technanoai.com/news/anthropic8217s-dario-amodei-gets-the-snl-treatment",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "Anthropic’s CEO is about to have dinner with President Trump | AI News",
-      "slug": "anthropics-ceo-is-about-to-have-dinner-with-president-trump",
-      "topic": "ai",
-      "excerpt": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
-      "url": "https://technanoai.com/news/anthropics-ceo-is-about-to-have-dinner-with-president-trump",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "Bitget resumes Bitcoin withdrawals after $387.5 million c... | Cybersecurity News",
-      "slug": "bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist",
-      "topic": "cybersecurity",
-      "excerpt": "Cryptocurrency exchange Bitget has resumed Bitcoin withdrawals suspended after suspected North Korean hackers breached its systems last week and stole over $350 million. [...]",
-      "url": "https://technanoai.com/news/bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "DC Health Agency Exposes 400,000 Beneficiary Records | Cybersecurity News",
-      "slug": "dc-health-agency-exposes-400000-beneficiary-records",
-      "topic": "cybersecurity",
-      "excerpt": "The Medicaid IDs and other information of Medicaid and DC Healthcare Alliance beneficiaries were exposed.\nThe post DC Health Agency Exposes 400,000 Beneficiary Records appeared first on SecurityWeek.",
-      "url": "https://technanoai.com/news/dc-health-agency-exposes-400000-beneficiary-records",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "<a href=\"/biotech/adicet-bio-car-t-sparks-lupus-remission... | Biotechnology News",
-      "slug": "a-hrefbiotechadicet-bio-car-t-sparks-lupus-remissions-early-trial-new-",
+      "title": "<a href=\"/biotech/gate-secures-870m-vote-confidence-eli-l... | Biotechnology News",
+      "slug": "a-hrefbiotechgate-secures-870m-vote-confidence-eli-lilly-hreflangengat",
       "topic": "biotech",
-      "excerpt": "As the race to harness CAR-T cells for autoimmune diseases hits a rough patch, a Bay Area biotech is gliding over the potholes with an early sign of efficacy in lupus.",
-      "url": "https://technanoai.com/news/a-hrefbiotechadicet-bio-car-t-sparks-lupus-remissions-early-trial-new-",
-      "date": "2026-09-28"
+      "excerpt": "Eli Lilly has been pushing at an open door by tacking on $870 million in biobucks to its existing collaboration with Gate Bioscience.",
+      "url": "https://technanoai.com/news/a-hrefbiotechgate-secures-870m-vote-confidence-eli-lilly-hreflangengat",
+      "date": "2026-10-05"
     },
     {
-      "title": "<a href=\"/biotech/merck-co-and-daiichi-pull-lung-cancer-f... | Biotechnology News",
-      "slug": "a-hrefbiotechmerck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pu",
+      "title": "<a href=\"/biotech/genmab-data-spur-claim-adc-clearly-supe... | Biotechnology News",
+      "slug": "a-hrefbiotechgenmab-data-spur-claim-adc-clearly-superior-abbvies-elahe",
       "topic": "biotech",
-      "excerpt": "Daiichi Sankyo and Merck  Co. have withdrawn an antibody-drug conjugate (ADC) filing after the FDA said they lacked the data for accelerated approval in a lung cancer population.",
-      "url": "https://technanoai.com/news/a-hrefbiotechmerck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pu",
-      "date": "2026-09-28"
+      "excerpt": "Genmab has linked an antibody-drug conjugate to median progression-free survival of 9.5 months, leading TD Cowen analysts to hail the asset as “clearly superior” to AbbVie’s Elahere.",
+      "url": "https://technanoai.com/news/a-hrefbiotechgenmab-data-spur-claim-adc-clearly-superior-abbvies-elahe",
+      "date": "2026-10-05"
     },
     {
-      "title": "The Two-Century Path That Made Quantum Computing Inevitable | Quantum Computing News",
-      "slug": "the-two-century-path-that-made-quantum-computing-inevitable",
+      "title": "Apple Plans Tighter macOS Full Disk Access Controls Over ... | AI News",
+      "slug": "apple-plans-tighter-macos-full-disk-access-controls-over-ai-agent-data",
+      "topic": "ai",
+      "excerpt": "Apple has announced that it's taking steps to tighten controls around a macOS setting called Full Disk Access (FDA) due to security risks posed by artificial intelligence (AI) agents.\n\n\"Some developer",
+      "url": "https://technanoai.com/news/apple-plans-tighter-macos-full-disk-access-controls-over-ai-agent-data",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "Attackers Target Rejetto HFS Flaw That Enables Admin Sess... | AI News",
+      "slug": "attackers-target-rejetto-hfs-flaw-that-enables-admin-session-forgery-a",
+      "topic": "ai",
+      "excerpt": "A critical security flaw impacting Rejetto HTTP File Server (HFS) is witnessing active exploitation attempts, according to VulnCheck.\n\nThe vulnerability in question is CVE-2026-61500 (CVSS score: 9.3)",
+      "url": "https://technanoai.com/news/attackers-target-rejetto-hfs-flaw-that-enables-admin-session-forgery-a",
+      "date": "2026-10-05"
+    },
+    {
+      "title": "Midwest Quantum Collaboratory Expands to Eight Universiti... | Quantum Computing News",
+      "slug": "midwest-quantum-collaboratory-expands-to-eight-universities-with-addit",
       "topic": "quantum",
-      "excerpt": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field fr",
-      "url": "https://technanoai.com/news/the-two-century-path-that-made-quantum-computing-inevitable",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "EU opens infringement cases against 18 states over energy... | Energy Storage News",
-      "slug": "eu-opens-infringement-cases-against-18-states-over-energy-sharing-rule",
-      "topic": "energy",
-      "excerpt": "Two-thirds of EU member states face infringement action for failing to enact a new right to share renewable electricity over the grid.\nThe post EU opens infringement cases against 18 states over energ",
-      "url": "https://technanoai.com/news/eu-opens-infringement-cases-against-18-states-over-energy-sharing-rule",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "European residential heat pump sales up 11% in H1 | Energy Storage News",
-      "slug": "european-residential-heat-pump-sales-up-11-in-h1",
-      "topic": "energy",
-      "excerpt": "European Heat Pump Association says Strait of Hormuz crisis and the European Commission’s plan to encourage EU governments to lower electricity tax have helped drive up residential heat pump sales thi",
-      "url": "https://technanoai.com/news/european-residential-heat-pump-sales-up-11-in-h1",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "Agile Space Industries Expands Leadership Structure to Su... | Space Exploration News",
-      "slug": "agile-space-industries-expands-leadership-structure-to-support-next-ph",
-      "topic": "space",
-      "excerpt": "DURANGO, Colo., Sept. 28, 2026 – Agile Space Industries today announced that Jason Wright will join the company as President in early October, strengthening Agile’s operational leadership as the compa",
-      "url": "https://technanoai.com/news/agile-space-industries-expands-leadership-structure-to-support-next-ph",
-      "date": "2026-09-28"
-    },
-    {
-      "title": "Live coverage: SpaceX to launch first Starlink V3 satelli... | Space Exploration News",
-      "slug": "live-coverage-spacex-to-launch-first-starlink-v3-satellites-to-orbit-o",
-      "topic": "space",
-      "excerpt": "The first planned orbital flight of a Starship-Super Heavy rocket aims to send 26 Starlink Version 3 into low Earth orbit. Liftoff from Pad 2 at Starbase, Texas, is scheduled during a 75-minute window",
-      "url": "https://technanoai.com/news/live-coverage-spacex-to-launch-first-starlink-v3-satellites-to-orbit-o",
-      "date": "2026-09-28"
+      "excerpt": "The Midwest Quantum Collaboratory (MQC) has expanded to include UIC, Northwestern, Indiana University, Washington University in St. Louis, and The Ohio State University, bringing its total to eight un",
+      "url": "https://technanoai.com/news/midwest-quantum-collaboratory-expands-to-eight-universities-with-addit",
+      "date": "2026-10-05"
     }
   ]
 }
