@@ -1,11 +1,11 @@
 {
-  "id": "bci-1790159225623-0",
+  "id": "bci-1791462450545-1",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "How the brain keeps its options straight at decision time | Brain-Computer Interfaces News",
   "excerpt": "Making a decision requires juggling a set of options without getting them confused or losing track of them. A new MIT study shows how neurons encode information to maximize clarity throughout the proc",
-  "date": "2026-09-23",
+  "date": "2026-10-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-23",
+      "date": "2026-10-08",
       "event": "How the brain keeps its options straight at decision time",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "How the brain keeps its options straight at decision time | Brain-Computer Interfaces News",
   "metaDescription": "Making a decision requires juggling a set of options without getting them confused or losing track of them. A new MIT study shows how neurons encode informat...",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, brain, keeps, options, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
