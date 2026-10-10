@@ -1,11 +1,11 @@
 {
-  "id": "bci-1790333243226-0",
+  "id": "bci-1791632023047-0",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Estimating suicide risk from text | Brain-Computer Interfaces News",
   "excerpt": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions.",
-  "date": "2026-09-25",
+  "date": "2026-10-10",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-25",
+      "date": "2026-10-10",
       "event": "Estimating suicide risk from text",
       "current": true
     },
