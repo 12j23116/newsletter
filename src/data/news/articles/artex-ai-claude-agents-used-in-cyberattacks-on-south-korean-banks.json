@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1790418550835-4",
+  "id": "cybersecurity-1791719226125-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "U.S. Soldier Gets 70 Months in Prison for AT'T, Verizon E... | Cybersecurity News",
-  "excerpt": "A U.S. Army soldier who pleaded guilty to hacking into multiple telecommunications companies and stealing mobile call and text metadata for more than 100 million AT'T customers in 2024 was sentenced t",
-  "date": "2026-09-26",
+  "title": "ARTEX AI, Claude agents used in cyberattacks on South Kor... | Cybersecurity News",
+  "excerpt": "The cyberattacks that shook the South Korean financial sector earlier this month were launched by a Chinese hacker using the ARTEX AI penetration testing suite and Claude agents. [...]",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "us-soldier-gets-70-months-in-prison-for-at038t-verizon-extortions",
-  "sourceLink": "https://krebsonsecurity.com/2026/09/u-s-soldier-gets-70-months-in-prison-for-att-verizon-extortions/",
-  "sourceName": "BrianKrebs",
+  "slug": "artex-ai-claude-agents-used-in-cyberattacks-on-south-korean-banks",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "A U. S."
+      "text": "The cyberattacks that shook the South Korean financial sector earlier this month were launched by a Chinese hacker using the ARTEX AI penetration testing suite and Claude agents.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Army soldier who pleaded guilty to hacking into multiple telecommunications companies and stealing mobile call and text metadata for more than 100 million AT'T customers in 2024 was sentenced to 70 months in federal prison today and ordered to pay nearly $300,000 in restitution to victims."
+      "text": "According to reporting from Bill Toulas, The cyberattacks that shook the South Korean financial sector earlier this month were launched by a Chinese hacker using the ARTEX AI penetration testing suite and Claude agents. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "U.S. Soldier Gets 70 Months in Prison for AT'T, Verizon Extortions — a notable development in Cybersecurity",
+    "ARTEX AI, Claude agents used in cyberattacks on South Korean banks — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "BrianKrebs",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "U.S. Soldier Gets 70 Months in Prison for AT'T, Verizon Extortions",
+      "date": "2026-10-11",
+      "event": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "soldier",
-    "months",
+    "artex",
+    "claude",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "U.S. Soldier Gets 70 Months in Prison for AT'T, Verizon E... | Cybersecurity News",
-  "metaDescription": "A U.S. Army soldier who pleaded guilty to hacking into multiple telecommunications companies and stealing mobile call and text metadata for more than 100 mil...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, soldier, gets, months, TechNanoAI, emerging tech news",
+  "metaTitle": "ARTEX AI, Claude agents used in cyberattacks on South Kor... | Cybersecurity News",
+  "metaDescription": "The cyberattacks that shook the South Korean financial sector earlier this month were launched by a Chinese hacker using the ARTEX AI penetration testing sui...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, artex, claude, agents, TechNanoAI, emerging tech news",
   "featured": false
 }

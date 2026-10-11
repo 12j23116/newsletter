@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1790418559246-3",
+  "id": "quantum-1791719233673-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Fairfax County Public Schools to Install XeedQ 4-Qubit Qu... | Quantum Computing News",
-  "excerpt": "Fairfax County Public Schools (FCPS) will be the first K-12 public high school to install a physical quantum computer, the XeedQ XQ1e, at Skyview High School in December 2026. This 4-qubit quantum com",
-  "date": "2026-09-26",
+  "title": "IBM Expands Qiskit Beyond Python with Native C API Bindin... | Quantum Computing News",
+  "excerpt": "IBM Quantum has expanded its Qiskit open-source software to include native C API bindings for Fortran, C++, and Julia. This allows researchers to integrate quantum circuits directly into high-performa",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "fairfax-county-public-schools-to-install-xeedq-4-qubit-quantum-compute",
-  "sourceLink": "https://quantumcomputingreport.com/fairfax-county-public-schools-to-install-xeedq-4-qubit-quantum-computer-at-skyview-high-school/",
+  "slug": "ibm-expands-qiskit-beyond-python-with-native-c-api-bindings-for-fortra",
+  "sourceLink": "https://quantumcomputingreport.com/ibm-expands-qiskit-beyond-python-with-native-c-api-bindings-for-fortran-c-and-julia/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Fairfax County Public Schools (FCPS) will be the first K-12 public high school to install a physical quantum computer, the XeedQ XQ1e, at Skyview High School in December 2026.  This 4-qubit quantum computer operates at room temperature and offers high-fidelity quantum computing for student learning."
+      "text": "IBM Quantum has expanded its Qiskit open-source software to include native C API bindings for Fortran, C++, and Julia.  This allows researchers to integrate quantum circuits directly into high-performance computing (HPC) applications without Python, improving performance and interoperability."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The initiative aims to create a regional talent development hub in quantum computing."
+      "text": "The new bindings support complex quantum-centric supercomputing workflows and hybrid algorithms."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Fairfax County Public Schools to Install XeedQ 4-Qubit Quantum Computer at Skyvi — a notable development in Quantum Computing",
+    "IBM Expands Qiskit Beyond Python with Native C API Bindings for Fortran, C++, an — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "Fairfax County Public Schools to Install XeedQ 4-Qubit Quantum Computer at Skyvi",
+      "date": "2026-10-11",
+      "event": "IBM Expands Qiskit Beyond Python with Native C API Bindings for Fortran, C++, an",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "fairfax",
-    "county",
+    "expands",
+    "qiskit",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Fairfax County Public Schools to Install XeedQ 4-Qubit Qu... | Quantum Computing News",
-  "metaDescription": "Fairfax County Public Schools (FCPS) will be the first K-12 public high school to install a physical quantum computer, the XeedQ XQ1e, at Skyview High School...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, fairfax, county, public, TechNanoAI, emerging tech news",
+  "metaTitle": "IBM Expands Qiskit Beyond Python with Native C API Bindin... | Quantum Computing News",
+  "metaDescription": "IBM Quantum has expanded its Qiskit open-source software to include native C API bindings for Fortran, C++, and Julia. This allows researchers to integrate q...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, expands, qiskit, beyond, TechNanoAI, emerging tech news",
   "featured": false
 }

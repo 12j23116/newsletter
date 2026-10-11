@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1790418559247-4",
+  "id": "quantum-1791719233672-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "European Commission Approves eCAUSIS Results as Creotech ... | Quantum Computing News",
-  "excerpt": "Creotech Quantum's eCAUSIS project, funded by Horizon Europe, has received European Commission approval for its DV-QKD platform, transitioning it from R&D to commercial production. The project, with a",
-  "date": "2026-09-26",
+  "title": "IBM Launches Directed Execution Model and Executor Primit... | Quantum Computing News",
+  "excerpt": "IBM Quantum has launched a new directed execution model with the Executor primitive in qiskit-ibm-runtime v0.50.0. This framework shifts error mitigation to the client side, giving researchers greater",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "european-commission-approves-ecausis-results-as-creotech-quantum-prepa",
-  "sourceLink": "https://quantumcomputingreport.com/european-commission-approves-ecausis-results-as-creotech-quantum-prepares-qkd-system-for-commercial-rollout/",
+  "slug": "ibm-launches-directed-execution-model-and-executor-primitive-to-give-r",
+  "sourceLink": "https://quantumcomputingreport.com/ibm-launches-directed-execution-model-and-executor-primitive-to-give-researchers-client-side-control-over-qec-workflows/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Creotech Quantum's eCAUSIS project, funded by Horizon Europe, has received European Commission approval for its DV-QKD platform, transitioning it from R&D to commercial production.  The project, with a total budget of nearly €7 million, involved Creotech Quantum as coordinator, along with AIT Austrian Institute of Technology and Fraunhofer Society."
+      "text": "IBM Quantum has launched a new directed execution model with the Executor primitive in qiskit-ibm-runtime v0. 50."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Creotech Quantum's eCAUSIS project, funded by Horizon Europe, has received European Commission approval for its DV-QKD platform, transitioning it from R&D to commercial production. The project, with a total budget of nearly €7 million, involved Creotech Quantum as coordinator, along with AIT Austrian Institute of Technology and Fraunhofer Society. This initiative establishes a European supply chain for QKD modules, with an initial capacity of 1,000 units per year, potentially expanding to 10,000. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "0.  This framework shifts error mitigation to the client side, giving researchers greater control over quantum error correction (QEC) workflows."
+    },
+    {
+      "type": "p",
+      "text": "It allows for custom control over circuit transformations and error-correction pipelines, improving efficiency and transparency for quantum algorithm developers and QEC researchers."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "European Commission Approves eCAUSIS Results as Creotech Quantum Prepares QKD Sy — a notable development in Quantum Computing",
+    "IBM Launches Directed Execution Model and Executor Primitive to Give Researchers — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "European Commission Approves eCAUSIS Results as Creotech Quantum Prepares QKD Sy",
+      "date": "2026-10-11",
+      "event": "IBM Launches Directed Execution Model and Executor Primitive to Give Researchers",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "european",
-    "commission",
+    "launches",
+    "directed",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "European Commission Approves eCAUSIS Results as Creotech ... | Quantum Computing News",
-  "metaDescription": "Creotech Quantum's eCAUSIS project, funded by Horizon Europe, has received European Commission approval for its DV-QKD platform, transitioning it from R&D to...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, european, commission, approves, TechNanoAI, emerging tech news",
+  "metaTitle": "IBM Launches Directed Execution Model and Executor Primit... | Quantum Computing News",
+  "metaDescription": "IBM Quantum has launched a new directed execution model with the Executor primitive in qiskit-ibm-runtime v0.50.0. This framework shifts error mitigation to ...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, launches, directed, execution, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "energy-1790418556842-0",
+  "id": "energy-1791719231628-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Chinese province moves grid-side batteries into spot market | Energy Storage News",
-  "excerpt": "China’s Zhejiang province has set market rules for 40 grid-side storage projects totaling 2.54 GW/5.1 GWh, with full price-and-quantity bidding planned for 2027. \nThe post Chinese province moves grid-",
-  "date": "2026-09-26",
+  "title": "Scientists may have found a shortcut to fusion energy | Energy Storage News",
+  "excerpt": "Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma first, then increasing its density. Their ",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "chinese-province-moves-grid-side-batteries-into-spot-market",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/26/chinese-province-moves-grid-side-batteries-into-spot-market/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "scientists-may-have-found-a-shortcut-to-fusion-energy",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261008005242.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "China’s Zhejiang province has set market rules for 40 grid-side storage projects totaling 2. 54 GW/5."
+      "text": "Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma first, then increasing its density.  Their calculations could help future reactors reach self-sustaining fusion with far less energy while avoiding hidden problems that make ignition harder."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "1 GWh, with full price-and-quantity bidding planned for 2027.  \nThe post Chinese province moves grid-side batteries into spot market appeared first on pv magazine Global."
+      "text": "According to reporting from sciencedaily.com, Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma first, then increasing its density. Their calculations could help future reactors reach self-sustaining fusion with far less energy while avoiding hidden problems that make ignition harder.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Chinese province moves grid-side batteries into spot market — a notable development in Energy Storage",
+    "Scientists may have found a shortcut to fusion energy — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "Chinese province moves grid-side batteries into spot market",
+      "date": "2026-10-11",
+      "event": "Scientists may have found a shortcut to fusion energy",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "chinese",
-    "province",
+    "scientists",
+    "found",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Chinese province moves grid-side batteries into spot market | Energy Storage News",
-  "metaDescription": "China’s Zhejiang province has set market rules for 40 grid-side storage projects totaling 2.54 GW/5.1 GWh, with full price-and-quantity bidding planned for 2...",
-  "keywords": "energy storage, battery, solid-state, grid storage, chinese, province, moves, TechNanoAI, emerging tech news",
+  "metaTitle": "Scientists may have found a shortcut to fusion energy | Energy Storage News",
+  "metaDescription": "Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma...",
+  "keywords": "energy storage, battery, solid-state, grid storage, scientists, have, found, TechNanoAI, emerging tech news",
   "featured": true
 }

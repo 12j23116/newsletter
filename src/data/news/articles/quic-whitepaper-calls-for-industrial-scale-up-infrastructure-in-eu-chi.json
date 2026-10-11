@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1790418559246-2",
+  "id": "quantum-1791719233673-4",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Pasqal Reports H1 2026 Financial Results: €312.9M Post-SP... | Quantum Computing News",
-  "excerpt": "Pasqal reported strong H1 2026 financial results with €312.9M post-SPAC cash and 14% revenue growth. The company achieved significant technological breakthroughs, including scaling to 1,024 atoms and ",
-  "date": "2026-09-26",
+  "title": "QuIC Whitepaper Calls for Industrial Scale-Up Infrastruct... | Quantum Computing News",
+  "excerpt": "The European Quantum Industry Consortium (QuIC) has released a whitepaper responding to the EU Chips Act 2.0 proposal, advocating for dedicated industrialization pathways to bridge the gap between qua",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "pasqal-reports-h1-2026-financial-results-3129m-post-spac-cash-balance-",
-  "sourceLink": "https://quantumcomputingreport.com/pasqal-reports-h1-2026-financial-results-e312-9m-post-spac-cash-balance-14-revenue-growth-and-1000-atom-scale/",
+  "slug": "quic-whitepaper-calls-for-industrial-scale-up-infrastructure-in-eu-chi",
+  "sourceLink": "https://quantumcomputingreport.com/quic-whitepaper-calls-for-industrial-scale-up-infrastructure-in-eu-chips-act-2-0/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Pasqal reported strong H1 2026 financial results with €312. 9M post-SPAC cash and 14% revenue growth."
+      "text": "The European Quantum Industry Consortium (QuIC) has released a whitepaper responding to the EU Chips Act 2. 0 proposal, advocating for dedicated industrialization pathways to bridge the gap between quantum chip prototyping and production."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The company achieved significant technological breakthroughs, including scaling to 1,024 atoms and demonstrating logical qubit execution.  Pasqal also expanded commercially with new deployments in Saudi Arabia and Italy, and became an XPRIZE finalist."
-    },
-    {
-      "type": "p",
-      "text": "The post Pasqal Reports H1 2026 Financial Results: €312."
+      "text": "QuIC highlights the lack of mechanisms for industrial-scale manufacturing in current proposals and warns about international transactions that threaten European supply-chain resilience."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Pasqal Reports H1 2026 Financial Results: €312.9M Post-SPAC Cash Balance, 14% Re — a notable development in Quantum Computing",
+    "QuIC Whitepaper Calls for Industrial Scale-Up Infrastructure in EU Chips Act 2.0 — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "Pasqal Reports H1 2026 Financial Results: €312.9M Post-SPAC Cash Balance, 14% Re",
+      "date": "2026-10-11",
+      "event": "QuIC Whitepaper Calls for Industrial Scale-Up Infrastructure in EU Chips Act 2.0",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "pasqal",
-    "reports",
+    "whitepaper",
+    "calls",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Pasqal Reports H1 2026 Financial Results: €312.9M Post-SP... | Quantum Computing News",
-  "metaDescription": "Pasqal reported strong H1 2026 financial results with €312.9M post-SPAC cash and 14% revenue growth. The company achieved significant technological breakthro...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, pasqal, reports, financial, TechNanoAI, emerging tech news",
+  "metaTitle": "QuIC Whitepaper Calls for Industrial Scale-Up Infrastruct... | Quantum Computing News",
+  "metaDescription": "The European Quantum Industry Consortium (QuIC) has released a whitepaper responding to the EU Chips Act 2.0 proposal, advocating for dedicated industrializa...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quic, whitepaper, calls, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1790418550836-5",
+  "id": "cybersecurity-1791719226125-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Kiteworks urges 6-hour server shutdown over potential zer... | Cybersecurity News",
-  "excerpt": "Secure file-sharing software company Kiteworks is urging customers worldwide to temporarily shut down their servers on Saturday for a six-hour window after receiving threat intelligence warning of a p",
-  "date": "2026-09-26",
+  "title": "Cyber exec arrested in case allegedly tied to ShinyHunter... | Cybersecurity News",
+  "excerpt": "Canadian cybersecurity executive Edward Dubrovsky has been arrested in Pennsylvania in connection with alleged extortion activity that multiple reports have linked to the FBI's ongoing crackdown on th",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/",
+  "slug": "cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/",
   "sourceName": "Lawrence Abrams",
   "body": [
     {
       "type": "p",
-      "text": "Secure file-sharing software company Kiteworks is urging customers worldwide to temporarily shut down their servers on Saturday for a six-hour window after receiving threat intelligence warning of a potentially imminent cyberattack.  [..."
+      "text": "Canadian cybersecurity executive Edward Dubrovsky has been arrested in Pennsylvania in connection with alleged extortion activity that multiple reports have linked to the FBI's ongoing crackdown on the ShinyHunters hacking group.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, Secure file-sharing software company Kiteworks is urging customers worldwide to temporarily shut down their servers on Saturday for a six-hour window after receiving threat intelligence warning of a potentially imminent cyberattack. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lawrence Abrams, Canadian cybersecurity executive Edward Dubrovsky has been arrested in Pennsylvania in connection with alleged extortion activity that multiple reports have linked to the FBI's ongoing crackdown on the ShinyHunters hacking group. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Kiteworks urges 6-hour server shutdown over potential zero-day attacks — a notable development in Cybersecurity",
+    "Cyber exec arrested in case allegedly tied to ShinyHunters hackers — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "Kiteworks urges 6-hour server shutdown over potential zero-day attacks",
+      "date": "2026-10-11",
+      "event": "Cyber exec arrested in case allegedly tied to ShinyHunters hackers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "kiteworks",
-    "urges",
+    "cyber",
+    "arrested",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Kiteworks urges 6-hour server shutdown over potential zer... | Cybersecurity News",
-  "metaDescription": "Secure file-sharing software company Kiteworks is urging customers worldwide to temporarily shut down their servers on Saturday for a six-hour window after r...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, kiteworks, urges, hour, TechNanoAI, emerging tech news",
+  "metaTitle": "Cyber exec arrested in case allegedly tied to ShinyHunter... | Cybersecurity News",
+  "metaDescription": "Canadian cybersecurity executive Edward Dubrovsky has been arrested in Pennsylvania in connection with alleged extortion activity that multiple reports have ...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, cyber, exec, arrested, TechNanoAI, emerging tech news",
   "featured": false
 }

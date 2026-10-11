@@ -1,21 +1,21 @@
 {
-  "id": "space-1790418551976-2",
+  "id": "space-1791719227228-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA, Boeing to Provide Update on Starliner Development | Space Exploration News",
-  "excerpt": "During a news conference at 3 p.m. EDT on Monday, Sept. 28, NASA and Boeing leadership will discuss Starliner’s development and plans for regular crew flights to and from the International Space Stati",
-  "date": "2026-09-26",
+  "title": "APOD: 2026 October 11 – Ice Fishing for Cosmic Neutrinos | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 October 11 – Ice… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a di",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa-boeing-to-provide-update-on-starliner-development",
-  "sourceLink": "https://www.nasa.gov/news-release/nasa-boeing-to-provide-update-on-starliner-development/",
-  "sourceName": "Lauren E. Low",
+  "slug": "apod-2026-october-11-ice-fishing-for-cosmic-neutrinos",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-october-11-ice-fishing-for-cosmic-neutrinos/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "During a news conference at 3 p. m."
+      "text": "APOD Science APOD APOD: 2026 October 11 – Ice… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "EDT on Monday, Sept.  28, NASA and Boeing leadership will discuss Starliner’s development and plans for regular crew flights to and from the International Space Station."
-    },
-    {
-      "type": "p",
-      "text": "Learn where to watch online: https://www. nasa."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 October 11 – Ice… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Ice Fishing [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA, Boeing to Provide Update on Starliner Development — a notable development in Space Exploration",
+    "APOD: 2026 October 11 – Ice Fishing for Cosmic Neutrinos — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Lauren E. Low",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "NASA, Boeing to Provide Update on Starliner Development",
+      "date": "2026-10-11",
+      "event": "APOD: 2026 October 11 – Ice Fishing for Cosmic Neutrinos",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "boeing",
-    "provide",
+    "october",
+    "fishing",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA, Boeing to Provide Update on Starliner Development | Space Exploration News",
-  "metaDescription": "During a news conference at 3 p.m. EDT on Monday, Sept. 28, NASA and Boeing leadership will discuss Starliner’s development and plans for regular crew flight...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, boeing, provide, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "APOD: 2026 October 11 – Ice Fishing for Cosmic Neutrinos | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 October 11 – Ice… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, october, fishing, TechNanoAI, emerging tech news",
+  "featured": true
 }

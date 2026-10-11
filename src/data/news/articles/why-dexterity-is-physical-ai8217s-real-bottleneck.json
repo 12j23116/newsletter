@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1790418557917-2",
+  "id": "robotics-1791719232283-2",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Video Friday: Life’s Better With a Little Robot Goose | Robotics News",
-  "excerpt": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few month",
-  "date": "2026-09-26",
+  "title": "Why dexterity is physical AI's real bottleneck | Robotics News",
+  "excerpt": "The next major challenge in robotic dexterity is making the entire system reliable enough to turn capabilities into useful work.\nThe post Why dexterity is physical AI's real bottleneck appeared first ",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "video-friday-lifes-better-with-a-little-robot-goose",
-  "sourceLink": "https://spectrum.ieee.org/video-friday-goose-household-robots",
-  "sourceName": "Evan Ackerman",
+  "slug": "why-dexterity-is-physical-ai8217s-real-bottleneck",
+  "sourceLink": "https://www.therobotreport.com/why-dexterity-is-physical-ai-real-bottleneck/",
+  "sourceName": "Nicolas Sauvage",
   "body": [
     {
       "type": "p",
-      "text": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics.  We also post a weekly calendar of upcoming robotics events for the next few months."
+      "text": "The next major challenge in robotic dexterity is making the entire system reliable enough to turn capabilities into useful work. \nThe post Why dexterity is physical AI's real bottleneck appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,15 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Please send us your events for inclusion. IROS 2026: 27 September–1 October 2026, PITTSBURGHCoRL 2026: 9–12 November 2026, AUSTIN, TEXASHumanoids 2026: 6–9 December 2026, SANTA CLARA, CALIF."
-    },
-    {
-      "type": "p",
-      "text": "Enjoy today’s videos!  Life’s better with a little Goose."
-    },
-    {
-      "type": "p",
-      "text": "[ The Robot Works ]Thanks, Dave!"
+      "text": "According to reporting from Nicolas Sauvage, The next major challenge in robotic dexterity is making the entire system reliable enough to turn capabilities into useful work.\nThe post Why dexterity is physical AI's real bottleneck appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -105,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Video Friday: Life’s Better With a Little Robot Goose — a notable development in Robotics",
+    "Why dexterity is physical AI's real bottleneck — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -128,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Evan Ackerman",
+      "value": "Nicolas Sauvage",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -165,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "Video Friday: Life’s Better With a Little Robot Goose",
+      "date": "2026-10-11",
+      "event": "Why dexterity is physical AI's real bottleneck",
       "current": true
     },
     {
@@ -199,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "video",
-    "friday",
+    "dexterity",
+    "physical",
     "emerging tech"
   ],
   "poll": {
@@ -224,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Video Friday: Life’s Better With a Little Robot Goose | Robotics News",
-  "metaDescription": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upco...",
-  "keywords": "robotics, humanoid robot, automation, drones, video, friday, life, TechNanoAI, emerging tech news",
+  "metaTitle": "Why dexterity is physical AI's real bottleneck | Robotics News",
+  "metaDescription": "The next major challenge in robotic dexterity is making the entire system reliable enough to turn capabilities into useful work.\nThe post Why dexterity is ph...",
+  "keywords": "robotics, humanoid robot, automation, drones, dexterity, physical, real, TechNanoAI, emerging tech news",
   "featured": false
 }

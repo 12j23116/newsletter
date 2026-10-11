@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790418549455-1",
+  "id": "ai-1791719225294-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Explo... | AI News",
-  "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Microsoft SharePoint and Mikrotik RouterOS to its Known Exploited Vulnerabilities (KEV) ca",
-  "date": "2026-09-26",
+  "title": "Here are the top AI agents that can live in your text mes... | AI News",
+  "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "sharepoint-rce-and-mikrotik-routeros-flaws-actively-exploited-in-the-w",
-  "sourceLink": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "here-are-the-top-ai-agents-that-can-live-in-your-text-messages",
+  "sourceLink": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
+  "sourceName": "Lauren Forristal",
   "body": [
     {
       "type": "p",
-      "text": "The U. S."
+      "text": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Microsoft SharePoint and Mikrotik RouterOS to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. \n\nThe vulnerabilities in question are as follows -\n\n\n  CVE-2026-65660 (CVSS score: 8."
+      "text": "According to reporting from Lauren Forristal, We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild — a notable development in AI",
+    "Here are the top AI agents that can live in your text messages — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Lauren Forristal",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
+      "date": "2026-10-11",
+      "event": "Here are the top AI agents that can live in your text messages",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "sharepoint",
-    "mikrotik",
+    "agents",
+    "messages",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SharePoint RCE and MikroTik RouterOS Flaws Actively Explo... | AI News",
-  "metaDescription": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Microsoft SharePoint and Mikrotik RouterOS to i...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, sharepoint, mikrotik, routeros, TechNanoAI, emerging tech news",
+  "metaTitle": "Here are the top AI agents that can live in your text mes... | AI News",
+  "metaDescription": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, here, agents, that, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790418549455-2",
+  "id": "ai-1791719225293-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Kiteworks Urges Customers to Shut Down Systems for 9 Hour... | AI News",
-  "excerpt": "Kiteworks (formerly Accellion) is urging customers to shut down their systems as a precautionary measure for nine hours over the weekend after it received threat intelligence about an imminent cyber a",
-  "date": "2026-09-26",
+  "title": "Microsoft’s Satya Nadella says AI models need an ‘emergen... | AI News",
+  "excerpt": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "kiteworks-urges-customers-to-shut-down-systems-for-9-hours-over-possib",
-  "sourceLink": "https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "microsofts-satya-nadella-says-ai-models-need-an-emergency-brake",
+  "sourceLink": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Kiteworks (formerly Accellion) is urging customers to shut down their systems as a precautionary measure for nine hours over the weekend after it received threat intelligence about an imminent cyber attack."
+      "text": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Kiteworks (formerly Accellion) is urging customers to shut down their systems as a precautionary measure for nine hours over the weekend after it received threat intelligence about an imminent cyber attack.\n\n\"Kiteworks received credible threat intelligence from federal intelligence authorities indicating that a threat actor may attempt to target some Kiteworks systems,\" said Frank Balonis, Chief. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber A — a notable development in AI",
+    "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’ — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber A",
+      "date": "2026-10-11",
+      "event": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "kiteworks",
-    "urges",
+    "microsoft",
+    "satya",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Kiteworks Urges Customers to Shut Down Systems for 9 Hour... | AI News",
-  "metaDescription": "Kiteworks (formerly Accellion) is urging customers to shut down their systems as a precautionary measure for nine hours over the weekend after it received th...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, kiteworks, urges, customers, TechNanoAI, emerging tech news",
+  "metaTitle": "Microsoft’s Satya Nadella says AI models need an ‘emergen... | AI News",
+  "metaDescription": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, microsoft, satya, nadella, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790418549455-3",
+  "id": "ai-1791719225293-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "At Meta Connect, the company's smart glasses were everywhere | AI News",
-  "excerpt": "The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses.",
-  "date": "2026-09-26",
+  "title": "Apple discloses deal to hire team and license tech from p... | AI News",
+  "excerpt": "Is Apple hoping to get into the AI-generated podcast business?",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "at-meta-connect-the-company8217s-smart-glasses-were-everywhere",
-  "sourceLink": "https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere/",
-  "sourceName": "Lucas Ropek",
+  "slug": "apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-p",
+  "sourceLink": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses."
+      "text": "Is Apple hoping to get into the AI-generated podcast business?"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, Is Apple hoping to get into the AI-generated podcast business?. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "At Meta Connect, the company's smart glasses were everywhere — a notable development in AI",
+    "Apple discloses deal to hire team and license tech from personalized podcast sta — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "At Meta Connect, the company's smart glasses were everywhere",
+      "date": "2026-10-11",
+      "event": "Apple discloses deal to hire team and license tech from personalized podcast sta",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "connect",
-    "company",
+    "apple",
+    "discloses",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "At Meta Connect, the company's smart glasses were everywhere | AI News",
-  "metaDescription": "The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, meta, connect, company, TechNanoAI, emerging tech news",
+  "metaTitle": "Apple discloses deal to hire team and license tech from p... | AI News",
+  "metaDescription": "Is Apple hoping to get into the AI-generated podcast business? LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, apple, discloses, deal, TechNanoAI, emerging tech news",
   "featured": false
 }

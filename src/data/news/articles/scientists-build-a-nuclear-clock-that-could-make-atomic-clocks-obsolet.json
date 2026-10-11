@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1790418557917-3",
+  "id": "robotics-1791719232283-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Agility Robotics, maker of Digit humanoid, exploring whee... | Robotics News",
-  "excerpt": "Agility Robotics is exploring a range of robot designs and form factors, including wheels, to address different operating environments and customer needs.\nThe post Agility Robotics, maker of Digit hum",
-  "date": "2026-09-26",
+  "title": "Scientists build a nuclear clock that could make atomic c... | Robotics News",
+  "excerpt": "Scientists in Vienna have achieved a major breakthrough in timekeeping by creating the world’s first self-stabilizing nuclear clock, a technology that could eventually surpass even the most precise at",
+  "date": "2026-10-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "agility-robotics-maker-of-digit-humanoid-exploring-wheeled-robots",
-  "sourceLink": "https://www.therobotreport.com/agility-robotics-maker-of-digit-humanoid-exploring-wheeled-robots/",
-  "sourceName": "Steve Crowe",
+  "slug": "scientists-build-a-nuclear-clock-that-could-make-atomic-clocks-obsolet",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261008102701.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Agility Robotics is exploring a range of robot designs and form factors, including wheels, to address different operating environments and customer needs. \nThe post Agility Robotics, maker of Digit humanoid, exploring wheeled robots appeared first on The Robot Report."
+      "text": "Scientists in Vienna have achieved a major breakthrough in timekeeping by creating the world’s first self-stabilizing nuclear clock, a technology that could eventually surpass even the most precise atomic clocks.  Instead of relying on electrons in atoms, the clock uses the tiny nuclei of thorium atoms, which are far less sensitive to outside disturbances."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Steve Crowe, Agility Robotics is exploring a range of robot designs and form factors, including wheels, to address different operating environments and customer needs.\nThe post Agility Robotics, maker of Digit humanoid, exploring wheeled robots appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, Scientists in Vienna have achieved a major breakthrough in timekeeping by creating the world’s first self-stabilizing nuclear clock, a technology that could eventually surpass even the most precise atomic clocks. Instead of relying on electrons in atoms, the clock uses the tiny nuclei of thorium atoms, which are far less sensitive to outside disturbances.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Agility Robotics, maker of Digit humanoid, exploring wheeled robots — a notable development in Robotics",
+    "Scientists build a nuclear clock that could make atomic clocks obsolete — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Steve Crowe",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-26",
-      "event": "Agility Robotics, maker of Digit humanoid, exploring wheeled robots",
+      "date": "2026-10-11",
+      "event": "Scientists build a nuclear clock that could make atomic clocks obsolete",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "agility",
-    "robotics",
+    "scientists",
+    "build",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Agility Robotics, maker of Digit humanoid, exploring whee... | Robotics News",
-  "metaDescription": "Agility Robotics is exploring a range of robot designs and form factors, including wheels, to address different operating environments and customer needs.\nTh...",
-  "keywords": "robotics, humanoid robot, automation, drones, agility, robotics, maker, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Scientists build a nuclear clock that could make atomic c... | Robotics News",
+  "metaDescription": "Scientists in Vienna have achieved a major breakthrough in timekeeping by creating the world’s first self-stabilizing nuclear clock, a technology that could ...",
+  "keywords": "robotics, humanoid robot, automation, drones, scientists, build, nuclear, TechNanoAI, emerging tech news",
+  "featured": true
 }
