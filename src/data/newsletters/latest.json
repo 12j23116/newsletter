@@ -1,113 +1,113 @@
 {
-  "issue": 92,
-  "date": "2026-10-05",
-  "subject": "This Week: Space, Cybersecurity & more — October 5, 2026",
+  "issue": 93,
+  "date": "2026-10-12",
+  "subject": "This Week: AI, Cybersecurity & more — October 12, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "space",
-    "cybersecurity",
-    "energy",
-    "robotics",
-    "biotech",
     "ai",
+    "cybersecurity",
+    "biotech",
+    "materials",
+    "space",
+    "energy",
     "quantum"
   ],
   "articles": [
     {
-      "title": "Agile Space Industries Strengthens Board and Corporate De... | Space Exploration News",
-      "slug": "agile-space-industries-strengthens-board-and-corporate-development-to-",
-      "topic": "space",
-      "excerpt": "DURANGO, Colo., Oct. 5, 2026 — Agile Space Industries today announced that Jonathan Baliff has joined its Board of Directors, bringing extensive experience in aerospace, finance, and corporate leaders",
-      "url": "https://technanoai.com/news/agile-space-industries-strengthens-board-and-corporate-development-to-",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "APOD: 2026 October 5 – M104: The Sombrero Galaxy’s Tidal ... | Space Exploration News",
-      "slug": "apod-2026-october-5-m104-the-sombrero-galaxys-tidal-streams",
-      "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 October 5 – M104:… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
-      "url": "https://technanoai.com/news/apod-2026-october-5-m104-the-sombrero-galaxys-tidal-streams",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "250,000 Impacted by Data Breaches at New Jersey, Texas He... | Cybersecurity News",
-      "slug": "250000-impacted-by-data-breaches-at-new-jersey-texas-healthcare-firms",
-      "topic": "cybersecurity",
-      "excerpt": "Hackers stole patient information from Clover Health Investments and AngMar Management Services in July.\nThe post 250,000 Impacted by Data Breaches at New Jersey, Texas Healthcare Firms appeared first",
-      "url": "https://technanoai.com/news/250000-impacted-by-data-breaches-at-new-jersey-texas-healthcare-firms",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "Exploitation Hits Rejetto HFS Vulnerability Discovered by AI | Cybersecurity News",
-      "slug": "exploitation-hits-rejetto-hfs-vulnerability-discovered-by-ai",
-      "topic": "cybersecurity",
-      "excerpt": "CVE-2026-61500 allows attackers to recover the session-cookie signing key and gain administrative access and RCE.\nThe post Exploitation Hits Rejetto HFS Vulnerability Discovered by AI  appeared first ",
-      "url": "https://technanoai.com/news/exploitation-hits-rejetto-hfs-vulnerability-discovered-by-ai",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "A new kind of magnetism could unlock faster, more efficie... | Energy Storage News",
-      "slug": "a-new-kind-of-magnetism-could-unlock-faster-more-efficient-computers",
-      "topic": "energy",
-      "excerpt": "Scientists have discovered evidence of altermagnetism in a thin, highly tunable material that could help electronics use electron spin instead of relying only on electrical charge. The unusual magneti",
-      "url": "https://technanoai.com/news/a-new-kind-of-magnetism-could-unlock-faster-more-efficient-computers",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "China’s 700 MW Jintan salt-cavern CAES project completes ... | Energy Storage News",
-      "slug": "chinas-700-mw-jintan-salt-cavern-caes-project-completes-full-system-st",
-      "topic": "energy",
-      "excerpt": "The two-unit non-fuel CAES project is now moving toward grid-connection testing and system commissioning. \nThe post China’s 700 MW Jintan salt-cavern CAES project completes full-system startup appeare",
-      "url": "https://technanoai.com/news/chinas-700-mw-jintan-salt-cavern-caes-project-completes-full-system-st",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "How robotics and physical AI can responsibly tackle key p... | Robotics News",
-      "slug": "how-robotics-and-physical-ai-can-responsibly-tackle-key-physical-secur",
-      "topic": "robotics",
-      "excerpt": "Cyber and physical security threats are rapidly evolving, but robotics and AI can evolve to meet them, writes a columnist.\nThe post How robotics and physical AI can responsibly tackle key physical sec",
-      "url": "https://technanoai.com/news/how-robotics-and-physical-ai-can-responsibly-tackle-key-physical-secur",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "<a href=\"/biotech/gate-secures-870m-vote-confidence-eli-l... | Biotechnology News",
-      "slug": "a-hrefbiotechgate-secures-870m-vote-confidence-eli-lilly-hreflangengat",
-      "topic": "biotech",
-      "excerpt": "Eli Lilly has been pushing at an open door by tacking on $870 million in biobucks to its existing collaboration with Gate Bioscience.",
-      "url": "https://technanoai.com/news/a-hrefbiotechgate-secures-870m-vote-confidence-eli-lilly-hreflangengat",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "<a href=\"/biotech/genmab-data-spur-claim-adc-clearly-supe... | Biotechnology News",
-      "slug": "a-hrefbiotechgenmab-data-spur-claim-adc-clearly-superior-abbvies-elahe",
-      "topic": "biotech",
-      "excerpt": "Genmab has linked an antibody-drug conjugate to median progression-free survival of 9.5 months, leading TD Cowen analysts to hail the asset as “clearly superior” to AbbVie’s Elahere.",
-      "url": "https://technanoai.com/news/a-hrefbiotechgenmab-data-spur-claim-adc-clearly-superior-abbvies-elahe",
-      "date": "2026-10-05"
-    },
-    {
-      "title": "Apple Plans Tighter macOS Full Disk Access Controls Over ... | AI News",
-      "slug": "apple-plans-tighter-macos-full-disk-access-controls-over-ai-agent-data",
+      "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw En... | AI News",
+      "slug": "attackers-exploit-cvss-100-bricksforge-wordpress-flaw-enabling-unauthe",
       "topic": "ai",
-      "excerpt": "Apple has announced that it's taking steps to tighten controls around a macOS setting called Full Disk Access (FDA) due to security risks posed by artificial intelligence (AI) agents.\n\n\"Some developer",
-      "url": "https://technanoai.com/news/apple-plans-tighter-macos-full-disk-access-controls-over-ai-agent-data",
-      "date": "2026-10-05"
+      "excerpt": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack.\n\nThe critical vulnerability in question is CVE-",
+      "url": "https://technanoai.com/news/attackers-exploit-cvss-100-bricksforge-wordpress-flaw-enabling-unauthe",
+      "date": "2026-10-12"
     },
     {
-      "title": "Attackers Target Rejetto HFS Flaw That Enables Admin Sess... | AI News",
-      "slug": "attackers-target-rejetto-hfs-flaw-that-enables-admin-session-forgery-a",
+      "title": "Bring Your Own Agent: Your Employees' Assistants Are Alre... | AI News",
+      "slug": "bring-your-own-agent-your-employees-assistants-are-already-logged-in",
       "topic": "ai",
-      "excerpt": "A critical security flaw impacting Rejetto HTTP File Server (HFS) is witnessing active exploitation attempts, according to VulnCheck.\n\nThe vulnerability in question is CVE-2026-61500 (CVSS score: 9.3)",
-      "url": "https://technanoai.com/news/attackers-target-rejetto-hfs-flaw-that-enables-admin-session-forgery-a",
-      "date": "2026-10-05"
+      "excerpt": "The personal AI agents rollout is going about as smoothly as expected: Amazon now blocks Meta's Muse because it doesn't identify itself as a bot while browsing; Instinct keeps raising privacy concerns",
+      "url": "https://technanoai.com/news/bring-your-own-agent-your-employees-assistants-are-already-logged-in",
+      "date": "2026-10-12"
     },
     {
-      "title": "Midwest Quantum Collaboratory Expands to Eight Universiti... | Quantum Computing News",
-      "slug": "midwest-quantum-collaboratory-expands-to-eight-universities-with-addit",
+      "title": "Bricksforge WordPress Plugin Vulnerability Exploited in t... | Cybersecurity News",
+      "slug": "bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild",
+      "topic": "cybersecurity",
+      "excerpt": "The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites.\nThe post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appear",
+      "url": "https://technanoai.com/news/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "Canonical Websites Disrupted in Second DDoS Attack This Year | Cybersecurity News",
+      "slug": "canonical-websites-disrupted-in-second-ddos-attack-this-year",
+      "topic": "cybersecurity",
+      "excerpt": "The outage hit the main Ubuntu and Canonical websites, including the Ubuntu blog and developer portal.\nThe post Canonical Websites Disrupted in Second DDoS Attack This Year appeared first on SecurityW",
+      "url": "https://technanoai.com/news/canonical-websites-disrupted-in-second-ddos-attack-this-year",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "<a href=\"/biotech/bristol-myers-doubles-pivotal-wins-lung... | Biotechnology News",
+      "slug": "a-hrefbiotechbristol-myers-doubles-pivotal-wins-lung-disease-and-solid",
+      "topic": "biotech",
+      "excerpt": "Bristol Myers Squibb has reported phase 3 wins in a lung disease and a solid tumor, taking two steps on its path toward post-patent cliff growth.",
+      "url": "https://technanoai.com/news/a-hrefbiotechbristol-myers-doubles-pivotal-wins-lung-disease-and-solid",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "<a href=\"/biotech/merck-co-data-raise-fears-eye-disease-d... | Biotechnology News",
+      "slug": "a-hrefbiotechmerck-co-data-raise-fears-eye-disease-drug-has-limited-po",
+      "topic": "biotech",
+      "excerpt": "Merck  Co. has poured out its Brunello data, revealing a mix of undifferentiated efficacy and concerning safety that led analysts to predict “limited competitive potential” in diabetic macular edema. ",
+      "url": "https://technanoai.com/news/a-hrefbiotechmerck-co-data-raise-fears-eye-disease-drug-has-limited-po",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "Scientists discover a hidden factor that can make or brea... | Advanced Materials News",
+      "slug": "scientists-discover-a-hidden-factor-that-can-make-or-break-chemical-re",
+      "topic": "materials",
+      "excerpt": "Researchers discovered a hidden factor that can determine whether chemical reactions succeed or fail, and then used it to boost the proportion of the desired product from 16% to 97%. By controlling ac",
+      "url": "https://technanoai.com/news/scientists-discover-a-hidden-factor-that-can-make-or-break-chemical-re",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "Antarctic Sea Ice Grows to Its 2026 Maximum | Space Exploration News",
+      "slug": "antarctic-sea-ice-grows-to-its-2026-maximum",
+      "topic": "space",
+      "excerpt": "The ice reached its third-lowest maximum extent since satellite observations began.",
+      "url": "https://technanoai.com/news/antarctic-sea-ice-grows-to-its-2026-maximum",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "APOD: 2026 October 12 – Jupiter and the Moons | Space Exploration News",
+      "slug": "apod-2026-october-12-jupiter-and-the-moons",
+      "topic": "space",
+      "excerpt": "APOD Science APOD APOD: 2026 October 12 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differ",
+      "url": "https://technanoai.com/news/apod-2026-october-12-jupiter-and-the-moons",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "Chile: Engie commissions 802MWh BESS, Grenergy finances  ... | Energy Storage News",
+      "slug": "chile-engie-commissions-802mwh-bess-grenergy-finances-1769mwh",
+      "topic": "energy",
+      "excerpt": "Power group Engie has put an 142MW/802MWh BESS project in Chile into operation, while IPP Grenergy has secured financing for the fifth and final stage of its Oasis de Atacama solar-plus-storage projec",
+      "url": "https://technanoai.com/news/chile-engie-commissions-802mwh-bess-grenergy-finances-1769mwh",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "Energy Dome opens CO2 battery manufacturing plant in Italy | Energy Storage News",
+      "slug": "energy-dome-opens-co2-battery-manufacturing-plant-in-italy",
+      "topic": "energy",
+      "excerpt": "Energy Dome’s new manufacturing plant will supply components for long-duration energy storage (LDES) projects in India, the United States and Ireland. \nThe post Energy Dome opens CO2 battery manufactu",
+      "url": "https://technanoai.com/news/energy-dome-opens-co2-battery-manufacturing-plant-in-italy",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "Scientists make stunning discovery that could help explai... | Quantum Computing News",
+      "slug": "scientists-make-stunning-discovery-that-could-help-explain-why-life-ex",
       "topic": "quantum",
-      "excerpt": "The Midwest Quantum Collaboratory (MQC) has expanded to include UIC, Northwestern, Indiana University, Washington University in St. Louis, and The Ohio State University, bringing its total to eight un",
-      "url": "https://technanoai.com/news/midwest-quantum-collaboratory-expands-to-eight-universities-with-addit",
-      "date": "2026-10-05"
+      "excerpt": "Scientists have discovered that the universe's fundamental physical constants may be finely balanced to make life possible. Even tiny changes to these constants could make liquids too thick or too thi",
+      "url": "https://technanoai.com/news/scientists-make-stunning-discovery-that-could-help-explain-why-life-ex",
+      "date": "2026-10-12"
     }
   ]
 }
