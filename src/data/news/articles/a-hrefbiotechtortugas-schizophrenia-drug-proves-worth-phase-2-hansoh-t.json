@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790506831155-0",
+  "id": "biotech-1791813038891-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-big... | Biotechnology News",
-  "excerpt": "With Lundbeck steering its RD engine toward increasingly specialized neuroscience targets, the Danish drugmaker is plotting a U.S. HQ move to one of the country’s preeminent biopharma hotspots.",
-  "date": "2026-09-27",
+  "title": "<a href=\"/biotech/tortugas-schizophrenia-drug-proves-wort... | Biotechnology News",
+  "excerpt": "Tortugas Neuroscience’s schizophrenia drug from Hansoh Pharma has proven its worth in a phase 2b study, validating the fledgling biotech’s neurology strategy.",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefpharmalundbeck-move-us-digs-boston-it-eyes-bigger-innovation-fro",
-  "sourceLink": "https://www.fiercebiotech.com/pharma/lundbeck-move-us-digs-boston-it-eyes-bigger-innovation-frontiers",
-  "sourceName": "<a href=\"/person/fraiser-kansteiner-0\" hreflang=\"en\">Fraiser Kansteiner</a>",
+  "slug": "a-hrefbiotechtortugas-schizophrenia-drug-proves-worth-phase-2-hansoh-t",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/tortugas-schizophrenia-drug-proves-worth-phase-2-hansoh-trial-china",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "With Lundbeck steering its RD engine toward increasingly specialized neuroscience targets, the Danish drugmaker is plotting a U. S."
+      "text": "Tortugas Neuroscience’s schizophrenia drug from Hansoh Pharma has proven its worth in a phase 2b study, validating the fledgling biotech’s neurology strategy."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "HQ move to one of the country’s preeminent biopharma hotspots."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Tortugas Neuroscience’s schizophrenia drug from Hansoh Pharma has proven its worth in a phase 2b study, validating the fledgling biotech’s neurology strategy.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-bigger-innovation-frontier — a notable development in Biotechnology",
+    "<a href=\"/biotech/tortugas-schizophrenia-drug-proves-worth-phase-2-hansoh-trial- — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/fraiser-kansteiner-0\" hreflang=\"en\">Fraiser Kansteiner</a>",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-bigger-innovation-frontier",
+      "date": "2026-10-12",
+      "event": "<a href=\"/biotech/tortugas-schizophrenia-drug-proves-worth-phase-2-hansoh-trial-",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "pharma",
-    "lundbeck",
+    "biotech",
+    "tortugas",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/pharma/lundbeck-move-us-digs-boston-it-eyes-big... | Biotechnology News",
-  "metaDescription": "With Lundbeck steering its RD engine toward increasingly specialized neuroscience targets, the Danish drugmaker is plotting a U.S. HQ move to one of the coun...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, pharma, lundbeck, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/tortugas-schizophrenia-drug-proves-wort... | Biotechnology News",
+  "metaDescription": "Tortugas Neuroscience’s schizophrenia drug from Hansoh Pharma has proven its worth in a phase 2b study, validating the fledgling biotech’s neurology strategy.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, tortugas, TechNanoAI, emerging tech news",
   "featured": true
 }

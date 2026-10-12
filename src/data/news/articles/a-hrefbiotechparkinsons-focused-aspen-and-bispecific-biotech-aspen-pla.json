@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790506831157-4",
+  "id": "biotech-1791813038892-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-a... | Biotechnology News",
-  "excerpt": "Novo has struck a 1.17 billion euro ($1.3 billion) deal to combine Nanexa’s long-acting injectable drug delivery platform with its obesity and Type 2 diabetes drugs.",
-  "date": "2026-09-27",
+  "title": "<a href=\"/biotech/parkinsons-focused-aspen-and-bispecific... | Biotechnology News",
+  "excerpt": "Parkinson’s disease cell therapy-focused Aspen Neuroscience and bispecific biotech Bambusa Therapeutics are the latest drug developers to eye up a public listing.",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechnovo-inks-13b-nanexa-deal-unlock-long-acting-obesity-inje",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/novo-inks-13b-nanexa-deal-unlock-long-acting-obesity-injectables",
-  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
+  "slug": "a-hrefbiotechparkinsons-focused-aspen-and-bispecific-biotech-aspen-pla",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/parkinsons-focused-aspen-and-bispecific-biotech-aspen-plan-ipos",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "Novo has struck a 1. 17 billion euro ($1."
+      "text": "Parkinson’s disease cell therapy-focused Aspen Neuroscience and bispecific biotech Bambusa Therapeutics are the latest drug developers to eye up a public listing."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "3 billion) deal to combine Nanexa’s long-acting injectable drug delivery platform with its obesity and Type 2 diabetes drugs."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Parkinson’s disease cell therapy-focused Aspen Neuroscience and bispecific biotech Bambusa Therapeutics are the latest drug developers to eye up a public listing.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-acting-obesity-injectabl — a notable development in Biotechnology",
+    "<a href=\"/biotech/parkinsons-focused-aspen-and-bispecific-biotech-aspen-plan-ipo — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-acting-obesity-injectabl",
+      "date": "2026-10-12",
+      "event": "<a href=\"/biotech/parkinsons-focused-aspen-and-bispecific-biotech-aspen-plan-ipo",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "nanexa",
+    "parkinsons",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/novo-inks-13b-nanexa-deal-unlock-long-a... | Biotechnology News",
-  "metaDescription": "Novo has struck a 1.17 billion euro ($1.3 billion) deal to combine Nanexa’s long-acting injectable drug delivery platform with its obesity and Type 2 diabete...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, novo, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/parkinsons-focused-aspen-and-bispecific... | Biotechnology News",
+  "metaDescription": "Parkinson’s disease cell therapy-focused Aspen Neuroscience and bispecific biotech Bambusa Therapeutics are the latest drug developers to eye up a public lis...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, parkinsons, TechNanoAI, emerging tech news",
   "featured": false
 }

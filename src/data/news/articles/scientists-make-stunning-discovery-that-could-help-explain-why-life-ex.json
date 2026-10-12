@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1790506834677-1",
+  "id": "quantum-1791813044385-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Only one month to go?!?!? | Quantum Computing News",
-  "excerpt": "September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy QuEra 2026 Wall Calendar and there's Q+AI and",
-  "date": "2026-09-27",
+  "title": "Scientists make stunning discovery that could help explai... | Quantum Computing News",
+  "excerpt": "Scientists have discovered that the universe's fundamental physical constants may be finely balanced to make life possible. Even tiny changes to these constants could make liquids too thick or too thi",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "only-one-month-to-go",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/only-one-month-to-go/",
-  "sourceName": "Brian Siegelwax",
+  "slug": "scientists-make-stunning-discovery-that-could-help-explain-why-life-ex",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261009025602.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy QuEra 2026 Wall Calendar and there's Q+AI and PQC+IQT just one month away.  Where does the time go when you're busy caring for an a..."
+      "text": "Scientists have discovered that the universe's fundamental physical constants may be finely balanced to make life possible.  Even tiny changes to these constants could make liquids too thick or too thin for essential biological processes, potentially preventing life as we know it."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Siegelwax, September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy QuEra 2026 Wall Calendar and there's Q+AI and PQC+IQT just one month away. Where does the time go when you're busy caring for an a.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "Surprisingly, these life-friendly conditions existed billions of years before living cells appeared.  The findings raise intriguing questions about why the laws of physics seem so well suited to life."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Only one month to go?!?!? — a notable development in Quantum Computing",
+    "Scientists make stunning discovery that could help explain why life exists — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Brian Siegelwax",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "Only one month to go?!?!?",
+      "date": "2026-10-12",
+      "event": "Scientists make stunning discovery that could help explain why life exists",
       "current": true
     },
     {
@@ -191,7 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "month",
+    "scientists",
+    "stunning",
     "emerging tech"
   ],
   "poll": {
@@ -215,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Only one month to go?!?!? | Quantum Computing News",
-  "metaDescription": "September is drawing to a close, and all of these articles, podcasts, and newsletters need to be scheduled in advance, so I peeked ahead on my handy dandy Qu...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, only, month, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Scientists make stunning discovery that could help explai... | Quantum Computing News",
+  "metaDescription": "Scientists have discovered that the universe's fundamental physical constants may be finely balanced to make life possible. Even tiny changes to these consta...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, scientists, make, stunning, TechNanoAI, emerging tech news",
+  "featured": true
 }

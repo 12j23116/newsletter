@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790506828636-5",
+  "id": "ai-1791813036747-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw a... | AI News",
-  "excerpt": "Google is warning of renewed mass exploitation of a known security vulnerability in Oracle PeopleSoft as part of a campaign targeting multiple sectors globally.\n\nThe ShinyHunters-linked activity invol",
-  "date": "2026-09-27",
+  "title": "Ledger Finds Unauthorized Hardware Implant in CryptoBilis... | AI News",
+  "excerpt": "Cryptocurrency hardware maker Ledger has temporarily paused sales of its products via CryptoBilis following reports of stolen funds linked to devices sold by the reseller.\n\nOn Friday, the company said",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "attackers-bypass-wafs-to-exploit-oracle-peoplesoft-flaw-and-deploy-web",
-  "sourceLink": "https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html",
+  "slug": "ledger-finds-unauthorized-hardware-implant-in-cryptobilis-sold-wallet-",
+  "sourceLink": "https://thehackernews.com/2026/10/ledger-finds-unauthorized-hardware.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Google is warning of renewed mass exploitation of a known security vulnerability in Oracle PeopleSoft as part of a campaign targeting multiple sectors globally. \n\nThe ShinyHunters-linked activity involves the weaponization of CVE-2026-35273 (CVSS score: 9."
+      "text": "Cryptocurrency hardware maker Ledger has temporarily paused sales of its products via CryptoBilis following reports of stolen funds linked to devices sold by the reseller. \n\nOn Friday, the company said it was investigating reports of loss of funds from users in Southeast Asia who had purchased products from CryptoBilis."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "8), a critical security flaw that could result in unauthenticated remote code execution."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cryptocurrency hardware maker Ledger has temporarily paused sales of its products via CryptoBilis following reports of stolen funds linked to devices sold by the reseller.\n\nOn Friday, the company said it was investigating reports of loss of funds from users in Southeast Asia who had purchased products from CryptoBilis. The incident is said to have resulted in losses totaling more than $86. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells — a notable development in AI",
+    "Ledger Finds Unauthorized Hardware Implant in CryptoBilis-Sold Wallet Amid Fund  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells",
+      "date": "2026-10-12",
+      "event": "Ledger Finds Unauthorized Hardware Implant in CryptoBilis-Sold Wallet Amid Fund ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "attackers",
-    "bypass",
+    "ledger",
+    "finds",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw a... | AI News",
-  "metaDescription": "Google is warning of renewed mass exploitation of a known security vulnerability in Oracle PeopleSoft as part of a campaign targeting multiple sectors global...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, bypass, wafs, TechNanoAI, emerging tech news",
+  "metaTitle": "Ledger Finds Unauthorized Hardware Implant in CryptoBilis... | AI News",
+  "metaDescription": "Cryptocurrency hardware maker Ledger has temporarily paused sales of its products via CryptoBilis following reports of stolen funds linked to devices sold by...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, ledger, finds, unauthorized, TechNanoAI, emerging tech news",
   "featured": false
 }

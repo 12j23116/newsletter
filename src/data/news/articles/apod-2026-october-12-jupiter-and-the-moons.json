@@ -1,21 +1,21 @@
 {
-  "id": "space-1790506830678-2",
+  "id": "space-1791813038395-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX Falcon 9 launches classified mission for U.S. Spac... | Space Exploration News",
-  "excerpt": "Liftoff of the USSF-385 mission atop a Falcon 9 is scheduled for 7 a.m. PDT (10 a.m. EDT / 1400 UTC) at the opening of a three-hour launch window.",
-  "date": "2026-09-27",
+  "title": "APOD: 2026 October 12 – Jupiter and the Moons | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 October 12 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differ",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-falcon-9-launches-classified-mission-for-us-space-force-from-we",
-  "sourceLink": "https://spaceflightnow.com/2026/09/25/spacex-falcon-9-to-launch-classified-mission-for-u-s-space-force-from-west-coast/",
-  "sourceName": "Steven Young",
+  "slug": "apod-2026-october-12-jupiter-and-the-moons",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-october-12-jupiter-and-the-moons/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "Liftoff of the USSF-385 mission atop a Falcon 9 is scheduled for 7 a. m."
+      "text": "APOD Science APOD APOD: 2026 October 12 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "PDT (10 a. m."
-    },
-    {
-      "type": "p",
-      "text": "EDT / 1400 UTC) at the opening of a three-hour launch window."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 October 12 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Jupiter and the [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX Falcon 9 launches classified mission for U.S. Space Force from West Coast — a notable development in Space Exploration",
+    "APOD: 2026 October 12 – Jupiter and the Moons — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Steven Young",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "SpaceX Falcon 9 launches classified mission for U.S. Space Force from West Coast",
+      "date": "2026-10-12",
+      "event": "APOD: 2026 October 12 – Jupiter and the Moons",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "falcon",
+    "october",
+    "jupiter",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX Falcon 9 launches classified mission for U.S. Spac... | Space Exploration News",
-  "metaDescription": "Liftoff of the USSF-385 mission atop a Falcon 9 is scheduled for 7 a.m. PDT (10 a.m. EDT / 1400 UTC) at the opening of a three-hour launch window.",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, falcon, launches, TechNanoAI, emerging tech news",
+  "metaTitle": "APOD: 2026 October 12 – Jupiter and the Moons | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 October 12 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, october, jupiter, TechNanoAI, emerging tech news",
   "featured": false
 }

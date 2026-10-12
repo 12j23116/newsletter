@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1790506834121-0",
+  "id": "robotics-1791813043744-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "From 14 cities to 15,000: What it will take to scale robo... | Robotics News",
-  "excerpt": "While robotaxis prove their driving ability, scaling the industry globally requires solving the unglamorous challenge of fast, local vehicle servicing.\nThe post From 14 cities to 15,000: What it will ",
-  "date": "2026-09-27",
+  "title": "Will 'boring' robots win in the real world? Why robotic f... | Robotics News",
+  "excerpt": "If we want to move physical AI from social media feeds to a sustained commercial level, we must reverse our current approach.\nThe post Will 'boring' robots win in the real world? Why robotic form shou",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "from-14-cities-to-15000-what-it-will-take-to-scale-robotaxis",
-  "sourceLink": "https://www.therobotreport.com/from-14-cities-to-15000-what-it-will-take-to-scale-robotaxis/",
-  "sourceName": "Dan Keene",
+  "slug": "will-8216boring8217-robots-win-in-the-real-world-why-robotic-form-shou",
+  "sourceLink": "https://www.therobotreport.com/will-boring-robots-win-in-the-real-world-why-robotic-form-should-follow-workflow/",
+  "sourceName": "Ron Zukerman",
   "body": [
     {
       "type": "p",
-      "text": "While robotaxis prove their driving ability, scaling the industry globally requires solving the unglamorous challenge of fast, local vehicle servicing. \nThe post From 14 cities to 15,000: What it will take to scale robotaxis?"
+      "text": "If we want to move physical AI from social media feeds to a sustained commercial level, we must reverse our current approach. \nThe post Will 'boring' robots win in the real world?"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "appeared first on The Robot Report."
+      "text": "Why robotic form should follow workflow appeared first on The Robot Report."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "From 14 cities to 15,000: What it will take to scale robotaxis? — a notable development in Robotics",
+    "Will 'boring' robots win in the real world? Why robotic form should follow workf — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Dan Keene",
+      "value": "Ron Zukerman",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "From 14 cities to 15,000: What it will take to scale robotaxis?",
+      "date": "2026-10-12",
+      "event": "Will 'boring' robots win in the real world? Why robotic form should follow workf",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "cities",
-    "scale",
+    "boring",
+    "robots",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "From 14 cities to 15,000: What it will take to scale robo... | Robotics News",
-  "metaDescription": "While robotaxis prove their driving ability, scaling the industry globally requires solving the unglamorous challenge of fast, local vehicle servicing.\nThe p...",
-  "keywords": "robotics, humanoid robot, automation, drones, from, cities, what, TechNanoAI, emerging tech news",
+  "metaTitle": "Will 'boring' robots win in the real world? Why robotic f... | Robotics News",
+  "metaDescription": "If we want to move physical AI from social media feeds to a sustained commercial level, we must reverse our current approach.\nThe post Will 'boring' robots w...",
+  "keywords": "robotics, humanoid robot, automation, drones, will, boring, robots, TechNanoAI, emerging tech news",
   "featured": true
 }

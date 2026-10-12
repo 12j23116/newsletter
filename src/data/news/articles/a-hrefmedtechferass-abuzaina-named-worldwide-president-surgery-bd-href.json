@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790506831156-2",
+  "id": "biotech-1791813038892-5",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/chutes-ladders-travere-chief-makes-way-... | Biotechnology News",
-  "excerpt": "Travere Therapeutics CEO Eric Dube, Ph.D., is stepping down after overseeing the launch of the rare kidney disease drug Filspari.",
-  "date": "2026-09-27",
+  "title": "<a href=\"/medtech/ferass-abuzaina-named-worldwide-preside... | Biotechnology News",
+  "excerpt": "Becton, Dickinson and Company has named Ferass Abuzaina as its new Worldwide President of its Surgery business unit.",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechchutes-ladders-travere-chief-makes-way-former-amicus-ceo-",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/chutes-ladders-travere-chief-makes-way-former-amicus-ceo",
-  "sourceName": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+  "slug": "a-hrefmedtechferass-abuzaina-named-worldwide-president-surgery-bd-href",
+  "sourceLink": "https://www.fiercebiotech.com/medtech/ferass-abuzaina-named-worldwide-president-surgery-bd",
+  "sourceName": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
   "body": [
     {
       "type": "p",
-      "text": "Travere Therapeutics CEO Eric Dube, Ph. D."
+      "text": "Becton, Dickinson and Company has named Ferass Abuzaina as its new Worldwide President of its Surgery business unit."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": ", is stepping down after overseeing the launch of the rare kidney disease drug Filspari."
+      "text": "According to reporting from <a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>, Becton, Dickinson and Company has named Ferass Abuzaina as its new Worldwide President of its Surgery business unit.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/chutes-ladders-travere-chief-makes-way-former-amicus-ceo\" href — a notable development in Biotechnology",
+    "<a href=\"/medtech/ferass-abuzaina-named-worldwide-president-surgery-bd\" hreflang — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, <a href=\"/person/will-maddox\" hreflang=\"en\">Will Maddox</a>",
+      "value": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "<a href=\"/biotech/chutes-ladders-travere-chief-makes-way-former-amicus-ceo\" href",
+      "date": "2026-10-12",
+      "event": "<a href=\"/medtech/ferass-abuzaina-named-worldwide-president-surgery-bd\" hreflang",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "chutes",
+    "medtech",
+    "ferass",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/chutes-ladders-travere-chief-makes-way-... | Biotechnology News",
-  "metaDescription": "Travere Therapeutics CEO Eric Dube, Ph.D., is stepping down after overseeing the launch of the rare kidney disease drug Filspari.",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, chutes, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/medtech/ferass-abuzaina-named-worldwide-preside... | Biotechnology News",
+  "metaDescription": "Becton, Dickinson and Company has named Ferass Abuzaina as its new Worldwide President of its Surgery business unit. CRISPR, mRNA & lab-grown organs. Latest Bio",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, ferass, TechNanoAI, emerging tech news",
   "featured": false
 }

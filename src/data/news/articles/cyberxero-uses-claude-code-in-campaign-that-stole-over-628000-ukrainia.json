@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790506828634-0",
+  "id": "ai-1791813036748-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Und... | AI News",
-  "excerpt": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively exploited in the wild, security firm watchTowr s",
-  "date": "2026-09-27",
+  "title": "CyberXero Uses Claude Code in Campaign That Stole Over 62... | AI News",
+  "excerpt": "Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress sites, e-commerce platforms, and critical infrastru",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "warning-two-unpatched-citrix-netscaler-rce-zero-days-under-active-expl",
-  "sourceLink": "https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html",
+  "slug": "cyberxero-uses-claude-code-in-campaign-that-stole-over-628000-ukrainia",
+  "sourceLink": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively exploited in the wild, security firm watchTowr said on September 26. \n\nCitrix has not confirmed the flaws or published a fix."
+      "text": "Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress sites, e-commerce platforms, and critical infrastructure entities in Ukraine."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Some administrators say they have taken appliances offline rather than wait for one to be available."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress sites, e-commerce platforms, and critical infrastructure entities in Ukraine.\n\nThe activity, which brings together commodity offensive tools like Cobalt Strike with an AI orchestration layer powered by Anthropic's Claude Code, has been attributed. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation — a notable development in AI",
+    "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation",
+      "date": "2026-10-12",
+      "event": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "warning",
-    "unpatched",
+    "cyberxero",
+    "claude",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Und... | AI News",
-  "metaDescription": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively explo...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, warning, unpatched, citrix, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "CyberXero Uses Claude Code in Campaign That Stole Over 62... | AI News",
+  "metaDescription": "Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress sites, e...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, cyberxero, uses, claude, TechNanoAI, emerging tech news",
+  "featured": false
 }

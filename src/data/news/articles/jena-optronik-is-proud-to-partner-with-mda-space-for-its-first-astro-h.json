@@ -1,21 +1,21 @@
 {
-  "id": "space-1790506830678-1",
+  "id": "space-1791813038394-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Flight 14 approaches as a near-term manifest sketches Sta... | Space Exploration News",
-  "excerpt": "With Flight 14 being Starship’s first intended orbital mission, a near-term manifest is already pointing'\nThe post Flight 14 approaches as a near-term manifest sketches Starship’s next steps appeared ",
-  "date": "2026-09-27",
+  "title": "Jena-Optronik is proud to partner with MDA Space for its ... | Space Exploration News",
+  "excerpt": "MDA Space, a global leader in communications satellites, Earth and space observation, space exploration and infrastructure, will utilize Jena-Optronik’s ASTRO HP star sensor on a LEO mission. This mil",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "flight-14-approaches-as-a-near-term-manifest-sketches-starships-next-s",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/09/flight-14-starships-forward-path/",
-  "sourceName": "Alejandro Alcantarilla Romera and Chris Bergin",
+  "slug": "jena-optronik-is-proud-to-partner-with-mda-space-for-its-first-astro-h",
+  "sourceLink": "https://spacenews.com/jena-optronik-is-proud-to-partner-with-mda-space-for-its-first-astro-hp-mission/",
+  "sourceName": "Jena-Optronik",
   "body": [
     {
       "type": "p",
-      "text": "With Flight 14 being Starship’s first intended orbital mission, a near-term manifest is already pointing'\nThe post Flight 14 approaches as a near-term manifest sketches Starship’s next steps appeared first on NASASpaceFlight. com."
+      "text": "MDA Space, a global leader in communications satellites, Earth and space observation, space exploration and infrastructure, will utilize Jena-Optronik’s ASTRO HP star sensor on a LEO mission.  This milestone underscores [']\nThe post Jena-Optronik is proud to partner with MDA Space for its first ASTRO HP mission."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Alejandro Alcantarilla Romera and Chris Bergin, With Flight 14 being Starship’s first intended orbital mission, a near-term manifest is already pointing'\nThe post Flight 14 approaches as a near-term manifest sketches Starship’s next steps appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "appeared first on SpaceNews."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Flight 14 approaches as a near-term manifest sketches Starship’s next steps — a notable development in Space Exploration",
+    "Jena-Optronik is proud to partner with MDA Space for its first ASTRO HP mission. — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Alejandro Alcantarilla Romera and Chris Bergin",
+      "value": "Jena-Optronik",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "Flight 14 approaches as a near-term manifest sketches Starship’s next steps",
+      "date": "2026-10-12",
+      "event": "Jena-Optronik is proud to partner with MDA Space for its first ASTRO HP mission.",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "flight",
-    "approaches",
+    "optronik",
+    "proud",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Flight 14 approaches as a near-term manifest sketches Sta... | Space Exploration News",
-  "metaDescription": "With Flight 14 being Starship’s first intended orbital mission, a near-term manifest is already pointing'\nThe post Flight 14 approaches as a near-term manife...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, flight, approaches, near, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Jena-Optronik is proud to partner with MDA Space for its ... | Space Exploration News",
+  "metaDescription": "MDA Space, a global leader in communications satellites, Earth and space observation, space exploration and infrastructure, will utilize Jena-Optronik’s ASTR...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, jena, optronik, proud, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1790506830679-5",
+  "id": "space-1791813038395-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "True or false on space industry trends with Pacôme Révillon | Space Exploration News",
-  "excerpt": "In this episode, SpaceNews’ Mike Gruss and Novaspace CEO Pacôme Révillon look at what to expect from the space industry in the next year by playing a game of true [']\nThe post True or false on space i",
-  "date": "2026-09-27",
+  "title": "Antarctic Sea Ice Grows to Its 2026 Maximum | Space Exploration News",
+  "excerpt": "The ice reached its third-lowest maximum extent since satellite observations began.",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "true-or-false-on-space-industry-trends-with-pacme-rvillon",
-  "sourceLink": "https://spacenews.com/true-or-false-on-space-industry-trends-with-pacome-revillon/",
-  "sourceName": "SpaceNews Editor",
+  "slug": "antarctic-sea-ice-grows-to-its-2026-maximum",
+  "sourceLink": "https://science.nasa.gov/earth/earth-observatory/antarctic-sea-ice-grows-to-its-2026-maximum/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "In this episode, SpaceNews’ Mike Gruss and Novaspace CEO Pacôme Révillon look at what to expect from the space industry in the next year by playing a game of true [']\nThe post True or false on space industry trends with Pacôme Révillon appeared first on SpaceNews."
+      "text": "The ice reached its third-lowest maximum extent since satellite observations began."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from SpaceNews Editor, In this episode, SpaceNews’ Mike Gruss and Novaspace CEO Pacôme Révillon look at what to expect from the space industry in the next year by playing a game of true [']\nThe post True or false on space industry trends with Pacôme Révillon appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, The ice reached its third-lowest maximum extent since satellite observations began.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "True or false on space industry trends with Pacôme Révillon — a notable development in Space Exploration",
+    "Antarctic Sea Ice Grows to Its 2026 Maximum — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "SpaceNews Editor",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "True or false on space industry trends with Pacôme Révillon",
+      "date": "2026-10-12",
+      "event": "Antarctic Sea Ice Grows to Its 2026 Maximum",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "false",
-    "space",
+    "antarctic",
+    "grows",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "True or false on space industry trends with Pacôme Révillon | Space Exploration News",
-  "metaDescription": "In this episode, SpaceNews’ Mike Gruss and Novaspace CEO Pacôme Révillon look at what to expect from the space industry in the next year by playing a game of...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, true, false, space, TechNanoAI, emerging tech news",
+  "metaTitle": "Antarctic Sea Ice Grows to Its 2026 Maximum | Space Exploration News",
+  "metaDescription": "The ice reached its third-lowest maximum extent since satellite observations began. Launch vehicles & lunar economy. Latest Space Exploration developments and a",
+  "keywords": "space exploration, rocket launch, satellite, NASA, antarctic, grows, maximum, TechNanoAI, emerging tech news",
   "featured": false
 }

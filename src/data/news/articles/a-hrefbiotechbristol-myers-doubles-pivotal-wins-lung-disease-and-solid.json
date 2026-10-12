@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790506831156-1",
+  "id": "biotech-1791813038891-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/pioneer-china-newco-model-sued-over-tra... | Biotechnology News",
-  "excerpt": "A legal feud unfolding in New York is putting a spotlight on the work of a business development veteran who is credited for pioneering one of biopharma’s hottest dealmaking mechanism: the China “NewCo",
-  "date": "2026-09-27",
+  "title": "<a href=\"/biotech/bristol-myers-doubles-pivotal-wins-lung... | Biotechnology News",
+  "excerpt": "Bristol Myers Squibb has reported phase 3 wins in a lung disease and a solid tumor, taking two steps on its path toward post-patent cliff growth.",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechpioneer-china-newco-model-sued-over-trade-secret-misuse-d",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/pioneer-china-newco-model-sued-over-trade-secret-misuse-double-dealing",
-  "sourceName": "<a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>",
+  "slug": "a-hrefbiotechbristol-myers-doubles-pivotal-wins-lung-disease-and-solid",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/bristol-myers-doubles-pivotal-wins-lung-disease-and-solid-tumor",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "A legal feud unfolding in New York is putting a spotlight on the work of a business development veteran who is credited for pioneering one of biopharma’s hottest dealmaking mechanism: the China “NewCo” model."
+      "text": "Bristol Myers Squibb has reported phase 3 wins in a lung disease and a solid tumor, taking two steps on its path toward post-patent cliff growth."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>, A legal feud unfolding in New York is putting a spotlight on the work of a business development veteran who is credited for pioneering one of biopharma’s hottest dealmaking mechanism: the China “NewCo” model.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, Bristol Myers Squibb has reported phase 3 wins in a lung disease and a solid tumor, taking two steps on its path toward post-patent cliff growth.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/pioneer-china-newco-model-sued-over-trade-secret-misuse-double — a notable development in Biotechnology",
+    "<a href=\"/biotech/bristol-myers-doubles-pivotal-wins-lung-disease-and-solid-tumo — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "<a href=\"/biotech/pioneer-china-newco-model-sued-over-trade-secret-misuse-double",
+      "date": "2026-10-12",
+      "event": "<a href=\"/biotech/bristol-myers-doubles-pivotal-wins-lung-disease-and-solid-tumo",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "pioneer",
+    "bristol",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/pioneer-china-newco-model-sued-over-tra... | Biotechnology News",
-  "metaDescription": "A legal feud unfolding in New York is putting a spotlight on the work of a business development veteran who is credited for pioneering one of biopharma’s hot...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, pioneer, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/bristol-myers-doubles-pivotal-wins-lung... | Biotechnology News",
+  "metaDescription": "Bristol Myers Squibb has reported phase 3 wins in a lung disease and a solid tumor, taking two steps on its path toward post-patent cliff growth.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, bristol, TechNanoAI, emerging tech news",
   "featured": false
 }

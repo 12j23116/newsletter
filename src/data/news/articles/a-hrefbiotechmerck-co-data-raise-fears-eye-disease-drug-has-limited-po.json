@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790506831157-5",
+  "id": "biotech-1791813038892-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast... | Biotechnology News",
-  "excerpt": "Roche’s Genentech is paying Earendil Labs $55 million upfront to discover and develop multiple bispecific antibodies. The deal, which focuses on oncology, includes milestones that could take the deal'",
-  "date": "2026-09-27",
+  "title": "<a href=\"/biotech/merck-co-data-raise-fears-eye-disease-d... | Biotechnology News",
+  "excerpt": "Merck  Co. has poured out its Brunello data, revealing a mix of undifferentiated efficacy and concerning safety that led analysts to predict “limited competitive potential” in diabetic macular edema. ",
+  "date": "2026-10-12",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechgenentech-inks-15b-bispecific-pact-fast-rising-earendil-h",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/genentech-inks-15b-bispecific-pact-fast-rising-earendil",
+  "slug": "a-hrefbiotechmerck-co-data-raise-fears-eye-disease-drug-has-limited-po",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/merck-co-data-raise-fears-eye-disease-drug-has-limited-potential",
   "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "Roche’s Genentech is paying Earendil Labs $55 million upfront to discover and develop multiple bispecific antibodies.  The deal, which focuses on oncology, includes milestones that could take the deal's value above $1."
+      "text": "Merck  Co.  has poured out its Brunello data, revealing a mix of undifferentiated efficacy and concerning safety that led analysts to predict “limited competitive potential” in diabetic macular edema."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "5 billion."
+      "text": "The company paid $1. 3 billion upfront in 2024 to buy the asset and the rest of Eyebiotech."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast-rising-earendil\" hrefl — a notable development in Biotechnology",
+    "<a href=\"/biotech/merck-co-data-raise-fears-eye-disease-drug-has-limited-potenti — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-27",
-      "event": "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast-rising-earendil\" hrefl",
+      "date": "2026-10-12",
+      "event": "<a href=\"/biotech/merck-co-data-raise-fears-eye-disease-drug-has-limited-potenti",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "genentech",
+    "merck",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/genentech-inks-15b-bispecific-pact-fast... | Biotechnology News",
-  "metaDescription": "Roche’s Genentech is paying Earendil Labs $55 million upfront to discover and develop multiple bispecific antibodies. The deal, which focuses on oncology, in...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, genentech, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/merck-co-data-raise-fears-eye-disease-d... | Biotechnology News",
+  "metaDescription": "Merck  Co. has poured out its Brunello data, revealing a mix of undifferentiated efficacy and concerning safety that led analysts to predict “limited competi...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, merck, TechNanoAI, emerging tech news",
   "featured": false
 }
