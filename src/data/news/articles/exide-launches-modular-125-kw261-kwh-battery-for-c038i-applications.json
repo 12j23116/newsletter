@@ -1,21 +1,21 @@
 {
-  "id": "energy-1790597937188-0",
+  "id": "energy-1791896941812-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "EU opens infringement cases against 18 states over energy... | Energy Storage News",
-  "excerpt": "Two-thirds of EU member states face infringement action for failing to enact a new right to share renewable electricity over the grid.\nThe post EU opens infringement cases against 18 states over energ",
-  "date": "2026-09-28",
+  "title": "Exide launches modular 125 kW/261 kWh battery for C'I app... | Energy Storage News",
+  "excerpt": "The French manufacturer has introduced a new lithium iron phosphate (LFP) battery featuring an integrated 125 kW power conversion system, 261 kWh of storage capacity and a nominal round-trip efficienc",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "eu-opens-infringement-cases-against-18-states-over-energy-sharing-rule",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/28/eu-opens-infringement-cases-against-18-states-over-energy-sharing-rules/",
-  "sourceName": "Brian Publicover",
+  "slug": "exide-launches-modular-125-kw261-kwh-battery-for-c038i-applications",
+  "sourceLink": "https://www.pv-magazine.com/2026/10/13/exide-launches-modular-125-kw-261-kwh-battery-for-ci-applications/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Two-thirds of EU member states face infringement action for failing to enact a new right to share renewable electricity over the grid. \nThe post EU opens infringement cases against 18 states over energy-sharing rules appeared first on pv magazine Global."
+      "text": "The French manufacturer has introduced a new lithium iron phosphate (LFP) battery featuring an integrated 125 kW power conversion system, 261 kWh of storage capacity and a nominal round-trip efficiency of 86%. \nThe post Exide launches modular 125 kW/261 kWh battery for C&I applications appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Publicover, Two-thirds of EU member states face infringement action for failing to enact a new right to share renewable electricity over the grid.\nThe post EU opens infringement cases against 18 states over energy-sharing rules appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Emiliano Bellini, The French manufacturer has introduced a new lithium iron phosphate (LFP) battery featuring an integrated 125 kW power conversion system, 261 kWh of storage capacity and a nominal round-trip efficiency of 86%.\nThe post Exide launches modular 125 kW/261 kWh battery for C&I applications appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "EU opens infringement cases against 18 states over energy-sharing rules — a notable development in Energy Storage",
+    "Exide launches modular 125 kW/261 kWh battery for C'I applications — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Brian Publicover",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "EU opens infringement cases against 18 states over energy-sharing rules",
+      "date": "2026-10-13",
+      "event": "Exide launches modular 125 kW/261 kWh battery for C'I applications",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "opens",
-    "infringement",
+    "exide",
+    "launches",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "EU opens infringement cases against 18 states over energy... | Energy Storage News",
-  "metaDescription": "Two-thirds of EU member states face infringement action for failing to enact a new right to share renewable electricity over the grid.\nThe post EU opens infr...",
-  "keywords": "energy storage, battery, solid-state, grid storage, opens, infringement, cases, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Exide launches modular 125 kW/261 kWh battery for C'I app... | Energy Storage News",
+  "metaDescription": "The French manufacturer has introduced a new lithium iron phosphate (LFP) battery featuring an integrated 125 kW power conversion system, 261 kWh of storage ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, exide, launches, modular, TechNanoAI, emerging tech news",
+  "featured": false
 }

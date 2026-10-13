@@ -1,21 +1,21 @@
 {
-  "id": "energy-1790597937189-2",
+  "id": "energy-1791896941813-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Italy raises Macse energy storage auction premium cap fro... | Energy Storage News",
-  "excerpt": "Italy’s energy regulator, Arera, has raised the MACSE auction premium cap to €27,000/MWh per year, up from €22,000/MWh proposed in July, mainly due to higher benchmark investment costs. The new cap af",
-  "date": "2026-09-28",
+  "title": "Three-molecule blend boosts inverted perovskite solar cel... | Energy Storage News",
+  "excerpt": "Chinese researchers have developed high-entropy molecular contacts that enabled inverted perovskite solar cells to achieve a certified steady-state efficiency of 27.31%. The approach also improves the",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "italy-raises-macse-energy-storage-auction-premium-cap-from-22000-to-27",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/28/italy-raises-macse-energy-storage-auction-premium-cap-from-e22000-to-e27000-mwh/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "three-molecule-blend-boosts-inverted-perovskite-solar-cell-efficiency-",
+  "sourceLink": "https://www.pv-magazine.com/2026/10/13/three-molecule-blend-boosts-inverted-perovskite-solar-cell-efficiency-to-27-5/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "Italy’s energy regulator, Arera, has raised the MACSE auction premium cap to €27,000/MWh per year, up from €22,000/MWh proposed in July, mainly due to higher benchmark investment costs.  The new cap affects project economics and guarantees, while developers must weigh the 15-year fixed premium against potential merchant revenues when setting their bids."
+      "text": "Chinese researchers have developed high-entropy molecular contacts that enabled inverted perovskite solar cells to achieve a certified steady-state efficiency of 27. 31%."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "The post Italy raises Macse energy storage auction premium cap from €22,000 to €27,000/MWh appeared first on pv magazine Global."
+      "text": "The approach also improves thermal stability by preventing molecular contact degradation. \nThe post Three-molecule blend boosts inverted perovskite solar cell efficiency to 27."
+    },
+    {
+      "type": "p",
+      "text": "5% appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Italy raises Macse energy storage auction premium cap from €22,000 to €27,000/MW — a notable development in Energy Storage",
+    "Three-molecule blend boosts inverted perovskite solar cell efficiency to 27.5% — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +124,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Italy raises Macse energy storage auction premium cap from €22,000 to €27,000/MW",
+      "date": "2026-10-13",
+      "event": "Three-molecule blend boosts inverted perovskite solar cell efficiency to 27.5%",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "italy",
-    "raises",
+    "three",
+    "molecule",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Italy raises Macse energy storage auction premium cap fro... | Energy Storage News",
-  "metaDescription": "Italy’s energy regulator, Arera, has raised the MACSE auction premium cap to €27,000/MWh per year, up from €22,000/MWh proposed in July, mainly due to higher...",
-  "keywords": "energy storage, battery, solid-state, grid storage, italy, raises, macse, TechNanoAI, emerging tech news",
+  "metaTitle": "Three-molecule blend boosts inverted perovskite solar cel... | Energy Storage News",
+  "metaDescription": "Chinese researchers have developed high-entropy molecular contacts that enabled inverted perovskite solar cells to achieve a certified steady-state efficienc...",
+  "keywords": "energy storage, battery, solid-state, grid storage, three, molecule, blend, TechNanoAI, emerging tech news",
   "featured": false
 }

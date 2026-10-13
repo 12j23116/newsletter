@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790597934203-3",
+  "id": "biotech-1791896935042-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/merck-co-and-daiichi-pull-lung-cancer-f... | Biotechnology News",
-  "excerpt": "Daiichi Sankyo and Merck  Co. have withdrawn an antibody-drug conjugate (ADC) filing after the FDA said they lacked the data for accelerated approval in a lung cancer population.",
-  "date": "2026-09-28",
+  "title": "<a href=\"/biotech/pfizer-inks-500m-enodia-pact-join-lilly... | Biotechnology News",
+  "excerpt": "Pfizer has followed Eli Lilly into the Sec61 space, inking a $500 million deal with Enodia Therapeutics days after its Big Pharma peer formed an $870 million pact with Gate Bioscience.",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechmerck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pu",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/merck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pushback-deals-another-blow-4b-deal",
+  "slug": "a-hrefbiotechpfizer-inks-500m-enodia-pact-join-lilly-emerging-protein-",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/pfizer-inks-500m-enodia-pact-join-lilly-emerging-protein-degrader-field",
   "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "Daiichi Sankyo and Merck  Co.  have withdrawn an antibody-drug conjugate (ADC) filing after the FDA said they lacked the data for accelerated approval in a lung cancer population."
+      "text": "Pfizer has followed Eli Lilly into the Sec61 space, inking a $500 million deal with Enodia Therapeutics days after its Big Pharma peer formed an $870 million pact with Gate Bioscience."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, Daiichi Sankyo and Merck  Co. have withdrawn an antibody-drug conjugate (ADC) filing after the FDA said they lacked the data for accelerated approval in a lung cancer population.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, Pfizer has followed Eli Lilly into the Sec61 space, inking a $500 million deal with Enodia Therapeutics days after its Big Pharma peer formed an $870 million pact with Gate Bioscience.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/merck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pushbac — a notable development in Biotechnology",
+    "<a href=\"/biotech/pfizer-inks-500m-enodia-pact-join-lilly-emerging-protein-degra — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "<a href=\"/biotech/merck-co-and-daiichi-pull-lung-cancer-filing-after-fda-pushbac",
+      "date": "2026-10-13",
+      "event": "<a href=\"/biotech/pfizer-inks-500m-enodia-pact-join-lilly-emerging-protein-degra",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "merck",
+    "pfizer",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/merck-co-and-daiichi-pull-lung-cancer-f... | Biotechnology News",
-  "metaDescription": "Daiichi Sankyo and Merck  Co. have withdrawn an antibody-drug conjugate (ADC) filing after the FDA said they lacked the data for accelerated approval in a lu...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, merck, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/pfizer-inks-500m-enodia-pact-join-lilly... | Biotechnology News",
+  "metaDescription": "Pfizer has followed Eli Lilly into the Sec61 space, inking a $500 million deal with Enodia Therapeutics days after its Big Pharma peer formed an $870 million...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, pfizer, TechNanoAI, emerging tech news",
   "featured": false
 }

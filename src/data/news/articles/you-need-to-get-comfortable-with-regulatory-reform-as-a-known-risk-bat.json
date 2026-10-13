@@ -1,21 +1,21 @@
 {
-  "id": "energy-1790597937189-3",
+  "id": "energy-1791896941813-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "European residential heat pump sales up 11% in H1 | Energy Storage News",
-  "excerpt": "European Heat Pump Association says Strait of Hormuz crisis and the European Commission’s plan to encourage EU governments to lower electricity tax have helped drive up residential heat pump sales thi",
-  "date": "2026-09-28",
+  "title": "‘You need to get comfortable with regulatory reform as a ... | Energy Storage News",
+  "excerpt": "Bankability ' offtake and regulatory ' system reform were the key talking points on the opening panel of the Battery Asset Management Summit UK ' Ireland 2026 which runs today and tomorrow (13-14 Octo",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "european-residential-heat-pump-sales-up-11-in-h1",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/28/european-residential-heat-pump-sales-up-11-in-h1/",
-  "sourceName": "Patrick Jowett",
+  "slug": "you-need-to-get-comfortable-with-regulatory-reform-as-a-known-risk-bat",
+  "sourceLink": "https://www.energy-storage.news/you-need-to-get-comfortable-with-regulatory-reform-as-a-known-risk-battery-asset-management-summit-uk-ireland-kicks-off/",
+  "sourceName": "Cameron Murray",
   "body": [
     {
       "type": "p",
-      "text": "European Heat Pump Association says Strait of Hormuz crisis and the European Commission’s plan to encourage EU governments to lower electricity tax have helped drive up residential heat pump sales this year. \nThe post European residential heat pump sales up 11% in H1 appeared first on pv magazine Global."
+      "text": "Bankability ' offtake and regulatory ' system reform were the key talking points on the opening panel of the Battery Asset Management Summit UK ' Ireland 2026 which runs today and tomorrow (13-14 October)."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Patrick Jowett, European Heat Pump Association says Strait of Hormuz crisis and the European Commission’s plan to encourage EU governments to lower electricity tax have helped drive up residential heat pump sales this year.\nThe post European residential heat pump sales up 11% in H1 appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Cameron Murray, Bankability ' offtake and regulatory ' system reform were the key talking points on the opening panel of the Battery Asset Management Summit UK ' Ireland 2026 which runs today and tomorrow (13-14 October).. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "European residential heat pump sales up 11% in H1 — a notable development in Energy Storage",
+    "‘You need to get comfortable with regulatory reform as a known risk’: Battery As — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Cameron Murray",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "European residential heat pump sales up 11% in H1",
+      "date": "2026-10-13",
+      "event": "‘You need to get comfortable with regulatory reform as a known risk’: Battery As",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "european",
-    "residential",
+    "comfortable",
+    "regulatory",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "European residential heat pump sales up 11% in H1 | Energy Storage News",
-  "metaDescription": "European Heat Pump Association says Strait of Hormuz crisis and the European Commission’s plan to encourage EU governments to lower electricity tax have help...",
-  "keywords": "energy storage, battery, solid-state, grid storage, european, residential, heat, TechNanoAI, emerging tech news",
+  "metaTitle": "‘You need to get comfortable with regulatory reform as a ... | Energy Storage News",
+  "metaDescription": "Bankability ' offtake and regulatory ' system reform were the key talking points on the opening panel of the Battery Asset Management Summit UK ' Ireland 202...",
+  "keywords": "energy storage, battery, solid-state, grid storage, need, comfortable, with, TechNanoAI, emerging tech news",
   "featured": false
 }

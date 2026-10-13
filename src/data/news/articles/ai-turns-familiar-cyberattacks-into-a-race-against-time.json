@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1790597932506-1",
+  "id": "cybersecurity-1791896933125-4",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Google Warns of ShinyHunters' Fresh Oracle PeopleSoft Cam... | Cybersecurity News",
-  "excerpt": "The extortion group has modified its exploit in new attacks targeting the PeopleSoft vulnerability CVE-2026-35273.\nThe post Google Warns of ShinyHunters' Fresh Oracle PeopleSoft Campaign appeared firs",
-  "date": "2026-09-28",
+  "title": "AI Turns Familiar Cyberattacks Into a Race Against Time | Cybersecurity News",
+  "excerpt": "IBM’s Steve Wallin talks to SecurityWeek on the effect of AI-driven attacks on enterprise defenses.\nThe post AI Turns Familiar Cyberattacks Into a Race Against Time appeared first on SecurityWeek.",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "google-warns-of-shinyhunters8217-fresh-oracle-peoplesoft-campaign",
-  "sourceLink": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/",
-  "sourceName": "Ionut Arghire",
+  "slug": "ai-turns-familiar-cyberattacks-into-a-race-against-time",
+  "sourceLink": "https://www.securityweek.com/ai-turns-familiar-cyberattacks-into-a-race-against-time/",
+  "sourceName": "Kevin Townsend",
   "body": [
     {
       "type": "p",
-      "text": "The extortion group has modified its exploit in new attacks targeting the PeopleSoft vulnerability CVE-2026-35273. \nThe post Google Warns of ShinyHunters' Fresh Oracle PeopleSoft Campaign appeared first on SecurityWeek."
+      "text": "IBM’s Steve Wallin talks to SecurityWeek on the effect of AI-driven attacks on enterprise defenses. \nThe post AI Turns Familiar Cyberattacks Into a Race Against Time appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The extortion group has modified its exploit in new attacks targeting the PeopleSoft vulnerability CVE-2026-35273.\nThe post Google Warns of ShinyHunters' Fresh Oracle PeopleSoft Campaign appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Kevin Townsend, IBM’s Steve Wallin talks to SecurityWeek on the effect of AI-driven attacks on enterprise defenses.\nThe post AI Turns Familiar Cyberattacks Into a Race Against Time appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Google Warns of ShinyHunters' Fresh Oracle PeopleSoft Campaign — a notable development in Cybersecurity",
+    "AI Turns Familiar Cyberattacks Into a Race Against Time — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Kevin Townsend",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Google Warns of ShinyHunters' Fresh Oracle PeopleSoft Campaign",
+      "date": "2026-10-13",
+      "event": "AI Turns Familiar Cyberattacks Into a Race Against Time",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "google",
-    "warns",
+    "turns",
+    "familiar",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Google Warns of ShinyHunters' Fresh Oracle PeopleSoft Cam... | Cybersecurity News",
-  "metaDescription": "The extortion group has modified its exploit in new attacks targeting the PeopleSoft vulnerability CVE-2026-35273.\nThe post Google Warns of ShinyHunters' Fre...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, google, warns, shinyhunters, TechNanoAI, emerging tech news",
+  "metaTitle": "AI Turns Familiar Cyberattacks Into a Race Against Time | Cybersecurity News",
+  "metaDescription": "IBM’s Steve Wallin talks to SecurityWeek on the effect of AI-driven attacks on enterprise defenses.\nThe post AI Turns Familiar Cyberattacks Into a Race Again...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, turns, familiar, cyberattacks, TechNanoAI, emerging tech news",
   "featured": false
 }

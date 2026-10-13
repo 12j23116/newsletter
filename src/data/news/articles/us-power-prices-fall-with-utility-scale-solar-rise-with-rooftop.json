@@ -1,21 +1,21 @@
 {
-  "id": "energy-1790597937188-1",
+  "id": "energy-1791896941812-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Rising air injection rates boost compressed air energy st... | Energy Storage News",
-  "excerpt": "Chinese researchers have analyzed how different air injection strategies affect energy storage rates and heat losses in compressed air energy storage caverns. They found that a linearly increasing air",
-  "date": "2026-09-28",
+  "title": "US power prices fall with utility-scale solar, rise with ... | Energy Storage News",
+  "excerpt": "MIT researchers say there is no link between renewable portfolio standards or utility-scale wind and solar and higher US residential power prices, but rooftop solar correlates with higher rates and di",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "rising-air-injection-rates-boost-compressed-air-energy-storage-efficie",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/28/rising-air-injection-rates-boost-compressed-air-energy-storage-efficiency/",
-  "sourceName": "Lior Kahana",
+  "slug": "us-power-prices-fall-with-utility-scale-solar-rise-with-rooftop",
+  "sourceLink": "https://www.pv-magazine.com/2026/10/13/us-power-prices-fall-with-utility-scale-solar-rise-with-rooftop/",
+  "sourceName": "Brian Publicover",
   "body": [
     {
       "type": "p",
-      "text": "Chinese researchers have analyzed how different air injection strategies affect energy storage rates and heat losses in compressed air energy storage caverns.  They found that a linearly increasing air flow rate can raise the energy storage rate from 85."
+      "text": "MIT researchers say there is no link between renewable portfolio standards or utility-scale wind and solar and higher US residential power prices, but rooftop solar correlates with higher rates and distribution costs. \nThe post US power prices fall with utility-scale solar, rise with rooftop appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "5% to 87. 5% compared with constant-rate injection."
-    },
-    {
-      "type": "p",
-      "text": "The post Rising air injection rates boost compressed air energy storage efficiency appeared first on pv magazine Global."
+      "text": "According to reporting from Brian Publicover, MIT researchers say there is no link between renewable portfolio standards or utility-scale wind and solar and higher US residential power prices, but rooftop solar correlates with higher rates and distribution costs.\nThe post US power prices fall with utility-scale solar, rise with rooftop appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Rising air injection rates boost compressed air energy storage efficiency — a notable development in Energy Storage",
+    "US power prices fall with utility-scale solar, rise with rooftop — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -124,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Lior Kahana",
+      "value": "Brian Publicover",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Rising air injection rates boost compressed air energy storage efficiency",
+      "date": "2026-10-13",
+      "event": "US power prices fall with utility-scale solar, rise with rooftop",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "rising",
-    "injection",
+    "power",
+    "prices",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Rising air injection rates boost compressed air energy st... | Energy Storage News",
-  "metaDescription": "Chinese researchers have analyzed how different air injection strategies affect energy storage rates and heat losses in compressed air energy storage caverns...",
-  "keywords": "energy storage, battery, solid-state, grid storage, rising, injection, rates, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "US power prices fall with utility-scale solar, rise with ... | Energy Storage News",
+  "metaDescription": "MIT researchers say there is no link between renewable portfolio standards or utility-scale wind and solar and higher US residential power prices, but roofto...",
+  "keywords": "energy storage, battery, solid-state, grid storage, power, prices, fall, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790597931972-4",
+  "id": "ai-1791896932532-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Anthropic's Dario Amodei gets the SNL treatment | AI News",
-  "excerpt": "\"AI is the devil and I its maker.\"",
-  "date": "2026-09-28",
+  "title": "Product Walkthrough: Bitdefender AI Visibility and Control | AI News",
+  "excerpt": "A user opens a browser tab, pastes data into a chat assistant, and nothing is installed.\n\nA developer adds a coding assistant as an editor extension, and nothing shows up in the installed programs lis",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "anthropic8217s-dario-amodei-gets-the-snl-treatment",
-  "sourceLink": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
-  "sourceName": "Anthony Ha",
+  "slug": "product-walkthrough-bitdefender-ai-visibility-and-control",
+  "sourceLink": "https://thehackernews.com/2026/10/product-walkthrough-bitdefender-ai.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "\"AI is the devil and I its maker."
+      "text": "A user opens a browser tab, pastes data into a chat assistant, and nothing is installed. \n\nA developer adds a coding assistant as an editor extension, and nothing shows up in the installed programs list."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, \"AI is the devil and I its maker.\". The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), A user opens a browser tab, pastes data into a chat assistant, and nothing is installed.\n\nA developer adds a coding assistant as an editor extension, and nothing shows up in the installed programs list.\n\nSomeone downloads a local model runtime, a program that runs models directly on the machine instead of sending data to an external service, because they were told not to send company data. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Anthropic's Dario Amodei gets the SNL treatment — a notable development in AI",
+    "Product Walkthrough: Bitdefender AI Visibility and Control — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Anthropic's Dario Amodei gets the SNL treatment",
+      "date": "2026-10-13",
+      "event": "Product Walkthrough: Bitdefender AI Visibility and Control",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anthropic",
-    "dario",
+    "product",
+    "walkthrough",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Anthropic's Dario Amodei gets the SNL treatment | AI News",
-  "metaDescription": "\"AI is the devil and I its maker.\" LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, dario, amodei, TechNanoAI, emerging tech news",
+  "metaTitle": "Product Walkthrough: Bitdefender AI Visibility and Control | AI News",
+  "metaDescription": "A user opens a browser tab, pastes data into a chat assistant, and nothing is installed.\n\nA developer adds a coding assistant as an editor extension, and not...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, product, walkthrough, bitdefender, TechNanoAI, emerging tech news",
   "featured": false
 }

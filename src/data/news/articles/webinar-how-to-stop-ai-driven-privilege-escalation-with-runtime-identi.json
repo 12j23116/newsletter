@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790597931969-0",
+  "id": "ai-1791896932531-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "JADEPUFFER-Linked Attackers Used Compromised Service Prin... | AI News",
-  "excerpt": "The threat actor known as JADEPUFFER has been observed orchestrating destructive actions within a Microsoft Azure environment using compromised service principals.\n\nMicrosoft, which is tracking the ac",
-  "date": "2026-09-28",
+  "title": "[Webinar] How to Stop AI-Driven Privilege Escalation With... | AI News",
+  "excerpt": "The dangerous part of a stolen identity isn't always the initial login. It's what an attacker can do with that access next.\n\nWith AI accelerating reconnaissance, exploitation of vulnerabilities, and p",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "jadepuffer-linked-attackers-used-compromised-service-principals-to-del",
-  "sourceLink": "https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html",
+  "slug": "webinar-how-to-stop-ai-driven-privilege-escalation-with-runtime-identi",
+  "sourceLink": "https://thehackernews.com/2026/10/webinar-how-to-stop-ai-driven-privilege.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The threat actor known as JADEPUFFER has been observed orchestrating destructive actions within a Microsoft Azure environment using compromised service principals. \n\nMicrosoft, which is tracking the activity under the name Storm-3168, has called it an evolution of the threat actor's tradecraft."
+      "text": "The dangerous part of a stolen identity isn't always the initial login.  It's what an attacker can do with that access next."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The attack took place in early June 2026 over a period of about 18 hours."
+      "text": "With AI accelerating reconnaissance, exploitation of vulnerabilities, and privilege escalation, attackers can move through systems faster than security teams can investigate."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure  — a notable development in AI",
+    "[Webinar] How to Stop AI-Driven Privilege Escalation With Runtime Identity Contr — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure ",
+      "date": "2026-10-13",
+      "event": "[Webinar] How to Stop AI-Driven Privilege Escalation With Runtime Identity Contr",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "jadepuffer",
-    "linked",
+    "webinar",
+    "driven",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "JADEPUFFER-Linked Attackers Used Compromised Service Prin... | AI News",
-  "metaDescription": "The threat actor known as JADEPUFFER has been observed orchestrating destructive actions within a Microsoft Azure environment using compromised service princ...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, jadepuffer, linked, attackers, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "[Webinar] How to Stop AI-Driven Privilege Escalation With... | AI News",
+  "metaDescription": "The dangerous part of a stolen identity isn't always the initial login. It's what an attacker can do with that access next.\n\nWith AI accelerating reconnaissa...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, webinar, stop, driven, TechNanoAI, emerging tech news",
+  "featured": false
 }

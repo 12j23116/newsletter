@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1790597932507-3",
+  "id": "cybersecurity-1791896933125-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Nvidia Unveils AI Agent Safety Platform With Hardware-Bas... | Cybersecurity News",
-  "excerpt": "The platform combines open source software and a reference system design to keep AI agents within set boundaries.\nThe post Nvidia Unveils AI Agent Safety Platform With Hardware-Based Watchdog appeared",
-  "date": "2026-09-28",
+  "title": "XWorm RAT Evolves Into Surveillance Platform | Cybersecurity News",
+  "excerpt": "Expanded plugin count allows the malware to monitor users’ location, stream live audio, and interact with authenticated browser sessions.\nThe post XWorm RAT Evolves Into Surveillance Platform appeared",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "nvidia-unveils-ai-agent-safety-platform-with-hardware-based-watchdog",
-  "sourceLink": "https://www.securityweek.com/nvidia-unveils-ai-agent-safety-platform-with-hardware-based-watchdog/",
-  "sourceName": "Eduard Kovacs",
+  "slug": "xworm-rat-evolves-into-surveillance-platform",
+  "sourceLink": "https://www.securityweek.com/xworm-rat-evolves-into-surveillance-platform/",
+  "sourceName": "Ionut Arghire",
   "body": [
     {
       "type": "p",
-      "text": "The platform combines open source software and a reference system design to keep AI agents within set boundaries. \nThe post Nvidia Unveils AI Agent Safety Platform With Hardware-Based Watchdog appeared first on SecurityWeek."
+      "text": "Expanded plugin count allows the malware to monitor users’ location, stream live audio, and interact with authenticated browser sessions. \nThe post XWorm RAT Evolves Into Surveillance Platform appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Eduard Kovacs, The platform combines open source software and a reference system design to keep AI agents within set boundaries.\nThe post Nvidia Unveils AI Agent Safety Platform With Hardware-Based Watchdog appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ionut Arghire, Expanded plugin count allows the malware to monitor users’ location, stream live audio, and interact with authenticated browser sessions.\nThe post XWorm RAT Evolves Into Surveillance Platform appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Nvidia Unveils AI Agent Safety Platform With Hardware-Based Watchdog — a notable development in Cybersecurity",
+    "XWorm RAT Evolves Into Surveillance Platform — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Eduard Kovacs",
+      "value": "Ionut Arghire",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Nvidia Unveils AI Agent Safety Platform With Hardware-Based Watchdog",
+      "date": "2026-10-13",
+      "event": "XWorm RAT Evolves Into Surveillance Platform",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "nvidia",
-    "unveils",
+    "xworm",
+    "evolves",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Nvidia Unveils AI Agent Safety Platform With Hardware-Bas... | Cybersecurity News",
-  "metaDescription": "The platform combines open source software and a reference system design to keep AI agents within set boundaries.\nThe post Nvidia Unveils AI Agent Safety Pla...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, nvidia, unveils, agent, TechNanoAI, emerging tech news",
+  "metaTitle": "XWorm RAT Evolves Into Surveillance Platform | Cybersecurity News",
+  "metaDescription": "Expanded plugin count allows the malware to monitor users’ location, stream live audio, and interact with authenticated browser sessions.\nThe post XWorm RAT ...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, xworm, evolves, into, TechNanoAI, emerging tech news",
   "featured": false
 }

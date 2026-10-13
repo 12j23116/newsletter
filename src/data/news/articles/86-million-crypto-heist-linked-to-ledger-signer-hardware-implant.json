@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1790597932508-4",
+  "id": "cybersecurity-1791896933126-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Kiteworks Urges Server Shutdown, Finds Advanced Forms Vul... | Cybersecurity News",
-  "excerpt": "The company says the measure was precautionary and that it has no evidence of Kiteworks or customer systems being compromised.\nThe post Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerabil",
-  "date": "2026-09-28",
+  "title": "$86 Million Crypto Heist Linked to Ledger Signer Hardware... | Cybersecurity News",
+  "excerpt": "A small circuit board hidden under the signers’ screens read user data and transmitted it to the attackers.\nThe post $86 Million Crypto Heist Linked to Ledger Signer Hardware Implant appeared first on",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "kiteworks-urges-server-shutdown-finds-advanced-forms-vulnerability",
-  "sourceLink": "https://www.securityweek.com/kiteworks-urges-server-shutdown-finds-advanced-forms-vulnerability/",
+  "slug": "86-million-crypto-heist-linked-to-ledger-signer-hardware-implant",
+  "sourceLink": "https://www.securityweek.com/86-million-crypto-heist-linked-to-ledger-signer-hardware-implant/",
   "sourceName": "Ionut Arghire",
   "body": [
     {
       "type": "p",
-      "text": "The company says the measure was precautionary and that it has no evidence of Kiteworks or customer systems being compromised. \nThe post Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerability appeared first on SecurityWeek."
+      "text": "A small circuit board hidden under the signers’ screens read user data and transmitted it to the attackers. \nThe post $86 Million Crypto Heist Linked to Ledger Signer Hardware Implant appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The company says the measure was precautionary and that it has no evidence of Kiteworks or customer systems being compromised.\nThe post Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerability appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ionut Arghire, A small circuit board hidden under the signers’ screens read user data and transmitted it to the attackers.\nThe post $86 Million Crypto Heist Linked to Ledger Signer Hardware Implant appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerability — a notable development in Cybersecurity",
+    "$86 Million Crypto Heist Linked to Ledger Signer Hardware Implant — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerability",
+      "date": "2026-10-13",
+      "event": "$86 Million Crypto Heist Linked to Ledger Signer Hardware Implant",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "kiteworks",
-    "urges",
+    "million",
+    "crypto",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Kiteworks Urges Server Shutdown, Finds Advanced Forms Vul... | Cybersecurity News",
-  "metaDescription": "The company says the measure was precautionary and that it has no evidence of Kiteworks or customer systems being compromised.\nThe post Kiteworks Urges Serve...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, kiteworks, urges, server, TechNanoAI, emerging tech news",
+  "metaTitle": "$86 Million Crypto Heist Linked to Ledger Signer Hardware... | Cybersecurity News",
+  "metaDescription": "A small circuit board hidden under the signers’ screens read user data and transmitted it to the attackers.\nThe post $86 Million Crypto Heist Linked to Ledge...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, million, crypto, heist, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1790597938403-0",
+  "id": "quantum-1791896944300-4",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "The Two-Century Path That Made Quantum Computing Inevitable | Quantum Computing News",
-  "excerpt": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field fr",
-  "date": "2026-09-28",
+  "title": "University of Pennsylvania Team Demonstrates On-Chip Phot... | Quantum Computing News",
+  "excerpt": "A University of Pennsylvania-led team has successfully demonstrated the on-chip transfer of photonic quantum skyrmions, topological light structures, from single photons to entangled states. This was ",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "the-two-century-path-that-made-quantum-computing-inevitable",
-  "sourceLink": "https://quantumcomputingreport.com/the-two-century-path-that-made-quantum-computing-inevitable/",
-  "sourceName": "Doug Finke",
+  "slug": "university-of-pennsylvania-team-demonstrates-on-chip-photonic-quantum-",
+  "sourceLink": "https://quantumcomputingreport.com/university-of-pennsylvania-team-demonstrates-on-chip-photonic-quantum-skyrmion-transfer-in-nature-physics/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field from demonstration to disciplined systems engineering. \nThe post The Two-Century Path That Made Quantum Computing Inevitable appeared first on Quantum Computing Report."
+      "text": "A University of Pennsylvania-led team has successfully demonstrated the on-chip transfer of photonic quantum skyrmions, topological light structures, from single photons to entangled states.  This was achieved using integrated nanophotonic chips and established a noise-resilient quantum state transfer mechanism."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Doug Finke, Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering activities taking place to move the field from demonstration to disciplined systems engineering.\nThe post The Two-Century Path That Made Quantum Computing Inevitable appeared first on Quantum Computing Report.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mohamed Abdel-Kareem, A University of Pennsylvania-led team has successfully demonstrated the on-chip transfer of photonic quantum skyrmions, topological light structures, from single photons to entangled states. This was achieved using integrated nanophotonic chips and established a noise-resilient quantum state transfer mechanism. The research, published in Nature Physics, shows that the skyrmion number, a robust quantum observable, remains intact even when entanglement vanishes, offering a new approach for noise-t. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The Two-Century Path That Made Quantum Computing Inevitable — a notable development in Quantum Computing",
+    "University of Pennsylvania Team Demonstrates On-Chip Photonic Quantum Skyrmion T — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Doug Finke",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "The Two-Century Path That Made Quantum Computing Inevitable",
+      "date": "2026-10-13",
+      "event": "University of Pennsylvania Team Demonstrates On-Chip Photonic Quantum Skyrmion T",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "century",
-    "quantum",
+    "university",
+    "pennsylvania",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The Two-Century Path That Made Quantum Computing Inevitable | Quantum Computing News",
-  "metaDescription": "Guest contributor Areeha Tunio describes how quantum is fundamentally different from all previous computing frameworks and mentions some of the engineering a...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, century, path, that, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "University of Pennsylvania Team Demonstrates On-Chip Phot... | Quantum Computing News",
+  "metaDescription": "A University of Pennsylvania-led team has successfully demonstrated the on-chip transfer of photonic quantum skyrmions, topological light structures, from si...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, university, pennsylvania, team, TechNanoAI, emerging tech news",
+  "featured": false
 }

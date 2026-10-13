@@ -1,21 +1,21 @@
 {
-  "id": "energy-1790597937190-5",
+  "id": "energy-1791896941813-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Global solar additions hit 690 GW in 2025 | Energy Storage News",
-  "excerpt": "Latest report from IEA-PVPS says the world's cumulative solar capacity reached 2.96 TWh by the end of last year, a total theoretically capable of generating around 12% of global electricity consumptio",
-  "date": "2026-09-28",
+  "title": "Stationary, moving, flexible: Batteries are the low-cost ... | Energy Storage News",
+  "excerpt": "While it is known that batteries are indispensable for the future energy system dominated by solar PV, they are still seen as a bottleneck technology mostly related to raw material supply. Sodium-ion ",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "global-solar-additions-hit-690-gw-in-2025",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/28/global-solar-additions-hit-690-gw-in-2025/",
-  "sourceName": "Patrick Jowett",
+  "slug": "stationary-moving-flexible-batteries-are-the-low-cost-backbone-of-the-",
+  "sourceLink": "https://www.pv-magazine.com/2026/10/13/stationary-moving-flexible-batteries-are-the-low-cost-backbone-of-the-future-energy-system/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Latest report from IEA-PVPS says the world's cumulative solar capacity reached 2. 96 TWh by the end of last year, a total theoretically capable of generating around 12% of global electricity consumption."
+      "text": "While it is known that batteries are indispensable for the future energy system dominated by solar PV, they are still seen as a bottleneck technology mostly related to raw material supply.  Sodium-ion batteries can resolve this issue."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Global solar additions hit 690 GW in 2025 appeared first on pv magazine Global."
+      "text": "Batteries are more than a stationary storage technology, also with bright prospects for vehicle-to-grid (V2G) and smart charging of electric vehicles within a broad flexibility technology portfolio."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Global solar additions hit 690 GW in 2025 — a notable development in Energy Storage",
+    "Stationary, moving, flexible: Batteries are the low-cost backbone of the future  — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Global solar additions hit 690 GW in 2025",
+      "date": "2026-10-13",
+      "event": "Stationary, moving, flexible: Batteries are the low-cost backbone of the future ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "global",
-    "solar",
+    "stationary",
+    "moving",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Global solar additions hit 690 GW in 2025 | Energy Storage News",
-  "metaDescription": "Latest report from IEA-PVPS says the world's cumulative solar capacity reached 2.96 TWh by the end of last year, a total theoretically capable of generating ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, global, solar, additions, TechNanoAI, emerging tech news",
+  "metaTitle": "Stationary, moving, flexible: Batteries are the low-cost ... | Energy Storage News",
+  "metaDescription": "While it is known that batteries are indispensable for the future energy system dominated by solar PV, they are still seen as a bottleneck technology mostly ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, stationary, moving, flexible, TechNanoAI, emerging tech news",
   "featured": false
 }

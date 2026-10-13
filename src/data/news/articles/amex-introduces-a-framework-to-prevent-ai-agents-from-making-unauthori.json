@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790597931970-2",
+  "id": "ai-1791896932530-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Anthropic’s CEO is about to have dinner with President Trump | AI News",
-  "excerpt": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
-  "date": "2026-09-28",
+  "title": "Amex introduces a framework to prevent AI agents from mak... | AI News",
+  "excerpt": "American Express is introducing a new framework designed to ensure AI agents only make purchases their users have authorized, potentially preventing costly mistakes and disputes as AI-powered shopping",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "anthropics-ceo-is-about-to-have-dinner-with-president-trump",
-  "sourceLink": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
-  "sourceName": "Anthony Ha",
+  "slug": "amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthori",
+  "sourceLink": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
+  "sourceName": "Sarah Perez",
   "body": [
     {
       "type": "p",
-      "text": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump"
+      "text": "American Express is introducing a new framework designed to ensure AI agents only make purchases their users have authorized, potentially preventing costly mistakes and disputes as AI-powered shopping grows."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, This will be the first one-on-one meeting between Dario Amodei and Donald Trump. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sarah Perez, American Express is introducing a new framework designed to ensure AI agents only make purchases their users have authorized, potentially preventing costly mistakes and disputes as AI-powered shopping grows.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Anthropic’s CEO is about to have dinner with President Trump — a notable development in AI",
+    "Amex introduces a framework to prevent AI agents from making unauthorized purcha — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Sarah Perez",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Anthropic’s CEO is about to have dinner with President Trump",
+      "date": "2026-10-13",
+      "event": "Amex introduces a framework to prevent AI agents from making unauthorized purcha",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anthropic",
-    "about",
+    "introduces",
+    "framework",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Anthropic’s CEO is about to have dinner with President Trump | AI News",
-  "metaDescription": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNan",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, about, have, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Amex introduces a framework to prevent AI agents from mak... | AI News",
+  "metaDescription": "American Express is introducing a new framework designed to ensure AI agents only make purchases their users have authorized, potentially preventing costly m...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, amex, introduces, framework, TechNanoAI, emerging tech news",
+  "featured": true
 }

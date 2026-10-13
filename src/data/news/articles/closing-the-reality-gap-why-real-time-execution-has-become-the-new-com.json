@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1790597937570-0",
+  "id": "robotics-1791896943253-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Asimov's laws are not enough to keep robotics and AI safe | Robotics News",
-  "excerpt": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not enough to keep robotics and AI safe appeared",
-  "date": "2026-09-28",
+  "title": "Closing the reality gap: Why real-time execution has beco... | Robotics News",
+  "excerpt": "Daifuku's Cecile Dick-Calmes said success is no longer measured solely by automation density or equipment utilization.\nThe post Closing the reality gap: Why real-time execution has become the new comp",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "asimov8217s-laws-are-not-enough-to-keep-robotics-and-ai-safe",
-  "sourceLink": "https://www.therobotreport.com/asimovs-laws-are-not-enough-keep-robotics-ai-safe/",
-  "sourceName": "Rinaldo Brutoco",
+  "slug": "closing-the-reality-gap-why-real-time-execution-has-become-the-new-com",
+  "sourceLink": "https://www.therobotreport.com/closing-reality-gap-why-real-time-execution-has-become-new-competitive-advantage/",
+  "sourceName": "Cecile Dick-Calmes",
   "body": [
     {
       "type": "p",
-      "text": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI. \nThe post Asimov's laws are not enough to keep robotics and AI safe appeared first on The Robot Report."
+      "text": "Daifuku's Cecile Dick-Calmes said success is no longer measured solely by automation density or equipment utilization. \nThe post Closing the reality gap: Why real-time execution has become the new competitive advantage appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Rinaldo Brutoco, Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not enough to keep robotics and AI safe appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Cecile Dick-Calmes, Daifuku's Cecile Dick-Calmes said success is no longer measured solely by automation density or equipment utilization.\nThe post Closing the reality gap: Why real-time execution has become the new competitive advantage appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Asimov's laws are not enough to keep robotics and AI safe — a notable development in Robotics",
+    "Closing the reality gap: Why real-time execution has become the new competitive  — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Rinaldo Brutoco",
+      "value": "Cecile Dick-Calmes",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Asimov's laws are not enough to keep robotics and AI safe",
+      "date": "2026-10-13",
+      "event": "Closing the reality gap: Why real-time execution has become the new competitive ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "asimov",
-    "enough",
+    "closing",
+    "reality",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Asimov's laws are not enough to keep robotics and AI safe | Robotics News",
-  "metaDescription": "Asimov's fictional Three Laws of Robotics famously set safeguards, and tech observers today raise similar concerns about AI.\nThe post Asimov's laws are not e...",
-  "keywords": "robotics, humanoid robot, automation, drones, asimov, laws, enough, TechNanoAI, emerging tech news",
+  "metaTitle": "Closing the reality gap: Why real-time execution has beco... | Robotics News",
+  "metaDescription": "Daifuku's Cecile Dick-Calmes said success is no longer measured solely by automation density or equipment utilization.\nThe post Closing the reality gap: Why ...",
+  "keywords": "robotics, humanoid robot, automation, drones, closing, reality, real, TechNanoAI, emerging tech news",
   "featured": true
 }

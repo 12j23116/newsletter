@@ -1,21 +1,21 @@
 {
-  "id": "space-1790597933387-1",
+  "id": "space-1791896934436-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Live coverage: SpaceX to launch first Starlink V3 satelli... | Space Exploration News",
-  "excerpt": "The first planned orbital flight of a Starship-Super Heavy rocket aims to send 26 Starlink Version 3 into low Earth orbit. Liftoff from Pad 2 at Starbase, Texas, is scheduled during a 75-minute window",
-  "date": "2026-09-28",
+  "title": "NASA Science, Cargo Launch on 35th SpaceX Resupply Missio... | Space Exploration News",
+  "excerpt": "NASA’s SpaceX 35th commercial resupply mission lifted off at 6:33 a.m. EDT Tuesday aboard a Falcon 9 rocket from Space Launch Complex 40 at Cape Canaveral Space Force Station in Florida, carrying more",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "live-coverage-spacex-to-launch-first-starlink-v3-satellites-to-orbit-o",
-  "sourceLink": "https://spaceflightnow.com/2026/09/28/live-coverage-spacex-to-launch-first-starlink-v3-satellites-to-orbit-on-starship/",
-  "sourceName": "Will Robinson-Smith",
+  "slug": "nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station",
+  "sourceLink": "https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/",
+  "sourceName": "Jessica Taveau",
   "body": [
     {
       "type": "p",
-      "text": "The first planned orbital flight of a Starship-Super Heavy rocket aims to send 26 Starlink Version 3 into low Earth orbit.  Liftoff from Pad 2 at Starbase, Texas, is scheduled during a 75-minute window that opens at 7:15 a."
+      "text": "NASA’s SpaceX 35th commercial resupply mission lifted off at 6:33 a. m."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "m.  CDT (8:15 a."
-    },
-    {
-      "type": "p",
-      "text": "m.  EDT / 1215 UTC)."
+      "text": "EDT Tuesday aboard a Falcon 9 rocket from Space Launch Complex 40 at Cape Canaveral Space Force Station in Florida, carrying more than 6,300 pounds of supplies and hardware, bound for the International Space Station."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Live coverage: SpaceX to launch first Starlink V3 satellites to orbit on Starshi — a notable development in Space Exploration",
+    "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Will Robinson-Smith",
+      "value": "Jessica Taveau",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Live coverage: SpaceX to launch first Starlink V3 satellites to orbit on Starshi",
+      "date": "2026-10-13",
+      "event": "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "coverage",
-    "spacex",
+    "science",
+    "cargo",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Live coverage: SpaceX to launch first Starlink V3 satelli... | Space Exploration News",
-  "metaDescription": "The first planned orbital flight of a Starship-Super Heavy rocket aims to send 26 Starlink Version 3 into low Earth orbit. Liftoff from Pad 2 at Starbase, Te...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, live, coverage, spacex, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "NASA Science, Cargo Launch on 35th SpaceX Resupply Missio... | Space Exploration News",
+  "metaDescription": "NASA’s SpaceX 35th commercial resupply mission lifted off at 6:33 a.m. EDT Tuesday aboard a Falcon 9 rocket from Space Launch Complex 40 at Cape Canaveral Sp...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, science, cargo, TechNanoAI, emerging tech news",
+  "featured": true
 }

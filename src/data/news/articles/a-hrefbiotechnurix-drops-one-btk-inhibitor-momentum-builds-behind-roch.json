@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790597934202-2",
+  "id": "biotech-1791896935043-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/adicet-bio-car-t-sparks-lupus-remission... | Biotechnology News",
-  "excerpt": "As the race to harness CAR-T cells for autoimmune diseases hits a rough patch, a Bay Area biotech is gliding over the potholes with an early sign of efficacy in lupus.",
-  "date": "2026-09-28",
+  "title": "<a href=\"/biotech/nurix-drops-one-btk-inhibitor-momentum-... | Biotechnology News",
+  "excerpt": "Nurix’s BTK degrader zelebrudomide may have survived a clinical hold in recent years, but that hasn’t stopped the California biotech from dropping the cancer drug.",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechadicet-bio-car-t-sparks-lupus-remissions-early-trial-new-",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/adicet-bio-car-t-sparks-lupus-remissions-early-trial-new-era-autoimmune-treatment",
-  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "slug": "a-hrefbiotechnurix-drops-one-btk-inhibitor-momentum-builds-behind-roch",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/nurix-drops-one-btk-inhibitor-momentum-builds-behind-roche-partnered-option",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "As the race to harness CAR-T cells for autoimmune diseases hits a rough patch, a Bay Area biotech is gliding over the potholes with an early sign of efficacy in lupus."
+      "text": "Nurix’s BTK degrader zelebrudomide may have survived a clinical hold in recent years, but that hasn’t stopped the California biotech from dropping the cancer drug."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, As the race to harness CAR-T cells for autoimmune diseases hits a rough patch, a Bay Area biotech is gliding over the potholes with an early sign of efficacy in lupus.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Nurix’s BTK degrader zelebrudomide may have survived a clinical hold in recent years, but that hasn’t stopped the California biotech from dropping the cancer drug.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/adicet-bio-car-t-sparks-lupus-remissions-early-trial-new-era-a — a notable development in Biotechnology",
+    "<a href=\"/biotech/nurix-drops-one-btk-inhibitor-momentum-builds-behind-roche-par — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "<a href=\"/biotech/adicet-bio-car-t-sparks-lupus-remissions-early-trial-new-era-a",
+      "date": "2026-10-13",
+      "event": "<a href=\"/biotech/nurix-drops-one-btk-inhibitor-momentum-builds-behind-roche-par",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "adicet",
+    "nurix",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/adicet-bio-car-t-sparks-lupus-remission... | Biotechnology News",
-  "metaDescription": "As the race to harness CAR-T cells for autoimmune diseases hits a rough patch, a Bay Area biotech is gliding over the potholes with an early sign of efficacy...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, adicet, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/nurix-drops-one-btk-inhibitor-momentum-... | Biotechnology News",
+  "metaDescription": "Nurix’s BTK degrader zelebrudomide may have survived a clinical hold in recent years, but that hasn’t stopped the California biotech from dropping the cancer...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, nurix, TechNanoAI, emerging tech news",
   "featured": false
 }

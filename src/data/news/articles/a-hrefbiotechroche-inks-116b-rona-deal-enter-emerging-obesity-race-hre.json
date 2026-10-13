@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790597934202-1",
+  "id": "biotech-1791896935042-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/sponsored/new-approach-methodologies-safety-and... | Biotechnology News",
-  "excerpt": "NAMs could transform drug safety testing—but proving repeatability and cell health remains the key hurdle to widespread adoption.",
-  "date": "2026-09-28",
+  "title": "<a href=\"/biotech/roche-inks-116b-rona-deal-enter-emergin... | Biotechnology News",
+  "excerpt": "Roche has committed $100 million in upfront and near-term payments to license Rona Therapeutics’ ALK7 drug candidate, joining Alnylam, Arrowhead, GSK and Novo Nordisk in an emerging obesity niche.",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefsponsorednew-approach-methodologies-safety-and-toxicology-testin",
-  "sourceLink": "https://www.fiercebiotech.com/sponsored/new-approach-methodologies-safety-and-toxicology-testing-why-proving-repeatability-next",
-  "sourceName": "<a href=\"/person/questex-partner\" hreflang=\"en\">Questex Partner</a>",
+  "slug": "a-hrefbiotechroche-inks-116b-rona-deal-enter-emerging-obesity-race-hre",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/roche-inks-116b-rona-deal-enter-emerging-obesity-race",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "NAMs could transform drug safety testing—but proving repeatability and cell health remains the key hurdle to widespread adoption."
+      "text": "Roche has committed $100 million in upfront and near-term payments to license Rona Therapeutics’ ALK7 drug candidate, joining Alnylam, Arrowhead, GSK and Novo Nordisk in an emerging obesity niche."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/questex-partner\" hreflang=\"en\">Questex Partner</a>, NAMs could transform drug safety testing—but proving repeatability and cell health remains the key hurdle to widespread adoption.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, Roche has committed $100 million in upfront and near-term payments to license Rona Therapeutics’ ALK7 drug candidate, joining Alnylam, Arrowhead, GSK and Novo Nordisk in an emerging obesity niche.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/sponsored/new-approach-methodologies-safety-and-toxicology-testing-why — a notable development in Biotechnology",
+    "<a href=\"/biotech/roche-inks-116b-rona-deal-enter-emerging-obesity-race\" hreflan — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/questex-partner\" hreflang=\"en\">Questex Partner</a>",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "<a href=\"/sponsored/new-approach-methodologies-safety-and-toxicology-testing-why",
+      "date": "2026-10-13",
+      "event": "<a href=\"/biotech/roche-inks-116b-rona-deal-enter-emerging-obesity-race\" hreflan",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "sponsored",
-    "approach",
+    "biotech",
+    "roche",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/sponsored/new-approach-methodologies-safety-and... | Biotechnology News",
-  "metaDescription": "NAMs could transform drug safety testing—but proving repeatability and cell health remains the key hurdle to widespread adoption.",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, sponsored, approach, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/roche-inks-116b-rona-deal-enter-emergin... | Biotechnology News",
+  "metaDescription": "Roche has committed $100 million in upfront and near-term payments to license Rona Therapeutics’ ALK7 drug candidate, joining Alnylam, Arrowhead, GSK and Nov...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, roche, TechNanoAI, emerging tech news",
   "featured": false
 }

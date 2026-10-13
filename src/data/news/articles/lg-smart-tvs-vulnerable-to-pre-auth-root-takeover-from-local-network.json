@@ -1,21 +1,21 @@
 {
-  "id": "ai-1790597931970-1",
+  "id": "ai-1791896932531-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "CISA Says Attackers Are Exploiting Two Critical Citrix Ne... | AI News",
-  "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Sunday added two critical Citrix NetScaler ADC and Gateway flaws to its Known Exploited Vulnerabilities (KEV) catalog, following rep",
-  "date": "2026-09-28",
+  "title": "LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Lo... | AI News",
+  "excerpt": "Three vulnerabilities in LG's webOS can be chained to give an attacker on the same local network root access to certain smart TVs without a PIN or any interaction from the owner.\n\nLG has issued a fix,",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "cisa-says-attackers-are-exploiting-two-critical-citrix-netscaler-flaws",
-  "sourceLink": "https://thehackernews.com/2026/09/cisa-says-attackers-are-exploiting-two.html",
+  "slug": "lg-smart-tvs-vulnerable-to-pre-auth-root-takeover-from-local-network",
+  "sourceLink": "https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The U. S."
+      "text": "Three vulnerabilities in LG's webOS can be chained to give an attacker on the same local network root access to certain smart TVs without a PIN or any interaction from the owner. \n\nLG has issued a fix, according to an advisory published by SSD Secure Disclosure on October 12."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Cybersecurity and Infrastructure Security Agency (CISA) on Sunday added two critical Citrix NetScaler ADC and Gateway flaws to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation. \n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-88771 (CVSS score: 9."
+      "text": "The chain was tested on two TV models, the 32LQ636BPSA and the 27TQ600SW, running webOS 7. 5."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "CISA Says Attackers Are Exploiting Two Critical Citrix NetScaler Flaws Globally — a notable development in AI",
+    "LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Local Network — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "CISA Says Attackers Are Exploiting Two Critical Citrix NetScaler Flaws Globally",
+      "date": "2026-10-13",
+      "event": "LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Local Network",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "attackers",
-    "exploiting",
+    "smart",
+    "vulnerable",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "CISA Says Attackers Are Exploiting Two Critical Citrix Ne... | AI News",
-  "metaDescription": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Sunday added two critical Citrix NetScaler ADC and Gateway flaws to its Known Exploited V...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, cisa, says, attackers, TechNanoAI, emerging tech news",
+  "metaTitle": "LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Lo... | AI News",
+  "metaDescription": "Three vulnerabilities in LG's webOS can be chained to give an attacker on the same local network root access to certain smart TVs without a PIN or any intera...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, smart, vulnerable, auth, TechNanoAI, emerging tech news",
   "featured": false
 }

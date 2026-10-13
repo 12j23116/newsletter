@@ -1,21 +1,21 @@
 {
-  "id": "energy-1790597937190-4",
+  "id": "energy-1791896941812-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Key takeaways from Solar ' Storage Live UK, Birmingham | Energy Storage News",
-  "excerpt": "At Solar ' Storage Live UK, industry leaders highlighted financing, skills shortages and community engagement as key challenges for the country’s growing pipeline of large-scale solar projects. The ev",
-  "date": "2026-09-28",
+  "title": "Leapting launches autonomous forklift for solar module tr... | Energy Storage News",
+  "excerpt": "The Chinese robotics manufacturer has introduced an autonomous tracked forklift capable of transporting solar module pallets weighing up to 3,000 kg. The battery-powered machine features a maximum lif",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "key-takeaways-from-solar-038-storage-live-uk-birmingham",
-  "sourceLink": "https://www.pv-magazine.com/2026/09/28/key-takeaways-from-solar-storage-live-uk-birmingham/",
-  "sourceName": "Matthew Lynas",
+  "slug": "leapting-launches-autonomous-forklift-for-solar-module-transport",
+  "sourceLink": "https://www.pv-magazine.com/2026/10/13/leapting-launches-autonomous-forklift-for-solar-module-transport/",
+  "sourceName": "Lior Kahana",
   "body": [
     {
       "type": "p",
-      "text": "At Solar ' Storage Live UK, industry leaders highlighted financing, skills shortages and community engagement as key challenges for the country’s growing pipeline of large-scale solar projects.  The event also showcased opportunities in plug-in solar and residential battery storage, supported by policy measures and rising household energy costs."
+      "text": "The Chinese robotics manufacturer has introduced an autonomous tracked forklift capable of transporting solar module pallets weighing up to 3,000 kg.  The battery-powered machine features a maximum lifting height of 3 m, a 30-degree climbing capability and a navigation system combining GNSS-RTK, laser SLAM and computer vision."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Key takeaways from Solar & Storage Live UK, Birmingham appeared first on pv magazine Global."
+      "text": "The post Leapting launches autonomous forklift for solar module transport appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Key takeaways from Solar ' Storage Live UK, Birmingham — a notable development in Energy Storage",
+    "Leapting launches autonomous forklift for solar module transport — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Matthew Lynas",
+      "value": "Lior Kahana",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Key takeaways from Solar ' Storage Live UK, Birmingham",
+      "date": "2026-10-13",
+      "event": "Leapting launches autonomous forklift for solar module transport",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "takeaways",
-    "solar",
+    "leapting",
+    "launches",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Key takeaways from Solar ' Storage Live UK, Birmingham | Energy Storage News",
-  "metaDescription": "At Solar ' Storage Live UK, industry leaders highlighted financing, skills shortages and community engagement as key challenges for the country’s growing pip...",
-  "keywords": "energy storage, battery, solid-state, grid storage, takeaways, from, solar, TechNanoAI, emerging tech news",
+  "metaTitle": "Leapting launches autonomous forklift for solar module tr... | Energy Storage News",
+  "metaDescription": "The Chinese robotics manufacturer has introduced an autonomous tracked forklift capable of transporting solar module pallets weighing up to 3,000 kg. The bat...",
+  "keywords": "energy storage, battery, solid-state, grid storage, leapting, launches, autonomous, TechNanoAI, emerging tech news",
   "featured": false
 }

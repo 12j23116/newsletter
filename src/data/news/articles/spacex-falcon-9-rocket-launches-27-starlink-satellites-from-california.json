@@ -1,21 +1,21 @@
 {
-  "id": "space-1790597933387-0",
+  "id": "space-1791896934437-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Agile Space Industries Expands Leadership Structure to Su... | Space Exploration News",
-  "excerpt": "DURANGO, Colo., Sept. 28, 2026 – Agile Space Industries today announced that Jason Wright will join the company as President in early October, strengthening Agile’s operational leadership as the compa",
-  "date": "2026-09-28",
+  "title": "SpaceX Falcon 9 rocket launches 27 Starlink satellites fr... | Space Exploration News",
+  "excerpt": "Liftoff off of the Starlink 15-25 mission from Space Launch Complex 4 East came at 5:28 p.m. PDT (8:28 p.m. EDT / 0028 UTC).",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "agile-space-industries-expands-leadership-structure-to-support-next-ph",
-  "sourceLink": "https://spacenews.com/agile-space-industries-expands-leadership-structure-to-support-next-phase-of-growth/",
-  "sourceName": "Agile Space Industries",
+  "slug": "spacex-falcon-9-rocket-launches-27-starlink-satellites-from-california",
+  "sourceLink": "https://spaceflightnow.com/2026/10/12/spacex-falcon-9-rocket-to-launch-27-starlink-satellites-into-orbit-from-california/",
+  "sourceName": "Spaceflight Now",
   "body": [
     {
       "type": "p",
-      "text": "DURANGO, Colo. , Sept."
+      "text": "Liftoff off of the Starlink 15-25 mission from Space Launch Complex 4 East came at 5:28 p. m."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "28, 2026 – Agile Space Industries today announced that Jason Wright will join the company as President in early October, strengthening Agile’s operational leadership as the company [']\nThe post Agile Space Industries Expands Leadership Structure to Support Next Phase of Growth appeared first on SpaceNews."
+      "text": "PDT (8:28 p. m."
+    },
+    {
+      "type": "p",
+      "text": "EDT / 0028 UTC)."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Agile Space Industries Expands Leadership Structure to Support Next Phase of Gro — a notable development in Space Exploration",
+    "SpaceX Falcon 9 rocket launches 27 Starlink satellites from California — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Agile Space Industries",
+      "value": "Spaceflight Now",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "Agile Space Industries Expands Leadership Structure to Support Next Phase of Gro",
+      "date": "2026-10-13",
+      "event": "SpaceX Falcon 9 rocket launches 27 Starlink satellites from California",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "agile",
-    "space",
+    "spacex",
+    "falcon",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Agile Space Industries Expands Leadership Structure to Su... | Space Exploration News",
-  "metaDescription": "DURANGO, Colo., Sept. 28, 2026 – Agile Space Industries today announced that Jason Wright will join the company as President in early October, strengthening ...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, agile, space, industries, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "SpaceX Falcon 9 rocket launches 27 Starlink satellites fr... | Space Exploration News",
+  "metaDescription": "Liftoff off of the Starlink 15-25 mission from Space Launch Complex 4 East came at 5:28 p.m. PDT (8:28 p.m. EDT / 0028 UTC).",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, falcon, rocket, TechNanoAI, emerging tech news",
+  "featured": false
 }

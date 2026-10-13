@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1790597934201-0",
+  "id": "biotech-1791896935043-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/medtech/vc-sofinnova-reels-eur82m-target-medtec... | Biotechnology News",
-  "excerpt": "Sofinnova Partners has hauled in 82 million euro ($93.3 million) in an oversubscribed financing round. The European venture capital group said it will use the cash to expand its medtech creation strat",
-  "date": "2026-09-28",
+  "title": "<a href=\"/biotech/roche-sets-sights-july-fda-ruling-updat... | Biotechnology News",
+  "excerpt": "One year on from a mixed phase 3 readout, Roche has shared updated data from eye disease trials that could support FDA approval by July.",
+  "date": "2026-10-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefmedtechvc-sofinnova-reels-eur82m-target-medtechs-next-5-years-hr",
-  "sourceLink": "https://www.fiercebiotech.com/medtech/vc-sofinnova-reels-eur82m-target-medtechs-next-5-years",
-  "sourceName": "<a href=\"/person/joseph-keenan\" hreflang=\"en\">Joseph Keenan</a>",
+  "slug": "a-hrefbiotechroche-sets-sights-july-fda-ruling-updated-eye-drug-data-h",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/roche-sets-sights-july-fda-ruling-updated-eye-drug-data",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "Sofinnova Partners has hauled in 82 million euro ($93. 3 million) in an oversubscribed financing round."
+      "text": "One year on from a mixed phase 3 readout, Roche has shared updated data from eye disease trials that could support FDA approval by July."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The European venture capital group said it will use the cash to expand its medtech creation strategy in Europe and the U. S."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, One year on from a mixed phase 3 readout, Roche has shared updated data from eye disease trials that could support FDA approval by July.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/medtech/vc-sofinnova-reels-eur82m-target-medtechs-next-5-years\" hrefla — a notable development in Biotechnology",
+    "<a href=\"/biotech/roche-sets-sights-july-fda-ruling-updated-eye-drug-data\" hrefl — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/joseph-keenan\" hreflang=\"en\">Joseph Keenan</a>",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-09-28",
-      "event": "<a href=\"/medtech/vc-sofinnova-reels-eur82m-target-medtechs-next-5-years\" hrefla",
+      "date": "2026-10-13",
+      "event": "<a href=\"/biotech/roche-sets-sights-july-fda-ruling-updated-eye-drug-data\" hrefl",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "medtech",
-    "sofinnova",
+    "biotech",
+    "roche",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/medtech/vc-sofinnova-reels-eur82m-target-medtec... | Biotechnology News",
-  "metaDescription": "Sofinnova Partners has hauled in 82 million euro ($93.3 million) in an oversubscribed financing round. The European venture capital group said it will use th...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, sofinnova, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/roche-sets-sights-july-fda-ruling-updat... | Biotechnology News",
+  "metaDescription": "One year on from a mixed phase 3 readout, Roche has shared updated data from eye disease trials that could support FDA approval by July.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, roche, TechNanoAI, emerging tech news",
+  "featured": false
 }
