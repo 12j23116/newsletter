@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791024453051-5",
+  "id": "ai-1792317870368-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "It's not AI anymore, it's ‘super intelligence’ (according... | AI News",
-  "excerpt": "This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI safety pledge'that President'Donald'Trump call",
-  "date": "2026-10-03",
+  "title": "Meta removes language that raised scraping and AI trainin... | AI News",
+  "excerpt": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "it8217s-not-ai-anymore-it8217s-super-intelligence-according-to-the-whi",
-  "sourceLink": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-  "sourceName": "Theresa Loconsolo",
+  "slug": "meta-removes-language-that-raised-scraping-and-ai-training-concerns",
+  "sourceLink": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI safety pledge'that President'Donald'Trump called “morally binding."
+      "text": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Theresa Loconsolo, This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI safety pledge'that President'Donald'Trump called “morally binding.”'Trump'also'signed an'executive order'officially rebranding AI as “super intelligence,” and meanwhile,'Meta and OpenAI are putting'friendlier faces on their AI products, even as the biggest money [']. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "It's not AI anymore, it's ‘super intelligence’ (according to the White House) — a notable development in AI",
+    "Meta removes language that raised scraping and AI training concerns — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Theresa Loconsolo",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "It's not AI anymore, it's ‘super intelligence’ (according to the White House)",
+      "date": "2026-10-18",
+      "event": "Meta removes language that raised scraping and AI training concerns",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anymore",
-    "super",
+    "removes",
+    "language",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "It's not AI anymore, it's ‘super intelligence’ (according... | AI News",
-  "metaDescription": "This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI saf...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anymore, super, intelligence, TechNanoAI, emerging tech news",
+  "metaTitle": "Meta removes language that raised scraping and AI trainin... | AI News",
+  "metaDescription": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web. LLMs, agents & the race to AGI. Latest AI developme",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, meta, removes, language, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1791024453795-2",
+  "id": "cybersecurity-1792317870947-4",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Comm... | Cybersecurity News",
-  "excerpt": "A critical flaw in GitLab's AI Gateway could let a logged-in user with Duo Agent Platform access run commands on the gateway under certain conditions, GitLab said in an advisory.\n\nThe gateway is the s",
-  "date": "2026-10-03",
+  "title": "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware D... | Cybersecurity News",
+  "excerpt": "Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets.\nThe post Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "gitlab-patches-critical-99-ai-gateway-flaw-allowing-command-execution-",
-  "sourceLink": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "israeli-ad-firm-doubled-as-candiru8217s-zero-click-spyware-delivery-ch",
+  "sourceLink": "https://www.securityweek.com/israeli-ad-firm-doubled-as-candirus-zero-click-spyware-delivery-channel/",
+  "sourceName": "Ionut Arghire",
   "body": [
     {
       "type": "p",
-      "text": "A critical flaw in GitLab's AI Gateway could let a logged-in user with Duo Agent Platform access run commands on the gateway under certain conditions, GitLab said in an advisory. \n\nThe gateway is the service that connects a GitLab instance to AI models, and only organizations that host their own gateway need to act."
+      "text": "Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets. \nThe post Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,15 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The flaw is fixed in gateway versions 19. 2."
-    },
-    {
-      "type": "p",
-      "text": "4, 19. 3."
-    },
-    {
-      "type": "p",
-      "text": "2, and 19. 4."
+      "text": "According to reporting from Ionut Arghire, Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets.\nThe post Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -105,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-H — a notable development in Cybersecurity",
+    "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -128,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Ionut Arghire",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -165,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-H",
+      "date": "2026-10-18",
+      "event": "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel",
       "current": true
     },
     {
@@ -199,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "gitlab",
-    "patches",
+    "israeli",
+    "doubled",
     "emerging tech"
   ],
   "poll": {
@@ -224,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Comm... | Cybersecurity News",
-  "metaDescription": "A critical flaw in GitLab's AI Gateway could let a logged-in user with Duo Agent Platform access run commands on the gateway under certain conditions, GitLab...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, gitlab, patches, critical, TechNanoAI, emerging tech news",
+  "metaTitle": "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware D... | Cybersecurity News",
+  "metaDescription": "Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets.\nThe post Israeli Ad Firm Doubl...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, israeli, firm, doubled, TechNanoAI, emerging tech news",
   "featured": false
 }

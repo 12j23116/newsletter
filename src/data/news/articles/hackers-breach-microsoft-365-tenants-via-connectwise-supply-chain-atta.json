@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1791024453795-3",
+  "id": "cybersecurity-1792317870947-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Antino Backdoor Uses Outlook and OneDrive for C2 in China... | Cybersecurity News",
-  "excerpt": "Government and policy organizations across Asia have become the target of a new campaign orchestrated by a China-nexus threat actor.\n\nThe activity, which has targeted government and policy organizatio",
-  "date": "2026-10-03",
+  "title": "Hackers breach Microsoft 365 tenants via ConnectWise supp... | Cybersecurity News",
+  "excerpt": "ConnectWise has shut down customer access to its Cloud Backup service (formerly SkyKick Cloud Backup) after hackers accessed application identities and compromised Microsoft 365 tenants. [...]",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "antino-backdoor-uses-outlook-and-onedrive-for-c2-in-china-nexus-espion",
-  "sourceLink": "https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-atta",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+  "sourceName": "Ionut Ilascu",
   "body": [
     {
       "type": "p",
-      "text": "Government and policy organizations across Asia have become the target of a new campaign orchestrated by a China-nexus threat actor. \n\nThe activity, which has targeted government and policy organizations in Taiwan, India, the Philippines, Cambodia, Pakistan, Thailand, and Myanmar, involves the deployment of a previously undocumented backdoor codenamed Antino."
+      "text": "ConnectWise has shut down customer access to its Cloud Backup service (formerly SkyKick Cloud Backup) after hackers accessed application identities and compromised Microsoft 365 tenants.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Government and policy organizations across Asia have become the target of a new campaign orchestrated by a China-nexus threat actor.\n\nThe activity, which has targeted government and policy organizations in Taiwan, India, the Philippines, Cambodia, Pakistan, Thailand, and Myanmar, involves the deployment of a previously undocumented backdoor codenamed Antino. Cisco Talos is tracking the cluster. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ionut Ilascu, ConnectWise has shut down customer access to its Cloud Backup service (formerly SkyKick Cloud Backup) after hackers accessed application identities and compromised Microsoft 365 tenants. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campai — a notable development in Cybersecurity",
+    "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Ionut Ilascu",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campai",
+      "date": "2026-10-18",
+      "event": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "antino",
-    "backdoor",
+    "hackers",
+    "breach",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Antino Backdoor Uses Outlook and OneDrive for C2 in China... | Cybersecurity News",
-  "metaDescription": "Government and policy organizations across Asia have become the target of a new campaign orchestrated by a China-nexus threat actor.\n\nThe activity, which has...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, antino, backdoor, uses, TechNanoAI, emerging tech news",
+  "metaTitle": "Hackers breach Microsoft 365 tenants via ConnectWise supp... | Cybersecurity News",
+  "metaDescription": "ConnectWise has shut down customer access to its Cloud Backup service (formerly SkyKick Cloud Backup) after hackers accessed application identities and compr...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, breach, microsoft, TechNanoAI, emerging tech news",
   "featured": false
 }

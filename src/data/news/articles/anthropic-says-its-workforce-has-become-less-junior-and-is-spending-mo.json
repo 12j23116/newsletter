@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791024453050-1",
+  "id": "ai-1792317870368-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Sean Parker is rebuilding Stability AI around music | AI News",
-  "excerpt": "Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money.",
-  "date": "2026-10-03",
+  "title": "Anthropic says its workforce has become less junior and i... | AI News",
+  "excerpt": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year.",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "sean-parker-is-rebuilding-stability-ai-around-music",
-  "sourceLink": "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/",
-  "sourceName": "Connie Loizos",
+  "slug": "anthropic-says-its-workforce-has-become-less-junior-and-is-spending-mo",
+  "sourceLink": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money."
+      "text": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Connie Loizos, Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Sean Parker is rebuilding Stability AI around music — a notable development in AI",
+    "Anthropic says its workforce has become less junior and is spending more time in — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Connie Loizos",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Sean Parker is rebuilding Stability AI around music",
+      "date": "2026-10-18",
+      "event": "Anthropic says its workforce has become less junior and is spending more time in",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "parker",
-    "rebuilding",
+    "anthropic",
+    "workforce",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Sean Parker is rebuilding Stability AI around music | AI News",
-  "metaDescription": "Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, sean, parker, rebuilding, TechNanoAI, emerging tech news",
+  "metaTitle": "Anthropic says its workforce has become less junior and i... | AI News",
+  "metaDescription": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year. LLMs, agents & the race to AGI. Latest A",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, says, workforce, TechNanoAI, emerging tech news",
   "featured": false
 }

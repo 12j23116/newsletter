@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791024461476-1",
+  "id": "quantum-1792317877476-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Fermilab SQMS Center Identifies Microscopic Origins of Qu... | Quantum Computing News",
-  "excerpt": "Researchers at Fermilab's SQMS Center and collaborators identified microscopic material defects causing performance variations in superconducting qubits. Their study found that nanoscale fabrication g",
-  "date": "2026-10-03",
+  "title": "The New Quantum Era with Sebastian Hassinger | Quantum Computing News",
+  "excerpt": "THIRD ITERATION OF QUANTUM+AI OFFERS 80 POWERHOUSE SPEAKERS AND GREAT NETWORKING; PQC TRACK INCLUDED Q+AI October 25-27 in New York City is a week from starting. The speaker lineup authored by Bob Sut",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "fermilab-sqms-center-identifies-microscopic-origins-of-qubit-performan",
-  "sourceLink": "https://quantumcomputingreport.com/fermilab-sqms-center-identifies-microscopic-origins-of-qubit-performance-variance-across-superconducting-transmons/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "the-new-quantum-era-with-sebastian-hassinger",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/the-new-quantum-era-with-sebastian-hassinger/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Researchers at Fermilab's SQMS Center and collaborators identified microscopic material defects causing performance variations in superconducting qubits.  Their study found that nanoscale fabrication geometries, surface oxides, and energy relaxation times are directly correlated."
+      "text": "THIRD ITERATION OF QUANTUM+AI OFFERS 80 POWERHOUSE SPEAKERS AND GREAT NETWORKING; PQC TRACK INCLUDED Q+AI October 25-27 in New York City is a week from starting.  The speaker lineup authored by Bob Sutor and Brian Siegelwax offers over 80 speakers including several exciting “fireside” chats."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Specifically, single-nanometer shifts in surface oxide thickness, substrate trench depths below 20 nanometers, and sidewall etch profiles can cause up to a twofold variation in qubit performance."
+      "text": "Canto..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Fermilab SQMS Center Identifies Microscopic Origins of Qubit Performance Varianc — a notable development in Quantum Computing",
+    "The New Quantum Era with Sebastian Hassinger — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Fermilab SQMS Center Identifies Microscopic Origins of Qubit Performance Varianc",
+      "date": "2026-10-18",
+      "event": "The New Quantum Era with Sebastian Hassinger",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "fermilab",
-    "center",
+    "quantum",
+    "sebastian",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Fermilab SQMS Center Identifies Microscopic Origins of Qu... | Quantum Computing News",
-  "metaDescription": "Researchers at Fermilab's SQMS Center and collaborators identified microscopic material defects causing performance variations in superconducting qubits. The...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, fermilab, sqms, center, TechNanoAI, emerging tech news",
+  "metaTitle": "The New Quantum Era with Sebastian Hassinger | Quantum Computing News",
+  "metaDescription": "THIRD ITERATION OF QUANTUM+AI OFFERS 80 POWERHOUSE SPEAKERS AND GREAT NETWORKING; PQC TRACK INCLUDED Q+AI October 25-27 in New York City is a week from start...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, quantum, with, sebastian, TechNanoAI, emerging tech news",
   "featured": false
 }

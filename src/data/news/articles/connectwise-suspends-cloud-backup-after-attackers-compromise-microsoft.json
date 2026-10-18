@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791024453051-3",
+  "id": "ai-1792317870368-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Apple says it's tightening macOS 'Full Disk Access' contr... | AI News",
-  "excerpt": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history risk",
-  "date": "2026-10-03",
+  "title": "ConnectWise Suspends Cloud Backup After Attackers Comprom... | AI News",
+  "excerpt": "ConnectWise on Saturday said it has disabled seven ConnectWise application identities as it continues its investigation into an incident in which unknown threat actors obtained unauthorized access to ",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "apple-says-it8217s-tightening-macos-8216full-disk-access8217-controls-",
-  "sourceLink": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-  "sourceName": "Sarah Perez",
+  "slug": "connectwise-suspends-cloud-backup-after-attackers-compromise-microsoft",
+  "sourceLink": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history riskier."
+      "text": "ConnectWise on Saturday said it has disabled seven ConnectWise application identities as it continues its investigation into an incident in which unknown threat actors obtained unauthorized access to the application identities and compromised Microsoft 365 tenants."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sarah Perez, Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history riskier.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), ConnectWise on Saturday said it has disabled seven ConnectWise application identities as it continues its investigation into an incident in which unknown threat actors obtained unauthorized access to the application identities and compromised Microsoft 365 tenants.\n\nThe disabled identities are listed below -\n\n\n  ConnectWise Cloud Backup - 506e08f9-6e9a-4da4-942b-a099a03644ae\n  ConnectWise. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Apple says it's tightening macOS 'Full Disk Access' controls due to new risks fr — a notable development in AI",
+    "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenan — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Sarah Perez",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Apple says it's tightening macOS 'Full Disk Access' controls due to new risks fr",
+      "date": "2026-10-18",
+      "event": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenan",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "apple",
-    "tightening",
+    "connectwise",
+    "suspends",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Apple says it's tightening macOS 'Full Disk Access' contr... | AI News",
-  "metaDescription": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, apple, says, tightening, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "ConnectWise Suspends Cloud Backup After Attackers Comprom... | AI News",
+  "metaDescription": "ConnectWise on Saturday said it has disabled seven ConnectWise application identities as it continues its investigation into an incident in which unknown thr...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, connectwise, suspends, cloud, TechNanoAI, emerging tech news",
+  "featured": true
 }

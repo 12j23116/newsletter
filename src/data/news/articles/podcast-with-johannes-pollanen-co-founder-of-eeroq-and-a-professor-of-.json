@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791024461476-0",
+  "id": "quantum-1792317877475-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "US Department of Energy Releases National Quantum Roadmap... | Quantum Computing News",
-  "excerpt": "The U.S. Department of Energy (DOE) has released its National Quantum Roadmap, aiming for error-corrected quantum computing by 2028. This strategy shifts focus from qubit counts to demonstrated scient",
-  "date": "2026-10-03",
-  "readTime": "3 min",
+  "title": "Podcast with Johannes Pollanen, Co-founder of EeroQ and a... | Quantum Computing News",
+  "excerpt": "Johannes Pollanen, co-founder of EeroQ and a professor of physics at Michigan State University, explains how EeroQ builds qubits from single electrons floating on a film of superfluid helium, and why ",
+  "date": "2026-10-18",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "us-department-of-energy-releases-national-quantum-roadmap-establishing",
-  "sourceLink": "https://quantumcomputingreport.com/us-department-of-energy-releases-national-quantum-roadmap-establishing-2028-fault-tolerance-milestones/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "podcast-with-johannes-pollanen-co-founder-of-eeroq-and-a-professor-of-",
+  "sourceLink": "https://quantumcomputingreport.com/podcast-with-johannes-pollanen/",
+  "sourceName": "Doug Finke",
   "body": [
     {
       "type": "p",
-      "text": "The U. S."
+      "text": "Johannes Pollanen, co-founder of EeroQ and a professor of physics at Michigan State University, explains how EeroQ builds qubits from single electrons floating on a film of superfluid helium, and why he thinks the semiconductor chip is the only proven way to scale a quantum computer. \nThe post Podcast with Johannes Pollanen, Co-founder of EeroQ and a Professor of Physics at Michigan State University appeared first on Quantum Computing Report."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Department of Energy (DOE) has released its National Quantum Roadmap, aiming for error-corrected quantum computing by 2028.  This strategy shifts focus from qubit counts to demonstrated scientific utility, with a three-phphased framework to integrate quantum processing units into existing high-performance computing and AI infrastructure."
-    },
-    {
-      "type": "p",
-      "text": "The roadmap also emphasizes modality-neutral investments and new partnership models to accelerate technology transfer."
+      "text": "According to reporting from Doug Finke, Johannes Pollanen, co-founder of EeroQ and a professor of physics at Michigan State University, explains how EeroQ builds qubits from single electrons floating on a film of superfluid helium, and why he thinks the semiconductor chip is the only proven way to scale a quantum computer.\nThe post Podcast with Johannes Pollanen, Co-founder of EeroQ and a Professor of Physics at Michigan State University appeared first on Quantum Computing Report.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "US Department of Energy Releases National Quantum Roadmap Establishing 2028 Faul — a notable development in Quantum Computing",
+    "Podcast with Johannes Pollanen, Co-founder of EeroQ and a Professor of Physics a — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -124,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Doug Finke",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "US Department of Energy Releases National Quantum Roadmap Establishing 2028 Faul",
+      "date": "2026-10-18",
+      "event": "Podcast with Johannes Pollanen, Co-founder of EeroQ and a Professor of Physics a",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "department",
-    "energy",
+    "podcast",
+    "johannes",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "US Department of Energy Releases National Quantum Roadmap... | Quantum Computing News",
-  "metaDescription": "The U.S. Department of Energy (DOE) has released its National Quantum Roadmap, aiming for error-corrected quantum computing by 2028. This strategy shifts foc...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, department, energy, releases, TechNanoAI, emerging tech news",
+  "metaTitle": "Podcast with Johannes Pollanen, Co-founder of EeroQ and a... | Quantum Computing News",
+  "metaDescription": "Johannes Pollanen, co-founder of EeroQ and a professor of physics at Michigan State University, explains how EeroQ builds qubits from single electrons floati...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, podcast, with, johannes, TechNanoAI, emerging tech news",
   "featured": true
 }

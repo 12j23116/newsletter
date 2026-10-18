@@ -1,21 +1,21 @@
 {
-  "id": "space-1791024454868-5",
+  "id": "space-1792317871852-3",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA Model Wing Lights Up During First Pressure Sensitive... | Space Exploration News",
-  "excerpt": "Groundbreaking tests at NASA’s Langley Research Center in Hampton, Virginia, are paving the way for new wind tunnel capabilities for designing the aircraft technologies of the future.' In a first-of-i",
-  "date": "2026-10-03",
+  "title": "Artemis II Heat Shield After Splashdown | Space Exploration News",
+  "excerpt": "Shortly after NASA's Artemis II mission splashed down on April 10, 2026, U.S. Navy divers captured underwater imagery of the Orion spacecraft’s heat shield. In the months after, the agency measured wh",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa-model-wing-lights-up-during-first-pressure-sensitive-paint-tests",
-  "sourceLink": "https://www.nasa.gov/centers-and-facilities/langley/nasa-model-wing-lights-up-during-first-pressure-sensitive-paint-tests/",
-  "sourceName": "Brandon Ingram",
+  "slug": "artemis-ii-heat-shield-after-splashdown",
+  "sourceLink": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/",
+  "sourceName": "HQ Web Team",
   "body": [
     {
       "type": "p",
-      "text": "Groundbreaking tests at NASA’s Langley Research Center in Hampton, Virginia, are paving the way for new wind tunnel capabilities for designing the aircraft technologies of the future."
+      "text": "Shortly after NASA's Artemis II mission splashed down on April 10, 2026, U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brandon Ingram, Groundbreaking tests at NASA’s Langley Research Center in Hampton, Virginia, are paving the way for new wind tunnel capabilities for designing the aircraft technologies of the future.' In a first-of-its-kind test in NASA Langley’s Transonic Dynamics Tunnel, researchers used unsteady Pressure Sensitive Paint to study how air flows around a standard wind tunnel model known [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "Navy divers captured underwater imagery of the Orion spacecraft’s heat shield.  In the months after, the agency measured whether the thermal protection system effectively safeguarded the crew and Orion systems as the spacecraft reentered Earth’s atmosphere."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA Model Wing Lights Up During First Pressure Sensitive Paint Tests — a notable development in Space Exploration",
+    "Artemis II Heat Shield After Splashdown — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Brandon Ingram",
+      "value": "HQ Web Team",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "NASA Model Wing Lights Up During First Pressure Sensitive Paint Tests",
+      "date": "2026-10-18",
+      "event": "Artemis II Heat Shield After Splashdown",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "model",
-    "lights",
+    "artemis",
+    "shield",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA Model Wing Lights Up During First Pressure Sensitive... | Space Exploration News",
-  "metaDescription": "Groundbreaking tests at NASA’s Langley Research Center in Hampton, Virginia, are paving the way for new wind tunnel capabilities for designing the aircraft t...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, model, wing, TechNanoAI, emerging tech news",
+  "metaTitle": "Artemis II Heat Shield After Splashdown | Space Exploration News",
+  "metaDescription": "Shortly after NASA's Artemis II mission splashed down on April 10, 2026, U.S. Navy divers captured underwater imagery of the Orion spacecraft’s heat shield. ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, artemis, heat, shield, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1791024454868-4",
+  "id": "space-1792317871851-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "La NASA abre solicitudes para próxima promoción de direct... | Space Exploration News",
-  "excerpt": "Lee esta nota de prensa en inglés aquí. La NASA busca líderes para uno de los puestos más prestigiosos de la Tierra en el ámbito de los vuelos espaciales tripulados: director de vuelo en el control de",
-  "date": "2026-10-03",
+  "title": "APOD: 2026 October 17 – 3D 67P | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 October 17… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differen",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "la-nasa-abre-solicitudes-para-prxima-promocin-de-directores-de-vuelo",
-  "sourceLink": "https://www.nasa.gov/news-release/la-nasa-abre-solicitudes-para-proxima-promocion-de-directores-de-vuelo/",
-  "sourceName": "María José Viñas",
+  "slug": "apod-2026-october-17-3d-67p",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-october-17-3d-67p/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "Lee esta nota de prensa en inglés aquí.  La NASA busca líderes para uno de los puestos más prestigiosos de la Tierra en el ámbito de los vuelos espaciales tripulados: director de vuelo en el control de misión del Centro Espacial Johnson de la agencia, en Houston."
+      "text": "APOD Science APOD APOD: 2026 October 17… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from María José Viñas, Lee esta nota de prensa en inglés aquí. La NASA busca líderes para uno de los puestos más prestigiosos de la Tierra en el ámbito de los vuelos espaciales tripulados: director de vuelo en el control de misión del Centro Espacial Johnson de la agencia, en Houston. Esta función es fundamental para reforzar el liderazgo [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 October 17… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. 3D 67P Explanation: Put [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "La NASA abre solicitudes para próxima promoción de directores de vuelo — a notable development in Space Exploration",
+    "APOD: 2026 October 17 – 3D 67P — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "María José Viñas",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "La NASA abre solicitudes para próxima promoción de directores de vuelo",
+      "date": "2026-10-18",
+      "event": "APOD: 2026 October 17 – 3D 67P",
       "current": true
     },
     {
@@ -191,8 +191,7 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "solicitudes",
-    "promoci",
+    "october",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +215,8 @@
       }
     ]
   },
-  "metaTitle": "La NASA abre solicitudes para próxima promoción de direct... | Space Exploration News",
-  "metaDescription": "Lee esta nota de prensa en inglés aquí. La NASA busca líderes para uno de los puestos más prestigiosos de la Tierra en el ámbito de los vuelos espaciales tri...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, abre, solicitudes, TechNanoAI, emerging tech news",
+  "metaTitle": "APOD: 2026 October 17 – 3D 67P | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 October 17… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the D...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, october, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1791024454867-2",
+  "id": "space-1792317871852-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Sci... | Space Exploration News",
-  "excerpt": "NASA’s SpaceX Crew-12 mission is ending, with the crew scheduled to return in early October. NASA astronauts Jessica Meir and Jack Hathaway, ESA (European Space Agency) astronaut Sophie Adenot, and Ro",
-  "date": "2026-10-03",
+  "title": "I Am Artemis: Allison Mjoen | Space Exploration News",
+  "excerpt": "As the supercooled propellant flowed into the core stage, and NASA’s SLS (Space Launch System) rocket roared to life, Allison Mjoen and her family watched with awe and pride. Mjoen, NASA’s operations ",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "heading-home-nasas-spacex-crew-12-concludes-station-science-mission",
-  "sourceLink": "https://www.nasa.gov/missions/station/iss-research/heading-home-nasas-spacex-crew-12-concludes-station-science-mission/",
-  "sourceName": "Chris Getteau",
+  "slug": "i-am-artemis-allison-mjoen",
+  "sourceLink": "https://www.nasa.gov/missions/station/i-am-artemis-allison-mjoen/",
+  "sourceName": "Jason Costa",
   "body": [
     {
       "type": "p",
-      "text": "NASA’s SpaceX Crew-12 mission is ending, with the crew scheduled to return in early October."
+      "text": "As the supercooled propellant flowed into the core stage, and NASA’s SLS (Space Launch System) rocket roared to life, Allison Mjoen and her family watched with awe and pride."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Chris Getteau, NASA’s SpaceX Crew-12 mission is ending, with the crew scheduled to return in early October. NASA astronauts Jessica Meir and Jack Hathaway, ESA (European Space Agency) astronaut Sophie Adenot, and Roscosmos cosmonaut Andrey Fedyaev will head home from the International Space Station after supporting research that benefits life on Earth and prepares humans for missions [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Jason Costa, As the supercooled propellant flowed into the core stage, and NASA’s SLS (Space Launch System) rocket roared to life, Allison Mjoen and her family watched with awe and pride. Mjoen, NASA’s operations manager for the agency’s Exploration Ground Systems Program, helped shape the systems and ground operations that will one day send humans back to [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Science Mission — a notable development in Space Exploration",
+    "I Am Artemis: Allison Mjoen — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Chris Getteau",
+      "value": "Jason Costa",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Science Mission",
+      "date": "2026-10-18",
+      "event": "I Am Artemis: Allison Mjoen",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "heading",
-    "spacex",
+    "artemis",
+    "allison",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Sci... | Space Exploration News",
-  "metaDescription": "NASA’s SpaceX Crew-12 mission is ending, with the crew scheduled to return in early October. NASA astronauts Jessica Meir and Jack Hathaway, ESA (European Sp...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, heading, home, nasa, TechNanoAI, emerging tech news",
+  "metaTitle": "I Am Artemis: Allison Mjoen | Space Exploration News",
+  "metaDescription": "As the supercooled propellant flowed into the core stage, and NASA’s SLS (Space Launch System) rocket roared to life, Allison Mjoen and her family watched wi...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, artemis, allison, mjoen, TechNanoAI, emerging tech news",
   "featured": false
 }

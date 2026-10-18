@@ -1,21 +1,21 @@
 {
-  "id": "space-1791024454868-3",
+  "id": "space-1792317871851-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA's DAVINCI Probe Can Stand the Heat | Space Exploration News",
-  "excerpt": "The engineering development unit for NASA’s DAVINCI (Deep Atmosphere Venus Investigation of Noble gases, Chemistry, and Imaging) probe is photographed prior to a major thermal evaluation. The DAVINCI ",
-  "date": "2026-10-03",
+  "title": "APOD: 2026 October 18 – Sonified: Eagle Nebula Pillars | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 October 18 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differ",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa8217s-davinci-probe-can-stand-the-heat",
-  "sourceLink": "https://www.nasa.gov/image-article/nasas-davinci-probe-can-stand-the-heat/",
-  "sourceName": "HQ Web Team",
+  "slug": "apod-2026-october-18-sonified-eagle-nebula-pillars",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-october-18-sonified-eagle-nebula-pillars/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "The engineering development unit for NASA’s DAVINCI (Deep Atmosphere Venus Investigation of Noble gases, Chemistry, and Imaging) probe is photographed prior to a major thermal evaluation."
+      "text": "APOD Science APOD APOD: 2026 October 18 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from HQ Web Team, The engineering development unit for NASA’s DAVINCI (Deep Atmosphere Venus Investigation of Noble gases, Chemistry, and Imaging) probe is photographed prior to a major thermal evaluation. The DAVINCI team put the yoga ball-sized vessel into a ceramic-lined chamber with heat-scorched walls and ratcheted up the temperature to 869 F, or 465 C, over the course [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 October 18 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Sonified: Eagle Nebula [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA's DAVINCI Probe Can Stand the Heat — a notable development in Space Exploration",
+    "APOD: 2026 October 18 – Sonified: Eagle Nebula Pillars — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "HQ Web Team",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "NASA's DAVINCI Probe Can Stand the Heat",
+      "date": "2026-10-18",
+      "event": "APOD: 2026 October 18 – Sonified: Eagle Nebula Pillars",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "davinci",
-    "probe",
+    "october",
+    "sonified",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA's DAVINCI Probe Can Stand the Heat | Space Exploration News",
-  "metaDescription": "The engineering development unit for NASA’s DAVINCI (Deep Atmosphere Venus Investigation of Noble gases, Chemistry, and Imaging) probe is photographed prior ...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, davinci, probe, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "APOD: 2026 October 18 – Sonified: Eagle Nebula Pillars | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 October 18 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, october, sonified, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791024453051-2",
+  "id": "ai-1792317870369-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Affected by layoffs? Don't miss this $75 deal for your Te... | AI News",
-  "excerpt": "Your next opportunity could be one conversation away. Get your Expo+ Pass for just $75. Limited to the first 100 qualifying people.",
-  "date": "2026-10-03",
+  "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in ... | AI News",
+  "excerpt": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX.\n\nThe package, named \"imgdecode,\" was uploaded",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "affected-by-layoffs-don8217t-miss-this-75-deal-for-your-techcrunch-dis",
-  "sourceLink": "https://techcrunch.com/2026/10/02/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/",
-  "sourceName": "TechCrunch Events",
+  "slug": "malfex-npm-package-imgdecode-hides-shellcode-loader-in-windows-native-",
+  "sourceLink": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Your next opportunity could be one conversation away.  Get your Expo+ Pass for just $75."
+      "text": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX. \n\nThe package, named \"imgdecode,\" was uploaded to the package registry on September 30, 2026, by a user named \"malfexteste8."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Limited to the first 100 qualifying people."
+      "text": "\" It has been downloaded 979 times as of writing and is still available on npm as of writing."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Affected by layoffs? Don't miss this $75 deal for your TechCrunch Disrupt 2026 E — a notable development in AI",
+    "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "TechCrunch Events",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Affected by layoffs? Don't miss this $75 deal for your TechCrunch Disrupt 2026 E",
+      "date": "2026-10-18",
+      "event": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "affected",
-    "layoffs",
+    "malfex",
+    "package",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Affected by layoffs? Don't miss this $75 deal for your Te... | AI News",
-  "metaDescription": "Your next opportunity could be one conversation away. Get your Expo+ Pass for just $75. Limited to the first 100 qualifying people.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, affected, layoffs, miss, TechNanoAI, emerging tech news",
+  "metaTitle": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in ... | AI News",
+  "metaDescription": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX.\n\nT...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, malfex, package, imgdecode, TechNanoAI, emerging tech news",
   "featured": false
 }

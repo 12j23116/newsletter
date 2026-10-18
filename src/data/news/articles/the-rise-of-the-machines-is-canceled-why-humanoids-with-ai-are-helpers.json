@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1791024460219-2",
+  "id": "robotics-1792317876492-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Runway introduces Praxis-1 world action model for robotics | Robotics News",
-  "excerpt": "When Runway does release Praxis-1 publicly, it plans to ship it with open weights rather than as a closed model. \nThe post Runway introduces Praxis-1 world action model for robotics appeared first on ",
-  "date": "2026-10-03",
+  "title": "The rise of the machines is canceled: Why humanoids with ... | Robotics News",
+  "excerpt": "Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist.\nThe post The rise of the machines is canceled: Why humanoids with AI are he",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "runway-introduces-praxis-1-world-action-model-for-robotics",
-  "sourceLink": "https://www.therobotreport.com/runway-introduces-praxis-1-world-action-model-robotics/",
-  "sourceName": "Brianna Wessling",
+  "slug": "the-rise-of-the-machines-is-canceled-why-humanoids-with-ai-are-helpers",
+  "sourceLink": "https://www.therobotreport.com/rise-machines-canceled-why-humanoids-ai-are-helpers-not-enemies/",
+  "sourceName": "Elena Krosheva",
   "body": [
     {
       "type": "p",
-      "text": "When Runway does release Praxis-1 publicly, it plans to ship it with open weights rather than as a closed model.  \nThe post Runway introduces Praxis-1 world action model for robotics appeared first on The Robot Report."
+      "text": "Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist. \nThe post The rise of the machines is canceled: Why humanoids with AI are helpers, not enemies appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brianna Wessling, When Runway does release Praxis-1 publicly, it plans to ship it with open weights rather than as a closed model. \nThe post Runway introduces Praxis-1 world action model for robotics appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Elena Krosheva, Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist.\nThe post The rise of the machines is canceled: Why humanoids with AI are helpers, not enemies appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Runway introduces Praxis-1 world action model for robotics — a notable development in Robotics",
+    "The rise of the machines is canceled: Why humanoids with AI are helpers, not ene — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Brianna Wessling",
+      "value": "Elena Krosheva",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Runway introduces Praxis-1 world action model for robotics",
+      "date": "2026-10-18",
+      "event": "The rise of the machines is canceled: Why humanoids with AI are helpers, not ene",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "runway",
-    "introduces",
+    "machines",
+    "canceled",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Runway introduces Praxis-1 world action model for robotics | Robotics News",
-  "metaDescription": "When Runway does release Praxis-1 publicly, it plans to ship it with open weights rather than as a closed model. \nThe post Runway introduces Praxis-1 world a...",
-  "keywords": "robotics, humanoid robot, automation, drones, runway, introduces, praxis, TechNanoAI, emerging tech news",
+  "metaTitle": "The rise of the machines is canceled: Why humanoids with ... | Robotics News",
+  "metaDescription": "Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist.\nThe post The rise of the machine...",
+  "keywords": "robotics, humanoid robot, automation, drones, rise, machines, canceled, TechNanoAI, emerging tech news",
   "featured": false
 }

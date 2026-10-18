@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791024453051-4",
+  "id": "ai-1792317870369-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Call it AI, call it Super Intelligence, only 2% of consum... | AI News",
-  "excerpt": "This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI safety pledge'that President'Donald'Trump call",
-  "date": "2026-10-03",
+  "title": "Replit makes OpenAI its default over Anthropic, CEO says | AI News",
+  "excerpt": "Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platform.",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-i",
-  "sourceLink": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-  "sourceName": "Theresa Loconsolo, Anthony Ha, Sean O'Kane, Kirsten Korosec",
+  "slug": "replit-makes-openai-its-default-over-anthropic-ceo-says",
+  "sourceLink": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+  "sourceName": "Kirsten Korosec, Lucas Ropek, Rebecca Bellan",
   "body": [
     {
       "type": "p",
-      "text": "This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI safety pledge'that President'Donald'Trump called “morally binding."
+      "text": "Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider.  Claude will still be available to customers on the platform."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Theresa Loconsolo, Anthony Ha, Sean O'Kane, Kirsten Korosec, This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI safety pledge'that President'Donald'Trump called “morally binding.”'Trump'also'signed an'executive order'officially rebranding AI as “super intelligence,” and meanwhile,'Meta and OpenAI are putting'friendlier faces on their AI products, even as the biggest money [']. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Kirsten Korosec, Lucas Ropek, Rebecca Bellan, Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platform.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Call it AI, call it Super Intelligence, only 2% of consumers are buying it — a notable development in AI",
+    "Replit makes OpenAI its default over Anthropic, CEO says — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Theresa Loconsolo, Anthony Ha, Sean O'Kane, Kirsten Korosec",
+      "value": "Kirsten Korosec, Lucas Ropek, Rebecca Bellan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
+      "date": "2026-10-18",
+      "event": "Replit makes OpenAI its default over Anthropic, CEO says",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "super",
-    "intelligence",
+    "replit",
+    "makes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Call it AI, call it Super Intelligence, only 2% of consum... | AI News",
-  "metaDescription": "This week, the White House got'nearly every'major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them —'to sign an AI saf...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, call, super, intelligence, TechNanoAI, emerging tech news",
+  "metaTitle": "Replit makes OpenAI its default over Anthropic, CEO says | AI News",
+  "metaDescription": "Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platf...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, replit, makes, openai, TechNanoAI, emerging tech news",
   "featured": false
 }

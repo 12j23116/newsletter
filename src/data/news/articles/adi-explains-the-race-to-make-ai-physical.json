@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1791024460219-1",
+  "id": "robotics-1792317876492-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Eli Lilly, Purdue to share field learnings on human robot... | Robotics News",
-  "excerpt": "Experts from Eli Lilly and Purdue University will reveal findings about the perception of robots on the manufacturing floor.\nThe post Eli Lilly, Purdue to share field learnings on human robot interact",
-  "date": "2026-10-03",
+  "title": "ADI explains the race to make AI physical | Robotics News",
+  "excerpt": "A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery.\nThe post ADI explains the race to make AI physical appeared first on The Rob",
+  "date": "2026-10-18",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "eli-lilly-purdue-to-share-field-learnings-on-human-robot-interaction-a",
-  "sourceLink": "https://www.therobotreport.com/eli-lilly-purdue-to-share-field-learnings-on-human-robot-interaction-at-robobusiness/",
+  "slug": "adi-explains-the-race-to-make-ai-physical",
+  "sourceLink": "https://www.therobotreport.com/adi-explains-the-race-to-make-ai-physical/",
   "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Experts from Eli Lilly and Purdue University will reveal findings about the perception of robots on the manufacturing floor. \nThe post Eli Lilly, Purdue to share field learnings on human robot interaction at RoboBusiness appeared first on The Robot Report."
+      "text": "A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery. \nThe post ADI explains the race to make AI physical appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, Experts from Eli Lilly and Purdue University will reveal findings about the perception of robots on the manufacturing floor.\nThe post Eli Lilly, Purdue to share field learnings on human robot interaction at RoboBusiness appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from The Robot Report Staff, A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery.\nThe post ADI explains the race to make AI physical appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Eli Lilly, Purdue to share field learnings on human robot interaction at RoboBus — a notable development in Robotics",
+    "ADI explains the race to make AI physical — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-03",
-      "event": "Eli Lilly, Purdue to share field learnings on human robot interaction at RoboBus",
+      "date": "2026-10-18",
+      "event": "ADI explains the race to make AI physical",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "lilly",
-    "purdue",
+    "explains",
+    "physical",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Eli Lilly, Purdue to share field learnings on human robot... | Robotics News",
-  "metaDescription": "Experts from Eli Lilly and Purdue University will reveal findings about the perception of robots on the manufacturing floor.\nThe post Eli Lilly, Purdue to sh...",
-  "keywords": "robotics, humanoid robot, automation, drones, lilly, purdue, share, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "ADI explains the race to make AI physical | Robotics News",
+  "metaDescription": "A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery.\nThe post ADI explains the race to...",
+  "keywords": "robotics, humanoid robot, automation, drones, explains, race, make, TechNanoAI, emerging tech news",
+  "featured": true
 }
