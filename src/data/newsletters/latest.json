@@ -1,113 +1,113 @@
 {
-  "issue": 93,
-  "date": "2026-10-12",
-  "subject": "This Week: AI, Cybersecurity & more — October 12, 2026",
+  "issue": 94,
+  "date": "2026-10-19",
+  "subject": "This Week: Energy Storage, Cybersecurity & more — October 19, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "ai",
+    "energy",
     "cybersecurity",
     "biotech",
-    "materials",
+    "robotics",
     "space",
-    "energy",
-    "quantum"
+    "ai",
+    "av"
   ],
   "articles": [
     {
-      "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw En... | AI News",
-      "slug": "attackers-exploit-cvss-100-bricksforge-wordpress-flaw-enabling-unauthe",
-      "topic": "ai",
-      "excerpt": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack.\n\nThe critical vulnerability in question is CVE-",
-      "url": "https://technanoai.com/news/attackers-exploit-cvss-100-bricksforge-wordpress-flaw-enabling-unauthe",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "Bring Your Own Agent: Your Employees' Assistants Are Alre... | AI News",
-      "slug": "bring-your-own-agent-your-employees-assistants-are-already-logged-in",
-      "topic": "ai",
-      "excerpt": "The personal AI agents rollout is going about as smoothly as expected: Amazon now blocks Meta's Muse because it doesn't identify itself as a bot while browsing; Instinct keeps raising privacy concerns",
-      "url": "https://technanoai.com/news/bring-your-own-agent-your-employees-assistants-are-already-logged-in",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "Bricksforge WordPress Plugin Vulnerability Exploited in t... | Cybersecurity News",
-      "slug": "bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild",
-      "topic": "cybersecurity",
-      "excerpt": "The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites.\nThe post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appear",
-      "url": "https://technanoai.com/news/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "Canonical Websites Disrupted in Second DDoS Attack This Year | Cybersecurity News",
-      "slug": "canonical-websites-disrupted-in-second-ddos-attack-this-year",
-      "topic": "cybersecurity",
-      "excerpt": "The outage hit the main Ubuntu and Canonical websites, including the Ubuntu blog and developer portal.\nThe post Canonical Websites Disrupted in Second DDoS Attack This Year appeared first on SecurityW",
-      "url": "https://technanoai.com/news/canonical-websites-disrupted-in-second-ddos-attack-this-year",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "<a href=\"/biotech/bristol-myers-doubles-pivotal-wins-lung... | Biotechnology News",
-      "slug": "a-hrefbiotechbristol-myers-doubles-pivotal-wins-lung-disease-and-solid",
-      "topic": "biotech",
-      "excerpt": "Bristol Myers Squibb has reported phase 3 wins in a lung disease and a solid tumor, taking two steps on its path toward post-patent cliff growth.",
-      "url": "https://technanoai.com/news/a-hrefbiotechbristol-myers-doubles-pivotal-wins-lung-disease-and-solid",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "<a href=\"/biotech/merck-co-data-raise-fears-eye-disease-d... | Biotechnology News",
-      "slug": "a-hrefbiotechmerck-co-data-raise-fears-eye-disease-drug-has-limited-po",
-      "topic": "biotech",
-      "excerpt": "Merck  Co. has poured out its Brunello data, revealing a mix of undifferentiated efficacy and concerning safety that led analysts to predict “limited competitive potential” in diabetic macular edema. ",
-      "url": "https://technanoai.com/news/a-hrefbiotechmerck-co-data-raise-fears-eye-disease-drug-has-limited-po",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "Scientists discover a hidden factor that can make or brea... | Advanced Materials News",
-      "slug": "scientists-discover-a-hidden-factor-that-can-make-or-break-chemical-re",
-      "topic": "materials",
-      "excerpt": "Researchers discovered a hidden factor that can determine whether chemical reactions succeed or fail, and then used it to boost the proportion of the desired product from 16% to 97%. By controlling ac",
-      "url": "https://technanoai.com/news/scientists-discover-a-hidden-factor-that-can-make-or-break-chemical-re",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "Antarctic Sea Ice Grows to Its 2026 Maximum | Space Exploration News",
-      "slug": "antarctic-sea-ice-grows-to-its-2026-maximum",
-      "topic": "space",
-      "excerpt": "The ice reached its third-lowest maximum extent since satellite observations began.",
-      "url": "https://technanoai.com/news/antarctic-sea-ice-grows-to-its-2026-maximum",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "APOD: 2026 October 12 – Jupiter and the Moons | Space Exploration News",
-      "slug": "apod-2026-october-12-jupiter-and-the-moons",
-      "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 October 12 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differ",
-      "url": "https://technanoai.com/news/apod-2026-october-12-jupiter-and-the-moons",
-      "date": "2026-10-12"
-    },
-    {
-      "title": "Chile: Engie commissions 802MWh BESS, Grenergy finances  ... | Energy Storage News",
-      "slug": "chile-engie-commissions-802mwh-bess-grenergy-finances-1769mwh",
+      "title": "Bangladesh plans 70 MW solar plant at coal power station | Energy Storage News",
+      "slug": "bangladesh-plans-70-mw-solar-plant-at-coal-power-station",
       "topic": "energy",
-      "excerpt": "Power group Engie has put an 142MW/802MWh BESS project in Chile into operation, while IPP Grenergy has secured financing for the fifth and final stage of its Oasis de Atacama solar-plus-storage projec",
-      "url": "https://technanoai.com/news/chile-engie-commissions-802mwh-bess-grenergy-finances-1769mwh",
-      "date": "2026-10-12"
+      "excerpt": "The European Investment Bank (EIB) is expected to help finance a planned 70 MW solar power plant at Bangladesh’s Matarbari coal-fired power station, with commissioning targeted for December 2028.\nThe ",
+      "url": "https://technanoai.com/news/bangladesh-plans-70-mw-solar-plant-at-coal-power-station",
+      "date": "2026-10-19"
     },
     {
-      "title": "Energy Dome opens CO2 battery manufacturing plant in Italy | Energy Storage News",
-      "slug": "energy-dome-opens-co2-battery-manufacturing-plant-in-italy",
+      "title": "Evolving role of energy storage as infrastructure demands... | Energy Storage News",
+      "slug": "evolving-role-of-energy-storage-as-infrastructure-demands-that-technol",
       "topic": "energy",
-      "excerpt": "Energy Dome’s new manufacturing plant will supply components for long-duration energy storage (LDES) projects in India, the United States and Ireland. \nThe post Energy Dome opens CO2 battery manufactu",
-      "url": "https://technanoai.com/news/energy-dome-opens-co2-battery-manufacturing-plant-in-italy",
-      "date": "2026-10-12"
+      "excerpt": "Energy storage is becoming an indispensable new-type power system infrastructure, CATL CEO and chairman Robin Zeng said in an industry speech last week.",
+      "url": "https://technanoai.com/news/evolving-role-of-energy-storage-as-infrastructure-demands-that-technol",
+      "date": "2026-10-19"
     },
     {
-      "title": "Scientists make stunning discovery that could help explai... | Quantum Computing News",
-      "slug": "scientists-make-stunning-discovery-that-could-help-explain-why-life-ex",
-      "topic": "quantum",
-      "excerpt": "Scientists have discovered that the universe's fundamental physical constants may be finely balanced to make life possible. Even tiny changes to these constants could make liquids too thick or too thi",
-      "url": "https://technanoai.com/news/scientists-make-stunning-discovery-that-could-help-explain-why-life-ex",
-      "date": "2026-10-12"
+      "title": "Anthropic Acquires Confidential AI Startup Opaque Systems | Cybersecurity News",
+      "slug": "anthropic-acquires-confidential-ai-startup-opaque-systems",
+      "topic": "cybersecurity",
+      "excerpt": "Opaque Systems has developed technology that lets AI systems use sensitive data while keeping it protected by the underlying hardware.\nThe post Anthropic Acquires Confidential AI Startup Opaque System",
+      "url": "https://technanoai.com/news/anthropic-acquires-confidential-ai-startup-opaque-systems",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Exploited Fortinet Bug Linked to Stealthy FortiGate Impla... | Cybersecurity News",
+      "slug": "exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom",
+      "topic": "cybersecurity",
+      "excerpt": "The persistent, stealthy FortiGate implant was deployed against a telecommunications organization.\nThe post Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack appeared first o",
+      "url": "https://technanoai.com/news/exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "<a href=\"/biotech/abbvies-next-gen-crohns-combination-bea... | Biotechnology News",
+      "slug": "a-hrefbiotechabbvies-next-gen-crohns-combination-beats-skyrizi-phase-2",
+      "topic": "biotech",
+      "excerpt": "AbbVie’s next-generation Crohn’s disease combination candidate has beaten Skyrizi in a midphase clinical trial.",
+      "url": "https://technanoai.com/news/a-hrefbiotechabbvies-next-gen-crohns-combination-beats-skyrizi-phase-2",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-cr... | Biotechnology News",
+      "slug": "a-hrefbiotechchina-looks-ban-foreign-acquisitions-critical-biopharma-p",
+      "topic": "biotech",
+      "excerpt": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that",
+      "url": "https://technanoai.com/news/a-hrefbiotechchina-looks-ban-foreign-acquisitions-critical-biopharma-p",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "How to choose a BLDC motor for robotic arms and mobile ro... | Robotics News",
+      "slug": "how-to-choose-a-bldc-motor-for-robotic-arms-and-mobile-robots",
+      "topic": "robotics",
+      "excerpt": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to choose a BLDC motor for robotic arms and mob",
+      "url": "https://technanoai.com/news/how-to-choose-a-bldc-motor-for-robotic-arms-and-mobile-robots",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Falcon 9 set to launch Bandwagon-5 rideshare mission from... | Space Exploration News",
+      "slug": "falcon-9-set-to-launch-bandwagon-5-rideshare-mission-from-florida",
+      "topic": "space",
+      "excerpt": "Following on from the successful Transporter 18 mission at the beginning of the month, SpaceX’s'\nThe post Falcon 9 set to launch Bandwagon-5 rideshare mission from Florida appeared first on NASASpaceF",
+      "url": "https://technanoai.com/news/falcon-9-set-to-launch-bandwagon-5-rideshare-mission-from-florida",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Oct. 29: Applying AI/SI to the GEOINT Mission | Space Exploration News",
+      "slug": "oct-29-applying-aisi-to-the-geoint-mission",
+      "topic": "space",
+      "excerpt": "Join us for a conversation on how machine learning is transforming the GEOINT mission across different markets\nThe post Oct. 29: Applying AI/SI to the GEOINT Mission appeared first on SpaceNews.",
+      "url": "https://technanoai.com/news/oct-29-applying-aisi-to-the-geoint-mission",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Anthropic says it’s committing 5% of its shares to a ‘pub... | AI News",
+      "slug": "anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund",
+      "topic": "ai",
+      "excerpt": "Anthropic said that it will commit 5% of its shares to the fund.",
+      "url": "https://technanoai.com/news/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Disney agrees to hire the majority of Character.AI’s work... | AI News",
+      "slug": "disney-agrees-to-hire-the-majority-of-characterais-workforce",
+      "topic": "ai",
+      "excerpt": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with",
+      "url": "https://technanoai.com/news/disney-agrees-to-hire-the-majority-of-characterais-workforce",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "TechCrunch Mobility: Rivian's next act | Autonomous Vehicles News",
+      "slug": "techcrunch-mobility-rivian8217s-next-act",
+      "topic": "av",
+      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
+      "url": "https://technanoai.com/news/techcrunch-mobility-rivian8217s-next-act",
+      "date": "2026-10-19"
     }
   ]
 }
