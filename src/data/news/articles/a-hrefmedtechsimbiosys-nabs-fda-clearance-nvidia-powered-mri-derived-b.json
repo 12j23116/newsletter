@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1791113426263-1",
+  "id": "biotech-1792409477154-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/chutes-ladders-cantor-steps-phrmas-hous... | Biotechnology News",
-  "excerpt": "Eric Cantor, who represented Virginia in the U.S. House of Representatives for 14 years and served as House majority leader from 2011 to 2014, will step up as PhRMA’s next president and CEO on Nov. 9.",
-  "date": "2026-10-04",
+  "title": "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-pow... | Biotechnology News",
+  "excerpt": "SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer coming back.",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechchutes-ladders-cantor-steps-phrmas-house-ceo-hreflangench",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/chutes-ladders-cantor-steps-phrmas-house-ceo",
-  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+  "slug": "a-hrefmedtechsimbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-b",
+  "sourceLink": "https://www.fiercebiotech.com/medtech/simbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-breast-cancer-recurrence-tool",
+  "sourceName": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
   "body": [
     {
       "type": "p",
-      "text": "Eric Cantor, who represented Virginia in the U. S."
+      "text": "SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer coming back."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "House of Representatives for 14 years and served as House majority leader from 2011 to 2014, will step up as PhRMA’s next president and CEO on Nov.  9."
-    },
-    {
-      "type": "p",
-      "text": "Plus, Bayer has a new chief medical officer."
+      "text": "According to reporting from <a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>, SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer coming back.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/chutes-ladders-cantor-steps-phrmas-house-ceo\" hreflang=\"en\">Ch — a notable development in Biotechnology",
+    "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-breast — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -124,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
+      "value": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "<a href=\"/biotech/chutes-ladders-cantor-steps-phrmas-house-ceo\" hreflang=\"en\">Ch",
+      "date": "2026-10-19",
+      "event": "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-breast",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "chutes",
+    "medtech",
+    "simbiosys",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/chutes-ladders-cantor-steps-phrmas-hous... | Biotechnology News",
-  "metaDescription": "Eric Cantor, who represented Virginia in the U.S. House of Representatives for 14 years and served as House majority leader from 2011 to 2014, will step up a...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, chutes, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-pow... | Biotechnology News",
+  "metaDescription": "SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, simbiosys, TechNanoAI, emerging tech news",
   "featured": false
 }

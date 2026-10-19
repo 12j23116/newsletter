@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791113424430-4",
+  "id": "ai-1792409474958-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "MI5 Says China’s MSS Funded Research Involving 100+ U.K.-... | AI News",
-  "excerpt": "The U.K.'s domestic intelligence and security agency has warned that more than 100 academics have helped China boost its intelligence gathering efforts on behalf of Beijing's state security service.\n\n",
-  "date": "2026-10-04",
+  "title": "OpenCode Console Breach May Have Exposed OpenAI, Anthropi... | AI News",
+  "excerpt": "An intruder reached a legacy system at OpenCode on the night of October 16 and may have exposed the third-party AI provider keys that users had saved in OpenCode Console, the company said.\n\nConsole is",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "mi5-says-chinas-mss-funded-research-involving-100-uk-linked-academics",
-  "sourceLink": "https://thehackernews.com/2026/10/mi5-says-chinas-mss-funded-research.html",
+  "slug": "opencode-console-breach-may-have-exposed-openai-anthropic-and-google-a",
+  "sourceLink": "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The U. K."
+      "text": "An intruder reached a legacy system at OpenCode on the night of October 16 and may have exposed the third-party AI provider keys that users had saved in OpenCode Console, the company said."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "'s domestic intelligence and security agency has warned that more than 100 academics have helped China boost its intelligence gathering efforts on behalf of Beijing's state security service."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), An intruder reached a legacy system at OpenCode on the night of October 16 and may have exposed the third-party AI provider keys that users had saved in OpenCode Console, the company said.\n\nConsole is OpenCode's optional hosted service: a workspace saves its own OpenAI, Anthropic, or Google key there, and Console uses that key to call the provider so team members can use the models without. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "MI5 Says China’s MSS Funded Research Involving 100+ U.K.-Linked Academics — a notable development in AI",
+    "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "MI5 Says China’s MSS Funded Research Involving 100+ U.K.-Linked Academics",
+      "date": "2026-10-19",
+      "event": "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "china",
-    "funded",
+    "opencode",
+    "console",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "MI5 Says China’s MSS Funded Research Involving 100+ U.K.-... | AI News",
-  "metaDescription": "The U.K.'s domestic intelligence and security agency has warned that more than 100 academics have helped China boost its intelligence gathering efforts on be...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, says, china, funded, TechNanoAI, emerging tech news",
+  "metaTitle": "OpenCode Console Breach May Have Exposed OpenAI, Anthropi... | AI News",
+  "metaDescription": "An intruder reached a legacy system at OpenCode on the night of October 16 and may have exposed the third-party AI provider keys that users had saved in Open...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, opencode, console, breach, TechNanoAI, emerging tech news",
   "featured": false
 }

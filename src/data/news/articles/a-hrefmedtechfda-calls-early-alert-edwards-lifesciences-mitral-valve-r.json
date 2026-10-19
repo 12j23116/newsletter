@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1791113426264-2",
+  "id": "biotech-1792409477155-5",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/novartis-pays-abogen-575m-vivo-autoimmu... | Biotechnology News",
-  "excerpt": "Novartis is paying Abogen Biosciences $575 million upfront for an mRNA-encoded T-cell engager that showed early clinical promise in autoimmune disease. The deal, which includes up to $7.2 billion in m",
-  "date": "2026-10-04",
+  "title": "<a href=\"/medtech/fda-calls-early-alert-edwards-lifescien... | Biotechnology News",
+  "excerpt": "The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid serious safety concerns.",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechnovartis-pays-abogen-575m-vivo-autoimmune-t-cell-engager-",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/novartis-pays-abogen-575m-vivo-autoimmune-t-cell-engager",
-  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
+  "slug": "a-hrefmedtechfda-calls-early-alert-edwards-lifesciences-mitral-valve-r",
+  "sourceLink": "https://www.fiercebiotech.com/medtech/fda-calls-early-alert-edwards-lifesciences-mitral-valve-replacement-after-injury-death",
+  "sourceName": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
   "body": [
     {
       "type": "p",
-      "text": "Novartis is paying Abogen Biosciences $575 million upfront for an mRNA-encoded T-cell engager that showed early clinical promise in autoimmune disease.  The deal, which includes up to $7."
+      "text": "The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid serious safety concerns."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "2 billion in milestones, comes weeks after Novartis paused an autoimmune CAR-T program over three deaths."
+      "text": "According to reporting from <a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>, The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid serious safety concerns.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/novartis-pays-abogen-575m-vivo-autoimmune-t-cell-engager\" href — a notable development in Biotechnology",
+    "<a href=\"/medtech/fda-calls-early-alert-edwards-lifesciences-mitral-valve-replac — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
+      "value": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "<a href=\"/biotech/novartis-pays-abogen-575m-vivo-autoimmune-t-cell-engager\" href",
+      "date": "2026-10-19",
+      "event": "<a href=\"/medtech/fda-calls-early-alert-edwards-lifesciences-mitral-valve-replac",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "novartis",
+    "medtech",
+    "calls",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/novartis-pays-abogen-575m-vivo-autoimmu... | Biotechnology News",
-  "metaDescription": "Novartis is paying Abogen Biosciences $575 million upfront for an mRNA-encoded T-cell engager that showed early clinical promise in autoimmune disease. The d...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, novartis, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/medtech/fda-calls-early-alert-edwards-lifescien... | Biotechnology News",
+  "metaDescription": "The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid s...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, calls, TechNanoAI, emerging tech news",
   "featured": false
 }

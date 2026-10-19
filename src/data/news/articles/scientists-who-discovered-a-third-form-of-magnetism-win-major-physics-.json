@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791113431747-4",
+  "id": "quantum-1792409483053-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Silicon Quantum Computing and Schneider Electric Advance ... | Quantum Computing News",
-  "excerpt": "Silicon Quantum Computing (SQC) and Schneider Electric are advancing to Stage 2 of the Australian Government’s Critical Technologies Challenge Program, securing A$3.6 million. They are deploying hybri",
-  "date": "2026-10-04",
+  "title": "Scientists who discovered a third form of magnetism win m... | Quantum Computing News",
+  "excerpt": "Physicists have uncovered a hidden third form of magnetism that challenges more than 100 years of established physics. Called altermagnetism, the discovery could transform future computing and electro",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "silicon-quantum-computing-and-schneider-electric-advance-energy-grid-f",
-  "sourceLink": "https://quantumcomputingreport.com/silicon-quantum-computing-and-schneider-electric-advance-energy-grid-forecasting-via-watermelon-quantum-enhanced-ai-system/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "scientists-who-discovered-a-third-form-of-magnetism-win-major-physics-",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261017230035.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Silicon Quantum Computing (SQC) and Schneider Electric are advancing to Stage 2 of the Australian Government’s Critical Technologies Challenge Program, securing A$3. 6 million."
+      "text": "Physicists have uncovered a hidden third form of magnetism that challenges more than 100 years of established physics.  Called altermagnetism, the discovery could transform future computing and electronics while opening an entirely new frontier in quantum research."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "They are deploying hybrid quantum-classical machine learning models using SQC’s Watermelon™ system to improve energy grid forecasting.  These models have shown an average 20% improvement in accuracy, with peak gains of up to 41%, and will be scaled across hundreds of residential locations in Australia."
+      "text": "According to reporting from sciencedaily.com, Physicists have uncovered a hidden third form of magnetism that challenges more than 100 years of established physics. Called altermagnetism, the discovery could transform future computing and electronics while opening an entirely new frontier in quantum research.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Silicon Quantum Computing and Schneider Electric Advance Energy Grid Forecasting — a notable development in Quantum Computing",
+    "Scientists who discovered a third form of magnetism win major physics prize — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "Silicon Quantum Computing and Schneider Electric Advance Energy Grid Forecasting",
+      "date": "2026-10-19",
+      "event": "Scientists who discovered a third form of magnetism win major physics prize",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "silicon",
-    "quantum",
+    "scientists",
+    "discovered",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Silicon Quantum Computing and Schneider Electric Advance ... | Quantum Computing News",
-  "metaDescription": "Silicon Quantum Computing (SQC) and Schneider Electric are advancing to Stage 2 of the Australian Government’s Critical Technologies Challenge Program, secur...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, silicon, quantum, computing, TechNanoAI, emerging tech news",
+  "metaTitle": "Scientists who discovered a third form of magnetism win m... | Quantum Computing News",
+  "metaDescription": "Physicists have uncovered a hidden third form of magnetism that challenges more than 100 years of established physics. Called altermagnetism, the discovery c...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, scientists, discovered, third, TechNanoAI, emerging tech news",
   "featured": false
 }

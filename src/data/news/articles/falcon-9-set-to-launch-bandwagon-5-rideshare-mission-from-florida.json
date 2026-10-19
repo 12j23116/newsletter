@@ -1,21 +1,21 @@
 {
-  "id": "space-1791113425686-1",
+  "id": "space-1792409476573-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "ESA to pursue crew transport and space stations as Europe... | Space Exploration News",
-  "excerpt": "The European Space Agency (ESA) recently started investigating options for a European-led space station. The'\nThe post ESA to pursue crew transport and space stations as European launchers come online",
-  "date": "2026-10-04",
+  "title": "Falcon 9 set to launch Bandwagon-5 rideshare mission from... | Space Exploration News",
+  "excerpt": "Following on from the successful Transporter 18 mission at the beginning of the month, SpaceX’s'\nThe post Falcon 9 set to launch Bandwagon-5 rideshare mission from Florida appeared first on NASASpaceF",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "esa-to-pursue-crew-transport-and-space-stations-as-european-launchers-",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/10/europe-update/",
-  "sourceName": "Martijn Luinstra",
+  "slug": "falcon-9-set-to-launch-bandwagon-5-rideshare-mission-from-florida",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/10/bandwagon-5/",
+  "sourceName": "Eleanor Day",
   "body": [
     {
       "type": "p",
-      "text": "The European Space Agency (ESA) recently started investigating options for a European-led space station.  The'\nThe post ESA to pursue crew transport and space stations as European launchers come online appeared first on NASASpaceFlight."
+      "text": "Following on from the successful Transporter 18 mission at the beginning of the month, SpaceX’s'\nThe post Falcon 9 set to launch Bandwagon-5 rideshare mission from Florida appeared first on NASASpaceFlight. com."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "com."
+      "text": "According to reporting from Eleanor Day, Following on from the successful Transporter 18 mission at the beginning of the month, SpaceX’s'\nThe post Falcon 9 set to launch Bandwagon-5 rideshare mission from Florida appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "ESA to pursue crew transport and space stations as European launchers come onlin — a notable development in Space Exploration",
+    "Falcon 9 set to launch Bandwagon-5 rideshare mission from Florida — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Martijn Luinstra",
+      "value": "Eleanor Day",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "ESA to pursue crew transport and space stations as European launchers come onlin",
+      "date": "2026-10-19",
+      "event": "Falcon 9 set to launch Bandwagon-5 rideshare mission from Florida",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "pursue",
-    "transport",
+    "falcon",
+    "launch",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "ESA to pursue crew transport and space stations as Europe... | Space Exploration News",
-  "metaDescription": "The European Space Agency (ESA) recently started investigating options for a European-led space station. The'\nThe post ESA to pursue crew transport and space...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, pursue, crew, transport, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Falcon 9 set to launch Bandwagon-5 rideshare mission from... | Space Exploration News",
+  "metaDescription": "Following on from the successful Transporter 18 mission at the beginning of the month, SpaceX’s'\nThe post Falcon 9 set to launch Bandwagon-5 rideshare missio...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, falcon, launch, bandwagon, TechNanoAI, emerging tech news",
+  "featured": true
 }

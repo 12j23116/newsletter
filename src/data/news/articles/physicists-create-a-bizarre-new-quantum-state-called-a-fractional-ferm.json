@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791113431746-2",
+  "id": "quantum-1792409483052-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Who’s News: Strategic Appointments at Quantum eMotion, Pa... | Quantum Computing News",
-  "excerpt": "Bernard Crotty joined Quantum eMotion, Florence Lao became CLO at Pasqal, Dr. Elizabeth Iwasawa was appointed Director of Quantum at RBC, and Jeffrey Kilborn is the new CFO at 01 Quantum Inc., all in ",
-  "date": "2026-10-04",
+  "title": "Physicists create a bizarre new quantum state called a fr... | Quantum Computing News",
+  "excerpt": "Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet surprisingly orderly configuration called a \"",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "whos-news-strategic-appointments-at-quantum-emotion-pasqal-royal-bank-",
-  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-quantum-emotion-pasqal-royal-bank-of-canada-and-01-quantum-inc/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "physicists-create-a-bizarre-new-quantum-state-called-a-fractional-ferm",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261018084644.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Bernard Crotty joined Quantum eMotion, Florence Lao became CLO at Pasqal, Dr.  Elizabeth Iwasawa was appointed Director of Quantum at RBC, and Jeffrey Kilborn is the new CFO at 01 Quantum Inc."
+      "text": "Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet surprisingly orderly configuration called a \"fractional Fermi sea. \" The discovery challenges established quantum theories and hints at exotic quasiparticles that scientists have dubbed potential \"super-Fermions."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": ", all in strategic leadership roles. \nThe post Who’s News: Strategic Appointments at Quantum eMotion, Pasqal, Royal Bank of Canada, and 01 Quantum Inc."
-    },
-    {
-      "type": "p",
-      "text": "appeared first on Quantum Computing Report."
+      "text": "According to reporting from sciencedaily.com, Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet surprisingly orderly configuration called a \"fractional Fermi sea.\" The discovery challenges established quantum theories and hints at exotic quasiparticles that scientists have dubbed potential \"super-Fermions.\". The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Who’s News: Strategic Appointments at Quantum eMotion, Pasqal, Royal Bank of Can — a notable development in Quantum Computing",
+    "Physicists create a bizarre new quantum state called a fractional fermi sea — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -124,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "Who’s News: Strategic Appointments at Quantum eMotion, Pasqal, Royal Bank of Can",
+      "date": "2026-10-19",
+      "event": "Physicists create a bizarre new quantum state called a fractional fermi sea",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "strategic",
-    "appointments",
+    "physicists",
+    "create",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Who’s News: Strategic Appointments at Quantum eMotion, Pa... | Quantum Computing News",
-  "metaDescription": "Bernard Crotty joined Quantum eMotion, Florence Lao became CLO at Pasqal, Dr. Elizabeth Iwasawa was appointed Director of Quantum at RBC, and Jeffrey Kilborn...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Physicists create a bizarre new quantum state called a fr... | Quantum Computing News",
+  "metaDescription": "Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet su...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, physicists, create, bizarre, TechNanoAI, emerging tech news",
+  "featured": true
 }

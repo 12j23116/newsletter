@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791113424430-3",
+  "id": "ai-1792409474959-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "OpenAI safety employee resigns, claiming the company’s ‘c... | AI News",
-  "excerpt": "By his own admission, David Robinson is “something of a cliché”: an employee at a leading AI company who issues a dire warning while resigning from their job.",
-  "date": "2026-10-04",
+  "title": "Disney agrees to hire the majority of Character.AI’s work... | AI News",
+  "excerpt": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "openai-safety-employee-resigns-claiming-the-companys-culture-is-broken",
-  "sourceLink": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
+  "slug": "disney-agrees-to-hire-the-majority-of-characterais-workforce",
+  "sourceLink": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
   "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "By his own admission, David Robinson is “something of a cliché”: an employee at a leading AI company who issues a dire warning while resigning from their job."
+      "text": "The filing also says that the “vast majority” of Character. AI employees who were offered jobs at Disney accepted them."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, By his own admission, David Robinson is “something of a cliché”: an employee at a leading AI company who issues a dire warning while resigning from their job.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "However, this is a stalking horse bid, so another company could come forward with a higher offer."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’ — a notable development in AI",
+    "Disney agrees to hire the majority of Character.AI’s workforce — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+      "date": "2026-10-19",
+      "event": "Disney agrees to hire the majority of Character.AI’s workforce",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "openai",
-    "safety",
+    "disney",
+    "agrees",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI safety employee resigns, claiming the company’s ‘c... | AI News",
-  "metaDescription": "By his own admission, David Robinson is “something of a cliché”: an employee at a leading AI company who issues a dire warning while resigning from their job.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, safety, employee, TechNanoAI, emerging tech news",
+  "metaTitle": "Disney agrees to hire the majority of Character.AI’s work... | AI News",
+  "metaDescription": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid,...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, disney, agrees, hire, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1791113426263-0",
+  "id": "biotech-1792409477155-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/weve-been-taking-our-time-xaira-reveals... | Biotechnology News",
-  "excerpt": "When Xaira Therapeutics first debuted in 2024 with a gobsmacking $1 billion in funding, a natural expectation would have been for a flurry of further activity to follow. Instead, the buzzy AI biotech ",
-  "date": "2026-10-04",
+  "title": "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-... | Biotechnology News",
+  "excerpt": "Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily. Plus, Paragon Labs is buying out  Apogee talent aft",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechweve-been-taking-our-time-xaira-reveals-antibody-platform",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/weve-been-taking-our-time-xaira-reveals-antibody-platform-and-first-taste-pipeline",
-  "sourceName": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+  "slug": "a-hrefbiotechchutes-ladders-bausch-lombs-return-ceo-saunders-exits-aga",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/chutes-ladders-bausch-lombs-return-ceo-saunders-exits-again",
+  "sourceName": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>",
   "body": [
     {
       "type": "p",
-      "text": "When Xaira Therapeutics first debuted in 2024 with a gobsmacking $1 billion in funding, a natural expectation would have been for a flurry of further activity to follow.  Instead, the buzzy AI biotech went quiet."
+      "text": "Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily.  Plus, Paragon Labs is buying out  Apogee talent after its acquisition by AbbVie."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>, When Xaira Therapeutics first debuted in 2024 with a gobsmacking $1 billion in funding, a natural expectation would have been for a flurry of further activity to follow. Instead, the buzzy AI biotech went quiet.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily. Plus, Paragon Labs is buying out  Apogee talent after its acquisition by AbbVie.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/weve-been-taking-our-time-xaira-reveals-antibody-platform-and- — a notable development in Biotechnology",
+    "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-saunders-exits-again\" h — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/darren-incorvaia\" hreflang=\"en\">Darren Incorvaia</a>",
+      "value": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "<a href=\"/biotech/weve-been-taking-our-time-xaira-reveals-antibody-platform-and-",
+      "date": "2026-10-19",
+      "event": "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-saunders-exits-again\" h",
       "current": true
     },
     {
@@ -192,7 +192,7 @@
     "biotechnology",
     "CRISPR",
     "biotech",
-    "taking",
+    "chutes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/weve-been-taking-our-time-xaira-reveals... | Biotechnology News",
-  "metaDescription": "When Xaira Therapeutics first debuted in 2024 with a gobsmacking $1 billion in funding, a natural expectation would have been for a flurry of further activit...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, weve, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-... | Biotechnology News",
+  "metaDescription": "Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily. Plus, Pa...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, chutes, TechNanoAI, emerging tech news",
+  "featured": false
 }

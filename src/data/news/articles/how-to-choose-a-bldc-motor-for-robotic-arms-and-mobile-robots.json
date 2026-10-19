@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1791113430870-1",
+  "id": "robotics-1792409481749-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Scientists just made a superconductor stronger using “emp... | Robotics News",
-  "excerpt": "Researchers have demonstrated that quantum fluctuations in supposedly empty space can strengthen superconductivity, raising the transition temperature of an ultrathin material by as much as 5.4%. The ",
-  "date": "2026-10-04",
+  "title": "How to choose a BLDC motor for robotic arms and mobile ro... | Robotics News",
+  "excerpt": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to choose a BLDC motor for robotic arms and mob",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "scientists-just-made-a-superconductor-stronger-using-empty-space",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/09/260930225456.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "how-to-choose-a-bldc-motor-for-robotic-arms-and-mobile-robots",
+  "sourceLink": "https://www.therobotreport.com/how-to-choose-bldc-motor-robotic-arms-mobile-robots/",
+  "sourceName": "Faisal Mahmood",
   "body": [
     {
       "type": "p",
-      "text": "Researchers have demonstrated that quantum fluctuations in supposedly empty space can strengthen superconductivity, raising the transition temperature of an ultrathin material by as much as 5. 4%."
+      "text": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor. \nThe post How to choose a BLDC motor for robotic arms and mobile robots appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The discovery opens the possibility of using specially engineered vacuum environments to control quantum materials without direct contact or external driving."
+      "text": "According to reporting from Faisal Mahmood, Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to choose a BLDC motor for robotic arms and mobile robots appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Scientists just made a superconductor stronger using “empty space” — a notable development in Robotics",
+    "How to choose a BLDC motor for robotic arms and mobile robots — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Faisal Mahmood",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "Scientists just made a superconductor stronger using “empty space”",
+      "date": "2026-10-19",
+      "event": "How to choose a BLDC motor for robotic arms and mobile robots",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "scientists",
-    "superconductor",
+    "choose",
+    "motor",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Scientists just made a superconductor stronger using “emp... | Robotics News",
-  "metaDescription": "Researchers have demonstrated that quantum fluctuations in supposedly empty space can strengthen superconductivity, raising the transition temperature of an ...",
-  "keywords": "robotics, humanoid robot, automation, drones, scientists, just, made, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "How to choose a BLDC motor for robotic arms and mobile ro... | Robotics News",
+  "metaDescription": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to c...",
+  "keywords": "robotics, humanoid robot, automation, drones, choose, bldc, motor, TechNanoAI, emerging tech news",
+  "featured": true
 }

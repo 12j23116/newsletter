@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1791113426264-4",
+  "id": "biotech-1792409477154-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/medtech/abbott-launches-simplescreen-crc-blood-... | Biotechnology News",
-  "excerpt": "Abbott is kick-starting the U.S. commercial launch of SimpleScreen CRC, an FDA-approved blood-based colorectal cancer (CRC) screening test for adults age 45 and older who are at average risk for the d",
-  "date": "2026-10-04",
+  "title": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-cr... | Biotechnology News",
+  "excerpt": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefmedtechabbott-launches-simplescreen-crc-blood-test-us-hreflangen",
-  "sourceLink": "https://www.fiercebiotech.com/medtech/abbott-launches-simplescreen-crc-blood-test-us",
-  "sourceName": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
+  "slug": "a-hrefbiotechchina-looks-ban-foreign-acquisitions-critical-biopharma-p",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/china-looks-ban-foreign-acquisitions-critical-biopharma-platforms",
+  "sourceName": "<a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>",
   "body": [
     {
       "type": "p",
-      "text": "Abbott is kick-starting the U. S."
+      "text": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that would ban or restrict the export of key biopharmaceutical technologies."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "commercial launch of SimpleScreen CRC, an FDA-approved blood-based colorectal cancer (CRC) screening test for adults age 45 and older who are at average risk for the disease."
+      "text": "According to reporting from <a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>, As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that would ban or restrict the export of key biopharmaceutical technologies.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/medtech/abbott-launches-simplescreen-crc-blood-test-us\" hreflang=\"en\"> — a notable development in Biotechnology",
+    "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-critical-biopharma-platfo — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
+      "value": "<a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "<a href=\"/medtech/abbott-launches-simplescreen-crc-blood-test-us\" hreflang=\"en\">",
+      "date": "2026-10-19",
+      "event": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-critical-biopharma-platfo",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "medtech",
-    "abbott",
+    "biotech",
+    "china",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/medtech/abbott-launches-simplescreen-crc-blood-... | Biotechnology News",
-  "metaDescription": "Abbott is kick-starting the U.S. commercial launch of SimpleScreen CRC, an FDA-approved blood-based colorectal cancer (CRC) screening test for adults age 45 ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, abbott, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-cr... | Biotechnology News",
+  "metaDescription": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical ...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, china, TechNanoAI, emerging tech news",
   "featured": false
 }

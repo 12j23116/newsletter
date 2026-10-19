@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791113424431-5",
+  "id": "ai-1792409474957-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Warlock Exploits SharePoint Flaws to Disable Security Too... | AI News",
-  "excerpt": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portugues",
-  "date": "2026-10-04",
+  "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run... | AI News",
+  "excerpt": "A flaw in Broadcom's Wi-Fi setup software lets an attacker within radio range run code as root on Broadcom-based routers, without the network password or any pairing step, security researcher Quentin ",
+  "date": "2026-10-19",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "warlock-exploits-sharepoint-flaws-to-disable-security-tools-and-deploy",
-  "sourceLink": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
+  "slug": "unpatched-broadcom-wi-fi-flaw-lets-attackers-in-range-run-code-as-root",
+  "sourceLink": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portuguese- and Spanish-speaking countries. \n\nThe activity, observed by the Symantec and Carbon Black Threat Hunter Team, has hit critical infrastructure, government, and education organizations."
+      "text": "A flaw in Broadcom's Wi-Fi setup software lets an attacker within radio range run code as root on Broadcom-based routers, without the network password or any pairing step, security researcher Quentin Kaiser disclosed on October 16."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portuguese- and Spanish-speaking countries.\n\nThe activity, observed by the Symantec and Carbon Black Threat Hunter Team, has hit critical infrastructure, government, and education organizations.\n\n\"In the. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), A flaw in Broadcom's Wi-Fi setup software lets an attacker within radio range run code as root on Broadcom-based routers, without the network password or any pairing step, security researcher Quentin Kaiser disclosed on October 16.\n\nHe showed the attack working against home gateways supplied by three Belgian internet providers, in one case reading the Wi-Fi password off the device. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomwar — a notable development in AI",
+    "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Router — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-04",
-      "event": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomwar",
+      "date": "2026-10-19",
+      "event": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Router",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "warlock",
-    "exploits",
+    "unpatched",
+    "broadcom",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Warlock Exploits SharePoint Flaws to Disable Security Too... | AI News",
-  "metaDescription": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in a...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, warlock, exploits, sharepoint, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run... | AI News",
+  "metaDescription": "A flaw in Broadcom's Wi-Fi setup software lets an attacker within radio range run code as root on Broadcom-based routers, without the network password or any...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, unpatched, broadcom, flaw, TechNanoAI, emerging tech news",
+  "featured": true
 }
