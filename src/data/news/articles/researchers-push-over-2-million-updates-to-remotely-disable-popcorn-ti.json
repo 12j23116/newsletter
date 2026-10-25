@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1791632015995-4",
+  "id": "cybersecurity-1792923698328-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks | Cybersecurity News",
-  "excerpt": "The ChatGPT maker said the researchers  \"violated clear policies on handling sensitive information.”\nThe post OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks appeared first on SecurityWeek.",
-  "date": "2026-10-10",
-  "readTime": "3 min",
+  "title": "Researchers Push Over 2 Million Updates to Remotely Disab... | Cybersecurity News",
+  "excerpt": "Between November 2025 and March 2026, the Dutch security firm Eye Security pushed more than 2 million updates to computers it did not own to switch off a background updater that it said could have all",
+  "date": "2026-10-25",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "openai-fires-3-safety-researchers-in-dispute-over-ai-risks",
-  "sourceLink": "https://www.securityweek.com/openai-fires-3-safety-researchers-in-dispute-over-ai-risks/",
-  "sourceName": "Associated Press",
+  "slug": "researchers-push-over-2-million-updates-to-remotely-disable-popcorn-ti",
+  "sourceLink": "https://thehackernews.com/2026/10/researchers-push-over-2-million-updates.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The ChatGPT maker said the researchers  \"violated clear policies on handling sensitive information. ”\nThe post OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks appeared first on SecurityWeek."
+      "text": "Between November 2025 and March 2026, the Dutch security firm Eye Security pushed more than 2 million updates to computers it did not own to switch off a background updater that it said could have allowed an outsider to take over the machine. \n\nThe updater belongs to Time4Popcorn, an abandoned copy of Popcorn Time, a free app that streamed pirated films and TV over BitTorrent."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Associated Press, The ChatGPT maker said the researchers  \"violated clear policies on handling sensitive information.”\nThe post OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Between November 2025 and March 2026, the Dutch security firm Eye Security pushed more than 2 million updates to computers it did not own to switch off a background updater that it said could have allowed an outsider to take over the machine.\n\nThe updater belongs to Time4Popcorn, an abandoned copy of Popcorn Time, a free app that streamed pirated films and TV over BitTorrent.\n\nPopcorn Time was. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks — a notable development in Cybersecurity",
+    "Researchers Push Over 2 Million Updates to Remotely Disable Popcorn Time Updater — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Associated Press",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks",
+      "date": "2026-10-25",
+      "event": "Researchers Push Over 2 Million Updates to Remotely Disable Popcorn Time Updater",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "openai",
-    "fires",
+    "researchers",
+    "million",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks | Cybersecurity News",
-  "metaDescription": "The ChatGPT maker said the researchers  \"violated clear policies on handling sensitive information.”\nThe post OpenAI Fires 3 Safety Researchers in Dispute Ov...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, openai, fires, safety, TechNanoAI, emerging tech news",
+  "metaTitle": "Researchers Push Over 2 Million Updates to Remotely Disab... | Cybersecurity News",
+  "metaDescription": "Between November 2025 and March 2026, the Dutch security firm Eye Security pushed more than 2 million updates to computers it did not own to switch off a bac...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, researchers, push, over, TechNanoAI, emerging tech news",
   "featured": false
 }

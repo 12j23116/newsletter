@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791632021944-1",
+  "id": "quantum-1792923702821-5",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Who’s News: Strategic Appointments at PQShield, VTT, Quan... | Quantum Computing News",
-  "excerpt": "PQShield, VTT, QuantWare, and Rensselaer Polytechnic Institute have made strategic appointments to their leadership teams. These appointments aim to strengthen their positions in quantum technology, c",
-  "date": "2026-10-10",
+  "title": "BIRD Foundation Backs Qarakal Quantum and Quantum Element... | Quantum Computing News",
+  "excerpt": "The BIRD Foundation has awarded a conditional grant to Qarakal Quantum and Quantum Elements for a joint quantum computational chemistry project. This initiative aims to develop a platform using quantu",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "whos-news-strategic-appointments-at-pqshield-vtt-quantware-and-renssel",
-  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-pqshield-vtt-quantware-and-rensselaer-polytechnic-institute/",
+  "slug": "bird-foundation-backs-qarakal-quantum-and-quantum-elements-for-quantum",
+  "sourceLink": "https://quantumcomputingreport.com/bird-foundation-backs-qarakal-quantum-and-quantum-elements-for-quantum-accelerated-catalysis-modeling/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "PQShield, VTT, QuantWare, and Rensselaer Polytechnic Institute have made strategic appointments to their leadership teams.  These appointments aim to strengthen their positions in quantum technology, commercial growth, and research."
+      "text": "The BIRD Foundation has awarded a conditional grant to Qarakal Quantum and Quantum Elements for a joint quantum computational chemistry project.  This initiative aims to develop a platform using quantum algorithms to accurately simulate heterogeneous surface catalysis, overcoming limitations of classical supercomputing."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Who’s News: Strategic Appointments at PQShield, VTT, QuantWare, and Rensselaer Polytechnic Institute appeared first on Quantum Computing Report."
+      "text": "The goal is to provide predictive tools for chemical manufacturers to design and refine industrial catalysts, with grant decisions for the next cycle scheduled for March 2027."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Who’s News: Strategic Appointments at PQShield, VTT, QuantWare, and Rensselaer P — a notable development in Quantum Computing",
+    "BIRD Foundation Backs Qarakal Quantum and Quantum Elements for Quantum-Accelerat — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Who’s News: Strategic Appointments at PQShield, VTT, QuantWare, and Rensselaer P",
+      "date": "2026-10-25",
+      "event": "BIRD Foundation Backs Qarakal Quantum and Quantum Elements for Quantum-Accelerat",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "strategic",
-    "appointments",
+    "foundation",
+    "backs",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Who’s News: Strategic Appointments at PQShield, VTT, Quan... | Quantum Computing News",
-  "metaDescription": "PQShield, VTT, QuantWare, and Rensselaer Polytechnic Institute have made strategic appointments to their leadership teams. These appointments aim to strength...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
+  "metaTitle": "BIRD Foundation Backs Qarakal Quantum and Quantum Element... | Quantum Computing News",
+  "metaDescription": "The BIRD Foundation has awarded a conditional grant to Qarakal Quantum and Quantum Elements for a joint quantum computational chemistry project. This initiat...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, bird, foundation, backs, TechNanoAI, emerging tech news",
   "featured": false
 }

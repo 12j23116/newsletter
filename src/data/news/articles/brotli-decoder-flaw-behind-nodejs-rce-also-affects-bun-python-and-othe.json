@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791632015483-5",
+  "id": "ai-1792923698066-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Credential-Stealing GitHub Actions Workflows Planted in T... | AI News",
-  "excerpt": "Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer accounts to push a malicious workflow into over 34",
-  "date": "2026-10-10",
+  "title": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, ... | AI News",
+  "excerpt": "A memory-corruption flaw in Google's Brotli decoder sits in many programs that unpack Brotli-compressed data, among them Bun, the Python Brotli and brotlicffi packages, and Envoy proxies set up to dec",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "credential-stealing-github-actions-workflows-planted-in-tens-of-thousa",
-  "sourceLink": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
+  "slug": "brotli-decoder-flaw-behind-nodejs-rce-also-affects-bun-python-and-othe",
+  "sourceLink": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer accounts to push a malicious workflow into over 340 repositories."
+      "text": "A memory-corruption flaw in Google's Brotli decoder sits in many programs that unpack Brotli-compressed data, among them Bun, the Python Brotli and brotlicffi packages, and Envoy proxies set up to decompress Brotli."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer accounts to push a malicious workflow into over 340 repositories.\n\n\"Using the account of Takashi Kitao, author of the 18,400-star game engine pyxel, the attacker pushed a malicious workflow to 27 repositories starting at 13:20 UTC,\" StepSecurity. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), A memory-corruption flaw in Google's Brotli decoder sits in many programs that unpack Brotli-compressed data, among them Bun, the Python Brotli and brotlicffi packages, and Envoy proxies set up to decompress Brotli.\n\nTracked as CVE-2026-111497, the flaw allows crafted compressed data to overwrite past the end of a buffer and corrupt a program's memory, potentially. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Rep — a notable development in AI",
+    "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Rep",
+      "date": "2026-10-25",
+      "event": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "credential",
-    "stealing",
+    "brotli",
+    "decoder",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Credential-Stealing GitHub Actions Workflows Planted in T... | AI News",
-  "metaDescription": "Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer account...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, credential, stealing, github, TechNanoAI, emerging tech news",
+  "metaTitle": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, ... | AI News",
+  "metaDescription": "A memory-corruption flaw in Google's Brotli decoder sits in many programs that unpack Brotli-compressed data, among them Bun, the Python Brotli and brotlicff...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, brotli, decoder, flaw, TechNanoAI, emerging tech news",
   "featured": false
 }

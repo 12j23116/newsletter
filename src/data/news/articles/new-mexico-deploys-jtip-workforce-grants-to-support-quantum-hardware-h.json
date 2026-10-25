@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791632021945-5",
+  "id": "quantum-1792923702820-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Arqit Quantum Inc. Reports Select Preliminary FY 2026 Fin... | Quantum Computing News",
-  "excerpt": "Arqit Quantum Inc. reported strong preliminary financial results for FY 2026, with annual revenue estimated between $975,000 and $1,000,000, an 84% to 89% increase from FY 2025. The company also secur",
-  "date": "2026-10-10",
+  "title": "New Mexico Deploys JTIP Workforce Grants to Support Quant... | Quantum Computing News",
+  "excerpt": "New Mexico has allocated over $12 million in Job Training Incentive Program (JTIP) funding for Q1 FY22, with a focus on quantum technology. IonQ Inc. and Bandelier Technologies received grants to supp",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "arqit-quantum-inc-reports-select-preliminary-fy-2026-financial-results",
-  "sourceLink": "https://quantumcomputingreport.com/arqit-quantum-inc-reports-select-preliminary-fy-2026-financial-results-annual-revenue-tops-975k-nato-contract-win-and-cash-position-reaches-51m/",
+  "slug": "new-mexico-deploys-jtip-workforce-grants-to-support-quantum-hardware-h",
+  "sourceLink": "https://quantumcomputingreport.com/new-mexico-deploys-jtip-workforce-grants-to-support-quantum-hardware-hiring-at-ionq-and-bandelier-technologies/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Arqit Quantum Inc.  reported strong preliminary financial results for FY 2026, with annual revenue estimated between $975,000 and $1,000,000, an 84% to 89% increase from FY 2025."
+      "text": "New Mexico has allocated over $12 million in Job Training Incentive Program (JTIP) funding for Q1 FY22, with a focus on quantum technology.  IonQ Inc."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The company also secured a NATO contract and ended the fiscal year with a robust cash position of $51. 0 million."
-    },
-    {
-      "type": "p",
-      "text": "This growth was driven by new commercial contracts and initial traction for its Encryption Intelligence solution. \nThe post Arqit Quantum Inc."
+      "text": "and Bandelier Technologies received grants to support hiring in hardware engineering, quantum system operations, photonic quantum radar, sensing, and metasurface communications.  This initiative underscores New Mexico's commitment to commercializing deep-tech intellectual property from its national laboratories."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Arqit Quantum Inc. Reports Select Preliminary FY 2026 Financial Results: Annual  — a notable development in Quantum Computing",
+    "New Mexico Deploys JTIP Workforce Grants to Support Quantum Hardware Hiring at I — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Arqit Quantum Inc. Reports Select Preliminary FY 2026 Financial Results: Annual ",
+      "date": "2026-10-25",
+      "event": "New Mexico Deploys JTIP Workforce Grants to Support Quantum Hardware Hiring at I",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "arqit",
-    "quantum",
+    "mexico",
+    "deploys",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Arqit Quantum Inc. Reports Select Preliminary FY 2026 Fin... | Quantum Computing News",
-  "metaDescription": "Arqit Quantum Inc. reported strong preliminary financial results for FY 2026, with annual revenue estimated between $975,000 and $1,000,000, an 84% to 89% in...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, arqit, quantum, reports, TechNanoAI, emerging tech news",
+  "metaTitle": "New Mexico Deploys JTIP Workforce Grants to Support Quant... | Quantum Computing News",
+  "metaDescription": "New Mexico has allocated over $12 million in Job Training Incentive Program (JTIP) funding for Q1 FY22, with a focus on quantum technology. IonQ Inc. and Ban...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, mexico, deploys, jtip, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1791632017257-0",
+  "id": "biotech-1792923699680-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Sickle Cell Trait Linked to Distinct Malaria Parasite Var... | Biotechnology News",
-  "excerpt": "A study in Cameroon found that sickle cell trait is associated with distinct malaria parasite genotypes, potentially explaining reduced disease risk despite similar infection rates.\nThe post Sickle Ce",
-  "date": "2026-10-10",
+  "title": "<a href=\"/biotech/it-what-it-merck-exec-sanguine-esmo-lea... | Biotechnology News",
+  "excerpt": "Merck  Co. and Moderna always knew they would be making headlines in Madrid this week—just not in the way it happened.",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "sickle-cell-trait-linked-to-distinct-malaria-parasite-variants",
-  "sourceLink": "https://www.genengnews.com/topics/infectious-diseases/sickle-cell-trait-linked-to-distinct-malaria-parasite-variants/",
-  "sourceName": "Julianna LeMieux, PhD",
+  "slug": "a-hrefbiotechit-what-it-merck-exec-sanguine-esmo-leak-significant-canc",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/it-what-it-merck-exec-sanguine-esmo-leak-significant-cancer-vaccine-data",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "A study in Cameroon found that sickle cell trait is associated with distinct malaria parasite genotypes, potentially explaining reduced disease risk despite similar infection rates. \nThe post Sickle Cell Trait Linked to Distinct Malaria Parasite Variants appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Merck  Co.  and Moderna always knew they would be making headlines in Madrid this week—just not in the way it happened."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julianna LeMieux, PhD, A study in Cameroon found that sickle cell trait is associated with distinct malaria parasite genotypes, potentially explaining reduced disease risk despite similar infection rates.\nThe post Sickle Cell Trait Linked to Distinct Malaria Parasite Variants appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Merck  Co. and Moderna always knew they would be making headlines in Madrid this week—just not in the way it happened.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Sickle Cell Trait Linked to Distinct Malaria Parasite Variants — a notable development in Biotechnology",
+    "<a href=\"/biotech/it-what-it-merck-exec-sanguine-esmo-leak-significant-cancer-va — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Julianna LeMieux, PhD",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Sickle Cell Trait Linked to Distinct Malaria Parasite Variants",
+      "date": "2026-10-25",
+      "event": "<a href=\"/biotech/it-what-it-merck-exec-sanguine-esmo-leak-significant-cancer-va",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "sickle",
-    "trait",
+    "biotech",
+    "merck",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Sickle Cell Trait Linked to Distinct Malaria Parasite Var... | Biotechnology News",
-  "metaDescription": "A study in Cameroon found that sickle cell trait is associated with distinct malaria parasite genotypes, potentially explaining reduced disease risk despite ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, sickle, cell, trait, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/it-what-it-merck-exec-sanguine-esmo-lea... | Biotechnology News",
+  "metaDescription": "Merck  Co. and Moderna always knew they would be making headlines in Madrid this week—just not in the way it happened. CRISPR, mRNA & lab-grown organs. Latest B",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, what, TechNanoAI, emerging tech news",
   "featured": true
 }

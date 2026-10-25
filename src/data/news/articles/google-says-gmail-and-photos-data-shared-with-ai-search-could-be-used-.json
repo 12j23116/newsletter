@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1791632015995-3",
+  "id": "cybersecurity-1792923698327-4",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "FBI Arrests Founder of Ransomware Negotiation Firm | Cybersecurity News",
-  "excerpt": "Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection with an investigation into the ShinyHunters hacking group that ",
-  "date": "2026-10-10",
+  "title": "Google Says Gmail and Photos Data Shared With AI Search C... | Cybersecurity News",
+  "excerpt": "Google has updated its privacy policy to spell out that using personalized artificial intelligence (AI) features in Search or Gemini could allow the company to serve targeted ads to users based on the",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "fbi-arrests-founder-of-ransomware-negotiation-firm",
-  "sourceLink": "https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/",
-  "sourceName": "BrianKrebs",
+  "slug": "google-says-gmail-and-photos-data-shared-with-ai-search-could-be-used-",
+  "sourceLink": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection with an investigation into the ShinyHunters hacking group that recently relieved the FBI of sensitive data on thousands of agents, multiple sources tell KrebsOnSecurity."
+      "text": "Google has updated its privacy policy to spell out that using personalized artificial intelligence (AI) features in Search or Gemini could allow the company to serve targeted ads to users based on their activity on other connected Google services."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from BrianKrebs, Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection with an investigation into the ShinyHunters hacking group that recently relieved the FBI of sensitive data on thousands of agents, multiple sources tell KrebsOnSecurity.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Google has updated its privacy policy to spell out that using personalized artificial intelligence (AI) features in Search or Gemini could allow the company to serve targeted ads to users based on their activity on other connected Google services.\n\n\"You may choose to allow certain Google services, including services like Search or Gemini Apps, to access data from other Google services you use,. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "FBI Arrests Founder of Ransomware Negotiation Firm — a notable development in Cybersecurity",
+    "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Target — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "BrianKrebs",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "FBI Arrests Founder of Ransomware Negotiation Firm",
+      "date": "2026-10-25",
+      "event": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Target",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "arrests",
-    "founder",
+    "google",
+    "gmail",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "FBI Arrests Founder of Ransomware Negotiation Firm | Cybersecurity News",
-  "metaDescription": "Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection with an investigatio...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, arrests, founder, ransomware, TechNanoAI, emerging tech news",
+  "metaTitle": "Google Says Gmail and Photos Data Shared With AI Search C... | Cybersecurity News",
+  "metaDescription": "Google has updated its privacy policy to spell out that using personalized artificial intelligence (AI) features in Search or Gemini could allow the company ...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, google, says, gmail, TechNanoAI, emerging tech news",
   "featured": false
 }

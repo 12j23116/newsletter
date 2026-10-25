@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1791632017257-3",
+  "id": "biotech-1792923699681-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Multiomics in 2026 and Beyond | Biotechnology News",
-  "excerpt": "Multiomics analysis combines data from two or more omics layers—such as genomics, transcriptomics, proteomics, and epigenomics. However, published criticisms of multiomics approaches have highlighted ",
-  "date": "2026-10-10",
+  "title": "<a href=\"/biotech/esmo-gsk-cancer-chief-says-latest-data-... | Biotechnology News",
+  "excerpt": "GSK’s cancer RD chief has suggested the latest slice of early-stage data on its B7-H4-directed antibody-drug conjugate (ADC) has “reinforce[d] our belief in the asset,” as the therapy races through a ",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "multiomics-in-2026-and-beyond",
-  "sourceLink": "https://www.genengnews.com/topics/omics/multiomics-in-2026-and-beyond/",
-  "sourceName": "Kathy Vuksanaj",
+  "slug": "a-hrefbiotechesmo-gsk-cancer-chief-says-latest-data-mo-rez-reinforces-",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/esmo-gsk-cancer-chief-says-latest-data-mo-rez-reinforces-our-belief-adc",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "Multiomics analysis combines data from two or more omics layers—such as genomics, transcriptomics, proteomics, and epigenomics.  However, published criticisms of multiomics approaches have highlighted concerns about data integration and a tendency toward [']\nThe post Multiomics in 2026 and Beyond appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "GSK’s cancer RD chief has suggested the latest slice of early-stage data on its B7-H4-directed antibody-drug conjugate (ADC) has “reinforce[d] our belief in the asset,” as the therapy races through a clutch of phase 3 studies."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kathy Vuksanaj, Multiomics analysis combines data from two or more omics layers—such as genomics, transcriptomics, proteomics, and epigenomics. However, published criticisms of multiomics approaches have highlighted concerns about data integration and a tendency toward [']\nThe post Multiomics in 2026 and Beyond appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, GSK’s cancer RD chief has suggested the latest slice of early-stage data on its B7-H4-directed antibody-drug conjugate (ADC) has “reinforce[d] our belief in the asset,” as the therapy races through a clutch of phase 3 studies.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Multiomics in 2026 and Beyond — a notable development in Biotechnology",
+    "<a href=\"/biotech/esmo-gsk-cancer-chief-says-latest-data-mo-rez-reinforces-our-b — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Kathy Vuksanaj",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Multiomics in 2026 and Beyond",
+      "date": "2026-10-25",
+      "event": "<a href=\"/biotech/esmo-gsk-cancer-chief-says-latest-data-mo-rez-reinforces-our-b",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "multiomics",
-    "beyond",
+    "biotech",
+    "cancer",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Multiomics in 2026 and Beyond | Biotechnology News",
-  "metaDescription": "Multiomics analysis combines data from two or more omics layers—such as genomics, transcriptomics, proteomics, and epigenomics. However, published criticisms...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, multiomics, beyond, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/esmo-gsk-cancer-chief-says-latest-data-... | Biotechnology News",
+  "metaDescription": "GSK’s cancer RD chief has suggested the latest slice of early-stage data on its B7-H4-directed antibody-drug conjugate (ADC) has “reinforce[d] our belief in ...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, esmo, TechNanoAI, emerging tech news",
   "featured": false
 }

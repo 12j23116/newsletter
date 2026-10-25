@@ -1,11 +1,11 @@
 {
-  "id": "bci-1791632023047-0",
+  "id": "bci-1792923703529-2",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Estimating suicide risk from text | Brain-Computer Interfaces News",
   "excerpt": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions.",
-  "date": "2026-10-10",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
+      "date": "2026-10-25",
       "event": "Estimating suicide risk from text",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Estimating suicide risk from text | Brain-Computer Interfaces News",
   "metaDescription": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions.",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, estimating, suicide, risk, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }

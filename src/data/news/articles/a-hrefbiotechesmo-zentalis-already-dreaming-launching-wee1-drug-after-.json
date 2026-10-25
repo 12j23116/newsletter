@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1791632017257-1",
+  "id": "biotech-1792923699682-5",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Immune Cell Atlas Charts How People’s Aging Paths Diverge | Biotechnology News",
-  "excerpt": "Two people born on the same day can have immune systems that age differently. An immune cell atlas shows that a ratio between two cell types can reveal who is on a healthy or unhealthy path.\nThe post ",
-  "date": "2026-10-10",
+  "title": "<a href=\"/biotech/esmo-zentalis-already-dreaming-launchin... | Biotechnology News",
+  "excerpt": "Zentalis Pharmaceuticals has pointed to the first overall survival (OS) analysis for azenosertib as proof that the oral WEE1 tyrosine kinase inhibitor can offer a convenient oral treatment for a trick",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "immune-cell-atlas-charts-how-peoples-aging-paths-diverge",
-  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/immune-cell-atlas-charts-how-peoples-aging-paths-diverge/",
-  "sourceName": "Uduak Thomas",
+  "slug": "a-hrefbiotechesmo-zentalis-already-dreaming-launching-wee1-drug-after-",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/esmo-zentalis-already-dreaming-launching-wee1-drug-after-great-result",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "Two people born on the same day can have immune systems that age differently.  An immune cell atlas shows that a ratio between two cell types can reveal who is on a healthy or unhealthy path."
+      "text": "Zentalis Pharmaceuticals has pointed to the first overall survival (OS) analysis for azenosertib as proof that the oral WEE1 tyrosine kinase inhibitor can offer a convenient oral treatment for a tricky cancer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Immune Cell Atlas Charts How People’s Aging Paths Diverge appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Zentalis Pharmaceuticals has pointed to the first overall survival (OS) analysis for azenosertib as proof that the oral WEE1 tyrosine kinase inhibitor can offer a convenient oral treatment for a tricky cancer.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Immune Cell Atlas Charts How People’s Aging Paths Diverge — a notable development in Biotechnology",
+    "<a href=\"/biotech/esmo-zentalis-already-dreaming-launching-wee1-drug-after-great — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Uduak Thomas",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Immune Cell Atlas Charts How People’s Aging Paths Diverge",
+      "date": "2026-10-25",
+      "event": "<a href=\"/biotech/esmo-zentalis-already-dreaming-launching-wee1-drug-after-great",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "immune",
-    "atlas",
+    "biotech",
+    "zentalis",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Immune Cell Atlas Charts How People’s Aging Paths Diverge | Biotechnology News",
-  "metaDescription": "Two people born on the same day can have immune systems that age differently. An immune cell atlas shows that a ratio between two cell types can reveal who i...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, immune, cell, atlas, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/esmo-zentalis-already-dreaming-launchin... | Biotechnology News",
+  "metaDescription": "Zentalis Pharmaceuticals has pointed to the first overall survival (OS) analysis for azenosertib as proof that the oral WEE1 tyrosine kinase inhibitor can of...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, esmo, TechNanoAI, emerging tech news",
   "featured": false
 }

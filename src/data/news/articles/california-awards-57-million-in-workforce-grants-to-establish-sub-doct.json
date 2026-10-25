@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791632021943-0",
+  "id": "quantum-1792923702820-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Great Networking and a Dinner Cruise | Quantum Computing News",
-  "excerpt": "IQT’s flagship conference, Q+AI 2026 (3.0), and its one-day companion event PQC+IQT, are right around the corner, and The Quantum Dragon would like to remind you of the networking opportunities that w",
-  "date": "2026-10-10",
+  "title": "California Awards $5.7 Million in Workforce Grants to Est... | Quantum Computing News",
+  "excerpt": "The California Workforce Development Board has granted $5.74 million in Workforce Accelerator Fund 14 grants to establish sub-doctoral quantum hardware and technician pipelines. These grants aim to ad",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "great-networking-and-a-dinner-cruise",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/great-networking-and-a-dinner-cruise/",
-  "sourceName": "Brian Siegelwax",
+  "slug": "california-awards-57-million-in-workforce-grants-to-establish-sub-doct",
+  "sourceLink": "https://quantumcomputingreport.com/california-awards-5-7-million-in-workforce-grants-to-establish-sub-doctoral-quantum-hardware-and-technician-pipelines/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "IQT’s flagship conference, Q+AI 2026 (3. 0), and its one-day companion event PQC+IQT, are right around the corner, and The Quantum Dragon would like to remind you of the networking opportunities that will be afforded to us humans."
+      "text": "The California Workforce Development Board has granted $5. 74 million in Workforce Accelerator Fund 14 grants to establish sub-doctoral quantum hardware and technician pipelines."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The numerous networking functions will be topped off, in fact, by a..."
+      "text": "These grants aim to address the talent bottleneck in the quantum industry by funding programs across five educational and regional partnerships."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Great Networking and a Dinner Cruise — a notable development in Quantum Computing",
+    "California Awards $5.7 Million in Workforce Grants to Establish Sub-Doctoral Qua — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Brian Siegelwax",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Great Networking and a Dinner Cruise",
+      "date": "2026-10-25",
+      "event": "California Awards $5.7 Million in Workforce Grants to Establish Sub-Doctoral Qua",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "great",
-    "networking",
+    "california",
+    "awards",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Great Networking and a Dinner Cruise | Quantum Computing News",
-  "metaDescription": "IQT’s flagship conference, Q+AI 2026 (3.0), and its one-day companion event PQC+IQT, are right around the corner, and The Quantum Dragon would like to remind...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, great, networking, dinner, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "California Awards $5.7 Million in Workforce Grants to Est... | Quantum Computing News",
+  "metaDescription": "The California Workforce Development Board has granted $5.74 million in Workforce Accelerator Fund 14 grants to establish sub-doctoral quantum hardware and t...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, california, awards, million, TechNanoAI, emerging tech news",
+  "featured": false
 }

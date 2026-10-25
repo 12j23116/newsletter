@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1791632021154-2",
+  "id": "robotics-1792923702316-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Video Friday: Robot Decommissioning Takes a Fun Turn | Robotics News",
-  "excerpt": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few month",
-  "date": "2026-10-10",
+  "title": "Eka Robotics raises $150M to scale its vision-force-actio... | Robotics News",
+  "excerpt": "Eka Robotics is building a vision-force-action, or VFA, model to develop an intuition of physics through reinforcement learning at scale.\nThe post Eka Robotics raises $150M to scale its vision-force-a",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "video-friday-robot-decommissioning-takes-a-fun-turn",
-  "sourceLink": "https://spectrum.ieee.org/video-friday-reachy-mini-raps",
-  "sourceName": "Evan Ackerman",
+  "slug": "eka-robotics-raises-150m-to-scale-its-vision-force-action-model-for-ro",
+  "sourceLink": "https://www.therobotreport.com/eka-robotics-raises-150m-scale-vision-force-action-model-robots/",
+  "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics.  We also post a weekly calendar of upcoming robotics events for the next few months."
+      "text": "Eka Robotics is building a vision-force-action, or VFA, model to develop an intuition of physics through reinforcement learning at scale. \nThe post Eka Robotics raises $150M to scale its vision-force-action model for robots appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Please send us your events for inclusion. CoRL 2026: 9–12 November 2026, AUSTINHumanoids 2026: 6–9 December 2026, SANTA CLARA, CAEnjoy today’s videos!"
-    },
-    {
-      "type": "p",
-      "text": "It’s possible that I wasn’t the only one who thought that Figure’s recent stunt was somewhat ridiculous."
+      "text": "According to reporting from The Robot Report Staff, Eka Robotics is building a vision-force-action, or VFA, model to develop an intuition of physics through reinforcement learning at scale.\nThe post Eka Robotics raises $150M to scale its vision-force-action model for robots appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Video Friday: Robot Decommissioning Takes a Fun Turn — a notable development in Robotics",
+    "Eka Robotics raises $150M to scale its vision-force-action model for robots — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -124,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Evan Ackerman",
+      "value": "The Robot Report Staff",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Video Friday: Robot Decommissioning Takes a Fun Turn",
+      "date": "2026-10-25",
+      "event": "Eka Robotics raises $150M to scale its vision-force-action model for robots",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "video",
-    "friday",
+    "robotics",
+    "raises",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Video Friday: Robot Decommissioning Takes a Fun Turn | Robotics News",
-  "metaDescription": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upco...",
-  "keywords": "robotics, humanoid robot, automation, drones, video, friday, robot, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Eka Robotics raises $150M to scale its vision-force-actio... | Robotics News",
+  "metaDescription": "Eka Robotics is building a vision-force-action, or VFA, model to develop an intuition of physics through reinforcement learning at scale.\nThe post Eka Roboti...",
+  "keywords": "robotics, humanoid robot, automation, drones, robotics, raises, scale, TechNanoAI, emerging tech news",
+  "featured": true
 }

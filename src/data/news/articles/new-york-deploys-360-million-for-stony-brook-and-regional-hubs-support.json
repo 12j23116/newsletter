@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791632021944-3",
+  "id": "quantum-1792923702819-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Podcast with Harry Kumar, Co-founder, Director ' CCO of M... | Quantum Computing News",
-  "excerpt": "Interview with Harry Kumar, co-founder, director, and Chief Creative Officer of Moth Quantum. Moth is the company behind Quantum Backrooms, a browser game whose maze is generated on real quantum hardw",
-  "date": "2026-10-10",
+  "title": "New York Deploys $360 Million for Stony Brook and Regiona... | Quantum Computing News",
+  "excerpt": "New York State is investing $360 million in quantum technology, with $300 million for a Quantum Research and Innovation Hub at SUNY Stony Brook and $60 million for regional commercialization hubs. Thi",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "podcast-with-harry-kumar-co-founder-director-038-cco-of-moth-quantum",
-  "sourceLink": "https://quantumcomputingreport.com/podcast-with-harry-kumar-co-founder-director-cco-of-moth-quantum/",
-  "sourceName": "Doug Finke",
+  "slug": "new-york-deploys-360-million-for-stony-brook-and-regional-hubs-support",
+  "sourceLink": "https://quantumcomputingreport.com/new-york-deploys-360-million-for-stony-brook-and-regional-hubs-supported-by-1-37b-in-federal-foundry-commitments/",
+  "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Interview with Harry Kumar, co-founder, director, and Chief Creative Officer of Moth Quantum.  Moth is the company behind Quantum Backrooms, a browser game whose maze is generated on real quantum hardware."
+      "text": "New York State is investing $360 million in quantum technology, with $300 million for a Quantum Research and Innovation Hub at SUNY Stony Brook and $60 million for regional commercialization hubs.  This initiative, supported by $1."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Podcast with Harry Kumar, Co-founder, Director & CCO of Moth Quantum appeared first on Quantum Computing Report."
+      "text": "37 billion in federal funding, aims to connect the state's hardware and semiconductor assets with enterprise demand in various sectors."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Podcast with Harry Kumar, Co-founder, Director ' CCO of Moth Quantum — a notable development in Quantum Computing",
+    "New York Deploys $360 Million for Stony Brook and Regional Hubs Supported by $1. — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Doug Finke",
+      "value": "Mohamed Abdel-Kareem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Podcast with Harry Kumar, Co-founder, Director ' CCO of Moth Quantum",
+      "date": "2026-10-25",
+      "event": "New York Deploys $360 Million for Stony Brook and Regional Hubs Supported by $1.",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "podcast",
-    "harry",
+    "deploys",
+    "million",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Podcast with Harry Kumar, Co-founder, Director ' CCO of M... | Quantum Computing News",
-  "metaDescription": "Interview with Harry Kumar, co-founder, director, and Chief Creative Officer of Moth Quantum. Moth is the company behind Quantum Backrooms, a browser game wh...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, podcast, with, harry, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "New York Deploys $360 Million for Stony Brook and Regiona... | Quantum Computing News",
+  "metaDescription": "New York State is investing $360 million in quantum technology, with $300 million for a Quantum Research and Innovation Hub at SUNY Stony Brook and $60 milli...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, york, deploys, million, TechNanoAI, emerging tech news",
+  "featured": true
 }

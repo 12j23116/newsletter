@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791632015481-1",
+  "id": "ai-1792923698065-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Anthropic Cuts Live Internet Access for Internal AI Tests... | AI News",
-  "excerpt": "Anthropic on Friday said it's cutting off live internet access for all its internal evaluations following the discovery of new incidents in which its artificial intelligence (AI) models exhibited misa",
-  "date": "2026-10-10",
+  "title": "Block's new voice model sounds eerily human | AI News",
+  "excerpt": "Block said that the voice model can run locally on a MacBook M4 Max",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "anthropic-cuts-live-internet-access-for-internal-ai-tests-after-claude",
-  "sourceLink": "https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "block8217s-new-voice-model-sounds-eerily-human",
+  "sourceLink": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+  "sourceName": "Ivan Mehta",
   "body": [
     {
       "type": "p",
-      "text": "Anthropic on Friday said it's cutting off live internet access for all its internal evaluations following the discovery of new incidents in which its artificial intelligence (AI) models exhibited misaligned behavior and targeted real websites."
+      "text": "Block said that the voice model can run locally on a MacBook M4 Max"
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Anthropic on Friday said it's cutting off live internet access for all its internal evaluations following the discovery of new incidents in which its artificial intelligence (AI) models exhibited misaligned behavior and targeted real websites.\n\nThe AI company said it identified four broad categories of unintended model actions during evaluations and internal use of Claude -\n\n\n  Claude Mythos. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ivan Mehta, Block said that the voice model can run locally on a MacBook M4 Max. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits  — a notable development in AI",
+    "Block's new voice model sounds eerily human — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Ivan Mehta",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits ",
+      "date": "2026-10-25",
+      "event": "Block's new voice model sounds eerily human",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anthropic",
-    "internet",
+    "block",
+    "voice",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Anthropic Cuts Live Internet Access for Internal AI Tests... | AI News",
-  "metaDescription": "Anthropic on Friday said it's cutting off live internet access for all its internal evaluations following the discovery of new incidents in which its artific...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, cuts, live, TechNanoAI, emerging tech news",
+  "metaTitle": "Block's new voice model sounds eerily human | AI News",
+  "metaDescription": "Block said that the voice model can run locally on a MacBook M4 Max LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, block, voice, model, TechNanoAI, emerging tech news",
   "featured": false
 }

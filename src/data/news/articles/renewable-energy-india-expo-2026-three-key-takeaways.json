@@ -1,21 +1,21 @@
 {
-  "id": "energy-1791632020703-0",
+  "id": "energy-1792923701948-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Brazil’s retail electricity market opening raises credit ... | Energy Storage News",
-  "excerpt": "A study based on 88,000 consumer units participating in subscription-based solar generation schemes in Brazil has identified a 17% average monthly payment delinquency rate and 4% monthly customer chur",
-  "date": "2026-10-10",
-  "readTime": "3 min",
+  "title": "Renewable Energy India Expo 2026: Three key takeaways | Energy Storage News",
+  "excerpt": "India’s largest renewable energy trade show returned to Greater Noida, outside of Delhi, this week. At the three day event, pv magazine took in a national solar industry that has reached enormous prop",
+  "date": "2026-10-25",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "brazils-retail-electricity-market-opening-raises-credit-and-liquidity-",
-  "sourceLink": "https://www.pv-magazine.com/2026/10/10/brazils-retail-electricity-market-opening-raises-credit-and-liquidity-concerns-study-finds/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "renewable-energy-india-expo-2026-three-key-takeaways",
+  "sourceLink": "https://www.pv-magazine.com/2026/10/24/renewable-energy-india-expo-2026-three-key-takeaways/",
+  "sourceName": "Mark Hutchins",
   "body": [
     {
       "type": "p",
-      "text": "A study based on 88,000 consumer units participating in subscription-based solar generation schemes in Brazil has identified a 17% average monthly payment delinquency rate and 4% monthly customer churn.  The findings highlight potential credit, liquidity and consumer protection challenges as the country prepares to open its free electricity market to low-voltage consumers."
+      "text": "India’s largest renewable energy trade show returned to Greater Noida, outside of Delhi, this week.  At the three day event, pv magazine took in a national solar industry that has reached enormous proportions, and continues to grow with huge investments still going into building new solar installations, upgrading grids and adding, and ramping up a localized supply chain for many of the components these projects rely on."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Emiliano Bellini, A study based on 88,000 consumer units participating in subscription-based solar generation schemes in Brazil has identified a 17% average monthly payment delinquency rate and 4% monthly customer churn. The findings highlight potential credit, liquidity and consumer protection challenges as the country prepares to open its free electricity market to low-voltage consumers.\nThe post Brazil’s retail electricity market opening raises credit and liquidity concerns, study finds appeared first on pv ma. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mark Hutchins, India’s largest renewable energy trade show returned to Greater Noida, outside of Delhi, this week. At the three day event, pv magazine took in a national solar industry that has reached enormous proportions, and continues to grow with huge investments still going into building new solar installations, upgrading grids and adding, and ramping up a localized supply chain for many of the components these projects rely on.\nThe post Renewable Energy India Expo 2026: Three key takeaways appeared first. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Brazil’s retail electricity market opening raises credit and liquidity concerns, — a notable development in Energy Storage",
+    "Renewable Energy India Expo 2026: Three key takeaways — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Mark Hutchins",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Brazil’s retail electricity market opening raises credit and liquidity concerns,",
+      "date": "2026-10-25",
+      "event": "Renewable Energy India Expo 2026: Three key takeaways",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "brazil",
-    "retail",
+    "renewable",
+    "energy",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Brazil’s retail electricity market opening raises credit ... | Energy Storage News",
-  "metaDescription": "A study based on 88,000 consumer units participating in subscription-based solar generation schemes in Brazil has identified a 17% average monthly payment de...",
-  "keywords": "energy storage, battery, solid-state, grid storage, brazil, retail, electricity, TechNanoAI, emerging tech news",
+  "metaTitle": "Renewable Energy India Expo 2026: Three key takeaways | Energy Storage News",
+  "metaDescription": "India’s largest renewable energy trade show returned to Greater Noida, outside of Delhi, this week. At the three day event, pv magazine took in a national so...",
+  "keywords": "energy storage, battery, solid-state, grid storage, renewable, energy, india, TechNanoAI, emerging tech news",
   "featured": true
 }

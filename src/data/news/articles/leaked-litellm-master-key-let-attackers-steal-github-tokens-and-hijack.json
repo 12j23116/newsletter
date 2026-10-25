@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1791632015996-5",
+  "id": "cybersecurity-1792923698327-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Hackers abuse Google Ads, Bing redirects to push Claude C... | Cybersecurity News",
-  "excerpt": "Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFix attacks. [...]",
-  "date": "2026-10-10",
+  "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Toke... | Cybersecurity News",
+  "excerpt": "LiteLLM on Friday revealed that an Agent Platform master key accidentally published to a public GitHub repository in late May 2026 ultimately allowed the threat actor to push a malicious version of th",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attack",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "leaked-litellm-master-key-let-attackers-steal-github-tokens-and-hijack",
+  "sourceLink": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFix attacks.  [..."
+      "text": "LiteLLM on Friday revealed that an Agent Platform master key accidentally published to a public GitHub repository in late May 2026 ultimately allowed the threat actor to push a malicious version of the popular Python package."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFix attacks. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), LiteLLM on Friday revealed that an Agent Platform master key accidentally published to a public GitHub repository in late May 2026 ultimately allowed the threat actor to push a malicious version of the popular Python package.\n\n\"On May 27, 2026, a configuration file was committed to the public LiteLLM-Labs/lite-harness repository which inadvertently contained the master key to a deployment of. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks — a notable development in Cybersecurity",
+    "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release P — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
+      "date": "2026-10-25",
+      "event": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release P",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "hackers",
-    "abuse",
+    "leaked",
+    "litellm",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hackers abuse Google Ads, Bing redirects to push Claude C... | Cybersecurity News",
-  "metaDescription": "Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFi...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, abuse, google, TechNanoAI, emerging tech news",
+  "metaTitle": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Toke... | Cybersecurity News",
+  "metaDescription": "LiteLLM on Friday revealed that an Agent Platform master key accidentally published to a public GitHub repository in late May 2026 ultimately allowed the thr...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, leaked, litellm, master, TechNanoAI, emerging tech news",
   "featured": false
 }

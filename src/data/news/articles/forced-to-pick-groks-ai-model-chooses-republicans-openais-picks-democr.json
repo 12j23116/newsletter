@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791632015482-3",
+  "id": "ai-1792923698066-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "The maker of non-text AI model Jev valued at $7.5B just w... | AI News",
-  "excerpt": "What has users and large corporations so excited about Jev is TypeSafe’s claim that it works significantly faster and uses far fewer tokens than LLMs.",
-  "date": "2026-10-10",
+  "title": "Forced to pick, Grok’s AI model chooses Republicans. Open... | AI News",
+  "excerpt": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "the-maker-of-non-text-ai-model-jev-valued-at-75b-just-weeks-after-laun",
-  "sourceLink": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
-  "sourceName": "Marina Temkin",
+  "slug": "forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democr",
+  "sourceLink": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+  "sourceName": "Rebecca Bellan",
   "body": [
     {
       "type": "p",
-      "text": "What has users and large corporations so excited about Jev is TypeSafe’s claim that it works significantly faster and uses far fewer tokens than LLMs."
+      "text": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Marina Temkin, What has users and large corporations so excited about Jev is TypeSafe’s claim that it works significantly faster and uses far fewer tokens than LLMs.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Rebecca Bellan, A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The maker of non-text AI model Jev valued at $7.5B just weeks after launch — a notable development in AI",
+    "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats. — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Marina Temkin",
+      "value": "Rebecca Bellan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
+      "date": "2026-10-25",
+      "event": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
       "current": true
     },
     {
@@ -191,7 +191,7 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "maker",
+    "forced",
     "model",
     "emerging tech"
   ],
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The maker of non-text AI model Jev valued at $7.5B just w... | AI News",
-  "metaDescription": "What has users and large corporations so excited about Jev is TypeSafe’s claim that it works significantly faster and uses far fewer tokens than LLMs.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, maker, text, model, TechNanoAI, emerging tech news",
+  "metaTitle": "Forced to pick, Grok’s AI model chooses Republicans. Open... | AI News",
+  "metaDescription": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more t...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, forced, pick, grok, TechNanoAI, emerging tech news",
   "featured": false
 }

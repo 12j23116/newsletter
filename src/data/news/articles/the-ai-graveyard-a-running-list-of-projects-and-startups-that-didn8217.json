@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791632015481-0",
+  "id": "ai-1792923698065-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "The Third-Party Agent Problem: Why Security Built for AI ... | AI News",
-  "excerpt": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI. About 282 of them sit behind single sign-on. The other thousand are invisible to i",
-  "date": "2026-10-10",
+  "title": "The AI graveyard: a running list of projects and startups... | AI News",
+  "excerpt": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+  "date": "2026-10-25",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "the-third-party-agent-problem-why-security-built-for-ai-you-chose-miss",
-  "sourceLink": "https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "the-ai-graveyard-a-running-list-of-projects-and-startups-that-didn8217",
+  "sourceLink": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+  "sourceName": "Lauren Forristal",
   "body": [
     {
       "type": "p",
-      "text": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI.  About 282 of them sit behind single sign-on."
+      "text": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The other thousand are invisible to identity infrastructure by default, not because anyone hid them, but because an identity stack can only govern what authenticates through it, and most agents never do."
+      "text": "According to reporting from Lauren Forristal, From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Ag — a notable development in AI",
+    "The AI graveyard: a running list of projects and startups that didn't make it — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Lauren Forristal",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-10",
-      "event": "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Ag",
+      "date": "2026-10-25",
+      "event": "The AI graveyard: a running list of projects and startups that didn't make it",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "third",
-    "party",
+    "graveyard",
+    "running",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The Third-Party Agent Problem: Why Security Built for AI ... | AI News",
-  "metaDescription": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI. About 282 of them sit behind single sig...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, third, party, agent, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "The AI graveyard: a running list of projects and startups... | AI News",
+  "metaDescription": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, graveyard, running, list, TechNanoAI, emerging tech news",
+  "featured": false
 }
