@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791719225293-1",
+  "id": "ai-1793015410261-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Microsoft’s Satya Nadella says AI models need an ‘emergen... | AI News",
-  "excerpt": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
-  "date": "2026-10-11",
+  "title": "Between alerts: What Attackers Do in the Spaces Ordinary ... | AI News",
+  "excerpt": "Every SOC struggles with a pile of alerts. Very few of those alerts explain how an attack started or how it progressed. Network data, like that from a network detection and response (NDR) platform, co",
+  "date": "2026-10-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "microsofts-satya-nadella-says-ai-models-need-an-emergency-brake",
-  "sourceLink": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
-  "sourceName": "Anthony Ha",
+  "slug": "between-alerts-what-attackers-do-in-the-spaces-ordinary-detection-miss",
+  "sourceLink": "https://thehackernews.com/2026/10/between-alerts-what-attackers-do-in.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI."
+      "text": "Every SOC struggles with a pile of alerts.  Very few of those alerts explain how an attack started or how it progressed."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "Network data, like that from a network detection and response (NDR) platform, connects individual alerts into one timeline, and it feeds the defensive systems that can tie all events together into one coordinated view."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’ — a notable development in AI",
+    "Between alerts: What Attackers Do in the Spaces Ordinary Detection Misses — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-11",
-      "event": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+      "date": "2026-10-26",
+      "event": "Between alerts: What Attackers Do in the Spaces Ordinary Detection Misses",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "microsoft",
-    "satya",
+    "between",
+    "alerts",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Microsoft’s Satya Nadella says AI models need an ‘emergen... | AI News",
-  "metaDescription": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, microsoft, satya, nadella, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Between alerts: What Attackers Do in the Spaces Ordinary ... | AI News",
+  "metaDescription": "Every SOC struggles with a pile of alerts. Very few of those alerts explain how an attack started or how it progressed. Network data, like that from a networ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, between, alerts, what, TechNanoAI, emerging tech news",
+  "featured": true
 }

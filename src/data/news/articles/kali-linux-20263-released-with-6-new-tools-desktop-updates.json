@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1791719226126-3",
+  "id": "cybersecurity-1793015410679-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Criminal IP Introduces AITEM as the Next Evolution of Att... | Cybersecurity News",
-  "excerpt": "Traditional attack surface management helps organizations discover exposed assets, but visibility alone is not enough to address threats. Criminal IP introduces AITEM, an AI-powered approach that conn",
-  "date": "2026-10-11",
+  "title": "Kali Linux 2026.3 released with 6 new tools, desktop updates | Cybersecurity News",
+  "excerpt": "Kali Linux has released version 2026.3, its third release this year, featuring six new hacking tools, desktop environment improvements, refreshed build scripts, and more. [...]",
+  "date": "2026-10-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-m",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-management/",
-  "sourceName": "Sponsored by Criminal IP",
+  "slug": "kali-linux-20263-released-with-6-new-tools-desktop-updates",
+  "sourceLink": "https://www.bleepingcomputer.com/news/linux/kali-linux-20263-released-with-6-new-tools-desktop-updates/",
+  "sourceName": "Sergiu Gatlan",
   "body": [
     {
       "type": "p",
-      "text": "Traditional attack surface management helps organizations discover exposed assets, but visibility alone is not enough to address threats.  Criminal IP introduces AITEM, an AI-powered approach that connects exposure discovery with investigation, risk prioritization, and response."
+      "text": "Kali Linux has released version 2026. 3, its third release this year, featuring six new hacking tools, desktop environment improvements, refreshed build scripts, and more."
     },
     {
       "type": "p",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management — a notable development in Cybersecurity",
+    "Kali Linux 2026.3 released with 6 new tools, desktop updates — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Sponsored by Criminal IP",
+      "value": "Sergiu Gatlan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-11",
-      "event": "Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management",
+      "date": "2026-10-26",
+      "event": "Kali Linux 2026.3 released with 6 new tools, desktop updates",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "criminal",
-    "introduces",
+    "linux",
+    "released",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Criminal IP Introduces AITEM as the Next Evolution of Att... | Cybersecurity News",
-  "metaDescription": "Traditional attack surface management helps organizations discover exposed assets, but visibility alone is not enough to address threats. Criminal IP introdu...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, criminal, introduces, aitem, TechNanoAI, emerging tech news",
+  "metaTitle": "Kali Linux 2026.3 released with 6 new tools, desktop updates | Cybersecurity News",
+  "metaDescription": "Kali Linux has released version 2026.3, its third release this year, featuring six new hacking tools, desktop environment improvements, refreshed build scrip...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, kali, linux, released, TechNanoAI, emerging tech news",
   "featured": false
 }

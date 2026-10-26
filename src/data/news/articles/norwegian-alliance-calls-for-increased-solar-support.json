@@ -1,21 +1,21 @@
 {
-  "id": "energy-1791719231628-0",
+  "id": "energy-1793015415479-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Scientists may have found a shortcut to fusion energy | Energy Storage News",
-  "excerpt": "Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma first, then increasing its density. Their ",
-  "date": "2026-10-11",
+  "title": "Norwegian alliance calls for increased solar support | Energy Storage News",
+  "excerpt": "Trade union, environmental and business organisations in Norway have signed a joint letter demanding the Norwegian government backs five measures to support the country’s solar industry.\nThe post Norw",
+  "date": "2026-10-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "scientists-may-have-found-a-shortcut-to-fusion-energy",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261008005242.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "norwegian-alliance-calls-for-increased-solar-support",
+  "sourceLink": "https://www.pv-magazine.com/2026/10/26/norwegian-alliance-calls-for-increased-solar-support/",
+  "sourceName": "Patrick Jowett",
   "body": [
     {
       "type": "p",
-      "text": "Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma first, then increasing its density.  Their calculations could help future reactors reach self-sustaining fusion with far less energy while avoiding hidden problems that make ignition harder."
+      "text": "Trade union, environmental and business organisations in Norway have signed a joint letter demanding the Norwegian government backs five measures to support the country’s solar industry. \nThe post Norwegian alliance calls for increased solar support appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma first, then increasing its density. Their calculations could help future reactors reach self-sustaining fusion with far less energy while avoiding hidden problems that make ignition harder.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Patrick Jowett, Trade union, environmental and business organisations in Norway have signed a joint letter demanding the Norwegian government backs five measures to support the country’s solar industry.\nThe post Norwegian alliance calls for increased solar support appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Scientists may have found a shortcut to fusion energy — a notable development in Energy Storage",
+    "Norwegian alliance calls for increased solar support — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Patrick Jowett",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-11",
-      "event": "Scientists may have found a shortcut to fusion energy",
+      "date": "2026-10-26",
+      "event": "Norwegian alliance calls for increased solar support",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "scientists",
-    "found",
+    "norwegian",
+    "alliance",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Scientists may have found a shortcut to fusion energy | Energy Storage News",
-  "metaDescription": "Princeton Plasma Physics Laboratory may have found a dramatically more efficient route to fusion energy by reversing the traditional approach: heating plasma...",
-  "keywords": "energy storage, battery, solid-state, grid storage, scientists, have, found, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Norwegian alliance calls for increased solar support | Energy Storage News",
+  "metaDescription": "Trade union, environmental and business organisations in Norway have signed a joint letter demanding the Norwegian government backs five measures to support ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, norwegian, alliance, calls, TechNanoAI, emerging tech news",
+  "featured": false
 }

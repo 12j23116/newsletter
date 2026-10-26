@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1791719233672-0",
+  "id": "quantum-1793015416519-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
   "title": "IQT Sunday Edition | Quantum Computing News",
   "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
-  "date": "2026-10-11",
+  "date": "2026-10-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
   "slug": "iqt-sunday-edition",
-  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/iqt-sunday-edition-7/",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/iqt-sunday-edition-9/",
   "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies.  How AI Can Help Defend Against Future Quantum Attacks</strong..."
+      "text": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies.  Quantum Computing Stocks Face a 2028 Reality Check M..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Siegelwax, Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies. How AI Can Help Defend Against Future Quantum Attacks</strong.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Brian Siegelwax, Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media coverage of quantum technologies. Quantum Computing Stocks Face a 2028 Reality Check M.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-11",
+      "date": "2026-10-26",
       "event": "IQT Sunday Edition",
       "current": true
     },

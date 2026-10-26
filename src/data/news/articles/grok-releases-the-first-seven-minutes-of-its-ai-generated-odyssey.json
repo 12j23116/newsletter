@@ -1,21 +1,21 @@
 {
-  "id": "ai-1791719225293-2",
+  "id": "ai-1793015410264-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Apple discloses deal to hire team and license tech from p... | AI News",
-  "excerpt": "Is Apple hoping to get into the AI-generated podcast business?",
-  "date": "2026-10-11",
+  "title": "Grok releases the first seven minutes of its AI-generated... | AI News",
+  "excerpt": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.",
+  "date": "2026-10-26",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-p",
-  "sourceLink": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+  "slug": "grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey",
+  "sourceLink": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
   "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Is Apple hoping to get into the AI-generated podcast business?"
+      "text": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, Is Apple hoping to get into the AI-generated podcast business?. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Apple discloses deal to hire team and license tech from personalized podcast sta — a notable development in AI",
+    "Grok releases the first seven minutes of its AI-generated ‘Odyssey’ — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-11",
-      "event": "Apple discloses deal to hire team and license tech from personalized podcast sta",
+      "date": "2026-10-26",
+      "event": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "apple",
-    "discloses",
+    "releases",
+    "first",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Apple discloses deal to hire team and license tech from p... | AI News",
-  "metaDescription": "Is Apple hoping to get into the AI-generated podcast business? LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, apple, discloses, deal, TechNanoAI, emerging tech news",
+  "metaTitle": "Grok releases the first seven minutes of its AI-generated... | AI News",
+  "metaDescription": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest. LLMs, agents & the race to AGI. Latest AI developments and analy",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, grok, releases, first, TechNanoAI, emerging tech news",
   "featured": false
 }
