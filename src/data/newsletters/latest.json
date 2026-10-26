@@ -1,113 +1,113 @@
 {
-  "issue": 94,
-  "date": "2026-10-19",
-  "subject": "This Week: Energy Storage, Cybersecurity & more — October 19, 2026",
+  "issue": 95,
+  "date": "2026-10-26",
+  "subject": "This Week: Cybersecurity, Space & more — October 26, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "energy",
     "cybersecurity",
-    "biotech",
-    "robotics",
     "space",
-    "ai",
-    "av"
+    "robotics",
+    "energy",
+    "biotech",
+    "quantum",
+    "ai"
   ],
   "articles": [
     {
-      "title": "Bangladesh plans 70 MW solar plant at coal power station | Energy Storage News",
-      "slug": "bangladesh-plans-70-mw-solar-plant-at-coal-power-station",
-      "topic": "energy",
-      "excerpt": "The European Investment Bank (EIB) is expected to help finance a planned 70 MW solar power plant at Bangladesh’s Matarbari coal-fired power station, with commissioning targeted for December 2028.\nThe ",
-      "url": "https://technanoai.com/news/bangladesh-plans-70-mw-solar-plant-at-coal-power-station",
-      "date": "2026-10-19"
-    },
-    {
-      "title": "Evolving role of energy storage as infrastructure demands... | Energy Storage News",
-      "slug": "evolving-role-of-energy-storage-as-infrastructure-demands-that-technol",
-      "topic": "energy",
-      "excerpt": "Energy storage is becoming an indispensable new-type power system infrastructure, CATL CEO and chairman Robin Zeng said in an industry speech last week.",
-      "url": "https://technanoai.com/news/evolving-role-of-energy-storage-as-infrastructure-demands-that-technol",
-      "date": "2026-10-19"
-    },
-    {
-      "title": "Anthropic Acquires Confidential AI Startup Opaque Systems | Cybersecurity News",
-      "slug": "anthropic-acquires-confidential-ai-startup-opaque-systems",
+      "title": "Kali Linux 2026.3 released with 6 new tools, desktop updates | Cybersecurity News",
+      "slug": "kali-linux-20263-released-with-6-new-tools-desktop-updates",
       "topic": "cybersecurity",
-      "excerpt": "Opaque Systems has developed technology that lets AI systems use sensitive data while keeping it protected by the underlying hardware.\nThe post Anthropic Acquires Confidential AI Startup Opaque System",
-      "url": "https://technanoai.com/news/anthropic-acquires-confidential-ai-startup-opaque-systems",
-      "date": "2026-10-19"
+      "excerpt": "Kali Linux has released version 2026.3, its third release this year, featuring six new hacking tools, desktop environment improvements, refreshed build scripts, and more. [...]",
+      "url": "https://technanoai.com/news/kali-linux-20263-released-with-6-new-tools-desktop-updates",
+      "date": "2026-10-26"
     },
     {
-      "title": "Exploited Fortinet Bug Linked to Stealthy FortiGate Impla... | Cybersecurity News",
-      "slug": "exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom",
+      "title": "Mythos 5 Ignored Real-World Harm in July Attack | Cybersecurity News",
+      "slug": "mythos-5-ignored-real-world-harm-in-july-attack",
       "topic": "cybersecurity",
-      "excerpt": "The persistent, stealthy FortiGate implant was deployed against a telecommunications organization.\nThe post Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack appeared first o",
-      "url": "https://technanoai.com/news/exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom",
-      "date": "2026-10-19"
+      "excerpt": "The model engaged in severe overreach and dishonesty, creating fake identities and submitting malicious code on GitHub.\nThe post Mythos 5 Ignored Real-World Harm in July Attack appeared first on Secur",
+      "url": "https://technanoai.com/news/mythos-5-ignored-real-world-harm-in-july-attack",
+      "date": "2026-10-26"
     },
     {
-      "title": "<a href=\"/biotech/abbvies-next-gen-crohns-combination-bea... | Biotechnology News",
-      "slug": "a-hrefbiotechabbvies-next-gen-crohns-combination-beats-skyrizi-phase-2",
-      "topic": "biotech",
-      "excerpt": "AbbVie’s next-generation Crohn’s disease combination candidate has beaten Skyrizi in a midphase clinical trial.",
-      "url": "https://technanoai.com/news/a-hrefbiotechabbvies-next-gen-crohns-combination-beats-skyrizi-phase-2",
-      "date": "2026-10-19"
+      "title": "2026 October 26 – M42: The Great Nebula in Orion | Space Exploration News",
+      "slug": "2026-october-26-m42-the-great-nebula-in-orion",
+      "topic": "space",
+      "excerpt": "APOD Science APOD 2026 October 26 – M42: The… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a dif",
+      "url": "https://technanoai.com/news/2026-october-26-m42-the-great-nebula-in-orion",
+      "date": "2026-10-26"
     },
     {
-      "title": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-cr... | Biotechnology News",
-      "slug": "a-hrefbiotechchina-looks-ban-foreign-acquisitions-critical-biopharma-p",
-      "topic": "biotech",
-      "excerpt": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that",
-      "url": "https://technanoai.com/news/a-hrefbiotechchina-looks-ban-foreign-acquisitions-critical-biopharma-p",
-      "date": "2026-10-19"
+      "title": "APOD: 2026 October 25 – Dark Matter in a Simulated Universe | Space Exploration News",
+      "slug": "apod-2026-october-25-dark-matter-in-a-simulated-universe",
+      "topic": "space",
+      "excerpt": "APOD Science APOD APOD: 2026 October 25 – Dark… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
+      "url": "https://technanoai.com/news/apod-2026-october-25-dark-matter-in-a-simulated-universe",
+      "date": "2026-10-26"
     },
     {
-      "title": "How to choose a BLDC motor for robotic arms and mobile ro... | Robotics News",
-      "slug": "how-to-choose-a-bldc-motor-for-robotic-arms-and-mobile-robots",
+      "title": "Scientists discover a hidden flaw that challenges 40 year... | Robotics News",
+      "slug": "scientists-discover-a-hidden-flaw-that-challenges-40-years-of-supercon",
       "topic": "robotics",
-      "excerpt": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to choose a BLDC motor for robotic arms and mob",
-      "url": "https://technanoai.com/news/how-to-choose-a-bldc-motor-for-robotic-arms-and-mobile-robots",
-      "date": "2026-10-19"
+      "excerpt": "A superconducting material studied for 40 years has turned out to be far more complex than scientists believed. Advanced 3D imaging revealed a hidden patchwork of crystal structures, with unusually wi",
+      "url": "https://technanoai.com/news/scientists-discover-a-hidden-flaw-that-challenges-40-years-of-supercon",
+      "date": "2026-10-26"
     },
     {
-      "title": "Falcon 9 set to launch Bandwagon-5 rideshare mission from... | Space Exploration News",
-      "slug": "falcon-9-set-to-launch-bandwagon-5-rideshare-mission-from-florida",
-      "topic": "space",
-      "excerpt": "Following on from the successful Transporter 18 mission at the beginning of the month, SpaceX’s'\nThe post Falcon 9 set to launch Bandwagon-5 rideshare mission from Florida appeared first on NASASpaceF",
-      "url": "https://technanoai.com/news/falcon-9-set-to-launch-bandwagon-5-rideshare-mission-from-florida",
-      "date": "2026-10-19"
+      "title": "Teradyne Robotics partners with Sereact to scale physical... | Robotics News",
+      "slug": "teradyne-robotics-partners-with-sereact-to-scale-physical-ai-in-retail",
+      "topic": "robotics",
+      "excerpt": "Sereact and Teradyne have already shipped hundreds of UR robots in dual-arm systems to live customer sites across Europe.\nThe post Teradyne Robotics partners with Sereact to scale physical AI in retai",
+      "url": "https://technanoai.com/news/teradyne-robotics-partners-with-sereact-to-scale-physical-ai-in-retail",
+      "date": "2026-10-26"
     },
     {
-      "title": "Oct. 29: Applying AI/SI to the GEOINT Mission | Space Exploration News",
-      "slug": "oct-29-applying-aisi-to-the-geoint-mission",
-      "topic": "space",
-      "excerpt": "Join us for a conversation on how machine learning is transforming the GEOINT mission across different markets\nThe post Oct. 29: Applying AI/SI to the GEOINT Mission appeared first on SpaceNews.",
-      "url": "https://technanoai.com/news/oct-29-applying-aisi-to-the-geoint-mission",
-      "date": "2026-10-19"
+      "title": "Citicore secures $552 million for 900 MW solar, 120 MWh s... | Energy Storage News",
+      "slug": "citicore-secures-552-million-for-900-mw-solar-120-mwh-storage-portfoli",
+      "topic": "energy",
+      "excerpt": "Bank of the Philippine Islands, Land Bank of the Philippines and Development Bank of the Philippines have provided PHP 35.014 billion ($552 million) in financing for a portfolio of five solar projects",
+      "url": "https://technanoai.com/news/citicore-secures-552-million-for-900-mw-solar-120-mwh-storage-portfoli",
+      "date": "2026-10-26"
     },
     {
-      "title": "Anthropic says it’s committing 5% of its shares to a ‘pub... | AI News",
-      "slug": "anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund",
+      "title": "Czech ministry proposes storage capacity auctions to 2027 | Energy Storage News",
+      "slug": "czech-ministry-proposes-storage-capacity-auctions-to-2027",
+      "topic": "energy",
+      "excerpt": "The Czech government has proposed changes to its new capacity mechanism, which is open to battery storage, including moving two supplementary auctions from 2026 to 2027, a year later than prospective ",
+      "url": "https://technanoai.com/news/czech-ministry-proposes-storage-capacity-auctions-to-2027",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "<a href=\"/biotech/bms-reports-patient-death-ms-trial-not-... | Biotechnology News",
+      "slug": "a-hrefbiotechbms-reports-patient-death-ms-trial-not-related-earlier-zo",
+      "topic": "biotech",
+      "excerpt": "Bristol Myers Squibb has shared more details with Fierce about the death of a patient who received the pharma's investigational CAR-T in a multiple sclerosis trial.",
+      "url": "https://technanoai.com/news/a-hrefbiotechbms-reports-patient-death-ms-trial-not-related-earlier-zo",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "<a href=\"/biotech/esmo-az-exec-insists-ph-3-adc-data-robu... | Biotechnology News",
+      "slug": "a-hrefbiotechesmo-az-exec-insists-ph-3-adc-data-robust-enough-approval",
+      "topic": "biotech",
+      "excerpt": "An AstraZeneca executive was adamant that detailed data from a phase 3 study of the pharma’s next-generation antibody-drug conjugate are “robust” enough to take to regulators, despite the trial failin",
+      "url": "https://technanoai.com/news/a-hrefbiotechesmo-az-exec-insists-ph-3-adc-data-robust-enough-approval",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "IQT Sunday Edition | Quantum Computing News",
+      "slug": "iqt-sunday-edition",
+      "topic": "quantum",
+      "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
+      "url": "https://technanoai.com/news/iqt-sunday-edition",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "Between alerts: What Attackers Do in the Spaces Ordinary ... | AI News",
+      "slug": "between-alerts-what-attackers-do-in-the-spaces-ordinary-detection-miss",
       "topic": "ai",
-      "excerpt": "Anthropic said that it will commit 5% of its shares to the fund.",
-      "url": "https://technanoai.com/news/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund",
-      "date": "2026-10-19"
-    },
-    {
-      "title": "Disney agrees to hire the majority of Character.AI’s work... | AI News",
-      "slug": "disney-agrees-to-hire-the-majority-of-characterais-workforce",
-      "topic": "ai",
-      "excerpt": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with",
-      "url": "https://technanoai.com/news/disney-agrees-to-hire-the-majority-of-characterais-workforce",
-      "date": "2026-10-19"
-    },
-    {
-      "title": "TechCrunch Mobility: Rivian's next act | Autonomous Vehicles News",
-      "slug": "techcrunch-mobility-rivian8217s-next-act",
-      "topic": "av",
-      "excerpt": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
-      "url": "https://technanoai.com/news/techcrunch-mobility-rivian8217s-next-act",
-      "date": "2026-10-19"
+      "excerpt": "Every SOC struggles with a pile of alerts. Very few of those alerts explain how an attack started or how it progressed. Network data, like that from a network detection and response (NDR) platform, co",
+      "url": "https://technanoai.com/news/between-alerts-what-attackers-do-in-the-spaces-ordinary-detection-miss",
+      "date": "2026-10-26"
     }
   ]
 }
