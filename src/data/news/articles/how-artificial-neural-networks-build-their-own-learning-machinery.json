@@ -1,11 +1,11 @@
 {
-  "id": "bci-1791974985630-0",
+  "id": "bci-1793275006562-5",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "How artificial neural networks build their own learning m... | Brain-Computer Interfaces News",
   "excerpt": "Machine-learning networks can learn without detailed instructions from a designer. Those that do may offer insight into how the brain reorganizes itself during learning.",
-  "date": "2026-10-14",
+  "date": "2026-10-29",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-29",
       "event": "How artificial neural networks build their own learning machinery",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "How artificial neural networks build their own learning m... | Brain-Computer Interfaces News",
   "metaDescription": "Machine-learning networks can learn without detailed instructions from a designer. Those that do may offer insight into how the brain reorganizes itself duri...",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, artificial, neural, networks, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
