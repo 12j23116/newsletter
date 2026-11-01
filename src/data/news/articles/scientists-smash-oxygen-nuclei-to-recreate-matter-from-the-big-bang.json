@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1792230785243-2",
+  "id": "robotics-1793535410674-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Video Friday: When Two Robots Become One | Robotics News",
-  "excerpt": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few month",
-  "date": "2026-10-17",
+  "title": "Scientists smash oxygen nuclei to recreate matter from th... | Robotics News",
+  "excerpt": "Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light. The surprising results show that this exotic substance can",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "video-friday-when-two-robots-become-one",
-  "sourceLink": "https://spectrum.ieee.org/video-friday-reconfigurable-robots",
-  "sourceName": "Evan Ackerman",
+  "slug": "scientists-smash-oxygen-nuclei-to-recreate-matter-from-the-big-bang",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261030002935.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics.  We also post a weekly calendar of upcoming robotics events for the next few months."
+      "text": "Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light.  The surprising results show that this exotic substance can form in smaller, lower-energy collisions than previously demonstrated, challenging the known boundaries of early-universe physics."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Please send us your events for inclusion. CoRL 2026: 9–12 November 2026, AUSTINHumanoids 2026: 6–9 December 2026, SANTA CLARA, CAEnjoy today’s videos!"
-    },
-    {
-      "type": "p",
-      "text": "When one robot loves another robot very much, and they’re connected by a wire, they can get together and make a brand new robot!  SFW."
+      "text": "According to reporting from sciencedaily.com, Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light. The surprising results show that this exotic substance can form in smaller, lower-energy collisions than previously demonstrated, challenging the known boundaries of early-universe physics.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Video Friday: When Two Robots Become One — a notable development in Robotics",
+    "Scientists smash oxygen nuclei to recreate matter from the Big Bang — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -124,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Evan Ackerman",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "Video Friday: When Two Robots Become One",
+      "date": "2026-11-01",
+      "event": "Scientists smash oxygen nuclei to recreate matter from the Big Bang",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "video",
-    "friday",
+    "scientists",
+    "smash",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Video Friday: When Two Robots Become One | Robotics News",
-  "metaDescription": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upco...",
-  "keywords": "robotics, humanoid robot, automation, drones, video, friday, when, TechNanoAI, emerging tech news",
+  "metaTitle": "Scientists smash oxygen nuclei to recreate matter from th... | Robotics News",
+  "metaDescription": "Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light. The surprising ...",
+  "keywords": "robotics, humanoid robot, automation, drones, scientists, smash, oxygen, TechNanoAI, emerging tech news",
   "featured": false
 }

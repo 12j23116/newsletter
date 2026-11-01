@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1792230780674-5",
+  "id": "cybersecurity-1793535405292-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "UAT-11985 Uses Fake Event Invites to Target Taiwan Resear... | Cybersecurity News",
-  "excerpt": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) spear-phishing campaign that has targeted individuals affiliated with Taiwan research organizations to direct vi",
-  "date": "2026-10-17",
+  "title": "Northflank security breach leads to abuse of customers' A... | Cybersecurity News",
+  "excerpt": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API key",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "uat-11985-uses-fake-event-invites-to-target-taiwan-research-affiliates",
-  "sourceLink": "https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+  "sourceName": "Lawrence Abrams",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) spear-phishing campaign that has targeted individuals affiliated with Taiwan research organizations to direct victims to an adversary-in-the-middle (AitM) phishing framework designed to harvest their Google account credentials and multi-factor authentication (MFA) codes."
+      "text": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) spear-phishing campaign that has targeted individuals affiliated with Taiwan research organizations to direct victims to an adversary-in-the-middle (AitM) phishing framework designed to harvest their Google account credentials and multi-factor authentication (MFA) codes.\n\nThe activity is being tracked by. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lawrence Abrams, Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Goog — a notable development in Cybersecurity",
+    "Northflank security breach leads to abuse of customers' AI API keys — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Lawrence Abrams",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Goog",
+      "date": "2026-11-01",
+      "event": "Northflank security breach leads to abuse of customers' AI API keys",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "event",
-    "invites",
+    "northflank",
+    "security",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "UAT-11985 Uses Fake Event Invites to Target Taiwan Resear... | Cybersecurity News",
-  "metaDescription": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) spear-phishing campaign that has targeted individuals affiliated with...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, uses, fake, event, TechNanoAI, emerging tech news",
+  "metaTitle": "Northflank security breach leads to abuse of customers' A... | Cybersecurity News",
+  "metaDescription": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led t...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, northflank, security, breach, TechNanoAI, emerging tech news",
   "featured": false
 }

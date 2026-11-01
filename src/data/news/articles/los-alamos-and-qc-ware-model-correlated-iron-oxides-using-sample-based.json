@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792230786037-3",
+  "id": "quantum-1793535411718-4",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "MIT Bengaluru Inaugurates Q-HUB@MAHE and Deploys Quantrol... | Quantum Computing News",
-  "excerpt": "Manipal Institute of Technology (MIT Bengaluru) has inaugurated the Manipal House of Quantum (Q-HUB@MAHE) in Bengaluru, India, on October 13, 2026. This facility features QuantrolOx’s VIDYAQAR open-ar",
-  "date": "2026-10-17",
+  "title": "Los Alamos and QC Ware Model Correlated Iron Oxides Using... | Quantum Computing News",
+  "excerpt": "Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal oxides. They used Sample-based Quantum Diagon",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "mit-bengaluru-inaugurates-q-hubmahe-and-deploys-quantrolox8217s-open-a",
-  "sourceLink": "https://quantumcomputingreport.com/mit-bengaluru-inaugurates-q-hubmahe-and-deploys-quantroloxs-open-architecture-vidyaqar-quantum-system/",
+  "slug": "los-alamos-and-qc-ware-model-correlated-iron-oxides-using-sample-based",
+  "sourceLink": "https://quantumcomputingreport.com/los-alamos-and-qc-ware-model-correlated-iron-oxides-using-sample-based-quantum-diagonalization-on-ibm-hardware/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Manipal Institute of Technology (MIT Bengaluru) has inaugurated the Manipal House of Quantum (Q-HUB@MAHE) in Bengaluru, India, on October 13, 2026.  This facility features QuantrolOx’s VIDYAQAR open-architecture quantum system, a 25-qubit-capable dilution refrigeration platform that is part of a national roadmap to scale to over 1,000 qubits."
+      "text": "Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal oxides.  They used Sample-based Quantum Diagonalization (SQD) on IBM Quantum hardware, coupled with ab initio-informed d–p tight-binding models, to achieve chemical accuracy in modeling diatomic iron monoxide (FeO) and rhombic iron oxide dimers (Fe2O2)."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Manipal Institute of Technology (MIT Bengaluru) has inaugurated the Manipal House of Quantum (Q-HUB@MAHE) in Bengaluru, India, on October 13, 2026. This facility features QuantrolOx’s VIDYAQAR open-architecture quantum system, a 25-qubit-capable dilution refrigeration platform that is part of a national roadmap to scale to over 1,000 qubits. The initiative aims to train 100 quantum engineers by December 2026 and allows researchers to test and benchmark quantum components using custom Python work. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal oxides. They used Sample-based Quantum Diagonalization (SQD) on IBM Quantum hardware, coupled with ab initio-informed d–p tight-binding models, to achieve chemical accuracy in modeling diatomic iron monoxide (FeO) and rhombic iron oxide dimers (Fe2O2). This method successfully recovered experimental ground states and outperformed traditional c. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "MIT Bengaluru Inaugurates Q-HUB@MAHE and Deploys QuantrolOx's Open-Architecture  — a notable development in Quantum Computing",
+    "Los Alamos and QC Ware Model Correlated Iron Oxides Using Sample-Based Quantum D — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "MIT Bengaluru Inaugurates Q-HUB@MAHE and Deploys QuantrolOx's Open-Architecture ",
+      "date": "2026-11-01",
+      "event": "Los Alamos and QC Ware Model Correlated Iron Oxides Using Sample-Based Quantum D",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "bengaluru",
-    "inaugurates",
+    "alamos",
+    "model",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "MIT Bengaluru Inaugurates Q-HUB@MAHE and Deploys Quantrol... | Quantum Computing News",
-  "metaDescription": "Manipal Institute of Technology (MIT Bengaluru) has inaugurated the Manipal House of Quantum (Q-HUB@MAHE) in Bengaluru, India, on October 13, 2026. This faci...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, bengaluru, inaugurates, mahe, TechNanoAI, emerging tech news",
+  "metaTitle": "Los Alamos and QC Ware Model Correlated Iron Oxides Using... | Quantum Computing News",
+  "metaDescription": "Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal ox...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, alamos, ware, model, TechNanoAI, emerging tech news",
   "featured": false
 }

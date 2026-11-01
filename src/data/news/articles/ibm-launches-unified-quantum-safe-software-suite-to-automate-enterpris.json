@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792230786038-5",
+  "id": "quantum-1793535411719-5",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Kipu Quantum and NTT DATA Partner to Scale Enterprise Qua... | Quantum Computing News",
-  "excerpt": "Kipu Quantum and NTT DATA have partnered to advance enterprise quantum computing and QML solutions. The collaboration will integrate quantum algorithms into existing enterprise technology, leveraging ",
-  "date": "2026-10-17",
+  "title": "IBM Launches Unified Quantum Safe Software Suite to Autom... | Quantum Computing News",
+  "excerpt": "IBM has launched IBM Quantum Safe, a software suite designed to help enterprises migrate to post-quantum cryptography (PQC). This platform offers tools for strategic assessment, automated source-code ",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "kipu-quantum-and-ntt-data-partner-to-scale-enterprise-quantum-computin",
-  "sourceLink": "https://quantumcomputingreport.com/kipu-quantum-and-ntt-data-partner-to-scale-enterprise-quantum-computing-and-qml-applications/",
+  "slug": "ibm-launches-unified-quantum-safe-software-suite-to-automate-enterpris",
+  "sourceLink": "https://quantumcomputingreport.com/ibm-launches-unified-quantum-safe-software-suite-to-automate-enterprise-pqc-migration/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Kipu Quantum and NTT DATA have partnered to advance enterprise quantum computing and QML solutions.  The collaboration will integrate quantum algorithms into existing enterprise technology, leveraging Kipu Quantum's expertise in hardware-specific compression techniques."
+      "text": "IBM has launched IBM Quantum Safe, a software suite designed to help enterprises migrate to post-quantum cryptography (PQC).  This platform offers tools for strategic assessment, automated source-code discovery, and dynamic network mediation."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Kipu Quantum and NTT DATA have partnered to advance enterprise quantum computing and QML solutions. The collaboration will integrate quantum algorithms into existing enterprise technology, leveraging Kipu Quantum's expertise in hardware-specific compression techniques. This partnership, which began with a pilot program at Komatsu Peru, aims to develop and deploy commercial algorithms for various applications, including supply chain logistics and financial risk modeling, initially in Latin Americ. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "It aims to address the challenge of identifying and remediating cryptographic vulnerabilities in existing IT infrastructure, enabling organizations to transition to PQC in anticipation of federal migration deadlines."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Kipu Quantum and NTT DATA Partner to Scale Enterprise Quantum Computing and QML  — a notable development in Quantum Computing",
+    "IBM Launches Unified Quantum Safe Software Suite to Automate Enterprise PQC Migr — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "Kipu Quantum and NTT DATA Partner to Scale Enterprise Quantum Computing and QML ",
+      "date": "2026-11-01",
+      "event": "IBM Launches Unified Quantum Safe Software Suite to Automate Enterprise PQC Migr",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "quantum",
-    "partner",
+    "launches",
+    "unified",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Kipu Quantum and NTT DATA Partner to Scale Enterprise Qua... | Quantum Computing News",
-  "metaDescription": "Kipu Quantum and NTT DATA have partnered to advance enterprise quantum computing and QML solutions. The collaboration will integrate quantum algorithms into ...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, kipu, quantum, data, TechNanoAI, emerging tech news",
+  "metaTitle": "IBM Launches Unified Quantum Safe Software Suite to Autom... | Quantum Computing News",
+  "metaDescription": "IBM has launched IBM Quantum Safe, a software suite designed to help enterprises migrate to post-quantum cryptography (PQC). This platform offers tools for s...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, launches, unified, quantum, TechNanoAI, emerging tech news",
   "featured": false
 }

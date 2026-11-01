@@ -1,21 +1,21 @@
 {
-  "id": "space-1792230781432-4",
+  "id": "space-1793535406401-3",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "How NASA is thinking about a moon base | Space Exploration News",
-  "excerpt": "In this episode, SpaceNews’ Mike Gruss talks with NASA’s Shatel Bhakta, the principal systems engineer for Moon Base, about what’s needed between now and 2028 and the incremental steps to [']\nThe post",
-  "date": "2026-10-17",
+  "title": "SpaceX closes out October with 700th Falcon 9 launch to date | Space Exploration News",
+  "excerpt": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 9:04 p.m. PDT (1",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "how-nasa-is-thinking-about-a-moon-base",
-  "sourceLink": "https://spacenews.com/how-nasa-is-thinking-about-a-moon-base/",
-  "sourceName": "SpaceNews Editor",
+  "slug": "spacex-closes-out-october-with-700th-falcon-9-launch-to-date",
+  "sourceLink": "https://spaceflightnow.com/2026/10/30/live-coverage-spacex-to-close-out-october-with-halloween-eve-falcon-9-launch/",
+  "sourceName": "Will Robinson-Smith",
   "body": [
     {
       "type": "p",
-      "text": "In this episode, SpaceNews’ Mike Gruss talks with NASA’s Shatel Bhakta, the principal systems engineer for Moon Base, about what’s needed between now and 2028 and the incremental steps to [']\nThe post How NASA is thinking about a moon base appeared first on SpaceNews."
+      "text": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation.  Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 9:04 p."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from SpaceNews Editor, In this episode, SpaceNews’ Mike Gruss talks with NASA’s Shatel Bhakta, the principal systems engineer for Moon Base, about what’s needed between now and 2028 and the incremental steps to [']\nThe post How NASA is thinking about a moon base appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "m.  PDT (12:04 a."
+    },
+    {
+      "type": "p",
+      "text": "m.  EDT / 0404 UTC)."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "How NASA is thinking about a moon base — a notable development in Space Exploration",
+    "SpaceX closes out October with 700th Falcon 9 launch to date — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "SpaceNews Editor",
+      "value": "Will Robinson-Smith",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "How NASA is thinking about a moon base",
+      "date": "2026-11-01",
+      "event": "SpaceX closes out October with 700th Falcon 9 launch to date",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "thinking",
-    "about",
+    "spacex",
+    "closes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "How NASA is thinking about a moon base | Space Exploration News",
-  "metaDescription": "In this episode, SpaceNews’ Mike Gruss talks with NASA’s Shatel Bhakta, the principal systems engineer for Moon Base, about what’s needed between now and 202...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, thinking, about, TechNanoAI, emerging tech news",
+  "metaTitle": "SpaceX closes out October with 700th Falcon 9 launch to date | Space Exploration News",
+  "metaDescription": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation. Liftoff from pad 4E at Vandenberg Space F...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, closes, october, TechNanoAI, emerging tech news",
   "featured": false
 }

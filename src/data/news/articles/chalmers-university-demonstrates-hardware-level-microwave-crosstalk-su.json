@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792230786036-1",
+  "id": "quantum-1793535411718-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Open Quantum Launches Native Qrisp Integration for High-L... | Quantum Computing News",
-  "excerpt": "Open Quantum has launched a native Qrisp integration, enabling high-level QPU execution across IonQ, Rigetti, IQM, and AQT hardware. This allows developers to compile and execute Qrisp programs direct",
-  "date": "2026-10-17",
+  "title": "Chalmers University Demonstrates Hardware-Level Microwave... | Quantum Computing News",
+  "excerpt": "Physicists at Chalmers University of Technology have developed a new method to eliminate microwave crosstalk in superconducting processors. Their research shows that by engineering on-chip parasitic c",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "open-quantum-launches-native-qrisp-integration-for-high-level-qpu-exec",
-  "sourceLink": "https://quantumcomputingreport.com/open-quantum-launches-native-qrisp-integration-for-high-level-qpu-execution-across-ionq-rigetti-iqm-and-aqt-hardware/",
+  "slug": "chalmers-university-demonstrates-hardware-level-microwave-crosstalk-su",
+  "sourceLink": "https://quantumcomputingreport.com/chalmers-university-demonstrates-hardware-level-microwave-crosstalk-suppression-via-parasitic-capacitance-engineering/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Open Quantum has launched a native Qrisp integration, enabling high-level QPU execution across IonQ, Rigetti, IQM, and AQT hardware.  This allows developers to compile and execute Qrisp programs directly on physical QPUs without writing vendor-specific gate-level code."
+      "text": "Physicists at Chalmers University of Technology have developed a new method to eliminate microwave crosstalk in superconducting processors.  Their research shows that by engineering on-chip parasitic capacitances, they can achieve destructive interference among parasitic capacitive channels, suppressing unwanted qubit excitations."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The integration simplifies quantum programming by providing software-engineering abstractions, automated qubit allocation, and memory management."
+      "text": "This method offers a practical advantage for floating transmons and allows for alignment of classical microwave crosstalk nulls with quantum ZZ nulls."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Open Quantum Launches Native Qrisp Integration for High-Level QPU Execution Acro — a notable development in Quantum Computing",
+    "Chalmers University Demonstrates Hardware-Level Microwave Crosstalk Suppression  — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "Open Quantum Launches Native Qrisp Integration for High-Level QPU Execution Acro",
+      "date": "2026-11-01",
+      "event": "Chalmers University Demonstrates Hardware-Level Microwave Crosstalk Suppression ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "quantum",
-    "launches",
+    "chalmers",
+    "university",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Open Quantum Launches Native Qrisp Integration for High-L... | Quantum Computing News",
-  "metaDescription": "Open Quantum has launched a native Qrisp integration, enabling high-level QPU execution across IonQ, Rigetti, IQM, and AQT hardware. This allows developers t...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, open, quantum, launches, TechNanoAI, emerging tech news",
+  "metaTitle": "Chalmers University Demonstrates Hardware-Level Microwave... | Quantum Computing News",
+  "metaDescription": "Physicists at Chalmers University of Technology have developed a new method to eliminate microwave crosstalk in superconducting processors. Their research sh...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, chalmers, university, demonstrates, TechNanoAI, emerging tech news",
   "featured": false
 }

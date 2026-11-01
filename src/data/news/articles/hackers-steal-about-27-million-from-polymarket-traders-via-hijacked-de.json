@@ -1,21 +1,21 @@
 {
-  "id": "ai-1792230780213-2",
+  "id": "ai-1793535404888-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "India becomes the latest country to report rogue AI agent... | AI News",
-  "excerpt": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
-  "date": "2026-10-17",
+  "title": "Hackers Steal About $2.7 Million From Polymarket Traders ... | AI News",
+  "excerpt": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29. The code had replaced a page-speed script that ",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "india-becomes-the-latest-country-to-report-rogue-ai-agent-activity",
-  "sourceLink": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
-  "sourceName": "Aditya Mehta",
+  "slug": "hackers-steal-about-27-million-from-polymarket-traders-via-hijacked-de",
+  "sourceLink": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles."
+      "text": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29.  The code had replaced a page-speed script that the site loaded from an outside company."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Aditya Mehta, The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "Polymarket says it is refunding about $2. 7 million to 726 affected wallets."
+    },
+    {
+      "type": "p",
+      "text": "Blockchain records show crypto worth about $2."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "India becomes the latest country to report rogue AI agent activity — a notable development in AI",
+    "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +124,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Aditya Mehta",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "India becomes the latest country to report rogue AI agent activity",
+      "date": "2026-11-01",
+      "event": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear ",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "india",
-    "becomes",
+    "hackers",
+    "steal",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "India becomes the latest country to report rogue AI agent... | AI News",
-  "metaDescription": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, india, becomes, latest, TechNanoAI, emerging tech news",
+  "metaTitle": "Hackers Steal About $2.7 Million From Polymarket Traders ... | AI News",
+  "metaDescription": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29. The ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, hackers, steal, about, TechNanoAI, emerging tech news",
   "featured": false
 }

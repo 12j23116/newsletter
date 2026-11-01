@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792230786038-4",
+  "id": "quantum-1793535411717-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Kipu Quantum Demonstrates Neutral-Atom Quantum Feature Ex... | Quantum Computing News",
-  "excerpt": "Kipu Quantum demonstrated a novel method for molecular toxicity classification using analog quantum feature extraction on QuEra's 256-qubit Aquila neutral-atom quantum processor. This approach, detail",
-  "date": "2026-10-17",
+  "title": "University of Stuttgart Deploys Quantum Dot QKD Link Usin... | Quantum Computing News",
+  "excerpt": "The University of Stuttgart, in collaboration with Saarland University and Leibniz IFW Dresden, successfully deployed an entanglement-based quantum key distribution (QKD) link using a quantum dot phot",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "kipu-quantum-demonstrates-neutral-atom-quantum-feature-extraction-for-",
-  "sourceLink": "https://quantumcomputingreport.com/kipu-quantum-demonstrates-neutral-atom-quantum-feature-extraction-for-molecular-toxicity-classification-on-quera-hardware/",
+  "slug": "university-of-stuttgart-deploys-quantum-dot-qkd-link-using-frequency-c",
+  "sourceLink": "https://quantumcomputingreport.com/university-of-stuttgart-deploys-quantum-dot-qkd-link-using-frequency-conversion-over-campus-fiber/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Kipu Quantum demonstrated a novel method for molecular toxicity classification using analog quantum feature extraction on QuEra's 256-qubit Aquila neutral-atom quantum processor.  This approach, detailed in their technical report, utilizes 200-qubit neutral-atom arrays to generate high-dimensional quantum features."
+      "text": "The University of Stuttgart, in collaboration with Saarland University and Leibniz IFW Dresden, successfully deployed an entanglement-based quantum key distribution (QKD) link using a quantum dot photon source.  The system generated 14."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Kipu Quantum demonstrated a novel method for molecular toxicity classification using analog quantum feature extraction on QuEra's 256-qubit Aquila neutral-atom quantum processor. This approach, detailed in their technical report, utilizes 200-qubit neutral-atom arrays to generate high-dimensional quantum features. These quantum features significantly improved performance over classical methods, particularly on imbalanced datasets, doubling the F1-score and raising balanced accuracy for drug disc. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "2 Mbit of secure key material over a 1. 59 km fiber link, achieving one-time pad image encryption."
+    },
+    {
+      "type": "p",
+      "text": "This demonstrates the viability of quantum dots with frequency conversion for metropolitan quantum key networks."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Kipu Quantum Demonstrates Neutral-Atom Quantum Feature Extraction for Molecular  — a notable development in Quantum Computing",
+    "University of Stuttgart Deploys Quantum Dot QKD Link Using Frequency Conversion  — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "Kipu Quantum Demonstrates Neutral-Atom Quantum Feature Extraction for Molecular ",
+      "date": "2026-11-01",
+      "event": "University of Stuttgart Deploys Quantum Dot QKD Link Using Frequency Conversion ",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "quantum",
-    "demonstrates",
+    "university",
+    "stuttgart",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Kipu Quantum Demonstrates Neutral-Atom Quantum Feature Ex... | Quantum Computing News",
-  "metaDescription": "Kipu Quantum demonstrated a novel method for molecular toxicity classification using analog quantum feature extraction on QuEra's 256-qubit Aquila neutral-at...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, kipu, quantum, demonstrates, TechNanoAI, emerging tech news",
+  "metaTitle": "University of Stuttgart Deploys Quantum Dot QKD Link Usin... | Quantum Computing News",
+  "metaDescription": "The University of Stuttgart, in collaboration with Saarland University and Leibniz IFW Dresden, successfully deployed an entanglement-based quantum key distr...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, university, stuttgart, deploys, TechNanoAI, emerging tech news",
   "featured": false
 }

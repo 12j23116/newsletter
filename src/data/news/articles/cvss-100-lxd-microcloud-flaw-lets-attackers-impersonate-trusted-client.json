@@ -1,21 +1,21 @@
 {
-  "id": "ai-1792230780214-3",
+  "id": "ai-1793535404888-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Researchers Demonstrate OpenBSD Root Exploit Chaining 37-... | AI News",
-  "excerpt": "A local privilege escalation exploit published today gains root on OpenBSD 7.9 by chaining a roughly 37-year-old integer overflow with a separate kernel flaw, bypassing OpenBSD's KARL kernel-address r",
-  "date": "2026-10-17",
+  "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate... | AI News",
+  "excerpt": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacker had to reach their HTTPS API over the net",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "researchers-demonstrate-openbsd-root-exploit-chaining-37-year-old-shar",
-  "sourceLink": "https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html",
+  "slug": "cvss-100-lxd-microcloud-flaw-lets-attackers-impersonate-trusted-client",
+  "sourceLink": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "A local privilege escalation exploit published today gains root on OpenBSD 7. 9 by chaining a roughly 37-year-old integer overflow with a separate kernel flaw, bypassing OpenBSD's KARL kernel-address randomization and its SMAP and SMEP hardware protections."
+      "text": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key.  To do it, the attacker had to reach their HTTPS API over the network and have the trusted client's public certificate."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), A local privilege escalation exploit published today gains root on OpenBSD 7.9 by chaining a roughly 37-year-old integer overflow with a separate kernel flaw, bypassing OpenBSD's KARL kernel-address randomization and its SMAP and SMEP hardware protections. Security firm Calif, which found and reported the flaws, published a detailed writeup and full proof-of-concept code after OpenBSD shipped. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "Once in, the attacker would act as that client, with access to the cluster and its virtual machines."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory  — a notable development in AI",
+    "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Withou — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory ",
+      "date": "2026-11-01",
+      "event": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Withou",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "researchers",
-    "demonstrate",
+    "microcloud",
+    "attackers",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Researchers Demonstrate OpenBSD Root Exploit Chaining 37-... | AI News",
-  "metaDescription": "A local privilege escalation exploit published today gains root on OpenBSD 7.9 by chaining a roughly 37-year-old integer overflow with a separate kernel flaw...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, researchers, demonstrate, openbsd, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate... | AI News",
+  "metaDescription": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacke...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, cvss, microcloud, flaw, TechNanoAI, emerging tech news",
+  "featured": true
 }

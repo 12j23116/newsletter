@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792230786037-2",
+  "id": "quantum-1793535411717-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Chalmers Next Labs, ConScience, and NQFF Validate Superco... | Quantum Computing News",
-  "excerpt": "A joint study by Chalmers Next Labs AB, ConScience AB, and Singapore’s National Quantum Federated Foundry (NQFF) validated the stability of a superconducting quantum processor (QiB1) when transported ",
-  "date": "2026-10-17",
+  "title": "Scientists say a forgotten particle may explain why the u... | Quantum Computing News",
+  "excerpt": "A mysterious particle overlooked for decades may hold the key to why matter survived the Big Bang, allowing stars, planets, and life to exist. Scientists believe this forgotten neutrino reshaped the e",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "chalmers-next-labs-conscience-and-nqff-validate-superconducting-qubit-",
-  "sourceLink": "https://quantumcomputingreport.com/chalmers-next-labs-conscience-and-nqff-validate-superconducting-qubit-chip-stability-across-international-testbeds/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "scientists-say-a-forgotten-particle-may-explain-why-the-universe-exist",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261031221201.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "A joint study by Chalmers Next Labs AB, ConScience AB, and Singapore’s National Quantum Federated Foundry (NQFF) validated the stability of a superconducting quantum processor (QiB1) when transported between international research facilities.  The study, conducted under the WACQT–NQFF Twin Testbed initiative, confirmed that environmental changes between Gothenburg and Singapore did not degrade the processor’s performance."
+      "text": "A mysterious particle overlooked for decades may hold the key to why matter survived the Big Bang, allowing stars, planets, and life to exist.  Scientists believe this forgotten neutrino reshaped the early universe and may have left detectable gravitational wave signals that could help unlock the cosmos’s deepest mysteries."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, A joint study by Chalmers Next Labs AB, ConScience AB, and Singapore’s National Quantum Federated Foundry (NQFF) validated the stability of a superconducting quantum processor (QiB1) when transported between international research facilities. The study, conducted under the WACQT–NQFF Twin Testbed initiative, confirmed that environmental changes between Gothenburg and Singapore did not degrade the processor’s performance. This collaboration is now being commercialized as a standardized cross-faci. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, A mysterious particle overlooked for decades may hold the key to why matter survived the Big Bang, allowing stars, planets, and life to exist. Scientists believe this forgotten neutrino reshaped the early universe and may have left detectable gravitational wave signals that could help unlock the cosmos’s deepest mysteries.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Chalmers Next Labs, ConScience, and NQFF Validate Superconducting Qubit Chip Sta — a notable development in Quantum Computing",
+    "Scientists say a forgotten particle may explain why the universe exists — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "Chalmers Next Labs, ConScience, and NQFF Validate Superconducting Qubit Chip Sta",
+      "date": "2026-11-01",
+      "event": "Scientists say a forgotten particle may explain why the universe exists",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "chalmers",
-    "conscience",
+    "scientists",
+    "forgotten",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Chalmers Next Labs, ConScience, and NQFF Validate Superco... | Quantum Computing News",
-  "metaDescription": "A joint study by Chalmers Next Labs AB, ConScience AB, and Singapore’s National Quantum Federated Foundry (NQFF) validated the stability of a superconducting...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, chalmers, next, labs, TechNanoAI, emerging tech news",
+  "metaTitle": "Scientists say a forgotten particle may explain why the u... | Quantum Computing News",
+  "metaDescription": "A mysterious particle overlooked for decades may hold the key to why matter survived the Big Bang, allowing stars, planets, and life to exist. Scientists bel...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, scientists, forgotten, particle, TechNanoAI, emerging tech news",
   "featured": false
 }

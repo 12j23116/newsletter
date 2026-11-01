@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1792230785243-4",
+  "id": "robotics-1793535410674-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "A quantum highway just one atom high could transform supe... | Robotics News",
-  "excerpt": "Scientists discovered that atomic steps just one atom high can guide quantum vortices through superconductors, making them move more than 1,000 times more easily in one direction than another. This re",
-  "date": "2026-10-17",
+  "title": "Unusual robotic animals can prove their utility | Robotics News",
+  "excerpt": "Robotic animals are designed to be helpful rather than scary, showing promise in disaster recovery, utility inspection, and companionship.\nThe post Unusual robotic animals can prove their utility appe",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "a-quantum-highway-just-one-atom-high-could-transform-superconductors",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261014072018.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "unusual-robotic-animals-can-prove-their-utility",
+  "sourceLink": "https://www.therobotreport.com/unusual-robotic-animals-can-prove-their-utility/",
+  "sourceName": "Elena Krosheva",
   "body": [
     {
       "type": "p",
-      "text": "Scientists discovered that atomic steps just one atom high can guide quantum vortices through superconductors, making them move more than 1,000 times more easily in one direction than another.  This remarkable control over quantum motion could lead to a new generation of ultra-efficient superconducting electronics."
+      "text": "Robotic animals are designed to be helpful rather than scary, showing promise in disaster recovery, utility inspection, and companionship. \nThe post Unusual robotic animals can prove their utility appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Scientists discovered that atomic steps just one atom high can guide quantum vortices through superconductors, making them move more than 1,000 times more easily in one direction than another. This remarkable control over quantum motion could lead to a new generation of ultra-efficient superconducting electronics.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Elena Krosheva, Robotic animals are designed to be helpful rather than scary, showing promise in disaster recovery, utility inspection, and companionship.\nThe post Unusual robotic animals can prove their utility appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "A quantum highway just one atom high could transform superconductors — a notable development in Robotics",
+    "Unusual robotic animals can prove their utility — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Elena Krosheva",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "A quantum highway just one atom high could transform superconductors",
+      "date": "2026-11-01",
+      "event": "Unusual robotic animals can prove their utility",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "quantum",
-    "highway",
+    "unusual",
+    "robotic",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "A quantum highway just one atom high could transform supe... | Robotics News",
-  "metaDescription": "Scientists discovered that atomic steps just one atom high can guide quantum vortices through superconductors, making them move more than 1,000 times more ea...",
-  "keywords": "robotics, humanoid robot, automation, drones, quantum, highway, just, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Unusual robotic animals can prove their utility | Robotics News",
+  "metaDescription": "Robotic animals are designed to be helpful rather than scary, showing promise in disaster recovery, utility inspection, and companionship.\nThe post Unusual r...",
+  "keywords": "robotics, humanoid robot, automation, drones, unusual, robotic, animals, TechNanoAI, emerging tech news",
+  "featured": true
 }

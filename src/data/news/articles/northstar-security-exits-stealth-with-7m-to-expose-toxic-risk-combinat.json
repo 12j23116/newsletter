@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1792230780673-1",
+  "id": "cybersecurity-1793535405292-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Critical BlockStrap flaw lets hackers run code on Magento... | Cybersecurity News",
-  "excerpt": "Researchers warn that hackers could soon exploit a maximum-severity vulnerability (CVE-2026-103849) affecting Magento and Adobe Commerce, potentially allowing them to execute arbitrary PHP code on sto",
-  "date": "2026-10-17",
+  "title": "Northstar Security Exits Stealth With $7M to Expose Toxic... | Cybersecurity News",
+  "excerpt": "The startup maps how identities, assets and vulnerabilities connect, and uses AI agents to find and fix risky combinations of issues.\nThe post Northstar Security Exits Stealth With $7M to Expose Toxic",
+  "date": "2026-11-01",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/",
-  "sourceName": "Bill Toulas",
+  "slug": "northstar-security-exits-stealth-with-7m-to-expose-toxic-risk-combinat",
+  "sourceLink": "https://www.securityweek.com/northstar-security-exits-stealth-with-7m-to-expose-toxic-risk-combinations/",
+  "sourceName": "SecurityWeek News",
   "body": [
     {
       "type": "p",
-      "text": "Researchers warn that hackers could soon exploit a maximum-severity vulnerability (CVE-2026-103849) affecting Magento and Adobe Commerce, potentially allowing them to execute arbitrary PHP code on store servers.  [..."
+      "text": "The startup maps how identities, assets and vulnerabilities connect, and uses AI agents to find and fix risky combinations of issues. \nThe post Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, Researchers warn that hackers could soon exploit a maximum-severity vulnerability (CVE-2026-103849) affecting Magento and Adobe Commerce, potentially allowing them to execute arbitrary PHP code on store servers. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from SecurityWeek News, The startup maps how identities, assets and vulnerabilities connect, and uses AI agents to find and fix risky combinations of issues.\nThe post Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Critical BlockStrap flaw lets hackers run code on Magento servers — a notable development in Cybersecurity",
+    "Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Bill Toulas",
+      "value": "SecurityWeek News",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-17",
-      "event": "Critical BlockStrap flaw lets hackers run code on Magento servers",
+      "date": "2026-11-01",
+      "event": "Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "critical",
-    "blockstrap",
+    "northstar",
+    "security",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Critical BlockStrap flaw lets hackers run code on Magento... | Cybersecurity News",
-  "metaDescription": "Researchers warn that hackers could soon exploit a maximum-severity vulnerability (CVE-2026-103849) affecting Magento and Adobe Commerce, potentially allowin...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, critical, blockstrap, flaw, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Northstar Security Exits Stealth With $7M to Expose Toxic... | Cybersecurity News",
+  "metaDescription": "The startup maps how identities, assets and vulnerabilities connect, and uses AI agents to find and fix risky combinations of issues.\nThe post Northstar Secu...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, northstar, security, exits, TechNanoAI, emerging tech news",
+  "featured": true
 }
