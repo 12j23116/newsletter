@@ -1,21 +1,21 @@
 {
-  "id": "ai-1792317870368-1",
+  "id": "ai-1793628546741-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Meta removes language that raised scraping and AI trainin... | AI News",
-  "excerpt": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.",
-  "date": "2026-10-18",
+  "title": "OpenAI is finally merging ChatGPT's chat and Work tabs | AI News",
+  "excerpt": "OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change.",
+  "date": "2026-11-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "meta-removes-language-that-raised-scraping-and-ai-training-concerns",
-  "sourceLink": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
-  "sourceName": "Anthony Ha",
+  "slug": "openai-is-finally-merging-chatgpt8217s-chat-and-work-tabs",
+  "sourceLink": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/",
+  "sourceName": "Ivan Mehta",
   "body": [
     {
       "type": "p",
-      "text": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web."
+      "text": "OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Ivan Mehta, OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Meta removes language that raised scraping and AI training concerns — a notable development in AI",
+    "OpenAI is finally merging ChatGPT's chat and Work tabs — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Ivan Mehta",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-18",
-      "event": "Meta removes language that raised scraping and AI training concerns",
+      "date": "2026-11-02",
+      "event": "OpenAI is finally merging ChatGPT's chat and Work tabs",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "removes",
-    "language",
+    "openai",
+    "finally",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Meta removes language that raised scraping and AI trainin... | AI News",
-  "metaDescription": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web. LLMs, agents & the race to AGI. Latest AI developme",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, meta, removes, language, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "OpenAI is finally merging ChatGPT's chat and Work tabs | AI News",
+  "metaDescription": "OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change. LLMs, agents & the race to AGI. Latest AI developments and a",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, openai, finally, merging, TechNanoAI, emerging tech news",
+  "featured": true
 }

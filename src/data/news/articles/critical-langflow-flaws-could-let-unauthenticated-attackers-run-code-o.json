@@ -1,21 +1,21 @@
 {
-  "id": "ai-1792317870369-4",
+  "id": "ai-1793628546742-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in ... | AI News",
-  "excerpt": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX.\n\nThe package, named \"imgdecode,\" was uploaded",
-  "date": "2026-10-18",
+  "title": "Critical Langflow Flaws Could Let Unauthenticated Attacke... | AI News",
+  "excerpt": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week.\n\nLangflow is an open-source tool for building AI agents and ",
+  "date": "2026-11-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "malfex-npm-package-imgdecode-hides-shellcode-loader-in-windows-native-",
-  "sourceLink": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
+  "slug": "critical-langflow-flaws-could-let-unauthenticated-attackers-run-code-o",
+  "sourceLink": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX. \n\nThe package, named \"imgdecode,\" was uploaded to the package registry on September 30, 2026, by a user named \"malfexteste8."
+      "text": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week. \n\nLangflow is an open-source tool for building AI agents and workflows, and its vulnerability reports go to IBM."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "\" It has been downloaded 979 times as of writing and is still available on npm as of writing."
+      "text": "Every release from 1. 0."
+    },
+    {
+      "type": "p",
+      "text": "0 through 1. 12."
+    },
+    {
+      "type": "p",
+      "text": "8 has the flaws, and the only fix is version 1. 13."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon — a notable development in AI",
+    "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-18",
-      "event": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
+      "date": "2026-11-02",
+      "event": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "malfex",
-    "package",
+    "critical",
+    "langflow",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in ... | AI News",
-  "metaDescription": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX.\n\nT...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, malfex, package, imgdecode, TechNanoAI, emerging tech news",
+  "metaTitle": "Critical Langflow Flaws Could Let Unauthenticated Attacke... | AI News",
+  "metaDescription": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week.\n\nLangflow is an o...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, critical, langflow, flaws, TechNanoAI, emerging tech news",
   "featured": false
 }

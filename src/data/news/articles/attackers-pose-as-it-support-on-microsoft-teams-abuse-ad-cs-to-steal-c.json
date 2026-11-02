@@ -1,21 +1,21 @@
 {
-  "id": "ai-1792317870368-2",
+  "id": "ai-1793628546743-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Anthropic says its workforce has become less junior and i... | AI News",
-  "excerpt": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year.",
-  "date": "2026-10-18",
+  "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD... | AI News",
+  "excerpt": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtai",
+  "date": "2026-11-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "anthropic-says-its-workforce-has-become-less-junior-and-is-spending-mo",
-  "sourceLink": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
-  "sourceName": "Anthony Ha",
+  "slug": "attackers-pose-as-it-support-on-microsoft-teams-abuse-ad-cs-to-steal-c",
+  "sourceLink": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year."
+      "text": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs.  They then used insecure Active Directory Certificate Services (AD CS) settings to obtain login certificates for privileged accounts, including one for a domain controller."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtain login certificates for privileged accounts, including one for a domain controller.\n\nMicrosoft said in a report that it investigated two such intrusions, one of which resulted in company. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Anthropic says its workforce has become less junior and is spending more time in — a notable development in AI",
+    "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Da — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-18",
-      "event": "Anthropic says its workforce has become less junior and is spending more time in",
+      "date": "2026-11-02",
+      "event": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Da",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "anthropic",
-    "workforce",
+    "attackers",
+    "support",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Anthropic says its workforce has become less junior and i... | AI News",
-  "metaDescription": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year. LLMs, agents & the race to AGI. Latest A",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, anthropic, says, workforce, TechNanoAI, emerging tech news",
+  "metaTitle": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD... | AI News",
+  "metaDescription": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Cer...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, pose, support, TechNanoAI, emerging tech news",
   "featured": false
 }

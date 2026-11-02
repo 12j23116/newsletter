@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1792317876492-0",
+  "id": "robotics-1793628553067-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "ADI explains the race to make AI physical | Robotics News",
-  "excerpt": "A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery.\nThe post ADI explains the race to make AI physical appeared first on The Rob",
-  "date": "2026-10-18",
+  "title": "28 Zero-Day Findings in Less Than Two Days: What AI-Speed... | Robotics News",
+  "excerpt": "VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical AI ecosystem.\nThe post 28 Zero-Day Findings ",
+  "date": "2026-11-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "adi-explains-the-race-to-make-ai-physical",
-  "sourceLink": "https://www.therobotreport.com/adi-explains-the-race-to-make-ai-physical/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-mea",
+  "sourceLink": "https://www.therobotreport.com/28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-means-for-robotics/",
+  "sourceName": "Sponsored Content",
   "body": [
     {
       "type": "p",
-      "text": "A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery. \nThe post ADI explains the race to make AI physical appeared first on The Robot Report."
+      "text": "VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical AI ecosystem. \nThe post 28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Robotics appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery.\nThe post ADI explains the race to make AI physical appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sponsored Content, VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical AI ecosystem.\nThe post 28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Robotics appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "ADI explains the race to make AI physical — a notable development in Robotics",
+    "28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Ro — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Sponsored Content",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-18",
-      "event": "ADI explains the race to make AI physical",
+      "date": "2026-11-02",
+      "event": "28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Ro",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "explains",
-    "physical",
+    "findings",
+    "speed",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "ADI explains the race to make AI physical | Robotics News",
-  "metaDescription": "A new ADI whitepaper examines the challenges and opportunities in moving physical AI out of labs into production machinery.\nThe post ADI explains the race to...",
-  "keywords": "robotics, humanoid robot, automation, drones, explains, race, make, TechNanoAI, emerging tech news",
+  "metaTitle": "28 Zero-Day Findings in Less Than Two Days: What AI-Speed... | Robotics News",
+  "metaDescription": "VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical A...",
+  "keywords": "robotics, humanoid robot, automation, drones, zero, findings, less, TechNanoAI, emerging tech news",
   "featured": true
 }

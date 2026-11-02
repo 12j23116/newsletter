@@ -1,21 +1,21 @@
 {
-  "id": "space-1792317871852-2",
+  "id": "space-1793628548101-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA Names Stephen Cash Marshall Space Flight Center Dire... | Space Exploration News",
-  "excerpt": "NASA Administrator Jared Isaacman has named Stephen Cash director of the agency’s Marshall Space Flight Center in Huntsville, Alabama, effective Monday, Oct. 19. Cash, a veteran NASA engineer and aero",
-  "date": "2026-10-18",
+  "title": "How to Expand Reliable, Flexible Access to Space | Space Exploration News",
+  "excerpt": "The space industry launched more rockets into orbit last year than ever before, yet satellite operators are confronting an unexpected problem: There still aren’t enough rides to go around. And [']\nThe",
+  "date": "2026-11-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa-names-stephen-cash-marshall-space-flight-center-director",
-  "sourceLink": "https://www.nasa.gov/news-release/nasa-names-stephen-cash-marshall-space-flight-center-director/",
-  "sourceName": "Gerelle Q. Dodson",
+  "slug": "how-to-expand-reliable-flexible-access-to-space",
+  "sourceLink": "https://spacenews.com/how-to-expand-reliable-flexible-access-to-space/",
+  "sourceName": "Exolaunch",
   "body": [
     {
       "type": "p",
-      "text": "NASA Administrator Jared Isaacman has named Stephen Cash director of the agency’s Marshall Space Flight Center in Huntsville, Alabama, effective Monday, Oct.  19."
+      "text": "The space industry launched more rockets into orbit last year than ever before, yet satellite operators are confronting an unexpected problem: There still aren’t enough rides to go around.  And [']\nThe post How to Expand Reliable, Flexible Access to Space appeared first on SpaceNews."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Cash, a veteran NASA engineer and aerospace executive, returns to lead the center where he began his career more than four decades ago."
+      "text": "According to reporting from Exolaunch, The space industry launched more rockets into orbit last year than ever before, yet satellite operators are confronting an unexpected problem: There still aren’t enough rides to go around. And [']\nThe post How to Expand Reliable, Flexible Access to Space appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA Names Stephen Cash Marshall Space Flight Center Director — a notable development in Space Exploration",
+    "How to Expand Reliable, Flexible Access to Space — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Gerelle Q. Dodson",
+      "value": "Exolaunch",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-18",
-      "event": "NASA Names Stephen Cash Marshall Space Flight Center Director",
+      "date": "2026-11-02",
+      "event": "How to Expand Reliable, Flexible Access to Space",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "names",
-    "stephen",
+    "expand",
+    "reliable",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA Names Stephen Cash Marshall Space Flight Center Dire... | Space Exploration News",
-  "metaDescription": "NASA Administrator Jared Isaacman has named Stephen Cash director of the agency’s Marshall Space Flight Center in Huntsville, Alabama, effective Monday, Oct....",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, names, stephen, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "How to Expand Reliable, Flexible Access to Space | Space Exploration News",
+  "metaDescription": "The space industry launched more rockets into orbit last year than ever before, yet satellite operators are confronting an unexpected problem: There still ar...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, expand, reliable, flexible, TechNanoAI, emerging tech news",
+  "featured": true
 }

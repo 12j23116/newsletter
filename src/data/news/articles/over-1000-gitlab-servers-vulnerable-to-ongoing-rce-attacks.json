@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1792317870947-4",
+  "id": "cybersecurity-1793628547142-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware D... | Cybersecurity News",
-  "excerpt": "Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets.\nThe post Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery",
-  "date": "2026-10-18",
+  "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks | Cybersecurity News",
+  "excerpt": "Over 1,000 Internet-exposed GitLab servers are still unpatched against a maximum-severity flaw actively exploited in remote code execution attacks. [...]",
+  "date": "2026-11-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "israeli-ad-firm-doubled-as-candiru8217s-zero-click-spyware-delivery-ch",
-  "sourceLink": "https://www.securityweek.com/israeli-ad-firm-doubled-as-candirus-zero-click-spyware-delivery-channel/",
-  "sourceName": "Ionut Arghire",
+  "slug": "over-1000-gitlab-servers-vulnerable-to-ongoing-rce-attacks",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+  "sourceName": "Sergiu Gatlan",
   "body": [
     {
       "type": "p",
-      "text": "Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets. \nThe post Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel appeared first on SecurityWeek."
+      "text": "Over 1,000 Internet-exposed GitLab servers are still unpatched against a maximum-severity flaw actively exploited in remote code execution attacks.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets.\nThe post Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sergiu Gatlan, Over 1,000 Internet-exposed GitLab servers are still unpatched against a maximum-severity flaw actively exploited in remote code execution attacks. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel — a notable development in Cybersecurity",
+    "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Sergiu Gatlan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-18",
-      "event": "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware Delivery Channel",
+      "date": "2026-11-02",
+      "event": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "israeli",
-    "doubled",
+    "gitlab",
+    "servers",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Israeli Ad Firm Doubled as Candiru's Zero-Click Spyware D... | Cybersecurity News",
-  "metaDescription": "Israeli company Discover-Tech’s ads allow threat actors to fingerprint and track devices at scale and infect selected targets.\nThe post Israeli Ad Firm Doubl...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, israeli, firm, doubled, TechNanoAI, emerging tech news",
+  "metaTitle": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks | Cybersecurity News",
+  "metaDescription": "Over 1,000 Internet-exposed GitLab servers are still unpatched against a maximum-severity flaw actively exploited in remote code execution attacks. [...]",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, over, gitlab, servers, TechNanoAI, emerging tech news",
   "featured": false
 }

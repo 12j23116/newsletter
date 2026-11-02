@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1792317876492-1",
+  "id": "robotics-1793628553068-2",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "The rise of the machines is canceled: Why humanoids with ... | Robotics News",
-  "excerpt": "Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist.\nThe post The rise of the machines is canceled: Why humanoids with AI are he",
-  "date": "2026-10-18",
+  "title": "Solving the Interconnect Challenge in Modern Robotics: Ho... | Robotics News",
+  "excerpt": "As robotics systems grow more capable — faster, more precise, and increasingly reliant on AI-driven vision and control — the humble interconnect is being asked to do more than ever.\nThe post Solving t",
+  "date": "2026-11-02",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "the-rise-of-the-machines-is-canceled-why-humanoids-with-ai-are-helpers",
-  "sourceLink": "https://www.therobotreport.com/rise-machines-canceled-why-humanoids-ai-are-helpers-not-enemies/",
-  "sourceName": "Elena Krosheva",
+  "slug": "solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engine",
+  "sourceLink": "https://www.therobotreport.com/solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engineering-for-motion-density-and-uptime/",
+  "sourceName": "Sponsored Content",
   "body": [
     {
       "type": "p",
-      "text": "Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist. \nThe post The rise of the machines is canceled: Why humanoids with AI are helpers, not enemies appeared first on The Robot Report."
+      "text": "As robotics systems grow more capable — faster, more precise, and increasingly reliant on AI-driven vision and control — the humble interconnect is being asked to do more than ever. \nThe post Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for Motion, Density, and Uptime appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Elena Krosheva, Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist.\nThe post The rise of the machines is canceled: Why humanoids with AI are helpers, not enemies appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sponsored Content, As robotics systems grow more capable — faster, more precise, and increasingly reliant on AI-driven vision and control — the humble interconnect is being asked to do more than ever.\nThe post Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for Motion, Density, and Uptime appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The rise of the machines is canceled: Why humanoids with AI are helpers, not ene — a notable development in Robotics",
+    "Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Elena Krosheva",
+      "value": "Sponsored Content",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-18",
-      "event": "The rise of the machines is canceled: Why humanoids with AI are helpers, not ene",
+      "date": "2026-11-02",
+      "event": "Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "machines",
-    "canceled",
+    "solving",
+    "interconnect",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The rise of the machines is canceled: Why humanoids with ... | Robotics News",
-  "metaDescription": "Humans play a key role in developing humanoid robots and training AI models, so we can maintain control, writes a columnist.\nThe post The rise of the machine...",
-  "keywords": "robotics, humanoid robot, automation, drones, rise, machines, canceled, TechNanoAI, emerging tech news",
+  "metaTitle": "Solving the Interconnect Challenge in Modern Robotics: Ho... | Robotics News",
+  "metaDescription": "As robotics systems grow more capable — faster, more precise, and increasingly reliant on AI-driven vision and control — the humble interconnect is being ask...",
+  "keywords": "robotics, humanoid robot, automation, drones, solving, interconnect, challenge, TechNanoAI, emerging tech news",
   "featured": false
 }
