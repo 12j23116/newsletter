@@ -1,113 +1,112 @@
 {
-  "issue": 95,
-  "date": "2026-10-26",
-  "subject": "This Week: Cybersecurity, Space & more — October 26, 2026",
+  "issue": 96,
+  "date": "2026-11-02",
+  "subject": "This Week: Biotech, Cybersecurity & more — November 2, 2026",
   "articleCount": 12,
   "topicsCovered": [
+    "biotech",
     "cybersecurity",
     "space",
     "robotics",
-    "energy",
-    "biotech",
-    "quantum",
-    "ai"
+    "ai",
+    "energy"
   ],
   "articles": [
     {
-      "title": "Kali Linux 2026.3 released with 6 new tools, desktop updates | Cybersecurity News",
-      "slug": "kali-linux-20263-released-with-6-new-tools-desktop-updates",
-      "topic": "cybersecurity",
-      "excerpt": "Kali Linux has released version 2026.3, its third release this year, featuring six new hacking tools, desktop environment improvements, refreshed build scripts, and more. [...]",
-      "url": "https://technanoai.com/news/kali-linux-20263-released-with-6-new-tools-desktop-updates",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "Mythos 5 Ignored Real-World Harm in July Attack | Cybersecurity News",
-      "slug": "mythos-5-ignored-real-world-harm-in-july-attack",
-      "topic": "cybersecurity",
-      "excerpt": "The model engaged in severe overreach and dishonesty, creating fake identities and submitting malicious code on GitHub.\nThe post Mythos 5 Ignored Real-World Harm in July Attack appeared first on Secur",
-      "url": "https://technanoai.com/news/mythos-5-ignored-real-world-harm-in-july-attack",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "2026 October 26 – M42: The Great Nebula in Orion | Space Exploration News",
-      "slug": "2026-october-26-m42-the-great-nebula-in-orion",
-      "topic": "space",
-      "excerpt": "APOD Science APOD 2026 October 26 – M42: The… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a dif",
-      "url": "https://technanoai.com/news/2026-october-26-m42-the-great-nebula-in-orion",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "APOD: 2026 October 25 – Dark Matter in a Simulated Universe | Space Exploration News",
-      "slug": "apod-2026-october-25-dark-matter-in-a-simulated-universe",
-      "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 October 25 – Dark… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
-      "url": "https://technanoai.com/news/apod-2026-october-25-dark-matter-in-a-simulated-universe",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "Scientists discover a hidden flaw that challenges 40 year... | Robotics News",
-      "slug": "scientists-discover-a-hidden-flaw-that-challenges-40-years-of-supercon",
-      "topic": "robotics",
-      "excerpt": "A superconducting material studied for 40 years has turned out to be far more complex than scientists believed. Advanced 3D imaging revealed a hidden patchwork of crystal structures, with unusually wi",
-      "url": "https://technanoai.com/news/scientists-discover-a-hidden-flaw-that-challenges-40-years-of-supercon",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "Teradyne Robotics partners with Sereact to scale physical... | Robotics News",
-      "slug": "teradyne-robotics-partners-with-sereact-to-scale-physical-ai-in-retail",
-      "topic": "robotics",
-      "excerpt": "Sereact and Teradyne have already shipped hundreds of UR robots in dual-arm systems to live customer sites across Europe.\nThe post Teradyne Robotics partners with Sereact to scale physical AI in retai",
-      "url": "https://technanoai.com/news/teradyne-robotics-partners-with-sereact-to-scale-physical-ai-in-retail",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "Citicore secures $552 million for 900 MW solar, 120 MWh s... | Energy Storage News",
-      "slug": "citicore-secures-552-million-for-900-mw-solar-120-mwh-storage-portfoli",
-      "topic": "energy",
-      "excerpt": "Bank of the Philippine Islands, Land Bank of the Philippines and Development Bank of the Philippines have provided PHP 35.014 billion ($552 million) in financing for a portfolio of five solar projects",
-      "url": "https://technanoai.com/news/citicore-secures-552-million-for-900-mw-solar-120-mwh-storage-portfoli",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "Czech ministry proposes storage capacity auctions to 2027 | Energy Storage News",
-      "slug": "czech-ministry-proposes-storage-capacity-auctions-to-2027",
-      "topic": "energy",
-      "excerpt": "The Czech government has proposed changes to its new capacity mechanism, which is open to battery storage, including moving two supplementary auctions from 2026 to 2027, a year later than prospective ",
-      "url": "https://technanoai.com/news/czech-ministry-proposes-storage-capacity-auctions-to-2027",
-      "date": "2026-10-26"
-    },
-    {
-      "title": "<a href=\"/biotech/bms-reports-patient-death-ms-trial-not-... | Biotechnology News",
-      "slug": "a-hrefbiotechbms-reports-patient-death-ms-trial-not-related-earlier-zo",
+      "title": "<a href=\"/biotech/fda-dims-bright-minds-outlook-partial-h... | Biotechnology News",
+      "slug": "a-hrefbiotechfda-dims-bright-minds-outlook-partial-hold-seizure-trial-",
       "topic": "biotech",
-      "excerpt": "Bristol Myers Squibb has shared more details with Fierce about the death of a patient who received the pharma's investigational CAR-T in a multiple sclerosis trial.",
-      "url": "https://technanoai.com/news/a-hrefbiotechbms-reports-patient-death-ms-trial-not-related-earlier-zo",
-      "date": "2026-10-26"
+      "excerpt": "The FDA has put a partial hold on Bright Minds Biosciences’ seizure study application over preclinical toxicity data and concerns about its preparations for enrolling children.",
+      "url": "https://technanoai.com/news/a-hrefbiotechfda-dims-bright-minds-outlook-partial-hold-seizure-trial-",
+      "date": "2026-11-02"
     },
     {
-      "title": "<a href=\"/biotech/esmo-az-exec-insists-ph-3-adc-data-robu... | Biotechnology News",
-      "slug": "a-hrefbiotechesmo-az-exec-insists-ph-3-adc-data-robust-enough-approval",
+      "title": "<a href=\"/biotech/gileads-kite-reveals-partial-clinical-h... | Biotechnology News",
+      "slug": "a-hrefbiotechgileads-kite-reveals-partial-clinical-hold-2-car-t-cell-t",
       "topic": "biotech",
-      "excerpt": "An AstraZeneca executive was adamant that detailed data from a phase 3 study of the pharma’s next-generation antibody-drug conjugate are “robust” enough to take to regulators, despite the trial failin",
-      "url": "https://technanoai.com/news/a-hrefbiotechesmo-az-exec-insists-ph-3-adc-data-robust-enough-approval",
-      "date": "2026-10-26"
+      "excerpt": "Gilead Sciences announced on its third-quarter earnings call Oct. 29 that the company has placed a partial clinical hold on two studies for the CAR-T cell therapy KITE-753 in diffuse large B-cell lymp",
+      "url": "https://technanoai.com/news/a-hrefbiotechgileads-kite-reveals-partial-clinical-hold-2-car-t-cell-t",
+      "date": "2026-11-02"
     },
     {
-      "title": "IQT Sunday Edition | Quantum Computing News",
-      "slug": "iqt-sunday-edition",
-      "topic": "quantum",
-      "excerpt": "Traditional reporting brought to you by the most trusted dragon in the world, IQT Sunday Edition delivers a straightforward, authoritative summary of national and international mainstream media covera",
-      "url": "https://technanoai.com/news/iqt-sunday-edition",
-      "date": "2026-10-26"
+      "title": "Google Introduces $250,000 Root-in-Cloud Bug Bounty Reward | Cybersecurity News",
+      "slug": "google-introduces-250000-root-in-cloud-bug-bounty-reward",
+      "topic": "cybersecurity",
+      "excerpt": "The top payout is for high-impact architectural research demonstrating full administrative control.\nThe post Google Introduces $250,000 Root-in-Cloud Bug Bounty Reward appeared first on SecurityWeek.",
+      "url": "https://technanoai.com/news/google-introduces-250000-root-in-cloud-bug-bounty-reward",
+      "date": "2026-11-02"
     },
     {
-      "title": "Between alerts: What Attackers Do in the Spaces Ordinary ... | AI News",
-      "slug": "between-alerts-what-attackers-do-in-the-spaces-ordinary-detection-miss",
+      "title": "Microsoft fixes Smart App Control broken by October Windo... | Cybersecurity News",
+      "slug": "microsoft-fixes-smart-app-control-broken-by-october-windows-update",
+      "topic": "cybersecurity",
+      "excerpt": "Microsoft has resolved a known issue that prevented some users from activating the Smart App Control security feature after installing the October 2026 KB5127648 Windows 11 security update. [...]",
+      "url": "https://technanoai.com/news/microsoft-fixes-smart-app-control-broken-by-october-windows-update",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "APOD: 2026 November 2 – A Long Cloud on Mars | Space Exploration News",
+      "slug": "apod-2026-november-2-a-long-cloud-on-mars",
+      "topic": "space",
+      "excerpt": "APOD Science APOD APOD: 2026 November 2 – A… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diff",
+      "url": "https://technanoai.com/news/apod-2026-november-2-a-long-cloud-on-mars",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "How to Expand Reliable, Flexible Access to Space | Space Exploration News",
+      "slug": "how-to-expand-reliable-flexible-access-to-space",
+      "topic": "space",
+      "excerpt": "The space industry launched more rockets into orbit last year than ever before, yet satellite operators are confronting an unexpected problem: There still aren’t enough rides to go around. And [']\nThe",
+      "url": "https://technanoai.com/news/how-to-expand-reliable-flexible-access-to-space",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "28 Zero-Day Findings in Less Than Two Days: What AI-Speed... | Robotics News",
+      "slug": "28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-mea",
+      "topic": "robotics",
+      "excerpt": "VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical AI ecosystem.\nThe post 28 Zero-Day Findings ",
+      "url": "https://technanoai.com/news/28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-mea",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Solving the Interconnect Challenge in Modern Robotics: Ho... | Robotics News",
+      "slug": "solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engine",
+      "topic": "robotics",
+      "excerpt": "As robotics systems grow more capable — faster, more precise, and increasingly reliant on AI-driven vision and control — the humble interconnect is being asked to do more than ever.\nThe post Solving t",
+      "url": "https://technanoai.com/news/solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engine",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD... | AI News",
+      "slug": "attackers-pose-as-it-support-on-microsoft-teams-abuse-ad-cs-to-steal-c",
       "topic": "ai",
-      "excerpt": "Every SOC struggles with a pile of alerts. Very few of those alerts explain how an attack started or how it progressed. Network data, like that from a network detection and response (NDR) platform, co",
-      "url": "https://technanoai.com/news/between-alerts-what-attackers-do-in-the-spaces-ordinary-detection-miss",
-      "date": "2026-10-26"
+      "excerpt": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtai",
+      "url": "https://technanoai.com/news/attackers-pose-as-it-support-on-microsoft-teams-abuse-ad-cs-to-steal-c",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Critical Langflow Flaws Could Let Unauthenticated Attacke... | AI News",
+      "slug": "critical-langflow-flaws-could-let-unauthenticated-attackers-run-code-o",
+      "topic": "ai",
+      "excerpt": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week.\n\nLangflow is an open-source tool for building AI agents and ",
+      "url": "https://technanoai.com/news/critical-langflow-flaws-could-let-unauthenticated-attackers-run-code-o",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Armenia introduces interest rate subsidies for storage sy... | Energy Storage News",
+      "slug": "armenia-introduces-interest-rate-subsidies-for-storage-systems",
+      "topic": "energy",
+      "excerpt": "New government provisions offer businesses interest rate subsidies of 6 to 10 percentage points on loans and leases for battery storage equipment.\nThe post Armenia introduces interest rate subsidies f",
+      "url": "https://technanoai.com/news/armenia-introduces-interest-rate-subsidies-for-storage-systems",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Belgian spin-off Noak raises €5 million for perovskite-si... | Energy Storage News",
+      "slug": "belgian-spin-off-noak-raises-5-million-for-perovskite-silicon-solar-ce",
+      "topic": "energy",
+      "excerpt": "Noak will use the seed funding to industrialise its perovskite-silicon tandem technology, which combines a proprietary layer stack with a 3D woven back-contact foil.\nThe post Belgian spin-off Noak rai",
+      "url": "https://technanoai.com/news/belgian-spin-off-noak-raises-5-million-for-perovskite-silicon-solar-ce",
+      "date": "2026-11-02"
     }
   ]
 }
