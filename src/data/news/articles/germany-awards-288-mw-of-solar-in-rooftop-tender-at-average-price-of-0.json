@@ -1,21 +1,21 @@
 {
-  "id": "energy-1792409481298-4",
+  "id": "energy-1793711611646-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Longi researchers reveal how edge masking reduces recombi... | Energy Storage News",
-  "excerpt": "Longi researchers found that edge masking improves the measured efficiency of heterojunction back-contact solar cells by suppressing edge recombination, with an optimal masking width of 5 mm. Their si",
-  "date": "2026-10-19",
+  "title": "Germany awards 288 MW of solar in rooftop tender at avera... | Energy Storage News",
+  "excerpt": "Germany’s latest rooftop solar tender received 177 bids totaling 347 MW, with 108 bids representing 208 MW ultimately awarded contracts. \nThe post Germany awards 288 MW of solar in rooftop tender at a",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "longi-researchers-reveal-how-edge-masking-reduces-recombination-losses",
-  "sourceLink": "https://www.pv-magazine.com/2026/10/19/longi-researchers-reveals-how-edge-masking-reduces-recombination-losses-in-solar-cells/",
+  "slug": "germany-awards-288-mw-of-solar-in-rooftop-tender-at-average-price-of-0",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/03/germany-awards-288-mw-of-solar-in-rooftop-tender-at-average-price-of-e0-0967-kwh/",
   "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Longi researchers found that edge masking improves the measured efficiency of heterojunction back-contact solar cells by suppressing edge recombination, with an optimal masking width of 5 mm.  Their simulations suggest that selective metallization could further increase efficiency from 26."
+      "text": "Germany’s latest rooftop solar tender received 177 bids totaling 347 MW, with 108 bids representing 208 MW ultimately awarded contracts.  \nThe post Germany awards 288 MW of solar in rooftop tender at average price of €0."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "85% to a theoretical maximum of 27. 39%."
-    },
-    {
-      "type": "p",
-      "text": "The post Longi researchers reveal how edge masking reduces recombination losses in solar cells appeared first on pv magazine Global."
+      "text": "0967/kWh appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Longi researchers reveal how edge masking reduces recombination losses in solar  — a notable development in Energy Storage",
+    "Germany awards 288 MW of solar in rooftop tender at average price of €0.0967/kWh — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Longi researchers reveal how edge masking reduces recombination losses in solar ",
+      "date": "2026-11-03",
+      "event": "Germany awards 288 MW of solar in rooftop tender at average price of €0.0967/kWh",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "longi",
-    "researchers",
+    "germany",
+    "awards",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Longi researchers reveal how edge masking reduces recombi... | Energy Storage News",
-  "metaDescription": "Longi researchers found that edge masking improves the measured efficiency of heterojunction back-contact solar cells by suppressing edge recombination, with...",
-  "keywords": "energy storage, battery, solid-state, grid storage, longi, researchers, reveal, TechNanoAI, emerging tech news",
+  "metaTitle": "Germany awards 288 MW of solar in rooftop tender at avera... | Energy Storage News",
+  "metaDescription": "Germany’s latest rooftop solar tender received 177 bids totaling 347 MW, with 108 bids representing 208 MW ultimately awarded contracts. \nThe post Germany aw...",
+  "keywords": "energy storage, battery, solid-state, grid storage, germany, awards, solar, TechNanoAI, emerging tech news",
   "featured": false
 }

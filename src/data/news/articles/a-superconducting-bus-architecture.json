@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792409483052-0",
+  "id": "quantum-1793711613720-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Physicists create a bizarre new quantum state called a fr... | Quantum Computing News",
-  "excerpt": "Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet surprisingly orderly configuration called a \"",
-  "date": "2026-10-19",
+  "title": "A Superconducting Bus Architecture | Quantum Computing News",
+  "excerpt": "The Quantum Dragon had just finished up a visit to Qarakal Quantum in Tel Aviv, Israel, and he decided to fly over to Europe and visit his old stomping grounds. You know, pillage some villages for old",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "physicists-create-a-bizarre-new-quantum-state-called-a-fractional-ferm",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261018084644.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "a-superconducting-bus-architecture",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/a-superconducting-bus-architecture/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet surprisingly orderly configuration called a \"fractional Fermi sea. \" The discovery challenges established quantum theories and hints at exotic quasiparticles that scientists have dubbed potential \"super-Fermions."
+      "text": "The Quantum Dragon had just finished up a visit to Qarakal Quantum in Tel Aviv, Israel, and he decided to fly over to Europe and visit his old stomping grounds.  You know, pillage some villages for old times’ sake."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet surprisingly orderly configuration called a \"fractional Fermi sea.\" The discovery challenges established quantum theories and hints at exotic quasiparticles that scientists have dubbed potential \"super-Fermions.\". The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "As he was flying high over Istanbul, Turkey, he realized he couldn’t make out too m..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Physicists create a bizarre new quantum state called a fractional fermi sea — a notable development in Quantum Computing",
+    "A Superconducting Bus Architecture — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Physicists create a bizarre new quantum state called a fractional fermi sea",
+      "date": "2026-11-03",
+      "event": "A Superconducting Bus Architecture",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "physicists",
-    "create",
+    "superconducting",
+    "architecture",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Physicists create a bizarre new quantum state called a fr... | Quantum Computing News",
-  "metaDescription": "Physicists have discovered a strange new state of quantum matter in which ultracold atoms defy familiar organizational rules, forming a highly excited yet su...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, physicists, create, bizarre, TechNanoAI, emerging tech news",
+  "metaTitle": "A Superconducting Bus Architecture | Quantum Computing News",
+  "metaDescription": "The Quantum Dragon had just finished up a visit to Qarakal Quantum in Tel Aviv, Israel, and he decided to fly over to Europe and visit his old stomping groun...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, superconducting, architecture, TechNanoAI, emerging tech news",
   "featured": true
 }

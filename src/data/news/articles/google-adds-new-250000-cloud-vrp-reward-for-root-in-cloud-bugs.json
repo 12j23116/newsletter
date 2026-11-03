@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1792409475666-0",
+  "id": "cybersecurity-1793711605185-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Exploited Fortinet Bug Linked to Stealthy FortiGate Impla... | Cybersecurity News",
-  "excerpt": "The persistent, stealthy FortiGate implant was deployed against a telecommunications organization.\nThe post Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack appeared first o",
-  "date": "2026-10-19",
+  "title": "Google adds new $250,000 Cloud VRP reward for Root-in-Clo... | Cybersecurity News",
+  "excerpt": "Google has expanded its Cloud Vulnerability Reward Program (VRP) with a new top-tier reward for high-impact architectural security flaws. [...]",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom",
-  "sourceLink": "https://www.securityweek.com/exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom-hack/",
-  "sourceName": "Ionut Arghire",
+  "slug": "google-adds-new-250000-cloud-vrp-reward-for-root-in-cloud-bugs",
+  "sourceLink": "https://www.bleepingcomputer.com/news/google/google-adds-new-250-000-cloud-vrp-reward-for-root-in-cloud-bugs/",
+  "sourceName": "Sergiu Gatlan",
   "body": [
     {
       "type": "p",
-      "text": "The persistent, stealthy FortiGate implant was deployed against a telecommunications organization. \nThe post Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack appeared first on SecurityWeek."
+      "text": "Google has expanded its Cloud Vulnerability Reward Program (VRP) with a new top-tier reward for high-impact architectural security flaws.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ionut Arghire, The persistent, stealthy FortiGate implant was deployed against a telecommunications organization.\nThe post Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sergiu Gatlan, Google has expanded its Cloud Vulnerability Reward Program (VRP) with a new top-tier reward for high-impact architectural security flaws. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack — a notable development in Cybersecurity",
+    "Google adds new $250,000 Cloud VRP reward for Root-in-Cloud bugs — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Ionut Arghire",
+      "value": "Sergiu Gatlan",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack",
+      "date": "2026-11-03",
+      "event": "Google adds new $250,000 Cloud VRP reward for Root-in-Cloud bugs",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "exploited",
-    "fortinet",
+    "google",
+    "cloud",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Exploited Fortinet Bug Linked to Stealthy FortiGate Impla... | Cybersecurity News",
-  "metaDescription": "The persistent, stealthy FortiGate implant was deployed against a telecommunications organization.\nThe post Exploited Fortinet Bug Linked to Stealthy FortiGa...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, exploited, fortinet, linked, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Google adds new $250,000 Cloud VRP reward for Root-in-Clo... | Cybersecurity News",
+  "metaDescription": "Google has expanded its Cloud Vulnerability Reward Program (VRP) with a new top-tier reward for high-impact architectural security flaws. [...]",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, google, adds, cloud, TechNanoAI, emerging tech news",
+  "featured": false
 }

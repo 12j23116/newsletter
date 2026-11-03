@@ -1,21 +1,21 @@
 {
-  "id": "energy-1792409481299-5",
+  "id": "energy-1793711611647-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Evolving role of energy storage as infrastructure demands... | Energy Storage News",
-  "excerpt": "Energy storage is becoming an indispensable new-type power system infrastructure, CATL CEO and chairman Robin Zeng said in an industry speech last week.",
-  "date": "2026-10-19",
+  "title": "Solar PV cuts Spain’s electricity costs by €17.02 billion... | Energy Storage News",
+  "excerpt": "A study by Spanish solar association UNEF estimates that solar PV generation reduced Spain’s wholesale electricity costs by €17.02 billion ($19.03 billion) between January 2025 and June 2026. Without ",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "evolving-role-of-energy-storage-as-infrastructure-demands-that-technol",
-  "sourceLink": "https://www.energy-storage.news/evolving-role-of-energy-storage-as-infrastructure-demands-that-technology-stands-the-test-of-time-catl-ceo-says/",
-  "sourceName": "Carrie Xiao",
+  "slug": "solar-pv-cuts-spains-electricity-costs-by-1702-billion-over-18-months",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/03/solar-pv-cuts-spains-electricity-costs-by-e17-02-billion-over-18-months/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Energy storage is becoming an indispensable new-type power system infrastructure, CATL CEO and chairman Robin Zeng said in an industry speech last week."
+      "text": "A study by Spanish solar association UNEF estimates that solar PV generation reduced Spain’s wholesale electricity costs by €17. 02 billion ($19."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Carrie Xiao, Energy storage is becoming an indispensable new-type power system infrastructure, CATL CEO and chairman Robin Zeng said in an industry speech last week.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "03 billion) between January 2025 and June 2026.  Without solar generation, average daily market prices would have been 86% higher, according to the analysis."
+    },
+    {
+      "type": "p",
+      "text": "The post Solar PV cuts Spain’s electricity costs by €17. 02 billion over 18 months appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Evolving role of energy storage as infrastructure demands that technology stands — a notable development in Energy Storage",
+    "Solar PV cuts Spain’s electricity costs by €17.02 billion over 18 months — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +124,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Carrie Xiao",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Evolving role of energy storage as infrastructure demands that technology stands",
+      "date": "2026-11-03",
+      "event": "Solar PV cuts Spain’s electricity costs by €17.02 billion over 18 months",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "evolving",
-    "energy",
+    "solar",
+    "spain",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Evolving role of energy storage as infrastructure demands... | Energy Storage News",
-  "metaDescription": "Energy storage is becoming an indispensable new-type power system infrastructure, CATL CEO and chairman Robin Zeng said in an industry speech last week.",
-  "keywords": "energy storage, battery, solid-state, grid storage, evolving, role, energy, TechNanoAI, emerging tech news",
+  "metaTitle": "Solar PV cuts Spain’s electricity costs by €17.02 billion... | Energy Storage News",
+  "metaDescription": "A study by Spanish solar association UNEF estimates that solar PV generation reduced Spain’s wholesale electricity costs by €17.02 billion ($19.03 billion) b...",
+  "keywords": "energy storage, battery, solid-state, grid storage, solar, cuts, spain, TechNanoAI, emerging tech news",
   "featured": false
 }

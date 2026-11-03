@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1792409477155-4",
+  "id": "biotech-1793711607164-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-... | Biotechnology News",
-  "excerpt": "Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily. Plus, Paragon Labs is buying out  Apogee talent aft",
-  "date": "2026-10-19",
+  "title": "FDA Delays PDUFA Action on Agios' Mitapivat sNDA for SCD | Biotechnology News",
+  "excerpt": "The FDA has delayed a decision on Agios Pharmaceuticals’ supplemental New Drug Application (sNDA) seeking additional approval for mitapivat in sickle cell disease (SCD) until next year. \nThe post FDA ",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechchutes-ladders-bausch-lombs-return-ceo-saunders-exits-aga",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/chutes-ladders-bausch-lombs-return-ceo-saunders-exits-again",
-  "sourceName": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>",
+  "slug": "fda-delays-pdufa-action-on-agios8217-mitapivat-snda-for-scd",
+  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/fda-delays-pdufa-action-on-agios-mitapivat-snda-for-scd/",
+  "sourceName": "Alex Philippidis",
   "body": [
     {
       "type": "p",
-      "text": "Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily.  Plus, Paragon Labs is buying out  Apogee talent after its acquisition by AbbVie."
+      "text": "The FDA has delayed a decision on Agios Pharmaceuticals’ supplemental New Drug Application (sNDA) seeking additional approval for mitapivat in sickle cell disease (SCD) until next year.  \nThe post FDA Delays PDUFA Action on Agios' Mitapivat sNDA for SCD appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>, Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily. Plus, Paragon Labs is buying out  Apogee talent after its acquisition by AbbVie.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alex Philippidis, The FDA has delayed a decision on Agios Pharmaceuticals’ supplemental New Drug Application (sNDA) seeking additional approval for mitapivat in sickle cell disease (SCD) until next year. \nThe post FDA Delays PDUFA Action on Agios' Mitapivat sNDA for SCD appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-saunders-exits-again\" h — a notable development in Biotechnology",
+    "FDA Delays PDUFA Action on Agios' Mitapivat sNDA for SCD — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/donavyn-coffey\" hreflang=\"en\">Donavyn Coffey</a>",
+      "value": "Alex Philippidis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-saunders-exits-again\" h",
+      "date": "2026-11-03",
+      "event": "FDA Delays PDUFA Action on Agios' Mitapivat sNDA for SCD",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "chutes",
+    "delays",
+    "pdufa",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/chutes-ladders-bausch-lombs-return-ceo-... | Biotechnology News",
-  "metaDescription": "Bausch + Lomb CEO Brent Saunders is making a second exit from the eye health company, as the president of parent Bausch Health steps in temporarily. Plus, Pa...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, chutes, TechNanoAI, emerging tech news",
+  "metaTitle": "FDA Delays PDUFA Action on Agios' Mitapivat sNDA for SCD | Biotechnology News",
+  "metaDescription": "The FDA has delayed a decision on Agios Pharmaceuticals’ supplemental New Drug Application (sNDA) seeking additional approval for mitapivat in sickle cell di...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, delays, pdufa, action, TechNanoAI, emerging tech news",
   "featured": false
 }

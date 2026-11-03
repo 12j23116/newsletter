@@ -1,21 +1,21 @@
 {
-  "id": "energy-1792409481297-0",
+  "id": "energy-1793711611646-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Taiwanese firm to make floating PV components in Philippines | Energy Storage News",
-  "excerpt": "Taiwanese floating solar supplier Suntoward will begin producing floats, walkways and mooring components in the Philippines in early 2027.\nThe post Taiwanese firm to make floating PV components in Phi",
-  "date": "2026-10-19",
+  "title": "Vastly different fortunes for BESS in Belgium and Germany... | Energy Storage News",
+  "excerpt": "Battery storage projects have won nearly 40% of the capacity in Belgium’s latest capacity market (CM) auction results, while Germany’s first has all gone to gas, paying nearly eight times more than Be",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "taiwanese-firm-to-make-floating-pv-components-in-philippines",
-  "sourceLink": "https://www.pv-magazine.com/2026/10/19/taiwanese-firm-to-make-floating-pv-components-in-philippines/",
-  "sourceName": "Brian Publicover",
+  "slug": "vastly-different-fortunes-for-bess-in-belgium-and-germanys-capacity-ma",
+  "sourceLink": "https://www.energy-storage.news/vastly-different-fortunes-for-bess-in-belgium-and-germanys-capacity-market-auctions/",
+  "sourceName": "Cameron Murray",
   "body": [
     {
       "type": "p",
-      "text": "Taiwanese floating solar supplier Suntoward will begin producing floats, walkways and mooring components in the Philippines in early 2027. \nThe post Taiwanese firm to make floating PV components in Philippines appeared first on pv magazine Global."
+      "text": "Battery storage projects have won nearly 40% of the capacity in Belgium’s latest capacity market (CM) auction results, while Germany’s first has all gone to gas, paying nearly eight times more than Belgium in the process."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Publicover, Taiwanese floating solar supplier Suntoward will begin producing floats, walkways and mooring components in the Philippines in early 2027.\nThe post Taiwanese firm to make floating PV components in Philippines appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Cameron Murray, Battery storage projects have won nearly 40% of the capacity in Belgium’s latest capacity market (CM) auction results, while Germany’s first has all gone to gas, paying nearly eight times more than Belgium in the process.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Taiwanese firm to make floating PV components in Philippines — a notable development in Energy Storage",
+    "Vastly different fortunes for BESS in Belgium and Germany’s capacity market auct — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Brian Publicover",
+      "value": "Cameron Murray",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Taiwanese firm to make floating PV components in Philippines",
+      "date": "2026-11-03",
+      "event": "Vastly different fortunes for BESS in Belgium and Germany’s capacity market auct",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "taiwanese",
-    "floating",
+    "vastly",
+    "different",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Taiwanese firm to make floating PV components in Philippines | Energy Storage News",
-  "metaDescription": "Taiwanese floating solar supplier Suntoward will begin producing floats, walkways and mooring components in the Philippines in early 2027.\nThe post Taiwanese...",
-  "keywords": "energy storage, battery, solid-state, grid storage, taiwanese, firm, make, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Vastly different fortunes for BESS in Belgium and Germany... | Energy Storage News",
+  "metaDescription": "Battery storage projects have won nearly 40% of the capacity in Belgium’s latest capacity market (CM) auction results, while Germany’s first has all gone to ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, vastly, different, fortunes, TechNanoAI, emerging tech news",
+  "featured": false
 }

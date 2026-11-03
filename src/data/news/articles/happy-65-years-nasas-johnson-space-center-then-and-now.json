@@ -1,21 +1,21 @@
 {
-  "id": "space-1792409476574-5",
+  "id": "space-1793711606571-4",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Oct. 29: Applying AI/SI to the GEOINT Mission | Space Exploration News",
-  "excerpt": "Join us for a conversation on how machine learning is transforming the GEOINT mission across different markets\nThe post Oct. 29: Applying AI/SI to the GEOINT Mission appeared first on SpaceNews.",
-  "date": "2026-10-19",
+  "title": "Happy 65 Years: NASA’s Johnson Space Center Then and Now | Space Exploration News",
+  "excerpt": "Sixty-five years ago, a bold vision took root in Houston: a NASA center dedicated to human spaceflight. Since its founding, NASA’s Johnson Space Center has helped lead the nation’s human spaceflight p",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "oct-29-applying-aisi-to-the-geoint-mission",
-  "sourceLink": "https://spacenews.com/applying-ai-si-to-the-geoint-mission-event/",
-  "sourceName": "SpaceNews Editor",
+  "slug": "happy-65-years-nasas-johnson-space-center-then-and-now",
+  "sourceLink": "https://www.nasa.gov/centers-and-facilities/johnson/happy-65-years-nasas-johnson-space-center-then-and-now/",
+  "sourceName": "Sumer Loggins",
   "body": [
     {
       "type": "p",
-      "text": "Join us for a conversation on how machine learning is transforming the GEOINT mission across different markets\nThe post Oct.  29: Applying AI/SI to the GEOINT Mission appeared first on SpaceNews."
+      "text": "Sixty-five years ago, a bold vision took root in Houston: a NASA center dedicated to human spaceflight.  Since its founding, NASA’s Johnson Space Center has helped lead the nation’s human spaceflight program, supporting missions from Project Mercury through Artemis."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from SpaceNews Editor, Join us for a conversation on how machine learning is transforming the GEOINT mission across different markets\nThe post Oct. 29: Applying AI/SI to the GEOINT Mission appeared first on SpaceNews.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sumer Loggins, Sixty-five years ago, a bold vision took root in Houston: a NASA center dedicated to human spaceflight. Since its founding, NASA’s Johnson Space Center has helped lead the nation’s human spaceflight program, supporting missions from Project Mercury through Artemis. Today, Johnson serves as NASA’s Center of Excellence for Human Spaceflight, and its workforce is helping [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Oct. 29: Applying AI/SI to the GEOINT Mission — a notable development in Space Exploration",
+    "Happy 65 Years: NASA’s Johnson Space Center Then and Now — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "SpaceNews Editor",
+      "value": "Sumer Loggins",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Oct. 29: Applying AI/SI to the GEOINT Mission",
+      "date": "2026-11-03",
+      "event": "Happy 65 Years: NASA’s Johnson Space Center Then and Now",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "applying",
-    "geoint",
+    "happy",
+    "years",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Oct. 29: Applying AI/SI to the GEOINT Mission | Space Exploration News",
-  "metaDescription": "Join us for a conversation on how machine learning is transforming the GEOINT mission across different markets\nThe post Oct. 29: Applying AI/SI to the GEOINT...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, applying, geoint, mission, TechNanoAI, emerging tech news",
+  "metaTitle": "Happy 65 Years: NASA’s Johnson Space Center Then and Now | Space Exploration News",
+  "metaDescription": "Sixty-five years ago, a bold vision took root in Houston: a NASA center dedicated to human spaceflight. Since its founding, NASA’s Johnson Space Center has h...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, happy, years, nasa, TechNanoAI, emerging tech news",
   "featured": false
 }

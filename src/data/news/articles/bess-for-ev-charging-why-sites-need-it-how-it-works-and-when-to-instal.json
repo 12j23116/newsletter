@@ -1,21 +1,21 @@
 {
-  "id": "energy-1792409481297-1",
+  "id": "energy-1793711611646-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Politicians propose plug-in solar, batteries in Norway | Energy Storage News",
-  "excerpt": "A group of Green Party politicians in Norway are calling on the Norwegian government to make it possible to connect plug-in solar and batteries that meet established safety requirements by the end of ",
-  "date": "2026-10-19",
+  "title": "BESS for EV charging: why sites need it, how it works and... | Energy Storage News",
+  "excerpt": "Grid connections are now the biggest brake on rapid EV charging. Here's how battery storage lets charging sites deliver more power from a smaller connection, and when it pays to add it.",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "politicians-propose-plug-in-solar-batteries-in-norway",
-  "sourceLink": "https://www.pv-magazine.com/2026/10/19/politicians-propose-plug-in-solar-batteries-in-norway/",
-  "sourceName": "Patrick Jowett",
+  "slug": "bess-for-ev-charging-why-sites-need-it-how-it-works-and-when-to-instal",
+  "sourceLink": "https://www.energy-storage.news/bess-for-ev-charging-guide/",
+  "sourceName": "Liam Critchley",
   "body": [
     {
       "type": "p",
-      "text": "A group of Green Party politicians in Norway are calling on the Norwegian government to make it possible to connect plug-in solar and batteries that meet established safety requirements by the end of 2027. \nThe post Politicians propose plug-in solar, batteries in Norway appeared first on pv magazine Global."
+      "text": "Grid connections are now the biggest brake on rapid EV charging.  Here's how battery storage lets charging sites deliver more power from a smaller connection, and when it pays to add it."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Patrick Jowett, A group of Green Party politicians in Norway are calling on the Norwegian government to make it possible to connect plug-in solar and batteries that meet established safety requirements by the end of 2027.\nThe post Politicians propose plug-in solar, batteries in Norway appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Liam Critchley, Grid connections are now the biggest brake on rapid EV charging. Here's how battery storage lets charging sites deliver more power from a smaller connection, and when it pays to add it.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Politicians propose plug-in solar, batteries in Norway — a notable development in Energy Storage",
+    "BESS for EV charging: why sites need it, how it works and when to install — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Liam Critchley",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Politicians propose plug-in solar, batteries in Norway",
+      "date": "2026-11-03",
+      "event": "BESS for EV charging: why sites need it, how it works and when to install",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "politicians",
-    "propose",
+    "charging",
+    "sites",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Politicians propose plug-in solar, batteries in Norway | Energy Storage News",
-  "metaDescription": "A group of Green Party politicians in Norway are calling on the Norwegian government to make it possible to connect plug-in solar and batteries that meet est...",
-  "keywords": "energy storage, battery, solid-state, grid storage, politicians, propose, plug, TechNanoAI, emerging tech news",
+  "metaTitle": "BESS for EV charging: why sites need it, how it works and... | Energy Storage News",
+  "metaDescription": "Grid connections are now the biggest brake on rapid EV charging. Here's how battery storage lets charging sites deliver more power from a smaller connection,...",
+  "keywords": "energy storage, battery, solid-state, grid storage, bess, charging, sites, TechNanoAI, emerging tech news",
   "featured": false
 }

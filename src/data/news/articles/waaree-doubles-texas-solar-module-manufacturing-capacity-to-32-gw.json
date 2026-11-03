@@ -1,21 +1,21 @@
 {
-  "id": "energy-1792409481298-3",
+  "id": "energy-1793711611645-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Indonesian president instructs transformation of power ut... | Energy Storage News",
-  "excerpt": "A reform of Indonesia's power utility PT PLN is set to focus on improving efficiency and productivity, as well as accelerating the delivery of the country's 100 GW solar program.\nThe post Indonesian p",
-  "date": "2026-10-19",
+  "title": "Waaree doubles Texas solar module manufacturing capacity ... | Energy Storage News",
+  "excerpt": "Waaree Solar Americas has started commercial production on two new 800 MW solar module manufacturing lines at its Brookshire facility in Texas, doubling the plant's annual production capacity.\nThe pos",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "indonesian-president-instructs-transformation-of-power-utility",
-  "sourceLink": "https://www.pv-magazine.com/2026/10/19/indonesian-president-instructs-transformation-of-power-utility/",
-  "sourceName": "Patrick Jowett",
+  "slug": "waaree-doubles-texas-solar-module-manufacturing-capacity-to-32-gw",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/03/waaree-solar-americas-begins-commercial-production-on-1-6-gw-of-new-module-lines-doubling-texas-capacity-to-3-2-gw/",
+  "sourceName": "Uma Gupta",
   "body": [
     {
       "type": "p",
-      "text": "A reform of Indonesia's power utility PT PLN is set to focus on improving efficiency and productivity, as well as accelerating the delivery of the country's 100 GW solar program. \nThe post Indonesian president instructs transformation of power utility appeared first on pv magazine Global."
+      "text": "Waaree Solar Americas has started commercial production on two new 800 MW solar module manufacturing lines at its Brookshire facility in Texas, doubling the plant's annual production capacity. \nThe post Waaree doubles Texas solar module manufacturing capacity to 3."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Patrick Jowett, A reform of Indonesia's power utility PT PLN is set to focus on improving efficiency and productivity, as well as accelerating the delivery of the country's 100 GW solar program.\nThe post Indonesian president instructs transformation of power utility appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "2 GW appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Indonesian president instructs transformation of power utility — a notable development in Energy Storage",
+    "Waaree doubles Texas solar module manufacturing capacity to 3.2 GW — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Uma Gupta",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Indonesian president instructs transformation of power utility",
+      "date": "2026-11-03",
+      "event": "Waaree doubles Texas solar module manufacturing capacity to 3.2 GW",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "indonesian",
-    "president",
+    "waaree",
+    "doubles",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Indonesian president instructs transformation of power ut... | Energy Storage News",
-  "metaDescription": "A reform of Indonesia's power utility PT PLN is set to focus on improving efficiency and productivity, as well as accelerating the delivery of the country's ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, indonesian, president, instructs, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Waaree doubles Texas solar module manufacturing capacity ... | Energy Storage News",
+  "metaDescription": "Waaree Solar Americas has started commercial production on two new 800 MW solar module manufacturing lines at its Brookshire facility in Texas, doubling the ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, waaree, doubles, texas, TechNanoAI, emerging tech news",
+  "featured": true
 }

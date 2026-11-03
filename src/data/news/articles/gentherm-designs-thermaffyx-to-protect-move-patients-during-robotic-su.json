@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1792409481749-0",
+  "id": "robotics-1793711612613-3",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "How to choose a BLDC motor for robotic arms and mobile ro... | Robotics News",
-  "excerpt": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to choose a BLDC motor for robotic arms and mob",
-  "date": "2026-10-19",
+  "title": "Gentherm designs ThermAffyx to protect, move patients dur... | Robotics News",
+  "excerpt": "ThermAffyx addresses secure positioning and heating of patients for robot-assisted surgical procedures with a minimal OR footprint.\nThe post Gentherm designs ThermAffyx to protect, move patients durin",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "how-to-choose-a-bldc-motor-for-robotic-arms-and-mobile-robots",
-  "sourceLink": "https://www.therobotreport.com/how-to-choose-bldc-motor-robotic-arms-mobile-robots/",
-  "sourceName": "Faisal Mahmood",
+  "slug": "gentherm-designs-thermaffyx-to-protect-move-patients-during-robotic-su",
+  "sourceLink": "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/",
+  "sourceName": "Eugene Demaitre",
   "body": [
     {
       "type": "p",
-      "text": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor. \nThe post How to choose a BLDC motor for robotic arms and mobile robots appeared first on The Robot Report."
+      "text": "ThermAffyx addresses secure positioning and heating of patients for robot-assisted surgical procedures with a minimal OR footprint. \nThe post Gentherm designs ThermAffyx to protect, move patients during robotic surgeries appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Faisal Mahmood, Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to choose a BLDC motor for robotic arms and mobile robots appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Eugene Demaitre, ThermAffyx addresses secure positioning and heating of patients for robot-assisted surgical procedures with a minimal OR footprint.\nThe post Gentherm designs ThermAffyx to protect, move patients during robotic surgeries appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "How to choose a BLDC motor for robotic arms and mobile robots — a notable development in Robotics",
+    "Gentherm designs ThermAffyx to protect, move patients during robotic surgeries — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Faisal Mahmood",
+      "value": "Eugene Demaitre",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "How to choose a BLDC motor for robotic arms and mobile robots",
+      "date": "2026-11-03",
+      "event": "Gentherm designs ThermAffyx to protect, move patients during robotic surgeries",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "choose",
-    "motor",
+    "gentherm",
+    "designs",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "How to choose a BLDC motor for robotic arms and mobile ro... | Robotics News",
-  "metaDescription": "Several factors, from sensors to safety and robotic arms or mobile platforms, help determine the selection of a brushless DC or BLDC motor.\nThe post How to c...",
-  "keywords": "robotics, humanoid robot, automation, drones, choose, bldc, motor, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Gentherm designs ThermAffyx to protect, move patients dur... | Robotics News",
+  "metaDescription": "ThermAffyx addresses secure positioning and heating of patients for robot-assisted surgical procedures with a minimal OR footprint.\nThe post Gentherm designs...",
+  "keywords": "robotics, humanoid robot, automation, drones, gentherm, designs, thermaffyx, TechNanoAI, emerging tech news",
+  "featured": false
 }

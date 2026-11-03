@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1792409477155-5",
+  "id": "biotech-1793711607164-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/medtech/fda-calls-early-alert-edwards-lifescien... | Biotechnology News",
-  "excerpt": "The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid serious safety concerns.",
-  "date": "2026-10-19",
+  "title": "StockWatch: Gene Editing Shares Jump on ESGCT Data, FDA D... | Biotechnology News",
+  "excerpt": "Shares of gene editing therapy companies mostly surged this past week on two growth catalysts: Data readouts at the European Society of Gene and Cell Therapy’s 33rd ESGCT Annual Congress, and the FDA'",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefmedtechfda-calls-early-alert-edwards-lifesciences-mitral-valve-r",
-  "sourceLink": "https://www.fiercebiotech.com/medtech/fda-calls-early-alert-edwards-lifesciences-mitral-valve-replacement-after-injury-death",
-  "sourceName": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
+  "slug": "stockwatch-gene-editing-shares-jump-on-esgct-data-fda-draft-guidance",
+  "sourceLink": "https://www.genengnews.com/topics/genome-editing/stockwatch-gene-editing-shares-jump-on-esgct-data-fda-draft-guidance/",
+  "sourceName": "Alex Philippidis",
   "body": [
     {
       "type": "p",
-      "text": "The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid serious safety concerns."
+      "text": "Shares of gene editing therapy companies mostly surged this past week on two growth catalysts: Data readouts at the European Society of Gene and Cell Therapy’s 33rd ESGCT Annual Congress, and the FDA's new draft guidance for personalized gene therapies. \nThe post StockWatch: Gene Editing Shares Jump on ESGCT Data, FDA Draft Guidance appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>, The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid serious safety concerns.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alex Philippidis, Shares of gene editing therapy companies mostly surged this past week on two growth catalysts: Data readouts at the European Society of Gene and Cell Therapy’s 33rd ESGCT Annual Congress, and the FDA's new draft guidance for personalized gene therapies.\nThe post StockWatch: Gene Editing Shares Jump on ESGCT Data, FDA Draft Guidance appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/medtech/fda-calls-early-alert-edwards-lifesciences-mitral-valve-replac — a notable development in Biotechnology",
+    "StockWatch: Gene Editing Shares Jump on ESGCT Data, FDA Draft Guidance — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/ben-adams-0\" hreflang=\"en\">Ben Adams</a>",
+      "value": "Alex Philippidis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "<a href=\"/medtech/fda-calls-early-alert-edwards-lifesciences-mitral-valve-replac",
+      "date": "2026-11-03",
+      "event": "StockWatch: Gene Editing Shares Jump on ESGCT Data, FDA Draft Guidance",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "medtech",
-    "calls",
+    "stockwatch",
+    "editing",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/medtech/fda-calls-early-alert-edwards-lifescien... | Biotechnology News",
-  "metaDescription": "The FDA has issued an early alert for certain delivery systems used with Edwards Lifesciences’ SAPIEN M3 transcatheter mitral valve replacement system amid s...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, calls, TechNanoAI, emerging tech news",
+  "metaTitle": "StockWatch: Gene Editing Shares Jump on ESGCT Data, FDA D... | Biotechnology News",
+  "metaDescription": "Shares of gene editing therapy companies mostly surged this past week on two growth catalysts: Data readouts at the European Society of Gene and Cell Therapy...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, stockwatch, gene, editing, TechNanoAI, emerging tech news",
   "featured": false
 }

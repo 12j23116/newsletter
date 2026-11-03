@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1792409477154-3",
+  "id": "biotech-1793711607163-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-pow... | Biotechnology News",
-  "excerpt": "SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer coming back.",
-  "date": "2026-10-19",
+  "title": "Inflammatory Process Identified as Link Between Pulmonary... | Biotechnology News",
+  "excerpt": "A study investigating the observed connection between pulmonary hypertension and cognitive decline symptoms has linked brain abnormalities in pulmonary hypertension to the same inflammatory processes ",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefmedtechsimbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-b",
-  "sourceLink": "https://www.fiercebiotech.com/medtech/simbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-breast-cancer-recurrence-tool",
-  "sourceName": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
+  "slug": "inflammatory-process-identified-as-link-between-pulmonary-hypertension",
+  "sourceLink": "https://www.genengnews.com/topics/translational-medicine/inflammatory-process-identified-as-link-between-pulmonary-hypertension-and-cognitive-decline/",
+  "sourceName": "Sophia Ktori",
   "body": [
     {
       "type": "p",
-      "text": "SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer coming back."
+      "text": "A study investigating the observed connection between pulmonary hypertension and cognitive decline symptoms has linked brain abnormalities in pulmonary hypertension to the same inflammatory processes that drive disease in the lungs and heart.  \nThe post Inflammatory Process Identified as Link Between Pulmonary Hypertension and Cognitive Decline appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>, SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer coming back.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sophia Ktori, A study investigating the observed connection between pulmonary hypertension and cognitive decline symptoms has linked brain abnormalities in pulmonary hypertension to the same inflammatory processes that drive disease in the lungs and heart. \nThe post Inflammatory Process Identified as Link Between Pulmonary Hypertension and Cognitive Decline appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-breast — a notable development in Biotechnology",
+    "Inflammatory Process Identified as Link Between Pulmonary Hypertension and Cogni — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
+      "value": "Sophia Ktori",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-powered-mri-derived-breast",
+      "date": "2026-11-03",
+      "event": "Inflammatory Process Identified as Link Between Pulmonary Hypertension and Cogni",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "medtech",
-    "simbiosys",
+    "inflammatory",
+    "process",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/medtech/simbiosys-nabs-fda-clearance-nvidia-pow... | Biotechnology News",
-  "metaDescription": "SimBioSys has been given FDA clearance of the Nvidia-powered TumorSight Risk, an AI and MRI-derived prognostic tool for assessing the risk of a breast cancer...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, simbiosys, TechNanoAI, emerging tech news",
+  "metaTitle": "Inflammatory Process Identified as Link Between Pulmonary... | Biotechnology News",
+  "metaDescription": "A study investigating the observed connection between pulmonary hypertension and cognitive decline symptoms has linked brain abnormalities in pulmonary hyper...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, inflammatory, process, identified, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1792409477154-1",
+  "id": "biotech-1793711607163-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/nouscom-raises-135m-pivotal-trial-cance... | Biotechnology News",
-  "excerpt": "Nouscom has reeled in 120 million euros ($135 million) to take a cancer-preventing vaccine through a registration-enabling clinical trial.",
-  "date": "2026-10-19",
-  "readTime": "3 min",
+  "title": "FDA Sets May 1 PDUFA Action Date for uniQure’s Huntington... | Biotechnology News",
+  "excerpt": "uniQure has aligned with the FDA on what the company calls key elements of the confirmatory study design: The study is being designed as a randomized, standard-of-care trial enrolling approximately 20",
+  "date": "2026-11-03",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechnouscom-raises-135m-pivotal-trial-cancer-preventing-vacci",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/nouscom-raises-135m-pivotal-trial-cancer-preventing-vaccine-candidate",
-  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
+  "slug": "fda-sets-may-1-pdufa-action-date-for-uniqures-huntingtons-disease-gene",
+  "sourceLink": "https://www.genengnews.com/topics/genome-editing/fda-sets-may-1-pdufa-action-date-for-uniqures-huntingtons-disease-gene-therapy/",
+  "sourceName": "Alex Philippidis",
   "body": [
     {
       "type": "p",
-      "text": "Nouscom has reeled in 120 million euros ($135 million) to take a cancer-preventing vaccine through a registration-enabling clinical trial."
+      "text": "uniQure has aligned with the FDA on what the company calls key elements of the confirmatory study design: The study is being designed as a randomized, standard-of-care trial enrolling approximately 200 patients in a 2:1 ratio of ifezuntirgene inilparvovec to standard of care, with Total Functional Capacity (TFC) at 36 months serving as the primary endpoint."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, Nouscom has reeled in 120 million euros ($135 million) to take a cancer-preventing vaccine through a registration-enabling clinical trial.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Alex Philippidis, uniQure has aligned with the FDA on what the company calls key elements of the confirmatory study design: The study is being designed as a randomized, standard-of-care trial enrolling approximately 200 patients in a 2:1 ratio of ifezuntirgene inilparvovec to standard of care, with Total Functional Capacity (TFC) at 36 months serving as the primary endpoint. \nThe post FDA Sets May 1 PDUFA Action Date for uniQure’s Huntington’s Disease Gene Therapy appeared first on GEN - Genetic Engineering and B. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/nouscom-raises-135m-pivotal-trial-cancer-preventing-vaccine-ca — a notable development in Biotechnology",
+    "FDA Sets May 1 PDUFA Action Date for uniQure’s Huntington’s Disease Gene Therapy — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
+      "value": "Alex Philippidis",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "<a href=\"/biotech/nouscom-raises-135m-pivotal-trial-cancer-preventing-vaccine-ca",
+      "date": "2026-11-03",
+      "event": "FDA Sets May 1 PDUFA Action Date for uniQure’s Huntington’s Disease Gene Therapy",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "nouscom",
+    "pdufa",
+    "action",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/nouscom-raises-135m-pivotal-trial-cance... | Biotechnology News",
-  "metaDescription": "Nouscom has reeled in 120 million euros ($135 million) to take a cancer-preventing vaccine through a registration-enabling clinical trial.",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, nouscom, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "FDA Sets May 1 PDUFA Action Date for uniQure’s Huntington... | Biotechnology News",
+  "metaDescription": "uniQure has aligned with the FDA on what the company calls key elements of the confirmatory study design: The study is being designed as a randomized, standa...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, sets, pdufa, action, TechNanoAI, emerging tech news",
+  "featured": true
 }

@@ -1,21 +1,21 @@
 {
-  "id": "energy-1792409481298-2",
+  "id": "energy-1793711611647-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Bangladesh plans 70 MW solar plant at coal power station | Energy Storage News",
-  "excerpt": "The European Investment Bank (EIB) is expected to help finance a planned 70 MW solar power plant at Bangladesh’s Matarbari coal-fired power station, with commissioning targeted for December 2028.\nThe ",
-  "date": "2026-10-19",
+  "title": "Key takeaways from All Energy Australia 2026 | Energy Storage News",
+  "excerpt": "The outlook for Australia’s renewable energy transition appears positive with supportive government policies and renewable energy targets, a surge in battery installations, and a strong pipeline of gr",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "bangladesh-plans-70-mw-solar-plant-at-coal-power-station",
-  "sourceLink": "https://www.pv-magazine.com/2026/10/19/bangladesh-plans-70-mw-solar-plant-at-coal-power-station/",
-  "sourceName": "Brian Publicover",
+  "slug": "key-takeaways-from-all-energy-australia-2026",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/03/batteries-are-big-at-all-energy-australia-2026/",
+  "sourceName": "David Carroll",
   "body": [
     {
       "type": "p",
-      "text": "The European Investment Bank (EIB) is expected to help finance a planned 70 MW solar power plant at Bangladesh’s Matarbari coal-fired power station, with commissioning targeted for December 2028. \nThe post Bangladesh plans 70 MW solar plant at coal power station appeared first on pv magazine Global."
+      "text": "The outlook for Australia’s renewable energy transition appears positive with supportive government policies and renewable energy targets, a surge in battery installations, and a strong pipeline of grid-scale solar and storage projects helping to fuel confidence. \nThe post Key takeaways from All Energy Australia 2026 appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brian Publicover, The European Investment Bank (EIB) is expected to help finance a planned 70 MW solar power plant at Bangladesh’s Matarbari coal-fired power station, with commissioning targeted for December 2028.\nThe post Bangladesh plans 70 MW solar plant at coal power station appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from David Carroll, The outlook for Australia’s renewable energy transition appears positive with supportive government policies and renewable energy targets, a surge in battery installations, and a strong pipeline of grid-scale solar and storage projects helping to fuel confidence.\nThe post Key takeaways from All Energy Australia 2026 appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Bangladesh plans 70 MW solar plant at coal power station — a notable development in Energy Storage",
+    "Key takeaways from All Energy Australia 2026 — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Brian Publicover",
+      "value": "David Carroll",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "Bangladesh plans 70 MW solar plant at coal power station",
+      "date": "2026-11-03",
+      "event": "Key takeaways from All Energy Australia 2026",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "bangladesh",
-    "plans",
+    "takeaways",
+    "energy",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Bangladesh plans 70 MW solar plant at coal power station | Energy Storage News",
-  "metaDescription": "The European Investment Bank (EIB) is expected to help finance a planned 70 MW solar power plant at Bangladesh’s Matarbari coal-fired power station, with com...",
-  "keywords": "energy storage, battery, solid-state, grid storage, bangladesh, plans, solar, TechNanoAI, emerging tech news",
+  "metaTitle": "Key takeaways from All Energy Australia 2026 | Energy Storage News",
+  "metaDescription": "The outlook for Australia’s renewable energy transition appears positive with supportive government policies and renewable energy targets, a surge in battery...",
+  "keywords": "energy storage, battery, solid-state, grid storage, takeaways, from, energy, TechNanoAI, emerging tech news",
   "featured": false
 }

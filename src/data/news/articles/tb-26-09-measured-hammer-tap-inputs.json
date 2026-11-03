@@ -1,21 +1,21 @@
 {
-  "id": "space-1792409476574-2",
+  "id": "space-1793711606571-5",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX working through Starship Flight 15 and 16 milestones | Space Exploration News",
-  "excerpt": "SpaceX is advancing toward its next two Starship missions as the company looks to close'\nThe post SpaceX working through Starship Flight 15 and 16 milestones appeared first on NASASpaceFlight.com.",
-  "date": "2026-10-19",
+  "title": "TB 26-09 Measured Hammer-Tap Inputs | Space Exploration News",
+  "excerpt": "For more information, contact Joel W. Sills, Langley Research Center, joel.w.sills@nasa.gov. Download the PDF version An instrumented hammer test does not require an idealized single half-sine wavefor",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-working-through-starship-flight-15-and-16-milestones",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/10/spacex-flight-15-16-milestones/",
-  "sourceName": "Chris Bergin and Arran Reid",
+  "slug": "tb-26-09-measured-hammer-tap-inputs",
+  "sourceLink": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs/",
+  "sourceName": "Meagan Chappell",
   "body": [
     {
       "type": "p",
-      "text": "SpaceX is advancing toward its next two Starship missions as the company looks to close'\nThe post SpaceX working through Starship Flight 15 and 16 milestones appeared first on NASASpaceFlight. com."
+      "text": "For more information, contact Joel W.  Sills, Langley Research Center, joel."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Chris Bergin and Arran Reid, SpaceX is advancing toward its next two Starship missions as the company looks to close'\nThe post SpaceX working through Starship Flight 15 and 16 milestones appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "w. sills@nasa."
+    },
+    {
+      "type": "p",
+      "text": "gov.  Download the PDF version An instrumented hammer test does not require an idealized single half-sine waveform."
+    },
+    {
+      "type": "p",
+      "text": "When the complete force and response are measured accurately, crest ripples and separated contacts remain known inputs.  Force shape changes excitation, but does not inherently invalidate the record."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX working through Starship Flight 15 and 16 milestones — a notable development in Space Exploration",
+    "TB 26-09 Measured Hammer-Tap Inputs — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +128,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Chris Bergin and Arran Reid",
+      "value": "Meagan Chappell",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "SpaceX working through Starship Flight 15 and 16 milestones",
+      "date": "2026-11-03",
+      "event": "TB 26-09 Measured Hammer-Tap Inputs",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "working",
+    "measured",
+    "hammer",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX working through Starship Flight 15 and 16 milestones | Space Exploration News",
-  "metaDescription": "SpaceX is advancing toward its next two Starship missions as the company looks to close'\nThe post SpaceX working through Starship Flight 15 and 16 milestones...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, working, through, TechNanoAI, emerging tech news",
+  "metaTitle": "TB 26-09 Measured Hammer-Tap Inputs | Space Exploration News",
+  "metaDescription": "For more information, contact Joel W. Sills, Langley Research Center, joel.w.sills@nasa.gov. Download the PDF version An instrumented hammer test does not re...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, measured, hammer, inputs, TechNanoAI, emerging tech news",
   "featured": false
 }

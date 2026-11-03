@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1792409477154-2",
+  "id": "biotech-1793711607163-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-cr... | Biotechnology News",
-  "excerpt": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that",
-  "date": "2026-10-19",
+  "title": "Sentira Brings Claude's AI to 10x Genomics’ Chromium Plat... | Biotechnology News",
+  "excerpt": "10x Genomics launches Sentira, an Anthropic Claude-powered AI platform designed to accelerate single-cell data analysis, broaden research access, and streamline workflows while raising questions about",
+  "date": "2026-11-03",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "a-hrefbiotechchina-looks-ban-foreign-acquisitions-critical-biopharma-p",
-  "sourceLink": "https://www.fiercebiotech.com/biotech/china-looks-ban-foreign-acquisitions-critical-biopharma-platforms",
-  "sourceName": "<a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>",
+  "slug": "sentira-brings-claude8217s-ai-to-10x-genomics-chromium-platform",
+  "sourceLink": "https://www.genengnews.com/topics/omics/sentira-brings-claudes-ai-to-10x-genomics-chromium-platform/",
+  "sourceName": "Julianna LeMieux, PhD",
   "body": [
     {
       "type": "p",
-      "text": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that would ban or restrict the export of key biopharmaceutical technologies."
+      "text": "10x Genomics launches Sentira, an Anthropic Claude-powered AI platform designed to accelerate single-cell data analysis, broaden research access, and streamline workflows while raising questions about expertise and AI reliability. \nThe post Sentira Brings Claude's AI to 10x Genomics’ Chromium Platform appeared first on GEN - Genetic Engineering and Biotechnology News."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from <a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>, As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical innovation, rolling out a draft policy that would ban or restrict the export of key biopharmaceutical technologies.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Julianna LeMieux, PhD, 10x Genomics launches Sentira, an Anthropic Claude-powered AI platform designed to accelerate single-cell data analysis, broaden research access, and streamline workflows while raising questions about expertise and AI reliability.\nThe post Sentira Brings Claude's AI to 10x Genomics’ Chromium Platform appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-critical-biopharma-platfo — a notable development in Biotechnology",
+    "Sentira Brings Claude's AI to 10x Genomics’ Chromium Platform — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "<a href=\"/person/angus-liu-0\" hreflang=\"en\">Angus Liu</a>",
+      "value": "Julianna LeMieux, PhD",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-19",
-      "event": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-critical-biopharma-platfo",
+      "date": "2026-11-03",
+      "event": "Sentira Brings Claude's AI to 10x Genomics’ Chromium Platform",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "biotech",
-    "china",
+    "sentira",
+    "brings",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "<a href=\"/biotech/china-looks-ban-foreign-acquisitions-cr... | Biotechnology News",
-  "metaDescription": "As Washington ramps up efforts to tighten cross-border life sciences deals involving Chinese assets, Beijing is moving to tighten its own grip on biomedical ...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, china, TechNanoAI, emerging tech news",
+  "metaTitle": "Sentira Brings Claude's AI to 10x Genomics’ Chromium Plat... | Biotechnology News",
+  "metaDescription": "10x Genomics launches Sentira, an Anthropic Claude-powered AI platform designed to accelerate single-cell data analysis, broaden research access, and streaml...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, sentira, brings, claude, TechNanoAI, emerging tech news",
   "featured": false
 }
