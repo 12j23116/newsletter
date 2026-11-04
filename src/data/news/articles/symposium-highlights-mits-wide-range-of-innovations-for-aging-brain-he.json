@@ -1,11 +1,11 @@
 {
-  "id": "bci-1792492624334-0",
+  "id": "bci-1793798860625-4",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Symposium highlights MIT’s wide range of innovations for ... | Brain-Computer Interfaces News",
   "excerpt": "In six talks, researchers from across MIT described projects aimed at advancing the understanding of and interventions against neurodegenerative diseases such as Alzheimer’s, Parkinson’s, and ALS.",
-  "date": "2026-10-20",
+  "date": "2026-11-04",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-11-04",
       "event": "Symposium highlights MIT’s wide range of innovations for aging brain health",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Symposium highlights MIT’s wide range of innovations for ... | Brain-Computer Interfaces News",
   "metaDescription": "In six talks, researchers from across MIT described projects aimed at advancing the understanding of and interventions against neurodegenerative diseases suc...",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, symposium, highlights, wide, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
