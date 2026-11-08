@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792835919628-4",
+  "id": "quantum-1794140712204-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Cloudflare Launches Post-Quantum GeoKey Manager with Hybr... | Quantum Computing News",
-  "excerpt": "Cloudflare has launched its Post-Quantum GeoKey Manager in closed beta, integrating NIST-standardized post-quantum cryptography to enforce strict geographical boundaries on customer private key access",
-  "date": "2026-10-24",
+  "title": "Who’s News: Strategic Appointments at Quantum eMotion, Qt... | Quantum Computing News",
+  "excerpt": "Quantum eMotion, Qtonic Quantum, Chicago Quantum Exchange, and Equal1 have announced strategic appointments to key leadership positions, bringing in experienced professionals to drive their respective",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "cloudflare-launches-post-quantum-geokey-manager-with-hybrid-ml-kem-768",
-  "sourceLink": "https://quantumcomputingreport.com/cloudflare-launches-post-quantum-geokey-manager-with-hybrid-ml-kem-768-encryption-for-regional-data-sovereignty/",
+  "slug": "whos-news-strategic-appointments-at-quantum-emotion-qtonic-quantum-chi",
+  "sourceLink": "https://quantumcomputingreport.com/whos-news-strategic-appointments-at-quantum-emotion-qtonic-quantum-chicago-quantum-exchange-and-equal1/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Cloudflare has launched its Post-Quantum GeoKey Manager in closed beta, integrating NIST-standardized post-quantum cryptography to enforce strict geographical boundaries on customer private key access.  This new system protects sensitive enterprise data against \"Harvest Now, Decrypt Later\" attacks and helps satisfy regional data sovereignty mandates."
+      "text": "Quantum eMotion, Qtonic Quantum, Chicago Quantum Exchange, and Equal1 have announced strategic appointments to key leadership positions, bringing in experienced professionals to drive their respective technology, operations, and quantum computing initiatives.  These appointments aim to strengthen their leadership teams and accelerate advancements in quantum technology and cybersecurity."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "General availability is expected in Q1 2027."
+      "text": "According to reporting from Mohamed Abdel-Kareem, Quantum eMotion, Qtonic Quantum, Chicago Quantum Exchange, and Equal1 have announced strategic appointments to key leadership positions, bringing in experienced professionals to drive their respective technology, operations, and quantum computing initiatives. These appointments aim to strengthen their leadership teams and accelerate advancements in quantum technology and cybersecurity.\nThe post Who’s News: Strategic Appointments at Quantum eMotion, Qtonic Quantum, Chicago Quantum Exchange, and E. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Cloudflare Launches Post-Quantum GeoKey Manager with Hybrid ML-KEM-768 Encryptio — a notable development in Quantum Computing",
+    "Who’s News: Strategic Appointments at Quantum eMotion, Qtonic Quantum, Chicago Q — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "Cloudflare Launches Post-Quantum GeoKey Manager with Hybrid ML-KEM-768 Encryptio",
+      "date": "2026-11-08",
+      "event": "Who’s News: Strategic Appointments at Quantum eMotion, Qtonic Quantum, Chicago Q",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "cloudflare",
-    "launches",
+    "strategic",
+    "appointments",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Cloudflare Launches Post-Quantum GeoKey Manager with Hybr... | Quantum Computing News",
-  "metaDescription": "Cloudflare has launched its Post-Quantum GeoKey Manager in closed beta, integrating NIST-standardized post-quantum cryptography to enforce strict geographica...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, cloudflare, launches, post, TechNanoAI, emerging tech news",
+  "metaTitle": "Who’s News: Strategic Appointments at Quantum eMotion, Qt... | Quantum Computing News",
+  "metaDescription": "Quantum eMotion, Qtonic Quantum, Chicago Quantum Exchange, and Equal1 have announced strategic appointments to key leadership positions, bringing in experien...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, news, strategic, appointments, TechNanoAI, emerging tech news",
   "featured": false
 }

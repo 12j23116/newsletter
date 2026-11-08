@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792835919628-2",
+  "id": "quantum-1794140712203-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "South Korea Launches Nationwide Open Quantum Testbed Expa... | Quantum Computing News",
-  "excerpt": "South Korea is expanding its Open Quantum Testbed nationwide from 2026-2028, with a 7.4 billion won initial investment. KT Corporation and SK Broadband are leading the project, focusing on terrestrial",
-  "date": "2026-10-24",
+  "title": "Riverlane Demonstrates Data-Driven DEM Augmentation to Re... | Quantum Computing News",
+  "excerpt": "Riverlane has developed a data-driven method to improve quantum error correction in surface-code architectures. By identifying unmodeled correlated error mechanisms from syndrome measurement data, the",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "south-korea-launches-nationwide-open-quantum-testbed-expansion-led-by-",
-  "sourceLink": "https://quantumcomputingreport.com/south-korea-launches-nationwide-open-quantum-testbed-expansion-led-by-kt-and-sk-broadband/",
+  "slug": "riverlane-demonstrates-data-driven-dem-augmentation-to-reduce-surface-",
+  "sourceLink": "https://quantumcomputingreport.com/riverlane-demonstrates-data-driven-dem-augmentation-to-reduce-surface-code-logical-errors/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "South Korea is expanding its Open Quantum Testbed nationwide from 2026-2028, with a 7. 4 billion won initial investment."
+      "text": "Riverlane has developed a data-driven method to improve quantum error correction in surface-code architectures.  By identifying unmodeled correlated error mechanisms from syndrome measurement data, their technique augments standard Detector Error Models (DEMs)."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "KT Corporation and SK Broadband are leading the project, focusing on terrestrial, cross-border, and future quantum communication technologies.  This initiative aims to establish a robust quantum communications infrastructure across the country and internationally."
+      "text": "This approach has shown significant reductions in logical error rates, up to 75% in simulations and 14% on physical hardware."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "South Korea Launches Nationwide Open Quantum Testbed Expansion Led by KT and SK  — a notable development in Quantum Computing",
+    "Riverlane Demonstrates Data-Driven DEM Augmentation to Reduce Surface-Code Logic — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "South Korea Launches Nationwide Open Quantum Testbed Expansion Led by KT and SK ",
+      "date": "2026-11-08",
+      "event": "Riverlane Demonstrates Data-Driven DEM Augmentation to Reduce Surface-Code Logic",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "south",
-    "korea",
+    "riverlane",
+    "demonstrates",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "South Korea Launches Nationwide Open Quantum Testbed Expa... | Quantum Computing News",
-  "metaDescription": "South Korea is expanding its Open Quantum Testbed nationwide from 2026-2028, with a 7.4 billion won initial investment. KT Corporation and SK Broadband are l...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, south, korea, launches, TechNanoAI, emerging tech news",
+  "metaTitle": "Riverlane Demonstrates Data-Driven DEM Augmentation to Re... | Quantum Computing News",
+  "metaDescription": "Riverlane has developed a data-driven method to improve quantum error correction in surface-code architectures. By identifying unmodeled correlated error mec...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, riverlane, demonstrates, data, TechNanoAI, emerging tech news",
   "featured": false
 }

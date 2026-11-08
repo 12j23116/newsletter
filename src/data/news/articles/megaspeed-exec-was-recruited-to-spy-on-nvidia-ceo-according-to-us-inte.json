@@ -1,21 +1,21 @@
 {
-  "id": "ai-1792835912382-2",
+  "id": "ai-1794140703400-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable... | AI News",
-  "excerpt": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.",
-  "date": "2026-10-24",
+  "title": "Megaspeed exec was recruited to spy on Nvidia CEO, accord... | AI News",
+  "excerpt": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-rob",
-  "sourceLink": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
-  "sourceName": "Julie Bort",
+  "slug": "megaspeed-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-inte",
+  "sourceLink": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command."
+      "text": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julie Bort, The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,0 — a notable development in AI",
+    "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Julie Bort",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,0",
+      "date": "2026-11-08",
+      "event": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hottest",
-    "christmas",
+    "megaspeed",
+    "recruited",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hottest toy for Christmas? Nvidia CEO plays with adorable... | AI News",
-  "metaDescription": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hottest, christmas, nvidia, TechNanoAI, emerging tech news",
+  "metaTitle": "Megaspeed exec was recruited to spy on Nvidia CEO, accord... | AI News",
+  "metaDescription": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, megaspeed, exec, recruited, TechNanoAI, emerging tech news",
   "featured": false
 }

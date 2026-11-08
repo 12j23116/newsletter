@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1792835918459-0",
+  "id": "robotics-1794140711203-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Webinar to discuss how the FCC robotics ruling affects au... | Robotics News",
-  "excerpt": "Industry leaders will discuss what robotics buyers should know about the recent FCC restriction on certain connected systems.\nThe post Webinar to discuss how the FCC robotics ruling affects automation",
-  "date": "2026-10-24",
+  "title": "Robot integration brings high-precision production to mid... | Robotics News",
+  "excerpt": "Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist.\nThe post Robot integration brings high-precision production to midmarket manufacture",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "webinar-to-discuss-how-the-fcc-robotics-ruling-affects-automation-buye",
-  "sourceLink": "https://www.therobotreport.com/webinar-discuss-how-fcc-robotics-ruling-affects-automation-buyers/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "robot-integration-brings-high-precision-production-to-midmarket-manufa",
+  "sourceLink": "https://www.therobotreport.com/robot-integration-brings-high-precision-production-to-midmarket-manufacturers/",
+  "sourceName": "Lou Farrell",
   "body": [
     {
       "type": "p",
-      "text": "Industry leaders will discuss what robotics buyers should know about the recent FCC restriction on certain connected systems. \nThe post Webinar to discuss how the FCC robotics ruling affects automation buyers appeared first on The Robot Report."
+      "text": "Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist. \nThe post Robot integration brings high-precision production to midmarket manufacturers appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, Industry leaders will discuss what robotics buyers should know about the recent FCC restriction on certain connected systems.\nThe post Webinar to discuss how the FCC robotics ruling affects automation buyers appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lou Farrell, Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist.\nThe post Robot integration brings high-precision production to midmarket manufacturers appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Webinar to discuss how the FCC robotics ruling affects automation buyers — a notable development in Robotics",
+    "Robot integration brings high-precision production to midmarket manufacturers — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Lou Farrell",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "Webinar to discuss how the FCC robotics ruling affects automation buyers",
+      "date": "2026-11-08",
+      "event": "Robot integration brings high-precision production to midmarket manufacturers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "webinar",
-    "discuss",
+    "robot",
+    "integration",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Webinar to discuss how the FCC robotics ruling affects au... | Robotics News",
-  "metaDescription": "Industry leaders will discuss what robotics buyers should know about the recent FCC restriction on certain connected systems.\nThe post Webinar to discuss how...",
-  "keywords": "robotics, humanoid robot, automation, drones, webinar, discuss, robotics, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Robot integration brings high-precision production to mid... | Robotics News",
+  "metaDescription": "Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist.\nThe post Robot integration brings high-pr...",
+  "keywords": "robotics, humanoid robot, automation, drones, robot, integration, brings, TechNanoAI, emerging tech news",
+  "featured": false
 }

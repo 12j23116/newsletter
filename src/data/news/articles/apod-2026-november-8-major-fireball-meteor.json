@@ -1,21 +1,21 @@
 {
-  "id": "space-1792835914076-4",
+  "id": "space-1794140705087-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA’s Swift Mission Ends, Leaves Behind Scientific Bonanza | Space Exploration News",
-  "excerpt": "NASA’s Neil Gehrels Swift Observatory has ended its science mission now that the spacecraft is orbiting less than 171 miles (275 kilometers) above Earth’s surface. The greater atmospheric drag at this",
-  "date": "2026-10-24",
+  "title": "APOD: 2026 November 8 – Major Fireball Meteor | Space Exploration News",
+  "excerpt": "APOD Science APOD APOD: 2026 November 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a differ",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasas-swift-mission-ends-leaves-behind-scientific-bonanza",
-  "sourceLink": "https://science.nasa.gov/missions/swift/nasas-swift-mission-ends/",
+  "slug": "apod-2026-november-8-major-fireball-meteor",
+  "sourceLink": "https://science.nasa.gov/image-article/apod-2026-november-8-major-fireball-meteor/",
   "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "NASA’s Neil Gehrels Swift Observatory has ended its science mission now that the spacecraft is orbiting less than 171 miles (275 kilometers) above Earth’s surface.  The greater atmospheric drag at this height prevents the satellite’s telescopes from steadily gazing at their astronomical targets."
+      "text": "APOD Science APOD APOD: 2026 November 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos!  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Swift conducted its final observation on Oct.  20."
+      "text": "According to reporting from nasa.gov, APOD Science APOD APOD: 2026 November 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Major Fireball Meteor [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA’s Swift Mission Ends, Leaves Behind Scientific Bonanza — a notable development in Space Exploration",
+    "APOD: 2026 November 8 – Major Fireball Meteor — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "NASA’s Swift Mission Ends, Leaves Behind Scientific Bonanza",
+      "date": "2026-11-08",
+      "event": "APOD: 2026 November 8 – Major Fireball Meteor",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "swift",
-    "mission",
+    "november",
+    "major",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA’s Swift Mission Ends, Leaves Behind Scientific Bonanza | Space Exploration News",
-  "metaDescription": "NASA’s Neil Gehrels Swift Observatory has ended its science mission now that the spacecraft is orbiting less than 171 miles (275 kilometers) above Earth’s su...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, swift, mission, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "APOD: 2026 November 8 – Major Fireball Meteor | Space Exploration News",
+  "metaDescription": "APOD Science APOD APOD: 2026 November 8 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, apod, november, major, TechNanoAI, emerging tech news",
+  "featured": true
 }

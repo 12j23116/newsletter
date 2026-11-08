@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1792835919628-1",
+  "id": "quantum-1794140712204-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "QCentroid Unveils 'Missions' on NVIDIA CUDA-Q to Benchmar... | Quantum Computing News",
-  "excerpt": "QCentroid launched \"Missions,\" a new platform integrated with NVIDIA CUDA-Q, to evaluate the best solutions for enterprise computational challenges. It uses autonomous AI to determine if classical, qu",
-  "date": "2026-10-24",
+  "title": "Scientists squeeze record-breaking X-ray power into an in... | Quantum Computing News",
+  "excerpt": "Scientists have created record-breaking X-ray flashes lasting just 300 attoseconds, concentrating enormous power into an incredibly tiny spot. The breakthrough could unlock a new way to observe electr",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "qcentroid-unveils-8220missions8221-on-nvidia-cuda-q-to-benchmark-class",
-  "sourceLink": "https://quantumcomputingreport.com/qcentroid-unveils-missions-on-nvidia-cuda-q-to-benchmark-classical-quantum-inspired-and-qpu-workloads/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "scientists-squeeze-record-breaking-x-ray-power-into-an-incredibly-tiny",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261104012329.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "QCentroid launched \"Missions,\" a new platform integrated with NVIDIA CUDA-Q, to evaluate the best solutions for enterprise computational challenges.  It uses autonomous AI to determine if classical, quantum-inspired, or QPU algorithms are most effective, based on business objectives and operational constraints."
+      "text": "Scientists have created record-breaking X-ray flashes lasting just 300 attoseconds, concentrating enormous power into an incredibly tiny spot.  The breakthrough could unlock a new way to observe electrons in action and potentially control the ultrafast processes that drive chemical reactions."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The platform also includes a validation step to ensure performance claims are accurate and recommends retaining classical architectures if they are more cost-effective."
+      "text": "According to reporting from sciencedaily.com, Scientists have created record-breaking X-ray flashes lasting just 300 attoseconds, concentrating enormous power into an incredibly tiny spot. The breakthrough could unlock a new way to observe electrons in action and potentially control the ultrafast processes that drive chemical reactions.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "QCentroid Unveils 'Missions' on NVIDIA CUDA-Q to Benchmark Classical, Quantum-In — a notable development in Quantum Computing",
+    "Scientists squeeze record-breaking X-ray power into an incredibly tiny spot — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "QCentroid Unveils 'Missions' on NVIDIA CUDA-Q to Benchmark Classical, Quantum-In",
+      "date": "2026-11-08",
+      "event": "Scientists squeeze record-breaking X-ray power into an incredibly tiny spot",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "qcentroid",
-    "unveils",
+    "scientists",
+    "squeeze",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "QCentroid Unveils 'Missions' on NVIDIA CUDA-Q to Benchmar... | Quantum Computing News",
-  "metaDescription": "QCentroid launched \"Missions,\" a new platform integrated with NVIDIA CUDA-Q, to evaluate the best solutions for enterprise computational challenges. It uses ...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, qcentroid, unveils, missions, TechNanoAI, emerging tech news",
+  "metaTitle": "Scientists squeeze record-breaking X-ray power into an in... | Quantum Computing News",
+  "metaDescription": "Scientists have created record-breaking X-ray flashes lasting just 300 attoseconds, concentrating enormous power into an incredibly tiny spot. The breakthrou...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, scientists, squeeze, record, TechNanoAI, emerging tech news",
   "featured": false
 }

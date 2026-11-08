@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1792835918460-1",
+  "id": "robotics-1794140711203-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Generative Bionics to launch Physical AI Data Factory in ... | Robotics News",
-  "excerpt": "Generative Bionics says it hopes to advance European robotics sovereignty by ensuring that humanoid data is are generated on the continent. \nThe post Generative Bionics to launch Physical AI Data Fact",
-  "date": "2026-10-24",
+  "title": "A hidden limit of space and time could unlock electronics... | Robotics News",
+  "excerpt": "Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time. The breakthrough could pave the way for manipulating c",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "generative-bionics-to-launch-physical-ai-data-factory-in-italy",
-  "sourceLink": "https://www.therobotreport.com/generative-bionics-to-launch-physical-ai-data-factory-in-italy/",
-  "sourceName": "Brianna Wessling",
+  "slug": "a-hidden-limit-of-space-and-time-could-unlock-electronics-100000-times",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Generative Bionics says it hopes to advance European robotics sovereignty by ensuring that humanoid data is are generated on the continent.  \nThe post Generative Bionics to launch Physical AI Data Factory in Italy appeared first on The Robot Report."
+      "text": "Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time.  The breakthrough could pave the way for manipulating chemical reactions and developing electronics hundreds of thousands of times faster than today's technology."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Brianna Wessling, Generative Bionics says it hopes to advance European robotics sovereignty by ensuring that humanoid data is are generated on the continent. \nThe post Generative Bionics to launch Physical AI Data Factory in Italy appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time. The breakthrough could pave the way for manipulating chemical reactions and developing electronics hundreds of thousands of times faster than today's technology.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Generative Bionics to launch Physical AI Data Factory in Italy — a notable development in Robotics",
+    "A hidden limit of space and time could unlock electronics 100,000 times faster — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Brianna Wessling",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "Generative Bionics to launch Physical AI Data Factory in Italy",
+      "date": "2026-11-08",
+      "event": "A hidden limit of space and time could unlock electronics 100,000 times faster",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "generative",
-    "bionics",
+    "hidden",
+    "limit",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Generative Bionics to launch Physical AI Data Factory in ... | Robotics News",
-  "metaDescription": "Generative Bionics says it hopes to advance European robotics sovereignty by ensuring that humanoid data is are generated on the continent. \nThe post Generat...",
-  "keywords": "robotics, humanoid robot, automation, drones, generative, bionics, launch, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "A hidden limit of space and time could unlock electronics... | Robotics News",
+  "metaDescription": "Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time. The breakth...",
+  "keywords": "robotics, humanoid robot, automation, drones, hidden, limit, space, TechNanoAI, emerging tech news",
+  "featured": true
 }

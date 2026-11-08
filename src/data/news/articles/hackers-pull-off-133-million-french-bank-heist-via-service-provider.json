@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1792835912958-1",
+  "id": "cybersecurity-1794140703915-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Abandoned Popcorn Time app exposed millions of devices to... | Cybersecurity News",
-  "excerpt": "Researchers remotely disabled a vulnerable updater in the abandoned Time4Popcorn app, a fork of the Popcorn Time BitTorrent client, closing a security flaw that could have allowed attackers to execute",
-  "date": "2026-10-24",
+  "title": "Hackers pull off $133 million French bank heist via servi... | Cybersecurity News",
+  "excerpt": "French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems.v [...]",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "abandoned-popcorn-time-app-exposed-millions-of-devices-to-rce-attacks",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/",
+  "slug": "hackers-pull-off-133-million-french-bank-heist-via-service-provider",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
   "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "Researchers remotely disabled a vulnerable updater in the abandoned Time4Popcorn app, a fork of the Popcorn Time BitTorrent client, closing a security flaw that could have allowed attackers to execute malicious code with elevated privileges on millions of computers.  [..."
+      "text": "French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems. v [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Bill Toulas, Researchers remotely disabled a vulnerable updater in the abandoned Time4Popcorn app, a fork of the Popcorn Time BitTorrent client, closing a security flaw that could have allowed attackers to execute malicious code with elevated privileges on millions of computers. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Bill Toulas, French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems.v [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Abandoned Popcorn Time app exposed millions of devices to RCE attacks — a notable development in Cybersecurity",
+    "Hackers pull off $133 million French bank heist via service provider — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "Abandoned Popcorn Time app exposed millions of devices to RCE attacks",
+      "date": "2026-11-08",
+      "event": "Hackers pull off $133 million French bank heist via service provider",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "abandoned",
-    "popcorn",
+    "hackers",
+    "million",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Abandoned Popcorn Time app exposed millions of devices to... | Cybersecurity News",
-  "metaDescription": "Researchers remotely disabled a vulnerable updater in the abandoned Time4Popcorn app, a fork of the Popcorn Time BitTorrent client, closing a security flaw t...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, abandoned, popcorn, time, TechNanoAI, emerging tech news",
+  "metaTitle": "Hackers pull off $133 million French bank heist via servi... | Cybersecurity News",
+  "metaDescription": "French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond b...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, hackers, pull, million, TechNanoAI, emerging tech news",
   "featured": false
 }

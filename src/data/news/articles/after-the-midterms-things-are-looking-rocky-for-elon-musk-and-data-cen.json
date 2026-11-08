@@ -1,21 +1,21 @@
 {
-  "id": "ai-1792835912383-3",
+  "id": "ai-1794140703400-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "From Toast to Bessemer: Who founders will hear from at Te... | AI News",
-  "excerpt": "Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, d",
-  "date": "2026-10-24",
+  "title": "After the midterms, things are looking rocky for Elon Mus... | AI News",
+  "excerpt": "On Equity, we unpacked what the midterms mean for the tech industry.",
+  "date": "2026-11-08",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-found",
-  "sourceLink": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/",
-  "sourceName": "TechCrunch Events",
+  "slug": "after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-cen",
+  "sourceLink": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, developing founder leadership, and scaling companies both inside and outside traditional startup hubs."
+      "text": "On Equity, we unpacked what the midterms mean for the tech industry."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from TechCrunch Events, Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, developing founder leadership, and scaling companies both inside and outside traditional startup hubs.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Anthony Ha, On Equity, we unpacked what the midterms mean for the tech industry.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "From Toast to Bessemer: Who founders will hear from at TechCrunch Founder Summit — a notable development in AI",
+    "After the midterms, things are looking rocky for Elon Musk and data centers — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "TechCrunch Events",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-24",
-      "event": "From Toast to Bessemer: Who founders will hear from at TechCrunch Founder Summit",
+      "date": "2026-11-08",
+      "event": "After the midterms, things are looking rocky for Elon Musk and data centers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "toast",
-    "bessemer",
+    "after",
+    "midterms",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "From Toast to Bessemer: Who founders will hear from at Te... | AI News",
-  "metaDescription": "Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding custo...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, from, toast, bessemer, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "After the midterms, things are looking rocky for Elon Mus... | AI News",
+  "metaDescription": "On Equity, we unpacked what the midterms mean for the tech industry. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, after, midterms, things, TechNanoAI, emerging tech news",
+  "featured": true
 }
