@@ -1,112 +1,112 @@
 {
-  "issue": 96,
-  "date": "2026-11-02",
-  "subject": "This Week: Biotech, Cybersecurity & more — November 2, 2026",
+  "issue": 97,
+  "date": "2026-11-09",
+  "subject": "This Week: Robotics, AI & more — November 9, 2026",
   "articleCount": 12,
   "topicsCovered": [
-    "biotech",
-    "cybersecurity",
-    "space",
     "robotics",
     "ai",
-    "energy"
+    "energy",
+    "biotech",
+    "quantum",
+    "cybersecurity"
   ],
   "articles": [
     {
-      "title": "<a href=\"/biotech/fda-dims-bright-minds-outlook-partial-h... | Biotechnology News",
-      "slug": "a-hrefbiotechfda-dims-bright-minds-outlook-partial-hold-seizure-trial-",
-      "topic": "biotech",
-      "excerpt": "The FDA has put a partial hold on Bright Minds Biosciences’ seizure study application over preclinical toxicity data and concerns about its preparations for enrolling children.",
-      "url": "https://technanoai.com/news/a-hrefbiotechfda-dims-bright-minds-outlook-partial-hold-seizure-trial-",
-      "date": "2026-11-02"
-    },
-    {
-      "title": "<a href=\"/biotech/gileads-kite-reveals-partial-clinical-h... | Biotechnology News",
-      "slug": "a-hrefbiotechgileads-kite-reveals-partial-clinical-hold-2-car-t-cell-t",
-      "topic": "biotech",
-      "excerpt": "Gilead Sciences announced on its third-quarter earnings call Oct. 29 that the company has placed a partial clinical hold on two studies for the CAR-T cell therapy KITE-753 in diffuse large B-cell lymp",
-      "url": "https://technanoai.com/news/a-hrefbiotechgileads-kite-reveals-partial-clinical-hold-2-car-t-cell-t",
-      "date": "2026-11-02"
-    },
-    {
-      "title": "Google Introduces $250,000 Root-in-Cloud Bug Bounty Reward | Cybersecurity News",
-      "slug": "google-introduces-250000-root-in-cloud-bug-bounty-reward",
-      "topic": "cybersecurity",
-      "excerpt": "The top payout is for high-impact architectural research demonstrating full administrative control.\nThe post Google Introduces $250,000 Root-in-Cloud Bug Bounty Reward appeared first on SecurityWeek.",
-      "url": "https://technanoai.com/news/google-introduces-250000-root-in-cloud-bug-bounty-reward",
-      "date": "2026-11-02"
-    },
-    {
-      "title": "Microsoft fixes Smart App Control broken by October Windo... | Cybersecurity News",
-      "slug": "microsoft-fixes-smart-app-control-broken-by-october-windows-update",
-      "topic": "cybersecurity",
-      "excerpt": "Microsoft has resolved a known issue that prevented some users from activating the Smart App Control security feature after installing the October 2026 KB5127648 Windows 11 security update. [...]",
-      "url": "https://technanoai.com/news/microsoft-fixes-smart-app-control-broken-by-october-windows-update",
-      "date": "2026-11-02"
-    },
-    {
-      "title": "APOD: 2026 November 2 – A Long Cloud on Mars | Space Exploration News",
-      "slug": "apod-2026-november-2-a-long-cloud-on-mars",
-      "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 November 2 – A… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a diff",
-      "url": "https://technanoai.com/news/apod-2026-november-2-a-long-cloud-on-mars",
-      "date": "2026-11-02"
-    },
-    {
-      "title": "How to Expand Reliable, Flexible Access to Space | Space Exploration News",
-      "slug": "how-to-expand-reliable-flexible-access-to-space",
-      "topic": "space",
-      "excerpt": "The space industry launched more rockets into orbit last year than ever before, yet satellite operators are confronting an unexpected problem: There still aren’t enough rides to go around. And [']\nThe",
-      "url": "https://technanoai.com/news/how-to-expand-reliable-flexible-access-to-space",
-      "date": "2026-11-02"
-    },
-    {
-      "title": "28 Zero-Day Findings in Less Than Two Days: What AI-Speed... | Robotics News",
-      "slug": "28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-mea",
+      "title": "ARM Institute consortium grows to more than 500 organizat... | Robotics News",
+      "slug": "arm-institute-consortium-grows-to-more-than-500-organizations",
       "topic": "robotics",
-      "excerpt": "VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical AI ecosystem.\nThe post 28 Zero-Day Findings ",
-      "url": "https://technanoai.com/news/28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-mea",
-      "date": "2026-11-02"
+      "excerpt": "The ARM Institute reached the milestone as it prepares to host its 10th annual member meeting in Pittsburgh.\nThe post ARM Institute consortium grows to more than 500 organizations appeared first on Th",
+      "url": "https://technanoai.com/news/arm-institute-consortium-grows-to-more-than-500-organizations",
+      "date": "2026-11-09"
     },
     {
-      "title": "Solving the Interconnect Challenge in Modern Robotics: Ho... | Robotics News",
-      "slug": "solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engine",
+      "title": "Can Agentic Robotics Solve Robotics’ Data Scaling Problem? | Robotics News",
+      "slug": "can-agentic-robotics-solve-robotics-data-scaling-problem",
       "topic": "robotics",
-      "excerpt": "As robotics systems grow more capable — faster, more precise, and increasingly reliant on AI-driven vision and control — the humble interconnect is being asked to do more than ever.\nThe post Solving t",
-      "url": "https://technanoai.com/news/solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engine",
-      "date": "2026-11-02"
+      "excerpt": "Robotics companies are investing heavily in the belief that data will solve the most difficult problems in robotics. Once AI systems have ingested enough data from human demonstrations, the thinking g",
+      "url": "https://technanoai.com/news/can-agentic-robotics-solve-robotics-data-scaling-problem",
+      "date": "2026-11-09"
     },
     {
-      "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD... | AI News",
-      "slug": "attackers-pose-as-it-support-on-microsoft-teams-abuse-ad-cs-to-steal-c",
+      "title": "Automattic debuts a platform to deploy vibe coding apps a... | AI News",
+      "slug": "automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changin",
       "topic": "ai",
-      "excerpt": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtai",
-      "url": "https://technanoai.com/news/attackers-pose-as-it-support-on-microsoft-teams-abuse-ad-cs-to-steal-c",
-      "date": "2026-11-02"
+      "excerpt": "Automattic aims to compete with likes of Lovable with Spacefast",
+      "url": "https://technanoai.com/news/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changin",
+      "date": "2026-11-09"
     },
     {
-      "title": "Critical Langflow Flaws Could Let Unauthenticated Attacke... | AI News",
-      "slug": "critical-langflow-flaws-could-let-unauthenticated-attackers-run-code-o",
+      "title": "Default 'admin:admin' Server Password Helps Researchers H... | AI News",
+      "slug": "default-adminadmin-server-password-helps-researchers-hack-two-automake",
       "topic": "ai",
-      "excerpt": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week.\n\nLangflow is an open-source tool for building AI agents and ",
-      "url": "https://technanoai.com/news/critical-langflow-flaws-could-let-unauthenticated-attackers-run-code-o",
-      "date": "2026-11-02"
+      "excerpt": "The login systems behind two car brands' mobile apps could be taken over completely, two security researchers found, allowing them to access any customer's account and, for an owner with a connected c",
+      "url": "https://technanoai.com/news/default-adminadmin-server-password-helps-researchers-hack-two-automake",
+      "date": "2026-11-09"
     },
     {
-      "title": "Armenia introduces interest rate subsidies for storage sy... | Energy Storage News",
-      "slug": "armenia-introduces-interest-rate-subsidies-for-storage-systems",
+      "title": "A degree in Paris, a gigawatt at the border | Energy Storage News",
+      "slug": "a-degree-in-paris-a-gigawatt-at-the-border",
       "topic": "energy",
-      "excerpt": "New government provisions offer businesses interest rate subsidies of 6 to 10 percentage points on loans and leases for battery storage equipment.\nThe post Armenia introduces interest rate subsidies f",
-      "url": "https://technanoai.com/news/armenia-introduces-interest-rate-subsidies-for-storage-systems",
-      "date": "2026-11-02"
+      "excerpt": "How French winter temperature reshapes cross-border flows, day-ahead prices and solar revenue in the markets around it. \nThe post A degree in Paris, a gigawatt at the border appeared first on pv magaz",
+      "url": "https://technanoai.com/news/a-degree-in-paris-a-gigawatt-at-the-border",
+      "date": "2026-11-09"
     },
     {
-      "title": "Belgian spin-off Noak raises €5 million for perovskite-si... | Energy Storage News",
-      "slug": "belgian-spin-off-noak-raises-5-million-for-perovskite-silicon-solar-ce",
+      "title": "CGN connects first unit of world's highest-altitude CSP p... | Energy Storage News",
+      "slug": "cgn-connects-first-unit-of-world8217s-highest-altitude-csp-plant-in-ti",
       "topic": "energy",
-      "excerpt": "Noak will use the seed funding to industrialise its perovskite-silicon tandem technology, which combines a proprietary layer stack with a 3D woven back-contact foil.\nThe post Belgian spin-off Noak rai",
-      "url": "https://technanoai.com/news/belgian-spin-off-noak-raises-5-million-for-perovskite-silicon-solar-ce",
-      "date": "2026-11-02"
+      "excerpt": "Located at an altitude of 4,300 meters, the facility combines PV-powered molten salt heating, thermal energy storage and battery storage.\nThe post CGN connects first unit of world's highest-altitude C",
+      "url": "https://technanoai.com/news/cgn-connects-first-unit-of-world8217s-highest-altitude-csp-plant-in-ti",
+      "date": "2026-11-09"
+    },
+    {
+      "title": "Childhood Cancers May Not Always Need Extra Mutations to ... | Biotechnology News",
+      "slug": "childhood-cancers-may-not-always-need-extra-mutations-to-spread-study-",
+      "topic": "biotech",
+      "excerpt": "Childhood cancers may not always need extra mutations to spread, a new review study indicates. Instead, developmental plasticity may let tumor cells shape-shift into states that help them grow, resist",
+      "url": "https://technanoai.com/news/childhood-cancers-may-not-always-need-extra-mutations-to-spread-study-",
+      "date": "2026-11-09"
+    },
+    {
+      "title": "Formulation Development Roundup | Biotechnology News",
+      "slug": "formulation-development-roundup",
+      "topic": "biotech",
+      "excerpt": "What leaders suggest are the key considerations for developing robust formulations.\nThe post Formulation Development Roundup appeared first on GEN - Genetic Engineering and Biotechnology News.",
+      "url": "https://technanoai.com/news/formulation-development-roundup",
+      "date": "2026-11-09"
+    },
+    {
+      "title": "A quantum breakthrough makes light behave like both a sol... | Quantum Computing News",
+      "slug": "a-quantum-breakthrough-makes-light-behave-like-both-a-solid-and-a-liqu",
+      "topic": "quantum",
+      "excerpt": "Scientists have observed a bizarre quantum state of matter that combines the structure of a crystal with the frictionless flow of a liquid, all at room temperature. The breakthrough overturns a major ",
+      "url": "https://technanoai.com/news/a-quantum-breakthrough-makes-light-behave-like-both-a-solid-and-a-liqu",
+      "date": "2026-11-09"
+    },
+    {
+      "title": "Conferences to Remember | Quantum Computing News",
+      "slug": "conferences-to-remember",
+      "topic": "quantum",
+      "excerpt": "Q+AI and PQC+IQT are getting smaller and smaller in the rearview mirror, but their memories can stay with us. We are gathering as much multimedia as we can, not just from what we recorded, but from wh",
+      "url": "https://technanoai.com/news/conferences-to-remember",
+      "date": "2026-11-09"
+    },
+    {
+      "title": "FBI agent stole $2.5 million in crypto from hackers under... | Cybersecurity News",
+      "slug": "fbi-agent-stole-25-million-in-crypto-from-hackers-under-investigation",
+      "topic": "cybersecurity",
+      "excerpt": "A former FBI agent has pleaded guilty to stealing nearly $2.5 million from the wallets of fraud victims and nation-state hackers under investigation. [...]",
+      "url": "https://technanoai.com/news/fbi-agent-stole-25-million-in-crypto-from-hackers-under-investigation",
+      "date": "2026-11-09"
+    },
+    {
+      "title": "Iris Plaza Breach May Have Exposed Data of 7.7 Million Cu... | Cybersecurity News",
+      "slug": "iris-plaza-breach-may-have-exposed-data-of-77-million-customers",
+      "topic": "cybersecurity",
+      "excerpt": "Hackers compromised an external cloud service used by the shopping platform and may have stolen personal information from it.\nThe post Iris Plaza Breach May Have Exposed Data of 7.7 Million Customers ",
+      "url": "https://technanoai.com/news/iris-plaza-breach-may-have-exposed-data-of-77-million-customers",
+      "date": "2026-11-09"
     }
   ]
 }
