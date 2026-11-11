@@ -1,11 +1,11 @@
 {
-  "id": "bci-1793099683675-0",
+  "id": "bci-1794402627431-4",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Implantable device uses ultrasound to improve drug delive... | Brain-Computer Interfaces News",
   "excerpt": "This targeted approach could offer a way to prevent the recurrence of aggressive brain tumors.",
-  "date": "2026-10-27",
+  "date": "2026-11-11",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-27",
+      "date": "2026-11-11",
       "event": "Implantable device uses ultrasound to improve drug delivery to the brain",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Implantable device uses ultrasound to improve drug delive... | Brain-Computer Interfaces News",
   "metaDescription": "This targeted approach could offer a way to prevent the recurrence of aggressive brain tumors. Neural implants & EEG control. Latest Brain-Computer Interfaces d",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, implantable, device, uses, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
