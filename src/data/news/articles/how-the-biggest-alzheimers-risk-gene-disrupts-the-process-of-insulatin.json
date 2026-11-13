@@ -1,11 +1,11 @@
 {
-  "id": "bci-1793275006562-2",
+  "id": "bci-1794577038038-3",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "How the biggest Alzheimer’s risk gene disrupts the proces... | Brain-Computer Interfaces News",
   "excerpt": "MIT researchers showed that the APOE4 gene variant suppresses molecular signaling needed for oligodendrocytes to myelinate neurons and also demonstrated a proof-of-concept fix.",
-  "date": "2026-10-29",
+  "date": "2026-11-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-29",
+      "date": "2026-11-13",
       "event": "How the biggest Alzheimer’s risk gene disrupts the process of insulating neurons",
       "current": true
     },

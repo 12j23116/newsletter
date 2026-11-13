@@ -1,11 +1,11 @@
 {
-  "id": "bci-1793275006561-0",
+  "id": "bci-1794577038037-1",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Magnetic sensors track muscle movement, for better prosth... | Brain-Computer Interfaces News",
   "excerpt": "Researchers hope to use these sensors to help people with amputation achieve more natural movements with their prosthetic limbs.",
-  "date": "2026-10-29",
+  "date": "2026-11-13",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-29",
+      "date": "2026-11-13",
       "event": "Magnetic sensors track muscle movement, for better prosthetic limb control",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Magnetic sensors track muscle movement, for better prosth... | Brain-Computer Interfaces News",
   "metaDescription": "Researchers hope to use these sensors to help people with amputation achieve more natural movements with their prosthetic limbs.",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, magnetic, sensors, track, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
