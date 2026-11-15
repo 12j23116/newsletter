@@ -1,21 +1,21 @@
 {
-  "id": "ai-1793445850261-3",
+  "id": "ai-1794748068349-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Nvidia weighs playing the cosigner for Nscale’s AI data c... | AI News",
-  "excerpt": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.",
-  "date": "2026-10-31",
+  "title": "Where was Nvidia's security team? | AI News",
+  "excerpt": "Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, including one with an executive at a company suspected of funneling chips to Chin",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-",
-  "sourceLink": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
-  "sourceName": "Aditya Mehta",
+  "slug": "where-was-nvidia8217s-security-team",
+  "sourceLink": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+  "sourceName": "Connie Loizos",
   "body": [
     {
       "type": "p",
-      "text": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan."
+      "text": "Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, including one with an executive at a company suspected of funneling chips to China, a former intelligence officer says it’s the kind of leak that runs everyday conversations, which most corporate security teams are poorly equipped to catch."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Aditya Mehta, When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Connie Loizos, Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, including one with an executive at a company suspected of funneling chips to China, a former intelligence officer says it’s the kind of leak that runs everyday conversations, which most corporate security teams are poorly equipped to catch.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia — a notable development in AI",
+    "Where was Nvidia's security team? — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Aditya Mehta",
+      "value": "Connie Loizos",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+      "date": "2026-11-15",
+      "event": "Where was Nvidia's security team?",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
+    "where",
     "nvidia",
-    "weighs",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Nvidia weighs playing the cosigner for Nscale’s AI data c... | AI News",
-  "metaDescription": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, nvidia, weighs, playing, TechNanoAI, emerging tech news",
+  "metaTitle": "Where was Nvidia's security team? | AI News",
+  "metaDescription": "Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, including one with an executive at a c...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, where, nvidia, security, TechNanoAI, emerging tech news",
   "featured": false
 }

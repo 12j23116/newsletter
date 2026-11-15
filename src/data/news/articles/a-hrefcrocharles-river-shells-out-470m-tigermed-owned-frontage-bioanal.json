@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1793445852009-1",
+  "id": "biotech-1794748069827-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "100 Million-Cell AI-Ready Dataset with Single-Cell and Pr... | Biotechnology News",
-  "excerpt": "Parse Biosciences and Nomic Bio are partnering to create Cascade, a 100-million-cell multimodal dataset combining single-cell and proteomic data to advance AI-driven immune modeling, drug discovery, a",
-  "date": "2026-10-31",
+  "title": "<a href=\"/cro/charles-river-shells-out-470m-tigermed-owne... | Biotechnology News",
+  "excerpt": "Charles River Laboratories has acquired Tigermed’s Frontage laboratory sites for $470 million upfront to advance its bioanalysis footprint.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "100-million-cell-ai-ready-dataset-with-single-cell-and-proteomic-data-",
-  "sourceLink": "https://www.genengnews.com/topics/omics/100-million-cell-ai-ready-dataset-with-single-cell-and-proteomic-data-created-by-parse-and-nomic/",
-  "sourceName": "Julianna LeMieux, PhD",
+  "slug": "a-hrefcrocharles-river-shells-out-470m-tigermed-owned-frontage-bioanal",
+  "sourceLink": "https://www.fiercebiotech.com/cro/charles-river-shells-out-470m-tigermed-owned-frontage-bioanalysis-business",
+  "sourceName": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
   "body": [
     {
       "type": "p",
-      "text": "Parse Biosciences and Nomic Bio are partnering to create Cascade, a 100-million-cell multimodal dataset combining single-cell and proteomic data to advance AI-driven immune modeling, drug discovery, and therapeutic target identification. \nThe post 100 Million-Cell AI-Ready Dataset with Single-Cell and Proteomic Data Created by Parse and Nomic appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Charles River Laboratories has acquired Tigermed’s Frontage laboratory sites for $470 million upfront to advance its bioanalysis footprint."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julianna LeMieux, PhD, Parse Biosciences and Nomic Bio are partnering to create Cascade, a 100-million-cell multimodal dataset combining single-cell and proteomic data to advance AI-driven immune modeling, drug discovery, and therapeutic target identification.\nThe post 100 Million-Cell AI-Ready Dataset with Single-Cell and Proteomic Data Created by Parse and Nomic appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, Charles River Laboratories has acquired Tigermed’s Frontage laboratory sites for $470 million upfront to advance its bioanalysis footprint.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "100 Million-Cell AI-Ready Dataset with Single-Cell and Proteomic Data Created by — a notable development in Biotechnology",
+    "<a href=\"/cro/charles-river-shells-out-470m-tigermed-owned-frontage-bioanalysis- — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Julianna LeMieux, PhD",
+      "value": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "100 Million-Cell AI-Ready Dataset with Single-Cell and Proteomic Data Created by",
+      "date": "2026-11-15",
+      "event": "<a href=\"/cro/charles-river-shells-out-470m-tigermed-owned-frontage-bioanalysis-",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "million",
-    "ready",
+    "charles",
+    "river",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "100 Million-Cell AI-Ready Dataset with Single-Cell and Pr... | Biotechnology News",
-  "metaDescription": "Parse Biosciences and Nomic Bio are partnering to create Cascade, a 100-million-cell multimodal dataset combining single-cell and proteomic data to advance A...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, million, cell, ready, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/cro/charles-river-shells-out-470m-tigermed-owne... | Biotechnology News",
+  "metaDescription": "Charles River Laboratories has acquired Tigermed’s Frontage laboratory sites for $470 million upfront to advance its bioanalysis footprint.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, charles, river, TechNanoAI, emerging tech news",
   "featured": false
 }

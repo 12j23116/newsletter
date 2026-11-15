@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1793445852010-2",
+  "id": "biotech-1794748069828-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Blocking Protein Slows Pancreatic Tumor Growth and Reduce... | Biotechnology News",
-  "excerpt": "Scientists identified a potential therapeutic target for pancreatic ductal cell adenocarcinoma, discovering that the protein ANO6 is involved in a process helping pancreatic cancer cells obtain nutrie",
-  "date": "2026-10-31",
+  "title": "<a href=\"/biotech/promise-molecular-gates-and-what-comes-... | Biotechnology News",
+  "excerpt": "Gate Bioscience is developing a new class of medicines designed to eliminate disease-causing proteins at their source. In this episode of \"The Top Line,\" Gate co-founder and CEO Jordi Mata-Fink, Ph.D.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "blocking-protein-slows-pancreatic-tumor-growth-and-reduces-immune-supp",
-  "sourceLink": "https://www.genengnews.com/topics/cancer/blocking-protein-slows-pancreatic-tumor-growth-and-reduces-immune-suppression-in-mice/",
-  "sourceName": "Sophia Ktori",
+  "slug": "a-hrefbiotechpromise-molecular-gates-and-what-comes-next-hreflangenthe",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/promise-molecular-gates-and-what-comes-next",
+  "sourceName": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>",
   "body": [
     {
       "type": "p",
-      "text": "Scientists identified a potential therapeutic target for pancreatic ductal cell adenocarcinoma, discovering that the protein ANO6 is involved in a process helping pancreatic cancer cells obtain nutrients from surrounding cells, while suppressing the immune system’s ability to fight tumors.  \nThe post Blocking Protein Slows Pancreatic Tumor Growth and Reduces Immune Suppression in Mice appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Gate Bioscience is developing a new class of medicines designed to eliminate disease-causing proteins at their source.  In this episode of \"The Top Line,\" Gate co-founder and CEO Jordi Mata-Fink, Ph."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sophia Ktori, Scientists identified a potential therapeutic target for pancreatic ductal cell adenocarcinoma, discovering that the protein ANO6 is involved in a process helping pancreatic cancer cells obtain nutrients from surrounding cells, while suppressing the immune system’s ability to fight tumors. \nThe post Blocking Protein Slows Pancreatic Tumor Growth and Reduces Immune Suppression in Mice appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "D. , discusses the promise of molecular gates, the biotech's expanded partnership with Eli Lilly and its plans to bring the technology into the clinic."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Blocking Protein Slows Pancreatic Tumor Growth and Reduces Immune Suppression in — a notable development in Biotechnology",
+    "<a href=\"/biotech/promise-molecular-gates-and-what-comes-next\" hreflang=\"en\">The — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Sophia Ktori",
+      "value": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, <a href=\"/person/ayla-ellison\" hreflang=\"en\">Ayla Ellison</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Blocking Protein Slows Pancreatic Tumor Growth and Reduces Immune Suppression in",
+      "date": "2026-11-15",
+      "event": "<a href=\"/biotech/promise-molecular-gates-and-what-comes-next\" hreflang=\"en\">The",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "blocking",
-    "protein",
+    "biotech",
+    "promise",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Blocking Protein Slows Pancreatic Tumor Growth and Reduce... | Biotechnology News",
-  "metaDescription": "Scientists identified a potential therapeutic target for pancreatic ductal cell adenocarcinoma, discovering that the protein ANO6 is involved in a process he...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, blocking, protein, slows, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/promise-molecular-gates-and-what-comes-... | Biotechnology News",
+  "metaDescription": "Gate Bioscience is developing a new class of medicines designed to eliminate disease-causing proteins at their source. In this episode of \"The Top Line,\" Gat...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, promise, TechNanoAI, emerging tech news",
   "featured": false
 }

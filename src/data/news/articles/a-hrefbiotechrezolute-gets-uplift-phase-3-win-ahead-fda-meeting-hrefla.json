@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1793445852010-3",
+  "id": "biotech-1794748069828-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "No Nonsense: David Liu Lauds Progress in Disease-Agnostic... | Biotechnology News",
-  "excerpt": "Liu ensured that his return visit to ESGCT (having spoken at the congress in Barcelona in 2019) would be one of the highlights of the conference. The “meta lesson” of the past few years in therapeutic",
-  "date": "2026-10-31",
-  "readTime": "4 min",
+  "title": "<a href=\"/biotech/rezolute-gets-uplift-phase-3-win-ahead-... | Biotechnology News",
+  "excerpt": "A phase 3 clinical trial of Rezolute’s ersodetug in tumor hyperinsulinism has hit its primary endpoint, boosting the biotech ahead of a potential filing for FDA approval in another indication.",
+  "date": "2026-11-15",
+  "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "no-nonsense-david-liu-lauds-progress-in-disease-agnostic-gene-editing-",
-  "sourceLink": "https://www.genengnews.com/topics/genome-editing/no-nonsense-david-liu-lauds-progress-in-disease-agnostic-gene-editing-at-esgct/",
-  "sourceName": "Kathy Vuksanaj",
+  "slug": "a-hrefbiotechrezolute-gets-uplift-phase-3-win-ahead-fda-meeting-hrefla",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/rezolute-gets-uplift-phase-3-win-ahead-fda-meeting",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "Liu ensured that his return visit to ESGCT (having spoken at the congress in Barcelona in 2019) would be one of the highlights of the conference.  The “meta lesson” of the past few years in therapeutic genome editing is that different scientific approaches and applications can synergize with regulatory, manufacturing, and economic advances “to achieve the mission we’re on."
+      "text": "A phase 3 clinical trial of Rezolute’s ersodetug in tumor hyperinsulinism has hit its primary endpoint, boosting the biotech ahead of a potential filing for FDA approval in another indication."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kathy Vuksanaj, Liu ensured that his return visit to ESGCT (having spoken at the congress in Barcelona in 2019) would be one of the highlights of the conference. The “meta lesson” of the past few years in therapeutic genome editing is that different scientific approaches and applications can synergize with regulatory, manufacturing, and economic advances “to achieve the mission we’re on.”\nThe post No Nonsense: David Liu Lauds Progress in Disease-Agnostic Gene Editing at ESGCT appeared first on GEN - Genetic Eng. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, A phase 3 clinical trial of Rezolute’s ersodetug in tumor hyperinsulinism has hit its primary endpoint, boosting the biotech ahead of a potential filing for FDA approval in another indication.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "No Nonsense: David Liu Lauds Progress in Disease-Agnostic Gene Editing at ESGCT — a notable development in Biotechnology",
+    "<a href=\"/biotech/rezolute-gets-uplift-phase-3-win-ahead-fda-meeting\" hreflang=\" — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Kathy Vuksanaj",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "No Nonsense: David Liu Lauds Progress in Disease-Agnostic Gene Editing at ESGCT",
+      "date": "2026-11-15",
+      "event": "<a href=\"/biotech/rezolute-gets-uplift-phase-3-win-ahead-fda-meeting\" hreflang=\"",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "nonsense",
-    "david",
+    "biotech",
+    "rezolute",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "No Nonsense: David Liu Lauds Progress in Disease-Agnostic... | Biotechnology News",
-  "metaDescription": "Liu ensured that his return visit to ESGCT (having spoken at the congress in Barcelona in 2019) would be one of the highlights of the conference. The “meta l...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, nonsense, david, lauds, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/rezolute-gets-uplift-phase-3-win-ahead-... | Biotechnology News",
+  "metaDescription": "A phase 3 clinical trial of Rezolute’s ersodetug in tumor hyperinsulinism has hit its primary endpoint, boosting the biotech ahead of a potential filing for ...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, rezolute, TechNanoAI, emerging tech news",
   "featured": false
 }

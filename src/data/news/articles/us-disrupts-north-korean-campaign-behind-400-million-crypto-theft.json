@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1793445850977-5",
+  "id": "cybersecurity-1794748068593-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 O... | Cybersecurity News",
-  "excerpt": "Chinese state-sponsored threat actors have been observed using a Go-based artificial intelligence (AI)-powered penetration testing framework called ARTEX in attacks aimed at high-value targets simulta",
-  "date": "2026-10-31",
+  "title": "US disrupts North Korean campaign behind $400 million cry... | Cybersecurity News",
+  "excerpt": "The U.S. government has disrupted a North Korean social engineering campaign called 'FaceStealer', responsible for stealing more than $400 million in cryptocurrency. [...]",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "chinese-hackers-use-ai-powered-artex-to-target-over-200-organizations-",
-  "sourceLink": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "us-disrupts-north-korean-campaign-behind-400-million-crypto-theft",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "Chinese state-sponsored threat actors have been observed using a Go-based artificial intelligence (AI)-powered penetration testing framework called ARTEX in attacks aimed at high-value targets simultaneously. \n\nThe activity has been attributed by CrowdStrike to a China-based \"targeted intrusion adversary\" it tracks under the moniker Vapor Panda (previously VexatiousTemper)."
+      "text": "The U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from info@thehackernews.com (The Hacker News), Chinese state-sponsored threat actors have been observed using a Go-based artificial intelligence (AI)-powered penetration testing framework called ARTEX in attacks aimed at high-value targets simultaneously.\n\nThe activity has been attributed by CrowdStrike to a China-based \"targeted intrusion adversary\" it tracks under the moniker Vapor Panda (previously VexatiousTemper). First identified in. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "government has disrupted a North Korean social engineering campaign called 'FaceStealer', responsible for stealing more than $400 million in cryptocurrency.  [..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide — a notable development in Cybersecurity",
+    "US disrupts North Korean campaign behind $400 million crypto theft — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
+      "date": "2026-11-15",
+      "event": "US disrupts North Korean campaign behind $400 million crypto theft",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "chinese",
-    "hackers",
+    "disrupts",
+    "north",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 O... | Cybersecurity News",
-  "metaDescription": "Chinese state-sponsored threat actors have been observed using a Go-based artificial intelligence (AI)-powered penetration testing framework called ARTEX in ...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, chinese, hackers, powered, TechNanoAI, emerging tech news",
+  "metaTitle": "US disrupts North Korean campaign behind $400 million cry... | Cybersecurity News",
+  "metaDescription": "The U.S. government has disrupted a North Korean social engineering campaign called 'FaceStealer', responsible for stealing more than $400 million in cryptoc...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, disrupts, north, korean, TechNanoAI, emerging tech news",
   "featured": false
 }

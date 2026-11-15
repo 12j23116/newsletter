@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1793445856410-4",
+  "id": "quantum-1794748073323-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Lumen Expands Quantum Footprint with Ohio State Fiber Res... | Quantum Computing News",
-  "excerpt": "Lumen Technologies is advancing quantum technology with two new initiatives. They are partnering with The Ohio State University to research quantum network transport over commercial optical fiber, and",
-  "date": "2026-10-31",
+  "title": "Physicists use laser light to unlock a crystal's hidden e... | Quantum Computing News",
+  "excerpt": "Scientists have discovered how to use flashes of laser light to organize tiny electrical regions inside a crystal, solving a decades-old mystery about how the material behaves. The laser-induced align",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "lumen-expands-quantum-footprint-with-ohio-state-fiber-research-and-for",
-  "sourceLink": "https://quantumcomputingreport.com/lumen-expands-quantum-footprint-with-ohio-state-fiber-research-and-fortinet-pqc-sase-rollout/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "physicists-use-laser-light-to-unlock-a-crystal039s-hidden-electrical-p",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261112230500.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Lumen Technologies is advancing quantum technology with two new initiatives.  They are partnering with The Ohio State University to research quantum network transport over commercial optical fiber, and integrating Fortinet's post-quantum cryptography into their SASE solution to enhance enterprise security."
+      "text": "Scientists have discovered how to use flashes of laser light to organize tiny electrical regions inside a crystal, solving a decades-old mystery about how the material behaves.  The laser-induced alignment lasts just a trillionth of a second, but the breakthrough could open the door to new ways of processing and storing information."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "These efforts aim to overcome challenges in quantum signal transmission and protect against future decryption threats."
+      "text": "According to reporting from sciencedaily.com, Scientists have discovered how to use flashes of laser light to organize tiny electrical regions inside a crystal, solving a decades-old mystery about how the material behaves. The laser-induced alignment lasts just a trillionth of a second, but the breakthrough could open the door to new ways of processing and storing information.. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Lumen Expands Quantum Footprint with Ohio State Fiber Research and Fortinet PQC  — a notable development in Quantum Computing",
+    "Physicists use laser light to unlock a crystal's hidden electrical powers — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Lumen Expands Quantum Footprint with Ohio State Fiber Research and Fortinet PQC ",
+      "date": "2026-11-15",
+      "event": "Physicists use laser light to unlock a crystal's hidden electrical powers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "lumen",
-    "expands",
+    "physicists",
+    "laser",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Lumen Expands Quantum Footprint with Ohio State Fiber Res... | Quantum Computing News",
-  "metaDescription": "Lumen Technologies is advancing quantum technology with two new initiatives. They are partnering with The Ohio State University to research quantum network t...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, lumen, expands, quantum, TechNanoAI, emerging tech news",
+  "metaTitle": "Physicists use laser light to unlock a crystal's hidden e... | Quantum Computing News",
+  "metaDescription": "Scientists have discovered how to use flashes of laser light to organize tiny electrical regions inside a crystal, solving a decades-old mystery about how th...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, physicists, laser, light, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "space-1793445851621-0",
+  "id": "space-1794748069333-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX closes out October with Halloween eve Falcon 9 lau... | Space Exploration News",
-  "excerpt": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 9:04 p.m. PDT (1",
-  "date": "2026-10-31",
+  "title": "Starship returns to Starbase and a successful tower catch | Space Exploration News",
+  "excerpt": "The catch occurred at 3:20 p.m. CST (2120 UTC) after Ship 42 reentered the atmosphere over the Pacific Ocean and made a supersonic flight across Mexico and the South West United States.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-closes-out-october-with-halloween-eve-falcon-9-launch-700th-fal",
-  "sourceLink": "https://spaceflightnow.com/2026/10/30/live-coverage-spacex-to-close-out-october-with-halloween-eve-falcon-9-launch/",
-  "sourceName": "Will Robinson-Smith",
+  "slug": "starship-returns-to-starbase-and-a-successful-tower-catch",
+  "sourceLink": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/",
+  "sourceName": "Spaceflight Now",
   "body": [
     {
       "type": "p",
-      "text": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation.  Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 9:04 p."
+      "text": "The catch occurred at 3:20 p. m."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "m.  PDT (12:04 a."
-    },
-    {
-      "type": "p",
-      "text": "m.  EDT / 0404 UTC)."
+      "text": "CST (2120 UTC) after Ship 42 reentered the atmosphere over the Pacific Ocean and made a supersonic flight across Mexico and the South West United States."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX closes out October with Halloween eve Falcon 9 launch, 700th Falcon 9 lau — a notable development in Space Exploration",
+    "Starship returns to Starbase and a successful tower catch — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Will Robinson-Smith",
+      "value": "Spaceflight Now",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "SpaceX closes out October with Halloween eve Falcon 9 launch, 700th Falcon 9 lau",
+      "date": "2026-11-15",
+      "event": "Starship returns to Starbase and a successful tower catch",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "closes",
+    "starship",
+    "returns",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX closes out October with Halloween eve Falcon 9 lau... | Space Exploration News",
-  "metaDescription": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation. Liftoff from pad 4E at Vandenberg Space F...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, closes, october, TechNanoAI, emerging tech news",
+  "metaTitle": "Starship returns to Starbase and a successful tower catch | Space Exploration News",
+  "metaDescription": "The catch occurred at 3:20 p.m. CST (2120 UTC) after Ship 42 reentered the atmosphere over the Pacific Ocean and made a supersonic flight across Mexico and t...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, starship, returns, starbase, TechNanoAI, emerging tech news",
   "featured": true
 }

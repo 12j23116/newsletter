@@ -1,21 +1,21 @@
 {
-  "id": "space-1793445851622-1",
+  "id": "space-1794748069333-2",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX Completes Three Static Fires in Three Days for Fli... | Space Exploration News",
-  "excerpt": "In eight days, SpaceX completed all engine testing for Flight 15, some cryo-proof and catch'\nThe post SpaceX Completes Three Static Fires in Three Days for Flight 15 appeared first on NASASpaceFlight.",
-  "date": "2026-10-31",
+  "title": "ULA delays to Sunday Vulcan rocket launch of 40 Leo satel... | Space Exploration News",
+  "excerpt": "Liftoff from Space Launch Complex 41 at Cape Canaveral Space Force Station is now scheduled for 12:11 p.m. EST (1711 UTC) on Sunday.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-completes-three-static-fires-in-three-days-for-flight-15",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/10/spacex-static-fires-flight-15/",
-  "sourceName": "Ryan Weber",
+  "slug": "ula-delays-to-sunday-vulcan-rocket-launch-of-40-leo-satellites-for-ama",
+  "sourceLink": "https://spaceflightnow.com/2026/11/13/ulas-vulcan-rocket-plans-return-to-flight-with-launch-of-40-leo-satellites-for-amazon/",
+  "sourceName": "Houston Harwood",
   "body": [
     {
       "type": "p",
-      "text": "In eight days, SpaceX completed all engine testing for Flight 15, some cryo-proof and catch'\nThe post SpaceX Completes Three Static Fires in Three Days for Flight 15 appeared first on NASASpaceFlight. com."
+      "text": "Liftoff from Space Launch Complex 41 at Cape Canaveral Space Force Station is now scheduled for 12:11 p. m."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Ryan Weber, In eight days, SpaceX completed all engine testing for Flight 15, some cryo-proof and catch'\nThe post SpaceX Completes Three Static Fires in Three Days for Flight 15 appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "EST (1711 UTC) on Sunday."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX Completes Three Static Fires in Three Days for Flight 15 — a notable development in Space Exploration",
+    "ULA delays to Sunday Vulcan rocket launch of 40 Leo satellites for Amazon — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Ryan Weber",
+      "value": "Houston Harwood",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "SpaceX Completes Three Static Fires in Three Days for Flight 15",
+      "date": "2026-11-15",
+      "event": "ULA delays to Sunday Vulcan rocket launch of 40 Leo satellites for Amazon",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "completes",
+    "delays",
+    "sunday",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX Completes Three Static Fires in Three Days for Fli... | Space Exploration News",
-  "metaDescription": "In eight days, SpaceX completed all engine testing for Flight 15, some cryo-proof and catch'\nThe post SpaceX Completes Three Static Fires in Three Days for F...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, completes, three, TechNanoAI, emerging tech news",
+  "metaTitle": "ULA delays to Sunday Vulcan rocket launch of 40 Leo satel... | Space Exploration News",
+  "metaDescription": "Liftoff from Space Launch Complex 41 at Cape Canaveral Space Force Station is now scheduled for 12:11 p.m. EST (1711 UTC) on Sunday.",
+  "keywords": "space exploration, rocket launch, satellite, NASA, delays, sunday, vulcan, TechNanoAI, emerging tech news",
   "featured": false
 }

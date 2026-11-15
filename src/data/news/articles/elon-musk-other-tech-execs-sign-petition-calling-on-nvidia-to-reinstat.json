@@ -1,21 +1,21 @@
 {
-  "id": "ai-1793445850260-0",
+  "id": "ai-1794748068349-3",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain... | AI News",
-  "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploited Vulnerabilities (KEV) catalog, followin",
-  "date": "2026-10-31",
+  "title": "Elon Musk, other tech execs sign petition calling on Nvid... | AI News",
+  "excerpt": "The petition had attracted more than 115,000 signatures as of Saturday afternoon.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "attackers-chain-three-ivanti-connect-secure-flaws-to-gain-unauthentica",
-  "sourceLink": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstat",
+  "sourceLink": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+  "sourceName": "Anthony Ha",
   "body": [
     {
       "type": "p",
-      "text": "The U. S."
+      "text": "The petition had attracted more than 115,000 signatures as of Saturday afternoon."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploited Vulnerabilities (KEV) catalog, following active exploitation in the wild. \n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-111357 (CVSS score: 8."
+      "text": "According to reporting from Anthony Ha, The petition had attracted more than 115,000 signatures as of Saturday afternoon.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root A — a notable development in AI",
+    "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen  — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Anthony Ha",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root A",
+      "date": "2026-11-15",
+      "event": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen ",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "attackers",
-    "chain",
+    "other",
+    "execs",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain... | AI News",
-  "metaDescription": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploi...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, attackers, chain, three, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Elon Musk, other tech execs sign petition calling on Nvid... | AI News",
+  "metaDescription": "The petition had attracted more than 115,000 signatures as of Saturday afternoon. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechN",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, elon, musk, other, TechNanoAI, emerging tech news",
+  "featured": false
 }

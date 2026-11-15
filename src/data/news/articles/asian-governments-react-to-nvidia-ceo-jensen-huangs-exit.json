@@ -1,21 +1,21 @@
 {
-  "id": "ai-1793445850262-5",
+  "id": "ai-1794748068350-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Intel's stock crashes, knocking $12B from government's stake | AI News",
-  "excerpt": "Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise.",
-  "date": "2026-10-31",
+  "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit | AI News",
+  "excerpt": "Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "intel8217s-stock-crashes-knocking-12b-from-government8217s-stake",
-  "sourceLink": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/",
-  "sourceName": "Julie Bort",
+  "slug": "asian-governments-react-to-nvidia-ceo-jensen-huangs-exit",
+  "sourceLink": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+  "sourceName": "Kate Park",
   "body": [
     {
       "type": "p",
-      "text": "Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise."
+      "text": "Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Julie Bort, Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Kate Park, Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Intel's stock crashes, knocking $12B from government's stake — a notable development in AI",
+    "Asian governments react to Nvidia CEO Jensen Huang’s exit — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Julie Bort",
+      "value": "Kate Park",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Intel's stock crashes, knocking $12B from government's stake",
+      "date": "2026-11-15",
+      "event": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "intel",
-    "stock",
+    "asian",
+    "governments",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Intel's stock crashes, knocking $12B from government's stake | AI News",
-  "metaDescription": "Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise. LLMs, agents & the race to AGI. Latest AI deve",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, intel, stock, crashes, TechNanoAI, emerging tech news",
+  "metaTitle": "Asian governments react to Nvidia CEO Jensen Huang’s exit | AI News",
+  "metaDescription": "Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, asian, governments, react, TechNanoAI, emerging tech news",
   "featured": false
 }

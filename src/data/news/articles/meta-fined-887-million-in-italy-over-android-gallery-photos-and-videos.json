@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1793445850976-4",
+  "id": "cybersecurity-1794748068591-3",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Critical Linux kernel flaw allows remote root attacks on ... | Cybersecurity News",
-  "excerpt": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that allows unauthenticated attackers to remotely execute commands as root on servers running Mult",
-  "date": "2026-10-31",
+  "title": "Meta Fined $887 Million in Italy Over Android Gallery Pho... | Cybersecurity News",
+  "excerpt": "The directive protects smartphones as part of a person’s private sphere and requires “free and informed consent” for such access, the authority said.\nThe post Meta Fined $887 Million in Italy Over And",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "meta-fined-887-million-in-italy-over-android-gallery-photos-and-videos",
+  "sourceLink": "https://www.securityweek.com/meta-fined-887-million-in-italy-over-android-gallery-photos-and-videos-on-facebook/",
+  "sourceName": "Associated Press",
   "body": [
     {
       "type": "p",
-      "text": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that allows unauthenticated attackers to remotely execute commands as root on servers running Multipath TCP (MPTCP) listeners.  [..."
+      "text": "The directive protects smartphones as part of a person’s private sphere and requires “free and informed consent” for such access, the authority said. \nThe post Meta Fined $887 Million in Italy Over Android Gallery Photos and Videos on Facebook appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that allows unauthenticated attackers to remotely execute commands as root on servers running Multipath TCP (MPTCP) listeners. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Associated Press, The directive protects smartphones as part of a person’s private sphere and requires “free and informed consent” for such access, the authority said.\nThe post Meta Fined $887 Million in Italy Over Android Gallery Photos and Videos on Facebook appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Critical Linux kernel flaw allows remote root attacks on MPTCP servers — a notable development in Cybersecurity",
+    "Meta Fined $887 Million in Italy Over Android Gallery Photos and Videos on Faceb — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "Associated Press",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+      "date": "2026-11-15",
+      "event": "Meta Fined $887 Million in Italy Over Android Gallery Photos and Videos on Faceb",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "critical",
-    "linux",
+    "fined",
+    "million",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Critical Linux kernel flaw allows remote root attacks on ... | Cybersecurity News",
-  "metaDescription": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that allows unauthenticated attackers to remotely execu...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, critical, linux, kernel, TechNanoAI, emerging tech news",
+  "metaTitle": "Meta Fined $887 Million in Italy Over Android Gallery Pho... | Cybersecurity News",
+  "metaDescription": "The directive protects smartphones as part of a person’s private sphere and requires “free and informed consent” for such access, the authority said.\nThe pos...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, meta, fined, million, TechNanoAI, emerging tech news",
   "featured": false
 }

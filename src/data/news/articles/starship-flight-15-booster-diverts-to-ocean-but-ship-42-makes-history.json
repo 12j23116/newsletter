@@ -1,21 +1,21 @@
 {
-  "id": "space-1793445851622-2",
+  "id": "space-1794748069334-3",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "ESI supplying solar array components to missile defense p... | Space Exploration News",
-  "excerpt": "Oct. 30, 2026 – ESI Motion Inc. is proud to announce that it is supplying the Solar Array Drive Electronics (SADE) to Lockheed Martin for its work on the Space [']\nThe post ESI supplying solar array c",
-  "date": "2026-10-31",
+  "title": "Starship Flight 15: Booster diverts to ocean, but Ship 42... | Space Exploration News",
+  "excerpt": "SpaceX has caught a Starship upper stage for the first time. After 22 and a'\nThe post Starship Flight 15: Booster diverts to ocean, but Ship 42 makes history appeared first on NASASpaceFlight.com.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "esi-supplying-solar-array-components-to-missile-defense-programs",
-  "sourceLink": "https://spacenews.com/esi-supplying-solar-array-components-to-missile-defense-programs/",
-  "sourceName": "ESI Motion",
+  "slug": "starship-flight-15-booster-diverts-to-ocean-but-ship-42-makes-history",
+  "sourceLink": "https://www.nasaspaceflight.com/2026/11/starship-flight-15-spacex-history/",
+  "sourceName": "Ryan Weber",
   "body": [
     {
       "type": "p",
-      "text": "Oct.  30, 2026 – ESI Motion Inc."
+      "text": "SpaceX has caught a Starship upper stage for the first time.  After 22 and a'\nThe post Starship Flight 15: Booster diverts to ocean, but Ship 42 makes history appeared first on NASASpaceFlight."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "is proud to announce that it is supplying the Solar Array Drive Electronics (SADE) to Lockheed Martin for its work on the Space [']\nThe post ESI supplying solar array components to missile defense programs appeared first on SpaceNews."
+      "text": "com."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "ESI supplying solar array components to missile defense programs — a notable development in Space Exploration",
+    "Starship Flight 15: Booster diverts to ocean, but Ship 42 makes history — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "ESI Motion",
+      "value": "Ryan Weber",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "ESI supplying solar array components to missile defense programs",
+      "date": "2026-11-15",
+      "event": "Starship Flight 15: Booster diverts to ocean, but Ship 42 makes history",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "supplying",
-    "solar",
+    "starship",
+    "flight",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "ESI supplying solar array components to missile defense p... | Space Exploration News",
-  "metaDescription": "Oct. 30, 2026 – ESI Motion Inc. is proud to announce that it is supplying the Solar Array Drive Electronics (SADE) to Lockheed Martin for its work on the Spa...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, supplying, solar, array, TechNanoAI, emerging tech news",
+  "metaTitle": "Starship Flight 15: Booster diverts to ocean, but Ship 42... | Space Exploration News",
+  "metaDescription": "SpaceX has caught a Starship upper stage for the first time. After 22 and a'\nThe post Starship Flight 15: Booster diverts to ocean, but Ship 42 makes history...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, starship, flight, booster, TechNanoAI, emerging tech news",
   "featured": false
 }

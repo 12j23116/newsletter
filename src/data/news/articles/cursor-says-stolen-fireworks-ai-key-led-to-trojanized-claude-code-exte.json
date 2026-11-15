@@ -1,21 +1,21 @@
 {
-  "id": "ai-1793445850262-4",
+  "id": "ai-1794748068348-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Ollie, a privacy-focused AI assistant, is shutting down | AI News",
-  "excerpt": "As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting down in a week.",
-  "date": "2026-10-31",
-  "readTime": "3 min",
+  "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Cla... | AI News",
+  "excerpt": "The compromise of Anthropic's official Claude Code extension on Cursor's extension marketplace was the result of the theft of an access key that was exposed in the wake of a breach targeting Fireworks",
+  "date": "2026-11-15",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "ollie-a-privacy-focused-ai-assistant-is-shutting-down",
-  "sourceLink": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
-  "sourceName": "Lucas Ropek",
+  "slug": "cursor-says-stolen-fireworks-ai-key-led-to-trojanized-claude-code-exte",
+  "sourceLink": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting down in a week."
+      "text": "The compromise of Anthropic's official Claude Code extension on Cursor's extension marketplace was the result of the theft of an access key that was exposed in the wake of a breach targeting Fireworks AI. \n\n\"An attacker obtained an access key we had issued to Fireworks,\" Cursor said in a Friday update."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting down in a week.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), The compromise of Anthropic's official Claude Code extension on Cursor's extension marketplace was the result of the theft of an access key that was exposed in the wake of a breach targeting Fireworks AI.\n\n\"An attacker obtained an access key we had issued to Fireworks,\" Cursor said in a Friday update. \"The key was exposed by Fireworks, and the attacker used it to copy data from a read-only. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Ollie, a privacy-focused AI assistant, is shutting down — a notable development in AI",
+    "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Inci — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Ollie, a privacy-focused AI assistant, is shutting down",
+      "date": "2026-11-15",
+      "event": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Inci",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "ollie",
-    "privacy",
+    "cursor",
+    "stolen",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Ollie, a privacy-focused AI assistant, is shutting down | AI News",
-  "metaDescription": "As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting dow...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, ollie, privacy, focused, TechNanoAI, emerging tech news",
+  "metaTitle": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Cla... | AI News",
+  "metaDescription": "The compromise of Anthropic's official Claude Code extension on Cursor's extension marketplace was the result of the theft of an access key that was exposed ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, cursor, says, stolen, TechNanoAI, emerging tech news",
   "featured": false
 }

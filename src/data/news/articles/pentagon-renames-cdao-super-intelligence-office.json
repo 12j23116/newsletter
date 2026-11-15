@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1793445850975-0",
+  "id": "cybersecurity-1794748068590-0",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Syrian Hacker Gets Prison Time in US After Over a Decade ... | Cybersecurity News",
-  "excerpt": "A US court sentenced Syrian hacker Ahmad Umar Agha to 42 months for pro-Assad attacks on media, businesses, and government entities.\nThe post Syrian Hacker Gets Prison Time in US After Over a Decade o",
-  "date": "2026-10-31",
+  "title": "Pentagon Renames CDAO ‘Super Intelligence Office’ | Cybersecurity News",
+  "excerpt": "The move follows President Trump’s order to replace “artificial intelligence” with “super intelligence” in executive branch communications.\nThe post Pentagon Renames CDAO ‘Super Intelligence Office’ a",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run",
-  "sourceLink": "https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/",
-  "sourceName": "Eduard Kovacs",
+  "slug": "pentagon-renames-cdao-super-intelligence-office",
+  "sourceLink": "https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/",
+  "sourceName": "SecurityWeek News",
   "body": [
     {
       "type": "p",
-      "text": "A US court sentenced Syrian hacker Ahmad Umar Agha to 42 months for pro-Assad attacks on media, businesses, and government entities. \nThe post Syrian Hacker Gets Prison Time in US After Over a Decade on the Run appeared first on SecurityWeek."
+      "text": "The move follows President Trump’s order to replace “artificial intelligence” with “super intelligence” in executive branch communications. \nThe post Pentagon Renames CDAO ‘Super Intelligence Office’ appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Eduard Kovacs, A US court sentenced Syrian hacker Ahmad Umar Agha to 42 months for pro-Assad attacks on media, businesses, and government entities.\nThe post Syrian Hacker Gets Prison Time in US After Over a Decade on the Run appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from SecurityWeek News, The move follows President Trump’s order to replace “artificial intelligence” with “super intelligence” in executive branch communications.\nThe post Pentagon Renames CDAO ‘Super Intelligence Office’ appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run — a notable development in Cybersecurity",
+    "Pentagon Renames CDAO ‘Super Intelligence Office’ — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Eduard Kovacs",
+      "value": "SecurityWeek News",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run",
+      "date": "2026-11-15",
+      "event": "Pentagon Renames CDAO ‘Super Intelligence Office’",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "syrian",
-    "hacker",
+    "pentagon",
+    "renames",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Syrian Hacker Gets Prison Time in US After Over a Decade ... | Cybersecurity News",
-  "metaDescription": "A US court sentenced Syrian hacker Ahmad Umar Agha to 42 months for pro-Assad attacks on media, businesses, and government entities.\nThe post Syrian Hacker G...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, syrian, hacker, gets, TechNanoAI, emerging tech news",
+  "metaTitle": "Pentagon Renames CDAO ‘Super Intelligence Office’ | Cybersecurity News",
+  "metaDescription": "The move follows President Trump’s order to replace “artificial intelligence” with “super intelligence” in executive branch communications.\nThe post Pentagon...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, pentagon, renames, cdao, TechNanoAI, emerging tech news",
   "featured": true
 }

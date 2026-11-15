@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1793445852008-0",
+  "id": "biotech-1794748069828-4",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Opentrons Raises $40M in Series E to Expand Its Robotics,... | Biotechnology News",
-  "excerpt": "According to the company, the funds will support the next phase of its growth in enabling autonomous science in labs and biopharmaceutical companies using its AI and robotics systems.\nThe post Opentro",
-  "date": "2026-10-31",
+  "title": "<a href=\"/biotech/cellectis-will-shed-70-workforce-part-v... | Biotechnology News",
+  "excerpt": "Cellectis’ pivot from allogeneic CAR-Ts to in vivo therapies is set to come at the expense of 70% of its workforce.",
+  "date": "2026-11-15",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "opentrons-raises-40m-in-series-e-to-expand-its-robotics-software-data-",
-  "sourceLink": "https://www.genengnews.com/topics/artificial-intelligence/opentrons-raises-40m-in-series-e-to-expand-its-robotics-software-data-infrastructure/",
-  "sourceName": "Uduak Thomas",
+  "slug": "a-hrefbiotechcellectis-will-shed-70-workforce-part-vivo-pivot-hreflang",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/cellectis-will-shed-70-workforce-part-vivo-pivot",
+  "sourceName": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
   "body": [
     {
       "type": "p",
-      "text": "According to the company, the funds will support the next phase of its growth in enabling autonomous science in labs and biopharmaceutical companies using its AI and robotics systems. \nThe post Opentrons Raises $40M in Series E to Expand Its Robotics, Software, Data Infrastructure appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Cellectis’ pivot from allogeneic CAR-Ts to in vivo therapies is set to come at the expense of 70% of its workforce."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Uduak Thomas, According to the company, the funds will support the next phase of its growth in enabling autonomous science in labs and biopharmaceutical companies using its AI and robotics systems.\nThe post Opentrons Raises $40M in Series E to Expand Its Robotics, Software, Data Infrastructure appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>, Cellectis’ pivot from allogeneic CAR-Ts to in vivo therapies is set to come at the expense of 70% of its workforce.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Opentrons Raises $40M in Series E to Expand Its Robotics, Software, Data Infrast — a notable development in Biotechnology",
+    "<a href=\"/biotech/cellectis-will-shed-70-workforce-part-vivo-pivot\" hreflang=\"en — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Uduak Thomas",
+      "value": "<a href=\"/person/james-waldron\" hreflang=\"en\">James Waldron</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Opentrons Raises $40M in Series E to Expand Its Robotics, Software, Data Infrast",
+      "date": "2026-11-15",
+      "event": "<a href=\"/biotech/cellectis-will-shed-70-workforce-part-vivo-pivot\" hreflang=\"en",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "opentrons",
-    "raises",
+    "biotech",
+    "cellectis",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Opentrons Raises $40M in Series E to Expand Its Robotics,... | Biotechnology News",
-  "metaDescription": "According to the company, the funds will support the next phase of its growth in enabling autonomous science in labs and biopharmaceutical companies using it...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, opentrons, raises, series, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/biotech/cellectis-will-shed-70-workforce-part-v... | Biotechnology News",
+  "metaDescription": "Cellectis’ pivot from allogeneic CAR-Ts to in vivo therapies is set to come at the expense of 70% of its workforce. CRISPR, mRNA & lab-grown organs. Latest Biot",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, cellectis, TechNanoAI, emerging tech news",
+  "featured": false
 }

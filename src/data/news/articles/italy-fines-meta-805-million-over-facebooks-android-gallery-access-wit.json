@@ -1,21 +1,21 @@
 {
-  "id": "ai-1793445850261-2",
+  "id": "ai-1794748068347-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attack... | AI News",
-  "excerpt": "Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday.\n\nThe web infrastructure and security company said it autonomo",
-  "date": "2026-10-31",
-  "readTime": "3 min",
+  "title": "Italy Fines Meta €805 Million Over Facebook's Android Gal... | AI News",
+  "excerpt": "Meta was fined €805 million in Italy yesterday over a Facebook for Android feature that suggests photos and videos from users' phone galleries for them to post.\n\nThe Garante, Italy's data protection a",
+  "date": "2026-11-15",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "cloudflare-reports-182-million-network-layer-ddos-attacks-in-q3-up-38",
-  "sourceLink": "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html",
+  "slug": "italy-fines-meta-805-million-over-facebooks-android-gallery-access-wit",
+  "sourceLink": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday. \n\nThe web infrastructure and security company said it autonomously mitigated 18."
+      "text": "Meta was fined €805 million in Italy yesterday over a Facebook for Android feature that suggests photos and videos from users' phone galleries for them to post. \n\nThe Garante, Italy's data protection authority, found that the feature was enabled by default and that the app accessed Italian users' photos, videos, and related metadata without their explicit consent."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "2 million network-layer (L3) DDoS attacks and 14. 4 trillion HTTP DDoS requests in the third quarter of 2026."
-    },
-    {
-      "type": "p",
-      "text": "That amounts to 197,400 attacks per day, or one attack every 0."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Meta was fined €805 million in Italy yesterday over a Facebook for Android feature that suggests photos and videos from users' phone galleries for them to post.\n\nThe Garante, Italy's data protection authority, found that the feature was enabled by default and that the app accessed Italian users' photos, videos, and related metadata without their explicit consent.\n\nThe company has 60 days to. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38% — a notable development in AI",
+    "Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Exp — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-10-31",
-      "event": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
+      "date": "2026-11-15",
+      "event": "Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Exp",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "cloudflare",
-    "reports",
+    "italy",
+    "fines",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attack... | AI News",
-  "metaDescription": "Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday.\n\nThe web infrastru...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, cloudflare, reports, million, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Italy Fines Meta €805 Million Over Facebook's Android Gal... | AI News",
+  "metaDescription": "Meta was fined €805 million in Italy yesterday over a Facebook for Android feature that suggests photos and videos from users' phone galleries for them to po...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, italy, fines, meta, TechNanoAI, emerging tech news",
+  "featured": true
 }
