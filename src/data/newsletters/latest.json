@@ -1,112 +1,112 @@
 {
-  "issue": 97,
-  "date": "2026-11-09",
-  "subject": "This Week: Robotics, AI & more — November 9, 2026",
+  "issue": 98,
+  "date": "2026-11-16",
+  "subject": "This Week: Robotics, Energy Storage & more — November 16, 2026",
   "articleCount": 12,
   "topicsCovered": [
     "robotics",
-    "ai",
     "energy",
+    "space",
     "biotech",
     "quantum",
-    "cybersecurity"
+    "ai"
   ],
   "articles": [
     {
-      "title": "ARM Institute consortium grows to more than 500 organizat... | Robotics News",
-      "slug": "arm-institute-consortium-grows-to-more-than-500-organizations",
+      "title": "28 Zero-Day Findings in Under Two Days. Is Robotics Secur... | Robotics News",
+      "slug": "28-zero-day-findings-in-under-two-days-is-robotics-security-keeping-pa",
       "topic": "robotics",
-      "excerpt": "The ARM Institute reached the milestone as it prepares to host its 10th annual member meeting in Pittsburgh.\nThe post ARM Institute consortium grows to more than 500 organizations appeared first on Th",
-      "url": "https://technanoai.com/news/arm-institute-consortium-grows-to-more-than-500-organizations",
-      "date": "2026-11-09"
+      "excerpt": "This article is brought to you by VicOne.VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical AI ",
+      "url": "https://technanoai.com/news/28-zero-day-findings-in-under-two-days-is-robotics-security-keeping-pa",
+      "date": "2026-11-16"
     },
     {
-      "title": "Can Agentic Robotics Solve Robotics’ Data Scaling Problem? | Robotics News",
-      "slug": "can-agentic-robotics-solve-robotics-data-scaling-problem",
+      "title": "Physicists defy expectations by controlling the magnetic ... | Robotics News",
+      "slug": "physicists-defy-expectations-by-controlling-the-magnetic-heart-of-a-si",
       "topic": "robotics",
-      "excerpt": "Robotics companies are investing heavily in the belief that data will solve the most difficult problems in robotics. Once AI systems have ingested enough data from human demonstrations, the thinking g",
-      "url": "https://technanoai.com/news/can-agentic-robotics-solve-robotics-data-scaling-problem",
-      "date": "2026-11-09"
+      "excerpt": "Scientists have unexpectedly discovered how to control the magnetic spin inside a single atom's nucleus using radio waves, overturning previous assumptions about atomic behavior. The breakthrough coul",
+      "url": "https://technanoai.com/news/physicists-defy-expectations-by-controlling-the-magnetic-heart-of-a-si",
+      "date": "2026-11-16"
     },
     {
-      "title": "Automattic debuts a platform to deploy vibe coding apps a... | AI News",
-      "slug": "automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changin",
-      "topic": "ai",
-      "excerpt": "Automattic aims to compete with likes of Lovable with Spacefast",
-      "url": "https://technanoai.com/news/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changin",
-      "date": "2026-11-09"
-    },
-    {
-      "title": "Default 'admin:admin' Server Password Helps Researchers H... | AI News",
-      "slug": "default-adminadmin-server-password-helps-researchers-hack-two-automake",
-      "topic": "ai",
-      "excerpt": "The login systems behind two car brands' mobile apps could be taken over completely, two security researchers found, allowing them to access any customer's account and, for an owner with a connected c",
-      "url": "https://technanoai.com/news/default-adminadmin-server-password-helps-researchers-hack-two-automake",
-      "date": "2026-11-09"
-    },
-    {
-      "title": "A degree in Paris, a gigawatt at the border | Energy Storage News",
-      "slug": "a-degree-in-paris-a-gigawatt-at-the-border",
+      "title": "Denmark allocates $41.5 million to heat pump subsidies fo... | Energy Storage News",
+      "slug": "denmark-allocates-415-million-to-heat-pump-subsidies-for-2027",
       "topic": "energy",
-      "excerpt": "How French winter temperature reshapes cross-border flows, day-ahead prices and solar revenue in the markets around it. \nThe post A degree in Paris, a gigawatt at the border appeared first on pv magaz",
-      "url": "https://technanoai.com/news/a-degree-in-paris-a-gigawatt-at-the-border",
-      "date": "2026-11-09"
+      "excerpt": "Denmark has allocated DKK 267.5 million ($41.5 million) to extend its residential heat pump subsidy scheme through 2027, alongside additional funding for gas network disconnections. The agreement also",
+      "url": "https://technanoai.com/news/denmark-allocates-415-million-to-heat-pump-subsidies-for-2027",
+      "date": "2026-11-16"
     },
     {
-      "title": "CGN connects first unit of world's highest-altitude CSP p... | Energy Storage News",
-      "slug": "cgn-connects-first-unit-of-world8217s-highest-altitude-csp-plant-in-ti",
+      "title": "Octopus Energy launches plug-in solar kit for small busin... | Energy Storage News",
+      "slug": "octopus-energy-launches-plug-in-solar-kit-for-small-businesses",
       "topic": "energy",
-      "excerpt": "Located at an altitude of 4,300 meters, the facility combines PV-powered molten salt heating, thermal energy storage and battery storage.\nThe post CGN connects first unit of world's highest-altitude C",
-      "url": "https://technanoai.com/news/cgn-connects-first-unit-of-world8217s-highest-altitude-csp-plant-in-ti",
-      "date": "2026-11-09"
+      "excerpt": "Octopus Energy has launched plug-in solar kits for small businesses across the UK, following strong demand for its residential offering. The company claims the systems could reduce electricity bills b",
+      "url": "https://technanoai.com/news/octopus-energy-launches-plug-in-solar-kit-for-small-businesses",
+      "date": "2026-11-16"
     },
     {
-      "title": "Childhood Cancers May Not Always Need Extra Mutations to ... | Biotechnology News",
-      "slug": "childhood-cancers-may-not-always-need-extra-mutations-to-spread-study-",
+      "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Je... | Space Exploration News",
+      "slug": "apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+      "topic": "space",
+      "excerpt": "APOD Science APOD APOD: 2026 November 16 – NGC… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
+      "url": "https://technanoai.com/news/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+      "date": "2026-11-16"
+    },
+    {
+      "title": "The Last Ice on Puncak Jaya | Space Exploration News",
+      "slug": "the-last-ice-on-puncak-jaya",
+      "topic": "space",
+      "excerpt": "Ice near the summit of the Indonesian mountain peak has shrunk to scattered patches too small to flow like glaciers.",
+      "url": "https://technanoai.com/news/the-last-ice-on-puncak-jaya",
+      "date": "2026-11-16"
+    },
+    {
+      "title": "<a href=\"/biotech/aclaris-scratches-tslp-program-pipeline... | Biotechnology News",
+      "slug": "a-hrefbiotechaclaris-scratches-tslp-program-pipeline-after-flunking-ph",
       "topic": "biotech",
-      "excerpt": "Childhood cancers may not always need extra mutations to spread, a new review study indicates. Instead, developmental plasticity may let tumor cells shape-shift into states that help them grow, resist",
-      "url": "https://technanoai.com/news/childhood-cancers-may-not-always-need-extra-mutations-to-spread-study-",
-      "date": "2026-11-09"
+      "excerpt": "A phase 2 study of Aclaris Therapeutics’ bosakitug in atopic dermatitis has missed its primary endpoint, adding to the setbacks anti-TSLP antibodies have encountered in the indication.",
+      "url": "https://technanoai.com/news/a-hrefbiotechaclaris-scratches-tslp-program-pipeline-after-flunking-ph",
+      "date": "2026-11-16"
     },
     {
-      "title": "Formulation Development Roundup | Biotechnology News",
-      "slug": "formulation-development-roundup",
+      "title": "<a href=\"/biotech/chinese-scientists-fired-after-child-di... | Biotechnology News",
+      "slug": "a-hrefbiotechchinese-scientists-fired-after-child-dies-gene-editing-st",
       "topic": "biotech",
-      "excerpt": "What leaders suggest are the key considerations for developing robust formulations.\nThe post Formulation Development Roundup appeared first on GEN - Genetic Engineering and Biotechnology News.",
-      "url": "https://technanoai.com/news/formulation-development-roundup",
-      "date": "2026-11-09"
+      "excerpt": "Chinese authorities have fired two researchers over their roles in the death of a child in a gene editing study, according to reports in Chinese state media.",
+      "url": "https://technanoai.com/news/a-hrefbiotechchinese-scientists-fired-after-child-dies-gene-editing-st",
+      "date": "2026-11-16"
     },
     {
-      "title": "A quantum breakthrough makes light behave like both a sol... | Quantum Computing News",
-      "slug": "a-quantum-breakthrough-makes-light-behave-like-both-a-solid-and-a-liqu",
+      "title": "Cross-Platform Cloud Benchmark Reveals Wide Gap Between P... | Quantum Computing News",
+      "slug": "cross-platform-cloud-benchmark-reveals-wide-gap-between-physical-qubit",
       "topic": "quantum",
-      "excerpt": "Scientists have observed a bizarre quantum state of matter that combines the structure of a crystal with the frictionless flow of a liquid, all at room temperature. The breakthrough overturns a major ",
-      "url": "https://technanoai.com/news/a-quantum-breakthrough-makes-light-behave-like-both-a-solid-and-a-liqu",
-      "date": "2026-11-09"
+      "excerpt": "A new study benchmarked nine cloud-accessible quantum processors, revealing a significant gap between the number of physical qubits and the size of entangled GHZ states achievable without error mitiga",
+      "url": "https://technanoai.com/news/cross-platform-cloud-benchmark-reveals-wide-gap-between-physical-qubit",
+      "date": "2026-11-16"
     },
     {
-      "title": "Conferences to Remember | Quantum Computing News",
-      "slug": "conferences-to-remember",
+      "title": "Qatar Ministry of Communications and Information Technolo... | Quantum Computing News",
+      "slug": "qatar-ministry-of-communications-and-information-technology-signs-post",
       "topic": "quantum",
-      "excerpt": "Q+AI and PQC+IQT are getting smaller and smaller in the rearview mirror, but their memories can stay with us. We are gathering as much multimedia as we can, not just from what we recorded, but from wh",
-      "url": "https://technanoai.com/news/conferences-to-remember",
-      "date": "2026-11-09"
+      "excerpt": "The Ministry of Communications and Information Technology of Qatar has partnered with SignQuantum and QANplatform to explore post-quantum cryptography for public-sector data, aligning with Qatar's Nat",
+      "url": "https://technanoai.com/news/qatar-ministry-of-communications-and-information-technology-signs-post",
+      "date": "2026-11-16"
     },
     {
-      "title": "FBI agent stole $2.5 million in crypto from hackers under... | Cybersecurity News",
-      "slug": "fbi-agent-stole-25-million-in-crypto-from-hackers-under-investigation",
-      "topic": "cybersecurity",
-      "excerpt": "A former FBI agent has pleaded guilty to stealing nearly $2.5 million from the wallets of fraud victims and nation-state hackers under investigation. [...]",
-      "url": "https://technanoai.com/news/fbi-agent-stole-25-million-in-crypto-from-hackers-under-investigation",
-      "date": "2026-11-09"
+      "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify... | AI News",
+      "slug": "amazon-uncovers-ai-agent-campaign-targeting-litellm-dify-and-other-app",
+      "topic": "ai",
+      "excerpt": "Attackers' AI agents have been hunting for weak spots in internet-exposed AI apps such as LiteLLM, One API, and Dify to steal the AI provider keys stored inside, according to the agents' own records.\n",
+      "url": "https://technanoai.com/news/amazon-uncovers-ai-agent-campaign-targeting-litellm-dify-and-other-app",
+      "date": "2026-11-16"
     },
     {
-      "title": "Iris Plaza Breach May Have Exposed Data of 7.7 Million Cu... | Cybersecurity News",
-      "slug": "iris-plaza-breach-may-have-exposed-data-of-77-million-customers",
-      "topic": "cybersecurity",
-      "excerpt": "Hackers compromised an external cloud service used by the shopping platform and may have stolen personal information from it.\nThe post Iris Plaza Breach May Have Exposed Data of 7.7 Million Customers ",
-      "url": "https://technanoai.com/news/iris-plaza-breach-may-have-exposed-data-of-77-million-customers",
-      "date": "2026-11-09"
+      "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises... | AI News",
+      "slug": "bo-team-exploits-log4shell-in-vmware-vcenter-compromises-russian-firms",
+      "topic": "ai",
+      "excerpt": "An investigation into suspicious activity within a Russian software developer's network has uncovered a months-long compromise of its development infrastructure and a software code-signing server.\n\nTh",
+      "url": "https://technanoai.com/news/bo-team-exploits-log4shell-in-vmware-vcenter-compromises-russian-firms",
+      "date": "2026-11-16"
     }
   ]
 }
