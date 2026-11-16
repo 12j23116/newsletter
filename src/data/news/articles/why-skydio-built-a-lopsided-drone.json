@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1793535410674-1",
+  "id": "robotics-1794838544764-3",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Scientists smash oxygen nuclei to recreate matter from th... | Robotics News",
-  "excerpt": "Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light. The surprising results show that this exotic substance can",
-  "date": "2026-11-01",
+  "title": "Why Skydio Built a Lopsided Drone | Robotics News",
+  "excerpt": "Skydio’s drones have always been magical. From MIT research and early prototypes to what I would argue is still the most advanced consumer drone ever made, this is a company that makes very cool stuff",
+  "date": "2026-11-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "scientists-smash-oxygen-nuclei-to-recreate-matter-from-the-big-bang",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/10/261030002935.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "why-skydio-built-a-lopsided-drone",
+  "sourceLink": "https://spectrum.ieee.org/skydio-f10-lightrunner-asymmetrical-drone",
+  "sourceName": "Evan Ackerman",
   "body": [
     {
       "type": "p",
-      "text": "Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light.  The surprising results show that this exotic substance can form in smaller, lower-energy collisions than previously demonstrated, challenging the known boundaries of early-universe physics."
+      "text": "Skydio’s drones have always been magical.  From MIT research and early prototypes to what I would argue is still the most advanced consumer drone ever made, this is a company that makes very cool stuff."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light. The surprising results show that this exotic substance can form in smaller, lower-energy collisions than previously demonstrated, challenging the known boundaries of early-universe physics.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "Sadly, Skydio no longer makes cool stuff for consumers, instead focusing on drone platforms for public safety, inspection, and other things that, on a good day, don’t affect me personally."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Scientists smash oxygen nuclei to recreate matter from the Big Bang — a notable development in Robotics",
+    "Why Skydio Built a Lopsided Drone — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "Evan Ackerman",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-01",
-      "event": "Scientists smash oxygen nuclei to recreate matter from the Big Bang",
+      "date": "2026-11-16",
+      "event": "Why Skydio Built a Lopsided Drone",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "scientists",
-    "smash",
+    "skydio",
+    "built",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Scientists smash oxygen nuclei to recreate matter from th... | Robotics News",
-  "metaDescription": "Scientists have recreated a primordial state of matter from the dawn of the universe by colliding oxygen nuclei at nearly the speed of light. The surprising ...",
-  "keywords": "robotics, humanoid robot, automation, drones, scientists, smash, oxygen, TechNanoAI, emerging tech news",
+  "metaTitle": "Why Skydio Built a Lopsided Drone | Robotics News",
+  "metaDescription": "Skydio’s drones have always been magical. From MIT research and early prototypes to what I would argue is still the most advanced consumer drone ever made, t...",
+  "keywords": "robotics, humanoid robot, automation, drones, skydio, built, lopsided, TechNanoAI, emerging tech news",
   "featured": false
 }

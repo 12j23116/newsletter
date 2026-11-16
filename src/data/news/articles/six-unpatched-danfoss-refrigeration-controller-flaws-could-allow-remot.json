@@ -1,21 +1,21 @@
 {
-  "id": "ai-1793535404888-1",
+  "id": "ai-1794838539137-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hackers Steal About $2.7 Million From Polymarket Traders ... | AI News",
-  "excerpt": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29. The code had replaced a page-speed script that ",
-  "date": "2026-11-01",
+  "title": "Six Unpatched Danfoss Refrigeration Controller Flaws Coul... | AI News",
+  "excerpt": "Six flaws in Danfoss AK-SM800A refrigeration controllers could let a remote attacker take over a controller without logging in, Dutch security consultancy Midnight Blue said earlier this week.\n\nNo pat",
+  "date": "2026-11-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hackers-steal-about-27-million-from-polymarket-traders-via-hijacked-de",
-  "sourceLink": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+  "slug": "six-unpatched-danfoss-refrigeration-controller-flaws-could-allow-remot",
+  "sourceLink": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29.  The code had replaced a page-speed script that the site loaded from an outside company."
+      "text": "Six flaws in Danfoss AK-SM800A refrigeration controllers could let a remote attacker take over a controller without logging in, Dutch security consultancy Midnight Blue said earlier this week. \n\nNo patch is available, and the researchers say the newest firmware, version 5."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Polymarket says it is refunding about $2. 7 million to 726 affected wallets."
-    },
-    {
-      "type": "p",
-      "text": "Blockchain records show crypto worth about $2."
+      "text": "4. 0, does not fix the flaws."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear  — a notable development in AI",
+    "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-01",
-      "event": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear ",
+      "date": "2026-11-16",
+      "event": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover",
       "current": true
     },
     {
@@ -195,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hackers",
-    "steal",
+    "unpatched",
+    "danfoss",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hackers Steal About $2.7 Million From Polymarket Traders ... | AI News",
-  "metaDescription": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29. The ...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hackers, steal, about, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Six Unpatched Danfoss Refrigeration Controller Flaws Coul... | AI News",
+  "metaDescription": "Six flaws in Danfoss AK-SM800A refrigeration controllers could let a remote attacker take over a controller without logging in, Dutch security consultancy Mi...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, unpatched, danfoss, refrigeration, TechNanoAI, emerging tech news",
+  "featured": true
 }

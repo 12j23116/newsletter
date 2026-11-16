@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1793535411718-4",
+  "id": "quantum-1794838545801-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Los Alamos and QC Ware Model Correlated Iron Oxides Using... | Quantum Computing News",
-  "excerpt": "Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal oxides. They used Sample-based Quantum Diagon",
-  "date": "2026-11-01",
+  "title": "UPDATED: Conferences to Remember | Quantum Computing News",
+  "excerpt": "Q+AI and PQC+IQT are getting even smaller and smaller in the rearview mirror, but their memories can still stay with us. This week I found additional posts from Rajeev B. and Certes. We will continue ",
+  "date": "2026-11-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "los-alamos-and-qc-ware-model-correlated-iron-oxides-using-sample-based",
-  "sourceLink": "https://quantumcomputingreport.com/los-alamos-and-qc-ware-model-correlated-iron-oxides-using-sample-based-quantum-diagonalization-on-ibm-hardware/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "updated-conferences-to-remember",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/updated-conferences-to-remember/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal oxides.  They used Sample-based Quantum Diagonalization (SQD) on IBM Quantum hardware, coupled with ab initio-informed d–p tight-binding models, to achieve chemical accuracy in modeling diatomic iron monoxide (FeO) and rhombic iron oxide dimers (Fe2O2)."
+      "text": "Q+AI and PQC+IQT are getting even smaller and smaller in the rearview mirror, but their memories can still stay with us.  This week I found additional posts from Rajeev B."
     },
     {
       "type": "p",
@@ -27,7 +27,11 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal oxides. They used Sample-based Quantum Diagonalization (SQD) on IBM Quantum hardware, coupled with ab initio-informed d–p tight-binding models, to achieve chemical accuracy in modeling diatomic iron monoxide (FeO) and rhombic iron oxide dimers (Fe2O2). This method successfully recovered experimental ground states and outperformed traditional c. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "and Certes.  We will continue to gather as much multimedia as we can, as more is definitely forthcoming."
+    },
+    {
+      "type": "p",
+      "text": "And for those who miss..."
     },
     {
       "type": "h2",
@@ -97,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Los Alamos and QC Ware Model Correlated Iron Oxides Using Sample-Based Quantum D — a notable development in Quantum Computing",
+    "UPDATED: Conferences to Remember — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +124,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-01",
-      "event": "Los Alamos and QC Ware Model Correlated Iron Oxides Using Sample-Based Quantum D",
+      "date": "2026-11-16",
+      "event": "UPDATED: Conferences to Remember",
       "current": true
     },
     {
@@ -191,8 +195,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "alamos",
-    "model",
+    "updated",
+    "conferences",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Los Alamos and QC Ware Model Correlated Iron Oxides Using... | Quantum Computing News",
-  "metaDescription": "Researchers from Los Alamos National Laboratory and QC Ware developed a hybrid quantum-classical workflow to simulate strongly correlated transition metal ox...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, alamos, ware, model, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "UPDATED: Conferences to Remember | Quantum Computing News",
+  "metaDescription": "Q+AI and PQC+IQT are getting even smaller and smaller in the rearview mirror, but their memories can still stay with us. This week I found additional posts f...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, updated, conferences, remember, TechNanoAI, emerging tech news",
+  "featured": true
 }

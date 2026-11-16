@@ -1,21 +1,21 @@
 {
-  "id": "ai-1793535404889-4",
+  "id": "ai-1794838539137-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Apple CEO says the company doesn’t ‘want to ship AI for A... | AI News",
-  "excerpt": "Apple's new CEO defended the company's current position in the AI landscape.",
-  "date": "2026-11-01",
+  "title": "Freshworks alums raise $53M to take on Salesforce, HubSpo... | AI News",
+  "excerpt": "Dreamteam has signed up more than 100 customers across 13 countries, with some businesses switching from established CRMs.",
+  "date": "2026-11-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake",
-  "sourceLink": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
-  "sourceName": "Anthony Ha",
+  "slug": "freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-nativ",
+  "sourceLink": "https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/",
+  "sourceName": "Jagmeet Singh",
   "body": [
     {
       "type": "p",
-      "text": "Apple's new CEO defended the company's current position in the AI landscape."
+      "text": "Dreamteam has signed up more than 100 customers across 13 countries, with some businesses switching from established CRMs."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, Apple's new CEO defended the company's current position in the AI landscape.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Jagmeet Singh, Dreamteam has signed up more than 100 customers across 13 countries, with some businesses switching from established CRMs.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’ — a notable development in AI",
+    "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Jagmeet Singh",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-01",
-      "event": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+      "date": "2026-11-16",
+      "event": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "apple",
-    "company",
+    "freshworks",
+    "alums",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Apple CEO says the company doesn’t ‘want to ship AI for A... | AI News",
-  "metaDescription": "Apple's new CEO defended the company's current position in the AI landscape. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, apple, says, company, TechNanoAI, emerging tech news",
+  "metaTitle": "Freshworks alums raise $53M to take on Salesforce, HubSpo... | AI News",
+  "metaDescription": "Dreamteam has signed up more than 100 customers across 13 countries, with some businesses switching from established CRMs.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, freshworks, alums, raise, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1793535411719-5",
+  "id": "quantum-1794838545802-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IBM Launches Unified Quantum Safe Software Suite to Autom... | Quantum Computing News",
-  "excerpt": "IBM has launched IBM Quantum Safe, a software suite designed to help enterprises migrate to post-quantum cryptography (PQC). This platform offers tools for strategic assessment, automated source-code ",
-  "date": "2026-11-01",
+  "title": "Cross-Platform Cloud Benchmark Reveals Wide Gap Between P... | Quantum Computing News",
+  "excerpt": "A new study benchmarked nine cloud-accessible quantum processors, revealing a significant gap between the number of physical qubits and the size of entangled GHZ states achievable without error mitiga",
+  "date": "2026-11-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "ibm-launches-unified-quantum-safe-software-suite-to-automate-enterpris",
-  "sourceLink": "https://quantumcomputingreport.com/ibm-launches-unified-quantum-safe-software-suite-to-automate-enterprise-pqc-migration/",
+  "slug": "cross-platform-cloud-benchmark-reveals-wide-gap-between-physical-qubit",
+  "sourceLink": "https://quantumcomputingreport.com/cross-platform-cloud-benchmark-reveals-wide-gap-between-physical-qubit-counts-and-entangled-ghz-state-sizes/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "IBM has launched IBM Quantum Safe, a software suite designed to help enterprises migrate to post-quantum cryptography (PQC).  This platform offers tools for strategic assessment, automated source-code discovery, and dynamic network mediation."
+      "text": "A new study benchmarked nine cloud-accessible quantum processors, revealing a significant gap between the number of physical qubits and the size of entangled GHZ states achievable without error mitigation.  The research, which utilized standard remote cloud workflows, found that large superconducting processors only maintain multipartite entanglement across a small fraction of their physical registers."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "It aims to address the challenge of identifying and remediating cryptographic vulnerabilities in existing IT infrastructure, enabling organizations to transition to PQC in anticipation of federal migration deadlines."
+      "text": "According to reporting from Mohamed Abdel-Kareem, A new study benchmarked nine cloud-accessible quantum processors, revealing a significant gap between the number of physical qubits and the size of entangled GHZ states achievable without error mitigation. The research, which utilized standard remote cloud workflows, found that large superconducting processors only maintain multipartite entanglement across a small fraction of their physical registers. This highlights the challenges in achieving high-fidelity multipartite entanglement in current. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IBM Launches Unified Quantum Safe Software Suite to Automate Enterprise PQC Migr — a notable development in Quantum Computing",
+    "Cross-Platform Cloud Benchmark Reveals Wide Gap Between Physical Qubit Counts an — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-01",
-      "event": "IBM Launches Unified Quantum Safe Software Suite to Automate Enterprise PQC Migr",
+      "date": "2026-11-16",
+      "event": "Cross-Platform Cloud Benchmark Reveals Wide Gap Between Physical Qubit Counts an",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "launches",
-    "unified",
+    "cross",
+    "platform",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IBM Launches Unified Quantum Safe Software Suite to Autom... | Quantum Computing News",
-  "metaDescription": "IBM has launched IBM Quantum Safe, a software suite designed to help enterprises migrate to post-quantum cryptography (PQC). This platform offers tools for s...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, launches, unified, quantum, TechNanoAI, emerging tech news",
+  "metaTitle": "Cross-Platform Cloud Benchmark Reveals Wide Gap Between P... | Quantum Computing News",
+  "metaDescription": "A new study benchmarked nine cloud-accessible quantum processors, revealing a significant gap between the number of physical qubits and the size of entangled...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, cross, platform, cloud, TechNanoAI, emerging tech news",
   "featured": false
 }

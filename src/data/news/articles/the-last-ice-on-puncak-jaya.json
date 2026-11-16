@@ -1,21 +1,21 @@
 {
-  "id": "space-1793535406401-3",
+  "id": "space-1794838540469-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "SpaceX closes out October with 700th Falcon 9 launch to date | Space Exploration News",
-  "excerpt": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 9:04 p.m. PDT (1",
-  "date": "2026-11-01",
+  "title": "The Last Ice on Puncak Jaya | Space Exploration News",
+  "excerpt": "Ice near the summit of the Indonesian mountain peak has shrunk to scattered patches too small to flow like glaciers.",
+  "date": "2026-11-16",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "spacex-closes-out-october-with-700th-falcon-9-launch-to-date",
-  "sourceLink": "https://spaceflightnow.com/2026/10/30/live-coverage-spacex-to-close-out-october-with-halloween-eve-falcon-9-launch/",
-  "sourceName": "Will Robinson-Smith",
+  "slug": "the-last-ice-on-puncak-jaya",
+  "sourceLink": "https://science.nasa.gov/earth/earth-observatory/the-last-ice-on-puncak-jaya/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation.  Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 9:04 p."
+      "text": "Ice near the summit of the Indonesian mountain peak has shrunk to scattered patches too small to flow like glaciers."
     },
     {
       "type": "p",
@@ -27,11 +27,7 @@
     },
     {
       "type": "p",
-      "text": "m.  PDT (12:04 a."
-    },
-    {
-      "type": "p",
-      "text": "m.  EDT / 0404 UTC)."
+      "text": "According to reporting from nasa.gov, Ice near the summit of the Indonesian mountain peak has shrunk to scattered patches too small to flow like glaciers.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -101,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SpaceX closes out October with 700th Falcon 9 launch to date — a notable development in Space Exploration",
+    "The Last Ice on Puncak Jaya — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Will Robinson-Smith",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-01",
-      "event": "SpaceX closes out October with 700th Falcon 9 launch to date",
+      "date": "2026-11-16",
+      "event": "The Last Ice on Puncak Jaya",
       "current": true
     },
     {
@@ -195,8 +191,7 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "spacex",
-    "closes",
+    "puncak",
     "emerging tech"
   ],
   "poll": {
@@ -220,8 +215,8 @@
       }
     ]
   },
-  "metaTitle": "SpaceX closes out October with 700th Falcon 9 launch to date | Space Exploration News",
-  "metaDescription": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation. Liftoff from pad 4E at Vandenberg Space F...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, closes, october, TechNanoAI, emerging tech news",
+  "metaTitle": "The Last Ice on Puncak Jaya | Space Exploration News",
+  "metaDescription": "Ice near the summit of the Indonesian mountain peak has shrunk to scattered patches too small to flow like glaciers. Launch vehicles & lunar economy. Latest Spa",
+  "keywords": "space exploration, rocket launch, satellite, NASA, last, puncak, jaya, TechNanoAI, emerging tech news",
   "featured": false
 }
