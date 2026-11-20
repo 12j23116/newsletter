@@ -1,11 +1,11 @@
 {
-  "id": "bci-1793886122335-0",
+  "id": "bci-1795185257027-2",
   "topic": "bci",
   "topicLabel": "Brain-Computer Interfaces",
   "topicColor": "#0ea5e9",
   "title": "Mentees, colleagues, friends share remembrances of Susumu... | Brain-Computer Interfaces News",
   "excerpt": "To remember the longtime professor, lab members, alumni, colleagues, and other well-wishers gathered with members of his family in MIT Building 46 and online.",
-  "date": "2026-11-05",
+  "date": "2026-11-20",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/005-bci-neural-link.webp",
@@ -157,7 +157,7 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-05",
+      "date": "2026-11-20",
       "event": "Mentees, colleagues, friends share remembrances of Susumu Tonegawa",
       "current": true
     },
@@ -219,5 +219,5 @@
   "metaTitle": "Mentees, colleagues, friends share remembrances of Susumu... | Brain-Computer Interfaces News",
   "metaDescription": "To remember the longtime professor, lab members, alumni, colleagues, and other well-wishers gathered with members of his family in MIT Building 46 and online.",
   "keywords": "brain-computer interface, BCI, neural implant, Neuralink, mentees, colleagues, friends, TechNanoAI, emerging tech news",
-  "featured": true
+  "featured": false
 }
