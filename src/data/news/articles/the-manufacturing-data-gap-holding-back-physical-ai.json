@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1794053061501-0",
+  "id": "robotics-1795355148187-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "How Point One turned GPS accuracy into a robotics platform | Robotics News",
-  "excerpt": "Aaron Nathan explains how precise location technology like GPS is enabling robots to navigate, coordinate, and scale across real environments.\nThe post How Point One turned GPS accuracy into a robotic",
-  "date": "2026-11-07",
+  "title": "The manufacturing data gap holding back physical AI | Robotics News",
+  "excerpt": "Manufacturers looking to deploy autonomous robots must close gaps in industrial data collection, interoperability, and quality feedback to enable reliable decision-making and improve production effici",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "how-point-one-turned-gps-accuracy-into-a-robotics-platform",
-  "sourceLink": "https://www.therobotreport.com/how-point-one-turned-gps-accuracy-into-robotics-platform/",
-  "sourceName": "The Robot Report Staff",
+  "slug": "the-manufacturing-data-gap-holding-back-physical-ai",
+  "sourceLink": "https://www.therobotreport.com/the-manufacturing-data-gap-holding-back-physical-ai/",
+  "sourceName": "Mike Kenworthy, CTO, VulcanForms",
   "body": [
     {
       "type": "p",
-      "text": "Aaron Nathan explains how precise location technology like GPS is enabling robots to navigate, coordinate, and scale across real environments. \nThe post How Point One turned GPS accuracy into a robotics platform appeared first on The Robot Report."
+      "text": "Manufacturers looking to deploy autonomous robots must close gaps in industrial data collection, interoperability, and quality feedback to enable reliable decision-making and improve production efficiency. \nThe post The manufacturing data gap holding back physical AI appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from The Robot Report Staff, Aaron Nathan explains how precise location technology like GPS is enabling robots to navigate, coordinate, and scale across real environments.\nThe post How Point One turned GPS accuracy into a robotics platform appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mike Kenworthy, CTO, VulcanForms, Manufacturers looking to deploy autonomous robots must close gaps in industrial data collection, interoperability, and quality feedback to enable reliable decision-making and improve production efficiency.\nThe post The manufacturing data gap holding back physical AI appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "How Point One turned GPS accuracy into a robotics platform — a notable development in Robotics",
+    "The manufacturing data gap holding back physical AI — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "The Robot Report Staff",
+      "value": "Mike Kenworthy, CTO, VulcanForms",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "How Point One turned GPS accuracy into a robotics platform",
+      "date": "2026-11-22",
+      "event": "The manufacturing data gap holding back physical AI",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "point",
-    "turned",
+    "manufacturing",
+    "holding",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "How Point One turned GPS accuracy into a robotics platform | Robotics News",
-  "metaDescription": "Aaron Nathan explains how precise location technology like GPS is enabling robots to navigate, coordinate, and scale across real environments.\nThe post How P...",
-  "keywords": "robotics, humanoid robot, automation, drones, point, turned, accuracy, TechNanoAI, emerging tech news",
+  "metaTitle": "The manufacturing data gap holding back physical AI | Robotics News",
+  "metaDescription": "Manufacturers looking to deploy autonomous robots must close gaps in industrial data collection, interoperability, and quality feedback to enable reliable de...",
+  "keywords": "robotics, humanoid robot, automation, drones, manufacturing, data, holding, TechNanoAI, emerging tech news",
   "featured": true
 }

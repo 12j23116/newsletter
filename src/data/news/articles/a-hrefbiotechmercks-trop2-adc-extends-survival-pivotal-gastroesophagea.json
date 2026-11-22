@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1794053058884-2",
+  "id": "biotech-1795355144771-1",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "ER-Negative Breast Cancer Risk Linked with Blood Levels o... | Biotechnology News",
-  "excerpt": "The results of a study found that women with higher blood levels of two common PFAS were more likely to develop estrogen receptor-negative breast cancer, saying their results have important public hea",
-  "date": "2026-11-07",
+  "title": "<a href=\"/biotech/mercks-trop2-adc-extends-survival-pivot... | Biotechnology News",
+  "excerpt": "Merck  Co.’s sacituzumab tirumotecan has improved overall survival in a phase 3 cancer trial, delivering a second pivotal global victory for the TROP2-directed antibody-drug conjugate.",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "er-negative-breast-cancer-risk-linked-with-blood-levels-of-two-pfas-fo",
-  "sourceLink": "https://www.genengnews.com/topics/cancer/er-negative-breast-cancer-risk-linked-with-blood-levels-of-two-pfas-forever-chemicals/",
-  "sourceName": "Sophia Ktori",
+  "slug": "a-hrefbiotechmercks-trop2-adc-extends-survival-pivotal-gastroesophagea",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/mercks-trop2-adc-extends-survival-pivotal-gastroesophageal-cancer-trial",
+  "sourceName": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
   "body": [
     {
       "type": "p",
-      "text": "The results of a study found that women with higher blood levels of two common PFAS were more likely to develop estrogen receptor-negative breast cancer, saying their results have important public health implications. \nThe post ER-Negative Breast Cancer Risk Linked with Blood Levels of Two PFAS Forever Chemicals appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "Merck  Co. ’s sacituzumab tirumotecan has improved overall survival in a phase 3 cancer trial, delivering a second pivotal global victory for the TROP2-directed antibody-drug conjugate."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sophia Ktori, The results of a study found that women with higher blood levels of two common PFAS were more likely to develop estrogen receptor-negative breast cancer, saying their results have important public health implications.\nThe post ER-Negative Breast Cancer Risk Linked with Blood Levels of Two PFAS Forever Chemicals appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>, Merck  Co.’s sacituzumab tirumotecan has improved overall survival in a phase 3 cancer trial, delivering a second pivotal global victory for the TROP2-directed antibody-drug conjugate.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "ER-Negative Breast Cancer Risk Linked with Blood Levels of Two PFAS Forever Chem — a notable development in Biotechnology",
+    "<a href=\"/biotech/mercks-trop2-adc-extends-survival-pivotal-gastroesophageal-can — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Sophia Ktori",
+      "value": "<a href=\"/person/nick-paul-taylor\" hreflang=\"en\">Nick Paul Taylor</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "ER-Negative Breast Cancer Risk Linked with Blood Levels of Two PFAS Forever Chem",
+      "date": "2026-11-22",
+      "event": "<a href=\"/biotech/mercks-trop2-adc-extends-survival-pivotal-gastroesophageal-can",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "negative",
-    "breast",
+    "biotech",
+    "mercks",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "ER-Negative Breast Cancer Risk Linked with Blood Levels o... | Biotechnology News",
-  "metaDescription": "The results of a study found that women with higher blood levels of two common PFAS were more likely to develop estrogen receptor-negative breast cancer, say...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, negative, breast, cancer, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/mercks-trop2-adc-extends-survival-pivot... | Biotechnology News",
+  "metaDescription": "Merck  Co.’s sacituzumab tirumotecan has improved overall survival in a phase 3 cancer trial, delivering a second pivotal global victory for the TROP2-direct...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, mercks, TechNanoAI, emerging tech news",
   "featured": false
 }

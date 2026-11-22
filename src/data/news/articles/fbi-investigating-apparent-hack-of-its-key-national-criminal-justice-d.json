@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1794053057856-2",
+  "id": "cybersecurity-1795355143705-2",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited ... | Cybersecurity News",
-  "excerpt": "SonicWall has released security updates to fix seven vulnerabilities in SonicOS firewalls, including an SSL-VPN authentication bypass flaw exploited in attacks. [...]",
-  "date": "2026-11-07",
+  "title": "FBI Investigating Apparent Hack of Its Key National Crimi... | Cybersecurity News",
+  "excerpt": "The FBI is investigating an apparent hack of a national law enforcement database that it maintains.\nThe post FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Sa",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-d",
+  "sourceLink": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/",
+  "sourceName": "Associated Press",
   "body": [
     {
       "type": "p",
-      "text": "SonicWall has released security updates to fix seven vulnerabilities in SonicOS firewalls, including an SSL-VPN authentication bypass flaw exploited in attacks.  [..."
+      "text": "The FBI is investigating an apparent hack of a national law enforcement database that it maintains. \nThe post FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says appeared first on SecurityWeek."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, SonicWall has released security updates to fix seven vulnerabilities in SonicOS firewalls, including an SSL-VPN authentication bypass flaw exploited in attacks. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Associated Press, The FBI is investigating an apparent hack of a national law enforcement database that it maintains.\nThe post FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says appeared first on SecurityWeek.. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks — a notable development in Cybersecurity",
+    "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, A — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "Associated Press",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+      "date": "2026-11-22",
+      "event": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, A",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "sonicwall",
-    "warns",
+    "investigating",
+    "apparent",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited ... | Cybersecurity News",
-  "metaDescription": "SonicWall has released security updates to fix seven vulnerabilities in SonicOS firewalls, including an SSL-VPN authentication bypass flaw exploited in attac...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, sonicwall, warns, bypass, TechNanoAI, emerging tech news",
+  "metaTitle": "FBI Investigating Apparent Hack of Its Key National Crimi... | Cybersecurity News",
+  "metaDescription": "The FBI is investigating an apparent hack of a national law enforcement database that it maintains.\nThe post FBI Investigating Apparent Hack of Its Key Natio...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, investigating, apparent, hack, TechNanoAI, emerging tech news",
   "featured": false
 }

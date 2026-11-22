@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794053057471-4",
+  "id": "ai-1795355143426-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Meta introduces Spaces, a new way to collaborate with you... | AI News",
-  "excerpt": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
-  "date": "2026-11-07",
-  "readTime": "3 min",
+  "title": "OpenRouter Drops 3 Providers After Researchers Catch Mont... | AI News",
+  "excerpt": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week.\n\nSome of t",
+  "date": "2026-11-22",
+  "readTime": "4 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent",
-  "sourceLink": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
-  "sourceName": "Lucas Ropek",
+  "slug": "openrouter-drops-3-providers-after-researchers-catch-months-of-prompt-",
+  "sourceLink": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Meta's Muse agents continue to get new features and integrations.  Spaces promises to be a new way to interact with the AI helpers."
+      "text": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week. \n\nSome of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lucas Ropek, Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week.\n\nSome of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored.\n\nOpenRouter, a gateway that routes customers' AI requests to a pool of. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Meta introduces Spaces, a new way to collaborate with your Muse agent — a notable development in AI",
+    "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at A — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Lucas Ropek",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+      "date": "2026-11-22",
+      "event": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at A",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "introduces",
-    "spaces",
+    "openrouter",
+    "drops",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Meta introduces Spaces, a new way to collaborate with you... | AI News",
-  "metaDescription": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, meta, introduces, spaces, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "OpenRouter Drops 3 Providers After Researchers Catch Mont... | AI News",
+  "metaDescription": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurit...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, openrouter, drops, providers, TechNanoAI, emerging tech news",
+  "featured": true
 }

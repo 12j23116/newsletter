@@ -1,21 +1,21 @@
 {
-  "id": "space-1794053058520-2",
+  "id": "space-1795355144372-1",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Falcon 9 launches from California on classified mission f... | Space Exploration News",
-  "excerpt": "Liftoff from pad 4E at Vandenberg Space Force Base occurred at 4:48 p.m. PST (7:48 p.m. EST / 0048 UTC). The mission is thought to be carrying satellites based on SpaceX’s Starshield platform.",
-  "date": "2026-11-07",
+  "title": "SpaceX launches intelligence-gathering satellites for the... | Space Exploration News",
+  "excerpt": "The NROL-136 mission was the fourth launch of the year supporting the agency’s proliferated architecture satellite constellation in low Earth orbit. Liftoff from pad 4E at Vandenberg Space Force Base ",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "falcon-9-launches-from-california-on-classified-mission-for-us-space-f",
-  "sourceLink": "https://spaceflightnow.com/2026/11/06/falcon-9-to-launch-from-california-on-classified-mission-for-u-s-space-force/",
-  "sourceName": "Steven Young",
+  "slug": "spacex-launches-intelligence-gathering-satellites-for-the-national-rec",
+  "sourceLink": "https://spaceflightnow.com/2026/11/21/live-coverage-spacex-to-launch-intelligence-gathering-satellites-for-the-national-reconnaissance-office-3/",
+  "sourceName": "Will Robinson-Smith",
   "body": [
     {
       "type": "p",
-      "text": "Liftoff from pad 4E at Vandenberg Space Force Base occurred at 4:48 p. m."
+      "text": "The NROL-136 mission was the fourth launch of the year supporting the agency’s proliferated architecture satellite constellation in low Earth orbit.  Liftoff from pad 4E at Vandenberg Space Force Base happened at 4:23 a."
     },
     {
       "type": "p",
@@ -27,11 +27,11 @@
     },
     {
       "type": "p",
-      "text": "PST (7:48 p. m."
+      "text": "m.  PST (7:23 a."
     },
     {
       "type": "p",
-      "text": "EST / 0048 UTC).  The mission is thought to be carrying satellites based on SpaceX’s Starshield platform."
+      "text": "m.  EST / 1223 UTC)."
     },
     {
       "type": "h2",
@@ -101,7 +101,7 @@
     }
   ],
   "takeaways": [
-    "Falcon 9 launches from California on classified mission for U.S. Space Force — a notable development in Space Exploration",
+    "SpaceX launches intelligence-gathering satellites for the National Reconnaissanc — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -124,7 +124,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Steven Young",
+      "value": "Will Robinson-Smith",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -161,8 +161,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "Falcon 9 launches from California on classified mission for U.S. Space Force",
+      "date": "2026-11-22",
+      "event": "SpaceX launches intelligence-gathering satellites for the National Reconnaissanc",
       "current": true
     },
     {
@@ -195,7 +195,7 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "falcon",
+    "spacex",
     "launches",
     "emerging tech"
   ],
@@ -220,8 +220,8 @@
       }
     ]
   },
-  "metaTitle": "Falcon 9 launches from California on classified mission f... | Space Exploration News",
-  "metaDescription": "Liftoff from pad 4E at Vandenberg Space Force Base occurred at 4:48 p.m. PST (7:48 p.m. EST / 0048 UTC). The mission is thought to be carrying satellites bas...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, falcon, launches, from, TechNanoAI, emerging tech news",
+  "metaTitle": "SpaceX launches intelligence-gathering satellites for the... | Space Exploration News",
+  "metaDescription": "The NROL-136 mission was the fourth launch of the year supporting the agency’s proliferated architecture satellite constellation in low Earth orbit. Liftoff ...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, spacex, launches, intelligence, TechNanoAI, emerging tech news",
   "featured": false
 }

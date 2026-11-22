@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794053057470-1",
+  "id": "ai-1795355143428-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Crusoe sells troubled Wyoming data center project to Google | AI News",
-  "excerpt": "The deal highlights the challenges of developing massive AI data centers.",
-  "date": "2026-11-07",
+  "title": "Here are the top AI agents that can live in your text mes... | AI News",
+  "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "crusoe-sells-troubled-wyoming-data-center-project-to-google",
-  "sourceLink": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
-  "sourceName": "Marina Temkin",
+  "slug": "here-are-the-top-ai-agents-that-can-live-in-your-text-messages",
+  "sourceLink": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+  "sourceName": "Lauren Forristal",
   "body": [
     {
       "type": "p",
-      "text": "The deal highlights the challenges of developing massive AI data centers."
+      "text": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Marina Temkin, The deal highlights the challenges of developing massive AI data centers.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lauren Forristal, We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Crusoe sells troubled Wyoming data center project to Google — a notable development in AI",
+    "Here are the top AI agents that can live in your text messages — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Marina Temkin",
+      "value": "Lauren Forristal",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "Crusoe sells troubled Wyoming data center project to Google",
+      "date": "2026-11-22",
+      "event": "Here are the top AI agents that can live in your text messages",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "crusoe",
-    "sells",
+    "agents",
+    "messages",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Crusoe sells troubled Wyoming data center project to Google | AI News",
-  "metaDescription": "The deal highlights the challenges of developing massive AI data centers. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, crusoe, sells, troubled, TechNanoAI, emerging tech news",
+  "metaTitle": "Here are the top AI agents that can live in your text mes... | AI News",
+  "metaDescription": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, here, agents, that, TechNanoAI, emerging tech news",
   "featured": false
 }

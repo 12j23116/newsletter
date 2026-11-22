@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1794053058883-0",
+  "id": "biotech-1795355144772-2",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "The Aging Proteome: Clocks, Cohorts, and Clinical Trials | Biotechnology News",
-  "excerpt": "In this GEN webinar, two experts will show how ultra-sensitive, multiplexed proteomics can measure both the pace of aging and the effects of interventions designed to change it. \nThe post The Aging Pr",
-  "date": "2026-11-07",
+  "title": "<a href=\"/research/researchers-uncover-plastics-present-d... | Biotechnology News",
+  "excerpt": "The field of micro- and nanoplastics has drawn a lot of interest in recent years as concerns grow about the impact of contamination in the environment. These tiny plastic particles are created when pl",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "the-aging-proteome-clocks-cohorts-and-clinical-trials",
-  "sourceLink": "https://www.genengnews.com/multimedia/webinars/the-aging-proteome-clocks-cohorts-and-clinical-trials/",
-  "sourceName": "Kathy Vuksanaj",
+  "slug": "a-hrefresearchresearchers-uncover-plastics-present-dementia-brains-aft",
+  "sourceLink": "https://www.fiercebiotech.com/research/researchers-uncover-plastics-present-dementia-brains-after-death",
+  "sourceName": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
   "body": [
     {
       "type": "p",
-      "text": "In this GEN webinar, two experts will show how ultra-sensitive, multiplexed proteomics can measure both the pace of aging and the effects of interventions designed to change it.  \nThe post The Aging Proteome: Clocks, Cohorts, and Clinical Trials appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "The field of micro- and nanoplastics has drawn a lot of interest in recent years as concerns grow about the impact of contamination in the environment.  These tiny plastic particles are created when plastic breaks down and are usually so small that they are invisible to the naked eye."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Kathy Vuksanaj, In this GEN webinar, two experts will show how ultra-sensitive, multiplexed proteomics can measure both the pace of aging and the effects of interventions designed to change it. \nThe post The Aging Proteome: Clocks, Cohorts, and Clinical Trials appeared first on GEN - Genetic Engineering and Biotechnology News.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from <a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>, The field of micro- and nanoplastics has drawn a lot of interest in recent years as concerns grow about the impact of contamination in the environment. These tiny plastic particles are created when plastic breaks down and are usually so small that they are invisible to the naked eye.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "The Aging Proteome: Clocks, Cohorts, and Clinical Trials — a notable development in Biotechnology",
+    "<a href=\"/research/researchers-uncover-plastics-present-dementia-brains-after-de — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Kathy Vuksanaj",
+      "value": "<a href=\"/person/marissa-russo\" hreflang=\"en\">Marissa Russo</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "The Aging Proteome: Clocks, Cohorts, and Clinical Trials",
+      "date": "2026-11-22",
+      "event": "<a href=\"/research/researchers-uncover-plastics-present-dementia-brains-after-de",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "aging",
-    "proteome",
+    "research",
+    "researchers",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "The Aging Proteome: Clocks, Cohorts, and Clinical Trials | Biotechnology News",
-  "metaDescription": "In this GEN webinar, two experts will show how ultra-sensitive, multiplexed proteomics can measure both the pace of aging and the effects of interventions de...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, aging, proteome, clocks, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "<a href=\"/research/researchers-uncover-plastics-present-d... | Biotechnology News",
+  "metaDescription": "The field of micro- and nanoplastics has drawn a lot of interest in recent years as concerns grow about the impact of contamination in the environment. These...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, research, researchers, TechNanoAI, emerging tech news",
+  "featured": false
 }

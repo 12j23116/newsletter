@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794053057471-3",
+  "id": "ai-1795355143428-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Hundreds of Artex AI hacking tools found publicly exposed... | AI News",
-  "excerpt": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
-  "date": "2026-11-07",
+  "title": "Is selling an AI version of your face to this microdrama ... | AI News",
+  "excerpt": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web",
-  "sourceLink": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
-  "sourceName": "Zack Whittaker",
+  "slug": "is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-f",
+  "sourceLink": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+  "sourceName": "Lucas Ropek",
   "body": [
     {
       "type": "p",
-      "text": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool."
+      "text": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China.  Experts question the long-term consequences if this becomes a trend in Hollywood, too."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Zack Whittaker, Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Lucas Ropek, An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Hundreds of Artex AI hacking tools found publicly exposed to the web — a notable development in AI",
+    "Is selling an AI version of your face to this microdrama startup the future of H — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Zack Whittaker",
+      "value": "Lucas Ropek",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+      "date": "2026-11-22",
+      "event": "Is selling an AI version of your face to this microdrama startup the future of H",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "hundreds",
-    "artex",
+    "selling",
+    "version",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Hundreds of Artex AI hacking tools found publicly exposed... | AI News",
-  "metaDescription": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, hundreds, artex, hacking, TechNanoAI, emerging tech news",
+  "metaTitle": "Is selling an AI version of your face to this microdrama ... | AI News",
+  "metaDescription": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this beco...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, selling, version, your, TechNanoAI, emerging tech news",
   "featured": false
 }

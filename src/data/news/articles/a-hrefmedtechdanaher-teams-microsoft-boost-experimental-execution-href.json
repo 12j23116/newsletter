@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1794053058884-1",
+  "id": "biotech-1795355144771-0",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Novartis Confirms Nine Cases of Tumors in Children Treate... | Biotechnology News",
-  "excerpt": "\"Two cases to date have shown evidence of vector integration into the DNA of the patients. In both cases, the patients underwent treatment and continue to be monitored,” Novartis said in a statement.\n",
-  "date": "2026-11-07",
+  "title": "<a href=\"/medtech/danaher-teams-microsoft-boost-experimen... | Biotechnology News",
+  "excerpt": "Danaher Corporation and Microsoft are teaming for a strategic partnership to develop smart scientific instruments and an interoperable agentic ecosystem.",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "novartis-confirms-nine-cases-of-tumors-in-children-treated-with-gene-t",
-  "sourceLink": "https://www.genengnews.com/topics/genome-editing/novartis-confirms-nine-cases-of-tumors-in-children-treated-with-gene-therapy-zolgensma/",
-  "sourceName": "Alex Philippidis",
+  "slug": "a-hrefmedtechdanaher-teams-microsoft-boost-experimental-execution-href",
+  "sourceLink": "https://www.fiercebiotech.com/medtech/danaher-teams-microsoft-boost-experimental-execution",
+  "sourceName": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
   "body": [
     {
       "type": "p",
-      "text": "\"Two cases to date have shown evidence of vector integration into the DNA of the patients.  In both cases, the patients underwent treatment and continue to be monitored,” Novartis said in a statement."
+      "text": "Danaher Corporation and Microsoft are teaming for a strategic partnership to develop smart scientific instruments and an interoperable agentic ecosystem."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Novartis Confirms Nine Cases of Tumors in Children Treated with Gene Therapy Zolgensma appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "According to reporting from <a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>, Danaher Corporation and Microsoft are teaming for a strategic partnership to develop smart scientific instruments and an interoperable agentic ecosystem.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Novartis Confirms Nine Cases of Tumors in Children Treated with Gene Therapy Zol — a notable development in Biotechnology",
+    "<a href=\"/medtech/danaher-teams-microsoft-boost-experimental-execution\" hreflang — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Alex Philippidis",
+      "value": "<a href=\"/person/patrick-mcguire\" hreflang=\"en\">Patrick McGuire</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "Novartis Confirms Nine Cases of Tumors in Children Treated with Gene Therapy Zol",
+      "date": "2026-11-22",
+      "event": "<a href=\"/medtech/danaher-teams-microsoft-boost-experimental-execution\" hreflang",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "novartis",
-    "confirms",
+    "medtech",
+    "danaher",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Novartis Confirms Nine Cases of Tumors in Children Treate... | Biotechnology News",
-  "metaDescription": "\"Two cases to date have shown evidence of vector integration into the DNA of the patients. In both cases, the patients underwent treatment and continue to be...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, novartis, confirms, nine, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "<a href=\"/medtech/danaher-teams-microsoft-boost-experimen... | Biotechnology News",
+  "metaDescription": "Danaher Corporation and Microsoft are teaming for a strategic partnership to develop smart scientific instruments and an interoperable agentic ecosystem.",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, medtech, danaher, TechNanoAI, emerging tech news",
+  "featured": true
 }

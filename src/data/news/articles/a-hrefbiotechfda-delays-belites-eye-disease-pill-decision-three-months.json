@@ -1,21 +1,21 @@
 {
-  "id": "biotech-1794053058884-3",
+  "id": "biotech-1795355144772-3",
   "topic": "biotech",
   "topicLabel": "Biotechnology",
   "topicColor": "#10b981",
-  "title": "Why Glycosylation Control Is No Longer a Secondary Concer... | Biotechnology News",
-  "excerpt": "A priority shift is redefining expectations for contract development and manufacturing organizations (CDMOs). This article explains how CDMOs can efficiently move their glycosylation processes upstrea",
-  "date": "2026-11-07",
+  "title": "<a href=\"/biotech/fda-delays-belites-eye-disease-pill-dec... | Biotechnology News",
+  "excerpt": "The FDA is taking a little extra time to review Belite Bio’s application for its treatment for a rare genetic eye condition, pushing the expected action date back by three months into May next year.",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/004-biotech-gene-editing.webp",
-  "slug": "why-glycosylation-control-is-no-longer-a-secondary-concern-in-the-deve",
-  "sourceLink": "https://www.genengnews.com/topics/bioprocessing/why-glycosylation-control-is-no-longer-a-secondary-concern-in-the-development-of-complex-biologics/",
-  "sourceName": "Corinna Singleman, PhD",
+  "slug": "a-hrefbiotechfda-delays-belites-eye-disease-pill-decision-three-months",
+  "sourceLink": "https://www.fiercebiotech.com/biotech/fda-delays-belites-eye-disease-pill-decision-three-months-may",
+  "sourceName": "<a href=\"/person/michael-gibney-0\" hreflang=\"en\">Michael Gibney</a>",
   "body": [
     {
       "type": "p",
-      "text": "A priority shift is redefining expectations for contract development and manufacturing organizations (CDMOs).  This article explains how CDMOs can efficiently move their glycosylation processes upstream using quality-by-design (QbD) methodologies."
+      "text": "The FDA is taking a little extra time to review Belite Bio’s application for its treatment for a rare genetic eye condition, pushing the expected action date back by three months into May next year."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Why Glycosylation Control Is No Longer a Secondary Concern in the Development of Complex Biologics appeared first on GEN - Genetic Engineering and Biotechnology News."
+      "text": "According to reporting from <a href=\"/person/michael-gibney-0\" hreflang=\"en\">Michael Gibney</a>, The FDA is taking a little extra time to review Belite Bio’s application for its treatment for a rare genetic eye condition, pushing the expected action date back by three months into May next year.. The development represents a notable step forward in the Biotechnology landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Why Glycosylation Control Is No Longer a Secondary Concern in the Development of — a notable development in Biotechnology",
+    "<a href=\"/biotech/fda-delays-belites-eye-disease-pill-decision-three-months-may\" — a notable development in Biotechnology",
     "The biotechnology sector continues to accelerate, with crispr, mrna & lab-grown organs driving rapid progress",
     "Industry context: Biotechnology is undergoing a revolution driven by CRISPR gene editing, mRNA platforms, and AI-accel...",
     "Challenges remain: Regulatory pathways for personalized medicine, manufacturing scale-up for cell t...",
@@ -120,7 +120,7 @@
       "change": "CRISPR, mRNA & lab-grown organs"
     },
     {
-      "value": "Corinna Singleman, PhD",
+      "value": "<a href=\"/person/michael-gibney-0\" hreflang=\"en\">Michael Gibney</a>",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "Why Glycosylation Control Is No Longer a Secondary Concern in the Development of",
+      "date": "2026-11-22",
+      "event": "<a href=\"/biotech/fda-delays-belites-eye-disease-pill-decision-three-months-may\"",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "biotechnology",
     "CRISPR",
-    "glycosylation",
-    "control",
+    "biotech",
+    "delays",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Why Glycosylation Control Is No Longer a Secondary Concer... | Biotechnology News",
-  "metaDescription": "A priority shift is redefining expectations for contract development and manufacturing organizations (CDMOs). This article explains how CDMOs can efficiently...",
-  "keywords": "biotechnology, CRISPR, gene editing, mRNA, glycosylation, control, longer, TechNanoAI, emerging tech news",
+  "metaTitle": "<a href=\"/biotech/fda-delays-belites-eye-disease-pill-dec... | Biotechnology News",
+  "metaDescription": "The FDA is taking a little extra time to review Belite Bio’s application for its treatment for a rare genetic eye condition, pushing the expected action date...",
+  "keywords": "biotechnology, CRISPR, gene editing, mRNA, href, biotech, delays, TechNanoAI, emerging tech news",
   "featured": false
 }

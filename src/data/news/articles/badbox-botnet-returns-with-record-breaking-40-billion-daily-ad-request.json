@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1794053057857-4",
+  "id": "cybersecurity-1795355143707-5",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "OpenAI's new GPT-6 Cyber AI finds 81 Firefox flaws, 948 L... | Cybersecurity News",
-  "excerpt": "OpenAI has revealed GPT-6 Cyber, a new artificial intelligence model that has discovered 81 previously unknown high-severity Firefox vulnerabilities and developed working exploits for 948 distinct Lin",
-  "date": "2026-11-07",
+  "title": "BADBOX botnet returns with record-breaking 40 billion dai... | Cybersecurity News",
+  "excerpt": "The BADBOX malware found in a broad range of generic Android TV boxes has returned to large-scale ad-fraud operations following last year's disruptions. [...]",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs",
-  "sourceLink": "https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/",
-  "sourceName": "Lawrence Abrams",
+  "slug": "badbox-botnet-returns-with-record-breaking-40-billion-daily-ad-request",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
+  "sourceName": "Bill Toulas",
   "body": [
     {
       "type": "p",
-      "text": "OpenAI has revealed GPT-6 Cyber, a new artificial intelligence model that has discovered 81 previously unknown high-severity Firefox vulnerabilities and developed working exploits for 948 distinct Linux kernel flaws.  [..."
+      "text": "The BADBOX malware found in a broad range of generic Android TV boxes has returned to large-scale ad-fraud operations following last year's disruptions.  [..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lawrence Abrams, OpenAI has revealed GPT-6 Cyber, a new artificial intelligence model that has discovered 81 previously unknown high-severity Firefox vulnerabilities and developed working exploits for 948 distinct Linux kernel flaws. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Bill Toulas, The BADBOX malware found in a broad range of generic Android TV boxes has returned to large-scale ad-fraud operations following last year's disruptions. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "OpenAI's new GPT-6 Cyber AI finds 81 Firefox flaws, 948 Linux bugs — a notable development in Cybersecurity",
+    "BADBOX botnet returns with record-breaking 40 billion daily ad requests — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Lawrence Abrams",
+      "value": "Bill Toulas",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "OpenAI's new GPT-6 Cyber AI finds 81 Firefox flaws, 948 Linux bugs",
+      "date": "2026-11-22",
+      "event": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "openai",
-    "cyber",
+    "badbox",
+    "botnet",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "OpenAI's new GPT-6 Cyber AI finds 81 Firefox flaws, 948 L... | Cybersecurity News",
-  "metaDescription": "OpenAI has revealed GPT-6 Cyber, a new artificial intelligence model that has discovered 81 previously unknown high-severity Firefox vulnerabilities and deve...",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, openai, cyber, finds, TechNanoAI, emerging tech news",
+  "metaTitle": "BADBOX botnet returns with record-breaking 40 billion dai... | Cybersecurity News",
+  "metaDescription": "The BADBOX malware found in a broad range of generic Android TV boxes has returned to large-scale ad-fraud operations following last year's disruptions. [...]",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, badbox, botnet, returns, TechNanoAI, emerging tech news",
   "featured": false
 }

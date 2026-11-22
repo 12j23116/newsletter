@@ -1,21 +1,21 @@
 {
-  "id": "materials-1794053062538-0",
+  "id": "materials-1795355149495-0",
   "topic": "materials",
   "topicLabel": "Advanced Materials",
   "topicColor": "#f43f5e",
-  "title": "Scientists accidentally solve a chemistry mystery that la... | Advanced Materials News",
-  "excerpt": "After more than 60 years of unsuccessful attempts, scientists have finally isolated stable examples of elusive boron-oxygen molecules once considered too unstable to capture. The surprising breakthrou",
-  "date": "2026-11-07",
+  "title": "A decades-old mystery about light could hold the key to f... | Advanced Materials News",
+  "excerpt": "A promising material for ultra-fast optical communications has held a secret for decades, but scientists may have finally cracked it. Researchers at KAIST and Caltech have precisely measured how bariu",
+  "date": "2026-11-22",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/008-materials-graphene-lattice.webp",
-  "slug": "scientists-accidentally-solve-a-chemistry-mystery-that-lasted-60-years",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261103003205.htm",
+  "slug": "a-decades-old-mystery-about-light-could-hold-the-key-to-faster-interne",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261119194544.htm",
   "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "After more than 60 years of unsuccessful attempts, scientists have finally isolated stable examples of elusive boron-oxygen molecules once considered too unstable to capture.  The surprising breakthrough, achieved using relatively simple chemical reactions, could pave the way for an entirely new class of exotic compounds."
+      "text": "A promising material for ultra-fast optical communications has held a secret for decades, but scientists may have finally cracked it.  Researchers at KAIST and Caltech have precisely measured how barium titanate controls and absorbs light, resolving longstanding uncertainties that have slowed its development."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, After more than 60 years of unsuccessful attempts, scientists have finally isolated stable examples of elusive boron-oxygen molecules once considered too unstable to capture. The surprising breakthrough, achieved using relatively simple chemical reactions, could pave the way for an entirely new class of exotic compounds.. The development represents a notable step forward in the Advanced Materials landscape, with implications for both the research community and industry stakeholders."
+      "text": "Their findings could make it easier to build optical devices that transmit information faster while wasting less light."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Scientists accidentally solve a chemistry mystery that lasted 60 years — a notable development in Advanced Materials",
+    "A decades-old mystery about light could hold the key to faster internet — a notable development in Advanced Materials",
     "The advanced materials sector continues to accelerate, with graphene & superconductors driving rapid progress",
     "Industry context: Advanced materials research is accelerating with AI-driven discovery, room-temperature superconducto...",
     "Challenges remain: Reproducibility of breakthrough results, scale-up from lab to manufacturing, and...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-07",
-      "event": "Scientists accidentally solve a chemistry mystery that lasted 60 years",
+      "date": "2026-11-22",
+      "event": "A decades-old mystery about light could hold the key to faster internet",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "advanced materials",
     "graphene",
-    "scientists",
-    "accidentally",
+    "decades",
+    "mystery",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Scientists accidentally solve a chemistry mystery that la... | Advanced Materials News",
-  "metaDescription": "After more than 60 years of unsuccessful attempts, scientists have finally isolated stable examples of elusive boron-oxygen molecules once considered too uns...",
-  "keywords": "advanced materials, graphene, superconductor, nanomaterials, scientists, accidentally, solve, TechNanoAI, emerging tech news",
+  "metaTitle": "A decades-old mystery about light could hold the key to f... | Advanced Materials News",
+  "metaDescription": "A promising material for ultra-fast optical communications has held a secret for decades, but scientists may have finally cracked it. Researchers at KAIST an...",
+  "keywords": "advanced materials, graphene, superconductor, nanomaterials, decades, mystery, about, TechNanoAI, emerging tech news",
   "featured": true
 }
