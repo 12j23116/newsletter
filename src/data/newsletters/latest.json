@@ -1,112 +1,113 @@
 {
-  "issue": 98,
-  "date": "2026-11-16",
-  "subject": "This Week: Robotics, Energy Storage & more — November 16, 2026",
+  "issue": 99,
+  "date": "2026-11-23",
+  "subject": "This Week: Robotics, Space & more — November 23, 2026",
   "articleCount": 12,
   "topicsCovered": [
     "robotics",
-    "energy",
     "space",
+    "energy",
+    "materials",
     "biotech",
     "quantum",
     "ai"
   ],
   "articles": [
     {
-      "title": "28 Zero-Day Findings in Under Two Days. Is Robotics Secur... | Robotics News",
-      "slug": "28-zero-day-findings-in-under-two-days-is-robotics-security-keeping-pa",
+      "title": "Interstellar solar sails hit a bizarre problem at 75% of ... | Robotics News",
+      "slug": "interstellar-solar-sails-hit-a-bizarre-problem-at-75-of-light-speed",
       "topic": "robotics",
-      "excerpt": "This article is brought to you by VicOne.VicOne identified an initial set of 28 zero-day findings in less than two days using AI-assisted research across software and tools supporting the Physical AI ",
-      "url": "https://technanoai.com/news/28-zero-day-findings-in-under-two-days-is-robotics-security-keeping-pa",
-      "date": "2026-11-16"
+      "excerpt": "Scientists have discovered a surprising obstacle to interstellar travel: at extreme speeds, the light propelling futuristic solar sails could actually begin slowing them down. Once a spacecraft reache",
+      "url": "https://technanoai.com/news/interstellar-solar-sails-hit-a-bizarre-problem-at-75-of-light-speed",
+      "date": "2026-11-23"
     },
     {
-      "title": "Physicists defy expectations by controlling the magnetic ... | Robotics News",
-      "slug": "physicists-defy-expectations-by-controlling-the-magnetic-heart-of-a-si",
+      "title": "NVIDIA reinstates Jensen Huang after 11-day absence | Robotics News",
+      "slug": "nvidia-reinstates-jensen-huang-after-11-day-absence",
       "topic": "robotics",
-      "excerpt": "Scientists have unexpectedly discovered how to control the magnetic spin inside a single atom's nucleus using radio waves, overturning previous assumptions about atomic behavior. The breakthrough coul",
-      "url": "https://technanoai.com/news/physicists-defy-expectations-by-controlling-the-magnetic-heart-of-a-si",
-      "date": "2026-11-16"
+      "excerpt": "The NVIDIA board reversed its decision following discussions with Huang and senior U.S. government officials, amid growing pressure from the White House, investors and technology executives.\nThe post ",
+      "url": "https://technanoai.com/news/nvidia-reinstates-jensen-huang-after-11-day-absence",
+      "date": "2026-11-23"
     },
     {
-      "title": "Denmark allocates $41.5 million to heat pump subsidies fo... | Energy Storage News",
-      "slug": "denmark-allocates-415-million-to-heat-pump-subsidies-for-2027",
-      "topic": "energy",
-      "excerpt": "Denmark has allocated DKK 267.5 million ($41.5 million) to extend its residential heat pump subsidy scheme through 2027, alongside additional funding for gas network disconnections. The agreement also",
-      "url": "https://technanoai.com/news/denmark-allocates-415-million-to-heat-pump-subsidies-for-2027",
-      "date": "2026-11-16"
-    },
-    {
-      "title": "Octopus Energy launches plug-in solar kit for small busin... | Energy Storage News",
-      "slug": "octopus-energy-launches-plug-in-solar-kit-for-small-businesses",
-      "topic": "energy",
-      "excerpt": "Octopus Energy has launched plug-in solar kits for small businesses across the UK, following strong demand for its residential offering. The company claims the systems could reduce electricity bills b",
-      "url": "https://technanoai.com/news/octopus-energy-launches-plug-in-solar-kit-for-small-businesses",
-      "date": "2026-11-16"
-    },
-    {
-      "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Je... | Space Exploration News",
-      "slug": "apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+      "title": "65 Years of Human Spaceflight at NASA Johnson | Space Exploration News",
+      "slug": "65-years-of-human-spaceflight-at-nasa-johnson",
       "topic": "space",
-      "excerpt": "APOD Science APOD APOD: 2026 November 16 – NGC… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
-      "url": "https://technanoai.com/news/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
-      "date": "2026-11-16"
+      "excerpt": "For 65 years, NASA’s Johnson Space Center in Houston has helped shape human spaceflight, from the Gemini missions that demonstrated rendezvous and docking techniques needed for Apollo to the research ",
+      "url": "https://technanoai.com/news/65-years-of-human-spaceflight-at-nasa-johnson",
+      "date": "2026-11-23"
     },
     {
-      "title": "The Last Ice on Puncak Jaya | Space Exploration News",
-      "slug": "the-last-ice-on-puncak-jaya",
+      "title": "APOD: 2026 November 23 – The Emergence of Dark Nebula Lyn... | Space Exploration News",
+      "slug": "apod-2026-november-23-the-emergence-of-dark-nebula-lynds-1251",
       "topic": "space",
-      "excerpt": "Ice near the summit of the Indonesian mountain peak has shrunk to scattered patches too small to flow like glaciers.",
-      "url": "https://technanoai.com/news/the-last-ice-on-puncak-jaya",
-      "date": "2026-11-16"
+      "excerpt": "APOD Science APOD APOD: 2026 November 23 – The… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss   APOD Astronomy Picture of the Day Discover the cosmos! Each day a d",
+      "url": "https://technanoai.com/news/apod-2026-november-23-the-emergence-of-dark-nebula-lynds-1251",
+      "date": "2026-11-23"
     },
     {
-      "title": "<a href=\"/biotech/aclaris-scratches-tslp-program-pipeline... | Biotechnology News",
-      "slug": "a-hrefbiotechaclaris-scratches-tslp-program-pipeline-after-flunking-ph",
+      "title": "BESS overbuild or augmentation: which strategy wins? | Energy Storage News",
+      "slug": "bess-overbuild-or-augmentation-which-strategy-wins",
+      "topic": "energy",
+      "excerpt": "BESS assets require careful strategic decisions to be made around augmentation from the beginning, writes Sergey Syrvachev, founder of BESS.courses.",
+      "url": "https://technanoai.com/news/bess-overbuild-or-augmentation-which-strategy-wins",
+      "date": "2026-11-23"
+    },
+    {
+      "title": "Europe turns negative electricity prices into a flexibili... | Energy Storage News",
+      "slug": "europe-turns-negative-electricity-prices-into-a-flexibility-signal",
+      "topic": "energy",
+      "excerpt": "Negative wholesale power prices are a useful investment signal for batteries and demand response in Europe only where subsidy design and grid bottlenecks are not distorting them, says a new Eurelectri",
+      "url": "https://technanoai.com/news/europe-turns-negative-electricity-prices-into-a-flexibility-signal",
+      "date": "2026-11-23"
+    },
+    {
+      "title": "Einstein’s relativity just upended a fundamental rule of ... | Advanced Materials News",
+      "slug": "einsteins-relativity-just-upended-a-fundamental-rule-of-chemistry",
+      "topic": "materials",
+      "excerpt": "A surprising discovery at Brown University is challenging one of chemistry's most fundamental textbook explanations. Researchers found direct evidence that Einstein's theory of relativity changes how ",
+      "url": "https://technanoai.com/news/einsteins-relativity-just-upended-a-fundamental-rule-of-chemistry",
+      "date": "2026-11-23"
+    },
+    {
+      "title": "<a href=\"/biotech/arcus-halts-phase-3-study-cd73-inhibito... | Biotechnology News",
+      "slug": "a-hrefbiotecharcus-halts-phase-3-study-cd73-inhibitor-looked-destined-",
       "topic": "biotech",
-      "excerpt": "A phase 2 study of Aclaris Therapeutics’ bosakitug in atopic dermatitis has missed its primary endpoint, adding to the setbacks anti-TSLP antibodies have encountered in the indication.",
-      "url": "https://technanoai.com/news/a-hrefbiotechaclaris-scratches-tslp-program-pipeline-after-flunking-ph",
-      "date": "2026-11-16"
+      "excerpt": "Arcus Biosciences has abandoned a phase 3 trial of quemliclustat after the small-molecule CD73 inhibitor looked unlikely to improve survival for pancreatic cancer.",
+      "url": "https://technanoai.com/news/a-hrefbiotecharcus-halts-phase-3-study-cd73-inhibitor-looked-destined-",
+      "date": "2026-11-23"
     },
     {
-      "title": "<a href=\"/biotech/chinese-scientists-fired-after-child-di... | Biotechnology News",
-      "slug": "a-hrefbiotechchinese-scientists-fired-after-child-dies-gene-editing-st",
+      "title": "<a href=\"/biotech/capricor-weathers-second-dmd-cell-thera... | Biotechnology News",
+      "slug": "a-hrefbiotechcapricor-weathers-second-dmd-cell-therapy-snub-fda-allege",
       "topic": "biotech",
-      "excerpt": "Chinese authorities have fired two researchers over their roles in the death of a child in a gene editing study, according to reports in Chinese state media.",
-      "url": "https://technanoai.com/news/a-hrefbiotechchinese-scientists-fired-after-child-dies-gene-editing-st",
-      "date": "2026-11-16"
+      "excerpt": "Contrasting with the blunt release of the complete response letter that heralded the initial rejection of deramiocel last summer, the FDA appeared mindful of the optics Friday as it sought to explain ",
+      "url": "https://technanoai.com/news/a-hrefbiotechcapricor-weathers-second-dmd-cell-therapy-snub-fda-allege",
+      "date": "2026-11-23"
     },
     {
-      "title": "Cross-Platform Cloud Benchmark Reveals Wide Gap Between P... | Quantum Computing News",
-      "slug": "cross-platform-cloud-benchmark-reveals-wide-gap-between-physical-qubit",
+      "title": "A mysterious gap hints at black holes born from stars tha... | Quantum Computing News",
+      "slug": "a-mysterious-gap-hints-at-black-holes-born-from-stars-that-never-explo",
       "topic": "quantum",
-      "excerpt": "A new study benchmarked nine cloud-accessible quantum processors, revealing a significant gap between the number of physical qubits and the size of entangled GHZ states achievable without error mitiga",
-      "url": "https://technanoai.com/news/cross-platform-cloud-benchmark-reveals-wide-gap-between-physical-qubit",
-      "date": "2026-11-16"
+      "excerpt": "Massive stars may be quietly collapsing into black holes without ever producing the spectacular supernova explosions scientists typically expect. A surprising pattern in 257 black hole mergers suggest",
+      "url": "https://technanoai.com/news/a-mysterious-gap-hints-at-black-holes-born-from-stars-that-never-explo",
+      "date": "2026-11-23"
     },
     {
-      "title": "Qatar Ministry of Communications and Information Technolo... | Quantum Computing News",
-      "slug": "qatar-ministry-of-communications-and-information-technology-signs-post",
+      "title": "The Leading Source for Actionable Intelligence to the Qua... | Quantum Computing News",
+      "slug": "the-leading-source-for-actionable-intelligence-to-the-quantum-computin",
       "topic": "quantum",
-      "excerpt": "The Ministry of Communications and Information Technology of Qatar has partnered with SignQuantum and QANplatform to explore post-quantum cryptography for public-sector data, aligning with Qatar's Nat",
-      "url": "https://technanoai.com/news/qatar-ministry-of-communications-and-information-technology-signs-post",
-      "date": "2026-11-16"
+      "excerpt": "Inside Quantum Technology provides unparalleled access to the professionals shaping the future of actionable intelligence related to quantum computing and the evolving industry. Our advertising and sp",
+      "url": "https://technanoai.com/news/the-leading-source-for-actionable-intelligence-to-the-quantum-computin",
+      "date": "2026-11-23"
     },
     {
-      "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify... | AI News",
-      "slug": "amazon-uncovers-ai-agent-campaign-targeting-litellm-dify-and-other-app",
+      "title": "Critical binary-parser Flaw Enables JavaScript Injection ... | AI News",
+      "slug": "critical-binary-parser-flaw-enables-javascript-injection-via-malicious",
       "topic": "ai",
-      "excerpt": "Attackers' AI agents have been hunting for weak spots in internet-exposed AI apps such as LiteLLM, One API, and Dify to steal the AI provider keys stored inside, according to the agents' own records.\n",
-      "url": "https://technanoai.com/news/amazon-uncovers-ai-agent-campaign-targeting-litellm-dify-and-other-app",
-      "date": "2026-11-16"
-    },
-    {
-      "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises... | AI News",
-      "slug": "bo-team-exploits-log4shell-in-vmware-vcenter-compromises-russian-firms",
-      "topic": "ai",
-      "excerpt": "An investigation into suspicious activity within a Russian software developer's network has uncovered a months-long compromise of its development infrastructure and a software code-signing server.\n\nTh",
-      "url": "https://technanoai.com/news/bo-team-exploits-log4shell-in-vmware-vcenter-compromises-russian-firms",
-      "date": "2026-11-16"
+      "excerpt": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code.\n\nThe vulnerability, tracked as ",
+      "url": "https://technanoai.com/news/critical-binary-parser-flaw-enables-javascript-injection-via-malicious",
+      "date": "2026-11-23"
     }
   ]
 }
