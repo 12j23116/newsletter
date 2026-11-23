@@ -1,21 +1,21 @@
 {
-  "id": "space-1794140705088-2",
+  "id": "space-1795452472291-3",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA Awards Moon Base Transportation, Technology, Science... | Space Exploration News",
-  "excerpt": "NASA announced a suite of awards and mission updates on Saturday to expand the agency's Moon Base exploration, science, and infrastructure capabilities. The investments will advance commercial robotic",
-  "date": "2026-11-08",
+  "title": "Laser Focus at the Top of the World | Space Exploration News",
+  "excerpt": "A next-generation geodetic instrument developed by NASA, part of a network that helps measure satellites’ orbits and the planet’s shape, has debuted in Svalbard, Norway.",
+  "date": "2026-11-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa-awards-moon-base-transportation-technology-science-projects",
-  "sourceLink": "https://www.nasa.gov/news-release/nasa-awards-moon-base-transportation-technology-science-projects/",
-  "sourceName": "Jessica Taveau",
+  "slug": "laser-focus-at-the-top-of-the-world",
+  "sourceLink": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world/",
+  "sourceName": "nasa.gov",
   "body": [
     {
       "type": "p",
-      "text": "NASA announced a suite of awards and mission updates on Saturday to expand the agency's Moon Base exploration, science, and infrastructure capabilities."
+      "text": "A next-generation geodetic instrument developed by NASA, part of a network that helps measure satellites’ orbits and the planet’s shape, has debuted in Svalbard, Norway."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Jessica Taveau, NASA announced a suite of awards and mission updates on Saturday to expand the agency's Moon Base exploration, science, and infrastructure capabilities. The investments will advance commercial robotic deliveries, a nuclear-powered rover named PROMISE, launch and orbital transfer services, and surface infrastructure as the agency works with American industry to establish a sustained presence on [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from nasa.gov, A next-generation geodetic instrument developed by NASA, part of a network that helps measure satellites’ orbits and the planet’s shape, has debuted in Svalbard, Norway.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA Awards Moon Base Transportation, Technology, Science Projects — a notable development in Space Exploration",
+    "Laser Focus at the Top of the World — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Jessica Taveau",
+      "value": "nasa.gov",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-08",
-      "event": "NASA Awards Moon Base Transportation, Technology, Science Projects",
+      "date": "2026-11-23",
+      "event": "Laser Focus at the Top of the World",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "awards",
-    "transportation",
+    "laser",
+    "focus",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA Awards Moon Base Transportation, Technology, Science... | Space Exploration News",
-  "metaDescription": "NASA announced a suite of awards and mission updates on Saturday to expand the agency's Moon Base exploration, science, and infrastructure capabilities. The ...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, awards, moon, TechNanoAI, emerging tech news",
+  "metaTitle": "Laser Focus at the Top of the World | Space Exploration News",
+  "metaDescription": "A next-generation geodetic instrument developed by NASA, part of a network that helps measure satellites’ orbits and the planet’s shape, has debuted in Svalb...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, laser, focus, world, TechNanoAI, emerging tech news",
   "featured": false
 }

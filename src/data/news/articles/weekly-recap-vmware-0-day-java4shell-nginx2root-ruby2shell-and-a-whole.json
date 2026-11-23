@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794140703400-1",
+  "id": "ai-1795452470916-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Megaspeed exec was recruited to spy on Nvidia CEO, accord... | AI News",
-  "excerpt": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
-  "date": "2026-11-08",
+  "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Rub... | AI News",
+  "excerpt": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That's partly why they work. Attackers don't always need to break down a door. Someti",
+  "date": "2026-11-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "megaspeed-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-inte",
-  "sourceLink": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
-  "sourceName": "Anthony Ha",
+  "slug": "weekly-recap-vmware-0-day-java4shell-nginx2root-ruby2shell-and-a-whole",
+  "sourceLink": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+  "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO."
+      "text": "A stolen key.  A trusted message."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "A routine update.  None of these looks like the start of a major security problem."
+    },
+    {
+      "type": "p",
+      "text": "That's partly why they work.  Attackers don't always need to break down a door."
+    },
+    {
+      "type": "p",
+      "text": "Sometimes they just use one that's already open. \n\nThis week's stories show how quickly a small opening can turn into a much bigger mess."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence  — a notable development in AI",
+    "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lo — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +128,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "info@thehackernews.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-08",
-      "event": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence ",
+      "date": "2026-11-23",
+      "event": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lo",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "megaspeed",
-    "recruited",
+    "weekly",
+    "recap",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "Megaspeed exec was recruited to spy on Nvidia CEO, accord... | AI News",
-  "metaDescription": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, megaspeed, exec, recruited, TechNanoAI, emerging tech news",
+  "metaTitle": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Rub... | AI News",
+  "metaDescription": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That's partly why they work. Attackers don...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, weekly, recap, vmware, TechNanoAI, emerging tech news",
   "featured": false
 }

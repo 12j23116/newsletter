@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1794140711203-0",
+  "id": "robotics-1795452490447-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "A hidden limit of space and time could unlock electronics... | Robotics News",
-  "excerpt": "Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time. The breakthrough could pave the way for manipulating c",
-  "date": "2026-11-08",
+  "title": "Special Report: Engineering Focus on Motion Control | Robotics News",
+  "excerpt": "The Robot Report looks at recent advances in automation for manufacturing, from improvements in technologies and use cases to the potential of humanoids and AI.\nThe post Special Report: Engineering Fo",
+  "date": "2026-11-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "a-hidden-limit-of-space-and-time-could-unlock-electronics-100000-times",
-  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
-  "sourceName": "sciencedaily.com",
+  "slug": "special-report-engineering-focus-on-motion-control",
+  "sourceLink": "https://www.therobotreport.com/special-report-engineering-focus-on-motion-control/",
+  "sourceName": "The Robot Report Staff",
   "body": [
     {
       "type": "p",
-      "text": "Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time.  The breakthrough could pave the way for manipulating chemical reactions and developing electronics hundreds of thousands of times faster than today's technology."
+      "text": "The Robot Report looks at recent advances in automation for manufacturing, from improvements in technologies and use cases to the potential of humanoids and AI. \nThe post Special Report: Engineering Focus on Motion Control appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from sciencedaily.com, Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time. The breakthrough could pave the way for manipulating chemical reactions and developing electronics hundreds of thousands of times faster than today's technology.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from The Robot Report Staff, The Robot Report looks at recent advances in automation for manufacturing, from improvements in technologies and use cases to the potential of humanoids and AI.\nThe post Special Report: Engineering Focus on Motion Control appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "A hidden limit of space and time could unlock electronics 100,000 times faster — a notable development in Robotics",
+    "Special Report: Engineering Focus on Motion Control — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "sciencedaily.com",
+      "value": "The Robot Report Staff",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-08",
-      "event": "A hidden limit of space and time could unlock electronics 100,000 times faster",
+      "date": "2026-11-23",
+      "event": "Special Report: Engineering Focus on Motion Control",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "hidden",
-    "limit",
+    "special",
+    "report",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "A hidden limit of space and time could unlock electronics... | Robotics News",
-  "metaDescription": "Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time. The breakth...",
-  "keywords": "robotics, humanoid robot, automation, drones, hidden, limit, space, TechNanoAI, emerging tech news",
+  "metaTitle": "Special Report: Engineering Focus on Motion Control | Robotics News",
+  "metaDescription": "The Robot Report looks at recent advances in automation for manufacturing, from improvements in technologies and use cases to the potential of humanoids and ...",
+  "keywords": "robotics, humanoid robot, automation, drones, special, report, engineering, TechNanoAI, emerging tech news",
   "featured": true
 }

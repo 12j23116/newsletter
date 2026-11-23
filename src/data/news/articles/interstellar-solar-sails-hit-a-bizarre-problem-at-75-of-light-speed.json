@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1794140711203-1",
+  "id": "robotics-1795452490448-2",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Robot integration brings high-precision production to mid... | Robotics News",
-  "excerpt": "Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist.\nThe post Robot integration brings high-precision production to midmarket manufacture",
-  "date": "2026-11-08",
+  "title": "Interstellar solar sails hit a bizarre problem at 75% of ... | Robotics News",
+  "excerpt": "Scientists have discovered a surprising obstacle to interstellar travel: at extreme speeds, the light propelling futuristic solar sails could actually begin slowing them down. Once a spacecraft reache",
+  "date": "2026-11-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "robot-integration-brings-high-precision-production-to-midmarket-manufa",
-  "sourceLink": "https://www.therobotreport.com/robot-integration-brings-high-precision-production-to-midmarket-manufacturers/",
-  "sourceName": "Lou Farrell",
+  "slug": "interstellar-solar-sails-hit-a-bizarre-problem-at-75-of-light-speed",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261120071305.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist. \nThe post Robot integration brings high-precision production to midmarket manufacturers appeared first on The Robot Report."
+      "text": "Scientists have discovered a surprising obstacle to interstellar travel: at extreme speeds, the light propelling futuristic solar sails could actually begin slowing them down.  Once a spacecraft reaches 75% of the speed of light, some scattered light starts producing drag, potentially complicating humanity’s plans to reach distant stars."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Lou Farrell, Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist.\nThe post Robot integration brings high-precision production to midmarket manufacturers appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from sciencedaily.com, Scientists have discovered a surprising obstacle to interstellar travel: at extreme speeds, the light propelling futuristic solar sails could actually begin slowing them down. Once a spacecraft reaches 75% of the speed of light, some scattered light starts producing drag, potentially complicating humanity’s plans to reach distant stars.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Robot integration brings high-precision production to midmarket manufacturers — a notable development in Robotics",
+    "Interstellar solar sails hit a bizarre problem at 75% of light speed — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Lou Farrell",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-08",
-      "event": "Robot integration brings high-precision production to midmarket manufacturers",
+      "date": "2026-11-23",
+      "event": "Interstellar solar sails hit a bizarre problem at 75% of light speed",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "robot",
-    "integration",
+    "interstellar",
+    "solar",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Robot integration brings high-precision production to mid... | Robotics News",
-  "metaDescription": "Properly integrated industrial and collaborative robots can help midmarket manufacturers, according to a columnist.\nThe post Robot integration brings high-pr...",
-  "keywords": "robotics, humanoid robot, automation, drones, robot, integration, brings, TechNanoAI, emerging tech news",
+  "metaTitle": "Interstellar solar sails hit a bizarre problem at 75% of ... | Robotics News",
+  "metaDescription": "Scientists have discovered a surprising obstacle to interstellar travel: at extreme speeds, the light propelling futuristic solar sails could actually begin ...",
+  "keywords": "robotics, humanoid robot, automation, drones, interstellar, solar, sails, TechNanoAI, emerging tech news",
   "featured": false
 }

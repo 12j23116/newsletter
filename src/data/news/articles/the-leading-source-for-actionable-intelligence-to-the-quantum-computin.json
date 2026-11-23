@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1794140712205-5",
+  "id": "quantum-1795452491302-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "CO.LAB Selects Four Startups for Inaugural CO.LAB Q Comme... | Quantum Computing News",
-  "excerpt": "CO.LAB has launched its first CO.LAB Q commercialization studio in Chattanooga, featuring four startups: RidgeQuantum, Superquantum, esoteriq, and Kottackal Business Solutions. This 12-month program, ",
-  "date": "2026-11-08",
+  "title": "The Leading Source for Actionable Intelligence to the Qua... | Quantum Computing News",
+  "excerpt": "Inside Quantum Technology provides unparalleled access to the professionals shaping the future of actionable intelligence related to quantum computing and the evolving industry. Our advertising and sp",
+  "date": "2026-11-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "colab-selects-four-startups-for-inaugural-colab-q-commercialization-st",
-  "sourceLink": "https://quantumcomputingreport.com/co-lab-selects-four-startups-for-inaugural-co-lab-q-commercialization-studio-in-chattanooga/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "the-leading-source-for-actionable-intelligence-to-the-quantum-computin",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/the-leading-source-for-actionable-intelligence-to-the-quantum-computing-industry/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "CO. LAB has launched its first CO."
+      "text": "Inside Quantum Technology provides unparalleled access to the professionals shaping the future of actionable intelligence related to quantum computing and the evolving industry.  Our advertising and sponsorship programs enable your organization to elevate brand awareness, demonstrate industry lead..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "LAB Q commercialization studio in Chattanooga, featuring four startups: RidgeQuantum, Superquantum, esoteriq, and Kottackal Business Solutions.  This 12-month program, starting November 2026, aims to commercialize quantum technologies by connecting these companies with regional quantum testbeds, technical partners, and potential customers."
+      "text": "According to reporting from Brian Siegelwax, Inside Quantum Technology provides unparalleled access to the professionals shaping the future of actionable intelligence related to quantum computing and the evolving industry. Our advertising and sponsorship programs enable your organization to elevate brand awareness, demonstrate industry lead.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "CO.LAB Selects Four Startups for Inaugural CO.LAB Q Commercialization Studio in  — a notable development in Quantum Computing",
+    "The Leading Source for Actionable Intelligence to the Quantum Computing Industry — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-08",
-      "event": "CO.LAB Selects Four Startups for Inaugural CO.LAB Q Commercialization Studio in ",
+      "date": "2026-11-23",
+      "event": "The Leading Source for Actionable Intelligence to the Quantum Computing Industry",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "selects",
-    "startups",
+    "leading",
+    "source",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "CO.LAB Selects Four Startups for Inaugural CO.LAB Q Comme... | Quantum Computing News",
-  "metaDescription": "CO.LAB has launched its first CO.LAB Q commercialization studio in Chattanooga, featuring four startups: RidgeQuantum, Superquantum, esoteriq, and Kottackal ...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, selects, four, startups, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "The Leading Source for Actionable Intelligence to the Qua... | Quantum Computing News",
+  "metaDescription": "Inside Quantum Technology provides unparalleled access to the professionals shaping the future of actionable intelligence related to quantum computing and th...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, leading, source, actionable, TechNanoAI, emerging tech news",
+  "featured": true
 }

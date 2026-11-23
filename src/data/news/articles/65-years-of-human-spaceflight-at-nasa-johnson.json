@@ -1,21 +1,21 @@
 {
-  "id": "space-1794140705089-4",
+  "id": "space-1795452472292-5",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "NASA announces search for new astronauts | Space Exploration News",
-  "excerpt": "For the first time in two years, NASA is opening applications for its next astronaut'\nThe post NASA announces search for new astronauts appeared first on NASASpaceFlight.com.",
-  "date": "2026-11-08",
+  "title": "65 Years of Human Spaceflight at NASA Johnson | Space Exploration News",
+  "excerpt": "For 65 years, NASA’s Johnson Space Center in Houston has helped shape human spaceflight, from the Gemini missions that demonstrated rendezvous and docking techniques needed for Apollo to the research ",
+  "date": "2026-11-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "nasa-announces-search-for-new-astronauts",
-  "sourceLink": "https://www.nasaspaceflight.com/2026/11/astronaut-class-25-applications/",
-  "sourceName": "Sawyer Rosenstein",
+  "slug": "65-years-of-human-spaceflight-at-nasa-johnson",
+  "sourceLink": "https://www.nasa.gov/centers-and-facilities/johnson/65-years-of-human-spaceflight-at-nasa-johnson/",
+  "sourceName": "Sumer Loggins",
   "body": [
     {
       "type": "p",
-      "text": "For the first time in two years, NASA is opening applications for its next astronaut'\nThe post NASA announces search for new astronauts appeared first on NASASpaceFlight. com."
+      "text": "For 65 years, NASA’s Johnson Space Center in Houston has helped shape human spaceflight, from the Gemini missions that demonstrated rendezvous and docking techniques needed for Apollo to the research conducted aboard the International Space Station, which has supported a continuous human presence for more than 26 years."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sawyer Rosenstein, For the first time in two years, NASA is opening applications for its next astronaut'\nThe post NASA announces search for new astronauts appeared first on NASASpaceFlight.com.. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Sumer Loggins, For 65 years, NASA’s Johnson Space Center in Houston has helped shape human spaceflight, from the Gemini missions that demonstrated rendezvous and docking techniques needed for Apollo to the research conducted aboard the International Space Station, which has supported a continuous human presence for more than 26 years. Today, Johnson teams are preparing crews and [']. The development represents a notable step forward in the Space Exploration landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "NASA announces search for new astronauts — a notable development in Space Exploration",
+    "65 Years of Human Spaceflight at NASA Johnson — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -120,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Sawyer Rosenstein",
+      "value": "Sumer Loggins",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-08",
-      "event": "NASA announces search for new astronauts",
+      "date": "2026-11-23",
+      "event": "65 Years of Human Spaceflight at NASA Johnson",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "announces",
-    "search",
+    "years",
+    "human",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "NASA announces search for new astronauts | Space Exploration News",
-  "metaDescription": "For the first time in two years, NASA is opening applications for its next astronaut'\nThe post NASA announces search for new astronauts appeared first on NAS...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, nasa, announces, search, TechNanoAI, emerging tech news",
+  "metaTitle": "65 Years of Human Spaceflight at NASA Johnson | Space Exploration News",
+  "metaDescription": "For 65 years, NASA’s Johnson Space Center in Houston has helped shape human spaceflight, from the Gemini missions that demonstrated rendezvous and docking te...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, years, human, spaceflight, TechNanoAI, emerging tech news",
   "featured": false
 }

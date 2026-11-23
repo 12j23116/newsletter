@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794140703400-0",
+  "id": "ai-1795452470916-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "After the midterms, things are looking rocky for Elon Mus... | AI News",
-  "excerpt": "On Equity, we unpacked what the midterms mean for the tech industry.",
-  "date": "2026-11-08",
+  "title": "Trump endorses Jensen Huang's return to Nvidia, says US h... | AI News",
+  "excerpt": "The president cited the U.S. attorney general in defending Huang's return, while urging Nvidia to continue its export-control investigation.",
+  "date": "2026-11-23",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-cen",
-  "sourceLink": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
-  "sourceName": "Anthony Ha",
+  "slug": "trump-endorses-jensen-huang8217s-return-to-nvidia-says-us-has-no-evide",
+  "sourceLink": "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/",
+  "sourceName": "Sarah Perez",
   "body": [
     {
       "type": "p",
-      "text": "On Equity, we unpacked what the midterms mean for the tech industry."
+      "text": "The president cited the U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Anthony Ha, On Equity, we unpacked what the midterms mean for the tech industry.. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
+      "text": "attorney general in defending Huang's return, while urging Nvidia to continue its export-control investigation."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "After the midterms, things are looking rocky for Elon Musk and data centers — a notable development in AI",
+    "Trump endorses Jensen Huang's return to Nvidia, says US has no evidence of wrong — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "Anthony Ha",
+      "value": "Sarah Perez",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-08",
-      "event": "After the midterms, things are looking rocky for Elon Musk and data centers",
+      "date": "2026-11-23",
+      "event": "Trump endorses Jensen Huang's return to Nvidia, says US has no evidence of wrong",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "after",
-    "midterms",
+    "trump",
+    "endorses",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "After the midterms, things are looking rocky for Elon Mus... | AI News",
-  "metaDescription": "On Equity, we unpacked what the midterms mean for the tech industry. LLMs, agents & the race to AGI. Latest AI developments and analysis from TechNanoAI.",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, after, midterms, things, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "Trump endorses Jensen Huang's return to Nvidia, says US h... | AI News",
+  "metaDescription": "The president cited the U.S. attorney general in defending Huang's return, while urging Nvidia to continue its export-control investigation.",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, trump, endorses, jensen, TechNanoAI, emerging tech news",
+  "featured": false
 }
