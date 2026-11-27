@@ -1,21 +1,21 @@
 {
-  "id": "energy-1794492794170-3",
+  "id": "energy-1795794477924-1",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "German utility to build 7.5MW/30MWh project using Eos’ zi... | Energy Storage News",
-  "excerpt": "Stadtwerke Gaggenau, a municipal utility in Germany, has hired a general contractor to build a 4-hour BESS project using the zinc-bromide technology from US firm Eos Energy Enterprises.",
-  "date": "2026-11-12",
+  "title": "Greenhushing, PV prices, battery prices and the shifting ... | Energy Storage News",
+  "excerpt": "Greenhushing reflects a shift towards prioritising environmental performance over public sustainability commitments, as declining solar PV and battery costs strengthen the economic case for corporate ",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "german-utility-to-build-75mw30mwh-project-using-eos-zinc-bromide-batte",
-  "sourceLink": "https://www.energy-storage.news/german-utility-to-build-7-5mw-30mwh-project-using-eos-zinc-bromide-battery-tech/",
-  "sourceName": "Cameron Murray",
+  "slug": "greenhushing-pv-prices-battery-prices-and-the-shifting-bottleneck",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/27/greenhushing-pv-prices-battery-prices-and-the-shifting-bottleneck/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Stadtwerke Gaggenau, a municipal utility in Germany, has hired a general contractor to build a 4-hour BESS project using the zinc-bromide technology from US firm Eos Energy Enterprises."
+      "text": "Greenhushing reflects a shift towards prioritising environmental performance over public sustainability commitments, as declining solar PV and battery costs strengthen the economic case for corporate decarbonisation.  The solar industry’s next phase of growth will depend less on equipment affordability and more on grid access, system flexibility, integration and long-term operational value."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Cameron Murray, Stadtwerke Gaggenau, a municipal utility in Germany, has hired a general contractor to build a 4-hour BESS project using the zinc-bromide technology from US firm Eos Energy Enterprises.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Emiliano Bellini, Greenhushing reflects a shift towards prioritising environmental performance over public sustainability commitments, as declining solar PV and battery costs strengthen the economic case for corporate decarbonisation. The solar industry’s next phase of growth will depend less on equipment affordability and more on grid access, system flexibility, integration and long-term operational value.\nThe post Greenhushing, PV prices, battery prices and the shifting bottleneck appeared first on pv magazine. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "German utility to build 7.5MW/30MWh project using Eos’ zinc-bromide battery tech — a notable development in Energy Storage",
+    "Greenhushing, PV prices, battery prices and the shifting bottleneck — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Cameron Murray",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "German utility to build 7.5MW/30MWh project using Eos’ zinc-bromide battery tech",
+      "date": "2026-11-27",
+      "event": "Greenhushing, PV prices, battery prices and the shifting bottleneck",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "german",
-    "utility",
+    "greenhushing",
+    "prices",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "German utility to build 7.5MW/30MWh project using Eos’ zi... | Energy Storage News",
-  "metaDescription": "Stadtwerke Gaggenau, a municipal utility in Germany, has hired a general contractor to build a 4-hour BESS project using the zinc-bromide technology from US ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, german, utility, build, TechNanoAI, emerging tech news",
+  "metaTitle": "Greenhushing, PV prices, battery prices and the shifting ... | Energy Storage News",
+  "metaDescription": "Greenhushing reflects a shift towards prioritising environmental performance over public sustainability commitments, as declining solar PV and battery costs ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, greenhushing, prices, battery, TechNanoAI, emerging tech news",
   "featured": false
 }

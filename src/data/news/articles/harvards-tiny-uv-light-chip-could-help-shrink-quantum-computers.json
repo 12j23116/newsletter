@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1794492794672-1",
+  "id": "robotics-1795794478260-1",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Runway's Praxis-1 world action model for robotics is now ... | Robotics News",
-  "excerpt": "Runway launched Praxis-1 with partners including Noble Machines, Standard Bots, and Ultra. Developers can now use it with open weights.\nThe post Runway's Praxis-1 world action model for robotics is no",
-  "date": "2026-11-12",
+  "title": "Harvard’s tiny UV light chip could help shrink quantum co... | Robotics News",
+  "excerpt": "Harvard-led researchers have developed a microscopic device that generates 120 times more ultraviolet light than previous comparable approaches by efficiently converting red light into UV. The breakth",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "runway8217s-praxis-1-world-action-model-for-robotics-is-now-available",
-  "sourceLink": "https://www.therobotreport.com/runways-praxis-1-world-action-model-for-robotics-is-now-available/",
-  "sourceName": "Brianna Wessling",
+  "slug": "harvards-tiny-uv-light-chip-could-help-shrink-quantum-computers",
+  "sourceLink": "https://www.sciencedaily.com/releases/2026/11/261126063333.htm",
+  "sourceName": "sciencedaily.com",
   "body": [
     {
       "type": "p",
-      "text": "Runway launched Praxis-1 with partners including Noble Machines, Standard Bots, and Ultra.  Developers can now use it with open weights."
+      "text": "Harvard-led researchers have developed a microscopic device that generates 120 times more ultraviolet light than previous comparable approaches by efficiently converting red light into UV.  The breakthrough could unlock smaller quantum computers, ultra-precise atomic clocks, and compact environmental sensors."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Runway's Praxis-1 world action model for robotics is now available appeared first on The Robot Report."
+      "text": "According to reporting from sciencedaily.com, Harvard-led researchers have developed a microscopic device that generates 120 times more ultraviolet light than previous comparable approaches by efficiently converting red light into UV. The breakthrough could unlock smaller quantum computers, ultra-precise atomic clocks, and compact environmental sensors.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Runway's Praxis-1 world action model for robotics is now available — a notable development in Robotics",
+    "Harvard’s tiny UV light chip could help shrink quantum computers — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Brianna Wessling",
+      "value": "sciencedaily.com",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Runway's Praxis-1 world action model for robotics is now available",
+      "date": "2026-11-27",
+      "event": "Harvard’s tiny UV light chip could help shrink quantum computers",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "runway",
-    "praxis",
+    "harvard",
+    "light",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Runway's Praxis-1 world action model for robotics is now ... | Robotics News",
-  "metaDescription": "Runway launched Praxis-1 with partners including Noble Machines, Standard Bots, and Ultra. Developers can now use it with open weights.\nThe post Runway's Pra...",
-  "keywords": "robotics, humanoid robot, automation, drones, runway, praxis, world, TechNanoAI, emerging tech news",
+  "metaTitle": "Harvard’s tiny UV light chip could help shrink quantum co... | Robotics News",
+  "metaDescription": "Harvard-led researchers have developed a microscopic device that generates 120 times more ultraviolet light than previous comparable approaches by efficientl...",
+  "keywords": "robotics, humanoid robot, automation, drones, harvard, tiny, light, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1794492795619-5",
+  "id": "quantum-1795794479220-3",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Q-CTRL Achieves RTCA DO-160 Airworthiness Qualification f... | Quantum Computing News",
-  "excerpt": "Q-CTRL's Ironstone Opal quantum magnetic navigation system has achieved RTCA DO-160 airworthiness qualification, becoming the first quantum navigation payload certified for commercial aerospace and UA",
-  "date": "2026-11-12",
+  "title": "SAP and planqc Demonstrate Enterprise Software Integratio... | Quantum Computing News",
+  "excerpt": "SAP and planqc showcased an end-to-end cloud integration at Quantum Day Munich, connecting SAP's enterprise software with planqc's quantum computing stack. They demonstrated a multi-constraint bin-pac",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "q-ctrl-achieves-rtca-do-160-airworthiness-qualification-for-ironstone-",
-  "sourceLink": "https://quantumcomputingreport.com/q-ctrl-achieves-rtca-do-160-airworthiness-qualification-for-ironstone-opal-quantum-navigation/",
+  "slug": "sap-and-planqc-demonstrate-enterprise-software-integration-and-quantum",
+  "sourceLink": "https://quantumcomputingreport.com/sap-and-planqc-demonstrate-enterprise-software-integration-and-quantum-agents-at-quantum-day-munich/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Q-CTRL's Ironstone Opal quantum magnetic navigation system has achieved RTCA DO-160 airworthiness qualification, becoming the first quantum navigation payload certified for commercial aerospace and UAV deployment.  This system offers a passive alternative to satellite-based positioning, addressing issues of GPS jamming and spoofing by using atomic quantum sensors to measure Earth's magnetic field."
+      "text": "SAP and planqc showcased an end-to-end cloud integration at Quantum Day Munich, connecting SAP's enterprise software with planqc's quantum computing stack.  They demonstrated a multi-constraint bin-packing logistics workflow optimized by planqc's quantum simulator, and SAP introduced Quantum Agents to manage business constraints and hybrid solvers."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Q-CTRL's Ironstone Opal quantum magnetic navigation system has achieved RTCA DO-160 airworthiness qualification, becoming the first quantum navigation payload certified for commercial aerospace and UAV deployment. This system offers a passive alternative to satellite-based positioning, addressing issues of GPS jamming and spoofing by using atomic quantum sensors to measure Earth's magnetic field. It has undergone flight evaluations with partners like Airbus and Lockheed Martin, and its AI-driven. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Mohamed Abdel-Kareem, SAP and planqc showcased an end-to-end cloud integration at Quantum Day Munich, connecting SAP's enterprise software with planqc's quantum computing stack. They demonstrated a multi-constraint bin-packing logistics workflow optimized by planqc's quantum simulator, and SAP introduced Quantum Agents to manage business constraints and hybrid solvers.\nThe post SAP and planqc Demonstrate Enterprise Software Integration and Quantum Agents at Quantum Day Munich appeared first on Quantum Computing Repor. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Q-CTRL Achieves RTCA DO-160 Airworthiness Qualification for Ironstone Opal Quant — a notable development in Quantum Computing",
+    "SAP and planqc Demonstrate Enterprise Software Integration and Quantum Agents at — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Q-CTRL Achieves RTCA DO-160 Airworthiness Qualification for Ironstone Opal Quant",
+      "date": "2026-11-27",
+      "event": "SAP and planqc Demonstrate Enterprise Software Integration and Quantum Agents at",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "achieves",
-    "airworthiness",
+    "planqc",
+    "demonstrate",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Q-CTRL Achieves RTCA DO-160 Airworthiness Qualification f... | Quantum Computing News",
-  "metaDescription": "Q-CTRL's Ironstone Opal quantum magnetic navigation system has achieved RTCA DO-160 airworthiness qualification, becoming the first quantum navigation payloa...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, ctrl, achieves, rtca, TechNanoAI, emerging tech news",
+  "metaTitle": "SAP and planqc Demonstrate Enterprise Software Integratio... | Quantum Computing News",
+  "metaDescription": "SAP and planqc showcased an end-to-end cloud integration at Quantum Day Munich, connecting SAP's enterprise software with planqc's quantum computing stack. T...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, planqc, demonstrate, enterprise, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794492789110-4",
+  "id": "ai-1795794473208-1",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Calendar Invites and Live Proxies: Inside a Google Sessio... | AI News",
-  "excerpt": "Since mid-August 2026, a phishing operation has been stealing live Google sessions from corporate users. Every check defenders normally lean on to judge a link came back clean, and the operator design",
-  "date": "2026-11-12",
+  "title": "How to Keep Your Security Picture Current When Attackers ... | AI News",
+  "excerpt": "Most security metrics are not built to be used. They are built to be shown. Somewhere between the quarterly review and the next status update, a set of numbers gets assembled that looks reassuring in ",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "calendar-invites-and-live-proxies-inside-a-google-session-hijacking-ca",
-  "sourceLink": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
+  "slug": "how-to-keep-your-security-picture-current-when-attackers-move-at-ai-sp",
+  "sourceLink": "https://thehackernews.com/2026/11/how-to-keep-your-security-picture.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Since mid-August 2026, a phishing operation has been stealing live Google sessions from corporate users.  Every check defenders normally lean on to judge a link came back clean, and the operator designed it that way on purpose."
+      "text": "Most security metrics are not built to be used.  They are built to be shown."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The Threat Research team at Material Security spotted the campaign and has since taken down hundreds of attacker domains in an effort the team calls Operation CloudFire."
+      "text": "Somewhere between the quarterly review and the next status update, a set of numbers gets assembled that looks reassuring in a room and tells almost no one what is actually happening across the environment that week."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign — a notable development in AI",
+    "How to Keep Your Security Picture Current When Attackers Move at AI Speed — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign",
+      "date": "2026-11-27",
+      "event": "How to Keep Your Security Picture Current When Attackers Move at AI Speed",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "calendar",
-    "invites",
+    "security",
+    "picture",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Calendar Invites and Live Proxies: Inside a Google Sessio... | AI News",
-  "metaDescription": "Since mid-August 2026, a phishing operation has been stealing live Google sessions from corporate users. Every check defenders normally lean on to judge a li...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, calendar, invites, live, TechNanoAI, emerging tech news",
+  "metaTitle": "How to Keep Your Security Picture Current When Attackers ... | AI News",
+  "metaDescription": "Most security metrics are not built to be used. They are built to be shown. Somewhere between the quarterly review and the next status update, a set of numbe...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, keep, your, security, TechNanoAI, emerging tech news",
   "featured": false
 }

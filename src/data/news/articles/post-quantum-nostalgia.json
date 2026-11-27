@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1794492795618-1",
+  "id": "quantum-1795794479219-0",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Q-CTRL Deploys Fire Opal Dynamics Simulator on IBM Quantu... | Quantum Computing News",
-  "excerpt": "Q-CTRL has deployed its Fire Opal Dynamics Simulator on IBM Quantum Functions, achieving a 12x speedup on Nighthawk r2 processors compared to Heron r3 systems for large-scale fermionic many-body physi",
-  "date": "2026-11-12",
+  "title": "Post-Quantum Nostalgia | Quantum Computing News",
+  "excerpt": "Frank La Vigne takes a blender, adds the present need to migrate to post-quantum cryptography, the future threat from cryptographically relevant quantum computers, and the obvious choice of a 1980s ar",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "q-ctrl-deploys-fire-opal-dynamics-simulator-on-ibm-quantum-functions-a",
-  "sourceLink": "https://quantumcomputingreport.com/q-ctrl-deploys-fire-opal-dynamics-simulator-on-ibm-quantum-functions-achieving-12x-speedup-on-nighthawk/",
-  "sourceName": "Mohamed Abdel-Kareem",
+  "slug": "post-quantum-nostalgia",
+  "sourceLink": "https://www.insidequantumtechnology.com/news-archive/post-quantum-nostalgia/",
+  "sourceName": "Brian Siegelwax",
   "body": [
     {
       "type": "p",
-      "text": "Q-CTRL has deployed its Fire Opal Dynamics Simulator on IBM Quantum Functions, achieving a 12x speedup on Nighthawk r2 processors compared to Heron r3 systems for large-scale fermionic many-body physics simulations.  This allows researchers to execute complex simulations with a single API call, significantly accelerating computational chemistry and materials modeling."
+      "text": "Frank La Vigne takes a blender, adds the present need to migrate to post-quantum cryptography, the future threat from cryptographically relevant quantum computers, and the obvious choice of a 1980s arcade look-and-feel, and then pours the concoction into a 92-second video.  This digital beverage i..."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, Q-CTRL has deployed its Fire Opal Dynamics Simulator on IBM Quantum Functions, achieving a 12x speedup on Nighthawk r2 processors compared to Heron r3 systems for large-scale fermionic many-body physics simulations. This allows researchers to execute complex simulations with a single API call, significantly accelerating computational chemistry and materials modeling. The Dynamics Simulator, available in the IBM Quantum Functions Catalog, employs advanced techniques like deterministic crosstalk s. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "According to reporting from Brian Siegelwax, Frank La Vigne takes a blender, adds the present need to migrate to post-quantum cryptography, the future threat from cryptographically relevant quantum computers, and the obvious choice of a 1980s arcade look-and-feel, and then pours the concoction into a 92-second video. This digital beverage i.... The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Q-CTRL Deploys Fire Opal Dynamics Simulator on IBM Quantum Functions, Achieving  — a notable development in Quantum Computing",
+    "Post-Quantum Nostalgia — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -120,7 +120,7 @@
       "change": "Qubits & quantum advantage"
     },
     {
-      "value": "Mohamed Abdel-Kareem",
+      "value": "Brian Siegelwax",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Q-CTRL Deploys Fire Opal Dynamics Simulator on IBM Quantum Functions, Achieving ",
+      "date": "2026-11-27",
+      "event": "Post-Quantum Nostalgia",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "deploys",
-    "dynamics",
+    "quantum",
+    "nostalgia",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Q-CTRL Deploys Fire Opal Dynamics Simulator on IBM Quantu... | Quantum Computing News",
-  "metaDescription": "Q-CTRL has deployed its Fire Opal Dynamics Simulator on IBM Quantum Functions, achieving a 12x speedup on Nighthawk r2 processors compared to Heron r3 system...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, ctrl, deploys, fire, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Post-Quantum Nostalgia | Quantum Computing News",
+  "metaDescription": "Frank La Vigne takes a blender, adds the present need to migrate to post-quantum cryptography, the future threat from cryptographically relevant quantum comp...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, post, quantum, nostalgia, TechNanoAI, emerging tech news",
+  "featured": true
 }

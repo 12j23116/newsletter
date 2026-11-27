@@ -1,21 +1,21 @@
 {
-  "id": "cybersecurity-1794492789694-3",
+  "id": "cybersecurity-1795794473595-1",
   "topic": "cybersecurity",
   "topicLabel": "Cybersecurity",
   "topicColor": "#ef4444",
-  "title": "Microsoft: Recent Windows updates cause SQL Server perfor... | Cybersecurity News",
-  "excerpt": "Microsoft has confirmed that Windows updates released since the October 2026 Patch Tuesday are causing SQL Server performance and stability issues. [...]",
-  "date": "2026-11-12",
+  "title": "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs | Cybersecurity News",
+  "excerpt": "Forgotten virtual machines, unpatched servers, and excessive access permissions can create security blind spots across IT infrastructure. ISPsystem explains how centralized infrastructure management, ",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/012-cybersecurity-digital-shield.webp",
-  "slug": "microsoft-recent-windows-updates-cause-sql-server-performance-issues",
-  "sourceLink": "https://www.bleepingcomputer.com/news/microsoft/microsoft-recent-windows-updates-cause-sql-server-performance-issues/",
-  "sourceName": "Sergiu Gatlan",
+  "slug": "your-firewall-isnt-enough-the-hidden-risk-of-unmanaged-vms",
+  "sourceLink": "https://www.bleepingcomputer.com/news/security/your-firewall-isnt-enough-the-hidden-risk-of-unmanaged-vms/",
+  "sourceName": "Sponsored by ISPsystem",
   "body": [
     {
       "type": "p",
-      "text": "Microsoft has confirmed that Windows updates released since the October 2026 Patch Tuesday are causing SQL Server performance and stability issues.  [..."
+      "text": "Forgotten virtual machines, unpatched servers, and excessive access permissions can create security blind spots across IT infrastructure.  ISPsystem explains how centralized infrastructure management, access controls, and resource lifecycle automation can help reduce these risks."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Sergiu Gatlan, Microsoft has confirmed that Windows updates released since the October 2026 Patch Tuesday are causing SQL Server performance and stability issues. [...]. The development represents a notable step forward in the Cybersecurity landscape, with implications for both the research community and industry stakeholders."
+      "text": "[..."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Microsoft: Recent Windows updates cause SQL Server performance issues — a notable development in Cybersecurity",
+    "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs — a notable development in Cybersecurity",
     "The cybersecurity sector continues to accelerate, with post-quantum crypto & ai defense driving rapid progress",
     "Industry context: Cybersecurity threats have escalated with AI-powered attacks, supply chain compromises, and nation-s...",
     "Challenges remain: The transition to post-quantum cryptography, securing AI pipelines, and defendin...",
@@ -120,7 +120,7 @@
       "change": "Post-quantum crypto & AI defense"
     },
     {
-      "value": "Sergiu Gatlan",
+      "value": "Sponsored by ISPsystem",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Microsoft: Recent Windows updates cause SQL Server performance issues",
+      "date": "2026-11-27",
+      "event": "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "cybersecurity",
     "data breach",
-    "microsoft",
-    "recent",
+    "firewall",
+    "enough",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Microsoft: Recent Windows updates cause SQL Server perfor... | Cybersecurity News",
-  "metaDescription": "Microsoft has confirmed that Windows updates released since the October 2026 Patch Tuesday are causing SQL Server performance and stability issues. [...]",
-  "keywords": "cybersecurity, data breach, ransomware, zero-day, microsoft, recent, windows, TechNanoAI, emerging tech news",
+  "metaTitle": "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs | Cybersecurity News",
+  "metaDescription": "Forgotten virtual machines, unpatched servers, and excessive access permissions can create security blind spots across IT infrastructure. ISPsystem explains ...",
+  "keywords": "cybersecurity, data breach, ransomware, zero-day, your, firewall, enough, TechNanoAI, emerging tech news",
   "featured": false
 }

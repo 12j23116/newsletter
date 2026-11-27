@@ -1,21 +1,21 @@
 {
-  "id": "energy-1794492794169-1",
+  "id": "energy-1795794477925-4",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Sweden plans new inverter and battery database | Energy Storage News",
-  "excerpt": "Sweden plans to launch a voluntary database for solar inverters, battery storage systems and bidirectional EV charging equipment in 2027, replacing its existing pre-assessment system for new listings.",
-  "date": "2026-11-12",
+  "title": "Elco launches propane air-to-water heat pumps for commerc... | Energy Storage News",
+  "excerpt": "The new heat pump series is available in seven versions with heating capacities ranging from 40.1 kW to 84.4 kW and seasonal coefficients of performance of up to 4.70. The systems can deliver flow tem",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "sweden-plans-new-inverter-and-battery-database",
-  "sourceLink": "https://www.pv-magazine.com/2026/11/12/sweden-plans-new-inverter-and-battery-database/",
+  "slug": "elco-launches-propane-air-to-water-heat-pumps-for-commercial-applicati",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/27/elco-launches-propane-air-to-water-heat-pumps-for-commercial-applications/",
   "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Sweden plans to launch a voluntary database for solar inverters, battery storage systems and bidirectional EV charging equipment in 2027, replacing its existing pre-assessment system for new listings.  The database will provide standardized technical documentation to support grid connection assessments by network operators."
+      "text": "The new heat pump series is available in seven versions with heating capacities ranging from 40. 1 kW to 84."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "The post Sweden plans new inverter and battery database appeared first on pv magazine Global."
+      "text": "4 kW and seasonal coefficients of performance of up to 4. 70."
+    },
+    {
+      "type": "p",
+      "text": "The systems can deliver flow temperatures of up to 75 C and be cascaded to reach a combined capacity of 1. 35 MW."
+    },
+    {
+      "type": "p",
+      "text": "The post Elco launches propane air-to-water heat pumps for commercial applications appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "Sweden plans new inverter and battery database — a notable development in Energy Storage",
+    "Elco launches propane air-to-water heat pumps for commercial applications — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Sweden plans new inverter and battery database",
+      "date": "2026-11-27",
+      "event": "Elco launches propane air-to-water heat pumps for commercial applications",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "sweden",
-    "plans",
+    "launches",
+    "propane",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "Sweden plans new inverter and battery database | Energy Storage News",
-  "metaDescription": "Sweden plans to launch a voluntary database for solar inverters, battery storage systems and bidirectional EV charging equipment in 2027, replacing its exist...",
-  "keywords": "energy storage, battery, solid-state, grid storage, sweden, plans, inverter, TechNanoAI, emerging tech news",
+  "metaTitle": "Elco launches propane air-to-water heat pumps for commerc... | Energy Storage News",
+  "metaDescription": "The new heat pump series is available in seven versions with heating capacities ranging from 40.1 kW to 84.4 kW and seasonal coefficients of performance of u...",
+  "keywords": "energy storage, battery, solid-state, grid storage, elco, launches, propane, TechNanoAI, emerging tech news",
   "featured": false
 }

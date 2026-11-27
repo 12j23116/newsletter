@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794492789111-5",
+  "id": "ai-1795794473210-5",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Coul... | AI News",
-  "excerpt": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution.\n\nThe security flaw, tracked a",
-  "date": "2026-11-12",
+  "title": "Nvidia hits pause on chip shipments to Southeast Asia | AI News",
+  "excerpt": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China.",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "ptc-patches-critical-windchill-and-flexplm-flaw-that-could-enable-remo",
-  "sourceLink": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
-  "sourceName": "info@thehackernews.com (The Hacker News)",
+  "slug": "nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+  "sourceLink": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+  "sourceName": "Connie Loizos",
   "body": [
     {
       "type": "p",
-      "text": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution. \n\nThe security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9."
+      "text": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "2 out of a maximum of 10. 0."
+      "text": "tightens its push to keep AI chips out of China."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Ex — a notable development in AI",
+    "Nvidia hits pause on chip shipments to Southeast Asia — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -120,7 +120,7 @@
       "change": "LLMs, agents & the race to AGI"
     },
     {
-      "value": "info@thehackernews.com",
+      "value": "Connie Loizos",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Ex",
+      "date": "2026-11-27",
+      "event": "Nvidia hits pause on chip shipments to Southeast Asia",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "patches",
-    "critical",
+    "nvidia",
+    "pause",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "PTC Patches Critical Windchill and FlexPLM Flaw That Coul... | AI News",
-  "metaDescription": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote co...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, patches, critical, windchill, TechNanoAI, emerging tech news",
+  "metaTitle": "Nvidia hits pause on chip shipments to Southeast Asia | AI News",
+  "metaDescription": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chip...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, nvidia, hits, pause, TechNanoAI, emerging tech news",
   "featured": false
 }

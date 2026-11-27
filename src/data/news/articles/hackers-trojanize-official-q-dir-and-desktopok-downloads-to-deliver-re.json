@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794492789109-2",
+  "id": "ai-1795794473209-2",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Webinar: See How Identity Blind Spots Put Your SOC at Ris... | AI News",
-  "excerpt": "Security teams have more alerts, logs, and monitoring tools than ever. Yet when an attack happens, one simple question can still take too long to answer: Who or what is behind this activity, and what ",
-  "date": "2026-11-12",
+  "title": "Hackers Trojanize Official Q-Dir and DesktopOK Downloads ... | AI News",
+  "excerpt": "Cybersecurity researchers have disclosed details of a software supply chain attack that has tampered with Q-Dir and DesktopOK installation files distributed via the official SoftwareOK website.\n\n\"Evid",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "webinar-see-how-identity-blind-spots-put-your-soc-at-risk-and-how-to-c",
-  "sourceLink": "https://thehackernews.com/2026/11/your-soc-sees-alert-but-does-it-know.html",
+  "slug": "hackers-trojanize-official-q-dir-and-desktopok-downloads-to-deliver-re",
+  "sourceLink": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Security teams have more alerts, logs, and monitoring tools than ever.  Yet when an attack happens, one simple question can still take too long to answer: Who or what is behind this activity, and what can they access?"
+      "text": "Cybersecurity researchers have disclosed details of a software supply chain attack that has tampered with Q-Dir and DesktopOK installation files distributed via the official SoftwareOK website."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "A suspicious login might belong to an employee.  An unusual API call could come from a machine account."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Cybersecurity researchers have disclosed details of a software supply chain attack that has tampered with Q-Dir and DesktopOK installation files distributed via the official SoftwareOK website.\n\n\"Evidence indicates that malicious files were generated not only when users downloaded the programs directly from the official download page but also during the update process of previously installed. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them — a notable development in AI",
+    "Hackers Trojanize Official Q-Dir and DesktopOK Downloads to Deliver Remote Acces — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them",
+      "date": "2026-11-27",
+      "event": "Hackers Trojanize Official Q-Dir and DesktopOK Downloads to Deliver Remote Acces",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "webinar",
-    "identity",
+    "hackers",
+    "trojanize",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Webinar: See How Identity Blind Spots Put Your SOC at Ris... | AI News",
-  "metaDescription": "Security teams have more alerts, logs, and monitoring tools than ever. Yet when an attack happens, one simple question can still take too long to answer: Who...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, webinar, identity, blind, TechNanoAI, emerging tech news",
+  "metaTitle": "Hackers Trojanize Official Q-Dir and DesktopOK Downloads ... | AI News",
+  "metaDescription": "Cybersecurity researchers have disclosed details of a software supply chain attack that has tampered with Q-Dir and DesktopOK installation files distributed ...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, hackers, trojanize, official, TechNanoAI, emerging tech news",
   "featured": false
 }

@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794492789110-3",
+  "id": "ai-1795794473209-4",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "New N-central Exploits Work Against Patched Servers, Enab... | AI News",
-  "excerpt": "N-able on Thursday said it's investigating a new public disclosure containing claims of additional vulnerabilities in on-premise versions of N-central running version 2026.4.1 HF2.\n\n\"Based on our init",
-  "date": "2026-11-12",
+  "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Re... | AI News",
+  "excerpt": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution.\n\nThe proof-of-concept (PoC) exploit,",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "new-n-central-exploits-work-against-patched-servers-enable-root-rce-an",
-  "sourceLink": "https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html",
+  "slug": "unpatched-cacti-zero-day-enables-rce-in-just-four-http-requests-via-gu",
+  "sourceLink": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "N-able on Thursday said it's investigating a new public disclosure containing claims of additional vulnerabilities in on-premise versions of N-central running version 2026. 4."
+      "text": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution. \n\nThe proof-of-concept (PoC) exploit, which has yet to be assigned a CVE identifier, has been tracked as 4HTTP2SHELL and 4HTTP2ROOT."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "1 HF2. \n\n\"Based on our initial review, the server issue described depends on a non-default configuration in which the Legacy API is turned on and exposed to the public internet,\" N-able said in a new advisory."
+      "text": "According to reporting from info@thehackernews.com (The Hacker News), Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution.\n\nThe proof-of-concept (PoC) exploit, which has yet to be assigned a CVE identifier, has been tracked as 4HTTP2SHELL and 4HTTP2ROOT.\n\n\"I found a path from a fresh, unauthenticated HTTP session to command execution as the Cacti server. The development represents a notable step forward in the AI landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows — a notable development in AI",
+    "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows",
+      "date": "2026-11-27",
+      "event": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "central",
-    "exploits",
+    "unpatched",
+    "cacti",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "New N-central Exploits Work Against Patched Servers, Enab... | AI News",
-  "metaDescription": "N-able on Thursday said it's investigating a new public disclosure containing claims of additional vulnerabilities in on-premise versions of N-central runnin...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, central, exploits, work, TechNanoAI, emerging tech news",
+  "metaTitle": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Re... | AI News",
+  "metaDescription": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code exec...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, unpatched, cacti, zero, TechNanoAI, emerging tech news",
   "featured": false
 }

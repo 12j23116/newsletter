@@ -1,21 +1,21 @@
 {
-  "id": "energy-1794492794171-5",
+  "id": "energy-1795794477923-0",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Dutch Parliament backs legal framework for balcony PV | Energy Storage News",
-  "excerpt": "Politicians in the Netherlands have supported calls for a framework covering the connection of balcony solar systems to be drafted before the spring of next year.\nThe post Dutch Parliament backs legal",
-  "date": "2026-11-12",
+  "title": "Japan’s 30th solar auction allocates 27.7 MW of PV capacity | Energy Storage News",
+  "excerpt": "Japan has selected seven PV projects ranging in size from 500 kW to 20 MW in its latest procurement exercise. The lowest bid came in at JPY 5.00 ($0.031)/kWh, while the weighted average final price re",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "dutch-parliament-backs-legal-framework-for-balcony-pv",
-  "sourceLink": "https://www.pv-magazine.com/2026/11/12/dutch-parliament-backs-legal-framework-for-balcony-pv/",
-  "sourceName": "Patrick Jowett",
+  "slug": "japans-30th-solar-auction-allocates-277-mw-of-pv-capacity",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/27/japans-30th-solar-auction-allocates-27-7-mw-of-pv-capacity/",
+  "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "Politicians in the Netherlands have supported calls for a framework covering the connection of balcony solar systems to be drafted before the spring of next year. \nThe post Dutch Parliament backs legal framework for balcony PV appeared first on pv magazine Global."
+      "text": "Japan has selected seven PV projects ranging in size from 500 kW to 20 MW in its latest procurement exercise.  The lowest bid came in at JPY 5."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Patrick Jowett, Politicians in the Netherlands have supported calls for a framework covering the connection of balcony solar systems to be drafted before the spring of next year.\nThe post Dutch Parliament backs legal framework for balcony PV appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
+      "text": "00 ($0. 031)/kWh, while the weighted average final price reached JPY 9."
+    },
+    {
+      "type": "p",
+      "text": "13/kWh. \nThe post Japan’s 30th solar auction allocates 27."
+    },
+    {
+      "type": "p",
+      "text": "7 MW of PV capacity appeared first on pv magazine Global."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "Dutch Parliament backs legal framework for balcony PV — a notable development in Energy Storage",
+    "Japan’s 30th solar auction allocates 27.7 MW of PV capacity — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +128,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Patrick Jowett",
+      "value": "Emiliano Bellini",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Dutch Parliament backs legal framework for balcony PV",
+      "date": "2026-11-27",
+      "event": "Japan’s 30th solar auction allocates 27.7 MW of PV capacity",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "dutch",
-    "parliament",
+    "japan",
+    "solar",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "Dutch Parliament backs legal framework for balcony PV | Energy Storage News",
-  "metaDescription": "Politicians in the Netherlands have supported calls for a framework covering the connection of balcony solar systems to be drafted before the spring of next ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, dutch, parliament, backs, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Japan’s 30th solar auction allocates 27.7 MW of PV capacity | Energy Storage News",
+  "metaDescription": "Japan has selected seven PV projects ranging in size from 500 kW to 20 MW in its latest procurement exercise. The lowest bid came in at JPY 5.00 ($0.031)/kWh...",
+  "keywords": "energy storage, battery, solid-state, grid storage, japan, solar, auction, TechNanoAI, emerging tech news",
+  "featured": true
 }

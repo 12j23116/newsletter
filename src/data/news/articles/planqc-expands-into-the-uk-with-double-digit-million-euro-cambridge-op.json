@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1794492795617-0",
+  "id": "quantum-1795794479220-2",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "IBM Unveils 520-Qubit Nighthawk r3 Processor, 1,040-Qubit... | Quantum Computing News",
-  "excerpt": "IBM introduced the Nighthawk r3 processor with 520 programmable qubits and a roadmap to 1,040 qubits by 2027, demonstrating advancements in quantum computing hardware and software. The company also un",
-  "date": "2026-11-12",
+  "title": "planqc Expands into the UK with Double-Digit Million-Euro... | Quantum Computing News",
+  "excerpt": "planqc, a German quantum computing company, has opened a new UK subsidiary in Cambridge with a multi-million euro investment. This facility will develop next-generation optical-lattice architectures f",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "ibm-unveils-520-qubit-nighthawk-r3-processor-1040-qubit-linked-roadmap",
-  "sourceLink": "https://quantumcomputingreport.com/ibm-unveils-520-qubit-nighthawk-r3-processor-1040-qubit-linked-roadmap-and-managed-hybrid-workflows-at-qdc-2026/",
+  "slug": "planqc-expands-into-the-uk-with-double-digit-million-euro-cambridge-op",
+  "sourceLink": "https://quantumcomputingreport.com/planqc-expands-into-the-uk-with-double-digit-million-euro-cambridge-optical-lattice-facility/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "IBM introduced the Nighthawk r3 processor with 520 programmable qubits and a roadmap to 1,040 qubits by 2027, demonstrating advancements in quantum computing hardware and software.  The company also unveiled an expanded software stack, including Managed Workflows, and reported significant speedups and circuit executions with its Nighthawk r2 processors."
+      "text": "planqc, a German quantum computing company, has opened a new UK subsidiary in Cambridge with a multi-million euro investment.  This facility will develop next-generation optical-lattice architectures for scaling neutral-atom processors."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "According to reporting from Mohamed Abdel-Kareem, IBM introduced the Nighthawk r3 processor with 520 programmable qubits and a roadmap to 1,040 qubits by 2027, demonstrating advancements in quantum computing hardware and software. The company also unveiled an expanded software stack, including Managed Workflows, and reported significant speedups and circuit executions with its Nighthawk r2 processors. These developments are geared towards achieving fault-tolerant quantum systems and addressing complex applications in chemistry, materials scienc. The development represents a notable step forward in the Quantum Computing landscape, with implications for both the research community and industry stakeholders."
+      "text": "The post planqc Expands into the UK with Double-Digit Million-Euro Cambridge Optical-Lattice Facility appeared first on Quantum Computing Report."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "IBM Unveils 520-Qubit Nighthawk r3 Processor, 1,040-Qubit Linked Roadmap, and Ma — a notable development in Quantum Computing",
+    "planqc Expands into the UK with Double-Digit Million-Euro Cambridge Optical-Latt — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "IBM Unveils 520-Qubit Nighthawk r3 Processor, 1,040-Qubit Linked Roadmap, and Ma",
+      "date": "2026-11-27",
+      "event": "planqc Expands into the UK with Double-Digit Million-Euro Cambridge Optical-Latt",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "unveils",
-    "qubit",
+    "planqc",
+    "expands",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "IBM Unveils 520-Qubit Nighthawk r3 Processor, 1,040-Qubit... | Quantum Computing News",
-  "metaDescription": "IBM introduced the Nighthawk r3 processor with 520 programmable qubits and a roadmap to 1,040 qubits by 2027, demonstrating advancements in quantum computing...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, unveils, qubit, nighthawk, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "planqc Expands into the UK with Double-Digit Million-Euro... | Quantum Computing News",
+  "metaDescription": "planqc, a German quantum computing company, has opened a new UK subsidiary in Cambridge with a multi-million euro investment. This facility will develop next...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, planqc, expands, into, TechNanoAI, emerging tech news",
+  "featured": false
 }

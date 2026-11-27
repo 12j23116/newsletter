@@ -1,21 +1,21 @@
 {
-  "id": "robotics-1794492794673-5",
+  "id": "robotics-1795794478260-0",
   "topic": "robotics",
   "topicLabel": "Robotics",
   "topicColor": "#ec4899",
-  "title": "Can AI agents program industrial robots without training ... | Robotics News",
-  "excerpt": "UC Berkeley and NVIDIA have released open-source tools for teams of AI coding agents that write, simulate, and refine readable robot programs. \nThe post Can AI agents program industrial robots without",
-  "date": "2026-11-12",
+  "title": "GXO doubling down on robotics in 2027 | Robotics News",
+  "excerpt": "GXO didn't disclose which providers it would increase deployments with, but let's take a look at the existing technologies in its portfolio.\nThe post GXO doubling down on robotics in 2027 appeared fir",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/002-robotics-precision-lab.webp",
-  "slug": "can-ai-agents-program-industrial-robots-without-training-data-berkeley",
-  "sourceLink": "https://www.therobotreport.com/can-ai-agents-program-industrial-robots-without-training-data-berkeley-says-yes/",
-  "sourceName": "Mike Oitzman",
+  "slug": "gxo-doubling-down-on-robotics-in-2027",
+  "sourceLink": "https://www.therobotreport.com/gxo-doubling-down-on-robotics-in-2027/",
+  "sourceName": "Brianna Wessling",
   "body": [
     {
       "type": "p",
-      "text": "UC Berkeley and NVIDIA have released open-source tools for teams of AI coding agents that write, simulate, and refine readable robot programs.  \nThe post Can AI agents program industrial robots without training data?"
+      "text": "GXO didn't disclose which providers it would increase deployments with, but let's take a look at the existing technologies in its portfolio. \nThe post GXO doubling down on robotics in 2027 appeared first on The Robot Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Berkeley says yes appeared first on The Robot Report."
+      "text": "According to reporting from Brianna Wessling, GXO didn't disclose which providers it would increase deployments with, but let's take a look at the existing technologies in its portfolio.\nThe post GXO doubling down on robotics in 2027 appeared first on The Robot Report.. The development represents a notable step forward in the Robotics landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Can AI agents program industrial robots without training data? Berkeley says yes — a notable development in Robotics",
+    "GXO doubling down on robotics in 2027 — a notable development in Robotics",
     "The robotics sector continues to accelerate, with humanoids, drones & automation driving rapid progress",
     "Industry context: Robotics is entering a new era with humanoid robots entering commercial pilots, warehouse automation...",
     "Challenges remain: Battery life for mobile robots, manipulation dexterity in unstructured environme...",
@@ -120,7 +120,7 @@
       "change": "Humanoids, drones & automation"
     },
     {
-      "value": "Mike Oitzman",
+      "value": "Brianna Wessling",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Can AI agents program industrial robots without training data? Berkeley says yes",
+      "date": "2026-11-27",
+      "event": "GXO doubling down on robotics in 2027",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "robotics",
     "humanoid robot",
-    "agents",
-    "program",
+    "doubling",
+    "robotics",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Can AI agents program industrial robots without training ... | Robotics News",
-  "metaDescription": "UC Berkeley and NVIDIA have released open-source tools for teams of AI coding agents that write, simulate, and refine readable robot programs. \nThe post Can ...",
-  "keywords": "robotics, humanoid robot, automation, drones, agents, program, industrial, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "GXO doubling down on robotics in 2027 | Robotics News",
+  "metaDescription": "GXO didn't disclose which providers it would increase deployments with, but let's take a look at the existing technologies in its portfolio.\nThe post GXO dou...",
+  "keywords": "robotics, humanoid robot, automation, drones, doubling, down, robotics, TechNanoAI, emerging tech news",
+  "featured": true
 }

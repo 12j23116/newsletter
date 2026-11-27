@@ -1,21 +1,21 @@
 {
-  "id": "energy-1794492794171-4",
+  "id": "energy-1795794477924-3",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Viessmann launches propane ground-source heat pump compat... | Energy Storage News",
-  "excerpt": "The Vitocal 300-G intelligent energy uses R290 refrigerant and delivers heating capacities ranging from 6 kW to 16 kW, with a maximum flow temperature of 70 C and a seasonal coefficient of performance",
-  "date": "2026-11-12",
+  "title": "Bangladesh makes solar equipment recycling mandatory | Energy Storage News",
+  "excerpt": "Bangladesh’s new Special Solar Power Installation Act requires manufacturers, suppliers and service providers to implement take-back schemes for end-of-life solar equipment, marking a step toward sust",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "viessmann-launches-propane-ground-source-heat-pump-compatible-with-pvt",
-  "sourceLink": "https://www.pv-magazine.com/2026/11/12/viessmann-launches-propane-ground-source-heat-pump-compatible-with-pvt-systems/",
+  "slug": "bangladesh-makes-solar-equipment-recycling-mandatory",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/27/bangladesh-makes-solar-equipment-recycling-mandatory/",
   "sourceName": "Emiliano Bellini",
   "body": [
     {
       "type": "p",
-      "text": "The Vitocal 300-G intelligent energy uses R290 refrigerant and delivers heating capacities ranging from 6 kW to 16 kW, with a maximum flow temperature of 70 C and a seasonal coefficient of performance (SCOP) of up to 5. 5."
+      "text": "Bangladesh’s new Special Solar Power Installation Act requires manufacturers, suppliers and service providers to implement take-back schemes for end-of-life solar equipment, marking a step toward sustainable PV waste management. \nThe post Bangladesh makes solar equipment recycling mandatory appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Viessmann launches propane ground-source heat pump compatible with PVT systems appeared first on pv magazine Global."
+      "text": "According to reporting from Emiliano Bellini, Bangladesh’s new Special Solar Power Installation Act requires manufacturers, suppliers and service providers to implement take-back schemes for end-of-life solar equipment, marking a step toward sustainable PV waste management.\nThe post Bangladesh makes solar equipment recycling mandatory appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Viessmann launches propane ground-source heat pump compatible with PVT systems — a notable development in Energy Storage",
+    "Bangladesh makes solar equipment recycling mandatory — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Viessmann launches propane ground-source heat pump compatible with PVT systems",
+      "date": "2026-11-27",
+      "event": "Bangladesh makes solar equipment recycling mandatory",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "viessmann",
-    "launches",
+    "bangladesh",
+    "makes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Viessmann launches propane ground-source heat pump compat... | Energy Storage News",
-  "metaDescription": "The Vitocal 300-G intelligent energy uses R290 refrigerant and delivers heating capacities ranging from 6 kW to 16 kW, with a maximum flow temperature of 70 ...",
-  "keywords": "energy storage, battery, solid-state, grid storage, viessmann, launches, propane, TechNanoAI, emerging tech news",
+  "metaTitle": "Bangladesh makes solar equipment recycling mandatory | Energy Storage News",
+  "metaDescription": "Bangladesh’s new Special Solar Power Installation Act requires manufacturers, suppliers and service providers to implement take-back schemes for end-of-life ...",
+  "keywords": "energy storage, battery, solid-state, grid storage, bangladesh, makes, solar, TechNanoAI, emerging tech news",
   "featured": false
 }

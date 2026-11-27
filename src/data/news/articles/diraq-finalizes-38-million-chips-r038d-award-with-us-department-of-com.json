@@ -1,21 +1,21 @@
 {
-  "id": "quantum-1794492795618-2",
+  "id": "quantum-1795794479219-1",
   "topic": "quantum",
   "topicLabel": "Quantum Computing",
   "topicColor": "#a78bfa",
-  "title": "Q-CTRL Expands Fire Opal Suite with Constrained Optimizat... | Quantum Computing News",
-  "excerpt": "Q-CTRL has updated its Fire Opal platform with new features including constrained optimization for QAOA, significantly increasing approximation ratios. They've also introduced Monte Carlo integration ",
-  "date": "2026-11-12",
+  "title": "Diraq Finalizes $38 Million CHIPS R'D Award with U.S. Dep... | Quantum Computing News",
+  "excerpt": "Diraq secured a $38 million CHIPS R'D award from the U.S. Department of Commerce to advance silicon spin quantum chips, establishing U.S. facilities and aiming for over two million physical qubits by ",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/009-quantum-computing.webp",
-  "slug": "q-ctrl-expands-fire-opal-suite-with-constrained-optimization-estimator",
-  "sourceLink": "https://quantumcomputingreport.com/q-ctrl-expands-fire-opal-suite-with-constrained-optimization-estimator-twirling-and-monte-carlo-solver/",
+  "slug": "diraq-finalizes-38-million-chips-r038d-award-with-us-department-of-com",
+  "sourceLink": "https://quantumcomputingreport.com/diraq-finalizes-38-million-chips-rd-award-with-u-s-department-of-commerce-for-silicon-spin-quantum-chips/",
   "sourceName": "Mohamed Abdel-Kareem",
   "body": [
     {
       "type": "p",
-      "text": "Q-CTRL has updated its Fire Opal platform with new features including constrained optimization for QAOA, significantly increasing approximation ratios.  They've also introduced Monte Carlo integration for quantitative finance, capable of scaling hardware execution up to 17-27 qubits."
+      "text": "Diraq secured a $38 million CHIPS R'D award from the U. S."
     },
     {
       "type": "p",
@@ -27,7 +27,15 @@
     },
     {
       "type": "p",
-      "text": "Additionally, Fire Opal now includes Estimator Pauli Twirling to improve signal-to-noise ratio with zero additional QPU shot overhead."
+      "text": "Department of Commerce to advance silicon spin quantum chips, establishing U. S."
+    },
+    {
+      "type": "p",
+      "text": "facilities and aiming for over two million physical qubits by 2031.  This funding will accelerate U."
+    },
+    {
+      "type": "p",
+      "text": "S. -based fabrication, testing, and research for their CMOS-compatible quantum processors."
     },
     {
       "type": "h2",
@@ -97,7 +105,7 @@
     }
   ],
   "takeaways": [
-    "Q-CTRL Expands Fire Opal Suite with Constrained Optimization, Estimator Twirling — a notable development in Quantum Computing",
+    "Diraq Finalizes $38 Million CHIPS R'D Award with U.S. Department of Commerce for — a notable development in Quantum Computing",
     "The quantum computing sector continues to accelerate, with qubits & quantum advantage driving rapid progress",
     "Industry context: Quantum computing is transitioning from research to early commercial applications, with 1,000+ qubit...",
     "Challenges remain: Error rates, cryogenic cooling requirements, and the gap between NISQ-era device...",
@@ -157,8 +165,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Q-CTRL Expands Fire Opal Suite with Constrained Optimization, Estimator Twirling",
+      "date": "2026-11-27",
+      "event": "Diraq Finalizes $38 Million CHIPS R'D Award with U.S. Department of Commerce for",
       "current": true
     },
     {
@@ -191,8 +199,8 @@
   "tags": [
     "quantum computing",
     "qubit",
-    "expands",
-    "suite",
+    "diraq",
+    "finalizes",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +224,8 @@
       }
     ]
   },
-  "metaTitle": "Q-CTRL Expands Fire Opal Suite with Constrained Optimizat... | Quantum Computing News",
-  "metaDescription": "Q-CTRL has updated its Fire Opal platform with new features including constrained optimization for QAOA, significantly increasing approximation ratios. They'...",
-  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, ctrl, expands, fire, TechNanoAI, emerging tech news",
+  "metaTitle": "Diraq Finalizes $38 Million CHIPS R'D Award with U.S. Dep... | Quantum Computing News",
+  "metaDescription": "Diraq secured a $38 million CHIPS R'D award from the U.S. Department of Commerce to advance silicon spin quantum chips, establishing U.S. facilities and aimi...",
+  "keywords": "quantum computing, qubit, quantum advantage, quantum error correction, diraq, finalizes, million, TechNanoAI, emerging tech news",
   "featured": false
 }

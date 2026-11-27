@@ -1,21 +1,21 @@
 {
-  "id": "space-1794492790541-1",
+  "id": "space-1795794474492-0",
   "topic": "space",
   "topicLabel": "Space Exploration",
   "topicColor": "#06b6d4",
-  "title": "Moog Marks 25 Years Since ESPA Design Milestone: Innovati... | Space Exploration News",
-  "excerpt": "East Aurora, N.Y. ' Moog Inc. (NYSE: MOG.A and MOG.B) marks 25 years since the Evolved Secondary Payload Adapter (ESPA) ring completed its Critical Design Review in 2001. The pioneering [']\nThe post M",
-  "date": "2026-11-12",
+  "title": "Governments Invest $71.8B in Space Defense as Militarizat... | Space Exploration News",
+  "excerpt": "Paris, France ' November 2026 — Novaspace’s Space Defense ' Security, 2nd Edition finds that governments invested approximately $71.8 billion in space defense and security activities globally in 2025,",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/007-space-orbital-station.webp",
-  "slug": "moog-marks-25-years-since-espa-design-milestone-innovating-space-rides",
-  "sourceLink": "https://spacenews.com/moog-marks-25-years-since-espa-design-milestone-innovating-space-rideshare/",
-  "sourceName": "Moog Inc.",
+  "slug": "governments-invest-718b-in-space-defense-as-militarization-of-space-ac",
+  "sourceLink": "https://spacenews.com/governments-invest-71-8b-in-space-defense-as-militarization-of-space-accelerates/",
+  "sourceName": "Novaspace",
   "body": [
     {
       "type": "p",
-      "text": "East Aurora, N. Y."
+      "text": "Paris, France ' November 2026 — Novaspace’s Space Defense ' Security, 2nd Edition finds that governments invested approximately $71. 8 billion in space defense and security activities globally in 2025, reflecting [']\nThe post Governments Invest $71."
     },
     {
       "type": "p",
@@ -27,15 +27,7 @@
     },
     {
       "type": "p",
-      "text": "' Moog Inc.  (NYSE: MOG."
-    },
-    {
-      "type": "p",
-      "text": "A and MOG. B) marks 25 years since the Evolved Secondary Payload Adapter (ESPA) ring completed its Critical Design Review in 2001."
-    },
-    {
-      "type": "p",
-      "text": "The pioneering [']\nThe post Moog Marks 25 Years Since ESPA Design Milestone: Innovating Space Rideshare appeared first on SpaceNews."
+      "text": "8B in Space Defense as Militarization of Space Accelerates appeared first on SpaceNews."
     },
     {
       "type": "h2",
@@ -105,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Moog Marks 25 Years Since ESPA Design Milestone: Innovating Space Rideshare — a notable development in Space Exploration",
+    "Governments Invest $71.8B in Space Defense as Militarization of Space Accelerate — a notable development in Space Exploration",
     "The space exploration sector continues to accelerate, with launch vehicles & lunar economy driving rapid progress",
     "Industry context: The space economy has surpassed $500 billion annually, driven by reusable rockets, mega-constellatio...",
     "Challenges remain: Orbital debris management, radiation shielding for deep space, and sustainable l...",
@@ -128,7 +120,7 @@
       "change": "Launch vehicles & lunar economy"
     },
     {
-      "value": "Moog Inc.",
+      "value": "Novaspace",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -165,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Moog Marks 25 Years Since ESPA Design Milestone: Innovating Space Rideshare",
+      "date": "2026-11-27",
+      "event": "Governments Invest $71.8B in Space Defense as Militarization of Space Accelerate",
       "current": true
     },
     {
@@ -199,8 +191,8 @@
   "tags": [
     "space exploration",
     "rocket launch",
-    "marks",
-    "years",
+    "governments",
+    "invest",
     "emerging tech"
   ],
   "poll": {
@@ -224,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Moog Marks 25 Years Since ESPA Design Milestone: Innovati... | Space Exploration News",
-  "metaDescription": "East Aurora, N.Y. ' Moog Inc. (NYSE: MOG.A and MOG.B) marks 25 years since the Evolved Secondary Payload Adapter (ESPA) ring completed its Critical Design Re...",
-  "keywords": "space exploration, rocket launch, satellite, NASA, moog, marks, years, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Governments Invest $71.8B in Space Defense as Militarizat... | Space Exploration News",
+  "metaDescription": "Paris, France ' November 2026 — Novaspace’s Space Defense ' Security, 2nd Edition finds that governments invested approximately $71.8 billion in space defens...",
+  "keywords": "space exploration, rocket launch, satellite, NASA, governments, invest, space, TechNanoAI, emerging tech news",
+  "featured": true
 }

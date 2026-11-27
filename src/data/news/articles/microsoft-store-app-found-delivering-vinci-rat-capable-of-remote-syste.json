@@ -1,21 +1,21 @@
 {
-  "id": "ai-1794492789109-1",
+  "id": "ai-1795794473207-0",
   "topic": "ai",
   "topicLabel": "AI",
   "topicColor": "#3b82f6",
-  "title": "Google Cloud Warns Three AMD Turin CPU Flaws Could Leak D... | AI News",
-  "excerpt": "Google Cloud VMs on AMD Turin chips need a guest OS patch and a stop-and-start to protect against three CPU side-channel flaws, Google said this week.\n\nThe company has already applied mitigations agai",
-  "date": "2026-11-12",
+  "title": "Microsoft Store App Found Delivering Vinci RAT Capable of... | AI News",
+  "excerpt": "Cybersecurity researchers have disclosed details of a cyber attack in which a threat actor leveraged a Microsoft Store application to deliver a remote access trojan (RAT) called Vinci RAT.\n\nThe intrus",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/001-ai-neural-agent-cluster.webp",
-  "slug": "google-cloud-warns-three-amd-turin-cpu-flaws-could-leak-data-across-pr",
-  "sourceLink": "https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html",
+  "slug": "microsoft-store-app-found-delivering-vinci-rat-capable-of-remote-syste",
+  "sourceLink": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html",
   "sourceName": "info@thehackernews.com (The Hacker News)",
   "body": [
     {
       "type": "p",
-      "text": "Google Cloud VMs on AMD Turin chips need a guest OS patch and a stop-and-start to protect against three CPU side-channel flaws, Google said this week. \n\nThe company has already applied mitigations against attacks between VMs, and between VMs and the host."
+      "text": "Cybersecurity researchers have disclosed details of a cyber attack in which a threat actor leveraged a Microsoft Store application to deliver a remote access trojan (RAT) called Vinci RAT. \n\nThe intrusion, according to eSentire, begins with a redirection to a bogus site for a sniping tool (\"snipp."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Inside a VM, the flaws may let an attacker with code on the same processor core infer data from other processes or the kernel."
+      "text": "codes-team[. ]com\"), from where a Microsoft-signed installer called \"Snipping-Tool."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in — a notable development in AI",
+    "Microsoft Store App Found Delivering Vinci RAT Capable of Remote System Control — a notable development in AI",
     "The ai sector continues to accelerate, with llms, agents & the race to agi driving rapid progress",
     "Industry context: The AI sector is experiencing unprecedented acceleration, with frontier models doubling in capabilit...",
     "Challenges remain: Key challenges include alignment, hallucination control, compute costs, and regu...",
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in",
+      "date": "2026-11-27",
+      "event": "Microsoft Store App Found Delivering Vinci RAT Capable of Remote System Control",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "AI",
     "artificial intelligence",
-    "google",
-    "cloud",
+    "microsoft",
+    "store",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Google Cloud Warns Three AMD Turin CPU Flaws Could Leak D... | AI News",
-  "metaDescription": "Google Cloud VMs on AMD Turin chips need a guest OS patch and a stop-and-start to protect against three CPU side-channel flaws, Google said this week.\n\nThe c...",
-  "keywords": "AI, artificial intelligence, machine learning, LLM, google, cloud, warns, TechNanoAI, emerging tech news",
-  "featured": false
+  "metaTitle": "Microsoft Store App Found Delivering Vinci RAT Capable of... | AI News",
+  "metaDescription": "Cybersecurity researchers have disclosed details of a cyber attack in which a threat actor leveraged a Microsoft Store application to deliver a remote access...",
+  "keywords": "AI, artificial intelligence, machine learning, LLM, microsoft, store, found, TechNanoAI, emerging tech news",
+  "featured": true
 }

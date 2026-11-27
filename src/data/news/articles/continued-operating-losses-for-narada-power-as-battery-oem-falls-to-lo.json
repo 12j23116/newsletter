@@ -1,21 +1,21 @@
 {
-  "id": "energy-1794492794170-2",
+  "id": "energy-1795794477925-5",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Chasing the sun: Feasible CO₂ supply as a gateway to low-... | Energy Storage News",
-  "excerpt": "Scalable synthetic e-fuels require low-cost renewable electricity and sustainable carbon, but best solar sites and major carbon sources are rarely neighbors. To overcome this geographic mismatch, new ",
-  "date": "2026-11-12",
+  "title": "Continued operating losses for Narada Power as battery OE... | Energy Storage News",
+  "excerpt": "The financial picture for China-based battery OEM Narada Power has continued to worsen, and this year saw it fall to the lowest rating in the Battery StorageTech Bankability Ratings Report.",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "chasing-the-sun-feasible-co-supply-as-a-gateway-to-low-cost-e-fuel-pro",
-  "sourceLink": "https://www.pv-magazine.com/2026/11/12/chasing-the-sun-feasible-co2-supply-as-a-gateway-to-low-cost-e-fuel-production/",
-  "sourceName": "Emiliano Bellini",
+  "slug": "continued-operating-losses-for-narada-power-as-battery-oem-falls-to-lo",
+  "sourceLink": "https://www.energy-storage.news/continued-operating-losses-for-narada-power-as-battery-oem-falls-to-lowest-bankability-rating/",
+  "sourceName": "Cameron Murray",
   "body": [
     {
       "type": "p",
-      "text": "Scalable synthetic e-fuels require low-cost renewable electricity and sustainable carbon, but best solar sites and major carbon sources are rarely neighbors.  To overcome this geographic mismatch, new modeling shows that shipping CO₂ to sunny regions lowers fuel costs more effectively than transmitting power."
+      "text": "The financial picture for China-based battery OEM Narada Power has continued to worsen, and this year saw it fall to the lowest rating in the Battery StorageTech Bankability Ratings Report."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "Transport of biomass to capture the CO₂ in sun-rich regions is also found attractive, opposing biomass transport or hydrogen production."
+      "text": "According to reporting from Cameron Murray, The financial picture for China-based battery OEM Narada Power has continued to worsen, and this year saw it fall to the lowest rating in the Battery StorageTech Bankability Ratings Report.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Chasing the sun: Feasible CO₂ supply as a gateway to low-cost e-fuel production — a notable development in Energy Storage",
+    "Continued operating losses for Narada Power as battery OEM falls to lowest Banka — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Emiliano Bellini",
+      "value": "Cameron Murray",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Chasing the sun: Feasible CO₂ supply as a gateway to low-cost e-fuel production",
+      "date": "2026-11-27",
+      "event": "Continued operating losses for Narada Power as battery OEM falls to lowest Banka",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "chasing",
-    "feasible",
+    "continued",
+    "operating",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Chasing the sun: Feasible CO₂ supply as a gateway to low-... | Energy Storage News",
-  "metaDescription": "Scalable synthetic e-fuels require low-cost renewable electricity and sustainable carbon, but best solar sites and major carbon sources are rarely neighbors....",
-  "keywords": "energy storage, battery, solid-state, grid storage, chasing, feasible, supply, TechNanoAI, emerging tech news",
+  "metaTitle": "Continued operating losses for Narada Power as battery OE... | Energy Storage News",
+  "metaDescription": "The financial picture for China-based battery OEM Narada Power has continued to worsen, and this year saw it fall to the lowest rating in the Battery Storage...",
+  "keywords": "energy storage, battery, solid-state, grid storage, continued, operating, losses, TechNanoAI, emerging tech news",
   "featured": false
 }

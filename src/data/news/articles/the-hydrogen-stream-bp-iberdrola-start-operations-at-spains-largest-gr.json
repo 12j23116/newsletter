@@ -1,21 +1,21 @@
 {
-  "id": "energy-1794492794169-0",
+  "id": "energy-1795794477924-2",
   "topic": "energy",
   "topicLabel": "Energy Storage",
   "topicColor": "#f97316",
-  "title": "Predicting power output from artistic BIPV pixel by pixel | Energy Storage News",
-  "excerpt": "Researchers have developed a model linking artwork colors to power output and potential hot-spot risks in colored BIPV arrays. Simulations of 50 masterpieces show how selectively darkening bright pixe",
-  "date": "2026-11-12",
+  "title": "The Hydrogen Stream: BP, Iberdrola start operations at Sp... | Energy Storage News",
+  "excerpt": "In other news, Australia and Germany are exploring hydrogen-based aviation, while Envision Energy and Greensteel Australia are considering a 400 MW green hydrogen system for low-carbon steelmaking.\nTh",
+  "date": "2026-11-27",
   "readTime": "3 min",
   "source": "TechNanoAI",
   "img": "/images/011-energy-storage-smart-grid.webp",
-  "slug": "predicting-power-output-from-artistic-bipv-pixel-by-pixel",
-  "sourceLink": "https://www.pv-magazine.com/2026/11/12/predicting-power-output-and-hot-spot-risk-in-artistic-bipv/",
-  "sourceName": "Lior Kahana",
+  "slug": "the-hydrogen-stream-bp-iberdrola-start-operations-at-spains-largest-gr",
+  "sourceLink": "https://www.pv-magazine.com/2026/11/27/the-hydrogen-stream-bp-iberdrola-start-operations-at-spains-largest-green-hydrogen-plant/",
+  "sourceName": "Sergio Matalucci",
   "body": [
     {
       "type": "p",
-      "text": "Researchers have developed a model linking artwork colors to power output and potential hot-spot risks in colored BIPV arrays.  Simulations of 50 masterpieces show how selectively darkening bright pixels can improve electrical performance."
+      "text": "In other news, Australia and Germany are exploring hydrogen-based aviation, while Envision Energy and Greensteel Australia are considering a 400 MW green hydrogen system for low-carbon steelmaking. \nThe post The Hydrogen Stream: BP, Iberdrola start operations at Spain’s largest green hydrogen plant appeared first on pv magazine Global."
     },
     {
       "type": "p",
@@ -27,7 +27,7 @@
     },
     {
       "type": "p",
-      "text": "The post Predicting power output from artistic BIPV pixel by pixel appeared first on pv magazine Global."
+      "text": "According to reporting from Sergio Matalucci, In other news, Australia and Germany are exploring hydrogen-based aviation, while Envision Energy and Greensteel Australia are considering a 400 MW green hydrogen system for low-carbon steelmaking.\nThe post The Hydrogen Stream: BP, Iberdrola start operations at Spain’s largest green hydrogen plant appeared first on pv magazine Global.. The development represents a notable step forward in the Energy Storage landscape, with implications for both the research community and industry stakeholders."
     },
     {
       "type": "h2",
@@ -97,7 +97,7 @@
     }
   ],
   "takeaways": [
-    "Predicting power output from artistic BIPV pixel by pixel — a notable development in Energy Storage",
+    "The Hydrogen Stream: BP, Iberdrola start operations at Spain’s largest green hyd — a notable development in Energy Storage",
     "The energy storage sector continues to accelerate, with solid-state batteries & grid storage driving rapid progress",
     "Industry context: Energy storage deployment reached 108 GW globally in 2026, driven by falling battery costs ($85/kWh)...",
     "Challenges remain: Supply chain constraints for critical minerals, recycling infrastructure, and th...",
@@ -120,7 +120,7 @@
       "change": "Solid-state batteries & grid storage"
     },
     {
-      "value": "Lior Kahana",
+      "value": "Sergio Matalucci",
       "label": "Source",
       "change": "RSS verified"
     }
@@ -157,8 +157,8 @@
       "event": "Scaling efforts and first commercial deployments"
     },
     {
-      "date": "2026-11-12",
-      "event": "Predicting power output from artistic BIPV pixel by pixel",
+      "date": "2026-11-27",
+      "event": "The Hydrogen Stream: BP, Iberdrola start operations at Spain’s largest green hyd",
       "current": true
     },
     {
@@ -191,8 +191,8 @@
   "tags": [
     "energy storage",
     "battery",
-    "predicting",
-    "power",
+    "hydrogen",
+    "stream",
     "emerging tech"
   ],
   "poll": {
@@ -216,8 +216,8 @@
       }
     ]
   },
-  "metaTitle": "Predicting power output from artistic BIPV pixel by pixel | Energy Storage News",
-  "metaDescription": "Researchers have developed a model linking artwork colors to power output and potential hot-spot risks in colored BIPV arrays. Simulations of 50 masterpieces...",
-  "keywords": "energy storage, battery, solid-state, grid storage, predicting, power, output, TechNanoAI, emerging tech news",
-  "featured": true
+  "metaTitle": "The Hydrogen Stream: BP, Iberdrola start operations at Sp... | Energy Storage News",
+  "metaDescription": "In other news, Australia and Germany are exploring hydrogen-based aviation, while Envision Energy and Greensteel Australia are considering a 400 MW green hyd...",
+  "keywords": "energy storage, battery, solid-state, grid storage, hydrogen, stream, iberdrola, TechNanoAI, emerging tech news",
+  "featured": false
 }
